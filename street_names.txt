@@ -1,0 +1,67 @@
+Partial List of Street Names taken from 1929 Phone Book
+#
+3 Maja
+19 Stycznia
+A
+B
+Bezimienna
+Brzeska
+Budowlana
+C
+Cyrkowa
+D
+Dworzec Kolejowy
+E
+F
+Fabryczna
+G
+H
+Hallera
+I
+J
+K
+Kolejowa
+Kołodnicka
+Kościuszki
+Królowej Bony
+L
+Ł
+Łucka
+Listopadowa
+M
+Maciejowska
+Magistracka
+Mickiewicza
+Młynarska
+Monopolowa
+N
+Nowa
+O
+P
+Piłsudskiego
+pl. Pomnikowy
+Pomnikowa
+Poniatowskiego
+Poprzeczna
+R
+Rynek
+S
+Sadowa
+Sienkiewicza
+Soborny
+Strażacka
+Strzelecka
+T
+Toruńska
+Tuszowskiego
+U
+V
+W
+Wojskowa
+Warszawska
+pl. Wolności
+X
+Y
+Z
+Ż
+Żeromskiego
