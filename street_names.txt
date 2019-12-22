@@ -1,67 +1,177 @@
-Partial List of Street Names taken from 1929 Phone Book
+Partial List of Street Names
+Sources: 1929 Phone Book, [Polling Stations](https://polona.pl/item/obwieszczenie-inc-na-podstawie-art-52-ordynacji-wyborczej-dz-u-r-p-nr-47-poz,OTQyNjM5MzI/0/#info:metadata)
 #
-3 Maja
-19 Stycznia
+1-go Maya
+3 Maja;3_Maja_01.jpg
+19 Stycznia;
+27 Dywizji Piechoty
+50 P.P. Strzel. Kres.
 A
+Apteczna
 B
-Bezimienna
-Brzeska
-Budowlana
+ks. Bandurskieog
+Bezimienna;
+Bielinska
+Brzeska;
+Brzozowa
+Budowlana;
+Budyszczanska
 C
-Cyrkowa
+Chmielna
+Ciasna
+Cicha
+Cerkiewna
+Cmentarna
+Cyrkowa;
 D
-Dworzec Kolejowy
+Dluga
+Daszynskiego
+Dzika
+Dużo Gonczarna
+Dabrowskiego
+Dworzec Kolejowy;Kolejowa_01.jpg
 E
 F
-Fabryczna
+Filarecka
+Fabryczna;
 G
+Gibalskiego
+Gesia
+Górka
+Gospodarcza
 H
-Hallera
+Hoza
+Hallera;
+Hołówki
+Handlowa
 I
 J
+Jasna
+Jaworowa
 K
-Kolejowa
-Kołodnicka
+Kąpielowa
+Kolejowa;Kolejowa_01.jpg
+Kołodnicka;
+Komorowska
 Kościuszki
+Kowalska
+Koszykowa
+Kościelna
+Krakowska
 Królowej Bony
+Kresowa
+Krucza
+Krzywa
+Krotka
 L
-Ł
-Łucka
+Lisa Kuli
 Listopadowa
+Legionow
+Lubliniecka
+Ł
+Łucka(<1919)/Warszawska(1919-1939);Lucka_01.jpg,Lucka_02.jpg
+Listopadowa
+Limanowskiego
 M
+al. Marszkalwka Pilsudskiego
 Maciejowska
 Magistracka
 Mickiewicza
+Mieszczanska
+Miła
+Mało Gonczarna
+Mijanka-Jachów
 Młynarska
+Mokra
+Miodowa
+Myszliwska
 Monopolowa
+Mościckiego
 N
+Niecala
+Nasypowa
+Narozna
+Nadbrzeżna
 Nowa
+Nowowiejska
+Nowy Swiat
 O
+Obwodowa i Okrzei
+Ogrodowa
 P
+Parkowa
+Pasieczna
+Piaskowa
 Piłsudskiego
 pl. Pomnikowy
 Pomnikowa
 Poniatowskiego
 Poprzeczna
+Polnocna
+Pograniczna
+Podjaworska
+Polna
+Poludniowa
+Powurska
+Pereca
+Prosta
+Przeskok
+Poleska
 R
+Rolna
+Rzeczna
 Rynek
 S
 Sadowa
 Sienkiewicza
 Soborny
+Soborna
+Spokojna
+Sulkiewicza
 Strażacka
 Strzelecka
+Szeroka
+Staszyca
+Staro Cmentarna
+Szpitalna
+Szewczenki
+Szkolna
+Szuchajskiego
+Szlachecka
+ks. Sznarbachowskiego
 T
+Topolowa
 Toruńska
+Torowa
+Tranzyt Sarny
 Tuszowskiego
 U
 V
 W
-Wojskowa
-Warszawska
+Wąska
+Waligórskiego
+Wierzbowa
+Wielka
+Wiezienna
+Wilcza
+Wigury
+Włodzmierska
+Wrzosowa
+Wiejska
+Wola
+Wygonna
+Wspolna
+Wojskowa;Wojskowa_01.jpg
+Warszawska;Warszawska_01.jpg,Warszawska_02.jpg,Warszawska_03.jpg
 pl. Wolności
 X
 Y
 Z
+Zielona
+Zaułek Krótki
+Zaułek Kolejowy
+Zórawia
+Zgoda
 Ż
 Żeromskiego
+Żwirki
