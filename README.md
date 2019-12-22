@@ -9,3 +9,6 @@ This project is developed by Marcin Kraszewski as a passion/hobby project. If yo
 ## Partial List of Residences
 taken from the 1938 phone book
 [kowel phone book](kowel_residents_1938.csv)
+
+## Voting districts
+[Voting Districts: Kowel](https://polona.pl/item/obwieszczenie-inc-na-podstawie-art-52-ordynacji-wyborczej-dz-u-r-p-nr-47-poz,OTQyNjM5MzI/0/#info:metadata)
