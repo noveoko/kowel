@@ -11,4 +11,5 @@ taken from the 1938 phone book
 [kowel phone book](kowel_residents_1938.csv)
 
 ## Voting districts
-[Voting Districts: Kowel](https://polona.pl/item/obwieszczenie-inc-na-podstawie-art-52-ordynacji-wyborczej-dz-u-r-p-nr-47-poz,OTQyNjM5MzI/0/#info:metadata)
+[Voting Districts: Kowel](https://polona.pl/item/obwieszczenie-inc-na-podstawie-art-52-ordynacji-wyborczej-dz-u-r-p-nr-47-poz,OTQyNjM5MzI/0/#info:metadata) 
+Published:28th September 1938
