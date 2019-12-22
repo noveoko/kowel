@@ -1,7 +1,7 @@
 # Kowel
 [Kowel](https://pl.wikipedia.org/wiki/Kowel)/[Kovel](https://en.wikipedia.org/wiki/Kovel): (1918-1945)
 
-This project is developed by Marcin Kraszewski as a passion/hobby project. If you spot any errors or otherwise would like to comment please raise and issue or perform a pull request.
+This project is developed by @skilenstein as a passion/hobby project. If you spot any errors or otherwise would like to comment please raise and issue or perform a pull request.
 
 ## Partial List of Street Names
 [kowel street names 1929](street_names.txt) includes all the Street names in the 1929 Kowel Phone book
