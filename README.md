@@ -3,8 +3,13 @@
 
 This project is developed by @skilenstein as a passion/hobby project. If you spot any errors or otherwise would like to comment please raise and issue or perform a pull request.
 
-## Partial List of Street Names
+## Street Names
 [kowel street names 1929](street_names.txt) includes all the Street names in the 1929 Kowel Phone book
+
+### Street Names checked against business listing from 1929
+If street exists with high probability in 1929 Polish Business Directory
+Data=`1:match, else 0:no match`
+[Cross-referenced Street names](referenced_streets.txt)
 
 ## List of Businesses and People
 
