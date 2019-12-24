@@ -11,7 +11,7 @@ taken from the 1938 phone book
 [kowel phone book](kowel_residents_1938.csv)
 
 taken from 1929 Polish Business Directory
-[1929 Business Directory:Kowel](1929_business_directory.txt)
+[1929 Business Directory:Kowel](1929_business_directory.md)
 
 ## Voting districts
 [Voting Districts: Kowel](https://polona.pl/item/obwieszczenie-inc-na-podstawie-art-52-ordynacji-wyborczej-dz-u-r-p-nr-47-poz,OTQyNjM5MzI/0/#info:metadata) 
