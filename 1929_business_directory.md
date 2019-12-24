@@ -1,20 +1,299 @@
-2172 Kostopol. Rojtburd Ch. -- Sundolzon Z., Warszawska -- XSzechet S., 3 Ma-ja — Trachtonborg C. Warszawska — Tuszman M. 3 Maja — Woln-tiftA., 3 Maja — Wajnsztejn --- Walewski Cz. — Wimca B. — Wolosowicz 1tL, — Zalc-man•P. — xZolccor B. = Złotnik J., Warszawska. Ajzonborg F., Piłsudskiego — Banatki J., Warszawska — Baru J., Kolejowa — Czernisai Ch., Warszawska — Frojlich J., War-szawska — Gondelraan D.,. War-szawska — Grawer R. Rówrońska — Gruszka Ch. R., D., Rówionska — Kiperraan D. S., 3 Maja — Kowalowa M., Warszaw-ska — Szojmur L., Warszawska — Sztorenszys G., Warszawska — Zulas B., Rówieńska. Stolarze (reenuisiers): Baczyński ' B. _ Rówieńska — Goreń W., Warszawska — Kriwolapczuk B., Warszawska — Szrajbor M., Czysta. Szetrekto przybory (fournit. p. chaussures): xBalor B., Mokra —Furman G., Targowa. -Szewcy (cordonmers): Dąbrowski R., Warszawska — Gryroruk K. — Kolnik N. — Krygtor E., Ró-wiońska — Magia Sz., . Kowalska —Rozenfeld S., Targowa— Szwarc-blat B., Warszawska —Zelant A., Warszawska — Zygmunt J: Chyliński St., Warszawska. Szklane huty (verreries): x,,Z30- da", Sp. robotnicza. ślissarze(serruriers):Chmielewski F., Kopernika Silwor A., Kopernika. Tartaki (scieries): Ejdolsztejn A. i Jachniuk I., 3 Maja — Jachniuk Bcia. • Tytoniowe wyroby (tabacs): Bri.k dalej M., Leśna — Byk R., War-szawska — Plon J.', Warszawska. Ubrania gotowe (vitements confee-tionniz): Zając A., Warszawska. Wędliny (ch arcu tiers): Nos-ka M., Warszawska — Stefano-wicz L. — Szczasny J. — Wójcik J., Warszawska ()damski L., Kopernika. Wody gazowe — wyrób (febr. d'eaux gazeuses): Azarwa M., Sien-kiewicza — Marteld G., War-szawska, Zajazdy (auberg.es): Kelrych, Tar-gowa — Nowicki T., Warszawska — Trachtenberg E., Kopernika —Trykasz A.,. Kopernika. Zboże (gramik: XPoldman Z., Targowa — ojtburd M., Tar-gowa Śpiwak .T., Targowa. Zegarmistrz° (horlogers): Ruwino-wicz J., Warszawska—Zubaty R., Warszawska. Żelazo (fers): Czeropicznilc B., Tar-gowa.— Czorepiczmk J. Targowa — Kac B., Targowa — Krarnor B., Warszawska— Nabożnik, Targowa. Żelazo—odlecenie (fondeurs en ler): XCymerman L., Kolejowa — Sado J., Kolejowa. 
-K.OSTOPOL-Gmina wiejska Commune (sikgo (siedziba urzodti do l'offico com-gmmn. w rato- munal dans la ścio Kostopol) willo do. Kosto-z przynalein.: pol) y compris: Moksandrówka, Alolcsandrówka, Boldyn, Jankie- Boldyn, Jankio-wiczo, Kotow- wiczo, Kotow-szczyzna, Kur- szczyzna, Kur-hany, Lasopol, liany, Lasopol, Lubaszka Mata, Lubaszka Mała, Marjanówka,Mo: Marjanówka,Mo-kwin, Poro- kwin, Poro-monka, Pępków, molika, Pępków, Plotyczno, Pod- Plotyczno, Pod-łużansk ie Fu- luiańskio Fu-tory, Badania. tory, Rudonka. Młyny. Moulins. Lekarza (mMecins): Popow M. (Ro-kitno). Właściciele ziemscy (proprietaires fonciers :Chrozinik Anna(Pieczalów-Ica M — Hiuszczonlso Dymitr (Budan sa 00) — Illuszczonko Wa-oyl (Badaniu' 54) — Nirod Ana-stazja (1,.M. 1628)—Schaffer Franc. (M. 340) -- Ślusarski Mik. (P. 387). Drzewne wyroby (boisseliers): Pajorsztojn J. (J.). Lorzawo (bois): van LO« J. (Moltw.). Herbaciarnio ((tants dc thd): G oldon-borg 1. L. (Anowal) — xZolccor Ch. (J.). Lasy — eksploatacja (exploitatiorts forestieres): Kiponnan N. (P. F.) — Klporrnan Sz. (Las.) — Sznabol D. (P. F.) — 'Walcu M. (P. F.) -- Wier-ny Sz. (Mokw.). Młyny (Inoulins): Ajzonsztejn W. I Storonszys G. i(wrid) ((Por,) —Bokser 13. i Gors, i Sz. (h. , .)— 
-JRI-PnMnd. in:conpetaibuoyith wishGen WO JEWODZTWO WOŁYM 
--Cimorman Sz., Ka Ch. i Ska patistwovio, 2 pryvratne, szkoła miar-
-(par) (Mokw.). — I urjata Z. (B.). Feldraan Z. i' Guldenami M. (par) (B.) Gonik J. (8.) Szochot P. (B.). Smalarnie (febr. ds poiz): Bibor-man J. (Mar.). Spożywczo artykuly (comestibles): Goś S. (Kot.) — Kozłowski A. wal) k—.)  —Li sKowrykazb A. ak(M Mok.wA)no-Potrenczuk H. (Mokw.) xSzu-milo D. (A.). Tartaki (seieries): Cimorman Sz., Katran Ch. i Ska (Mokw.). Tytoniowe wyroby (tabace): Dem-. czule M. (Maszcza) — Lewczuk J. (Mokw.) — Lipiński St. (Mokw.). Wiatraki (moultns d vent): Bużvński M. (A.) — Kolumn P. (R.) — olo-sowski O. (P.) — Tenor L. i Felman A. (Kuch.) — Zarzycki D. (Plot.), Bas L. (Kruchy) — Wojda G. (Dolganioc). Zajazdy (auberges): aliecznikowski J. (Mokw.). KOTIUŻYKICE-Wieś, (rmina Wi- V-ge, communo do śniowloc, pow. Wiśnioadoc,distr. Krzemienioc,sąd do Krzemienie; pok. Poczajów, just, do paix Po-sąd okr. Równe, czajów, tr. d'arr-t 609 mioszk. Równo, 609 ha-(16 kra) Ła- bit. i;& (16 kat) newce Qy -er Łanowce as, sar Wiśniowioc. Wiśniowioc. Wiaścicieto .ziemscy (propristtaires ronciers): Rzewuski Leon (401). Cielno (charpentiers): alusij B. —Traczuk B. — Traczuk D. Kowale (forgerons): Lachmaiduk S. Zolazko K. Krawcy (lailleurs): Pańczuk B. —Traczuk M. — Traczuk P. Różne towary (art. divers): Nio-wiadomski R. Szewcy (cordonniers): Filie J. — Huszpot J. — Nioczyporuic J. — Panczuk A. — Pawlak S. KOTOWSKA WOLKA-Wiekgmina Pod- Nr-ge, communo do dobo°, powiat ' Poddębce, distr. Łatek, sąd pok. do Luck, Just. de Olyka, sąd okr. paix Olyka, trib. Łuck, 515 mis- d'arr-t Łuck, 515. szkańców (5 habit. (4 (5 km) km) Wg, Olyka Per Olyka Łysk. Łuck. Kowale (forgerons): Bornaski K. Spożywcze artykuły (comestible,$): Biornacki J. -- Wachowski J. 
-KOTÓW Wieś, gmina Pod- V-ge, commune do dobo°, powiat Poddisbco, distr. Łuck, j , sąd pok. do Luck, just. de i sąd okr. Łuck, paix ot tr. d'arr-t 724 mieszkatic. Łuck, 724 habit. ik x(8 km) Zwie- x (8 km) Zwie-rów asy ‚, Ki- rów asr gs Kiwer-wers° Łuck. co s3 Łuck. Wtaliciciele ziemscy (propriitaires foneiers): Mocińska lir, Józefa (579). 
-KOWBAK1. Wieś, gmina V-go, commun.° do Skobelka, pow. Skobolica, distr. HorochóW, sąd do Horochów, pak. Horochów, just. do paix Ho-sąd okręgowy rochów, tr.d'arr-t Łuck, 515 mio- Łuck, 515 habit. szkańców /k (3 a ]cm) Sian-iem) Sionkiewi- idowiezówka czówka asr -41- N, te- g, Haro-Horochów. chów. Bednarze (tonneliers): Katery& szyk G. • • Cieśle (charpentiers): Korciuk J. Kooperatywy (coopiratives): x„Go-spodnr". Camusie (forgeróns) Czarniawsici T. Piwiarnie (brasseries-dibil): Sznaj-der Bcia — Zornan W. Spirytuatja (spiritueicx): xDąbrow-ski J. — >sławski W. K.OWEL. • Miasto pow., 90 m n. poz. Morza, siedziba sądu prac., sąd okr. Look, 20818 mieszlc. limo kol.: Brześć n. 13.-Równe, Chuhra;Sarny, Kamień Koszyrski-VVIodzimiorz fi g„ Władze i urzędy państwowo i samorządo-w o : Starostwo, Komonda pow. p. p„ Komisarjat p. p., Urząd skar-bowy podatków opiat, Urząd skarbowy akcyz i monopoli, Kasa skarbowa, Obwodowy Inspolctorat pracy, Pal'INLW. zarząd drogowy, Pow. urno! ziomski, Powiatowy ko-mitet nadawczy', i 1Condsja IlWiilf1Z• C.Z01110WIL, Inspektorat szkolny, Nad-leśnictwo, Magistral, Wydział pa-wintowy. Kodcioly i szkoły: 2 ala kat., 5 gr. wsch. i gimnazjum 
-nisza i drogowa, szkoła handlowa. Instytucjo: Powiatowa Kasa Chorych, • Szpital powiatowy, szpital żydowski, ambulatorjum miejskie,. ambulatorjuin sanitarno, stacja opieki nad matką i dzieckiem, 2 przytułki dla dzieci, elektrownia miejska. Związki z awod. i stowarzyszenia: Zw.kup-sów, zw. drobnych kupców, 2 zwiąsid rzemieślników, stow. lekarzy, stow. inżynierów, contralny komitet zjed-noczenia organizacyj polskich okr. kowalskiego, resursa obywatelska, zw. hotelarzy i wbaścicieli pokojów umeblowanych, zw. felczerów, zw. rzeiników-handlowców. Targi: co czwartek. Przemysł: Gar-barstwo, młyny, browar, fabr.. wó-dek, wyr. cement., fabr., trykotaży. Państw, fabryka wyr. tytoniowych. Chd-Boli do distr., 90 m d'alt., siago do la just. do paix, trib. d'arr-t Luck, 20818 babit. mir lignos: do Brześć n./B.-Równe, Cbohn-Sarny, Kamień Koszyrs1d-Wlodzimiorz 13- es Autorstds ot servi-ces do l'Etat ot autono-m o s : Starostie, Command-t do la polico do distr., Commiss-t do police, Bureau des impóts et contrib., Bureau dos «cis« et monopoles, Caisso du trdsor, Insntiction rdgion. du travail, Diroction' do la Offico rural do district, Condtó do colonisation ot Coraraission d'expro-priation, Inspection do l'onsetgno-mant, Admin. dos for•ts, Municipa-litd, Office do district. Eglis es et ócoles: 2 & cath., 5 orthod. 1 gymnaso d'Etat, 2 giran. privds, &olo d'arpontago et do voirie, dcole commercialo. Institutions: Caisso des malad es de district, Hópital do district, hópital juif, ambulanse municipalo, ambulanse aanI tai re, pasło d'assistance raddicalo de la mkre ot de l'enfant, 2 crkchos, wina dlectriquemunicipale. A sso c. profosa, et corporations: Assoc. des commoryants, assoc, des petits commoryants, 2 assoc. artisans, assoc. des mddocins, assoc. des ingćnieurs, comitó central do la fdddra.tion dos associations polon. do la rdgion do Kowal, cercie dos propridtaires fonciers, assoc. des hateliers et teneurs do chambres moubldes, assoc. des barbiers-chirur-gions, assoc. dos marchands - bon-chars. March ci s : lo joudi. Industrio: Tannories, raoulins, brassorie, fabr. d'eaux-do-via ot liqueurs, fabr. d'arLicles on tricot, Manufacture dos tabacs de l'Etat. Star osta (Staroste): Bron. Cho-dakowski. Prezydent miast a (Prisi-dent cle la orne): Wach Drojanow-ski. Prezes Rady Miojskiej (PH.s. du Conseil Municipat): Wiad. Krukowski. Straż ogniowa miojska. K o rn end ant (Sapeurs-pompiers. Commandant): Pleszko. Lekarze (Inćdeeins): Barezenko Dy-mitr dr., Mickiewicza 38 —. Ciach nowicz Mich. dr. St.Kolojowa 26 — Gertałow W . dr. (wown), Łucica184 Gliwitiski S. dr. (gin), Mickie-wicza 35 — Jaworowski Toof. dr., Pol•cyjna 1— Królew-ski Wac. dr. (jar), N. Ko-lejowa 00 -- Krzeczkowska Jul., dr., Kościuszki 8 — Loblo Zygm. dr. (wam), Kolejowa 90 — Leszkie-wicz Stanisław dr., Warszawska 50 Lipovvioclut Sawicka Ser. dr., Bony 15 -- Pirogow M. dr.., Stra-żacka 12 — Pomoranz Jojn. dr., Łuska 43 — Rychlicici Leon dr. (chir), Szpital Państwowy — Świotilcow W1. dr. — Turow-slc i Bol dr., Ławka 07 — Wajtrnan • J. dr., Warszawska 399 -- Wasilewski Jerzy dr. -- Wesolski Wac. dr. (zak), Palma]. 15 Zysitind Pinkus, dr., Warszaw-ska 62. Szomsztoin Aron dr. Lekarze dentyści (rruhleeins den-tistes): Ajzonbora Bor., Mielciewl-osa — Bartach Ryw. — )(Nadłub-man Cli. — Gallion G. — Goldrnan Komar J., N. Kolejowa 44 — Go-lublcicn ,Szuj. — Gor-czyńslci illug. M., Państw. Szpital blp. 1 — Gorszyński Włodz. Warszawska — Korner L. — Ku-cyn Ejd. — Lawin Zysk. — Maj zoln 13 trz.—Sokolowsk i klomb — Stola-lucht Julcialson Cli. Lekarze weterynarii (midecins lirinaires):Grabown1d- Jarmolowlms 
-Kowel 
-Władz., Magistrat— Mroczek Jan , Starostwo — Suchodolski Henry Adwokaci (avoeals): I3ornasowski • Wikt. — Graczyk-Wind. (obr. sad.) Grekk Zygm. — Makowski Ign. Mianowski Stan. (obr. sąd.) —Szulc Henr.-- Szymiclearicz Wład. 1Vomrtusze (notaires): Horod_pek i • — Skorupski Fran. — Zyz-nowiki Hip. • Komornicy (huissiers): Ważyński Walerjan. Agentury (commissionnaires en mar-chandises): Peter M. Mickiewicza 16 — Lachs, Krótka ,14 Akuszerki (sayss-femmes): Chicon/1oz Z. — Cyn M. — Filip H. — Gor-bacz N. — Halporin F. Kolodart, H. — Nowicka I. — P.loczko M. — Purwin H. — Rejf Ch. — Stopan M. — Witkowska J. Apteczne aklady(drogueries): )(Bas-kin R., Warszawska 132 — »sio-idelsztejn S., Warszawska 129 — xPriedlondor G., Warszawska 14 — xGoIdbeza Sz. i Syn, Sienkie-wicza 25 — Goldsztojn Sz., War-szawska 48 — xMotiuk I., War-szawska 138 — XWalach I., War-szawska 30. Blumentol 1. Apteki (pharmaeies): xAptelca Tow. ',Lina, Hicedek"—XEjscaont Piotr, Kościelna' 1 — Fndrichson N., Warsza ska 31-xPratmowska Z., Łuska 2. Asenizacyjno przodsiabiorstwa (assainissement): X.Sanital", Kropiwnikier S., Warszawska 13. Banki (banques): xBank dla Han-dlu i Przemysł_Iu S. A. w Warsza-wie, oddz., warszawska 53 xBank Handlowy w Warazawle Sp. Alce., odde. w Kowlu, War-szawska 32 — xBank Kupiecki —xBank Ludowy Sp. z o o., Ko-ściuszki 7 — XBank Spóldnolczy z o. o. -- X,,Samopomoc", Stow. Kred ytowe;Spóldz. z o. n., Łuska 3- — xSpóldzielezy Bank Kredytowy Drobnych Kupców w Kowlu, Sp. z o. o., Warszawska 181. Betonowe wyroby (produits cn bi-lon): xBarwikowski Józ., Łuska 45' Bibułka — fabryki (febr. de papiers de sole): Gites M., Sienkiewicza 5 — Halporin A., ZakoścIelna 4. Bielizna (lineene): Linder B., War-szawska 177. Golcer, 3 Maja 7. Blacharze (ferblantiers): Berszt,ejn M. L., Magistracka 21 — Fajnland Sz., Kolejowa -- Grinblat L., Listopadowa 43 — Igrynblat I., Li-stopadowa 39 —. Rubinsztojn S., Warszawska 134: Bławaty (cissus): Baszojwa E., Warszawska 60 — xDunajewiocki M., Warszawska 126 — Ejnoch B., Warszawska (30 — Holfinan Sz., Handlowa 5 — xKansieti -- F.,. War-szawska 164 xKosztenbopn S:, Warszawska 14.4 — xLewin S., Szuhajsiciego 4 — xMelamod A. i Sz., Warszawska 110 --- xMola.- med G., Warszawka 235 -- XMi-chalski A., Warszawska 67 — Parol-mutor S., — Pietruszka L. —Pińska E. — XPolak N., Warszaw-ska 138 — „Pośrodnik", wl. Goboe M. i Bluelcor H. Rojnor L., Warszawslca 181 — Rubinsztojn F., Warszawska 181 -- xSza-pico Sz., Warszawska 154 — Sztejnborg G., Warszawslca 179 - XSzwarcblatt Z., War-szawska. 100 xWydra M. i J., Warszawska 157. Bronsztejn, Zaulek Soborny 4 — Pinczak D., Warszawska 149 — Trojster Sz., Wlodzimierska 2 Broń (armuriers): XGliniocki i Ko-walski, Kolejowa 53 — xRd2atisld Jan, ławka 133 — xSpólka My-śliwska, Warszawska 32 Browary (brasseries): Sz(colnilc D" • kucka 108. • Brukarskie przedsięb. (entrepre-neum de pavage): Fajnsztojn Mich., Poniatowskiego 8. Budowlane ma toriaty (matŁr(aux de construction): Bokser, Łuska 23 — XKrasielslci J. Mieszczańska — Makowski S. i I., Micklowicza 7. Budowlane przedsiębiorstwa (en-treprises, de construclions): Bibor i Kne,. Łuska 61 — xGoldsztejn G., Pomnikowa 14 — Lubczenko, Brzeska 17, Bydle — handel (march. do bestiauz): Dator U. I W., Kolodnicka 13 — Chinozon W., Lucio). 01 — XKusz rdr P. i Grinberis B., Pinsicowa 24. (Myty (briques): lafarynowskl W. i S-Ins, Monopolowa 12. Cementowe wyroby'— fabr. (febr. dc produits en cintent): Znak A. 
+Rojtburd Ch. -- Sundolzon Z., Warszawska -- XSzechet S., 3 Ma-ja
+Trachtonborg C. Warszawska
 
+Tuszman M. 3 Maja
+Woln-tiftA., 3 Maja
+Wajnsztejn --- 
+Walewski Cz.
+Wimca B. Wolosowicz 1tL,
+Zalc-man•P.
+xZolccor B
+Złotnik J., Warszawska. 
+Ajzonborg F., Piłsudskiego 
+Banatki J., Warszawska
+Baru J., Kolejowa
+Czernisai Ch., Warszawska
+Frojlich J., Warszawska
+Gondelraan D.,. Warszawska
+Grawer R. Rówrońska
+Gruszka Ch. R., D., Rówionska
+Kiperraan D. S., 3 Maja
+Kowalowa M., Warszaw-ska
+Szojmur L., Warszawska
+Sztorenszys G., Warszawska
+Zulas B., Rówieńska. 
 
-Weiser• .`4, • 1COWd " xErlich Warazawska 144 - Orirojntach M., Warszawaka 56 - Rojzon S., Maciojrnirska 17 - Rycy-ka S. Warszawska 27 - Schnoidor C., Warszawska 171 - Talion N. i Sz., Lurka 24. (harengs): ChuSid M., Han-dlowa 5. .4lusarze (serruriers): Kuras J., Sienkiewicza 29 - Lerner Ch., Warszawska 68 -- MaH., -Warszawska 184 - Marejda A., Warszawska 143 - Panawas M., Legjonów 22 - Prawidło J., War-szawska 82 - Stolar M., Lurka 20 - Szwarc Sz., Warszawska 154 - Winograd M., Krótka 14. Świeco parafinowe fabryki (fabr. de bougies en para (rine): Ro-zon M., Warszawska 132. Tapicerzy (tapissiers):Brozyński A., Warszawska 13 - Lorbor M., Warszawska 72 - Sojbel.1., War szawska 93 - Terk 13., Wars'zaw-ska 21. ;Tartaki (scieries): Anidurski T. i Szpilbcrg J., Warszawska 126 - xBronsztejn i Sicz, Kolodnicka. Technicy dentystyczni (micaniciens dentistes): Blausztoin Jak., Lurka 83 - Byk Abr., Lurka 137 - Halpern Józ., Mickiewicza 21 -Jagodnik Leman, Brzeska 1 - Kiperman Zachar., Łucica 58. Techniczne biura (bureaux techni-ques): Berezowslci J., Więzienna 6 -X0Iszowiec K.. laicka 8-Zwią-zek Inżynierów. Targowa. 0. Tokarskie, zakłady (tourneurs): Mo-tel .Gocklik, Lurka 70. Trumny (cercueils): xLambach W., Warszawska 99. Trykotaże - fabr. (fabr. d'articles en trieot): Gilman A., ks. Szukaj skiego 1 - Struzer M., Warszaw-alca 66. Tytoniowe wyroby (tabaes): Ba-ranowski W., Sienkiewicza 6 - XBinder H., Sienkiewicza 41 - XBrandel B. - xBugień A. War-szawska 47 - XGoldszmidt Ch., Warszawska 255 - Goldszmidt L., Warszawska 156 -' xGoldszmidt M., Warszawska 8 - Kamiński A., Krótka 3 - Klepacz Sz., Kolejo-wa 87 - Kruciński J., ławka 21 -- XLabuś Fr., Kolejowa 88 - Lo-derman B., Sienkiewicza róg Ar-tyleryjskiej - Lerner M.,. War-szawska 167 - xMolarned Sz., Warszawska 185 - Mianowska K., Warszawska 67 - Mrówczyński W., Kolejowa 36 - Olecki St., Brze-ska 158 - Opatowski • M., Brze-ska 6 - Piątkowski L., Warszaw-ska 32 - XPomeranc Ch., Listo-padowa 91 - XPugacz Sz., War-szawska 249 - Rnbinsztojn L., Warszawska 191 - Rus K., War-szawska. 101 Sawicki M., Kró-lowej Bony 1 - Segal Ch., War-szawska 188 - Sobkow M. -- XSztojnga.rdt B., Kolejowa 13 ,- xSztofenberg S., Lurka 35 - Walczyński P. -- ZembrzuSki, Lurka 85 - Zwiorowicz M., War-szawska 134 - Żurakowska Z., Kolejowa. • • Tytoniowe wyroby - fabryki (manufactures de tabacs): Fabryka Monopolu Tytoniowego. • Ubezpieczenioteobiura(assurances): XWarszawskie Tow. Ubezpie-czeń, oddz., Więzienna. Ubrania gotowe (vecements confec-tionnós): Ajerman L., Zaulok ,So-b orny 15 - Bajczman L., Rynek 26 xBarg M. Kościelna 1 M - Brener ., Ikarszawska 117 '-Brizoli W., Warszawska 102 ;--- XCificierman G., Lurka '18 - Drykier L.• i M., Warszawska 142 Eknan M., Rynek - XFrid-man Cz., Lurka 18 - Goldszteja L.; Warszawska 126 - xGutman 'A., Rynek 26 - Kamień A., War-szawska 154 - xLedersznajder J., Warszawska 191 - Rubinsztojn E., Warszawska 182 .-- Wajnor M., Sienkiewicza, 39 - xWornor Ch. i Ingborg M., Włodzimierska 1 --- xZelcer Ch., Rynek 32. ~liny (clearcutiers): Barkowiec S., Sienkiewicza 25 ,--- Banczyle M., Majowa 3 - '.Fijałkowski M.! Sienkiewicza 19 - xGradoszyński M., Warszawska 16 i 23 - xKo-. Mmdci J., Sienkiewicza 33 - K.rasnowski W. laicka 37 - xSto-fani, Warszawska 142 - Wol.niak i Tehrian, Sienkiewicza 37. Wiatraki (moulins d Vent)* Cybul-ski Al., 'Górka 3 -. Moj1Clor Józ,, Lublimerica 41). IVody gazowe (muz gaze.uses): Pa-!lińska F., Warazawslca 40 - Ru-birisztojn L. kaleka 20 - Szyper I., Lurka 127. 
+## Stolarze (reenuisiers):
+Baczyński ' B. _ Rówieńska
+Goreń W., Warszawska
+Kriwolapczuk B., Warszawska
+Szrajbor M., Czysta. 
+
+## Szetrekto przybory (fournit. p. chaussures):
+xBalor B., Mokra —Furman G., Targowa.
+
+## Szewcy (cordonmers):
+Dąbrowski R., Warszawska
+Gryroruk K.
+Kolnik N.
+Krygtor E., Ró-wiońska
+Magia Sz., . Kowalska
+Rozenfeld S., Targowa
+Szwarc-blat B., Warszawska
+Zelant A., Warszawska
+Zygmunt J: Chyliński St., Warszawska. 
+
+## Szklane huty (verreries):
+x,,Z30- da", Sp. robotnicza. 
+
+## ślissarze(serruriers):
+Chmielewski F., Kopernika Silwor A., Kopernika. 
+
+## Tartaki (scieries):
+Ejdolsztejn A. i Jachniuk I., 3 Maja
+Jachniuk Bcia. • 
+
+## Tytoniowe wyroby (tabacs):
+Bri.k dalej M., Leśna
+Byk R., Warszawska
+Plon J.', Warszawska. 
+
+## Ubrania gotowe (vitements confee-tionniz):
+Zając A., Warszawska. 
+
+## Wędliny (ch arcu tiers):
+Nos-ka M., Warszawska
+Stefano-wicz L.
+Szczasny J.
+Wójcik J., Warszawska ()damski L., Kopernika. 
+
+## Wody gazowe wyrób (febr. d'eaux gazeuses):
+Azarwa M., Sien-kiewicza
+Marteld G., Warszawska, 
+
+## Zajazdy (auberg.es):
+Kelrych, Tar-gowa
+Nowicki T., Warszawska
+Trachtenberg E., Kopernika —Trykasz A.,. Kopernika. 
+
+## Zboże (gramik: XPoldman Z., Targowa
+ojtburd M., Tar-gowa Śpiwak .T., Targowa. 
+
+## Zegarmistrz (horlogers):
+Ruwino-wicz J., Warszawska—Zubaty R., Warszawska. 
+
+## Żelazo (fers):
+Czeropicznilc B., Tar-gowa.— Czorepiczmk J. Targowa
+Kac B., Targowa
+Krarnor B., Warszawska— Nabożnik, Targowa. 
+
+## Żelazo—odlecenie (fondeurs en ler):
+XCymerman L., Kolejowa
+Sado J., Kolejowa. 
+
+Weiser• .`4, • 1COWd " xErlich Warazawska 144
+Orirojntach M., Warszawaka 56
+Rojzon S., Maciojrnirska 17
+Rycy-ka S. Warszawska 27
+Schnoidor C., Warszawska 171
+Talion N. i Sz., Lurka 24. 
+
+## (harengs):
+ChuSid M., Han-dlowa 5. .4
+
+## Slusarze (serruriers):
+Kuras J., Sienkiewicza 29
+Lerner Ch., Warszawska 68 -- MaH., -Warszawska 184
+Marejda A., Warszawska 143
+Panawas M., Legjonów 22
+Prawidło J., Warszawska 82
+Stolar M., Lurka 20
+Szwarc Sz., Warszawska 154
+Winograd M., Krótka 14. 
+
+## Świeco parafinowe fabryki (fabr. de bougies en para (rine):
+Ro-zon M., Warszawska 132. 
+
+## Tapicerzy (tapissiers):
+Brozyński A., Warszawska 13
+Lorbor M., Warszawska 72
+Sojbel.1., War szawska 93
+Terk 13., Wars'zaw-ska 21. ;
+
+# Tartaki (scieries):
+Anidurski T. i Szpilbcrg J., Warszawska 126
+xBronsztejn i Sicz, Kolodnicka. 
+
+## Technicy dentystyczni (micaniciens dentistes):
+Blausztoin Jak., Lurka 83
+Byk Abr., Lurka 137
+Halpern Józ., Mickiewicza 21 -Jagodnik Leman, Brzeska 1
+Kiperman Zachar., Łucica 58. 
+
+## Techniczne biura (bureaux techni-ques):
+Berezowslci J., Więzienna 6 -X0Iszowiec K.. laicka 8-Zwią-zek Inżynierów. Targowa. 0. 
+
+## Tokarskie, zakłady (tourneurs):
+Mo-tel .Gocklik, Lurka 70. 
+
+## Trumny (cercueils):
+xLambach W., Warszawska 99. 
+
+## Trykotaże
+fabr. (fabr. d'articles en trieot):
+Gilman A., ks. Szukaj skiego 1
+Struzer M., Warszaw-alca 66. 
+
+## Tytoniowe wyroby (tabaes):
+Ba-ranowski W., Sienkiewicza 6
+XBinder H., Sienkiewicza 41
+XBrandel B.
+xBugień A. Warszawska 47
+XGoldszmidt Ch., Warszawska 255
+Goldszmidt L., Warszawska 156
+xGoldszmidt M., Warszawska 8
+Kamiński A., Krótka 3
+Klepacz Sz., Kolejo-wa 87
+Kruciński J., ławka 21
+XLabuś Fr., Kolejowa 88
+Lo-derman B., Sienkiewicza róg Ar-tyleryjskiej
+Lerner M.,. Warszawska 167
+xMolarned Sz., Warszawska 185
+Mianowska K., Warszawska 67
+Mrówczyński W., Kolejowa 36
+Olecki St., Brze-ska 158
+Opatowski • M., Brze-ska 6
+Piątkowski L., Warszaw-ska 32
+XPomeranc Ch., Listo-padowa 91
+XPugacz Sz., Warszawska 249
+Rnbinsztojn L., Warszawska 191
+Rus K., Warszawska. 101
+Sawicki M., Kró-lowej Bony 1
+Segal Ch., Warszawska 188
+Sobkow M. -- XSztojnga.rdt B., Kolejowa 13
+xSztofenberg S., Lurka 35
+Walczyński P. -- ZembrzuSki, Lurka 85
+Zwiorowicz M., Warszawska 134
+Żurakowska Z., Kolejowa.
+
+## Tytoniowe wyroby
+fabryki (manufactures de tabacs):
+Fabryka Monopolu Tytoniowego.
+
+## Ubezpieczenioteobiura(assurances):
+XWarszawskie Tow. Ubezpie-czeń, oddz., Więzienna. 
+
+## Ubrania gotowe (vecements confec-tionnós):
+Ajerman L., Zaulok ,So-b orny 15
+Bajczman L., Rynek 26 xBarg M. Kościelna 1 M
+Brener ., Ikarszawska 117 '-Brizoli W., Warszawska 102
+XCificierman G., Lucka '18
+Drykier L.• i M., Warszawska 142 Eknan M., Rynek
+XFrid-man Cz., Lurka 18
+Goldszteja L.; Warszawska 126
+xGutman 'A., Rynek 26
+Kamień A., Warszawska 154
+xLedersznajder J., Warszawska 191
+Rubinsztojn E., Warszawska 182
+Wajnor M., Sienkiewicza, 39
+xWornor Ch. i Ingborg M., Włodzimierska 1
+xZelcer Ch., Rynek 32. 
+
+## ~liny (clearcutiers):
+Barkowiec S., Sienkiewicza 25 ,--- Banczyle M., Majowa 3
+'.Fijałkowski M.! Sienkiewicza 19
+xGradoszyński M., Warszawska 16 i 23
+xKo-. Mmdci J., Sienkiewicza 33
+K.rasnowski W. laicka 37
+xSto-fani, Warszawska 142
+Wol.niak i Tehrian, Sienkiewicza 37. 
+
+## Wiatraki (moulins d Vent)
+Cybul-ski Al., 'Górka 3
+Moj1Clor Józ,, Lublimerica 41
+
+## Wody gazowe (muz gaze.uses):
+Pa-!lińska F., Warazawslca 40
+Ru-birisztojn L. kaleka 20
+Szyper I., Lurka 127. 
 19294voifsh Businśs Diiećtor' Jiikietlffiroali«MipeNtWnY*1 J 
-Wody Oazowo - fabryki (fabr. d' muz gazeuscs): Cukiorman L, So-borna 4 - Erlich S., "Wlodzimier-ska 8 - Goldszmidt M., Pomni-kowa 21 -> Kagan M. Fabryczna 6 - Polofiscy Bcia, Cyrkowa 2'k - Tojbicz A., Brzeska 37 - Wajsblat F. i L., Mickiewi-cza 9. Wódki - fabryki (fabr.cr eaux-de-vie): Państwowa Wytwórnia Wódek, Monopolowa 46 W6cU.11,1 likiory (eaux-de-wie et  ti-queurs):_XMianowski S., Warszaw-ska 165 - Pawlicha S., Kolejowa. Zboże (grains): Finkielsztejn A., Rynek 17 - xLanger M. 3 Maja 7 - xhanda Ch., Brzeska 16 - xSztejnberg F., Łuckir 71 - Szyn-dler B., Monopolowa 64 - XWolk A., Monopolowa 77 - Wolk H., Kościuszki 10 - xWoIk L., Mo-nopolowa 75 - Zafran S., War-szawska 223. /Iren E., Monopolowa 84 - Kro-piwniker, Foksal 10 - Sztojnberg M., Lurka 114. Zegarmistrza (horlogers): XBuruk M., Warszawska 22 - Chiżyk J., Kolejowa 87- Engelsberg H., Kolejowa 37 - Fradolis M., War-szawska 50 - Goldszmidt F., Warszawska 255 - xSzyter M., Warszawska 49 - Wajsborg Ch., Warszawska 80 - XWajsborg Sz., Warszawska 132. Pryzant, Krzywa - Wajneztejn, Sienkiewicza 13. Ziemioplady (produits du sol): xKuplecki Syndykat Rolniczy, Sp. • 7. o. o., Komorowska 14 - xZwią-zek Rolników Wolyfiskich, Wię-zienna. żelazo (fers): Bernzowski J., Fa-bryczna 4 - Culcierman J., Sobor-na 7 - Erlich A., Warszawska 130 - xGarber Cli., Warszawska 165 - Glejzor K., Mickiewicza 4 - Gonik R. Warszawska - xGufer-man S., Warszawska 237 - Gut-man Sz., Warszawska - Guz B., Warszawska 126 - xGuz Ch., Warszawska 191 - xKlejnerman J., Warszawska 243 - Krysiek A. -xLitwar W., Warszawska 26 -Mandol J., Warszawska 227 - xMandel M., Warszawska 225 -Papa L., Warszawska 31 - Papo J.,Warszawska 18 - Ptakowski A., Mickiewicza 7 - Rajziszor M., Warszawska 181 - Rojtenborg Warszawska 215 - Rosinzowska: R., Warszawska 66 - Rubinsztoja D., Warszawska 173 - Slepak M., Warszawska 169 -- Szejnblum M., WarszaWska 229 - Szowb M., Warszawska 184 - świniuch L., Warszawska 181 - x„Teliaz", Tow.Eksploatacji i Handlu żelazem z o. o., Lurka 42. Wajsborg P., Warszhwska 225 Waksman Ch., Warszawska 157 -- xWorcel H., Warszawska 213 -- Worcel J., Warszawska 233.
 
-## Mosty - budowa (Bridge Construction)
+## Wody Oazowo
+fabryki (fabr. d' muz gazeuscs):
+Cukiorman L, So-borna 4
+Erlich S., "Wlodzimier-ska 8
+Goldszmidt M., Pomni-kowa 21 -> Kagan M. Fabryczna 6
+Polofiscy Bcia, Cyrkowa 2'k
+Tojbicz A., Brzeska 37
+Wajsblat F. i L., Mickiewi-cza 9. Wódki
+fabryki (fabr.cr eaux-de-vie):
+Państwowa Wytwórnia Wódek, Monopolowa 46 W6cU.11,1 
+
+## likiory (eaux-de-wie et  ti-queurs):
+_XMianowski S., Warszaw-ska 165
+Pawlicha S., Kolejowa. 
+
+## Zboże (grains):
+Finkielsztejn A., Rynek 17
+xLanger M. 3 Maja 7
+xhanda Ch., Brzeska 16
+xSztejnberg F., Łuckir 71
+Szyn-dler B., Monopolowa 64
+XWolk A., Monopolowa 77
+Wolk H., Kościuszki 10
+xWoIk L., Mo-nopolowa 75
+Zafran S., Warszawska 223. /Iren E., Monopolowa 84
+Kro-piwniker, Foksal 10
+Sztojnberg M., Lurka 114. 
+
+## Zegarmistrza (horlogers):
+XBuruk M., Warszawska 22
+Chiżyk J., Kolejowa 87- Engelsberg H., Kolejowa 37
+Fradolis M., Warszawska 50
+Goldszmidt F., Warszawska 255
+xSzyter M., Warszawska 49
+Wajsborg Ch., Warszawska 80
+XWajsborg Sz., Warszawska 132. Pryzant, Krzywa
+Wajneztejn, Sienkiewicza 13. 
+
+## Ziemioplady (produits du sol):
+xKuplecki Syndykat Rolniczy, Sp. • 7. o. o., Komorowska 14
+xZwią-zek Rolników Wolyfiskich,Wię-zienna. 
+
+## żelazo (fers):
+Bernzowski J., Fa-bryczna 4
+Culcierman J., Sobor-na 7
+Erlich A., Warszawska 130
+xGarber Cli., Warszawska 165
+Glejzor K., Mickiewicza 4
+Gonik R. Warszawska
+xGufer-man S., Warszawska 237
+Gut-man Sz., Warszawska
+Guz B., Warszawska 126
+xGuz Ch., Warszawska 191
+xKlejnerman J., Warszawska 243
+Krysiek A. -xLitwar W., Warszawska 26
+Mandol J., Warszawska 227
+xMandel M., Warszawska 225
+Papa L., Warszawska 31
+Papo J.,Warszawska 18
+Ptakowski A., Mickiewicza 7
+Rajziszor M., Warszawska 181
+Rojtenborg Warszawska 215
+Rosinzowska: R., Warszawska 66
+Rubinsztoja D., Warszawska 173
+Slepak M., Warszawska 169
+Szejnblum M., WarszaWska 229
+Szowb M., Warszawska 184
+świniuch L., Warszawska 181
+x„Teliaz", Tow.Eksploatacji i Handlu żelazem z o. o., Lucka 42
+Wajsborg P., Warszhwska 225
+Waksman Ch., Warszawska 157
+xWorcel H., Warszawska 213
+Worcel J., Warszawska 233.
+
+## Mosty
+budowa (Bridge Construction)
 Zajdel Wartzawska 91
 
 Iliteyestna Ma/remonty . mamra '
@@ -24,6 +303,7 @@ Sztejnbach O. Ska, Lucka 117
 
 
 ##  Madtarate (savonneries):
+
 Lacha Gb. i Swio, /moka 77
 
 Mydle, (march.
@@ -56,21 +336,27 @@ Efrus E., Lurka 45
 Polmin", Brzeska 153
 
 ## Chemiczno pradukty (produils chi-. migues):
+
 Goldszteja Sz. Warszawska. 
 (charpentiers):
+
 Karolczuk St., Poprzeczna 8
 Kupersztojn, Foksal 8
 Pan' A., Budyszczad-ska 8
 
 
-## Curder - hurt (sitem, en gros):
+## Curder
+hurt (sitem, en gros):
+
 Szorb F., Warszawska. 
 
 ## Cukierki -- fabrIdd (fabr. da bon-'boru):
+
 Galar A. Wlodzimierska --Rubinsztejn S., Warszawska 105
 
 
 ## -Cukiernia (confiseurs):
+
 Bauch I., Warszawska 14
 Cukiernia Udzia-lowa, Lacka 5
 Czwanczara B., Kolejowa 4
@@ -81,6 +367,7 @@ Zae K. Łuska 7
 
 
 ## Czopssiju (fabr. de casguettes):
+
 Cwibel M., Mieszczańska 1
 Elfantel B., L., Warszawska 42
 =aniel M., Kolejowa 5
@@ -97,20 +384,26 @@ Szmojsz S. Warszawska 180
 Smajder G., Warszawska 180
 
 
-## - ~siwawa. tnaterja/y (fourrutures pour dontistes):
+##
+~siwawa. tnaterja/y (fourrutures pour dontistes):
+
 xCymorman M., 3
 Maja 8
 
 
-## Drogi - budowa (construetion dc routes):
+## Drogi
+budowa (construetion dc routes):
+
 Grytaoski S. i Liwszyc, Kościuszki 6
 
 
 ## Doof,d.łci (levures):
+
 xGojzon A., Apteczna 11
 
 
 ## Drukarnio (imprimeries):
+
 Brandes L. i Kaweborg K. Warszawska 4
 Drukarnia Polska, Warszaw-ska 16
 Herszbaurn G., Warszawska 23
@@ -118,6 +411,7 @@ Sandelszteja J., Warszawska 19
 • 
 
 ## Drzewo (bois):
+
 Balt« Z., Warszawska 52
 Cytryn Z., Maciojow-ska 21
 xFurszteler Ch., Kolo-jowa 5
@@ -130,7 +424,9 @@ orozowski J., Fabryczna 4
 
 
 ## Ekspedycyjne biura (expŁditeurs):
-Frydnian - Halpern, Warszawska 81
+
+Frydnian
+Halpern, Warszawska 81
 Sosna 1
 , Listopadowa 87
 „Wygoda", Łuska 105
@@ -139,15 +435,18 @@ Załoga, Nadrzeczna 24
 e
 
 ## drosenie (miner d'aectrieitd):
+
 Culcierman J. A., Soborna 7
 Elektrownia Miejska, dzierż. Tuller Br., al. Ks. Poniatowskiego 3
 
 
 ## Farbiarnie (teinturiers):
+
 Jasman, Warszawska 131
 , 
 
 ## Farby (couleurs):
+
 xBakun E., Warszawska 205
 xCuperfaja U., Handlowa 15
 xErlich ł:
@@ -159,11 +458,17 @@ XSojbeł J., Warszaw-• ska 170
 Stok Sz., Warszaw-ska 130
 
 
-## Felczerzy (barbiers - chirurgiem):
-Antodczyk W. - Baranowski J. Baskun A. - Dumadsld S., Łuska 204
-Gulidski A. - Jan-, kowski St. 
+## Felczerzy (barbiers
+chirurgiem):
+
+Antodczyk W.
+Baranowski J. Baskun A.
+Dumadsld S., Łuska 204
+Gulidski A.
+Jan-, kowski St. 
 
 ## Fotografizmie zakłady (phatogra-phes):
+
 Burak K. J., Warszawska 30
 Epsztejn A., Warszawska 61
 Epsztojn I., Warszawska 98
@@ -173,8 +478,10 @@ Nusin E., .Warszawska 34
 
 
 ## Fryzjerzy (coiffeurs):
+
 Bojmel L., Sienkiewicza 3
-•- Chodór M. - Fajorsztojn M. Warszawska 163
+•- Chodór M.
+Fajorsztojn M. Warszawska 163
 Fajnor L., Kolejowa 79
 Fajnor Sz., Warszawska 31
 ridolman D., Warszawska 83
@@ -200,10 +507,13 @@ Lot-for i ICerznar, Kolejowa 91
 Ty-modzowicz, Łuska O. • 
 
 ## Futra (fourrures):
+
 Fridman A., Laicka 100
-Kapelusznik J. i •., Warszawska OO - Kusznir M., Warszawska 186
+Kapelusznik J. i •., Warszawska OO
+Kusznir M., Warszawska 186
 Szydman S., Warszawska 83
 Golantorps (msrceri%):
+
 XAlzanbora M., Warszawska 13
 XBass J./ 
 
@@ -212,10 +522,12 @@ XBass J./
 
 1
 Guz Ch., Warszawska 160
-Gibel B., Kolejowa i - HrZyb St., 
+Gibel B., Kolejowa i
+HrZyb St., 
 
 ## Kelly amie (librairies:
-Dachowiec - 
+Dachowiec
+
 Berelzon G., Warszawska 58
 Blajtrus F., Warszawska- 6
 Boju% G., Warszawska 128
@@ -234,7 +546,8 @@ XJoruchimowicz B., Warszawska 45
 Jeruchimowicz M., Warszawska 49
 xKac B., Warszawska 82
 Kac M., Warszawska 114
-a - J., Ko-lejowa 58
+a
+J., Ko-lejowa 58
 1
 Ca B., Warszawska 11
 xKiertner B., Sien-kiewicza 39
@@ -252,7 +565,8 @@ Poliszuk M., Kolejowa 2
 XSzojnbaurn P., Warszawska 136
 xSzojchet J., Kościelna 7
 Szulirn B. Warszawska 189
-xśpiwak J., Magistracka -- Wala-sztejn M., Kolejowa - xWam sztojn N., Sionitiowicza 13
+xśpiwak J., Magistracka -- Wala-sztejn M., Kolejowa
+xWam sztojn N., Sionitiowicza 13
 xWorba Sz.. Warszawska 2
 Wolf L. Warszawska 181
 xWu-siczer M., Warszawska 330
@@ -269,25 +583,31 @@ Ingber, Kościuszki 9
 
 
 ## Garbarnio (lanneries):
+
 Chusid R., Brzeska 55
 Falem F., .Maciejow-ska 108
-Kapłan, Rubla Modo-jawisz - Segał Sz.,1
+Kapłan, Rubla Modo-jawisz
+Segał Sz.,1
 kfaciejowska102
 xWolman Bala, Monopolowa 71
 
 
 ## Geometra!, (glorn1
 tres):
+
 Kosmal-ski L.- Kownacki .1
-Skulski.L. Gilzy - fabryki ffaba de tuba d ci-parane* Melamed J., Brzeska 145
+Skulski.L. Gilzy
+fabryki ffaba de tuba d ci-parane* Melamed J., Brzeska 145
 Wajsman M.; Warszawska 78
 
 
 ## Gremplarnie (canteries):
+
 Mejkler D., Brzeska 134
 
 
 ## Herbaciarnie (dćbits dc thś):
+
 CYtryn, Kolejowa 21
 Kaufman A., Warszawska 80
 Kontrakt C., Mickiewicza 23
@@ -297,6 +617,7 @@ Szyltor A., Kolo-lows 86
 • 
 
 ## Hotele (hdlels):
+
 xHotel„Bristol", wł. Szojchet E. Warszaw-ska 28
 „Hotel Gdadki",wł.Stnixer M.,Kolejowa 80
 „Hotel Metropol" wl. Weinsztejn Ch.,Kolejovsa 77
@@ -308,11 +629,13 @@ xllotel „Versal", wł. Glejzor I., Mickiewicza 4
 
 
 ## introligatora: u (sensata):
+
 Sztom I. N., Królowej Bony 7
 Wydra F., Kolejowa 8
 , 
 
 ## Jadłodajnie (restaurants):
+
 Baranik Z.,Lucka 147
 Popis, Kolejowa 59
 „Wolyntanka", Polskie Tow. Dobrocz. Chrzot16
@@ -320,6 +643,7 @@ Popis, Kolejowa 59
 
 
 ## Jaja (oeufs):
+
 xDichter J., Brzeska 33
 Rojdor Ch., Brzeska 110
 xSo-gał F., Handlowa 27
@@ -327,6 +651,7 @@ Mormelsztejn, Włodzimierska 5
 
 
 ## Jubilerzy (bijoutiers):
+
 xBaes W., Warszawska 16
 xCygielman' P., Warszawska 18
 Faldraan B., Warszawska 111
@@ -335,33 +660,40 @@ XFradelis A., Warszawska 42
 Paslawaski A., Warszawska. 
 
 ## Kamasznicy (Ugai pour chaussureś):
+
 lias A. Kolejowa 16
 Zokzniak J., Halo ^ mmdciii. • 
 
 ## Kamieniołomy (carrilres de pietra):
+
 Fajnsztojn M., Targowa 8
 
 
 ## Kapelusze damskie (modes):
+
 Chajt Ch. R., Warszawska 106
 Maj-zole S., Warszawska 50
 Sagan-kagan P. Warszawska 112
 Szwarcblat R. Warszawska 80
 Wolk ID., Warszawslui 40
-Kamili J., •Lacka - Kraft D., Warszawska 59
+Kamili J., •Lacka
+Kraft D., Warszawska 59
 
 
 ## Kasy potyczk.-oszezedn. . (zdam d'emprunl at d'sfpargne):
+
 XaKtula Rzomieślnicza", Sp. z o. o. • 
 
 ## Kawiarnio (cards):
+
 XAwruch 13
 „ Kolejowa 87
 Basiuk St, Sjenicie-wiem 13
 XBor G„.Kolejowit 74
 yn . 
 Kolejowa 83
-• - )(Kiper M. War-Drawska- 42
+•
+)(Kiper M. War-Drawska- 42
 N.-Kolajo-wa 48
 Muzyczek M., Brzeska 76
 P uchalska E. Kolejowa • 82
@@ -372,20 +704,24 @@ Kabaszczuk, Kolejowa 71
 
 
 ## Zapielmy. zabhaly.(bains):
+
 Faks J. i Ska, Kolejowa i?. 8
 iner
 
 ## natoilraly (cirabnas):
+
 „Ex-press", Mickiewicza 10
 „No-wości", Łuska 7
 
 
 ## Kiszki zwierzęce (boyaudiers):
+
 Ka-gan, Pomnik 78
 a. 11
 
 
 ## clonfabus owa artylady Vpitiers):
+
 Dra-nock i  Z., Łuska 47
 xBuchor J., Kolejowa 21
 Figel Z.,, Kolejowa 2
@@ -403,27 +739,37 @@ Badanczyk, Warszawska • 100
 Janczor J. Warszawska 47
 8
 a/odzieje (eharrons):
+
 Nigel Sz. L., Warszawska 92
 
 
 ## Konfekcja (eonfertions):
+
 Marjam S., Warszawska 92
 
 
 ## Ilonie /sande! (maren. ds chs-vaux):
+
 Diksztojn M. i Kminki' Sz., Bezimienna 3
 
 
 ## Hooperalywy (coopirativer):
-xSpo-żywczo - Oszczędnościowo SpóldZ. Stow. Inwalidów z o. o. - XSPa-dzielnia Osadników Wojskowych w Warszawie z o. o., oddz. - xUkrainska Kooperatywa, Sp. 0
+
+xSpo-żywczo
+Oszczędnościowo SpóldZ. Stow. Inwalidów z o. o.
+XSPa-dzielnia Osadników Wojskowych w Warszawie z o. o., oddz.
+xUkrainska Kooperatywa, Sp. 0
 O. 
 
 ## Koszykarskie wyroby (oanniers):
-Hojntzo L. - XPross Ch., Warszawska 65
+
+Hojntzo L.
+XPross Ch., Warszawska 65
 XPress J., Warszawska 86
 
 
 ## Kowale (forgerons):
+
 Boker S., Ko-lejowa 25
 Biega P., KolocInkka . 11
 Chait S., Listopadowa 35
@@ -432,16 +778,20 @@ Szyi ner M., Warszawska 42
 R., Sienkiewicza 29
 
 
-## Kotuchy - pracownie (fabr.. da rnanteaux en peaux de moutons):
+## Kotuchy
+pracownie (fabr.. da rnanteaux en peaux de moutons):
+
 Kusznir, Maciojowska 4
 
 
 ## Krawcy (tailleurs):
+
 Arboitman E., Warszawska 64
 Brener L, Warszawska 23
 Brener M., Warszawska 213
 Brener Sz. I Rufo J., Krótka 34
-a - Burroan Z., Warszawska 51
+a
+Burroan Z., Warszawska 51
 Chait J., Warszawska 72
 Chazon R., Warszawska 42
 Dinar G., Za-kościelna 4
@@ -452,9 +802,11 @@ Erlich D. Z., Warszawska:
 ,-- Erlich H., Kościuszki .4
 Fajer I., Łuska 3
 Fisz« Ch., Warszawska 29
-Poker M. - Fridman M., War-, szawska 39
+Poker M.
+Fridman M., War-, szawska 39
 Frydosan Sz. Idewicza. i Garber Sz., jowska 9
-, - Gejer Sz., Warszaw-ska 151
+,
+Gejer Sz., Warszaw-ska 151
 Goldberg Sz., Sionki°. Wicza Goldhaner Sz. Kolejo-wa 10
 Goldszmidt Ł., 'Warszaw-ska 253
 Gonczar .Sz., Sienkie-wicza' 5
@@ -500,6 +852,7 @@ Zylborborg M., Warszawska 57
 • • , 
 
 ## Kramie(' tuso damskie (milleurs poitr damo et couturitres):
+
 Nudelsztozher M. Warszawska 30
 Porolmutor L. 'Warszawska 48
 Szmojozleror H:
@@ -518,11 +871,13 @@ XMandal K:
 xMycmik W., Warazaw-ska 42
 Piat M. i Szvrareblat M., Kolejowa 2
 Poliszuk J., Luc-ka 161
-Pomorsbach A. - X.Roj-zen Ch., Lacka 11
+Pomorsbach A.
+X.Roj-zen Ch., Lacka 11
 x„świtlo", Kolojowa 88
 
 
 ## Kuchene naczynia (art. ds euisine):
+
 xBezzuhow A., Warszawska 157
 xCymring R., Warszawska 128
 Cynamon S., Warszawska 182
@@ -536,14 +891,18 @@ xWajnsztoja P., Sienkiewicza 43
 
 
 ## Kwiaty • (fleurs):
+
 Tomasiewiez, Lucka. 3
 
 
-## Lasy - eksploatacja (exploitations forestihes):
+## Lasy
+eksploatacja (exploitations forestihes):
+
 Wagner Beta, Ponia-towskiego 37
 
 
 ## Manufaktura (tissus):
+
 Arkadjor, ulica Warszawska nr. 116
 Aworbuch M., Warszawska 116
 Bar N., Warszawska 185
@@ -555,7 +914,8 @@ Efrus E., Lufka 45
 Ejnoch I., Warszawska 118
 Fryszberg M., Warszawska 134
 Gendlor M., Warszawska 04
-Giejor S. - Gadki A., Warszaw-ska 122
+Giejor S.
+Gadki A., Warszaw-ska 122
 Gitelis 1
 , Warszawska 00
 xGodomiczer P., Warszaw-ska 154
@@ -589,6 +949,7 @@ Szapiro Ch., Warszawska 82
 
 
 ## Maszyny (machina):
+
 01503
 v:
 10
@@ -599,8 +960,11 @@ Maszyny do szycia, Ma-szyny do pisania, Wirówki, 110
 • wery , Gramofony, Narz „ rola. i t.d. I 
 • 
 ## Maszyny do szycia (machina d coudre):
+
 xSingor, &ming Machi-no Company, oddz., Warszaw Bka Szłojnbach 0
-, Warszaw->faszyny rolniczo (machina! samic - Iss):
+, Warszaw->faszyny rolniczo (machina! samic
+Iss):
+
 x„Poinoc", Krótko. 5
 „Posiew", wł. Jonlcisz A., Warszawska 130
 • XRytwitiski W., Lacka 46
@@ -609,26 +973,32 @@ XWorner J., laicka 3
 
 
 ## Malta (laskim):
+
 Culcierman Ch.. 
 
 ## Meble (meubles):
+
 Franktowicz M., Wa.rszawska 82
 Tonenbaum Warszawska 52
 'Szwarcblat, Warszawska 93
 
 
 ## lliechaniczne waraztaty, (micani, ciem):
+
 Herbo M., kaleka li? • -- Zilborsztojn M., Lacka 50
 Metalowe wyroby (artieles Flauonbaum J., Lacka 50
 
 
 ## Mleczarskie zakłady (taiteries):
+
 Sega? Ruw., Apteczna 36
 
 
 ## Mlyny (moidins):
+
 XArmarnilc B. sztaba Z. Kolo niska EpelbauM i Ska (walc),k?ucica 205
-Bron-(mot), Wlodzi (par) - Pierwsza Spólim Mlypar Bka, w1
+Bron-(mot), Wlodzi (par)
+Pierwsza Spólim Mlypar Bka, w1
 Culciorman L i Ska,, Warszawska- Stolar Ss. i Melnicer Oz. (par. i gaz), 'Luelca 20
 Wojnaztoin A. °not) Zoknor 8
 , Vabryazi-na 23
@@ -637,20 +1007,24 @@ Wojnaztoin A. °not) Zoknor 8
 
 
 ##  Nasiona (graines):
+
 Ejsmont Piotr, Kościelna 1
 
 
 ## Nicroyaisizna-hondel (marchands de pores):
+
 Ciechonski W., Maciejów.
 
 ##  Wwozy (imagerie):
+
 
 Kacalap J., Warszawska 184
 
 
 ##  Obuwie (chaussures):
 
-Barg J., War-szawska 38
+
+Barg J., Warszawska 38
 
 Blumsztejn A., Warszawska 199
 
@@ -666,7 +1040,8 @@ Gurwic I., Warszawska 122
 
 Guz Ch., Warszawska 134
 
-Ingber i Werner, Wiodzimiarska ł - xPugacz H., Warszawska 08
+Ingber i Werner, Wiodzimiarska ł
+xPugacz H., Warszawska 08
 
 xSzechtor A., Warszawska 83
 
@@ -677,10 +1052,12 @@ Zommor M., Warszawska 92
 Ocet -
 ##  roziewnie (embouteillage cle vinaigres):
 
+
 Hojzen M., Pomni-kowa 33
 
 Olcretowe biura (agences ma-
 ## ritimes):
+
 
 xChargeurs Reunis, T. A., Kolejowa 58
 
@@ -701,7 +1078,9 @@ Bałtycico-Amerykańska .Linja, Ko-lejowa 65
 
 ##  Olejarnie (huiteries):
 
-Cukiorman Sz. A., Warszawska róg Sobornej - XCuporfajn S., Lacka 79
+
+Cukiorman Sz. A., Warszawska róg Sobornej
+XCuporfajn S., Lacka 79
 
 Guz B. Luciu 73
 
@@ -718,12 +1097,14 @@ Lapidus Ch., Luc-. ka 233
 
 ##  Owoce (fruits):
 
+
 xFinkielsztejn J., Warszawska 6
 
 Mendel M., Warszawska 135
 
 ..
 ##  Piekarnie (boulangers):
+
 
 Baber B.,' Kościelna 1
 
@@ -771,22 +1152,24 @@ Rojzon Ch. A., Żydowska 13
 
 Sala J., Sienkiewicza 20
 
-XSpyra F., . Taszowskiego - Sznajder M.,. Listopadowa '17
+XSpyra F., . Taszowskiego
+Sznajder M.,. Listopadowa '17
 
 Żylbersztoja .A., Listopadowa 93
 
 Piś
 ## mienne materjaly (fournitures de burcaux):
 
+
 xAszkienazy Ch., Ko-lejowa 03
 
-Aszkienazy S., War-szawska..114
+Aszkienazy S., Warszawska..114
 
 Bar C., Warszaw-slU 84
 
 Kamica L., Warszaw-ska 45
 
-XMossór D., War-szawska 112
+XMossór D., Warszawska 112
 
 Rojtor P., War-' szawska 62
 
@@ -797,13 +1180,16 @@ i8
 Piwiarnie, (brasseries-
 ## derbil):
 
+
 xBobor M., Kolejowa. 2
 
-.-- Bronsztojn D., Krótka - Bryk A., SienIchrad-cni 26
+.-- Bronsztojn D., Krótka
+Bryk A., SienIchrad-cni 26
 
 .Cliajtori S., Budy-szc zańska 3
 
-Faja J. - G11
+Faja J.
+G11
 
 % J. Klojnor Sz., Warszawska 45
 
@@ -864,6 +1250,7 @@ Maja 4
 
 ##  Piwo (bilre):
 
+
 xPomeranc, Listopa-dowa 91
 
 XTojbicz A., Drze-• ska 39
@@ -871,10 +1258,12 @@ XTojbicz A., Drze-• ska 39
 Podlelady kolejowe (traverses pow-
 ## diemins de per):
 
+
 x„Import", 'rwo Przenwslowo-Handlowe, Kolejo-wa 91
 
 Pokoje . umeblowane (chambres ~
 ## biles):
+
 
 Fetor K., Luciu 134
 
@@ -887,10 +1276,13 @@ Zejlik B., Kolejowa 88
 Pomniki (monument/ •
 ##  fundraires):
 
+
 Pak J., lacka 55
 
-Port czocky - fabryki (fabr.
+Port czocky
+fabryki (fabr.
 ##  de bas):
+
 
 Aworbuch Ch., Warszawska' 80
 
@@ -899,10 +1291,12 @@ Puka/z, Włodzimiorska 99
 Pownoś
 ## nicy (cordiers):
 
+
 Melamed S.; Rynek 8
 
 
 ##  Pralnie (blanchisseries de fin):
+
 
 Bar Ch., Warszawska 92
 
@@ -913,16 +1307,19 @@ Sikora, Kolejo-wa 52
 Próśb i tłumacze/i biura (peł
 ## itions et traductions):
 
-Bursztojn J., War-szawska•176
+
+Bursztojn J., Warszawska•176
 
 Fuks L., Warszaw-ska 38
 
-Kolybielska L. War-szawska 33
+Kolybielska L. Warszawska 33
 
-xLerer N., Warszaw-ska- Ił - xWerba L., Lurka 22
+xLerer N., Warszaw-ska- Ił
+xWerba L., Lurka 22
 
 
 ##  Restauracje (restaurants):
+
 
 xBiela wa J._ Sienkiewicza- 29
 
@@ -943,12 +1340,14 @@ XSzyper I., Warszawska 42
 XWalsblat I. .i Erlich I., Wło-dzimiorska.
 ##  Rowery (bicyciettes):
 
-Lerner B., War-szawska 3
+
+Lerner B., Warszawska 3
 
 Messor P., Warszaw-ska 43
 
 Rowery -
 ##  reparacja (rdpara tlona de birirlettes):
+
 
 Jormelin C., Lurka 14
 
@@ -961,12 +1360,14 @@ Sztemsznajd, Warszawska 5
 
 ino towary (articles divers):
 
+
 xGopen F., Lubliniocka 8
 
-Kowalska N. -.Mejler Ch., War-szawska 143
+Kowalska N. -.Mejler Ch., Warszawska 143
 
 Rybołó
 ## wstwo (pIche):
+
 
 Szwarc Ch., Mickiewicza 21
 
@@ -974,6 +1375,7 @@ RZI:
 ## d7
 
 liCy (bouchers):
+
 
 Atlas E., Kolejowa 31
 
@@ -1017,7 +1419,8 @@ Karsz J., Mickiewicza 1
 
 Krasnowski W.., Warszawska 39
 
-Melnicor H. L. - Pietruszka J.., Kolejowa 13
+Melnicor H. L.
+Pietruszka J.., Kolejowa 13
 
 Pietruszka Ki, Sienkiewicza 12
 
@@ -1030,10 +1433,13 @@ Wojstowski K., Po-przeczna 20
 Samoc.kodowa komunikaela(trans-
 ## porta automobiles):
 
-xStala Komu nikacja Samochodowa Kowel-Rat , - no Sp. z o, o., Warszawska 61
+
+xStala Komu nikacja Samochodowa Kowel-Rat ,
+no Sp. z o, o., Warszawska 61
 
 
 ##  Siodlarze rymarze (selliers et bourreliers):
+
 
 Herszenhorn, Foksal 14
 
@@ -1041,6 +1447,7 @@ Molarnem!, Krótka 54
 
 Prusa J. B., Warszawska. Skó
 ## ry Osim et peaux):
+
 
 XAtlas 13
 
@@ -1056,7 +1463,7 @@ xI3
 
 reirman U. Warszaw-ska 201
 
-xBronszaft: B., War-szawska 162
+xBronszaft: B., Warszawska 162
 
 XBronszaft S., Warszawska 126
 
@@ -1103,18 +1510,22 @@ Korsak T' Mink tewicza 16
 Snwro febr. ;(fakir, de °
 ## ulisses your maohines):
 
+
 Xliebezuk I Ska, Warszawska 1
 
 :10
 
 
-Sold owocowa - ~nfi> • (Lab/._ sirops'
+Sold owocowa
+~nfi> • (Lab/._ sirops'
 ##  da fruits):
+
 
 Pugacz Bze-ska 101
 
 
 ##  (sel):
+
 
 Komitet Powiatowy L. O. P P., Warszawska47
 
@@ -1125,6 +1536,7 @@ Zawadzki P, Włodzimiorska 2
 
 ##  Sptrytuarja (spiritueux):
 
+
 Myszkow-ska B., Krótka" 18
 
 Noskow S. Warszawska 29
@@ -1133,10 +1545,12 @@ Osiuk Z. i Szyli Warszawska 17
 
 xWejcman J. i Boruszek Sz., Brzeska 4
 
-Guz - Sicmianowski, Brzeska 9
+Guz
+Sicmianowski, Brzeska 9
 
 Spożywcze artykuł
 ## y (cotnestibies):
+
 
 Ajzenberg S., Warszawska 38
 
@@ -1148,7 +1562,8 @@ xBal-bir G., Sienkiewicza 43
 
 Bar D., Warszawska 141
 
-Bater J. - Bebczuk I. Warszawska 62
+Bater J.
+Bebczuk I. Warszawska 62
 
 Bebcżuk L., Krótka 13
 
@@ -1156,7 +1571,7 @@ Ber M., Kolejowa 74
 
 xBorensztejn E., Krótka 10
 
-Bieloraj. Sz., War-szawska 39
+Bieloraj. Sz., Warszawska 39
 
 Blajsztem P., Mie-szczańska 4
 
@@ -1164,7 +1579,7 @@ xBlumenkranc R., 3
 
 Maja 6
 
-Bronsztojn J., War-szawska 33
+Bronsztojn J., Warszawska 33
 
 Byk Sz., Kolejo-wa 46
 
@@ -1192,7 +1607,8 @@ XCuril H., Pomnikowa 33
 
 Cwik M., Brze-ska 134
 
-Czeczolko R. - polgo-poluk A., Sienkiewicza 14
+Czeczolko R.
+polgo-poluk A., Sienkiewicza 14
 
 xEj-chenbaum R. Sienkiewicza 39
 
@@ -1202,9 +1618,11 @@ Erlich M., Rynelc,29
 
 Erlichgerecht J., Sienkiewicza 41
 
-Erlichgerecht M., Rynek - Erlichgerecht M. Fabryczna 5
+Erlichgerecht M., Rynek
+Erlichgerecht M. Fabryczna 5
 
-Fofer J. - xFin-kiel 1
+Fofer J.
+xFin-kiel 1
 
 Sienkiewicza 2
 
@@ -1250,13 +1668,14 @@ Gonik J., Ks. Ponia-towskiego 8
 
 Grinblat I., Kole-jowa 38
 
-Grojsor H. i N., War-szawska 126
+Grojsor H. i N., Warszawska 126
 
 Grojsor J., Kr6
 
 t-. ka 4
 
-a - Grynblat M., Kole-jowa 38
+a
+Grynblat M., Kole-jowa 38
 
 Gudos M., Handlowa 14
 
@@ -1332,7 +1751,8 @@ ysalcowski A., Monopolowa 80
 
 Maluczka M., Handkiwa 10
 
-Marszalowicz Sz. i Guz Lojzor, Rynek - 3
+Marszalowicz Sz. i Guz Lojzor, Rynek
+3
 
 Mełamed Ar., Han-dlowa 23
 
@@ -1344,13 +1764,15 @@ Warne(' S., Mic-kiewicza 7
 
 Milsztojn 'Sz., Ma-gistracka 2
 
-Myli J. - Nejrnan' A., WiodzirniUrska 2
+Myli J.
+Nejrnan' A., WiodzirniUrska 2
 
 Notkowskl D„.Sienkiowicza 1
 
 „Odro.dzonio", 'wł. Puktkowa 13
 
-Sienkiewicza U. - Pola J. Pondziach Ch., Mo-nopolowa (11
+Sienkiewicza U.
+Pola J. Pondziach Ch., Mo-nopolowa (11
 
 XPoregal A., Ko-lejowa 24
 
@@ -1404,9 +1826,11 @@ XSegal R., Sien-kiewicza 38
 
 xSingal S., Kole-jowa 76
 
-Stolar Ch. - xSty-ezyńska A. Sienkiewicza 36
+Stolar Ch.
+xSty-ezyńska A. Sienkiewicza 36
 
-Sygal Sz., Warszawska - Szama L., Monopolowa 49
+Sygal Sz., Warszawska
+Szama L., Monopolowa 49
 
 Szargiel L., Fabryczna 3
 
@@ -1430,7 +1854,8 @@ Sztejnberg R, Sienkiewicza 28
 
 Sztenberg R., Lurka 129
 
-Sztern S. - xSztylerman D., Magistrac-ka 3
+Sztern S.
+xSztylerman D., Magistrac-ka 3
 
 xSzuf G., Kolejowa 58
 
@@ -1440,7 +1865,7 @@ Szwarc J., Rynek 15
 
 Szwarc U., Tar-gowa 2
 
-Szwediak Ch., War-szawska 100
+Szwediak Ch., Warszawska 100
 
 xTabacznik E., Brzeska 5
 
@@ -1472,7 +1897,7 @@ xWinter E., Mickiewicza 4
 
 Wirwor W., Ko-lejowa 63
 
-xWoliweler M., War-szawska 239
+xWoliweler M., Warszawska 239
 
 XZafran A., Han-dlowa. 36
 
@@ -1496,7 +1921,8 @@ Benis A., Listopadowa 72
 
 Cu-ryn G., Pomnikowa 33
 
-Gonik, Sienkiewicza - Machniuk, , War-szawska 41
+Gonik, Sienkiewicza
+Machniuk, , Warszawska 41
 
 Markowska, Brze-ska 152
 
@@ -1512,13 +1938,16 @@ Zask A., Wie-dzunierska 44
 
 Zilberberg, Luc-ka .87
 
-Starzyzna - handel -
+Starzyzna
+handel -
 ## (frinien):
+
 
 xWajnor Z., Handlowa .6
 
 
 ##  Stolarze (mcnuisiers):
+
 
 Chaaen Warszawska. 129
 
@@ -1554,15 +1983,18 @@ Studnie „Inidó
 Bronsztojn M., Kolejowa
 
 ##  Sukno (draperies):
+
 Towarzystwo Handlowo Krosy% wł. Tworski A. i Wandal J  ., Warszawska 154
 
 Szewckie przybory (fournit.._ p.
 
 ##  chaussures):
+
 Fajgonbauni A., Kolejowa 16
 
 
 ##  Szewcy (cordonniers):
+
 Arbajter•Sz., Warszawska 257
 
 Bender 13
