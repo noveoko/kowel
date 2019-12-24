@@ -1,0 +1,78 @@
+Polish,French,English
+Chemiczno pradukty,Produits chimiques,Chemical products
+Ciesle,charpentier,carpenter
+Cukierki,bonbons,Sweets
+Czapnicy,chapelier,hatmaker
+Drogi,cher,Expensive
+Drukarnia,imprimerie,Printing house
+Drzewo,arbre,Tree
+Ekspedycyjne biura,Bureaux expéditionnaires,Expeditionary offices
+Farbiarnie,usine de teinture,dyeing Factory
+Farby,peintures,Paints
+Felczerzy,personnel médical,medics
+Fotografizmie zakłady,Paris photographiques,Photographic bets
+Fryzjerzy,Barbiers,Barbers
+Futra,fourrure,fur
+Geometra,arpenteur,Surveyor
+Gremplarnie,Gremplarnie,Gremplarnie
+Herbaciarnie,thé,tea
+Hooperalywy,Hooperalywy,Hooperalywy
+Hotele,hôtels,Hotels
+Ilonie,Ilona,Ilona
+Instrumenty Muzyczne,Instruments de musique,Musical instruments
+Jadłodajnie,gargote,eating house
+Jaja,œufs,eggs
+Jubilerzy,bijoutiers,jewelers
+Kamasznicy,Kamasznicy,Kamasznicy
+Kamieniołomy,carrières,quarries
+Kapelusze damskie,Chapeaux femme,Women's hats
+Kasy potyczk.,Escarmouches de départ,Checkout skirmishes
+Kawiarnio,café,café
+Kelly amie,Kelly amie,Kelly amie
+Kiszki zwierzęce,Intestins d'animaux,Animal bowels
+Konfekcja,friandise,Confection
+Koszykarskie wyroby,Produits de basket,Basketball products
+Kotuchy,Kotuchy,Kotuchy
+Kowale,forgerons,blacksmiths
+Kramie,banquise,floe
+Krawcy,adaptation,Tailoring
+Kuchene naczynia,Ustensiles de cuisine,Kitchen utensils
+Kwiaty,fleurs,flowers
+Lasy,forêt,Forests
+Manufaktura,atelier,Manufacture
+Maszyny,machinerie,Machinery
+Maszyny do szycia,Machines à coudre,Sewing machines
+Meble,meubles,Furniture
+Mleczarskie zakłady,Usines laitières,Dairy plants
+Mlyny,mlyny,mlyny
+Mosty,ponts,Bridges
+Nafta,huile,Oil
+Nicroyaisiznahondel,Nicroyaisiznahondel,Nicroyaisiznahondel
+Podlelady kolejowe,Sous-planchers ferroviaires,Railway sub-floors
+Pokoje umeblowane,Chambres meublées,Rooms furnished
+Pownośnicy,Pownośnicy,Pownośnicy
+RZiiCy,RZiiCy,RZiiCy
+Rybołówstwo,pêche,Fishing
+Skóry,cuir,leather
+Slusarze,serrurier,locksmith
+Snwro febr.,Snwro febr.,Snwro febr.
+Sold owocowa,Fruité Vendu,Fruity Sold
+St skto i porcelana,Saint-skto et porcelaine,St. skto and porcelain
+Starzyzna handel,Ancien commerce,Old trade
+Stolarze,charpentiers,Carpenters
+Szetrekto przybory,Accessoires Szetrekto,Szetrekto accessories
+Szewcy,cordonniers,shoemakers
+Szklane huty,Verrerie,Glassworks
+Tapicerzy,tapisserie,Upholstery
+Tartaki,scieries,sawmill
+Tytoniowe wyroby,Produits du tabac,Tobacco products
+Ubezpieczenie Biura,Assurance bureau,Insurance Office
+Ubrania gotowe,vetements confectionnes,Ready-made clothes
+Wiatraki,
+Wody gazowe wyrób,fabr. d'eaux gazeuses,Gas water product
+Wędliny,charcutiers,butchers
+Zajazdy,auberges,Inns 
+Zboże,grains,grains
+Zegarmistrze,horlogers,watchmaker
+Żelazo,fers,Iron
+Żelazo odlewnie,fonderies de fer,iron foundries
