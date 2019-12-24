@@ -20,3 +20,6 @@ Includes 360+ listings
 ## Voting districts
 [Voting Districts: Kowel](https://polona.pl/item/obwieszczenie-inc-na-podstawie-art-52-ordynacji-wyborczej-dz-u-r-p-nr-47-poz,OTQyNjM5MzI/0/#info:metadata) 
 Published:28th September 1938
+
+## Links
+[Shtetl: Kovel, Ukraine](https://kehilalinks.jewishgen.org/kovel/kovel.htm)
