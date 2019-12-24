@@ -14,7 +14,7 @@ Data=`1:match, else 0:no match`
 ## List of Businesses and People
 
 ### List of Doctor's Resident in Kowel (1920)
-[data](
+[data]( 	doctors_resident_in_kowel.txt)
 [source](http://bc.wbp.lublin.pl/dlibra/plain-content?id=17315)
 
 ### Most Common Streets for Business Address in Kowel circa 1929
