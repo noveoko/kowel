@@ -7,10 +7,11 @@ This project is developed by @skilenstein as a passion/hobby project. If you spo
 [kowel street names 1929](street_names.txt) includes all the Street names in the 1929 Kowel Phone book
 
 ## List of Businesses and People
-taken from the 1938 phone book
+
+### 1938 phone book
 [kowel phone book](kowel_residents_1938.csv)
 
-taken from 1929 Polish Business Directory
+### 1929 Polish Business Directory
 
 [1929 Business Directory:Kowel](1929_business_directory.md)
 
