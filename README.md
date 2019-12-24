@@ -33,9 +33,11 @@ Includes 360+ listings
 [Voting Districts: Kowel](https://polona.pl/item/obwieszczenie-inc-na-podstawie-art-52-ordynacji-wyborczej-dz-u-r-p-nr-47-poz,OTQyNjM5MzI/0/#info:metadata) 
 Published:28th September 1938
 
-## Links
-[Shtetl: Kovel, Ukraine](https://kehilalinks.jewishgen.org/kovel/kovel.htm)
-
 ## Industries
 [List of Business Types](industries_in_kowel_1929.txt)
 Note: needs to be manaully verified and fixed
+
+---
+
+## Links
+[Shtetl: Kovel, Ukraine](https://kehilalinks.jewishgen.org/kovel/kovel.htm)
