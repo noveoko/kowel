@@ -35,3 +35,7 @@ Published:28th September 1938
 
 ## Links
 [Shtetl: Kovel, Ukraine](https://kehilalinks.jewishgen.org/kovel/kovel.htm)
+
+## Industries
+[List of Business Types](industries_in_kowel_1929.txt)
+Note: needs to be manaully verified and fixed
