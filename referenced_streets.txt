@@ -1,0 +1,148 @@
+1 Maya, 0
+3 Maja, 1
+19 Stycznia, 0
+27 Dywizji Piechoty, 0
+50 P.P. Strzel. Kres., 0
+Apteczna, 1
+ks. Bandurskieog, 0
+Bezimienna, 1
+Bielińska, 0
+Brzeska, 1
+Brzozowa, 0
+Budowlana, 0
+Budyszczańska, 1
+Chmielna, 0
+Ciasna, 0
+Cicha. 0,
+Cerkiewna, 0
+Cmentarna, 0
+Cyrkowa, 1
+Dluga, 0
+Daszynskiego, 0
+Dzika, 0
+Dużo Gonczarna, 0
+Dabrowskiego, 1
+Dworzec Kolejowy, 1
+Filarecka, 0
+Fabryczna, 0
+Gibalskiego, 0
+Gesia, 0
+Górka, 1
+Gospodarcza, 0
+Hoza, 0
+Hallera, 0
+Hołówki, 0
+Handlowa, 1
+Jasna, 0
+Jaworowa, 1`
+Kąpielowa, 0
+Kolejowa, 1
+Kołodnicka, 1
+Komorowska, 1
+Kościuszki, 1
+Kowalska, 1
+Koszykowa, 0
+Kościelna, 1
+Krakowska, 0
+Królowej Bony, 1
+Kresowa, 0
+Krucza, 0
+Krzywa, 1
+Krótka, 1
+Lisa Kuli, 0
+Listopadowa, 1
+Legionow, 1
+Lubliniecka, 1
+Łucka, 1
+Listopadowa, 1
+Limanowskiego, 0
+al. Marszkalka Pilsudskiego, 0
+Maciejowska, 1
+Magistracka, 1
+Mickiewicza, 1
+Mieszczańska, 1
+Miła, 0
+Mało Gonczarna, 0
+Mijanka-Jachów, 0
+Młynarska, 0
+Mokra, 1
+Miodowa, 0
+Myszliwska, 0
+Monopolowa, 1
+Mościckiego, 0
+Niecala, 0
+Nasypowa, 0
+Narozna, 0
+Nadbrzeżna, 0
+Nowa, 0
+Nowowiejska, 0
+Nowy Swiat, 0
+Obwodowa, 0
+Ogrodowa, 0
+Parkowa, 0
+Pasieczna, 0
+Piaskowa, 0
+Piłsudskiego, 1
+pl. Pomnikowy, 1
+Pomnikowa, 1
+Poniatowskiego, 1
+Poprzeczna, 1
+Polnocna, 0
+Pograniczna, 0
+Podjaworska, 0
+Polna, 0
+Poludniowa, 0
+Powurska, 0
+Pereca, 0
+Prosta, 0
+Przeskok, 0
+Poleska, 0
+Rolna, 0
+Rzeczna, 0
+Rynek, 1
+Sadowa, 0
+Sienkiewicza, 1
+Soborny, 1
+Soborna, 1
+Spokojna, 0
+Sulkiewicza, 0
+Strażacka, 1
+Strzelecka, 0
+Szeroka, 0
+Staszyca, 0
+Staro Cmentarna, 0
+Szpitalna, 0
+Szewczenki, 0
+Szkolna, 1
+Szuchajskiego, 0
+Szlachecka, 0
+ks. Sznarbachowskiego, 0
+Topolowa, 0
+Toruńska, 0
+Torowa, 0
+Tranzyt Sarny, 0
+Tranzyt Lubelski, 0
+Tuszowskiego, 1
+Wąska, 0
+Waligórskiego, 0
+Wierzbowa, 1
+Wielka, 0
+Więzienna, 1
+Wilcza, 1
+Wigury, 0
+Włodzmierska, 1
+Wrzosowa, 0
+Wiejska, 1
+Wola, 0
+Wygonna, 0
+Wspolna, 0
+Wojskowa, 1
+Warszawska, 1
+pl. Wolności, 0
+Zielona, 0
+Zaułek Krótki, 1
+Zaułek Kolejowy, 0
+Zórawia, 0
+Zgoda, 0
+Żeromskiego, 0
+Żwirki, 0
