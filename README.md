@@ -11,7 +11,9 @@ taken from the 1938 phone book
 [kowel phone book](kowel_residents_1938.csv)
 
 taken from 1929 Polish Business Directory
+
 [1929 Business Directory:Kowel](1929_business_directory.md)
+
 Includes 360+ listings
 
 ## Voting districts
