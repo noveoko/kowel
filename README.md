@@ -1,4 +1,4 @@
-![](Images/GoogleEarth.png)
+![](Images/GoogleEarth.png?raw=true)
 
 # Kowel
 [Kowel](https://pl.wikipedia.org/wiki/Kowel)/[Kovel](https://en.wikipedia.org/wiki/Kovel): (1918-1945)
