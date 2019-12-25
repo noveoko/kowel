@@ -3,6 +3,12 @@
 
 This project is developed by @skilenstein as a passion/hobby project. If you spot any errors or otherwise would like to comment please raise and issue or perform a pull request.
 
+## Google Earth Map of 1919-1939 Street Names and more
+[Kowel 2RP Google Earth](GIS/kowel_streets4.kmz)
+This Google Earth file is a work-in-progress and includes:
+* street names as they were prior to WW2.
+* pre-war buildings (based on manual exterior review and old photos where available)
+
 ## Street Names
 [kowel street names 1929](street_names.txt) includes all the Street names in the 1929 Kowel Phone book
 
