@@ -1,4 +1,4 @@
-![Historic Kowel via Google Earth](Images/Screenshot from 2019-12-25 10-36-58.png)
+[Historic Kowel via Google Earth](Images/Screenshot from 2019-12-25 10-36-58.png)
 
 # Kowel
 [Kowel](https://pl.wikipedia.org/wiki/Kowel)/[Kovel](https://en.wikipedia.org/wiki/Kovel): (1918-1945)
