@@ -1,4 +1,4 @@
-![](Images/Screenshot from 2019-12-25 10-36-58.png?raw=true)
+![](Images/Screenshot%20from%202019-12-25%2010-36-58.png?raw=true)
 
 # Kowel
 [Kowel](https://pl.wikipedia.org/wiki/Kowel)/[Kovel](https://en.wikipedia.org/wiki/Kovel): (1918-1945)
