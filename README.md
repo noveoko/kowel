@@ -47,6 +47,13 @@ Published:28th September 1938
 Note: needs to be manaully verified and fixed
 
 ---
+## Tools
+[3D from Images](https://colmap.github.io/install.html#installation)
 
 ## Links
 [Shtetl: Kovel, Ukraine](https://kehilalinks.jewishgen.org/kovel/kovel.htm)
+
+## Research Resources
+[Digital Library](http://mbc.cyfrowemazowsze.pl/dlibra)
+[Polona](https://polona.pl/)
+[Szukaj w Archiwach](https://www.szukajwarchiwach.gov.pl/)
