@@ -1,4 +1,4 @@
-![](https://github.com/noveoko/kowel/blob/images/kowel_1939.png)
+![](https://github.com/noveoko/kowel/images/kowel_1939.png)
 
 
 # Kowel
