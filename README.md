@@ -1,4 +1,5 @@
-![](https://github.com/noveoko/kowel/blob/master/images/GoogleEarth.png)
+![](https://github.com/noveoko/kowel/blob/images/kowel_1939.png)
+
 
 # Kowel
 [Kowel](https://pl.wikipedia.org/wiki/Kowel)/[Kovel](https://en.wikipedia.org/wiki/Kovel): (1918-1945)
