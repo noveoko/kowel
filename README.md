@@ -6,7 +6,7 @@
 This project is developed by @skilenstein as a passion/hobby project. If you spot any errors or otherwise would like to comment please raise and issue or perform a pull request.
 
 ## Google Earth Map of 1919-1939 Street Names and more
-[Kowel 2RP Google Earth](GIS/kowel_streets4.kmz)
+[Kowel 2RP Google Earth](GIS/kowel_streets5.kmz)
 This Google Earth file is a work-in-progress and includes:
 * street names as they were prior to WW2.
 * pre-war buildings (based on manual exterior review and old photos where available)
@@ -36,7 +36,7 @@ Data=`1:match, else 0:no match`
 [1929 Business Directory:Kowel](1929_business_directory.md)
 
 Includes 360+ listings
-
+ 
 ## Voting districts
 [Voting Districts: Kowel](https://polona.pl/item/obwieszczenie-inc-na-podstawie-art-52-ordynacji-wyborczej-dz-u-r-p-nr-47-poz,OTQyNjM5MzI/0/#info:metadata) 
 Published:28th September 1938
