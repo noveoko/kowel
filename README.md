@@ -54,6 +54,6 @@ Note: needs to be manaully verified and fixed
 [Shtetl: Kovel, Ukraine](https://kehilalinks.jewishgen.org/kovel/kovel.htm)
 
 ## Research Resources
-[Digital Library](http://mbc.cyfrowemazowsze.pl/dlibra)
-[Polona](https://polona.pl/)
-[Szukaj w Archiwach](https://www.szukajwarchiwach.gov.pl/)
+* [Digital Library](http://mbc.cyfrowemazowsze.pl/dlibra)
+* [Polona](https://polona.pl/)
+* [Szukaj w Archiwach](https://www.szukajwarchiwach.gov.pl/)
