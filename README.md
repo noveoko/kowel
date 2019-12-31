@@ -57,3 +57,4 @@ Note: needs to be manaully verified and fixed
 * [Digital Library](http://mbc.cyfrowemazowsze.pl/dlibra)
 * [Polona](https://polona.pl/)
 * [Szukaj w Archiwach](https://www.szukajwarchiwach.gov.pl/)
+* [Archive:People Persecuted by Nazi government](https://collections.arolsen-archives.org/en/archive/6)
