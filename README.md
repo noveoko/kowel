@@ -9,7 +9,7 @@ This project is developed by @skilenstein as a passion/hobby project. If you spo
 [Kowel 2RP Google Earth](GIS/kowel_streets15.kmz)
 This Google Earth file is a work-in-progress and includes:
 * street names as they were prior to WW2.
-* pre-war buildings (based on manual exterior review and old photos where available)
+* **Over 130 pre-war buildings** (based on manual exterior review and old photos where available)
 
 ## Street Names
 [kowel street names 1929](street_names.txt) includes all the Street names in the 1929 Kowel Phone book
