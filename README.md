@@ -59,3 +59,6 @@ Note: needs to be manaully verified and fixed
 * [Szukaj w Archiwach](https://www.szukajwarchiwach.gov.pl/)
 * [Archive:People Persecuted by Nazi government](https://collections.arolsen-archives.org/en/archive/6)
 * [Areas photographed](https://catalog.archives.gov/id/44240512)
+
+## Research Papers
+[Co‐registration of panoramic mobile mapping images and oblique aerial](https://research.utwente.nl)
