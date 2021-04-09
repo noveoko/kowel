@@ -1,8 +1,10 @@
 Name, North, East
-train_station, 51.22135,   
+train_station, 51.22134, 24.71238
 post_office_x, 51.21225, 24.70593
 memorial_church, 51.21148, 24.70788
 curve_in_street_a, 51.1992, 24.72944
 cemetery_easy_of_church_ne_corner, 51.20959, 24.72048
 large_synagogue, 51.21702, 24.69495
 apteka, 51.21447, 24.70645
+cross_building_north_of_railyard, 51.21796, 24.72004
+large_black_industrial_building_square, 51.213651, 24.722424
