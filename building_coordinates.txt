@@ -8,3 +8,4 @@ large_synagogue, 51.21702, 24.69495
 apteka, 51.21447, 24.70645
 cross_building_north_of_railyard, 51.21796, 24.72004
 large_black_industrial_building_square, 51.213651, 24.722424
+pre-war-structure_south_of_square_above, 51.212435, 24.721733
