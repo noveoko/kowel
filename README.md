@@ -57,6 +57,10 @@ Note: needs to be manaully verified and fixed
 
 Black and white old image dataset to train Deep Learning model as part of the development of a similar building search engine
 
+### Related materials
+
+[https://www.youtube.com/watch?v=9a_Z14M-msc](Detectron2 Tutorial)
+
 ## Research Resources
 * [Digital Library](http://mbc.cyfrowemazowsze.pl/dlibra)
 * [Polona](https://polona.pl/)
