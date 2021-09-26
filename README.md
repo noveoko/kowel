@@ -53,6 +53,10 @@ Note: needs to be manaully verified and fixed
 ## Links
 [Shtetl: Kovel, Ukraine](https://kehilalinks.jewishgen.org/kovel/kovel.htm)
 
+## Datasets
+
+Black and white old image dataset to train Deep Learning model as part of the development of a similar building search engine
+
 ## Research Resources
 * [Digital Library](http://mbc.cyfrowemazowsze.pl/dlibra)
 * [Polona](https://polona.pl/)
