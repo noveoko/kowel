@@ -4,40 +4,40 @@
 
 ## Most common surnames among those getting married
 
-Kuniczuk 36
-Stadnicka 17
-Błaszczuk 15
-Steczuk 13
-Tatys 13
-Kuniczuk 37
-Stadnicki 20
-Tatys 17
-Steczuk 11
-Błaszczuk 10
+* Kuniczuk 36
+* Stadnicka 17
+* Błaszczuk 15
+* Steczuk 13
+* Tatys 13
+* Kuniczuk 37
+* Stadnicki 20
+* Tatys 17
+* Steczuk 11
+* Błaszczuk 10
 
 ## Most common surnames among those being born
 
-Kuniczuk 148
-Błaszczuk 53
-Dominczuk 43
-Steczuk 39
-Tatysiuk 32
-Stadnicka 28
-Stadnicki 25
-Tatesiuk 24
-Tatys 22
-Jasiński 20
+* Kuniczuk 148
+* Błaszczuk 53
+* Dominczuk 43
+* Steczuk 39
+* Tatysiuk 32
+* Stadnicka 28
+* Stadnicki 25
+* Tatesiuk 24
+* Tatys 22
+* Jasiński 20
 
 
 ## Most common surnames among those dying
 
-Kuniczuk 83
-Steczuk 42
-Błaszczuk 35
-Dominczuk 25
-Tatysiuk 22
-Tatys 22
-Stadnicka 15
-Wawryszuk 15
-Tatesiuk 15
-Koniczuk 10
+* Kuniczuk 83
+* Steczuk 42
+* Błaszczuk 35
+* Dominczuk 25
+* Tatysiuk 22
+* Tatys 22
+* Stadnicka 15
+* Wawryszuk 15
+* Tatesiuk 15
+* Koniczuk 10
