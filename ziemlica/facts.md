@@ -45,6 +45,6 @@
 
 ## Sources
 
-[https://wolyn-metryki.pl/Wolyn/](Metryki Wolyn)
+[Metryki Wolyn](https://wolyn-metryki.pl/Wolyn/)
 
-[https://zbrodniawolynska.pl/zw1/form/247,Baza-Ofiar-Zbrodni-Wolynskiej.html?szukaj=728340113](Victims of Ethnic Cleansing in Ukraine 1942-1944)
+[Victims of Ethnic Cleansing in Ukraine 1942-1944](https://zbrodniawolynska.pl/zw1/form/247,Baza-Ofiar-Zbrodni-Wolynskiej.html?szukaj=728340113)
