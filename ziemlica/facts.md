@@ -44,18 +44,17 @@
 
 ## Most common surnames among those killed 1942-1945
 
-TATYS
-BŁASZCZUK
-ZIELIŃSKA
-ZIELIŃSKI
-JASIŃSKI
-KONICZUK
-NECZAJ
-KOBYLARZ
-STADNICKA
-STOLARCZUK
-
-
+ * Tatys
+ * Błaszczuk
+ * Zielińska
+ * Zieliński
+ * Jasiński
+ * Koniczuk
+ * Neczaj
+ * Kobylarz
+ * Stadnicka
+ * Stolarczuk
+ 
 ## Sources
 
 [Metryki Wolyn](https://wolyn-metryki.pl/Wolyn/)
