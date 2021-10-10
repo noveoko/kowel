@@ -29,7 +29,7 @@
 * Jasiński 20
 
 
-## Most common surnames among those dying
+## Most common surnames among those dying (prior to 1942)
 
 * Kuniczuk 83
 * Steczuk 42
