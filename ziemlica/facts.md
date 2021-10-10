@@ -42,6 +42,19 @@
 * Tatesiuk 15
 * Koniczuk 10
 
+## Most common surnames among those killed 1942-1945
+
+TATYS
+BŁASZCZUK
+ZIELIŃSKA
+ZIELIŃSKI
+JASIŃSKI
+KONICZUK
+NECZAJ
+KOBYLARZ
+STADNICKA
+STOLARCZUK
+
 
 ## Sources
 
