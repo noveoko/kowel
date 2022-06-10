@@ -70,3 +70,14 @@ Black and white old image dataset to train Deep Learning model as part of the de
 
 ## Research Papers
 [Co‐registration of panoramic mobile mapping images and oblique aerial](https://research.utwente.nl)
+
+# Projects inspired by this one (by me)
+
+
+## Project to train and deploy a Generative model
+
+### Map to Old (Fake) Aerial Photo
+
+An off-shoot of this project, I've given myself to the 21st of June to successfully train a Generative Model (GANS) to take an old map of Poland from the 1900-1944 period and render a photo-realistic aerial image (simulated).
+
+[Map to Aerial Generator](https://github.com/noveoko/HistoricEarth)
