@@ -67,6 +67,9 @@ Black and white old image dataset to train Deep Learning model as part of the de
 * [Szukaj w Archiwach](https://www.szukajwarchiwach.gov.pl/)
 * [Archive:People Persecuted by Nazi government](https://collections.arolsen-archives.org/en/archive/6)
 * [Areas photographed](https://catalog.archives.gov/id/44240512)
+* [Application of analysis of aerial photographs in search
+of burial sites of victims of war and totalitarian crimes
+](https://problemykryminalistyki.pl/pliki/dokumenty/5_ossowskibykowskawitowskabrzezinskiapplicationofanalysis.pdf)
 
 ## Research Papers
 [Co‐registration of panoramic mobile mapping images and oblique aerial](https://research.utwente.nl)
