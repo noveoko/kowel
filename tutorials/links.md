@@ -8,3 +8,7 @@
 ### Links
 
 [How to use Multiple f-spy Cameras in Blender](https://www.youtube.com/watch?v=fkusLyMVuJU)
+
+## Geneology Research
+
+[Bernie Madoff's Polish Roots](https://avotaynuonline.com/2009/07/paternal-family-history-of-bernard-madoff-a-case-study-for-neophyte-genealogists-by-gary-mokotoff-publisher/)
