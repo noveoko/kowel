@@ -54,8 +54,9 @@ print(f"Predicted chars in word for pixel width of: {target} for new word with 5
 
 ## Real-World Case
 
-Length of word to predict: 119 pixels
-Predicted size: 7.63
+Length of word to predict: **119 pixels**
+
+Predicted size: **7.63**
 
 Next, I filtered my list of words by len, and then manually checked that they are indeed street names and came up with this list of candidate names:
 
