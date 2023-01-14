@@ -52,6 +52,39 @@ predicted_len = model.predict(new_word)
 print(f"Predicted chars in word for pixel width of: {target} for new word with 5 characters: ", predicted_len)
 ```
 
+## Real-World Case
+
+Length of word to predict: 119 pixels
+Predicted size: 7.63
+
+Next, I filtered my list of words by len, and then manually checked that they are indeed street names and came up with this list of candidate names:
+
+```text
+Bogaczuk
+Bożenka
+Bryulowa
+Gagarina
+Hlebowa
+Kilcewa
+Klenova
+królowa
+Kulisha
+Apteczna
+Wagonowa
+Topołowa
+Oleinyka
+Zielona
+Powurska
+Bilińska
+Tychyny
+Wiejska
+Chumacka
+Szyszkin
+```
+
+The challenge now is to figure out which of these is most likely. 
+
+
 # Conclusion
 
 Hopefully this will help you in those difficult cases where you simply cannot determine anything about a string in an image but it's length in pixels. 
