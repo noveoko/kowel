@@ -60,27 +60,24 @@ Predicted size: **7.63**
 
 Next, I filtered my list of words by len, and then manually checked that they are indeed street names and came up with this list of candidate names:
 
-```text
-Bogaczuk
-Bożenka
-Bryulowa
-Gagarina
-Hlebowa
-Kilcewa
-Klenova
-królowa
-Kulisha
-Apteczna
-Wagonowa
-Topołowa
-Oleinyka
-Zielona
-Powurska
-Bilińska
-Tychyny
-Wiejska
-Chumacka
-Szyszkin
+```python
+['Hołówki',
+ 'Kresowa',
+ 'Miodowa',
+ 'Niecala',
+ 'Narozna',
+ 'Parkowa',
+ 'Poleska',
+ 'Rzeczna',
+ 'Soborny',
+ 'Soborna',
+ 'Szeroka',
+ 'Szkolna',
+ 'Wiejska',
+ 'Wygonna',
+ 'Wspolna',
+ 'Zielona',
+ 'Zórawia']
 ```
 
 The challenge now is to figure out which of these is most likely. 
