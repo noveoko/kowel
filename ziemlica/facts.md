@@ -53,9 +53,11 @@
 
 ### Gentry/Ziemianstwo
 
-* Górska Józefa	Ziemlica
+[source](http://ziemianie.pamiec.pl/pl/majatki/wo.html)
 
-* Górski Stanisław	Ziemlica
+* Górska Józefa	
+
+* Górski Stanisław
  
 ## Sources
 
