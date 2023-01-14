@@ -1,4 +1,4 @@
-# Ziemlica
+# Ziemlica/Землянин/Землянин
 
 **Gmina** Korytnica
 
