@@ -50,6 +50,12 @@
  * Kobylarz/Кобыларз/Кобилярж
  * Stadnicka/Стадницкая/Стадницька
  * Stolarczuk/Столарчук/Столарчук
+
+### Gentry/Ziemianstwo
+
+* Górska Józefa	Ziemlica
+
+* Górski Stanisław	Ziemlica
  
 ## Sources
 
