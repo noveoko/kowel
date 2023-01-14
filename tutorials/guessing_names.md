@@ -2,7 +2,7 @@
 
 ## Problem Definition
 
-![try to read this](tough_string.png)
+![try to read this](streetname.PNG)
 
 Given a scan of a map and a list of all the street names that may or may not exist in this specific map determine which of the street names a given section of the map most likely contains
 
