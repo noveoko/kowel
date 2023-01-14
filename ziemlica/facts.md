@@ -4,56 +4,42 @@
 
 ## Most common surnames among those getting married
 
-* Kuniczuk 36
-* Stadnicka 17
-* Błaszczuk 15
-* Steczuk 13
-* Tatys 13
-* Kuniczuk 37
-* Stadnicki 20
-* Tatys 17
-* Steczuk 11
-* Błaszczuk 10
+* Kuniczuk/Куничук/Кунічук 73
+* Stadnicka/Stadnicki/Стадницкий/Стадніцький 37
+* Tatys/Папочка/тато 30
+* Błaszczuk/Блащук/Блащук 25
+* Steczuk/Стечук/Стечук 24
+
 
 ## Most common surnames among those being born
 
-* Kuniczuk 148
-* Błaszczuk 53
-* Dominczuk 43
-* Steczuk 39
-* Tatysiuk 32
-* Stadnicka 28
-* Stadnicki 25
-* Tatesiuk 24
-* Tatys 22
-* Jasiński 20
-
+* Kuniczuk/Куничук/Кунічук 148
+* Tatysiuk/Tatesiuk/Татесюк 56
+* Błaszczuk/Блащук/Блащук 53
+* Stadnicka/Stadnicki/Стадницкий/Стадніцький 53
+* Dominczuk/Доминчук/Домінчук 43
+* Steczuk/Стечук/Стечук 39
+* Tatys/Папочка/тато 22
+* Jasiński/Ясински/Ясінського 20
 
 ## Most common surnames among those dying (prior to 1942)
-
-* Kuniczuk 83
-* Steczuk 42
-* Błaszczuk 35
-* Dominczuk 25
-* Tatysiuk 22
-* Tatys 22
-* Stadnicka 15
-* Wawryszuk 15
-* Tatesiuk 15
-* Koniczuk 10
+* Kuniczuk/Куничук/Кунічук/Koniczuk 93
+* Tatysiuk/Tatesiuk/Татесюк/Tatesiuk 59
+* Błaszczuk/Блащук/Блащук 35
+* Stadnicka/Stadnicki/Стадницкий/Стадніцький 15
+* Steczuk/Стечук/Стечук 42
 
 ## Most common surnames among those killed 1942-1945
 
- * Tatys
- * Błaszczuk
- * Zielińska
- * Zieliński
- * Jasiński
- * Koniczuk
- * Neczaj
- * Kobylarz
- * Stadnicka
- * Stolarczuk
+ * Tatysiuk/Tatesiuk/Татесюк/Tatesiuk/Tatys
+ * Błaszczuk/Блащук/Блащук
+ * Zielińska/Zieliński/Зелинска/Зєлінська
+ * Jasiński/Ясински/Ясінського
+ * Kuniczuk/Куничук/Кунічук
+ * Neczaj/Нечай/Нечай
+ * Kobylarz/Кобыларз/Кобилярж
+ * Stadnicka/Стадницкая/Стадницька
+ * Stolarczuk/Столарчук/Столарчук
  
 ## Sources
 
