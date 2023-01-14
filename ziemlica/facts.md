@@ -1,10 +1,12 @@
 # Ziemlica
 
-Gmina: Korytnica
-County: Włodzimierski
-Voivodeship: Wołyńskie
+**Gmina** Korytnica
 
-Roman Catholic Parish: Binduga Swiętego Mikołaja
+**County** Włodzimierski
+
+**Voivodeship** Wołyńskie
+
+**Roman Catholic Parish** Binduga Swiętego Mikołaja
 
 ![Ziemlica Prior to WW2](map.PNG)
 
