@@ -1,0 +1,63 @@
+street,documented_start,documented_end,range,data_points,coverage (points per range)
+Wilcza,1,21,20,5,25.0%
+Warszawska,1,330,329,319,97.0%
+Górka,2,44,43,4,9.3%
+Powurska,14,216,215,18,8.4%
+Handlowa,2,31,30,23,76.7%
+Sienkiewicza,3,43,42,42,100.0%
+Dworzec Kolejowy,22,22,21,1,4.8%
+Krotka,3,54,53,15,28.3%
+Brzeska,1,158,157,38,24.2%
+Cicha,26,58,57,3,5.3%
+Waligórskiego,1,1,1,2,200.0%
+Kolejowa,1,91,90,94,104.4%
+Listopadowa,4,93,92,9,9.8%
+Królowej Bony,1,7,6,3,50.0%
+Soborny,15,15,14,1,7.1%
+Kościelna,1,10,9,7,77.8%
+Rynek,6,32,31,13,41.9%
+Włodzmierska,1,103,102,12,11.8%
+1-go Maja,3,7,6,2,33.3%
+Obwodowa i Okrzei,23,23,22,1,4.5%
+Soborna,4,7,6,3,50.0%
+Fabryczna,3,13,12,7,58.3%
+Cyrkowa,2,2,1,1,100.0%
+Mickiewicza,1,47,46,17,37.0%
+Monopolowa,46,84,83,8,9.6%
+Łucka,71,71,70,1,1.4%
+Kościuszki,6,10,9,3,33.3%
+Komorowska,14,86,85,2,2.4%
+Strzelecka,13,179,178,6,3.4%
+Bielinska,68,68,67,1,1.5%
+Szkolna,28,28,27,1,3.7%
+Rolna,8,8,7,1,14.3%
+Kołodnicka,7,10,9,2,22.2%
+Rzeczna,6,24,23,4,17.4%
+Budyszczanska,8,8,7,2,28.6%
+Magistracka,2,160,159,13,8.2%
+Toruńska,3,204,203,9,4.4%
+Mieszczanska,1,69,68,8,11.8%
+Apteczna,11,36,35,2,5.7%
+Maciejowska,4,21,20,5,25.0%
+Nowa,2,39,38,4,10.5%
+Poniatowskiego,3,37,36,4,11.1%
+Myszliwska,39,170,169,3,1.8%
+Wierzbowa,1,5,4,5,125.0%
+Pomnikowa,32,78,77,9,11.7%
+Jaworowa,29,29,28,1,3.6%
+Bezimienna,3,8,7,3,42.9%
+ks. Sznarbachowskiego,3,3,2,1,50.0%
+Szeroka,4,233,232,4,1.7%
+Ogrodowa,27,27,26,1,3.8%
+Wola,30,30,29,1,3.4%
+Wielka,45,45,44,1,2.3%
+Wojskowa,1,20,19,2,10.5%
+Krzywa,3,7,6,2,33.3%
+Wąska,13,28,27,2,7.4%
+Dzika,16,28,27,2,7.4%
+Lubliniecka,8,8,7,1,14.3%
+Nowowiejska,5,5,4,1,25.0%
+Zielona,6,6,5,1,20.0%
+Zaułek Krótki,15,15,14,1,7.1%
+Sadowa,72,72,71,1,1.4%
+Tuszowskiego,10,12,11,2,18.2%
