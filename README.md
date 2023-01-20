@@ -1,5 +1,6 @@
 ![](https://github.com/noveoko/kowel/images/kowel_1939.png)
 
+![Map of Kowel](images/in_progress.PNG)
 
 # Kowel
 [Kowel](https://pl.wikipedia.org/wiki/Kowel)/[Kovel](https://en.wikipedia.org/wiki/Kovel): (1918-1945)
