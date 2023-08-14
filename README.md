@@ -1,3 +1,5 @@
+![Kowel as it appeared during WW2](https://github.com/noveoko/kowel/images/kowel_preview.png)
+
 ![Kowel in 1939](https://github.com/noveoko/kowel/images/kowel_1939.png)
 
 ![In-progress Map of Kowel](images/in_progress.PNG)
