@@ -528,61 +528,54 @@ Gibel B., Kolejowa i
 HrZyb St., 
 
 ## Kelly amie (librairies:
-Dachowiec
 
-Berelzon G., Warszawska 58
-Blajtrus F., Warszawska- 6
-Boju% G., Warszawska 128
-Branor Warszawska 30
-xChoc A., Warszawska 72
-XDjanowski J., Warszawska 60
-xEjczys G., Warszawska 134
-xEjczys M., Warszawska 186
-%olutejall., Wiodzimierska 1
-sztojn M., Warszawska. 59
-rlich Sz. Warszawska 16
-•-• xFajner Ch.; Kolejowa. 79
-)(Frydman B., Warszawska 50
-Ginzblat J., Warszawska 52
-XJoruchimowicz B., Warszawska 45
-Jeruchimowicz M., Warszawska 49
-xKac B., Warszawska 82
-Kac M., Warszawska 114
-a
-J., Kolejowa 58
-1
-Ca B., Warszawska 11
-xKiertner B., Sienkiewicza 39
-Klejnert G., Brzoska 13
-Kogoś , Sienkiewicza 30
-Kojfman A. Warszawska 48
-KuM., RynekLejbenberg M., [lwowska 146
-xLow- I. W., Warszawska 209
-Lawin I. Warszawska 72
-Marder S., Handlowa 4
-xNejman ł. Warszawska 148
-xNepzian S., Warszawska 49
-Poliszuk C., Warszawska 2
-Poliszuk M., Kolejowa 2
-XSzojnbaurn P., Warszawska 136
-xSzojchet J., Kościelna 7
-Szulirn B. Warszawska 189
-xśpiwak J., Magistracka -- Walasztejn M., Kolejowa
-xWam sztojn N., Sionitiowicza 13
-xWorba Sz.. Warszawska 2
-Wolf L. Warszawska 181
-xWusiczer M., Warszawska 330
-Zatran P., Warszawska 44
-Zafran R., Warszawska 100
-xZbinowski H., Warszawska 29
-x2
-iskind Ch., Warszawska 134
-Ziskis M., Warszawska 62
-Drogman. Warszawska 86
-xChari Ch., Wierzbowa 3
-Glik D, Warszawska 33
-Ingber, Kościuszki 9
-
+- **Berelzon, G.**: Warszawska 58
+- **Blajtrus, F.**: Warszawska 6
+- **Boju%, G.**: Warszawska 128
+- **Branor**: Warszawska 30
+- **Choc, A.**: Warszawska 72
+- **Djanowski, J.**: Warszawska 60
+- **Ejczys, G.**: Warszawska 134
+- **Ejczys, M.**: Warszawska 186
+- **%olutejall.**: Wiodzimierska 1
+- **Sztojn, M.**: Warszawska 59
+- **Erlich, Sz.**: Warszawska 16
+- **Fajner, Ch.**: Kolejowa 79
+- **Frydman, B.**: Warszawska 50
+- **Ginzblat, J.**: Warszawska 52
+- **Joruchimowicz, B.**: Warszawska 45
+- **Jeruchimowicz, M.**: Warszawska 49
+- **Kac, B.**: Warszawska 82
+- **Kac, M.**: Warszawska 114
+- **Kiertner, B.**: Sienkiewicza 39
+- **Klejnert, G.**: Brzoska 13
+- **Kogoś**: Sienkiewicza 30
+- **Kojfman, A.**: Warszawska 48
+- **Lejbenberg, M.**: Lwowska 146
+- **Low-I. W.**: Warszawska 209
+- **Lawin, I.**: Warszawska 72
+- **Marder, S.**: Handlowa 4
+- **Nejman, ł.**: Warszawska 148
+- **Nepzian, S.**: Warszawska 49
+- **Poliszuk, C.**: Warszawska 2
+- **Poliszuk, M.**: Kolejowa 2
+- **Szojnbaurn, P.**: Warszawska 136
+- **Szojchet, J.**: Kościelna 7
+- **Szulirn, B.**: Warszawska 189
+- **Walasztejn, M.**: Kolejowa
+- **Warsztojn, N.**: Sienkiewicza 13
+- **Worba, Sz.**: Warszawska 2
+- **Wolf, L.**: Warszawska 181
+- **Wusiczer, M.**: Warszawska 330
+- **Zatran, P.**: Warszawska 44
+- **Zafran, R.**: Warszawska 100
+- **Zbinowski, H.**: Warszawska 29
+- **Ziskind, Ch.**: Warszawska 134
+- **Ziskis, M.**: Warszawska 62
+- **Drogman**: Warszawska 86
+- **Chari, Ch.**: Wierzbowa 3
+- **Glik, D.**: Warszawska 33
+- **Ingber**: Kościuszki 9
 
 ## Garbarnio (lanneries):
 
