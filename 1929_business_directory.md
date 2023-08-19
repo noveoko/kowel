@@ -1,27 +1,30 @@
-Rojtburd Ch. -- Sundolzon Z., Warszawska -- XSzechet S., 3 Maja
-Trachtonborg C. Warszawska
+- **Rojtburd, Ch.**
+- **Sundolzon, Z.**: Warszawska
+- **Szechet, S.**: 3 Maja
+- **Trachtonborg, C.**: Warszawska
+- **Tuszman, M.**: 3 Maja
+- **Wolntift, A.**: 3 Maja
+- **Wajnsztejn**
+- **Walewski, Cz.**
+- **Wimca, B.**
+- **Wolosowicz, ItL**
+- **Zalcman, P.**
+- **Zolccor, B.**
+- **Złotnik, J.**: Warszawska
+- **Ajzonborg, F.**: Piłsudskiego
+- **Banatki, J.**: Warszawska
+- **Baru, J.**: Kolejowa
+- **Czernisai, Ch.**: Warszawska
+- **Frojlich, J.**: Warszawska
+- **Gondelraan, D.**: Warszawska
+- **Grawer, R.**: Rówrońska
+- **Gruszka, Ch. R., D.**: Rówionska
+- **Kiperraan, D. S.**: 3 Maja
+- **Kowalowa, M.**: Warszawska
+- **Szojmur, L.**: Warszawska
+- **Sztorenszys, G.**: Warszawska
+- **Zulas, B.**: Rówieńska
 
-Tuszman M. 3 Maja
-WolntiftA., 3 Maja
-Wajnsztejn --- 
-Walewski Cz.
-Wimca B. Wolosowicz 1tL,
-Zalcman•P.
-xZolccor B
-Złotnik J., Warszawska. 
-Ajzonborg F., Piłsudskiego 
-Banatki J., Warszawska
-Baru J., Kolejowa
-Czernisai Ch., Warszawska
-Frojlich J., Warszawska
-Gondelraan D.,. Warszawska
-Grawer R. Rówrońska
-Gruszka Ch. R., D., Rówionska
-Kiperraan D. S., 3 Maja
-Kowalowa M., Warszawska
-Szojmur L., Warszawska
-Sztorenszys G., Warszawska
-Zulas B., Rówieńska. 
 
 ## Stolarze (reenuisiers):
 Baczyński ' B. _ Rówieńska
