@@ -261,36 +261,38 @@ xKuplecki Syndykat Rolniczy, Sp. 7. o. o., Komorowska 14
 xZwią-zek Rolników Wolyfiskich,Wię-zienna. 
 
 ## żelazo (fers):
-Bernzowski J., Fabryczna 4
-Culcierman J., Soborna 7
-Erlich A., Warszawska 130
-xGarber Cli., Warszawska 165
-Glejzor K., Mickiewicza 4
-Gonik R. Warszawska
-xGuferman S., Warszawska 237
-Gutman Sz., Warszawska
-Guz B., Warszawska 126
-xGuz Ch., Warszawska 191
-xKlejnerman J., Warszawska 243
-Krysiek A. -xLitwar W., Warszawska 26
-Mandol J., Warszawska 227
-xMandel M., Warszawska 225
-Papa L., Warszawska 31
-Papo J.,Warszawska 18
-Ptakowski A., Mickiewicza 7
-Rajziszor M., Warszawska 181
-Rojtenborg Warszawska 215
-Rosinzowska: R., Warszawska 66
-Rubinsztoja D., Warszawska 173
-Slepak M., Warszawska 169
-Szejnblum M., WarszaWska 229
-Szowb M., Warszawska 184
-świniuch L., Warszawska 181
-x„Teliaz", Tow.Eksploatacji i Handlu żelazem z o. o., Lucka 42
-Wajsborg P., Warszhwska 225
-Waksman Ch., Warszawska 157
-xWorcel H., Warszawska 213
-Worcel J., Warszawska 233.
+
+- **Bernzowski, J.**: Fabryczna 4
+- **Culcierman, J.**: Soborna 7
+- **Erlich, A.**: Warszawska 130
+- **Garber, Cli.**: Warszawska 165
+- **Glejzor, K.**: Mickiewicza 4
+- **Gonik, R.**: Warszawska
+- **Guferman, S.**: Warszawska 237
+- **Gutman, Sz.**: Warszawska
+- **Guz, B.**: Warszawska 126
+- **Guz, Ch.**: Warszawska 191
+- **Klejnerman, J.**: Warszawska 243
+- **Krysiek, A.**: Warszawska
+- **Litwar, W.**: Warszawska 26
+- **Mandol, J.**: Warszawska 227
+- **Mandel, M.**: Warszawska 225
+- **Papa, L.**: Warszawska 31
+- **Papo, J.**: Warszawska 18
+- **Ptakowski, A.**: Mickiewicza 7
+- **Rajziszor, M.**: Warszawska 181
+- **Rojtenborg**: Warszawska 215
+- **Rosinzowska, R.**: Warszawska 66
+- **Rubinsztoja, D.**: Warszawska 173
+- **Slepak, M.**: Warszawska 169
+- **Szejnblum, M.**: Warszawska 229
+- **Szowb, M.**: Warszawska 184
+- **Świniuch, L.**: Warszawska 181
+- **Teliaz**: Tow. Eksploatacji i Handlu Żelazem z o.o., Lucka 42
+- **Wajsborg, P.**: Warszawska 225
+- **Waksman, Ch.**: Warszawska 157
+- **Worcel, H.**: Warszawska 213
+- **Worcel, J.**: Warszawska 233
 
 ## Mosty
 budowa (Bridge Construction)
