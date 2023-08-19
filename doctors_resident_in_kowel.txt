@@ -1,3 +1,4 @@
+surname;city;street;number
 Ciechnowicz, Michel;Kowel;Staro-Kolejowa;Nr.25
 Goldsztein, Gitel;Kowel;Lucka;102
 Gortalow, Wlodzimierz;Kowel;Lucka;184
