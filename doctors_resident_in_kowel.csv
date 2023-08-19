@@ -1,19 +1,19 @@
-surname;city;street;number
-Ciechnowicz, Michel;Kowel;Staro-Kolejowa;Nr.25
-Goldsztein, Gitel;Kowel;Lucka;102
-Gortalow, Wlodzimierz;Kowel;Lucka;184
-Jaworowski, Teofil;Kowel;Policyjna;1
-Kompaniewski;Jerzy;Kowel;Nowo-Kolejowa;59
-Krolewski, Waclaw;Kowel;Nowo-Kolejowa;90
-Krzeczkowska, Julia;Kowel;Wiezienna;8
-Lisowski, Borys;Kowel;Staro-Kolejowa;27
-Lubieniecki, Konrad;Kowel;Szpital Powiatowy;
-Moskalewa, Helena;Kowel;Szpital epidemiczny;
-Pierogowksa, Eugenia;Kowel;Szpital epidemiczny;
-Pirogow, Mikolaj;Kowel;Krolowej Bony;
-Swietikow, Wsiewolod;Kowel;Mickiewicza;6
-Weselski, Waclaw;Kowel;Starostwo;
-Zubr, Zygmunt;Kowel;Lucka;204
-Fejgel, Chaja;Kowel;Lucka;103
-Pomerantz, Falk;Kowel;Lucka;43
-Wajtman Jakob;Kowel;Lucka;138
+surname,city,street,number
+"Ciechnowicz, Michel",Kowel,Staro-Kolejowa,Nr.25
+"Goldsztein, Gitel",Kowel,Lucka,102
+"Gortalow, Wlodzimierz",Kowel,Lucka,184
+"Jaworowski, Teofil",Kowel,Policyjna,1
+Kompaniewski,Jerzy,Kowel,Nowo-Kolejowa,59
+"Krolewski, Waclaw",Kowel,Nowo-Kolejowa,90
+"Krzeczkowska, Julia",Kowel,Wiezienna,8
+"Lisowski, Borys",Kowel,Staro-Kolejowa,27
+"Lubieniecki, Konrad",Kowel,Szpital Powiatowy,
+"Moskalewa, Helena",Kowel,Szpital epidemiczny,
+"Pierogowksa, Eugenia",Kowel,Szpital epidemiczny,
+"Pirogow, Mikolaj",Kowel,Krolowej Bony,
+"Swietikow, Wsiewolod",Kowel,Mickiewicza,6
+"Weselski, Waclaw",Kowel,Starostwo,
+"Zubr, Zygmunt",Kowel,Lucka,204
+"Fejgel, Chaja",Kowel,Lucka,103
+"Pomerantz, Falk",Kowel,Lucka,43
+Wajtman Jakob,Kowel,Lucka,138
