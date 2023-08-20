@@ -1164,8 +1164,6 @@ szaft S., Warszawska 126
 
 ## Spożywcze artykuły (Groceries):
 
-(Note: This list is quite extensive. I've done my best to correct the names and addresses. However, due to the sheer length and the complexity of the names, I recommend double-checking the list for potential discrepancies.)
-
 - Ajzenberg S., Warszawska 38
 - Babicki J., Kolejowa 12
 - Bachower Sz., Handlowa 2
@@ -1348,117 +1346,73 @@ jowa 39
 - Zask A., Włodzimierska 44
 - Zilberberg, Lucka 87
 
+Here's the corrected list:
+
 ## Starzyzna handel (Antique Dealers):
 
 - Wajnor Z., Handlowa 6
 
-##  Stolarze (mcnuisiers):
-Chaaen Warszawska. 129
+## Stolarze (Menuisiers):
 
-Jagodziner M.,' Warszawska 119
+- Chaaen, Warszawska 129
+- Jagodziner M., Warszawska 119
+- Lejdorman E., Komorowska 26
+- Mełamed B., Warszawska 92
+- Nowiczowski P., Warszawska 61
+- Szejna D., Strażacka 28
+- Szwarc M., Maciejowska 6
+- Tabach M., Warszawska 111
+- Tenenbaum R., Listopadowa 31
+- Fiszman, Listopadowa 4
+- Glejazer, Brzeska 51
+- Gluzman, Pomnikowa 50
+- Jurczenkowicz, Włodzimierska 103
+- Szowe, Krzywa 3
 
-Lejdorman E., •KomorowslM. 26
+## Studnie (Forages de puits):
 
-Mełamed B., Warszawska 92
+- Bronsztojn M., Kolejowa
 
-Nowiczowski P., Warszawska 61
+## Sukno (Draperies):
 
-Szejna D., Stra-żacka 28
+- Towarzystwo Handlowo, wł. Tworski A. i Wandal J., Warszawska 154
 
-Szwarc M., Maciejowska 6
+## Szewckie przybory (Fournitures de chaussures):
 
-Tabach M., Warszawska 111
+- Fajgonbaumi A., Kolejowa 16
 
-Tenenbaum R., Listopadowa 31
+## Szewcy (Cordonniers):
 
-Fiszman, Listopadowa 4
+- Arbajter Sz., Warszawska 257
+- Bender, Pomnikowa 26
+- Berliński St., Kolejowa 83
+- Bionielc J., Lacka 50
+- Chait M., Krótka 42
+- Gzeromusz A., Artyleryjska 2
+- Frydrych J., A. 4
+- Glas A., Kolejowa 2
+- Gutorzon D., Artyleryjska 3
+- Jaz J., Wierzbowa
+- Jus W., Poprzeczna 6
+- Karsz L., Tuszowskiego 12
+- Kirschionblatt F., Lucka 35
+- Lindenbaum T., Sienkiewicza 30
+- Ostrowski, Warszawska 105
+- Press S., Kolejowa 23
+- Ropa B., Kolejowa 56
+- Siniaka J., Warszawska 26
+- Spolitor W., Warszawska 61
+- Szmojsz M., Kolejowa 52
+- Szmiro J., Wlodzimierska 7
+- Truli W., Warszawska 117
+- Trzyziński A., Mickiewicza 25
+- Wałam, Pomnikowa 67
+- Winwir L., Pomnikowa 35
+- Wajoor, Fabryczna 16
+- Wasing M., Tuszowskiego 10
+- Wlodarski St., Warszawska 50
 
-Gleja zer, Brzeska 51
+## Szkło i porcelana (Verreries et porcelaines):
 
-Gluzman, Pomnikowa 50
-
-Jurczenkowicz, Włodzimiorska 103
-
-Szowe, Krzywa 3
-
-Studnie „Inidó
-
-## wa (forages de puits)
-Bronsztojn M., Kolejowa
-
-##  Sukno (draperies):
-
-Towarzystwo Handlowo Krosy% wł. Tworski A. i Wandal J  ., Warszawska 154
-
-Szewckie przybory (fournit.._ p.
-
-##  chaussures):
-
-Fajgonbauni A., Kolejowa 16
-
-
-##  Szewcy (cordonniers):
-
-Arbajter•Sz., Warszawska 257
-
-Bender 13
-
-Pomnikowa 26
-
-Berliński . St., Kolejowa 83
-
-Bionielc J., Lacka 50
-
-Chait M., Krótka 42
-
-Gzeromusz A. Artylóryjska 2
-
-Frydrych J., A., 4
-
-Glas A., Kolejowa 2
-
-Gutorzon D., Artyleryjska 3
-
-Jaz J., Wierzbowa«, -- Jus W., Poprzeczna 6
-
-Karsz L. Tuszowskiego 12
-
-Kirsclionblatt F., Lucka 35
-
-Lindenbaurn T., Sienkiewicza 30
-
-Ostrowski Warszawska 105
-
-Press. S., Kolojowa 23
-
-Ropa, B., , Kolejowa 56
-
-Siniaka J., Warszawska 26
-
-Spolitor. W., Warszawska 61
-
-Szmojsz M.; Kolejowa 52
-
-Szmiro J., Wlodzimionika 7
-
-Truli W.. Warszawska 117
-
-Trzyzińslci A., Mickiowica 25
-
-Wałam. Pomnilmwa 67
-
-Win wir L., Pomnikowa 35
-
-Wajoor 11
-
-Fabryczna 16
-
-Wasing M., Tuszowskiego 10
-
-Wlodarsici St„ Warszawska 50
-
-
-## St skto i porcelana (verreries ci, por coluives)
-Alpurin P., Warszawska /5
-
-Drwami Cha Ib'zelika 
+- Alpurin P., Warszawska 75
+- Drwami, Chabzelika
