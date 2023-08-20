@@ -128,10 +128,6 @@
 - **Talion, N. & Sz.**: Lucka 24
 - **ChuSid, M.**: Handlowa 5
 
-Let's organize the provided data into a neat Markdown list:
-
----
-
 ### Harengs:
 - **ChuSid, M.**: Handlowa 5
 
@@ -211,9 +207,7 @@ Let's organize the provided data into a neat Markdown list:
 - **Sztojngardt, B.**: Kolejowa 13
 - **Sztofenberg, S.**: Lurka 35
 - **Walczyński, P.**
-- **ZembrzuSki**:
-
- Lurka 85
+- **ZembrzuSki**: Lucka 85
 - **Zwiorowicz, M.**: Warszawska 134
 - **Żurakowska, Z.**: Kolejowa
 
@@ -420,9 +414,7 @@ Let's organize the provided data into a neat Markdown list:
 - **Ziembicki, K.**: Targowa 39
 - **xl3orozowski, J.**: Fabryczna 4
 
-### Ekspedycyjne bi
-
-ura (Shipping Offices):
+### Ekspedycyjne biura (Shipping Offices):
 - **Frydnian Halpern**: Warszawska 81
 - **Sosna 1**: Listopadowa 87
 - **„Wygoda"**: Łuska 105
@@ -507,7 +499,7 @@ ura (Shipping Offices):
 - **Gibel, B.**: Kolejowa 1
 - **HrZyb, St.**
 
-## Kelly amie (librairies:
+## Kelly amie (librairies):
 
 - **Berelzon, G.**: Warszawska 58
 - **Blajtrus, F.**: Warszawska 6
@@ -688,8 +680,6 @@ ura (Shipping Offices):
 - **Fridman, M.**: Warszawska 39
 - **Frydman, Sz.**: Mickiewicza
 - **Garber, Sz.**: Warszawska 9
--
-
  **Gejer, Sz.**: Warszawska 151
 - **Goldberg, Sz.**: Sienkiewicza
 - **Goldhaner, Sz.**: Kolejowa 10
@@ -776,8 +766,6 @@ ura (Shipping Offices):
 
 ## Manufaktura (Tissus):
 
-(Note: The section Manufaktura has several incomplete or ambiguous entries. I've done my best to make sense of the data, but some addresses or names might still need verification.)
-
 - Arkadjor: Warszawska 116
 - Aworbuch M.: Warszawska 116
 - Bar N.: Warszawska 185
@@ -822,8 +810,6 @@ ura (Shipping Offices):
 
 ## Maszyny (Machina):
 
-(Note: This section had several incomplete entries and some that were not directly related to the section title. I've done my best to organize and correct the data.)
-
 - E K.: Lacka 8
 - "KAROL OLSZOWIEC i Koncesjonowane": Lueka 8
 
@@ -852,8 +838,6 @@ ura (Shipping Offices):
 
 ## Mechaniczne warsztaty (Mécanicien):
 
-(Note: Entries in this section were incomplete. I've corrected them as best as possible, but some might still need verification.)
-
 - Herbo M.: Kaleka ??
 - Zilborsztojn M.: Lacka 50
 - Metalowe wyroby: Flauonbaum J., Lacka 50
@@ -863,8 +847,6 @@ ura (Shipping Offices):
 - Segał Ruw.: Apteczna 36
 
 ## Młyny (Moulins):
-
-(Note: This section had several incomplete or ambiguous entries. I've done my best to correct the data, but some might still need verification.)
 
 - Armarnilc B. & Sztaba Z.: Kolejowa ??
 - Epelbaum & Ska: Kucica 205
@@ -910,8 +892,6 @@ iotr: Kościelna 1
 
 ## Olejarnie (Huiteries):
 
-(Note: Entries in this section were incomplete. I've corrected them as best as possible, but some might still need verification.)
-
 - Cukiorman Sz. A.: Warszawska corner of Soborna
 - Cuporfajn S.: Lacka 79
 - Guz B.: Luciu 73
@@ -926,8 +906,6 @@ iotr: Kościelna 1
 - Mendel M.: Warszawska 135
 
 ## Piekarnie (Boulangers):
-
-(Note: Entries in this section were incomplete. I've corrected them as best as possible, but some might still need verification.)
 
 - Baber B.: Kościelna 1
 - Blit J.: Brzeska 31
@@ -965,8 +943,6 @@ iotr: Kościelna 1
 - Halatir: Warszawska 1
 
 ## Piwiarnie (Brasseries-Derbil):
-
-(Note: Entries in this section were incomplete. I've corrected them as best as possible, but some might still need verification.)
 
 - Bobor M.: Kolejowa 2
 - Bronsztojn D.: Krótka ??
@@ -1122,9 +1098,7 @@ iotr: Kościelna 1
 - Brat D., Brzeska 38
 - Breirman U., Warszawska 201
 - Bronszaft B., Warszawska 162
-- Bron
-
-szaft S., Warszawska 126
+- Bronszaft S., Warszawska 126
 - Bronzaft Sz., Warszawska 217
 - Byk B., Kolejowa 7
 - Chusid B., Warszawska 19
@@ -1247,9 +1221,7 @@ szaft S., Warszawska 126
 - Lojbenborg M., Rynek 23
 - Lejkach L., Brzeska 19
 - Lejwi W., Kolejowa 54
-- Lerner S., Kole
-
-jowa 39
+- Lerner S., Kolejowa 39
 - Lowortow H., Rynek 18
 - Lowi A., Kolejowa 5
 - Liniri W., Kolejowa 54
@@ -1345,8 +1317,6 @@ jowa 39
 - Wajnor R., Warszawska 3
 - Zask A., Włodzimierska 44
 - Zilberberg, Lucka 87
-
-Here's the corrected list:
 
 ## Starzyzna handel (Antique Dealers):
 
