@@ -65,9 +65,7 @@ Awret
 Awruch
 Awwakumow
 Azbukin
-
-
-    Babaczyk
+Babaczyk
 Babiniec
 Babiński
 Babiuk
@@ -452,9 +450,7 @@ Bynder
 Bystra
 Bystrymowicz
 Bzowski
-
-
-    Cachel
+Cachel
 Cała
 Capkes
 Cebula
@@ -660,9 +656,7 @@ Czwojda
 Czyżek
 Czyżewski
 Czyżyk
-
-
-    Dabek
+Dabek
 Dabkus
 Dąbrowa
 Dąbrowski
@@ -835,9 +829,7 @@ Dzikowski
 Dziug
 Dzwiniacki
 Dźwiniacki
-
-
-    Efrus
+Efrus
 Egber
 Egdysz
 Eil
@@ -877,9 +869,7 @@ Erlich
 Erlichgerecht
 Erung
 Ettinger
-
-
-    Faier
+Faier
 Faingluz
 Faintich
 Faintlich
@@ -1019,9 +1009,7 @@ Furtak
 Futa
 Futkowski
 Fysz
-
-
-    Gaberman
+Gaberman
 Gabiec
 Gabrylewicz
 Gacek
@@ -1326,9 +1314,7 @@ Gwardian
 Gwiazda
 Gwiazdowicz
 Gwircman
-
-
-    Habcza
+Habcza
 Haber
 Hager
 Hajdeman
@@ -1426,9 +1412,7 @@ Huniowski
 Hupało
 Husar
 Huszyniec
-
-
-    Idkowiak
+Idkowiak
 Idzikowski
 Igliński
 Ignaciuk
@@ -1453,9 +1437,7 @@ Iwaszko
 Iwicki
 Iwieniecki
 Izdzikowski
-
-
-    Jabłoński
+Jabłoński
 Jachimowicz
 Jackiewicz
 Jacko
@@ -1575,9 +1557,7 @@ Juściński
 Jusiuk
 Juszczyk
 Juz
-
-
-    Kabaciński
+Kabaciński
 Kaban
 Kabanow
 Kac
@@ -2114,9 +2094,7 @@ Kwasznik
 Kwiatek
 Kwiatkowski
 Kwieciński
-
-
-    Łabaj
+Łabaj
 Łabędz
 Łabunik Muzyczuk
 Łabur
@@ -2319,9 +2297,7 @@ Luszek
 Łysak
 Łysakowski
 Łysiuk
-
-
-    Mach
+Mach
 Machejko
 Machinko
 Machluk
@@ -2634,9 +2610,7 @@ Mysakowski
 Myslin
 Mytnik
 Myzowiec
-
-
-    Nadolny
+Nadolny
 Nadoluz
 Nagielsztejn
 Nagórny
@@ -2723,9 +2697,7 @@ Nudel
 Nudelsztecher
 Nuz
 Nys
-
-
-    Oak
+Oak
 Oberda
 Obołończyk
 Obrusiewicz
@@ -2819,9 +2791,7 @@ Owadowicz
 Owczar
 Owczarek
 Oziomek
-
-
-    Pacan
+Pacan
 Pacek
 Pachelski
 Pacholczuk
@@ -3139,9 +3109,7 @@ Pysk
 Pytel
 Pyter
 Pytes
-
-
-    Rabin
+Rabin
 Rabiner
 Raby
 Racewicz
@@ -3327,9 +3295,7 @@ Ryżko
 Ryzwaniuk
 Rzepecki
 Rzepnicki
-
-
-    Sabaliński
+Sabaliński
 Sacewicz
 Saczuk
 Sadło
@@ -3958,9 +3924,7 @@ Szyszkowski
 Szyter
 Szyżgal
 Szyżgał
-
-
-    Tabach
+Tabach
 Tabacznik
 Tabak
 Tabaka
@@ -4095,9 +4059,7 @@ Tyszewski
 Tyszkiewicz
 Tyszko
 Tytoń
-
-
-    Uchacz
+Uchacz
 Uchman
 Ucholc
 Uciuk
@@ -4115,13 +4077,9 @@ Uściński
 Usik
 Uszpalewicz
 Uterzon
-
-
-    Vincens
+Vincens
 Vogelbaum
-
-
-    Wach
+Wach
 Wachniuk
 Wachowski
 Wachrow
@@ -4411,9 +4369,7 @@ Wysocki
 Wysokiński
 Wyszomirski
 Wziąłek
-
-
-    Zaba
+Zaba
 Żaba
 Zabicki
 Zabiski
