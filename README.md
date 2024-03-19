@@ -2,6 +2,8 @@
 
 ![In-progress Map of Kowel](images/in_progress.PNG)
 
+![1938 Sejm Voting Districts](images/kowel_voting_districts.svg)
+
 # Kowel: A Glimpse into the Past
 [Polish Wikipedia: Kowel](https://pl.wikipedia.org/wiki/Kowel) / [English Wikipedia: Kovel](https://en.wikipedia.org/wiki/Kovel) (1918-1945)
 
