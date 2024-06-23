@@ -1,4 +1,4 @@
-![Kowel "Old Town" circa 1915](images/old_town.png)
+![Kowel "Old Town" circa 1915](kowel_1915.png)
 ![Kowel as it appeared during WW2](images/kowel_preview.png)
 
 ![In-progress Map of Kowel](images/in_progress.PNG)
