@@ -74,3 +74,26 @@ As an offshoot of the Kowel project, we've set a deadline of June 21st to succes
 
 [HistoricEarth: Map to Aerial Generator](https://github.com/noveoko/HistoricEarth)
 
+
+10 resources to master cartography for historical reconstruction
+
+Here are ten resources to master cartography for historical reconstruction:
+
+1. **"Cartographic Reconstruction of Historical Environmental Change"** - ResearchGate article on using historical maps for environmental history research[1].
+2. **"Cartographic Reconstruction of Building Footprints from Historical Maps"** - Study on Swiss Siegfried maps[2].
+3. **"Rehabilitating Historical Map"** - Blog post discussing the analytical mapping of historical maps[3].
+4. **"History of Cartography"** - Wikipedia entry with extensive links and references[4].
+5. **"The Cartography Tools of Our Past"** - Blog post detailing historical cartography tools like the compass, telescope, and sextant[5].
+6. **"Mapping the Nation: History and Cartography in Nineteenth-Century America"** - Book by Susan Schulten[3].
+7. **"Maps: A Historical Survey of Their Study and Collecting"** - Edited by David Woodward[3].
+8. **"The History of Cartography Project"** - Comprehensive research project at the University of Wisconsin[4].
+9. **"Euratlas Historical Maps"** - Collection of historical maps from year zero AD[4].
+10. **"David Rumsey Historical Map Collection"** - Digital map collection licensed under Creative Commons[4].
+
+Citations:
+[1] Cartographic Reconstruction of Historical Environmental Change https://www.researchgate.net/publication/277355317_Cartographic_Reconstruction_of_Historical_Environmental_Change
+[2] Cartographic reconstruction of building footprints from historical ... https://onlinelibrary.wiley.com/doi/abs/10.1111/tgis.12610
+[3] Rehabilitating “Historical Map” - Mapping as Process https://www.mappingasprocess.net/blog/2020/8/13/rehabilitating-historical-map
+[4] History of cartography - Wikipedia https://en.wikipedia.org/wiki/History_of_cartography
+[5] The Cartography Tools Of Our Past - Land id https://id.land/blog/the-cartography-tools-of-our-past
+
