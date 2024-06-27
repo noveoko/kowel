@@ -77,7 +77,7 @@ As an offshoot of the Kowel project, we've set a deadline of June 21st to succes
 
 10 resources to master cartography for historical reconstruction
 
-Here are ten resources to master cartography for historical reconstruction:
+## Here are ten resources to master cartography for historical reconstruction:
 
 1. **"Cartographic Reconstruction of Historical Environmental Change"** - ResearchGate article on using historical maps for environmental history research[1].
 2. **"Cartographic Reconstruction of Building Footprints from Historical Maps"** - Study on Swiss Siegfried maps[2].
@@ -97,3 +97,6 @@ Citations:
 [4] History of cartography - Wikipedia https://en.wikipedia.org/wiki/History_of_cartography
 [5] The Cartography Tools Of Our Past - Land id https://id.land/blog/the-cartography-tools-of-our-past
 
+## Global building footprint map
+
+https://github.com/microsoft/GlobalMLBuildingFootprints
