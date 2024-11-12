@@ -1,6 +1,3 @@
-It looks like the CSV you've provided has some formatting issues, particularly with the handling of multi-valued fields (like in the `year_mentioned` column). Additionally, there are extra spaces after the commas and inconsistent usage of the `year_mentioned` format. Here's a corrected version of your CSV:
-
-```csv
 name,location_within_kowel_city_limits,description,year_mentioned
 Herzliah School,Yes,A Hebrew elementary school in Kovel,"1847, 1945"
 Bialik School,No,A school in Tel Aviv (mentioned in relation to Kovel),"1945"
