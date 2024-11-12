@@ -1,102 +1,103 @@
+It looks like the CSV you've provided has some formatting issues, particularly with the handling of multi-valued fields (like in the `year_mentioned` column). Additionally, there are extra spaces after the commas and inconsistent usage of the `year_mentioned` format. Here's a corrected version of your CSV:
+
+```csv
 name,location_within_kowel_city_limits,description,year_mentioned
-Herzliah School,Yes,A Hebrew elementary school in Kovel,1847, 1945
-Bialik School,No,A school in Tel Aviv (mentioned in relation to Kovel),1945
-Sokolov–Laor School,No,A school in Jaffa (mentioned in relation to Kovel),1945
-Klomel School,Yes,A school in Kovel named after Dr. Klomel,1847, 1945
-Habima (Hebrew studio),Yes,A Hebrew studio in Kovel,1945
-Barzilay library,No,A library in Israel (mentioned in relation to Kovel),1945
-Beit Bialik library,No,A library in Tel Aviv (mentioned in relation to Kovel),1945
-Shaarey Zion library,No,A library in Tel Aviv (mentioned in relation to Kovel),1945
-Beit Achad Ha'am,No,A cultural center in Tel Aviv (mentioned in relation to Kovel),1945
-Rambam library,No,A library in Tel Aviv (mentioned in relation to Kovel),1945
-Cemetery,Yes,A cemetery in Kovel where victims were buried,1547, 1893, 1945
-Market,Yes,A marketplace in Kovel,1847, 1945
-River,Yes,A river in Kovel (possibly Styr or Turiya),1847, 1945
-Kovel,Yes,A city established in 1518,1518
-Synagogue,Yes,A synagogue in Kovel,1569
-Marketplace,Yes,A marketplace in Kovel,1547
-Castle of Kovel,Yes,A castle in Kovel,1569
-River Tura,Yes,A river in Kovel,14th Century
-Uniate churches,Yes,Churches in Kovel,1660
-Catholic Church,Yes,A church in Kovel,1660
-Jewish ritual bath (mikveh),Yes,A ritual bath in Kovel,1650
-Old Cemetery,Yes,An ancient cemetery in Kovel,1893
-Ancient Cemetery,Yes,An ancient cemetery in Kovel,1893
-New Cemetery,Yes,A cemetery in Kovel,1893
-Old Vakzalna Street,Yes,A street where Yaacov-Aharon Entin lived,1898
-Beit HaNetivot Street,Yes,A beautiful street in Kovel with paved roads,1847
-Old station,Yes,An old train station in Kovel,1847
-New station,Yes,A new train station in Kovel,1847
-Niebieski Prospect,Yes,A romantic promenade in Kovel,1847
-Cinema houses,Yes,Cinema houses in Kovel,1847
-Bathhouse,Yes,A newly-repaired bathhouse in Kovel,1847
-Projenski synagogue,Yes,A synagogue for the aristocracy of Kovel,1847
-Zand synagogue,Yes,A synagogue in the Zand quarter of Kovel,1847
-Luxury shops,Yes,Luxury shops in Kovel with modern showcase windows,1847
-Printing houses,Yes,Printing houses in Kovel,1847
-Post office,Yes,A post office in Kovel,1847
-Magistrat,Yes,A municipal building in Kovel,1847
-Hebrew Gymnasia,Yes,A Hebrew gymnasia in Kovel,1847
-Small church,Yes,A small church in Kovel,1915
-Large church,Yes,A large church in the Zand quarter of Kovel,1920s
-Engineering school,Yes,An engineering school in Kovel,1920s
-Old wooden bridge,Yes,An old wooden bridge in Kovel,1847
-Concrete bridge,Yes,A concrete bridge in Kovel,1847
-Tura River,Yes,A river in Kovel,1847
-Old Varba's house,Yes,A large two-story walled house in Kovel,1847
-Kaploshnick's house,Yes,A fine house with a tidy shop in Kovel,1847
-Sports field,Yes,A sports field in Kovel,1847
-Great synagogue,Yes,An enormous building and great synagogue in Kovel,1847
-Firefighters' company,Yes,A Jewish firefighting company in Kovel,1847
-Maccabi team,Yes,A sports organization and soccer team in Kovel,1847
-Legia,Yes,A sports organization in Kovel,1847
-Bar Kochba,Yes,A sports organization in Kovel,1847
-Kadima,Yes,A sports organization and national organization in Kovel,1847
-Old cemetery on Matisov Street,Yes,An ancient cemetery in Kovel with tombstones carved nearly four hundred years ago,5660s (early 20th century)
-Talmud Torah building,Yes,A building where a proper and excellent restaurant for soldiers was organized,1909
-Pirogov's Gymnasia,Yes,A gymnasia in Kovel,1909
-Old train station,Yes,A train station in Kovel where the first refugees came during World War I,1914
-Jewish Colonial Bank,Yes,A bank in Kovel where Dr. Avraham Kastelnesky worked,1912
-Herzliya Elementary School,Yes,A Hebrew elementary school in Kovel,1922
-Tarbut Gymnasia,Yes,A Hebrew gymnasia in Kovel,1924
-Karla Davidova Gymnasia,Yes,A gymnasia in Kovel,1924
-Trisk Rebbe's Synagogue,Yes,A synagogue in Kovel where the Trisk Rebbe danced,1924
-Kovel Rebbe's Synagogue,Yes,A synagogue in Kovel where the rebbe danced,1924
-Great Synagogue,Yes,A synagogue in Kovel where Jews prayed,1924
-Zionist club,Yes,A club in Kovel where young people discussed nationalist subjects,1924
-Kovel Forest,No,A dense forest with abundant shade, fertile ground, and a variety of trees and wildlife,Not specified
-Dresden Hotel,Yes,A hotel in Kovel where the narrator's family stayed upon arrival,Not specified
-Bridge,Yes,A bridge in Kovel where the narrator's family stopped and received a history lesson,Not specified
-Old Town,Yes,The historic part of Kovel,Not specified
-New Town,Yes,The newer part of Kovel,Not specified
-Downtown Kovel,Yes,The central part of Kovel,Not specified
-Magnificent Kovel railroad station,Yes,The main railroad station in Kovel,Not specified
-Rabbi Velvele's Dance,Yes,A ceremony of “Hakefot” where Rabbi Velvele danced with the Scroll,Not specified
-Heder of Rabbi Shaye of Trojanówka,Yes,A heder where Rabbi Shaye Trojanówka taught,Not specified
-Tarbut School,Yes,A Hebrew school in Kovel,Not specified
-Freiheit,Yes,A pioneering movement in Kovel,Not specified
-Hehalutz Hazair,Yes,A youth movement in Kovel,Not specified
-Fabrichna Street,Yes,A street in Kovel where the movement was just coming into being,Not specified
-Lotzka Street,Yes,A street in Kovel with a large, expansive auditorium,Not specified
-Summer colonies in the villages,No,Villages in the bosom of nature surrounding the city,Not specified
-Kovel during the First World War,Yes,Kovel during the events of the First World War,1914
-Old Town (during WWI),Yes,The historic part of Kovel during World War I,1914
-Sands (during WWI),Yes,A part of Kovel during World War I,1914
-Taz Institution,Yes,An institution in Kovel that provided care for Jewish children,1928
-Orphanage,Yes,An orphanage in Kovel that provided shelter and care for orphans,1918
-Folks Kitchen,Yes,A kitchen in Kovel that provided meals for the poor,Not specified
-Yiddish school,Yes,A Yiddish school in Kovel opened by the Bolsheviks,1920
-ORT School,Yes,A school in Kovel that educated working and productive youth,1920s
-Simikovi Hospital,Yes,A governmental hospital in Kovel,Not specified
-Jewish Hospital on Behalf of the Jewish Community,Yes,A Jewish hospital in Kovel,Not specified
-Taz association polyclinic,Yes,A large polyclinic that served the Jewish public in the medical field,Not specified
-Bikur Cholim,Yes,A charitable institution that provided medical help to the Jews of Kovel,Not specified
-Clubhouse Named For Y.L. Peretz,Yes,A clubhouse in Kovel that served as a meeting place for middle and working classes,Not specified
-Righteous Lodging,Yes,A charitable institution in Kovel that provided care for the poor and needy,Not specified
-Ohel Shem,Yes,A club in Kovel that brought together young people interested in Jewish content and thought,Not specified
-Carpenters Association,Yes,A meeting place for workers revolutionary youths in Kovel,Not specified
-Home for the Aged,Yes,A home for the elderly in Kovel that provided care and support for the elderly,Not specified
-Great Synagogue,Yes,A place of worship and community gathering,1937
-Houses of Learning,Yes,Places for religious study and learning,1937
-Shtiblach of the Stolin and Trisk Hassidim,Yes,Small synagogues for specific groups,1937
-Rabbi's “courtyard”,Yes,A place where the rabbi resides and holds court,1937
+Herzliah School,Yes,A Hebrew elementary school in Kovel,"1847, 1945"
+Bialik School,No,A school in Tel Aviv (mentioned in relation to Kovel),"1945"
+Sokolov–Laor School,No,A school in Jaffa (mentioned in relation to Kovel),"1945"
+Klomel School,Yes,A school in Kovel named after Dr. Klomel,"1847, 1945"
+Habima (Hebrew studio),Yes,A Hebrew studio in Kovel,"1945"
+Barzilay library,No,A library in Israel (mentioned in relation to Kovel),"1945"
+Beit Bialik library,No,A library in Tel Aviv (mentioned in relation to Kovel),"1945"
+Shaarey Zion library,No,A library in Tel Aviv (mentioned in relation to Kovel),"1945"
+Beit Achad Ha'am,No,A cultural center in Tel Aviv (mentioned in relation to Kovel),"1945"
+Rambam library,No,A library in Tel Aviv (mentioned in relation to Kovel),"1945"
+Cemetery,Yes,A cemetery in Kovel where victims were buried,"1547, 1893, 1945"
+Market,Yes,A marketplace in Kovel,"1847, 1945"
+River,Yes,A river in Kovel (possibly Styr or Turiya),"1847, 1945"
+Kovel,Yes,A city established in 1518,"1518"
+Synagogue,Yes,A synagogue in Kovel,"1569"
+Marketplace,Yes,A marketplace in Kovel,"1547"
+Castle of Kovel,Yes,A castle in Kovel,"1569"
+River Tura,Yes,A river in Kovel,"14th Century"
+Uniate churches,Yes,Churches in Kovel,"1660"
+Catholic Church,Yes,A church in Kovel,"1660"
+Jewish ritual bath (mikveh),Yes,A ritual bath in Kovel,"1650"
+Old Cemetery,Yes,An ancient cemetery in Kovel,"1893"
+Ancient Cemetery,Yes,An ancient cemetery in Kovel,"1893"
+New Cemetery,Yes,A cemetery in Kovel,"1893"
+Old Vakzalna Street,Yes,A street where Yaacov-Aharon Entin lived,"1898"
+Beit HaNetivot Street,Yes,A beautiful street in Kovel with paved roads,"1847"
+Old station,Yes,An old train station in Kovel,"1847"
+New station,Yes,A new train station in Kovel,"1847"
+Niebieski Prospect,Yes,A romantic promenade in Kovel,"1847"
+Cinema houses,Yes,Cinema houses in Kovel,"1847"
+Bathhouse,Yes,A newly-repaired bathhouse in Kovel,"1847"
+Projenski synagogue,Yes,A synagogue for the aristocracy of Kovel,"1847"
+Zand synagogue,Yes,A synagogue in the Zand quarter of Kovel,"1847"
+Luxury shops,Yes,Luxury shops in Kovel with modern showcase windows,"1847"
+Printing houses,Yes,Printing houses in Kovel,"1847"
+Post office,Yes,A post office in Kovel,"1847"
+Magistrat,Yes,A municipal building in Kovel,"1847"
+Hebrew Gymnasia,Yes,A Hebrew gymnasia in Kovel,"1847"
+Small church,Yes,A small church in Kovel,"1915"
+Large church,Yes,A large church in the Zand quarter of Kovel,"1920s"
+Engineering school,Yes,An engineering school in Kovel,"1920s"
+Old wooden bridge,Yes,An old wooden bridge in Kovel,"1847"
+Concrete bridge,Yes,A concrete bridge in Kovel,"1847"
+Tura River,Yes,A river in Kovel,"1847"
+Old Varba's house,Yes,A large two-story walled house in Kovel,"1847"
+Kaploshnick's house,Yes,A fine house with a tidy shop in Kovel,"1847"
+Sports field,Yes,A sports field in Kovel,"1847"
+Great synagogue,Yes,An enormous building and great synagogue in Kovel,"1847"
+Firefighters' company,Yes,A Jewish firefighting company in Kovel,"1847"
+Maccabi team,Yes,A sports organization and soccer team in Kovel,"1847"
+Legia,Yes,A sports organization in Kovel,"1847"
+Bar Kochba,Yes,A sports organization in Kovel,"1847"
+Kadima,Yes,A sports organization and national organization in Kovel,"1847"
+Old cemetery on Matisov Street,Yes,An ancient cemetery in Kovel with tombstones carved nearly four hundred years ago,"5660s (early 20th century)"
+Talmud Torah building,Yes,A building where a proper and excellent restaurant for soldiers was organized,"1909"
+Pirogov's Gymnasia,Yes,A gymnasia in Kovel,"1909"
+Old train station,Yes,A train station in Kovel where the first refugees came during World War I,"1914"
+Jewish Colonial Bank,Yes,A bank in Kovel where Dr. Avraham Kastelnesky worked,"1912"
+Herzliya Elementary School,Yes,A Hebrew elementary school in Kovel,"1922"
+Tarbut Gymnasia,Yes,A Hebrew gymnasia in Kovel,"1924"
+Karla Davidova Gymnasia,Yes,A gymnasia in Kovel,"1924"
+Trisk Rebbe's Synagogue,Yes,A synagogue in Kovel where the Trisk Rebbe danced,"1924"
+Kovel Rebbe's Synagogue,Yes,A synagogue in Kovel where the rebbe danced,"1924"
+Great Synagogue,Yes,A synagogue in Kovel where Jews prayed,"1924"
+Zionist club,Yes,A club in Kovel where young people discussed nationalist subjects,"1924"
+Kovel Forest,No,A dense forest with abundant shade, fertile ground, and a variety of trees and wildlife,"Not specified"
+Dresden Hotel,Yes,A hotel in Kovel where the narrator's family stayed upon arrival,"Not specified"
+Bridge,Yes,A bridge in Kovel where the narrator's family stopped and received a history lesson,"Not specified"
+Old Town,Yes,The historic part of Kovel,"Not specified"
+New Town,Yes,The newer part of Kovel,"Not specified"
+Downtown Kovel,Yes,The central part of Kovel,"Not specified"
+Magnificent Kovel railroad station,Yes,The main railroad station in Kovel,"Not specified"
+Rabbi Velvele's Dance,Yes,A ceremony of “Hakefot” where Rabbi Velvele danced with the Scroll,"Not specified"
+Heder of Rabbi Shaye of Trojanówka,Yes,A heder where Rabbi Shaye Trojanówka taught,"Not specified"
+Tarbut School,Yes,A Hebrew school in Kovel,"Not specified"
+Freiheit,Yes,A pioneering movement in Kovel,"Not specified"
+Hehalutz Hazair,Yes,A youth movement in Kovel,"Not specified"
+Fabrichna Street,Yes,A street in Kovel where the movement was just coming into being,"Not specified"
+Lotzka Street,Yes,A street in Kovel with a large, expansive auditorium,"Not specified"
+Summer colonies in the villages,No,Villages in the bosom of nature surrounding the city,"Not specified"
+Kovel during the First World War,Yes,Kovel during the events of the First World War,"1914"
+Old Town (during WWI),Yes,The historic part of Kovel during World War I,"1914"
+Sands (during WWI),Yes,A part of Kovel during World War I,"1914"
+Taz Institution,Yes,An institution in Kovel that provided care for Jewish children,"1928"
+Orphanage,Yes,An orphanage in Kovel that provided shelter and care for orphans,"1918"
+Folks Kitchen,Yes,A kitchen in Kovel that provided meals for the poor,"Not specified"
+Yiddish school,Yes,A Yiddish school in Kovel opened by the Bolsheviks,"1920"
+ORT School,Yes,A school in Kovel that educated working and productive youth,"1920s"
+Simikovi Hospital,Yes,A governmental hospital in Kovel,"Not specified"
+Jewish Hospital on Behalf of the Jewish Community,Yes,A Jewish hospital in Kovel,"Not specified"
+Taz association polyclinic,Yes,A large polyclinic that served the Jewish public in the medical field,"Not specified"
+Bikur Cholim,Yes,A charitable institution that provided medical help to the Jews of Kovel,"Not specified"
+Clubhouse Named For Y.L. Peretz,Yes,A clubhouse in Kovel that served as a meeting place for middle and working classes,"Not specified"
+Righteous Lodging,Yes,A charitable institution in Kovel that provided care for the poor and needy,"Not specified"
+Ohel Shem,Yes,A club in Kovel that brought together young people interested in Jewish content and thought,"Not specified"
+Carpenters Association,Yes,A meeting place for workers revolutionary youths in Kovel,"Not specified"
+Home for the Aged,Yes,A home for the elderly in Kovel that provided care and support for the elderly,"Not specified"
+Great Synagogue,Yes,A place of worship and community gathering,"1937"
+Houses of Learning,Yes,Places for religious study and learning,"1937"
