@@ -1,3 +1,5 @@
+![Logo](images/logo_small.png)
+
 ![Kowel "Old Town" circa 1915](kowel_1915.png)
 ![Kowel as it appeared during WW2](images/kowel_preview.png)
 
