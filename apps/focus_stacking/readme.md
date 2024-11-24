@@ -1,6 +1,3 @@
-Here's a README.md for your project:
-
-```markdown
 # Focus Stacker
 
 A desktop application for focus stacking photography, built with Python and Tkinter. This tool helps photographers combine multiple images taken at different focus distances to create a single image with greater depth of field.
@@ -139,4 +136,4 @@ For more issues, please check our [Issues](https://github.com/yourusername/focus
 Your Name - [@yourtwitter](https://twitter.com/yourtwitter)
 
 Project Link: [https://github.com/yourusername/focus-stacking](https://github.com/yourusername/focus-stacking)
-```
+
