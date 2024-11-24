@@ -1,0 +1,11 @@
+#!/bin/bash
+# .git/hooks/pre-commit
+
+# Run linting
+./lint.sh
+
+# Check for errors
+if [ $? -ne 0 ]; then
+    echo "Linting failed! Please fix the errors before committing."
+    exit 1
+fi
