@@ -6,230 +6,232 @@ from typing import List, Tuple
 from IPython.display import display, Image
 import ipywidgets as widgets
 import tifffile
+from scipy import ndimage
 
-def enhance_image(img: np.ndarray) -> np.ndarray:
-    """
-    Enhance image quality with multiple preprocessing steps.
-    """
-    # Convert to 8-bit if needed
-    if img.dtype != np.uint8:
-        img = cv2.normalize(img, None, 0, 255, cv2.NORM_MINMAX).astype(np.uint8)
-    
-    # Denoise
-    denoised = cv2.fastNlMeansDenoisingColored(img, None, 10, 10, 7, 21)
-    
-    # Convert to LAB color space for better contrast enhancement
-    lab = cv2.cvtColor(denoised, cv2.COLOR_BGR2LAB)
-    l, a, b = cv2.split(lab)
-    
-    # CLAHE on L channel
-    clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8,8))
-    l_clahe = clahe.apply(l)
-    
-    # Merge channels back
-    enhanced_lab = cv2.merge([l_clahe, a, b])
-    enhanced = cv2.cvtColor(enhanced_lab, cv2.COLOR_LAB2BGR)
-    
-    # Sharpen
-    kernel = np.array([[-1,-1,-1],
-                      [-1, 9,-1],
-                      [-1,-1,-1]])
-    sharpened = cv2.filter2D(enhanced, -1, kernel)
-    
-    return sharpened
-
-def load_images(directory: str) -> List[np.ndarray]:
-    """Load and enhance all images from the specified directory."""
-    image_extensions = {'.jpg', '.jpeg', '.png', '.tiff', '.tif', '.bmp'}
-    images = []
-    
-    for file in sorted(os.listdir(directory)):
-        if Path(file).suffix.lower() in image_extensions:
-            img_path = os.path.join(directory, file)
+class ImageProcessor:
+    def __init__(self, preserve_quality=True, debug=False):
+        self.preserve_quality = preserve_quality
+        self.debug = debug
+        
+    def enhance_image(self, img: np.ndarray) -> np.ndarray:
+        """
+        Enhanced image processing with quality preservation.
+        """
+        # Store original dtype and range
+        original_dtype = img.dtype
+        dtype_max = 255 if original_dtype == np.uint8 else 65535
+        
+        # Convert to float for processing
+        img_float = img.astype(np.float32) / dtype_max
+        
+        # Bilateral filter for edge-preserving smoothing
+        if len(img_float.shape) == 3:
+            denoised = np.zeros_like(img_float)
+            for i in range(3):
+                denoised[:,:,i] = cv2.bilateralFilter(
+                    img_float[:,:,i], d=5, sigmaColor=0.1, sigmaSpace=5)
+        else:
+            denoised = cv2.bilateralFilter(img_float, d=5, sigmaColor=0.1, sigmaSpace=5)
+        
+        # Adaptive contrast enhancement
+        if len(denoised.shape) == 3:
+            lab = cv2.cvtColor((denoised * 255).astype(np.uint8), cv2.COLOR_BGR2LAB)
+            l, a, b = cv2.split(lab)
+            clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8,8))
+            l_clahe = clahe.apply(l)
+            enhanced_lab = cv2.merge([l_clahe, a, b])
+            enhanced = cv2.cvtColor(enhanced_lab, cv2.COLOR_LAB2BGR)
+            enhanced = enhanced.astype(np.float32) / 255
+        else:
+            clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8,8))
+            enhanced = clahe.apply((denoised * 255).astype(np.uint8)).astype(np.float32) / 255
+        
+        # Edge enhancement using unsharp masking
+        gaussian = ndimage.gaussian_filter(enhanced, sigma=1)
+        unsharp_mask = enhanced - gaussian
+        enhanced = enhanced + 0.5 * unsharp_mask
+        
+        # Clip values and convert back to original dtype
+        enhanced = np.clip(enhanced * dtype_max, 0, dtype_max).astype(original_dtype)
+        
+        if self.debug:
+            cv2.imwrite('debug_enhanced.tif', enhanced)
             
-            try:
-                if file.lower().endswith(('.tiff', '.tif')):
-                    img = tifffile.imread(img_path)
-                else:
-                    img = cv2.imread(img_path, cv2.IMREAD_UNCHANGED)
+        return enhanced
+
+    def align_image_pair(self, ref_img: np.ndarray, moving_img: np.ndarray) -> Tuple[np.ndarray, bool]:
+        """
+        Align a pair of images with improved feature matching.
+        """
+        # Convert to grayscale for feature detection
+        ref_gray = cv2.cvtColor(ref_img, cv2.COLOR_BGR2GRAY) if len(ref_img.shape) == 3 else ref_img
+        moving_gray = cv2.cvtColor(moving_img, cv2.COLOR_BGR2GRAY) if len(moving_img.shape) == 3 else moving_img
+        
+        # Multi-scale feature detection
+        sift = cv2.SIFT_create(nfeatures=10000)
+        kp1, des1 = sift.detectAndCompute(ref_gray, None)
+        kp2, des2 = sift.detectAndCompute(moving_gray, None)
+        
+        if des1 is None or des2 is None:
+            return None, False
+            
+        # Feature matching with ratio test
+        FLANN_INDEX_KDTREE = 1
+        index_params = dict(algorithm=FLANN_INDEX_KDTREE, trees=5)
+        search_params = dict(checks=50)
+        flann = cv2.FlannBasedMatcher(index_params, search_params)
+        
+        matches = flann.knnMatch(des1, des2, k=2)
+        good_matches = []
+        for m, n in matches:
+            if m.distance < 0.7 * n.distance:
+                good_matches.append(m)
                 
-                if img is None:
-                    print(f"Failed to load {file}")
-                    continue
+        if len(good_matches) < 10:
+            return None, False
+            
+        # Get matching points
+        src_pts = np.float32([kp1[m.queryIdx].pt for m in good_matches]).reshape(-1, 1, 2)
+        dst_pts = np.float32([kp2[m.trainIdx].pt for m in good_matches]).reshape(-1, 1, 2)
+        
+        # Calculate homography with RANSAC
+        H, mask = cv2.findHomography(dst_pts, src_pts, cv2.RANSAC, 5.0)
+        
+        if H is None:
+            return None, False
+            
+        # Warp image with border extension
+        h, w = ref_img.shape[:2]
+        aligned = cv2.warpPerspective(
+            moving_img, H, (w, h),
+            flags=cv2.INTER_LANCZOS4,
+            borderMode=cv2.BORDER_REPLICATE
+        )
+        
+        return aligned, True
+
+    def blend_images(self, images: List[np.ndarray]) -> np.ndarray:
+        """
+        Blend aligned images using weighted fusion.
+        """
+        if not images:
+            return None
+            
+        # Convert to float32 for processing
+        imgs = [img.astype(np.float32) for img in images]
+        weights = []
+        
+        for img in imgs:
+            # Calculate weight map
+            gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) if len(img.shape) == 3 else img
+            
+            # Multiple focus measures
+            lap = np.absolute(cv2.Laplacian(gray, cv2.CV_32F))
+            sobel_x = np.absolute(cv2.Sobel(gray, cv2.CV_32F, 1, 0))
+            sobel_y = np.absolute(cv2.Sobel(gray, cv2.CV_32F, 0, 1))
+            
+            # Combine measures
+            weight = lap + 0.5 * (sobel_x + sobel_y)
+            
+            # Gaussian blur to reduce noise
+            weight = cv2.GaussianBlur(weight, (3,3), 0)
+            weights.append(weight)
+            
+        # Normalize weights
+        weights = np.array(weights)
+        weight_sum = np.sum(weights, axis=0)
+        weights = np.divide(weights, weight_sum, where=weight_sum != 0)
+        
+        # Weighted blend
+        result = np.zeros_like(imgs[0])
+        for img, weight in zip(imgs, weights):
+            weight = np.expand_dims(weight, -1) if len(img.shape) == 3 else weight
+            result += img * weight
+            
+        return result.astype(images[0].dtype)
+
+def process_directory(directory: str, output_filename: str = 'result.tif', debug: bool = False):
+    """
+    Process all images in a directory with quality preservation.
+    """
+    processor = ImageProcessor(preserve_quality=True, debug=debug)
+    
+    # Load images
+    image_files = sorted([f for f in os.listdir(directory) if f.lower().endswith(
+        ('.tif', '.tiff', '.png', '.jpg', '.jpeg', '.bmp'))])
+    
+    if not image_files:
+        print("No images found in directory")
+        return
+        
+    images = []
+    for f in image_files:
+        path = os.path.join(directory, f)
+        try:
+            if f.lower().endswith(('.tif', '.tiff')):
+                img = tifffile.imread(path)
+            else:
+                img = cv2.imread(path, cv2.IMREAD_UNCHANGED)
                 
-                # Convert to BGR if grayscale
+            if img is not None:
+                # Convert to BGR if needed
                 if len(img.shape) == 2:
                     img = cv2.cvtColor(img, cv2.COLOR_GRAY2BGR)
                 elif img.shape[-1] == 4:
                     img = cv2.cvtColor(img, cv2.COLOR_BGRA2BGR)
-                
+                    
                 # Enhance image
-                enhanced = enhance_image(img)
-                images.append(enhanced)
-                print(f"Loaded and enhanced: {file}")
-                
-            except Exception as e:
-                print(f"Error processing {file}: {str(e)}")
-                continue
-    
-    return images
-
-def detect_and_match_features(img1: np.ndarray, img2: np.ndarray) -> Tuple[np.ndarray, np.ndarray]:
-    """Detect and match features between two images using combination of detectors."""
-    # Convert to grayscale
-    gray1 = cv2.cvtColor(img1, cv2.COLOR_BGR2GRAY)
-    gray2 = cv2.cvtColor(img2, cv2.COLOR_BGR2GRAY)
-    
-    # Create detectors
-    orb = cv2.ORB_create(nfeatures=10000, scaleFactor=1.2, nlevels=8)
-    brisk = cv2.BRISK_create()
-    
-    # Detect keypoints and compute descriptors with both detectors
-    kp1_orb, des1_orb = orb.detectAndCompute(gray1, None)
-    kp2_orb, des2_orb = orb.detectAndCompute(gray2, None)
-    kp1_brisk, des1_brisk = brisk.detectAndCompute(gray1, None)
-    kp2_brisk, des2_brisk = brisk.detectAndCompute(gray2, None)
-    
-    if (des1_orb is None and des1_brisk is None) or (des2_orb is None and des2_brisk is None):
-        return None, None
-    
-    matches = []
-    
-    # Match ORB features
-    if des1_orb is not None and des2_orb is not None:
-        bf_orb = cv2.BFMatcher(cv2.NORM_HAMMING, crossCheck=True)
-        matches_orb = bf_orb.match(des1_orb, des2_orb)
-        matches.extend([(m, kp1_orb, kp2_orb) for m in matches_orb])
-    
-    # Match BRISK features
-    if des1_brisk is not None and des2_brisk is not None:
-        bf_brisk = cv2.BFMatcher(cv2.NORM_HAMMING, crossCheck=True)
-        matches_brisk = bf_brisk.match(des1_brisk, des2_brisk)
-        matches.extend([(m, kp1_brisk, kp2_brisk) for m in matches_brisk])
-    
-    if not matches:
-        return None, None
-    
-    # Sort matches by distance
-    matches = sorted(matches, key=lambda x: x[0].distance)
-    
-    # Extract matched keypoints
-    src_pts = np.float32([m[1][m[0].queryIdx].pt for m in matches]).reshape(-1, 1, 2)
-    dst_pts = np.float32([m[2][m[0].trainIdx].pt for m in matches]).reshape(-1, 1, 2)
-    
-    return src_pts, dst_pts
-
-def align_images(images: List[np.ndarray]) -> List[np.ndarray]:
-    """Align all images to the first image using feature matching."""
+                img = processor.enhance_image(img)
+                images.append(img)
+                print(f"Processed: {f}")
+        except Exception as e:
+            print(f"Error processing {f}: {str(e)}")
+            
     if not images:
-        return []
-    
-    reference_img = images[0]
-    aligned_images = [reference_img]
+        print("No valid images could be processed")
+        return
+        
+    # Align images
+    print("\nAligning images...")
+    reference = images[0]
+    aligned_images = [reference]
     
     for i, img in enumerate(images[1:], 1):
         print(f"Aligning image {i}/{len(images)-1}")
-        
-        src_pts, dst_pts = detect_and_match_features(reference_img, img)
-        
-        if src_pts is None or dst_pts is None or len(src_pts) < 4:
-            print(f"Not enough matches in image {i}")
-            continue
-        
-        # Find homography with RANSAC
-        H, mask = cv2.findHomography(dst_pts, src_pts, cv2.RANSAC, 5.0)
-        
-        if H is None:
-            print(f"Could not find homography for image {i}")
-            continue
-        
-        # Warp image with border extension
-        h, w = reference_img.shape[:2]
-        aligned = cv2.warpPerspective(img, H, (w, h), borderMode=cv2.BORDER_REPLICATE)
-        aligned_images.append(aligned)
-        print(f"Successfully aligned image {i}")
-    
-    return aligned_images
-
-def focus_stack(images: List[np.ndarray]) -> np.ndarray:
-    """Perform focus stacking with enhanced blending."""
-    if not images:
-        return None
-    
-    print("Starting focus stacking...")
-    weights = []
-    
-    for i, img in enumerate(images):
-        print(f"Processing image {i+1}/{len(images)}")
-        # Convert to grayscale
-        gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-        
-        # Calculate weight map using multiple metrics
-        lap = np.absolute(cv2.Laplacian(gray, cv2.CV_64F))
-        sobel_x = np.absolute(cv2.Sobel(gray, cv2.CV_64F, 1, 0, ksize=3))
-        sobel_y = np.absolute(cv2.Sobel(gray, cv2.CV_64F, 0, 1, ksize=3))
-        
-        # Combine metrics
-        weight = lap + 0.5*(sobel_x + sobel_y)
-        
-        # Gaussian blur to reduce noise in weight map
-        weight = cv2.GaussianBlur(weight, (3,3), 0)
-        weights.append(weight)
-    
-    print("Computing weighted blend...")
-    weights = np.array(weights)
-    max_response = np.argmax(weights, axis=0)
-    
-    output = np.zeros_like(images[0])
-    h, w = output.shape[:2]
-    
-    # Use integer indexing for the final image composition
-    max_response = max_response.astype(np.int32)
-    
-    # Create blended output
-    for y in range(h):
-        for x in range(w):
-            output[y, x] = images[max_response[y, x]][y, x]
-    
-    # Final enhancement
-    output = enhance_image(output)
-    
-    return output
-
-def process_images(directory: str, output_filename: str = 'result.jpg'):
-    """Main processing function."""
-    print("Loading and enhancing images...")
-    images = load_images(directory)
-    if not images:
-        print("No valid images found")
-        return
-    
-    print(f"Found {len(images)} images")
-    aligned_images = align_images(images)
-    
+        aligned, success = processor.align_image_pair(reference, img)
+        if success:
+            aligned_images.append(aligned)
+            if debug:
+                cv2.imwrite(f'debug_aligned_{i}.tif', aligned)
+        else:
+            print(f"Failed to align image {i}")
+            
     if len(aligned_images) < 2:
-        print("Failed to align images")
+        print("Insufficient aligned images for blending")
         return
-    
-    result = focus_stack(aligned_images)
-    if result is None:
-        print("Focus stacking failed")
-        return
+        
+    # Blend images
+    print("\nBlending images...")
+    result = processor.blend_images(aligned_images)
     
     # Save result
-    if output_filename.lower().endswith(('.tiff', '.tif')):
-        tifffile.imwrite(output_filename, result)
+    if result is not None:
+        # Save in high quality
+        if output_filename.lower().endswith(('.tif', '.tiff')):
+            tifffile.imwrite(output_filename, result)
+        else:
+            cv2.imwrite(output_filename, result, [cv2.IMWRITE_JPEG_QUALITY, 100])
+        print(f"\nSaved result to {output_filename}")
+        
+        # Display result
+        rgb_result = cv2.cvtColor(result, cv2.COLOR_BGR2RGB)
+        cv2.imwrite('temp_display.jpg', cv2.cvtColor(rgb_result, cv2.COLOR_RGB2BGR))
+        display(Image(filename='temp_display.jpg'))
+        os.remove('temp_display.jpg')
     else:
-        cv2.imwrite(output_filename, result)
-    print(f"Saved result to {output_filename}")
-    
-    # Display result
-    rgb_result = cv2.cvtColor(result, cv2.COLOR_BGR2RGB)
-    cv2.imwrite('temp_result.jpg', rgb_result)
-    display(Image(filename='temp_result.jpg'))
-    os.remove('temp_result.jpg')
+        print("Failed to generate result")
 
-# Create widget
+# Create widgets
 dir_input = widgets.Text(
     value='',
     placeholder='Enter directory path',
@@ -237,10 +239,24 @@ dir_input = widgets.Text(
     style={'description_width': 'initial'}
 )
 
-def on_dir_enter(change):
-    if change['type'] == 'submit':
-        print(f"Processing directory: {change['new']}")
-        process_images(change['new'])
+debug_checkbox = widgets.Checkbox(
+    value=False,
+    description='Debug mode',
+    indent=False
+)
 
-dir_input.on_submit(on_dir_enter)
-display(dir_input)
+output_filename = widgets.Text(
+    value='result.tif',
+    placeholder='Enter output filename',
+    description='Output:',
+    style={'description_width': 'initial'}
+)
+
+def on_process(b):
+    process_directory(dir_input.value, output_filename.value, debug_checkbox.value)
+
+process_button = widgets.Button(description='Process Images')
+process_button.on_click(on_process)
+
+# Display widgets
+display(widgets.VBox([dir_input, output_filename, debug_checkbox, process_button]))
