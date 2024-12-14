@@ -1,7 +1,7 @@
 bl_info = {
     "name": "AI Brush Texture Generator",
     "author": "Your Name",
-    "version": (1, 0),
+    "version": (1, 1),
     "blender": (3, 0, 0),
     "location": "View3D > Sidebar > AI Brush Gen",
     "description": "Generate brush textures using AI",
@@ -14,6 +14,7 @@ import tempfile
 import replicate
 from bpy.props import StringProperty
 from urllib.request import urlretrieve
+from urllib.error import URLError
 
 class BrushTextureGeneratorPreferences(bpy.types.AddonPreferences):
     bl_idname = __name__
@@ -48,10 +49,18 @@ class GenerateBrushTextureOperator(bpy.types.Operator):
             self.report({'ERROR'}, "Please set your Replicate API token in addon preferences")
             return {'CANCELLED'}
 
+        if not self.texture_prompt.strip():
+            self.report({'ERROR'}, "Texture prompt cannot be empty")
+            return {'CANCELLED'}
+
         os.environ['REPLICATE_API_TOKEN'] = api_token
 
         # Generate the complete prompt
-        base_prompt = """Studio overhead shot of {texture} surface in perfect 8K monochrome, captured with professional ring light creating circular gradient falloff. Central 70% shows crystal-clear {texture} detail with 10x10 visible pattern elements. Outer edges fade to pure black through professional light falloff. Museum-grade material photography, extreme detail preservation"""
+        base_prompt = ("Studio overhead shot of {texture} surface in perfect 8K monochrome, "
+                       "captured with professional ring light creating circular gradient falloff. "
+                       "Central 70% shows crystal-clear {texture} detail with 10x10 visible pattern elements. "
+                       "Outer edges fade to pure black through professional light falloff. "
+                       "Museum-grade material photography, extreme detail preservation")
         prompt = base_prompt.format(texture=self.texture_prompt)
 
         try:
@@ -70,8 +79,8 @@ class GenerateBrushTextureOperator(bpy.types.Operator):
                 }
             )
 
-            if not output:
-                self.report({'ERROR'}, "No output received from API")
+            if not output or not isinstance(output, list):
+                self.report({'ERROR'}, "No valid output received from API")
                 return {'CANCELLED'}
 
             # Get the image URL from the output
@@ -81,20 +90,32 @@ class GenerateBrushTextureOperator(bpy.types.Operator):
             temp_dir = tempfile.gettempdir()
             temp_image_path = os.path.join(temp_dir, f"brush_texture_{self.texture_prompt}.webp")
 
-            # Download the image
-            urlretrieve(image_url, temp_image_path)
+            try:
+                # Download the image
+                urlretrieve(image_url, temp_image_path)
+            except URLError as e:
+                self.report({'ERROR'}, f"Failed to download image: {e.reason}")
+                return {'CANCELLED'}
 
             # Create a new texture
             texture_name = f"BrushTex_{self.texture_prompt}"
-            img = bpy.data.images.load(temp_image_path)
-            tex = bpy.data.textures.new(name=texture_name, type='IMAGE')
-            tex.image = img
+            try:
+                img = bpy.data.images.load(temp_image_path)
+                tex = bpy.data.textures.new(name=texture_name, type='IMAGE')
+                tex.image = img
+            except Exception as e:
+                self.report({'ERROR'}, f"Failed to create texture in Blender: {str(e)}")
+                return {'CANCELLED'}
 
             self.report({'INFO'}, f"Generated texture: {texture_name}")
             return {'FINISHED'}
 
+        except replicate.exceptions.ReplicateException as e:
+            self.report({'ERROR'}, f"API Error: {str(e)}")
+            return {'CANCELLED'}
+
         except Exception as e:
-            self.report({'ERROR'}, f"Error: {str(e)}")
+            self.report({'ERROR'}, f"Unexpected error: {str(e)}")
             return {'CANCELLED'}
 
 class VIEW3D_PT_brush_texture_generator(bpy.types.Panel):
@@ -114,14 +135,14 @@ def register():
         description="Enter texture type (e.g., brick, stone, wood)",
         default="brick"
     )
-    
+
     bpy.utils.register_class(BrushTextureGeneratorPreferences)
     bpy.utils.register_class(GenerateBrushTextureOperator)
     bpy.utils.register_class(VIEW3D_PT_brush_texture_generator)
 
 def unregister():
     del bpy.types.Scene.texture_prompt
-    
+
     bpy.utils.unregister_class(VIEW3D_PT_brush_texture_generator)
     bpy.utils.unregister_class(GenerateBrushTextureOperator)
     bpy.utils.unregister_class(BrushTextureGeneratorPreferences)
