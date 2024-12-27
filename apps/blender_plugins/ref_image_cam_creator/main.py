@@ -69,9 +69,14 @@ class REFCAM_OT_add_reference_camera(Operator):
         
         # Add background image if one was found
         if selected_image:
+            # Enable background images
+            camera_data.show_background_images = True
+            
+            # Create and configure background image
             bg = camera_data.background_images.new()
             bg.image = selected_image
             bg.alpha = context.scene.ref_cam_alpha
+            bg.display_depth = 'FRONT'  # Set depth to Front
         
         # Lock camera transforms if requested
         if context.scene.ref_cam_lock:
