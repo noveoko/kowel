@@ -89,7 +89,7 @@ class REFCAM_OT_add_reference_camera(Operator):
         camera_obj.select_set(True)
         context.view_layer.objects.active = camera_obj
         
-        self.report({'INFO'}, f"Created reference camera: {self.camera_name}")
+        self.report({'INFO'}, f"Created reference camera: {context.scene.ref_cam_name}")
         return {'FINISHED'}
 
 class REFCAM_PT_main_panel(Panel):
