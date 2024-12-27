@@ -18,26 +18,7 @@ class REFCAM_OT_add_reference_camera(Operator):
     bl_label = "Add Reference Camera"
     bl_options = {'REGISTER', 'UNDO'}
     
-    # Properties for additional features
-    camera_name: StringProperty(
-        name="Camera Name",
-        default="RefCam",
-        description="Name for the new camera"
-    )
-    
-    lock_camera: BoolProperty(
-        name="Lock Camera",
-        default=True,
-        description="Lock camera transforms after creation"
-    )
-    
-    alpha: FloatProperty(
-        name="Background Opacity",
-        default=0.8,
-        min=0.0,
-        max=1.0,
-        description="Opacity of the background image"
-    )
+    """Properties are handled at the Scene level"""
 
     def ensure_collection_exists(self, context):
         """Ensure 'Reference Photos' collection exists, create if not"""
@@ -50,9 +31,9 @@ class REFCAM_OT_add_reference_camera(Operator):
         # Get the reference collection
         ref_collection = self.ensure_collection_exists(context)
         
-        # Create new camera
-        camera_data = bpy.data.cameras.new(name=self.camera_name)
-        camera_obj = bpy.data.objects.new(self.camera_name, camera_data)
+        # Create new camera using Scene properties
+        camera_data = bpy.data.cameras.new(name=context.scene.ref_cam_name)
+        camera_obj = bpy.data.objects.new(context.scene.ref_cam_name, camera_data)
         
         # Link camera to Reference Photos collection
         ref_collection.objects.link(camera_obj)
@@ -69,21 +50,31 @@ class REFCAM_OT_add_reference_camera(Operator):
         selected_image = None
         for area in context.screen.areas:
             if area.type == 'FILE_BROWSER':
-                for file in area.spaces.active.params.selected_files:
+                params = area.spaces.active.params
+                # Check if we have an active file browser with selected files
+                if params and hasattr(params, 'filename') and params.filename:
                     try:
-                        selected_image = bpy.data.images.load(file.path)
+                        # Construct full path from directory and filename
+                        filepath = params.directory.decode('utf-8') + params.filename
+                        # Check if image is already loaded
+                        existing_image = bpy.data.images.get(params.filename)
+                        if existing_image:
+                            selected_image = existing_image
+                        else:
+                            selected_image = bpy.data.images.load(filepath)
                         break
-                    except:
-                        self.report({'WARNING'}, "Could not load selected image")
+                    except Exception as e:
+                        self.report({'WARNING'}, f"Could not load image: {str(e)}")
+                        print(f"Error loading image: {str(e)}")  # Detailed error in console
         
         # Add background image if one was found
         if selected_image:
             bg = camera_data.background_images.new()
             bg.image = selected_image
-            bg.alpha = self.alpha
+            bg.alpha = context.scene.ref_cam_alpha
         
         # Lock camera transforms if requested
-        if self.lock_camera:
+        if context.scene.ref_cam_lock:
             camera_obj.lock_location = (True, True, True)
             camera_obj.lock_rotation = (True, True, True)
             camera_obj.lock_scale = (True, True, True)
@@ -118,8 +109,33 @@ class REFCAM_PT_main_panel(Panel):
         box.prop(context.scene, "ref_cam_name")
         box.prop(context.scene, "ref_cam_lock")
         box.prop(context.scene, "ref_cam_alpha")
+        
+        # Show current image selection status
+        box = layout.box()
+        box.label(text="Image Status:")
+        
+        # Check if we have an active file browser with a selected image
+        image_selected = False
+        for area in context.screen.areas:
+            if area.type == 'FILE_BROWSER':
+                params = area.spaces.active.params
+                if params and hasattr(params, 'filename') and params.filename:
+                    box.label(text=f"Selected: {params.filename}", icon='IMAGE_DATA')
+                    image_selected = True
+                    break
+        
+        if not image_selected:
+            box.label(text="No image selected in file browser", icon='ERROR')
 
 def register():
+    # Add a property to show the current image path
+    bpy.types.Scene.ref_cam_image_path = StringProperty(
+        name="Selected Image",
+        default="",
+        description="Currently selected image path",
+        subtype='FILE_PATH'
+    )
+    
     bpy.types.Scene.ref_cam_name = StringProperty(
         name="Camera Name",
         default="RefCam",
@@ -142,6 +158,7 @@ def register():
     bpy.utils.register_class(REFCAM_PT_main_panel)
 
 def unregister():
+    del bpy.types.Scene.ref_cam_image_path
     del bpy.types.Scene.ref_cam_name
     del bpy.types.Scene.ref_cam_lock
     del bpy.types.Scene.ref_cam_alpha
