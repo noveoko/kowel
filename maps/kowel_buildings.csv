@@ -1,5 +1,5 @@
 Building,Address,Purpose,Destroyed (Y/N)
-Great Synagogue,Not specified,Religious (Synagogue),Y
+Great Synagogue,Not specified (gloomy lane),Religious (Synagogue),Y
 Houses of Learning,Not specified,Religious education,Y
 Shtiblach (Stolin and Trisk Hassidim),Not specified,Religious (Hasidic prayer houses),Y
 Rabbi's Courtyard,Not specified,Religious (Rabbi's residence and court),Y
@@ -14,7 +14,7 @@ Beis Yesoymim,Lutske Street (Antin shacks),Orphanage,Y
 Moyshev Skeynim,Not specified,Old-age home,Y
 ORT School,Not specified,Vocational education,Y
 TOZ Summer Residences,Horodlitz (7 km from Kovel, pine forest),Health (Children's summer camps),Y
-Herzlia and Dr. Klumel School,Not specified,Education (Secondary schooling),Y
+Herzlia and Dr. Klumel School,Not specified (opposite Stock family house on Tura River),Education (Secondary schooling),Y
 Tarbut Gymnazie,Not specified,Education (Zionist secondary school),Y
 Polish-Jewish Middle School,Not specified,Education (Secondary schooling),Y
 Tsysho School,Lutske Street (Antin shack),Education (Yiddish socialist school),Y
@@ -62,3 +62,7 @@ Jewish Teahouse,Not specified,Community center (Zionist activities),Y
 House of Learning (Sender Kuznits),Not specified (near army barracks),Religious education,Y
 Shinkar Sisters' Trade School,Not specified,Education (Trade school for girls),Y
 Express Theatre,Not specified,Cultural (Theatre),Y
+Stock Family House,Not specified (on Tura River banks),Residential,Y
+Varba House,Not specified (on Tura River banks),Residential (later housed Herzlia and Hebrew Gymnasia),Y
+Concrete Bridge,Not specified (over Tura River),Transportation,Y
+Sawmill,Not specified (on Tura River banks),Industrial (Wood processing),Y
