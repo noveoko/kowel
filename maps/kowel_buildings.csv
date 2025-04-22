@@ -10,14 +10,14 @@ Train Station,Not specified,Transportation,Y
 Cuperfein's Oil Press,Fabryczne Street,Industrial (Oil production),Y
 Armarnik's Mill,Fabryczne Street,Industrial (Milling),Y
 Jewish Hospital,Not specified,Medical (Hospital),Y
-Beis Yesoymim,Not specified,Orphanage,Y
+Beis Yesoymim,Lutske Street (Antin shacks),Orphanage,Y
 Moyshev Skeynim,Not specified,Old-age home,Y
 ORT School,Not specified,Vocational education,Y
-TOZ Summer Residences,Not specified,Health (Children's summer camps),Y
+TOZ Summer Residences,Horodlitz (7 km from Kovel, pine forest),Health (Children's summer camps),Y
 Herzlia and Dr. Klumel School,Not specified,Education (Secondary schooling),Y
 Tarbut Gymnazie,Not specified,Education (Zionist secondary school),Y
 Polish-Jewish Middle School,Not specified,Education (Secondary schooling),Y
-Tsysho School,Not specified,Education (Yiddish socialist school),Y
+Tsysho School,Lutske Street (Antin shack),Education (Yiddish socialist school),Y
 Talmud Torah,Not specified,Religious education (Free school for poor boys),Y
 Yeshivus,Not specified,Religious education (Secondary religious schools),Y
 People's Libraries,Not specified,Cultural (Library),Y
@@ -51,3 +51,7 @@ Customs House,Not specified,Administrative (Customs),Y
 House on Fabritchna Street,Fabritchna Street Number 4,Residential,Y
 Cemetery,Ludomir Street,Burial,Y
 People's Kitchen,Not specified,Charitable (Food distribution),Y
+Erlich Family House,Not specified (near town center),Residential,Y
+Taz Headquarters,Gershonovitz apartment (later),Administrative (Taz institution),Y
+Taz Nursery and Kindergarten,Not specified,Education (Nursery and kindergarten),Y
+Mrs. Kartoflie's Basement,Not specified,Residential (Tutor's home),Y
