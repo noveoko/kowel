@@ -12,6 +12,10 @@
 
 This passion project, developed by @skilenstein, aims to recreate the historic town of Kowel as it existed prior to WW2. If you encounter any errors or have suggestions, please feel free to raise an issue or submit a pull request.
 
+## The Eastern half of Kowel
+
+![East of Kowel circa 1944](images/kowel_no_watermark.png)
+
 ## The 'Old Town' of Kowel as it appeared in 1915
 ![Kowel 1915](images/1915.png)
 
