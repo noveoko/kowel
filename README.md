@@ -109,3 +109,8 @@ Citations:
 ## Global building footprint map
 
 https://github.com/microsoft/GlobalMLBuildingFootprints
+
+## Photos from Kowel and nearby
+
+![Man in a vechicle](images/image.jpg)
+*German (Nazi) soldier in a vehicle. Signage:to Kovel enemy fire 300 m distance Caution! No light at night*
