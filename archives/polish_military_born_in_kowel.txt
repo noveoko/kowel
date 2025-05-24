@@ -1,0 +1,112 @@
+Nazwisko,Imię,Imię ojca,Data urodzenia,Miejsce urodzenia,Sygnatura,Akcje
+Dąbrowski,Czesław,,1862-07-28,Łukówka pow. Kowel,I.481.D.945,Detale
+Jurkiewicz,Ludwik,Feliks,1887-07-31,Kowel,I.480.755,Detale
+Miączyński,Andrzej,Ksawery,1876-01-21,Stachur pow. Kowel,"I.482.41-3121, VM",Detale
+Łada-Łobarzewski,Włodzimierz,Stanisław,1897-07-31,Wielicz pow. Kowel,"I.482.12-754, VM",Detale
+Bondar,Kazimierz,Ignacy,1887-03-07,Kowel - Wołyń,I.481.B.10359,Detale
+Bałysz,Aleksander,Włodzimierz,1908-04-22,Kowel,I.481.B.1209,Detale
+Borysiuk,Daniło,Marian,,Zajączówka pow. Kowel,"27.06.1938, KN",Detale
+Czaplicki,Roman,Jan,1901-01-07,Kowel pow. Włocławek,I.481.C.5815,Detale
+Bieniewski,Antoni,Felicjan Piotr,1887-10-02,Lubitów pow. Kowel,"30.05.1938, Odrzucono",Detale
+Bieniewski,Stefan,Felicjan Piotr Paweł,1885-08-15,Lobitów pow. Kowel,"I.482.47-3697, VM",Detale
+Wołczaski,Michał,,1893-01-16,Kowel,,Detale
+Armarnik,Mojżesz,Liber,1900-11-11,Kowel,I.481.A.2231,Detale
+Bielawa,Marian,Jan,1899-08-18,Kowel,I.481.B.6284,Detale
+Pawłowski,Mieczysław,Józef,1899-10-25,Bożadarówka pow. Kowel,"I.482.90-8585, VM",Detale
+Dobrowolski,Piotr,Franciszek,1902-08-01,Groszowka pow. Kowel,I.481.D.3155,Detale
+Chrapczyński,Antoni,Bazyli (Wacław) (Wasyl),1888-10-02,Datyń pow. Kowel,I.481.C.2436,Detale
+Antoniuk,Wasyl,,1900-12-10,Damaszyce pow. Kowel,"19.12.1933, KN",Detale
+Bezwierchy,Grzegorz,Gabriel,1900-01-01,Kowel,I.481.B.5467,Detale
+Burzyński,Jan,,1895-05-28,Ozierany pow. Kowel,"09.05.1938, Odrzucono",Detale
+Czykilewski,Konstanty,Mikołaj,1885-07-15,Wołoszki pow. Kowel,I.481.C.7743,Detale
+Niewiarowski,Antoni Władysław,bd,1874-09-26,Kowel,I.480.404,Detale
+Suffczyński,Piotr,Józef Franciszek,1892-08-15,Wielint pow. Kowel - Wołyń,"I.482.39-3043, VM",Detale
+Bobołowicz,Mieczysław,Rafał Stanisław,1909-10-09,Kowel,I.481.B.8910,Detale
+Bałysz,Mikołaj,Włodzimierz,1906-02-05,Uchowiecko pow. Kowel,I.481.B.1211,Detale
+Bogacki,Eugeniusz,,1900-04-10,Bliżyn pow. Kowel,"30.05.1936, Odrzucono",Detale
+Kulikowski (Kuligowski),Lucjan,Władysław,1894-11-19,Popowicze pow. Kowel,"I.482.18-1128, VM",Detale
+Diok-Baran,Piotr,Grzegorz,1906-08-24,Brunietówka pow. Kowel,I.481.D.2512,Detale
+Chomiak,Inocenty,Aleksy,1889-11-14,Mielnica pow. Kowel,I.481.C.2190,Detale
+Bogusławski,Czesław,Tadeusz,1908-01-10,Kowel,I.481.B.9714,Detale
+Bajda,Antoni,Nikita,1906-07-27,Nowy Mosów pow. Kowel,I.481.B.614,Detale
+Brzostowski,Stanisław,,1880-11-13,Teresówka pow. Kowel,"28.02.1938, Odrzucono",Detale
+Czirkow,Leon,Jan,1881-12-29,Kowel - Wołyń,I.481.C.7393,Detale
+Bieniewski,Stefan,Felicjan Piotr Paweł,1885-08-15,Lubitów pow. Kowel,"13.04.1931, KNzM",Detale
+Łobarzewski,Jerzy,Stanisław,1899-04-03,Wielick pow. Kowel,"I.482.52-4311, VM",Detale
+Błocki,Jan,Jan,,Rutno pow. Kowel,I.481.B.8695,Detale
+Bajuk,Jefim,Aleksander,1909-01-05,Wielick pow. Kowel,I.481.B.751,Detale
+Cywiński,Władysław,Józef,1896-01-27,Kowel,I.481.C.5328,Detale
+Grabowska,Wanda,Jan,1883-01-21,Kowel,"13.04.1931, KN",Detale
+Wołczaski,Michał Ludwik Julian,Kazimierz,1893-01-16,Kowel,"I.482.74-7016, VM",Detale
+Dunin,Jan,Aleksander,1909-04-26,Kowel,I.481.D.6491,Detale
+Chmielarski,Stefan,,1893-12-16,Kowel,"15.03.1937, Odrzucono",Detale
+Bieniewski,Antoni,Felicjan Piotr,1887-10-02,Lubitów pow. Kowel,I.481.B.6794,Detale
+Kietrzewski,Edward,Tadeusz,1927-10-13,Kowel,1777/90/723 s. 51-52a,Detale
+Kosiński,Tadeusz,Rafał,1925-10-08,Kowel,1777/90/727 s. 163-166,Detale
+Rajewski,Włodzimierz,,1919-12-05,Kowel,1777/90/757 s. 299,Detale
+Gomółka,Helena,Stanisław,1923-08-06,Kowel,1777/90/787 s. 185-189,Detale
+Zajączkowski,Jan,,1910-03-01,Kowel,1777/90/781 s. 66,Detale
+Strus (Struś),Adala,Jan,1922-12-05,Kowel,1777/90/765 s. 306-307,Detale
+Florek,August,,1927-01-13,Kowel,1777/90/699 s. 248,Detale
+Bożyna,Kazimierz,Stanisław,1925-07-08,Kowel,1777/90/788 s. 54,Detale
+Szenderowski,Ludwik,,1905-06-30,Kowel,1777/90/768 s. 211,Detale
+Milcer,Idel,,1899-12-24,Kowel,X.629,Detale
+Bokser,Pinchos,,1907-12-09,Kowel,X.3954,Detale
+Plisak,Aleksander,,1913-04-14,Kowel,X.4974,Detale
+Sieczko,Tadeusz,,1922-02-15,Kowel,X.7811,Detale
+Chmielarski,Feliks,Roman,1901-11-10,Kowel,II.53.5723,Detale
+Barczak,Jan,Błażej,1897-05-28,Nużel pow. Kowel,II.53.2177,Detale
+Miłakowski,Piotr,Paweł,1907-06-29,Kukły pow. Kowel,II.53.39139,Detale
+Barcikowski,Feliks,Edward,2018-05-01,Poworsk pow. Kowel,II.53.1093,Detale
+Andrykiewicz,Jan,Grzegorz,1920-09-01,Milanowicze pow.Kowel,II.53.579,Detale
+Kunc,Adolf,Edward,1899-06-10,Aleksandrówka pow. Kowel,IV.501.2.564 k. 158,Detale
+Górski,Leon,Paweł,1900-01-31,Kowel,II.53.15532,Detale
+Kusyk,Piotr,Paweł,1912-11-12,Czersk pow. Kowel,II.53.33250,Detale
+Bartoszewski,Piotr,Adam,1913-03-25,pow. Kowel,II.53.1858,Detale
+Gołębiowski,Stanisław,Leon,1905-04-17,pow. Kowel,II.53.15100,Detale
+Pawłowicz,Aleksy,Filip,1913-11-02,pow. Kowel,II.53.45900,Detale
+Młynarczyk,Michał,Jan,1914-09-11,pow. Kowel,II.53.41655,Detale
+Wołczaski,Michał,Kazimierz,1893-01-16,Kowel,IV.501.2.577 k. 165,Detale
+Jagodziński,Tadeusz,Bronisław,1911-11-28,Kowel,II.53.20632,Detale
+Pawłowski,Władysław,Stanisław,1918-01-18,Kowel,II.53.45973,Detale
+Niewiadomski,Czesław,Jan,1904-03-17,Kowel,IV.501.2.574 k.31,Detale
+Ciok,Edward,Ludwik,1924-09-27,Kowel,II.53.7622,Detale
+Herman,Ryszard,Alfons,1923-10-10,Kowel,II.53.19351,Detale
+Ładygin,Aleksander,Antoni,1907-12-06,Kowel,II.56.7041,Detale
+Krawczenko,Stanisław,Franciszek,1905-11-25,Kowel,II.56.2413,Detale
+Kelm,Ludwik,Jan,1907-01-01,Kowel,II.56.10756,Detale
+Brzózko,Henryk,Józef,1923-02-15,Kowel,II.56.5235,Detale
+Piotrowski,Stanisław,Bolesław,1911-03-24,Kowel,II.57.439,Detale
+Mejster,Henryk,Leopold,1917-07-10,Kowel,II.56.8251,Detale
+Bobołowicz,Mieczysław,Stanisław,1909-09-26,Kowel,II.56.3821,Detale
+Wołczaski,Michał,Kazimierz,1893-01-16,Kowel,II.56.11283,Detale
+Zaborowski,Kazimierz,Józef,1925-01-01,Kowel pow. Polska woj.,,Detale
+gatcki,Edward,Karol,1922-01-01,Kowel,VIII.802.1897.41218,Detale
+Piotrowski,Stanisław,Bolesław,1911-01-01,Kowel,VIII.802.534.8837,Detale
+Żebrowski,Jan,Julian,1897-01-01,Kowel,,Detale
+Zaborowski,Kazimierz,Józef,1925-01-01,Kowel,VIII.808.109.23,Detale
+Grysnowicz,Jan,Stanisław,1917-01-01,Kowel,,Detale
+Walaszek,Jan,Aleksander,1923-01-01,Kowel,VIII.802.1166.23417,Detale
+Kubiak,Stanisław,Antoni,1905-01-01,Kowel,VIII.802.1424.29635,Detale
+Kleczkowski,Stanisław,Feliks,1883-01-01,Kowel,,Detale
+Chmielarski,Filip,Roman,1901-01-01,Kowel,VIII.801.837.14259,Detale
+Maskiewicz,Witold,,1910-01-01,Kowel woj. wołyńskie,,Detale
+Kleczkowski,Stanisław,Feliks,1883-01-01,Kowel,VIII.808.49.25,Detale
+Buniański,Kazimierz,Franciszek,1906-01-01,Kowel,,Detale
+Paczkowski,Feliks,Jan,1923-01-01,Kowel,VIII.802.1806.38917,Detale
+Griese,Tadeusz,Kazimierz,1928-01-01,Kowel,VIII.802.135.1343,Detale
+Szabotin,Mikołaj,Kuźma,1903-01-01,Kowel,,Detale
+Prystapczuk,Jerzy,Jan,1920-01-01,Kowel,VIII.802.25.249,Detale
+Karpow,Mirosław,Fiodor,1921-01-01,Kowel,,Detale
+Gwozdecki,Czesław,,1927-01-01,Kowel,KAAL kilka sygnatur,Detale
+Monziewicz,,,1890-07-06,forlwark Nikodemów - Kowelskiego powiatu na Wołyniu,"I.300.76.203, 261",Detale
+MOSKALCZYK,ANTONI,Grzegorz,1924-05-10,"Czarnoplesy, p. Kowel",1924/491/III,Detale
+WOŹNIAK,ANTONI,,1918-10-09,"Wierbiczno I, p. Kowel",1918/55/III,Detale
+DANIELUK,JAN,Alojzy,1917-02-12,"Białoszów, p. Kowel",1917/24/IV,Detale
+KOSTIUK,MIKOŁAJ,Mirion,1915-12-10,"Turzysk, p. Kowel",1915/63/IV,Detale
+KRAWCZYK,JAN,Maciej,1921-05-25,"Sekoń,p. Kowel",1921/38/III,Detale
+DAWIDIUK,SAWA,Tymofiej,1916-11-05,"Wydranica, p. Kowel",1916/19/IV,Detale
+BANDŻA,BENEDYKT,Andrzej,1913-03-27,"Kol. Kalinownik, p. Kowel",1913/68/IV,Detale
+MŚCISZ,WINCENTY,Antoni,1920-03-26,"Dolsk, p. Kowel",1920/26/IV,Detale
+MICHALEWSKI,ADAM,Mateusz,1918-01-01,"Czersk, p. Kowel",1918/36/IV,Detale
+SOŁOMONIUK,JAN,Mojszej,1918-07-01,"Nowa Wyżna, p. Kowel",1918/57/IV,Detale
