@@ -66,6 +66,7 @@ This work-in-progress Google Earth file includes:
 - [Areas Photographed](https://catalog.archives.gov/id/44240512)
 - [Application of Analysis of Aerial Photographs in Search of Burial Sites of Victims of War and Totalitarian Crimes](https://problemykryminalistyki.pl/pliki/dokumenty/5_ossowskibykowskawitowskabrzezinskiapplicationofanalysis.pdf)
 - [Co-registration of Panoramic Mobile Mapping Images and Oblique Aerial](https://research.utwente.nl)
+- [Personal Knoweldge Graphs](https://www.youtube.com/watch?v=Cq8VzELJpwI)
 
 ## Related Images and Projects
 
