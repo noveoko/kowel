@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interwar Poland - Deportation Routes from Kowel</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        
+        .header p {
+            margin: 10px 0 0 0;
+            opacity: 0.9;
+        }
+        
+        .map-container {
+            position: relative;
+            width: 100%;
+            height: 700px;
+            background: #e8f4fd;
+            overflow: hidden;
+        }
+        
+        .map-svg {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .country-border {
+            fill: #d4b896;
+            stroke: #8b4513;
+            stroke-width: 2;
+        }
+        
+        .neighboring-country {
+            fill: #e8e8e8;
+            stroke: #999;
+            stroke-width: 1;
+        }
+        
+        .water-body {
+            fill: #4a90e2;
+            opacity: 0.3;
+        }
+        
+        .city-marker {
+            fill: #e74c3c;
+            stroke: white;
+            stroke-width: 2;
+        }
+        
+        .kowel-marker {
+            fill: #2ecc71;
+            stroke: white;
+            stroke-width: 3;
+        }
+        
+        .deportation-line {
+            stroke: #e74c3c;
+            stroke-width: 3;
+            fill: none;
+            stroke-dasharray: 5,5;
+            opacity: 0.8;
+        }
+        
+        .city-label {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            font-weight: bold;
+            text-anchor: middle;
+            fill: #2c3e50;
+        }
+        
+        .distance-label {
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            font-weight: bold;
+            text-anchor: middle;
+            fill: #e74c3c;
+            background: rgba(255,255,255,0.8);
+        }
+        
+        .legend {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(255,255,255,0.95);
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            font-size: 12px;
+        }
+        
+        .legend h3 {
+            margin: 0 0 10px 0;
+            color: #2c3e50;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+        }
+        
+        .legend-color {
+            width: 20px;
+            height: 3px;
+            margin-right: 8px;
+        }
+        
+        .legend-marker {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+            border: 2px solid white;
+        }
+        
+        .info-panel {
+            padding: 20px;
+            background: #f8f9fa;
+        }
+        
+        .deportee-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .deportee-group {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .deportee-group h4 {
+            margin: 0 0 10px 0;
+            color: #e74c3c;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 5px;
+        }
+        
+        .deportee-item {
+            font-size: 11px;
+            margin: 3px 0;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Deportation Routes from Kowel</h1>
+            <p>Interwar Poland (1918-1939) - Soviet Deportations and Imprisonments</p>
+        </div>
+        
+        <div class="map-container">
+            <svg class="map-svg" viewBox="0 0 1000 600">
+                <!-- Background -->
+                <rect width="1000" height="600" fill="#e8f4fd"/>
+                
+                <!-- Neighboring countries (simplified) -->
+                <path class="neighboring-country" d="M 0 0 L 200 0 L 200 150 L 100 200 L 0 180 Z"/> <!-- Germany -->
+                <path class="neighboring-country" d="M 200 0 L 400 0 L 400 100 L 300 120 L 200 150 Z"/> <!-- East Prussia -->
+                <path class="neighboring-country" d="M 0 180 L 100 200 L 150 300 L 100 400 L 0 380 Z"/> <!-- Czechoslovakia -->
+                <path class="neighboring-country" d="M 100 400 L 150 300 L 250 350 L 300 450 L 200 500 L 100 480 Z"/> <!-- Hungary -->
+                <path class="neighboring-country" d="M 200 500 L 300 450 L 400 500 L 350 580 L 200 600 Z"/> <!-- Romania -->
+                
+                <!-- Interwar Poland -->
+                <path class="country-border" d="M 200 150 L 300 120 L 400 100 L 500 120 L 600 140 L 650 180 L 700 200 L 750 250 L 800 300 L 750 350 L 700 400 L 650 430 L 600 450 L 550 480 L 500 500 L 450 480 L 400 500 L 350 480 L 300 450 L 250 350 L 150 300 L 100 200 Z"/>
+                
+                <!-- Soviet Union (eastern border) -->
+                <path class="neighboring-country" d="M 750 250 L 1000 200 L 1000 500 L 750 350 Z"/>
+                
+                <!-- Water bodies -->
+                <ellipse class="water-body" cx="450" cy="80" rx="80" ry="25"/> <!-- Baltic Sea -->
+                <ellipse class="water-body" cx="750" cy="550" rx="60" ry="30"/> <!-- Black Sea -->
+                
+                <!-- Deportation routes (red lines from Kowel) -->
+                <!-- Kowel coordinates: approximately (520, 320) -->
+                
+                <!-- To Komi ASSR (far northeast) -->
+                <line class="deportation-line" x1="520" y1="320" x2="900" y2="120"/>
+                
+                <!-- To Suzdal (northeast of Moscow) -->
+                <line class="deportation-line" x1="520" y1="320" x2="850" y2="200"/>
+                
+                <!-- To Juża (near Moscow region) -->
+                <line class="deportation-line" x1="520" y1="320" x2="820" y2="250"/>
+                
+                <!-- To Saratow region (southeast) -->
+                <line class="deportation-line" x1="520" y1="320" x2="880" y2="380"/>
+                
+                <!-- To Iwanowski camp (east-northeast) -->
+                <line class="deportation-line" x1="520" y1="320" x2="840" y2="280"/>
+                
+                <!-- City markers -->
+                <!-- Kowel (starting point) -->
+                <circle class="kowel-marker" cx="520" cy="320" r="8"/>
+                
+                <!-- Deportation destinations -->
+                <circle class="city-marker" cx="900" cy="120" r="6"/> <!-- Komi ASSR -->
+                <circle class="city-marker" cx="850" cy="200" r="6"/> <!-- Suzdal -->
+                <circle class="city-marker" cx="820" cy="250" r="6"/> <!-- Juża -->
+                <circle class="city-marker" cx="880" cy="380" r="6"/> <!-- Saratow -->
+                <circle class="city-marker" cx="840" cy="280" r="6"/> <!-- Iwanowski -->
+                
+                <!-- City labels -->
+                <text class="city-label" x="520" y="340">Kowel</text>
+                <text class="city-label" x="900" y="110">Komi ASSR</text>
+                <text class="city-label" x="850" y="190">Suzdal</text>
+                <text class="city-label" x="820" y="240">Juża</text>
+                <text class="city-label" x="880" y="400">Saratow</text>
+                <text class="city-label" x="840" y="270">Iwanowski</text>
+                
+                <!-- Distance labels along the lines -->
+                <text class="distance-label" x="710" y="220">~1,680 km</text> <!-- Komi ASSR -->
+                <text class="distance-label" x="685" y="260">~1,100 km</text> <!-- Suzdal -->
+                <text class="distance-label" x="670" y="285">~980 km</text> <!-- Juża -->
+                <text class="distance-label" x="700" y="350">~1,200 km</text> <!-- Saratow -->
+                <text class="distance-label" x="680" y="300">~1,050 km</text> <!-- Iwanowski -->
+                
+                <!-- Major Polish cities for reference -->
+                <circle cx="350" cy="280" r="4" fill="#3498db" stroke="white" stroke-width="1"/>
+                <text class="city-label" x="350" y="270" style="font-size: 10px;">Warsaw</text>
+                
+                <circle cx="250" cy="200" r="3" fill="#3498db" stroke="white" stroke-width="1"/>
+                <text class="city-label" x="250" y="190" style="font-size: 10px;">Gdańsk</text>
+                
+                <circle cx="300" cy="380" r="3" fill="#3498db" stroke="white" stroke-width="1"/>
+                <text class="city-label" x="300" y="370" style="font-size: 10px;">Kraków</text>
+                
+                <circle cx="450" cy="250" r="3" fill="#3498db" stroke="white" stroke-width="1"/>
+                <text class="city-label" x="450" y="240" style="font-size: 10px;">Białystok</text>
+                
+                <circle cx="600" cy="300" r="3" fill="#3498db" stroke="white" stroke-width="1"/>
+                <text class="city-label" x="600" y="290" style="font-size: 10px;">Lwów</text>
+            </svg>
+            
+            <div class="legend">
+                <h3>Legend</h3>
+                <div class="legend-item">
+                    <div class="legend-marker kowel-marker"></div>
+                    <span>Kowel (Starting Point)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-marker city-marker"></div>
+                    <span>Deportation Destinations</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color deportation-line"></div>
+                    <span>Deportation Routes</span>
+                </div>
+                <div class="legend-item">
+                    <div style="width: 20px; height: 12px; background: #d4b896; margin-right: 8px; border: 1px solid #8b4513;"></div>
+                    <span>Interwar Poland</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="info-panel">
+            <h3>Deportation Data from Kowel Region</h3>
+            <p><strong>Historical Context:</strong> This map shows the deportation routes of Polish citizens from the Kowel region during the Soviet occupation period. The distances are calculated as approximate straight-line distances from Kowel to the deportation destinations.</p>
+            
+            <div class="deportee-list">
+                <div class="deportee-group">
+                    <h4>Komi ASSR Deportations (~1,680 km)</h4>
+                    <div class="deportee-item">Armarnik, Michał (b. 1893)</div>
+                    <div class="deportee-item">Armarnik, Pesa (b. 1905)</div>
+                    <div class="deportee-item">Epsztejn, Szowsa (b. 1901)</div>
+                    <div class="deportee-item">Srebnik, Leon (b. 1910)</div>
+                </div>
+                
+                <div class="deportee-group">
+                    <h4>Suzdal Prisoners (~1,100 km)</h4>
+                    <div class="deportee-item">Bojakowski, Franciszek (b. 1909)</div>
+                </div>
+                
+                <div class="deportee-group">
+                    <h4>Juża Prisoners (~980 km)</h4>
+                    <div class="deportee-item">Chmielarski, Filip (b. 1901)</div>
+                    <div class="deportee-item">Warywoda, Mieczysław (b. 1915)</div>
+                </div>
+                
+                <div class="deportee-group">
+                    <h4>Saratow Region Internees (~1,200 km)</h4>
+                    <div class="deportee-item">Puchalska, Maria (b. 1914)</div>
+                </div>
+                
+                <div class="deportee-group">
+                    <h4>Iwanowski Camp Prisoners (~1,050 km)</h4>
+                    <div class="deportee-item">Sebastianowicz, Franciszek (b. 1898)</div>
+                    <div class="deportee-item">Sinkiewicz, Piotr (b. 1900)</div>
+                </div>
+                
+                <div class="deportee-group">
+                    <h4>Rivne Oblast Deportations</h4>
+                    <div class="deportee-item">Kopacz, Tadeusz (b. 1924)</div>
+                    <div class="deportee-item">Michalski, Henryk (b. 1928)</div>
+                    <div class="deportee-item">Michalski, Zbigniew (b. 1933)</div>
+                    <div class="deportee-item">Szmidt, Anatol (b. 1891)</div>
+                    <p style="font-size: 10px; color: #666; margin-top: 5px;"><em>Note: These appear to be deportations within or from the local Rivne Oblast region</em></p>
+                </div>
+            </div>
+            
+            <div style="margin-top: 20px; padding: 15px; background: #fff3cd; border-radius: 5px; border-left: 4px solid #ffc107;">
+                <h4 style="margin: 0 0 10px 0; color: #856404;">Distance Calculation Method</h4>
+                <p style="margin: 0; font-size: 12px; color: #856404;">
+                    Distances shown are approximate straight-line calculations from Kowel to the deportation destinations. 
+                    Actual travel distances would have been significantly longer due to available transportation routes and infrastructure of the period.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
