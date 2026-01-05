@@ -1,0 +1,10 @@
+Group,Category,Polish Description,English Translation,Symbol Description
+A,I,BUDYNEK NIEUSZKODZONY,Undamaged building,Solid black rectangle
+A,II,"BUD. SPALONY W B. MAŁYM % NP. DACH I KILKA LOKALI","Building burned in a very small % e.g., roof and a few units",Black rectangle with red outline
+A,III,BUD. Z USZKODZONYM DACHEM,Building with damaged roof,Black inner rectangle with white border
+B,IV,"BUD. CZĘŚCIOWO USZKODZONY /NP. ZAWALONA CZĘŚĆ PIĘTER/","Building partially damaged /e.g., part of floors collapsed/",Rectangle split: left black / right hatched
+B,V,"BUD. SPALONY W DUŻYM %, LECZ NIE CAŁKOWICIE /NP. ZACHOWANE STROPY/","Building burned in large %, but not completely /e.g., floor slabs preserved/",Red outline with cross-hatching
+B,VIII,"BUD. NIEWYKOŃCZONY /STAN SUROWY/","Unfinished building /raw state or shell state/",Grey filled rectangle
+C,VI,BUD. WYPALONY DOSZCZĘTNIE,Building burned down completely,Red outline with empty center
+C,VII,BUD. ZNISZCZONY CAŁKOWICIE,Building destroyed completely,Thick black outline with empty center
+C,IX,BUD. DREWNIANY SPALONY CAŁKOWICIE,Wooden building burned completely,Yellow outline with empty center
