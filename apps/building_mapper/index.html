@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aerial Camera Geo-Locator — 3D Perspective</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+
+    body {
+      display: flex;
+      height: 100vh;
+      background: #121214;
+      color: #e0e0e0;
+      overflow: hidden;
+    }
+
+    #sidebar {
+      width: 380px;
+      background: #1e1e24;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      border-right: 1px solid #2d2d38;
+      overflow-y: auto;
+    }
+
+    #viewport {
+      flex: 1;
+      position: relative;
+      background: #0a0a0c;
+      overflow: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    canvas {
+      cursor: crosshair;
+      max-width: 100%;
+      height: auto;
+    }
+
+    h2 {
+      font-size: 1.1rem;
+      color: #4da6ff;
+      margin-bottom: 2px;
+    }
+
+    .card {
+      background: #252530;
+      padding: 10px 12px;
+      border-radius: 6px;
+      border: 1px solid #333344;
+    }
+
+    label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #a0a0b0;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    input[type="file"],
+    select,
+    input[type="text"],
+    input[type="number"],
+    input[type="range"],
+    button {
+      width: 100%;
+      padding: 8px 10px;
+      background: #181820;
+      border: 1px solid #3d3d4e;
+      color: #fff;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      margin-bottom: 6px;
+    }
+
+    input[type="range"] {
+      padding: 4px 0;
+    }
+
+    .row {
+      display: flex;
+      gap: 8px;
+    }
+
+    .row > * {
+      flex: 1;
+    }
+
+    button {
+      background: #2563eb;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      transition: background 0.2s;
+      margin-bottom: 0;
+    }
+
+    button:hover {
+      background: #1d4ed8;
+    }
+
+    button.danger {
+      background: #dc2626;
+      margin-top: 4px;
+    }
+
+    button.danger:hover {
+      background: #b91c1c;
+    }
+
+    .building-list {
+      max-height: 150px;
+      overflow-y: auto;
+      list-style: none;
+      font-size: 0.8rem;
+    }
+
+    .building-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 4px 0;
+      border-bottom: 1px solid #333344;
+    }
+
+    .building-list button {
+      width: auto;
+      padding: 2px 6px;
+      font-size: 0.75rem;
+      background: #444455;
+    }
+
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      font-size: 0.75rem;
+      margin-top: 4px;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .value {
+      color: #4da6ff;
+      font-weight: 700;
+      float: right;
+    }
+
+    .status {
+      font-size: 0.75rem;
+      line-height: 1.45;
+      color: #aaaabd;
+    }
+
+    .status strong {
+      color: #fff;
+    }
+
+    .small {
+      font-size: 0.7rem;
+      color: #777788;
+      line-height: 1.35;
+    }
+
+    .projection-info {
+      background: #181820;
+      border-radius: 4px;
+      padding: 8px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.7rem;
+      line-height: 1.5;
+      color: #a8d8ff;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="sidebar">
+
+    <h2>Camera Geo-Locator · 3D</h2>
+
+    <div class="card">
+      <label>1. Load Aerial Image</label>
+      <input type="file" id="imageInput" accept="image/*">
+    </div>
+
+    <div class="card">
+      <label>2. Active Building Tool</label>
+
+      <div class="row">
+        <select id="shapeSelect">
+          <option value="cube">Cube (C)</option>
+          <option value="rectangle">Rectangle (R)</option>
+          <option value="l-shape">L-Shape (L)</option>
+          <option value="t-shape">T-Shape (T)</option>
+          <option value="m-shape">M-Shape (M)</option>
+          <option value="square-hole">Square w/ Hole (S)</option>
+          <option value="misc">Misc / Hero (X)</option>
+        </select>
+
+        <input
+          type="number"
+          id="heightInput"
+          value="3"
+          min="1"
+          max="100"
+          title="Building Height (Stories)"
+          placeholder="H">
+      </div>
+
+      <p style="font-size:0.75rem;color:#888;">
+        Click the image canvas to place landmark.
+      </p>
+    </div>
+
+    <div class="card">
+      <label>3. 3D Camera Geometry</label>
+
+      <div class="row">
+        <div>
+          <label>Camera altitude (m)</label>
+          <input
+            type="number"
+            id="cameraAltitude"
+            value="120"
+            min="1"
+            max="10000"
+            step="1">
+        </div>
+
+        <div>
+          <label>Story height (m)</label>
+          <input
+            type="number"
+            id="storyHeight"
+            value="3"
+            min="1"
+            max="10"
+            step="0.1">
+        </div>
+      </div>
+
+      <div>
+        <label>
+          Horizontal FOV
+          <span class="value" id="fovValue">120°</span>
+        </label>
+        <input
+          type="range"
+          id="fovInput"
+          min="40"
+          max="170"
+          value="120"
+          step="1">
+      </div>
+
+      <div>
+        <label>
+          Vertical FOV
+          <span class="value" id="vfovValue">75°</span>
+        </label>
+        <input
+          type="range"
+          id="vfovInput"
+          min="20"
+          max="150"
+          value="75"
+          step="1">
+      </div>
+
+      <p class="small">
+        Camera pitch is solved independently from horizontal heading.
+        Positive pitch looks upward; negative pitch looks downward.
+      </p>
+    </div>
+
+    <div class="card">
+      <label>Annotated Buildings (<span id="buildingCount">0</span>)</label>
+
+      <ul class="building-list" id="buildingList"></ul>
+
+      <button class="danger" id="clearBtn">
+        Clear All Markers
+      </button>
+    </div>
+
+    <div class="card">
+      <label>4. Search Query Sequence</label>
+
+      <input
+        type="text"
+        id="queryInput"
+        placeholder='e.g. ["L", "M", "rectangle", "cube"]'
+        value='["L", "M", "rectangle", "cube", "cube"]'>
+
+      <button id="searchBtn">
+        Locate Camera Position
+      </button>
+    </div>
+
+    <div class="card">
+      <label>Estimated Camera</label>
+
+      <div id="projectionInfo" class="projection-info">
+        No solution yet.
+      </div>
+    </div>
+
+    <div class="card">
+      <label>Confidence Legend</label>
+
+      <div class="legend">
+        <div class="legend-item">
+          <span class="dot" style="background:rgba(255,0,0,0.7)"></span>
+          High
+        </div>
+
+        <div class="legend-item">
+          <span class="dot" style="background:rgba(255,165,0,0.6)"></span>
+          Mid
+        </div>
+
+        <div class="legend-item">
+          <span class="dot" style="background:rgba(255,255,0,0.4)"></span>
+          Low
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="viewport">
+    <canvas id="canvas"></canvas>
+  </div>
+
+  <script>
+    /*
+     * ================================================================
+     * 3D AERIAL CAMERA GEO-LOCATOR
+     * ================================================================
+     *
+     * Coordinate system:
+     *
+     *   X = image/world east-right
+     *   Y = image/world south-down
+     *   Z = height above ground
+     *
+     * The image itself is treated as a flat ground-plane coordinate
+     * system. Building markers therefore have:
+     *
+     *   world = { x, y, z }
+     *
+     * Camera:
+     *
+     *   C = { cx, cy, altitude }
+     *
+     * Heading:
+     *
+     *   0° = +X
+     *   90° = +Y
+     *
+     * Pitch:
+     *
+     *   0° = horizontal
+     *   negative = looking downward
+     *   positive = looking upward
+     *
+     * Perspective projection:
+     *
+     *   camera-space forward = horizontal distance projected through
+     *                          heading and pitch
+     *
+     *   screenX = tan(horizontalAngle) / tan(HFOV/2)
+     *
+     *   screenY = -tan(verticalAngle) / tan(VFOV/2)
+     *
+     * This is actual perspective projection rather than the previous
+     * 2D angular approximation.
+     * ================================================================
+     */
+
+    const SHAPE_MAP = {
+      'c': 'cube',
+      'cube': 'cube',
+
+      'r': 'rectangle',
+      'rect': 'rectangle',
+      'rectangle': 'rectangle',
+
+      'l': 'l-shape',
+      'l-shape': 'l-shape',
+
+      't': 't-shape',
+      't-shape': 't-shape',
+
+      'm': 'm-shape',
+      'm-shape': 'm-shape',
+
+      's': 'square-hole',
+      'square': 'square-hole',
+      'square-hole': 'square-hole',
+
+      'x': 'misc',
+      'misc': 'misc',
+      'hero': 'misc'
+    };
+
+    const SHAPE_COLORS = {
+      'cube': '#ef4444',
+      'rectangle': '#f97316',
+      'l-shape': '#eab308',
+      't-shape': '#84cc16',
+      'm-shape': '#06b6d4',
+      'square-hole': '#a855f7',
+      'misc': '#ec4899'
+    };
+
+    let img = null;
+
+    /*
+     * Buildings:
+     *
+     * x/y are coordinates on the flat ground plane.
+     * height is in stories.
+     */
+    let buildings = [];
+
+    let heatmapData = null;
+    let bestMatch = null;
+
+    const FINE_STEP = 10;
+
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+
+    const imageInput = document.getElementById('imageInput');
+    const shapeSelect = document.getElementById('shapeSelect');
+    const heightInput = document.getElementById('heightInput');
+
+    const cameraAltitudeInput =
+      document.getElementById('cameraAltitude');
+
+    const storyHeightInput =
+      document.getElementById('storyHeight');
+
+    const fovInput =
+      document.getElementById('fovInput');
+
+    const vfovInput =
+      document.getElementById('vfovInput');
+
+    const fovValue =
+      document.getElementById('fovValue');
+
+    const vfovValue =
+      document.getElementById('vfovValue');
+
+    const buildingList =
+      document.getElementById('buildingList');
+
+    const buildingCount =
+      document.getElementById('buildingCount');
+
+    const queryInput =
+      document.getElementById('queryInput');
+
+    const searchBtn =
+      document.getElementById('searchBtn');
+
+    const clearBtn =
+      document.getElementById('clearBtn');
+
+    const projectionInfo =
+      document.getElementById('projectionInfo');
+
+
+    /* ================================================================
+       UI
+       ================================================================ */
+
+    fovInput.addEventListener('input', updateFovLabels);
+    vfovInput.addEventListener('input', updateFovLabels);
+
+    function updateFovLabels() {
+      fovValue.textContent = `${fovInput.value}°`;
+      vfovValue.textContent = `${vfovInput.value}°`;
+    }
+
+    updateFovLabels();
+
+
+    /* ================================================================
+       IMAGE LOADING
+       ================================================================ */
+
+    imageInput.addEventListener('change', (e) => {
+      const file = e.target.files[0];
+
+      if (!file) return;
+
+      const reader = new FileReader();
+
+      reader.onload = (evt) => {
+        img = new Image();
+
+        img.onload = () => {
+          canvas.width = img.width;
+          canvas.height = img.height;
+
+          heatmapData = null;
+          bestMatch = null;
+
+          projectionInfo.textContent = 'No solution yet.';
+
+          render();
+        };
+
+        img.src = evt.target.result;
+      };
+
+      reader.readAsDataURL(file);
+    });
+
+
+    /* ================================================================
+       BUILDING MARKERS
+       ================================================================ */
+
+    canvas.addEventListener('click', (e) => {
+      if (!img) return;
+
+      const rect = canvas.getBoundingClientRect();
+
+      const scaleX =
+        canvas.width / rect.width;
+
+      const scaleY =
+        canvas.height / rect.height;
+
+      const x =
+        (e.clientX - rect.left) * scaleX;
+
+      const y =
+        (e.clientY - rect.top) * scaleY;
+
+      buildings.push({
+        id: Date.now() + Math.random(),
+
+        x: Math.round(x),
+        y: Math.round(y),
+
+        type: shapeSelect.value,
+
+        height:
+          parseInt(heightInput.value, 10) || 1
+      });
+
+      heatmapData = null;
+      bestMatch = null;
+
+      updateList();
+      render();
+    });
+
+
+    function removeBuilding(id) {
+      buildings =
+        buildings.filter(b => b.id !== id);
+
+      heatmapData = null;
+      bestMatch = null;
+
+      updateList();
+      render();
+    }
+
+
+    clearBtn.addEventListener('click', () => {
+      buildings = [];
+
+      heatmapData = null;
+      bestMatch = null;
+
+      updateList();
+      render();
+    });
+
+
+    function updateList() {
+      buildingCount.textContent =
+        buildings.length;
+
+      buildingList.innerHTML =
+        buildings.map((b, idx) => `
+          <li>
+            <span>
+              #${idx + 1}
+              <strong>${b.type}</strong>
+              (h:${b.height})
+            </span>
+
+            <button onclick="removeBuilding(${b.id})">
+              ✕
+            </button>
+          </li>
+        `).join('');
+    }
+
+
+    /* ================================================================
+       QUERY
+       ================================================================ */
+
+    function parseQuery(str) {
+      return str
+        .replace(/[\[\]"']/g, '')
+        .split(',')
+        .map(s => s.trim().toLowerCase())
+        .map(s => SHAPE_MAP[s] || s)
+        .filter(Boolean);
+    }
+
+
+    /* ================================================================
+       SEQUENCE SCORING
+       ================================================================ */
+
+    function scoreSequence(target, candidate) {
+      if (!target.length || !candidate.length) {
+        return 0;
+      }
+
+      const m = target.length;
+      const n = candidate.length;
+
+      const dp =
+        Array.from(
+          { length: m + 1 },
+          () => new Uint8Array(n + 1)
+        );
+
+      for (let i = 1; i <= m; i++) {
+        for (let j = 1; j <= n; j++) {
+
+          if (
+            target[i - 1] ===
+            candidate[j - 1]
+          ) {
+            dp[i][j] =
+              dp[i - 1][j - 1] + 1;
+          } else {
+            dp[i][j] =
+              Math.max(
+                dp[i - 1][j],
+                dp[i][j - 1]
+              );
+          }
+        }
+      }
+
+      return (
+        dp[m][n] /
+        Math.max(m, n)
+      );
+    }
+
+
+    /* ================================================================
+       3D MATH
+       ================================================================ */
+
+    function degToRad(deg) {
+      return deg * Math.PI / 180;
+    }
+
+    function radToDeg(rad) {
+      return rad * 180 / Math.PI;
+    }
+
+    function normalizeAngle(a) {
+      while (a < -Math.PI) {
+        a += Math.PI * 2;
+      }
+
+      while (a > Math.PI) {
+        a -= Math.PI * 2;
+      }
+
+      return a;
+    }
+
+
+    /*
+     * Given a camera heading and pitch, transform a world point into
+     * camera-relative coordinates.
+     *
+     * Camera coordinate system:
+     *
+     *   forward = horizontal viewing direction
+     *   right   = perpendicular horizontal direction
+     *   up      = camera vertical direction
+     *
+     * The camera is rotated first around Z (heading), then around the
+     * camera/right axis (pitch).
+     */
+    function worldToCamera(
+      point,
+      camera,
+      heading,
+      pitch
+    ) {
+      const dx =
+        point.x - camera.x;
+
+      const dy =
+        point.y - camera.y;
+
+      const dz =
+        point.z - camera.z;
+
+      /*
+       * Horizontal heading rotation.
+       *
+       * forward horizontal component:
+       */
+      const forwardHorizontal =
+        dx * Math.cos(heading) +
+        dy * Math.sin(heading);
+
+      /*
+       * Right direction:
+       */
+      const right =
+        -dx * Math.sin(heading) +
+        dy * Math.cos(heading);
+
+      /*
+       * Pitch rotates horizontal-forward and vertical axes.
+       *
+       * Positive pitch = look upward.
+       */
+      const forward =
+        forwardHorizontal * Math.cos(pitch) +
+        dz * Math.sin(pitch);
+
+      const up =
+        -forwardHorizontal * Math.sin(pitch) +
+        dz * Math.cos(pitch);
+
+      return {
+        forward,
+        right,
+        up
+      };
+    }
+
+
+    /*
+     * True perspective projection.
+     *
+     * Returns normalized device coordinates:
+     *
+     *   x = -1 .. +1
+     *   y = -1 .. +1
+     *
+     * and actual screen coordinates.
+     */
+    function projectPoint3D(
+      point,
+      camera,
+      heading,
+      pitch,
+      hfov,
+      vfov
+    ) {
+      const p =
+        worldToCamera(
+          point,
+          camera,
+          heading,
+          pitch
+        );
+
+      /*
+       * Point behind camera.
+       */
+      if (p.forward <= 0.0001) {
+        return {
+          visible: false,
+          ...p
+        };
+      }
+
+      const nx =
+        (p.right / p.forward) /
+        Math.tan(hfov / 2);
+
+      /*
+       * Canvas Y increases downward, hence the minus sign.
+       */
+      const ny =
+        -(p.up / p.forward) /
+        Math.tan(vfov / 2);
+
+      return {
+        visible:
+          Math.abs(nx) <= 1 &&
+          Math.abs(ny) <= 1,
+
+        nx,
+        ny,
+
+        screenX:
+          (nx + 1) * 0.5 * canvas.width,
+
+        screenY:
+          (ny + 1) * 0.5 * canvas.height,
+
+        ...p
+      };
+    }
+
+
+    /*
+     * Compute horizontal and vertical visual angles directly.
+     *
+     * This is useful independently of the perspective projection and
+     * is also what the 3D raycasting stage uses.
+     */
+    function getVisualAngles(
+      point,
+      camera,
+      heading
+    ) {
+      const dx =
+        point.x - camera.x;
+
+      const dy =
+        point.y - camera.y;
+
+      const dz =
+        point.z - camera.z;
+
+      const horizontalDistance =
+        Math.hypot(dx, dy);
+
+      const azimuth =
+        Math.atan2(dy, dx);
+
+      const relativeAzimuth =
+        normalizeAngle(
+          azimuth - heading
+        );
+
+      const verticalAngle =
+        Math.atan2(
+          dz,
+          horizontalDistance
+        );
+
+      return {
+        horizontalDistance,
+        azimuth,
+        relativeAzimuth,
+        verticalAngle
+      };
+    }
+
+
+    /* ================================================================
+       3D RAYCASTING
+       ================================================================ */
+
+    /*
+     * A building is represented by a vertical segment:
+     *
+     *   base = z = 0
+     *   top  = z = building height
+     *
+     * From the camera this gives it a horizontal angular extent and a
+     * vertical angular interval.
+     *
+     * Since markers are points, a small angular radius is assigned to
+     * each building. This avoids requiring building footprint data.
+     */
+    function makeRaycastObject(
+      building,
+      camera,
+      heading,
+      pitch,
+      storyHeight
+    ) {
+      const base = {
+        x: building.x,
+        y: building.y,
+        z: 0
+      };
+
+      const top = {
+        x: building.x,
+        y: building.y,
+        z: building.height * storyHeight
+      };
+
+      const baseAngles =
+        getVisualAngles(
+          base,
+          camera,
+          heading
+        );
+
+      const topAngles =
+        getVisualAngles(
+          top,
+          camera,
+          heading
+        );
+
+      /*
+       * Approximate angular footprint.
+       *
+       * A 5px marker corresponds to a small object around the camera.
+       * At very close range we increase the angular radius naturally.
+       */
+      const angularRadius =
+        Math.atan2(
+         
