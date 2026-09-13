@@ -1,1150 +1,1019 @@
-"City","Name / Entity","Role / Specialty","Address"
-"Kowel","Bron. Chodakowski","Starosta",""
-"Kowel","Wacł. Drojanowski","Prezydent miasta",""
-"Kowel","Wład. Krukowski","Prezes Rady Miejskiej",""
-"Kowel","Pleszko","Komendant straży ogniowej miejskiej",""
-"Kowel","dr Dymitr Barczenko","Lekarz","ul. Mickiewicza 38"
-"Kowel","dr Mich. Ciechnowicz","Lekarz","ul. St. Kolejowa 26"
-"Kowel","dr W. Gertałow","Lekarz (choroby wewnętrzne)","ul. Łucka 184"
-"Kowel","dr S. Gliwiński","Lekarz (ginekolog)","ul. Mickiewicza 35"
-"Kowel","dr Teof. Jaworowski","Lekarz","ul. Policyjna 1"
-"Kowel","dr Wac. Królewski","Lekarz (laryngolog)","ul. N. Kolejowa 90"
-"Kowel","dr Jul. Krzeczkowska","Lekarz","ul. Kościuszki 8"
-"Kowel","dr Zygn. Leble","Lekarz (choroby wewnętrzne)","ul. Kolejowa 90"
-"Kowel","dr Stanisław Leszkiewicz","Lekarz","ul. Warszawska 59"
-"Kowel","dr Ser. Lipowiecka-Sawicka","Lekarz","ul. Bony 15"
-"Kowel","dr M. Pirogow","Lekarz","ul. Strażacka 12"
-"Kowel","dr Leon Rychlicki","Lekarz (chirurg)","Szpital Państwowy"
-"Kowel","dr W. Swiatikow","Lekarz",""
-"Kowel","dr Bol. Turowski","Lekarz","ul. Łucka 67"
-"Kowel","dr J. Wajtman","Lekarz","ul. Warszawska"
-"Kowel","dr Jerzy Wasilewski","Lekarz",""
-"Kowel","dr Wac. Weselski","Lekarz (zakaźny)","ul. Foksal 15"
-"Kowel","dr Pinkus Zyskind","Lekarz","ul. Warszawska 62"
-"Kowel","dr Stefan Chrzanowski","Lekarz",""
-"Kowel","dr H. Holendzki","Lekarz",""
-"Kowel","dr L. Radwański","Lekarz",""
-"Kowel","dr Ign. Schatz","Lekarz",""
-"Kowel","dr Henryk Stachurski","Lekarz",""
-"Kowel","dr Aron Szomsztein","Lekarz",""
-"Kowel","Bor. Ajzenberg","Lekarz dentysta","ul. Mickiewicza"
-"Kowel","Ryw. Barzach","Lekarz dentysta",""
-"Kowel","Ch. Frejlachman","Lekarz dentysta",""
-"Kowel","Ch. Jukielson","Lekarz dentysta",""
-"Kowel","J. Kerner","Lekarz dentysta","ul. N. Kolejowa 44"
-"Kowel","Szej. Gołubicka Sztejnberg","Lekarz dentysta",""
-"Kowel","Eug. Al. Gorczyński","Lekarz dentysta","Państw. Szpital Ep. 1"
-"Kowel","Włodz. Gorczyński","Lekarz dentysta","ul. Warszawska"
-"Kowel","L. Kerner","Lekarz dentysta",""
-"Kowel","Ejd. Kucyn","Lekarz dentysta",""
-"Kowel","Zysk. Lewin","Lekarz dentysta",""
-"Kowel","Barz. Majzels","Lekarz dentysta",""
-"Kowel","Herm. Sokołowski","Lekarz dentysta",""
-"Kowel","Sztejnlucht","Lekarz dentysta",""
-"Kowel","Włodz. Grabowski-Jarmołowicz","Lekarz weterynarii","Magistrat Starostwo"
-"Kowel","Wikt. Bernasowski","Adwokat",""
-"Kowel","Wład. Graczyk","Adwokat (obrońca sądowy)",""
-"Kowel","Zygm. Grekk","Adwokat",""
-"Kowel","Ign. Makowski","Adwokat",""
-"Kowel","Stan. Mianowski","Adwokat (obrońca sądowy)",""
-"Kowel","Henr. Szulc","Adwokat",""
-"Kowel","Wład. Szymkiewicz","Adwokat",""
-"Kowel","Fel. Jarosz","Adwokat",""
-"Kowel","Sam. Podhórski","Adwokat",""
-"Kowel","Sław. Randau","Adwokat",""
-"Kowel","Jan Zadarnowski","Adwokat",""
-"Kowel","Adolf Horodecki","Notariusz",""
-"Kowel","Fran. Skorupski","Notariusz",""
-"Kowel","Hip. Zyznowski","Notariusz",""
-"Kowel","I. Jaślikowski","Komornik",""
-"Kowel","W. Ważyński","Komornik",""
-"Kowel","M. Fefer","Agentura","ul. Mickiewicza 16"
-"Kowel","Lachs","Agentura","ul. Krótka 14"
-"Kowel","A. Zyskind","Agentura","ul. Sadowa 3"
-"Kowel","Z. Chicewicz","Akuszerka",""
-"Kowel","M. Cyn","Akuszerka",""
-"Kowel","F. Halperin","Akuszerka",""
-"Kowel","M. Pieczko","Akuszerka",""
-"Kowel","H. Purwin","Akuszerka",""
-"Kowel","Ch. Rajf","Akuszerka",""
-"Kowel","M. Stepan","Akuszerka",""
-"Kowel","R. Baskin","Skład apteczny","ul. Warszawska 132"
-"Kowel","S. Finkelsztejn","Skład apteczny","ul. Warszawska 129"
-"Kowel","G. Friedländer","Skład apteczny","ul. Warszawska 14"
-"Kowel","Sz. Goldberg i Syn","Skład apteczny","ul. Sienkiewicza 23"
-"Kowel","Sz. Goldsztejn","Skład apteczny","ul. Warszawska 46"
-"Kowel","I. Motiuk","Skład apteczny","ul. Warszawska 138"
-"Kowel","I. Wałach","Skład apteczny","ul. Warszawska 30"
-"Kowel","Apteka Tow. „Linas Hacedek”","Apteka",""
-"Kowel","Piotr Ejsmont","Apteka","ul. Kościelna 1"
-"Kowel","N. Fridrichson","Apteka","ul. Warszawska 31"
-"Kowel","Z. Prażmowska","Apteka","ul. Łucka 2"
-"Kowel","T. Parys","Apteka","ul. Sienkiewicza 27"
-"Kowel","Bank Handlowy w Warszawie Sp. Akc. (Oddział)","Bank","ul. Warszawska 32"
-"Kowel","Bank Kupiecki","Bank",""
-"Kowel","Bank Ludowy Sp. z o. o.","Bank","ul. Kościuszki 7"
-"Kowel","Bank Spółdzielczy Sp. z o. o.","Bank",""
-"Kowel","Spółdzielczy Bank Kredytowy Drobnych Kupców","Bank","ul. Warszawska 181"
-"Kowel","Bank Powszechny Drobnych Kupców","Bank","ul. Warszawska 75"
-"Kowel","Bank Spółdzielczy Właścicieli Nieruchomości","Bank","ul. Warszawska 53"
-"Kowel","Ukraiński Spółdzielczy Bank Sp. z n. o.","Bank","ul. Mickiewicza 8"
-"Kowel","Józ. Barwikowski","Betonowe wyroby","ul. Łucka 45"
-"Kowel","M. Alpert","Betonowe wyroby","ul. Brzeska 38"
-"Kowel","B. Linder","Bielizna","ul. Warszawska 177"
-"Kowel","Golcer","Bielizna","ul. 3 Maja 7"
-"Kowel","Sz. Fajnland","Blacharstwo","ul. Kolejowa"
-"Kowel","L. Grinblat","Blacharstwo","ul. Listopadowa 43"
-"Kowel","S. Rubinsztejn","Blacharstwo","ul. Warszawska 134"
-"Kowel","E. Baszejwa","Bławaty","ul. Warszawska 60"
-"Kowel","Dunajewiecki","Bławaty","ul. Warszawska 126"
-"Kowel","Kamień","Bławaty","ul. Warszawska 164"
-"Kowel","S. Kestenbojm","Bławaty","ul. Warszawska 144"
-"Kowel","S. Lewin","Bławaty","ul. Szuhajskiego 4"
-"Kowel","A. i Sz. Melamed","Bławaty","ul. Warszawska 110"
-"Kowel","G. Melamed","Bławaty","ul. Warszawska 235"
-"Kowel","A. Michalski","Bławaty","ul. Warszawska 67"
-"Kowel","S. Perelmuter","Bławaty",""
-"Kowel","N. Polak","Bławaty","ul. Warszawska 138"
-"Kowel","„Pośrednik” (wł. M. Gobec i H. Blücher)","Bławaty",""
-"Kowel","F. Rubinsztejn","Bławaty","ul. Warszawska 181"
-"Kowel","Sz. Szapiro","Bławaty","ul. Warszawska 154"
-"Kowel","G. Sztejnberg","Bławaty","ul. Warszawska 179"
-"Kowel","M. i J. Wydra","Bławaty","ul. Warszawska 157"
-"Kowel","Bronsztejn","Bławaty","Zaułek Soborny 4"
-"Kowel","D. Pińczuk","Bławaty","ul. Warszawska 149"
-"Kowel","Sz. Trejster","Bławaty","ul. Włodzimierska 2"
-"Kowel","Gliniecki i Kowalski","Broń","ul. Kolejowa 53"
-"Kowel","Jan Różański","Broń","ul. Łucka 133"
-"Kowel","Spółka Myśliwska","Broń","ul. Warszawska 32"
-"Kowel","Mich. Fajnsztejn","Brukarskie przedsiębiorstwo","ul. Poniatowskiego 8"
-"Kowel","Bokser","Materiały budowlane","ul. Łucka 23"
-"Kowel","Krasnosielski","Materiały budowlane","ul. Mieszczańska 1"
-"Kowel","J. Pińczuk","Materiały budowlane","ul. Król. Bony 10"
-"Kowel","W. Sznajder","Materiały budowlane","ul. 3 Maja 11"
-"Kowel","Biber","Przedsiębiorstwo budowlane",""
-,i Kac,Łucka,61,
-,Goldsztejn G.,Pomnikowa,14,×
-,Lubczenko,Brzeska,17,
-,Prużański H. i Frojd A.,,,
-,Trzeciak Z.,,,
-,Wasilewski J.,Łucka,,
-,Wasilkowski J.,Król. Bony,,
-Bydło — handel (march. de bestiaux),Chinenzon W.,Monopolowa,45,
-Bydło — handel (march. de bestiaux),Cwik S.,Mieszczańska,70,
-Bydło — handel (march. de bestiaux),Kusznir F. i Grinberg B.,Piaskowa,24,×
-Bydło — handel (march. de bestiaux),Rozenberg Sz.,Rynkowa,8,
-Cegły (briques),Marynowski W. i S-ka,Monopolowa,12,
-Cementowe wyroby — fabr. (fabr. de produits en ciment),Zask A.,,,
-Chemiczne produkty (produits chimiques),Goldsztejn Sz.,Warszawska,,
-Cieśle (charpentiers),Karolczuk St.,Popreczna,6,
-Cieśle (charpentiers),Kupersztejn,Foksal,6,
-Cieśle (charpentiers),Pen A.,Budyszczańska,8,
-Cukier — hurt (sucres en gros),Chasis P.,,,
-Cukier — hurt (sucres en gros),Szowb F.,Warszawska,,
-Cukierki — fabryki (fabr. de bonbons),Gitulis Sz.,Szkolna,17,
-Cukierki — fabryki (fabr. de bonbons),Rubinsztejn S.,Warszawska,84,
-Cukiernicze wyroby (confisserie),Perlis F.,Król. Bony,15,
-Cukiernicze wyroby (confisserie),Rubin W.,Apteczna,4,
-Cukiernicze wyroby (confisserie),Witebski T.,Kolejowa,5,
-Cukiernie (confiseurs),Bauch I.,Warszawska,14,
-Cukiernie (confiseurs),Cukiernia Udziałowa,Łucka,5,
-Cukiernie (confiseurs),Czwanczira B.,Kolejowa,4,
-Cukiernie (confiseurs),Głouszek W.,Kolejowa,63,
-Cukiernie (confiseurs),Głouszek W.,Warszawska,16,
-Cukiernie (confiseurs),Zac K.,Łucka,7,
-Czapnicy (fabr. de casquettes),Cwibel M.,Mieszczańska,1,
-Czapnicy (fabr. de casquettes),Elfantel M.,Kolejowa,5,
-Czapnicy (fabr. de casquettes),Fajnlich Z.,Warszaw.,178,
-Czapnicy (fabr. de casquettes),Geller Hema,Warszawska,44,
-Czapnicy (fabr. de casquettes),Drekier,Warsz.,,
-Czapnicy (fabr. de casquettes),Pal Sz.,Warszawska,188,
-Czapnicy (fabr. de casquettes),Szmojsz M.,Kościelna,4,
-Czapnicy (fabr. de casquettes),Szmojsz S.,Warszawska,180,
-Czapnicy (fabr. de casquettes),Sznajder R.,Warszawski,215,
-Czekolada (chocolat),Zyskind A.,Strzelecka,3,
-Dentystycz. materjały (fournitures pour dentistes),Cymerman M.,3 Maja,8,×
-Drogi — budowa (construction de routes),Prużański i Liwszyc,Kościuszki,6,
-Drób (volailles),„Drób” Sp. z o. o.,Kolejowa,,×
-Drukarnia (imprimeries),Brandes L. i Kiweberg K.,Warszawska,4,
-Drukarnia (imprimeries),Herszbaum G.,Warszawska,23,
-Drukarnia (imprimeries),Handelsztejn J.,Warszawska,19,
-Drzewo (bois),Balter Z.,Warszawska,52,
-Drzewo (bois),Cytryn Z.,Maciejowska,21,
-Drzewo (bois),Furszteler Ch.,Kolejowa,5,×
-Drzewo (bois),Furszteler Ch.,Pomnikowa,21,×
-Drzewo (bois),Lewin I.,Włodzimierska,18,
-Drzewo (bois),Wołk A.,Kościelna,10,×
-Drzewo (bois),Ziembicki K.,Targowa,39,
-Drzewo (bois),Berezowski J.,Fabryczna,4,×
-Drzewo (bois),"„Import”, wł. Marder, Pomeranc i Ska",Kolejowa,91,
-Ekspedycyjne biura (expéditeurs),Frydman — Halpern,Warszawska,81,
-Ekspedycyjne biura (expéditeurs),Sosna I.,Listopadowa,87,
-Ekspedycyjne biura (expéditeurs),„Wygoda”,Łucka,105,
-Ekspedycyjne biura (expéditeurs),Załoga,Nadrzeczna,24,
-Elektrownie (usines d'électricité),Cukierman J. A.,Soborna,7,
-Elektrownie (usines d'électricité),"Elektrownia Miejska, dzierż. Tuller Br.",al. Ks. Poniatowskiego,3,
-Farbiarnie (teinturiers),Jasman,Warszawska,131,
-Farby (couleurs),Bakun E.,Warszawska,205,×
-Farby (couleurs),Cuperfajn U.,Handlowa,15,×
-Farby (couleurs),Erlich I.,Warszawska,158,×
-Farby (couleurs),Langier D.,Łucka,160,
-Farby (couleurs),Sojbel J.,Warszawska,170,×
-Farby (couleurs),Stok Sz.,Warszawska,130,
-Felczerzy (barbiers - chirurgiens),Baranowski J.,,,
-Felczerzy (barbiers - chirurgiens),Jankowski St.,,,
-Fotograficzne zakłady (photographes),Burak B. i Sn.,Warszawska,30,
-Fotograficzne zakłady (photographes),Epsztejn A.,Warszawska,61,
-Fotograficzne zakłady (photographes),Epsztejn I.,Warszawska,98,
-Fotograficzne zakłady (photographes),Geler Z.,Warszawska,137,
-Fotograficzne zakłady (photographes),Nusia E.,Warszawska,34,
-Fryzjerzy (coiffeurs),Chodór M.,,,
-Fryzjerzy (coiffeurs),Fajner L.,Kolej.,79,
-Fryzjerzy (coiffeurs),Fidelman D.,Warszawska,83,
-Fryzjerzy (coiffeurs),Fiszek Sz.,Kolejowa,1,
-Fryzjerzy (coiffeurs),Gantfus A.,Brzeska,4,
-Fryzjerzy (coiffeurs),Gantfus Ar.,Warszawska,37,
-Fryzjerzy (coiffeurs),Gofman A.,Warszawska,157,
-Fryzjerzy (coiffeurs),Golcwajg Sz.,Warszawska,69,
-Fryzjerzy (coiffeurs),Gruszko,Sienkiewicza,22,
-Fryzjerzy (coiffeurs),Klejn M.,Sienkiewicza,21,
-Fryzjerzy (coiffeurs),Lerman,Brzeska,9,
-Fryzjerzy (coiffeurs),Piwkowski,Wierzbowa,5,
-Fryzjerzy (coiffeurs),Struter,Kolej.,85,
-Fryzjerzy (coiffeurs),Sztejn Ch.,Kolejowa,33,
-Fryzjerzy (coiffeurs),Szudziński Al.,Łucka,2,
-Fryzjerzy (coiffeurs),Wajngarten H.,Sienkiewicza,28,
-Fryzjerzy (coiffeurs),Winer D.,Warszawska,26,
-Fryzjerzy (coiffeurs),Fajfer G.,Warszawska,59,
-Fryzjerzy (coiffeurs),Lalfer i Kerzner,Kolejowa,91,
-Fryzjerzy (coiffeurs),Tymofzewicz,Łucka,9,
-Futra (fourrures),Fridman R.,Warszaw.,84,
-Futra (fourrures),Kapelusznik J. i H.,,,
-Warsaw	Kusznir M.		Warszawska 96				
-Warsaw	Kusznir M.		Warszawska 186				
-Warsaw	xAjzenberg M.	Galanterja (haberdashery)	Warszawska 135				
-Warsaw	xBass J.	Galanterja (haberdashery)					
-Warsaw	Guz Ch.	Galanterja (haberdashery)	Warszawska 160				
-Warsaw	Berelzon G.	Galanterja (haberdashery)	Warszawska 58				
-Warsaw	Blajgus F.	Galanterja (haberdashery)	Warszawska 6				
-Warsaw	Bojm G.	Galanterja (haberdashery)	Warszawska 126				
-Warsaw	Brener E.	Galanterja (haberdashery)	Warszawska 30				
-Warsaw	xChoc A.	Galanterja (haberdashery)	Warszawska 72				
-Warsaw	xDjanowski J.	Galanterja (haberdashery)	Warszawska 60				
-Warsaw	xEjczys G.	Galanterja (haberdashery)	Warszawska 134				
-Warsaw	xEjczys M.	Galanterja (haberdashery)	Warszawska 186				
-Warsaw	xEjdelsztejn J.	Galanterja (haberdashery)	Włodzimierska 1				
-Warsaw	xEpsztejn M.	Galanterja (haberdashery)	Warszawska 52				
-Warsaw	xErlich Sz.	Galanterja (haberdashery)	Warszawska 16				
-Warsaw	xFrydman	Galanterja (haberdashery)	Warszawska 50				
-Warsaw	xJeruchimowicz B.	Galanterja (haberdashery)	Warszawska 45				
-Warsaw	Jeruchimowicz M.	Galanterja (haberdashery)	Warszawska 49				
-Warsaw	xKac B.	Galanterja (haberdashery)	Warszawska 82				
-Warsaw	Kac M.	Galanterja (haberdashery)	Warszawska 58				
-Warsaw	Kagan B.	Galanterja (haberdashery)	Warszawska 14a				
-Warsaw	xKagan J.	Galanterja (haberdashery)	Kolejowa 11				
-Warsaw	xKierżner B.	Galanterja (haberdashery)	Sienkiewicza 39				
-Warsaw	Koguś	Galanterja (haberdashery)	Sienkiewicza 30				
-Warsaw	Kaufman A.	Galanterja (haberdashery)	Warszawska 48				
-Warsaw	Kuprasz M.	Galanterja (haberdashery)	Rynek				
-Warsaw	Lejbenberg M.	Galanterja (haberdashery)	Warszawska 146				
-Warsaw	xLew I. W.	Galanterja (haberdashery)	Warszawska 209				
-Warsaw	Lewin I.	Galanterja (haberdashery)	Warszawska 72				
-Warsaw	Marder S.	Galanterja (haberdashery)	Handlowa 4				
-Warsaw	Poliszuk C.	Galanterja (haberdashery)	Warszawska 2				
-Warsaw	Poliszuk M.	Galanterja (haberdashery)	Kolejowa 2				
-Warsaw	xSzejnbaum P.	Galanterja (haberdashery)	Warszawska 65				
-Warsaw	xSzojchet J.	Galanterja (haberdashery)	Kościelna 7				
-Warsaw	Szulim B.	Galanterja (haberdashery)	Warszawska 189				
-Warsaw	xSpiwak J.	Galanterja (haberdashery)	Magistracka				
-Warsaw	xWajnsztejn N.	Galanterja (haberdashery)	Sienkiewicza 13				
-Warsaw	xWerba Sz.	Galanterja (haberdashery)	Warszawska 2				
-Warsaw	Wolf L.	Galanterja (haberdashery)	Warszawska 181				
-Warsaw	xWusiczer M.	Galanterja (haberdashery)	Warszawska 330				
-Warsaw	Zafran P.	Galanterja (haberdashery)	Warszawska 44				
-Warsaw	Zafran F.	Galanterja (haberdashery)	Warszawska 100				
-Warsaw	xZbinowski H.	Galanterja (haberdashery)	Warszawska 29				
-Warsaw	xZiskiad Ch.	Galanterja (haberdashery)	Warszawska 134				
-Warsaw	Ziskis M.	Galanterja (haberdashery)	Warszawska 62				
-Warsaw	Bregman	Galanterja (haberdashery)	Warszawska 86				
-Warsaw	xGhari Ch.	Galanterja (haberdashery)	Wierzbowa 3				
-Warsaw	Glik D.	Galanterja (haberdashery)	Warszawska 33				
-Warsaw	Ingber	Galanterja (haberdashery)	Kościuszki 9				
-Warsaw	Chusid R.	Garbarnie (tanneries)	Brzeska 55				
-Warsaw	Kaplan, Rubia i Modejowicz	Garbarnie (tanneries)					
-Warsaw	Szal Sz.	Garbarnie (tanneries)	Maciejowska 102				
-Warsaw	xWolman Bcia	Garbarnie (tanneries)	Monopolowa nr. 71				
-Warsaw	Kosmalki L.	Geometrzy (surveyors)					
-Warsaw	Kownacki J.	Geometrzy (surveyors)					
-Warsaw	Skulski L.	Geometrzy (surveyors)					
-Warsaw	Sienkiewicz J.	Geometrzy (surveyors)					
-Warsaw	Żuława L. K.	Geometrzy (surveyors)					
-Warsaw	Melamed J.	Gilzy — fabryki (cigarette-tube factories)	Brzeska 145				
-Warsaw	Wajsman M.	Gilzy — fabryki (cigarette-tube factories)	Warszawska 76				
-Warsaw	Mojkler D.	Gremplarnie (carding mills)	Brzeska 133				
-Warsaw	Cytryn	Herbaciarnie (tea rooms)	Kolejowa 21				
-Warsaw	Kaufman A.	Herbaciarnie (tea rooms)	Warszawska 80				
-Warsaw	Kontrakt C.	Herbaciarnie (tea rooms)	Mickiewicza 23				
-Warsaw	Rejder S.	Herbaciarnie (tea rooms)	Piłsudskiego 12				
-Warsaw	Szetbojm S.	Herbaciarnie (tea rooms)	Brzeska 1				
-Warsaw	Szylter A.	Herbaciarnie (tea rooms)	Kolejowa 86				
-Warsaw	Hotel „Bristol”	Hotele (hotels)	Szojchet E., Warszawska 28				
-Warsaw	Hotel „Metropol”	Hotele (hotels)	Weinsztejn Ch., Kolejowa 77				
-Warsaw	Hotel „Palace”	Hotele (hotels)	Z. Baraniuk, Warszawska 16				
-Warsaw	Hotel „Polonja”	Hotele (hotels)	Berska P., Łucka 135				
-Warsaw	Hotel „Versal”	Hotele (hotels)	Glejzer I., Mickiewicza 4				
-Warsaw	Hotel „Warszawski”	Hotele (hotels)	Gulisz N., Kolejowa 84				
-Warsaw	Hotel „Pasaż”	Hotele (hotels)	Fuks I., Kolejowa 83				
-Warsaw	Sztern I. N.	Introligatorzy (bookbinders)	Królowej Bony 7				
-Warsaw	Wydra F.	Introligatorzy (bookbinders)	Kolejowa 8				
-Warsaw	Baranik — Zus	Jadłodajnie (restaurants)	Warszawska 16				
-Warsaw	„Wołynianka”	Jadłodajnie (restaurants)	Polskie Tow. Dobrocz. Chrześć., Sienkiewicza 9				
-Warsaw	xDichter J.	Jaja (eggs)	Brzeska 33				
-Warsaw	Rejder Ch.	Jaja (eggs)	Brzeska 40				
-Warsaw	xSegal F.	Jaja (eggs)	Handlowa 27				
-Warsaw	Goldring L. i Segal F.	Jaja (eggs)	Włodzimierska 5				
-Warsaw	xBass W.	Jubilerzy (jewellers)	Warszawska 16				
-Warsaw	xGygielman P.	Jubilerzy (jewellers)	Warszawska 18				
-Warsaw	Feldman B.	Jubilerzy (jewellers)	Warszawska 111				
-Warsaw	xFradelis A.	Jubilerzy (jewellers)	Warszawska 42				
-Warsaw	Pasławaski A.	Jubilerzy (jewellers)	Warszawska 42				
-Warsaw	Żelazniak J.	Maszyny / wyroby metalowe (uncertain OCR category)	Hale miejskie				
-Warsaw	Pajnsztejn M.	Kamieniołomy (stone quarries)	Targowa 8				
-Warsaw	Majsels S.	Kapelusze damskie (women's hats)	Warszawska 56				
-Warsaw	Swarcblat R.	Kapelusze damskie (women's hats)	Warszawska 80				
-Warsaw	Wolk E.	Kapelusze damskie (women's hats)	Warszawska 46				
-Warsaw	Kraft D.	Kapelusze damskie (women's hats)	Warszawska 59				
-Warsaw	xMiejska Kasa Oszczędności	Kasy oszczędnościowe (savings bank)					
-Warsaw	xAwruch B.	Kawiarniе (cafés)	Kolejowa 87				
-Warsaw	Basiuk St.	Kawiarniе (cafés)	Sienkiewicza 13				
-Warsaw	xBer G.	Kawiarniе (cafés)	Kolejowa 74				
-Warsaw	Dobosiewicz Jul.	Kawiarniе (cafés)	Warszawska				
-Warsaw	Gibel Ch.	Kawiarniе (cafés)	Kolejowa 3				
-Warsaw	Hrzyb St.	Kawiarniе (cafés)	Kolejowa 83				
-Warsaw	xKiper M.	Kawiarniе (cafés)	Warszawska 42				
-Warsaw	Puchalska E.	Kawiarniе (cafés)	Kolejowa 82				
-Warsaw	Zigmundt Ch.	Kawiarniе (cafés)	Kolejowa 83				
-"City","Name / Entity","Role / Specialty","Address"
-"Warsaw","Fajnler","", "Krótka 16"
-"Warsaw","Rysak M.","","Sienkiewicza 13"
-"Warsaw","Fuks J. i Ska","Kąpielowe zakłady (baths)","Kolejowa 17"
-"Warsaw","„Express”","Kinematografy (cinemas)","Piłsudskiego 10"
-"Warsaw","„Nowości”","Kinematografy (cinemas)","Łucka 7"
-"Warsaw","Kagan","Kiszki świerszece (boyauderies)","Tornikowska 1"
-"Warsaw","Bucher Ju.","Kolonjalne artykuły (colonial goods)","Kolejowa 21"
-"Warsaw","Figal","Kolonjalne artykuły (colonial goods)","Kolejowa 2"
-"Warsaw","Fisz L.","Kolonjalne artykuły (colonial goods)","Kolejowa 2"
-"Warsaw","Fisz L.","Kolonjalne artykuły (colonial goods)","Warszawska 100"
-"Warsaw","xKlejner S.","Kolonjalne artykuły (colonial goods)","Warszawska 48"
-"Warsaw","Kopyt N.","Kolonjalne artykuły (colonial goods)","Sienkiewicza"
-"Warsaw","Langier M. i Syn","Kolonjalne artykuły (colonial goods)","Łucka 143"
-"Warsaw","Machałuk G.","Kolonjalne artykuły (colonial goods)","Jaworowa 29"
-"Warsaw","Janczor J.","Kolonjalne artykuły (colonial goods)","Warszawska 47"
-"Warsaw","Nigel Sz.","Kołodzieje (charrons)","Lu. Warszawska 92"
-"Warsaw","Diksztejn M. i Krenier Sz.","Konie — handel (marchands de chevaux)","Bezinonna 3"
-"Warsaw","xSpożywczo-Oszczędnościowe Spółdz. Stow. Inwalidów z o. o.","Kooperatywy (cooperatives)",""
-"Warsaw","xSpółdzielnia Osadników Wojskowych w Warszawie z o. o., oddz.","Kooperatywy (cooperatives)",""
-"Warsaw","xUkraińska Kooperatywa, Sp. z o. o.","Kooperatywy (cooperatives)",""
-"Warsaw","xPress Ch.","Koszykarskie wyroby (vanniers)","Warszawska 65"
-"Warsaw","xPress J.","Koszykarskie wyroby (vanniers)","Warszawska 86"
-"Warsaw","Boker S.","Kowale (forgerons)","Kolejowa 25"
-"Warsaw","Chait S.","Kowale (forgerons)","Listopadowa 35"
-"Warsaw","Chmiel A.","Kowale (forgerons)","Jasia 7"
-"Warsaw","Szpiner M.","Kowale (forgerons)","Warszawska 42"
-"Warsaw","Zieliński R.","Kowale (forgerons)","Sienkiewicza 29"
-"Warsaw","Kusznir","Kożuchy — pracownie (fabric. de manteaux en peaux de moutons)","Maciejowska 4"
-"Warsaw","Arbstman E.","Krawcy (tailleurs)","Warszawska 64"
-"Warsaw","Broner M.","Krawcy (tailleurs)","Warszawska 213"
-"Warsaw","Broner Sz. i Rute J.","Krawcy (tailleurs)","Krótka 34a"
-"Warsaw","Burman Z.","Krawcy (tailleurs)","Warszawska 51"
-"Warsaw","Chait J.","Krawcy (tailleurs)","Warszawska 72"
-"Warsaw","Chazen R.","Krawcy (tailleurs)","Warszawska 42"
-"Warsaw","Diner G.","Krawcy (tailleurs)","Zakóścielna 4"
-"Warsaw","Drukier U.","Krawcy (tailleurs)","Krótka 34"
-"Warsaw","Ejl Ch.","Krawcy (tailleurs)","Krótka 72"
-"Warsaw","Erlich D. Z.","Krawcy (tailleurs)","Warszawska 106"
-"Warsaw","Erlich H.","Krawcy (tailleurs)","Kościuszki 4"
-"Warsaw","Fajer I.","Krawcy (tailleurs)","Łucka 3"
-"Warsaw","Fiszer Ch.","Krawcy (tailleurs)","Warszawska 29"
-"Warsaw","Foker M.","Krawcy (tailleurs)",""
-"Warsaw","Frydman Sz.","Krawcy (tailleurs)","Mickiewicza 1"
-"Warsaw","Goldborg Sz.","Krawcy (tailleurs)","Sienkiewicza"
-"Warsaw","Goldhamer Sz.","Krawcy (tailleurs)","Kolejowa 10"
-"Warsaw","Gorodner G.","Krawcy (tailleurs)","Warszawska 83"
-"Warsaw","Jankowski J.","Krawcy (tailleurs)","Kolejowa 13"
-"Warsaw","xKac A.","Krawcy (tailleurs)","Warszawska 58"
-"Warsaw","Kacal M.","Krawcy (tailleurs)","Warszawska 61"
-"Warsaw","Kagan B.","Krawcy (tailleurs)","3 Maja 4"
-"Warsaw","Kan","Krawcy (tailleurs)","Warszawska"
-"Warsaw","Kartofel L.","Krawcy (tailleurs)","Warszawska 131"
-"Warsaw","Kessel J.","Krawcy (tailleurs)","Warszawska 61"
-"Warsaw","Koś G.","Krawcy (tailleurs)","Warszawska 120"
-"Warsaw","Kotlar","Krawcy (tailleurs)","Mieszczanska 8"
-"Warsaw","Krel B.","Krawcy (tailleurs)","Sienkiewicza 41"
-"Warsaw","Kuczer J.","Krawcy (tailleurs)","Jurydyka 2"
-"Warsaw","Kwasznik M.","Krawcy (tailleurs)","Mickiewicza 3"
-"Warsaw","Loebzer M.","Krawcy (tailleurs)","Warszawska 155"
-"Warsaw","Melamed M.","Krawcy (tailleurs)","Brzeska 122"
-"Warsaw","Pen W.","Krawcy (tailleurs)","Warszawska 44"
-"Warsaw","Piotrowski N.","Krawcy (tailleurs)","Mickiewicza 8"
-"Warsaw","Rochman J.","Krawcy (tailleurs)","Kolejowa 50"
-"Warsaw","Rojter B.","Krawcy (tailleurs)","Warszawska 50"
-"Warsaw","Rojter M. E.","Krawcy (tailleurs)","Ogrodowa 26"
-"Warsaw","Rozenfeld L.","Krawcy (tailleurs)","Warszawska 139"
-"Warsaw","Sas Sz.","Krawcy (tailleurs)","Warszawska 21"
-"Warsaw","Szamus M.","Krawcy (tailleurs)","Warszawska 60"
-"Warsaw","Szamus Sz.","Krawcy (tailleurs)","Warszawska 5"
-"Warsaw","Sznajder","Krawcy (tailleurs)","Warszawska 181"
-"Warsaw","Wajner","Krawcy (tailleurs)","Sienkiewicza 25"
-"Warsaw","Wedrestwajder G.","Krawcy (tailleurs)","Warszawska 181"
-"Warsaw","Wejberszpil A.","Krawcy (tailleurs)","Kolejowa 13"
-"Warsaw","Wydrya M. L.","Krawcy (tailleurs)","Warszawska 55"
-"Warsaw","Zychkolc M.","Krawcy (tailleurs)","Warszawska 127"
-"Warsaw","Zylberberg M.","Krawcy (tailleurs)","Warszawska 57"
-"Warsaw","Nudelsztecher M.","Krawiectwo damskie (tailleurs pour dames et couturières)","Warszawska 33"
-"Warsaw","Perelmuter L.","Krawiectwo damskie (tailleurs pour dames et couturières)","Warszawska 48"
-"Warsaw","Tojba B. R.","Krawiectwo damskie (tailleurs pour dames et couturières)","Rynek"
-"Warsaw","Bachowicz M.","Księgarnie (librairies)","Kolejowa 88"
-"Warsaw","Bass S.","Księgarnie (librairies)","Warszawska 168"
-"Warsaw","Księgarnia Polska","Księgarnie (librairies)","Warszawska 63"
-"Warsaw","„Kultura”","Księgarnie (librairies)","Kolejowa 2"
-"Warsaw","Księgarnia","Księgarnie (librairies)","Warszawska"
-"Warsaw","My?","Księgarnie (librairies)","Łucka 7"
-"Warsaw","xMęcznik L.","Księgarnie (librairies)","Warszawska 42"
-"Warsaw","Plat M. i Szwarcblat M.","Księgarnie (librairies)","Kolejowa 2"
-"Warsaw","Polini J.","Księgarnie (librairies)","Łucka 161"
-"Warsaw","Raczyński i Ska","Księgarnie (librairies)",""
-"Warsaw","xRojzen Ch.","Księgarnie (librairies)","Łucka 71"
-"Warsaw","x„Światło”","Księgarnie (librairies)","Kolejowa 88"
-"Warsaw","Niedola M.","Księgarnie (librairies)","Łucka 3"
-"Warsaw","Plot B.","Księgarnie (librairies)","Warszawska 35"
-"Warsaw","xBezzubow A.","Kuchenne naczynia (art. de cuisine)","Warszawska 157"
-"Warsaw","xCymring H.","Kuchenne naczynia (art. de cuisine)","Warszawska 128"
-"Warsaw","Cynamon S.","Kuchenne naczynia (art. de cuisine)","Warszawska 182"
-"Warsaw","Gelpern L.","Kuchenne naczynia (art. de cuisine)","Warszawska 164"
-"Warsaw","Melamed Ch.","Kuchenne naczynia (art. de cuisine)","Warszawska 172"
-"Warsaw","Swiniuch G.","Kuchenne naczynia (art. de cuisine)","Warszawska 1"
-"Warsaw","xSutorn H.","Kuchenne naczynia (art. de cuisine)","Warszawska 175"
-"Warsaw","Tenebojm R.","Kuchenne naczynia (art. de cuisine)","Warszawska 57"
-"Warsaw","xWajnsztejn P.","Kuchenne naczynia (art. de cuisine)","Sienkiewicza 13"
-"Warsaw","Przyjaciel Cz.","Kwiaty (fleurs)","Łucka 3"
-"Warsaw","xHerszkowicz E. i Kosbos L.","Lasy — eksploatacja (exploitations forestières)","Kościuszki 12"
-"City","Name / Entity","Role / Specialty","Address"
-"Białystok","Arkadjer","Manufaktura (tissus)","ulica Warszawska nr. 116"
-"Białystok","Awerbuch M.","Manufaktura (tissus)","Warszawska 116"
-"Białystok","Bar N.","Manufaktura (tissus)","Warszawska 185"
-"Białystok","Bass K.","Manufaktura (tissus)","Warszawska 58"
-"Białystok","Bromberg","Manufaktura (tissus)","Warszawska 132"
-"Białystok","Cal J.","Manufaktura (tissus)","Warszawska 100"
-"Białystok","Efrus E.","Manufaktura (tissus)","Łucka 45"
-"Białystok","Ejnoch I.","Manufaktura (tissus)","Warszawska 118"
-"Białystok","Fryszberg M.","Manufaktura (tissus)","Warszawska 134"
-"Białystok","Gendler M.","Manufaktura (tissus)","Warszawska 94"
-"Białystok","Giejer S.","Manufaktura (tissus)",""
-"Białystok","Gitelis A.","Manufaktura (tissus)","Warszawska 122"
-"Białystok","Gitelis S.","Manufaktura (tissus)","Warszawska 122"
-"Białystok","Godniczer Sz.","Manufaktura (tissus)","Warszawska 154"
-"Białystok","Goleman J.","Manufaktura (tissus)","Warszawska 98"
-"Białystok","Goldberg I.","Manufaktura (tissus)","Warszawska 22"
-"Białystok","Gorbaty J.","Manufaktura (tissus)","Warszawska 80"
-"Białystok","Grajwer S.","Manufaktura (tissus)","Warszawska 191"
-"Białystok","Grojser N.","Manufaktura (tissus)","Warszawska 94"
-"Białystok","Kasztelański M. I.","Manufaktura (tissus)","Warszawska 116"
-"Białystok","Kestenbojm S.","Manufaktura (tissus)","Warszawska 144"
-"Białystok","Lewin K.","Manufaktura (tissus)","Warszawska 166"
-"Białystok","Markiter L.","Manufaktura (tissus)","Warszawska 30"
-"Białystok","Niemirowski R.","Manufaktura (tissus)","Warszawska 88"
-"Białystok","Olszecki N.","Manufaktura (tissus)","Włodzimierska 2"
-"Białystok","Opiliner","Manufaktura (tissus)","Warszawska 28"
-"Białystok","Rojt B.","Manufaktura (tissus)","Warszawska 64"
-"Białystok","Rojtenberg A.","Manufaktura (tissus)","Warszawska 104"
-"Białystok","Rojter L.","Manufaktura (tissus)","Warszawska 175"
-"Białystok","Szczerbaty W.","Manufaktura (tissus)","Warszawska 124"
-"Białystok","Szenkier L.","Manufaktura (tissus)","Warszawska 10"
-"Białystok","Zawodnik D.","Manufaktura (tissus)","Warszawska 66"
-"Białystok","Ziskind J.","Manufaktura (tissus)","Warszawska 62"
-"Białystok","Drukier N.","Manufaktura (tissus)","Warszawska 142"
-"Białystok","Herman Ch.","Manufaktura (tissus)","Warszawska 192"
-"Białystok","Hopen","Manufaktura (tissus)","Strażacka"
-"Białystok","Kupiec F.","Manufaktura (tissus)","Sienkiewicza 13"
-"Białystok","Kużniec","Manufaktura (tissus)","Kolejowa 33"
-"Białystok","Lejbenbarg J.","Manufaktura (tissus)","Włodzimierska 2"
-"Białystok","Sojbel R.","Manufaktura (tissus)","Wierzbowa 5"
-"Białystok","Szapiro Ch.","Manufaktura (tissus)","Warszawska 82"
-"Białystok","Werbla Sz.","Manufaktura (tissus)","Warszawska 33"
-"Białystok","Olszowiec K.","Maszyny (machines)","Łucka 8"
-"Białystok","Singer Sewing Machine Company, oddz.","Maszyny do szycia (machines à coudre)","Warszawska"
-"Białystok","Sztejnbach O.","Maszyny do szycia (machines à coudre)","Warszawska 60"
-"Białystok","""Pomoc""","Maszyny rolnicze (machines agricoles)","Łucka 8"
-"Białystok","""Posiew"", wł. Jonkisz A.","Maszyny rolnicze (machines agricoles)","Listopadowa 3"
-"Białystok","Rytwiński W.","Maszyny rolnicze (machines agricoles)","Łucka 46"
-"Białystok","Cukierman Ch.","Mąka (farines)","Rynek"
-"Białystok","Cukierman I.","Mąka (farines)","Handlowa nr. 11"
-"Białystok","Frankfowicż M.","Meble (meubles)","Warszawska 82"
-"Białystok","Tenenbaum R.","Meble (meubles)","Warszawska 52"
-"Białystok","Szwarcblat","Meble (meubles)","Warszawska 93"
-"Białystok","Herbe M.","Mechaniczne warsztaty (mécaniciens)","Łucka 117"
-"Białystok","Zilbersztejn M.","Mechaniczne warsztaty (mécaniciens)","Łucka 50"
-"Białystok","Flauenbaum J.","Metalowe wyroby (articles métalliques)","Łucka 50"
-"Białystok","Segal Ruw.","Mierzarskie zakłady (laiteries)","Apteczna 36"
-"Białystok","Armarnik B. i Ska (walc)","Młyny (moulins)","Łucka 49"
-"Białystok","Bronsztejn Z.","Młyny (moulins)","Kołodnicka"
-"Białystok","Epelbaum (mot)","Młyny (moulins)","Włodzimierska 149"
-"Białystok","Hejder (par)","Młyny (moulins)",""
-"Białystok","Pierwsza Spółka Młynarska, wł. Cukierman I. i Ska","Młyny (moulins)","Warszawska"
-"Białystok","Stolar Sz. i Melnicer Sz. (par. i gaz)","Młyny (moulins)","Łucka 20"
-"Białystok","Wejnsztejn A. (mot)","Młyny (moulins)",""
-"Białystok","Zokner S.","Młyny (moulins)","Fabryczna 23"
-"Białystok","Friedman S., Gamm N. B.","Młyny (moulins)",""
-"Białystok","Zajdel","Mosty — budowa (constructeurs de ponts)","Warszawska 91"
-"Białystok","Radwan J. i Ogiński B.","Mosty — budowa (constructeurs de ponts)","Monopolowa 12"
-"Białystok","Sztejnbach O. i Ska","Muzyczne instrumenty (instruments de musique)","Łucka 117"
-"Białystok","Lachs Ch.","Mydlarnie (savonneries)","Łucka 77"
-"Białystok","Cuperfajn L.","Mydło (march. de savons)","Włodzimierska 147"
-"Białystok","Ćwik R.","Nafta (pétrole)","Łucka 68"
-"Białystok","Melamed A.","Nafta (pétrole)","Brzeska 143"
-"Białystok","Melamod St","Nafta (pétrole)","Bazarna 8"
-"Białystok","""Smary"", wł. Bebezuk L. i Ska","Nafta (pétrole)","Warszawska 135"
-"Białystok","""Standard-Nobel"", S. A., oddz.","Nafta (pétrole)","Kołodnicka 7"
-"Białystok","Efrus E.","Nafta (pétrole)","Łucka 45"
-"Białystok","""Polmin""","Nafta (pétrole)","Brzeska 153"
-"Białystok","Ejsmont Piotr","Nasiona (graines)","Kościelna 1"
-"Białystok","Motluk I.","Nasiona (graines)","Warszawska 148"
-"Maciejów","Ciechoński W.","Nierogacizna-handel (marchands de porcs)","Maciejów"
-"Białystok","Kacałap J.","Obrazy (imagerie)","Warszawska 184"
-"Białystok","Blumsztejn A.","Obuwie (chaussures)","Warszawska 199"
-"Białystok","Ejbuszyc Ch.","Obuwie (chaussures)","Warszawska 80"
-"Białystok","Erlich Sz.","Obuwie (chaussures)","Warszawska 67"
-"Białystok","Granicz Sz.","Obuwie (chaussures)","Warszawska 44"
-"Białystok","Gurwic I.","Obuwie (chaussures)","Warszawska 112"
-"Białystok","Guz Ch.","Obuwie (chaussures)","Warszawska 134"
-"Białystok","Ingber i Werner","Obuwie (chaussures)","Włodzimierska 1"
-"Białystok","Pugacz H.","Obuwie (chaussures)","Warszawska 98"
-"Białystok","Szechter A.","Obuwie (chaussures)","Warszawska 83"
-"Białystok","Wajner B.","Obuwie (chaussures)","Warszawska 132"
-"Białystok","Zommer M.","Obuwie (chaussures)","Warszawska 92"
-Ocet — rozlewnie (embouteillage de vinaigres)
-
-Hojzen M., Pomnikowa 33
-
-Okrętowe biura (agences maritimes)
-
-×Chargeurs Réunis, T. A., Kolejowa 58
-
-Cosulich Line, Kolejowa 35
-
-Królewsko Holenderski Lloyd, Kolejowa 88
-
-Red Star Line, Kolejowa 91
-
-Skandynawsko-Amerykańska Linja, Kolejowa 43
-
-×„The Royal Mail Steam Packet Company” w Londynie, oddz., Nowokolejowa 3
-
-White Star Line, Kolejowa 91
-
-Bałtycko-Amerykańska Linja, Kolejowa 65
-
-Olejarnie (huileries)
-
-×Cuperfajn S., Łucka 79
-
-Guz B., Łucka 73
-
-Jurczenkowicz H., Włodzimierska 103
-
-Lorber I., Łucka 77
-
-Łapidus A., Łucka 91
-
-Owoce (fruits)
-
-×Finkielsztejn J., Warszawska 6
-
-×Mendel M., Warszawska 135
-
-Pakuły (étoupes)
-
-Borensztein J. D., Warszawska 27
-
-Papierowe wyroby — fabryki (fabr. de cartonnages)
-
-Halperin A., Zakościelna 4
-
-Pasza (fourrages)
-
-Rajz Sz.
-
-Piekarnie (boulangers)
-
-Biber B., Kościelna 1
-
-Blit J., Brzeska 31
-
-Blit M., Łucka 60
-
-Blit Z., Warszawska 147
-
-Cukrys S., Mieszczańska 69
-
-Czerna M., Włodzimierska 5
-
-Erlich S., Krótka 40
-
-Erlich T., Warszawska 99
-
-Fiszbejn J., Wojskowa 20
-
-Flomenbaum B., Krzywa 7
-
-Gibel B., Warszawska 16
-
-Gibel Ch., Listopadowa 69
-
-Głouszek W., Blińska 39
-
-Hernich L., Warszawska 188
-
-Langier B., Cyrkowa 18
-
-Merel C., Mickiewicza 47
-
-Minces N., Żydowska 28
-
-Rojzen Ch. A., Żydowska 13
-
-Szala J., Sienkiewicza 20
-
-×Spyra F., Tuszowskiego
-
-Sznajder M., Listopadowa 17
-
-Zylbersztejn A., Listopadowa 93
-
-Piśmienne materjały (fournitures de bureaux)
-
-×Aszkienazy Ch., Kolejowa 63
-
-×Aszkienazy S., Warszawska 114
-
-Bar C., Warszawska 84
-
-Kuzniec L., Warszawska 45
-
-×Messer D., Warszawska 112
-
-Piwiarnie (brasseries-débit)
-
-Bronsztejn D., Krótka 6
-
-Chajton S., Budyszczań. 3
-
-Klejner Sz., Warszawska 45
-
-Linzen D., Warszawska 165
-
-Linzen P., Włodzimierska 6
-
-Rubinsztejn J., Sienkiewicza 30
-
-Rusiłowicz A., Monopolowa 2
-
-Rytwiński W., Łucka 123
-
-Sochaczewski J., Kolejowa 44
-
-×Sojbel I. M., Dzika 16
-
-Szamuś S., Brzeska 7
-
-Szejntop S., Kolejowa 2
-
-×Szuster D., Sienkiewicza 38
-
-×Tojbicz I., Brzeska 39
-
-Zysblat T., Kolejowa 88
-
-Auchman E., Kolejowa 56
-
-Balicka M., Kolejowa 75
-
-Fijałkowski, Warszawska 16
-
-Kaweberg, Warszawska 170
-
-Matuszyński, Sienkiewicza 29
-
-Rajt, Brzeska 9
-
-Soska E., 3 Maja 4
-
-Piwo (bière)
-
-×Pomeranc, Listopadowa 91
-
-×Tojbicz A., Brzeska 39
-
-Haberman S., Warszawska 182
-
-Hurtowy Skład Piwa — Kagan M., Fabryczna 6
-
-Podkłady kolejowe (traverses pour chemins de fer)
-
-×„Import”, Tow. Przemysłowo-Handlowe, Kolejowa 91
-
-Pokoje umeblowane (chambres meublées)
-
-Fefer K., Łucka 134
-
-Messer D., Kolejowa 41
-
-Nejman Sz., Warszawska 1
-
-Pończochy — fabryki (fabr. de bas)
-
-Awarbuch Ch., Warszawska 89
-
-Powroźnicy (cordiers)
-
-Mełamed S., Rynek 8
-
-Pralnie (blanchisseries de fin)
-
-Bar Ch., Warszawska 92
-
-Rufe A., Warszawska 3
-
-Prośb i tłumaczeń biura (pétitions et traductions)
-
-Fuks L., Warszawska 38
-
-×Lerer N., Warszawska 9
-
-×Werba L., Łucka 22
-
-Werba M., Warszawska 28
-
-Pszczelnictwo (apiculture)
-
-×Pasieka, Sp. z o. o., Mickiewicza 3
-
-Restauracje (restaurants)
-
-×Bielawa J., Sienkiewicza 29
-
-Kagan M., Warszawska 1
-
-×Kazimierska J., Kolejowa 2
-
-Mazurkiewicz J., [odcięte / truncated]
-"City","Name / Entity","Role / Specialty","Address"
-"Kowel","Resursa Obywatelska","Różne / Usługi","Łucka 179"
-"Kowel","Szyper I.","Różne / Usługi","Warszawska 42"
-"Kowel","Wajsblat I. i Erlich I.","Różne / Usługi","Włodzimierska"
-"Kowel","Syndykat Rolniczy w Hrubieszowie, S. A., oddz.","Rolnicze art. (produits agricoles)",""
-"Kowel","Lerner B.","Rowery (bicyclettes)","Warszawska 3"
-"Kowel","Messer P.","Rowery (bicyclettes)","Warszawska 43"
-"Kowel","Sperowicz E.","Rowery - reparacja (réparations de bicyclettes)","Mickiewicza 36"
-"Kowel","Sztejnsznajd","Rowery - reparacja (réparations de bicyclettes)","Warszawska 5"
-"Kowel","Gopen F.","Różne towary (articles divers)","Lubliniecka 8"
-"Kowel","Kowalska N.","Różne towary (articles divers)",""
-"Kowel","Mejler Ch.","Różne towary (articles divers)","Warszawska 143"
-"Kowel","Szwarc Ch.","Rybołówstwo (pêche)","Mickiewicza 21"
-"Kowel","Werner N.","Rybołówstwo (pêche)","Piaskowa 7"
-"Kowel","Żytomier B.","Rybołówstwo (pêche)","Sienkiewicza 16"
-"Kowel","Atlas E.","Rzeźnicy (bouchers)","Kolejowa 31"
-"Kowel","Bater i Szyfman","Rzeźnicy (bouchers)","Kolejowa 12"
-"Kowel","Berman Sz.","Rzeźnicy (bouchers)","Handlowa 21"
-"Kowel","Chmiel I.","Rzeźnicy (bouchers)","Brzeska 50"
-"Kowel","Dawidowicz A.","Rzeźnicy (bouchers)","Krótka 12"
-"Kowel","Egber S.","Rzeźnicy (bouchers)","Kolejowa 36"
-"Kowel","Feldman M.","Rzeźnicy (bouchers)","Warszawska 33"
-"Kowel","Fitersojbel P.","Rzeźnicy (bouchers)","Maciejowska 98"
-"Kowel","Gorin I.","Rzeźnicy (bouchers)","Sienkiewicza 21"
-"Kowel","Gorin i Mytnik","Rzeźnicy (bouchers)","Warszawska 25"
-"Kowel","Gorin S.","Rzeźnicy (bouchers)","Krótka 16"
-"Kowel","Goryń B.","Rzeźnicy (bouchers)","Mieszczańska 8"
-"Kowel","Goryń D.","Rzeźnicy (bouchers)","Sienna 6"
-"Kowel","Goryń J.","Rzeźnicy (bouchers)","Handlowa 31"
-"Kowel","Gutman L.","Rzeźnicy (bouchers)","Wiejska 5"
-"Kowel","Hochman A.","Rzeźnicy (bouchers)","Handlowa 23"
-"Kowel","Kagan M.","Rzeźnicy (bouchers)","Fabryczna 6"
-"Kowel","Karsz J.","Rzeźnicy (bouchers)","Mickiewicza 1"
-"Kowel","Krasnowski W.","Rzeźnicy (bouchers)","Warszawska 39"
-"Kowel","Oziomek Stef.","Rzeźnicy (bouchers)",""
-"Kowel","Pietruszka C.","Rzeźnicy (bouchers)","Kolejowa 13"
-"Kowel","Pietruszka K.","Rzeźnicy (bouchers)","Sienkiewicza 12"
-"Kowel","Rojtblat","Rzeźnicy (bouchers)","Kolejowa 2"
-"Kowel","Trepezyński I.","Rzeźnicy (bouchers)",""
-"Kowel","Stała Komunikacja Samochodowa Kowel-Ratno, Sp. z o. o.","Samochodowa komunikacja (transports automobiles)","Warszawska 61"
-"Kowel","Brandes L.","Samochodowa komunikacja (transports automobiles)",""
-"Kowel","Sztejnberg M. i Werba A.","Samochodowa komunikacja (transports automobiles)","Mickiewicza"
-"Kowel","Herszenhorn","Siodlarze i rymarze (selliers et bourreliers)","Foksal 14"
-"Kowel","Melamed","Siodlarze i rymarze (selliers et bourreliers)","Krótka 54"
-"Kowel","Pruss J. B.","Siodlarze i rymarze (selliers et bourreliers)","Warszawska"
-"Kowel","Atlas B.","Skóry (cuirs et peaux)","Warszawska 201"
-"Kowel","Atlas Z.","Skóry (cuirs et peaux)","Warszawska 201"
-"Kowel","Brat D.","Skóry (cuirs et peaux)","Brzeska 38"
-"Kowel","Bregman U.","Skóry (cuirs et peaux)","Warszawska 201"
-"Kowel","Bronszaft B.","Skóry (cuirs et peaux)","Warszawska 162"
-"Kowel","Bronszaft S.","Skóry (cuirs et peaux)","Warszawska 126"
-"Kowel","Bronzaft Sz.","Skóry (cuirs et peaux)","Warszawska 217"
-"Kowel","Byk B.","Skóry (cuirs et peaux)","Kolejowa 7"
-"Kowel","Chusid B.","Skóry (cuirs et peaux)","Warszawska 195"
-"Kowel","Ćwik C.","Skóry (cuirs et peaux)","Warszawska 165"
-"Kowel","Gonik M.","Skóry (cuirs et peaux)","Kolejowa 29"
-"Kowel","Kapsuk N.","Skóry (cuirs et peaux)","Brzeska 23"
-"Kowel","Kirazenbojm N.","Skóry (cuirs et peaux)","Warszawska 211"
-"Kowel","Lande H.","Skóry (cuirs et peaux)","Brzeska 13"
-"Kowel","Mejler D.","Skóry (cuirs et peaux)","Warszawska 150"
-"Kowel","Ryt B.","Skóry (cuirs et peaux)","Kr. Bony 6"
-"Kowel","Sztern A.","Skóry (cuirs et peaux)","Warszawska 97"
-"Kowel","Wekselbaum B.","Skóry (cuirs et peaux)","Kolejowa 20"
-"Kowel","Zalchendler U.","Skóry (cuirs et peaux)","Kolejowa 14"
-"Kowel","Łapides L.","Smary (graisses pour machines)","Włodzimierska 2"
-"Kowel","Bebczuk i Ska","Smary - fabr. (fabr. de graisses pour machines)","Warszawska 135"
-"Kowel","Wuksal J.","Smary - fabr. (fabr. de graisses pour machines)","Włodzimierska 135"
-"Kowel","Pugacz E.","Soki owocowe - wyrób (fabr. de sirops de fruits)","Brzeska 101"
-"Kowel","Komitet Powiatowy L. O. P. P.","Sól (sel)","Warszawska 47"
-"Kowel","Trzcińska A.","Sól (sel)","Włodzimierska 3"
-"Kowel","Zawadzki P.","Sól (sel)","Włodzimierska 2"
-"Kowel","Gaśko D.","Sól (sel)","Łucka 121"
-"Kowel","„Wolf Sol” Sp. z o. o.","Sól (sel)","Łucka 62a"
-"Kowel","„Wolny Skład Soli”, Sp. z o. o.","Sól (sel)",""
-"Kowel","Postołke A.","Sól (sel)","Włodzimierska 3"
-"Kowel","Myszkowska B.","Spirytualja (spiritueux)","Krótka 18"
-"Kowel","Noskow S.","Spirytualja (spiritueux)","Warszawska 29"
-"Kowel","Osiuk Z. i Szyk F.","Spirytualja (spiritueux)","Warszawska 17"
-"Kowel","Wejrman J. i Boruszek Sz.","Spirytualja (spiritueux)","Brzeska 4"
-"Kowel","Guz - Siemianowski","Spirytualja (spiritueux)","Brzeska 9"
-"Kowel","Kokoruza J.","Spirytualja (spiritueux)","Warszawska 24"
-"Kowel","Babicki J.","Spożywcze artykuły (comestibles)","Kolejowa 12"
-"Kowel","Bachower Sz.","Spożywcze artykuły (comestibles)","Handlowa 2"
-"Kowel","Balbir G.","Spożywcze artykuły (comestibles)","Sienkiewicza 43"
-"Kowel","Bar D.","Spożywcze artykuły (comestibles)","Warszawska 141"
-"Kowel","Barg L.","Spożywcze artykuły (comestibles)",""
-"Kowel","Bebczuk I.","Spożywcze artykuły (comestibles)","Warszawska 62"
-"Kowel","Bebczuk L.","Spożywcze artykuły (comestibles)","Krótka 13"
-"Kowel","Ber M.","Spożywcze artykuły (comestibles)","Kolejowa 74"
-"Kowel","Borensztejn E.","Spożywcze artykuły (comestibles)","Krótka 10"
-"Kowel","Bieloraj Sz.","Spożywcze artykuły (comestibles)","Warszawska 39"
-"Kowel","Blajsztejn P.","Spożywcze artykuły (comestibles)","Mieszczańska 4"
-"Kowel","Blumenkranc R.","Spożywcze artykuły (comestibles)","3 Maja 6"
-"Kowel","Bronsztejn J.","Spożywcze artykuły (comestibles)","Warszaw. 33"
-"Kowel","Byk Sz.","Spożywcze artykuły (comestibles)","Kolejowa 46"
-"Kowel","Chanis B.","Spożywcze artykuły (comestibles)","Kolejowa 36"
-"Kowel","Charat Sz.","Spożywcze artykuły (comestibles)","Warszawska 191"
-"Kowel","Chasis P.","Spożywcze artykuły (comestibles)","Warszawska 187"
-"Kowel","Chityk R.","Spożywcze artykuły (comestibles)","Kolejowa 87"
-"Kowel","Chusid M.","Spożywcze artykuły (comestibles)","Handlowa 7"
-"Kowel","Chusid R.","Spożywcze artykuły (comestibles)","Sienna 8"
-"Kowel","Cun S.","Spożywcze artykuły (comestibles)","Rynek 6"
-"Kowel","Curi H.","Spożywcze artykuły (comestibles)","Pomnikova 33"
-"Kowel","Ćwik","Spożywcze artykuły (comestibles)",""
-"Kowel","Dołgopoluk A.","Spożywcze artykuły (comestibles)","Sienkiewicza 14"
-"Kowel","Ejchenbaum R.","Spożywcze artykuły (comestibles)","Sienkiewicza 39"
-"","Elfand Ch.","","Handlowa 20"
-"","Erlich M.","","Rynek 29"
-"","Erlichgerecht J.","","Sienkiewicza 41"
-"","Erlichgerecht M.","","Rynek"
-"","Erlichgerecht M.","","Fabryczna 5"
-"","Fefer J.","",""
-"","Finkiel I.","","Sienkiewicza 2"
-"","Finkielsztejn A.","","Handlowa 17"
-"","Finkielsztejn B.","","Rynek 9"
-"","Finkielsztejn D.","","Handlowa 12"
-"","Fiter-sojbel H.","","Handlowa"
-"","Flasztac Z.","","Warszawska 147"
-"","Flasztyc I.","","Handlowa 50"
-"","Flomenbaum L.","","Warszawska 143"
-"","Friszberg A.","","Zaułek Krótki 15"
-"","Frysberg Chaja","","Warszawska 134"
-"","Frysberg S.","","Handlowa 4"
-"","Frysberg S.","","Włodzimierska 5"
-"","Geller F.","","Warszawska 147"
-"","Giwant P.","","Warszawska 81"
-"","Głoszek J.","","Handlowa 4"
-"","Gojzen A.","","Włodzimierska 3"
-"","Goldberg W.","","Sienkiewicza 38"
-"","Goldfarb P.","","Mieszczańska 6"
-"","Gonik J.","","Ks. Poniatowskiego 8"
-"","Grinblat I.","","Kolejowa 38"
-"","Grojser H. i N.","","Warszawska 126"
-"","Grojser J.","","Krótka 4a"
-"","Grynblat M.","","Kolejowa 38"
-"","Gudes M.","","Handlowa 14"
-"","Gutman I.","","Artyleryjska 6"
-"","Gwircman R.","","Dzika 16"
-"","Ingber E.","","Warszawska 46"
-"","Ingber M.","","Sienkiewicza 41"
-"","Jucht C.","","Handlowa 18"
-"","Jucht M.","","Brzeska 20"
-"","Kac M.","","Rynek 6"
-"","Kaczkowski L.","","Kołodnicka 10"
-"","Kadec L.","","Mieszczańska 4"
-"","Kagan Sz.","","Pomnikova 78"
-"","Kandelsztejn R.","","Poniatowskiego 13"
-"","Kantor W.","","Brzeska 87"
-"","Kasiński W.","","Wierzbowa 1"
-"","Kasztan J.","","Sienkiewicza 25"
-"","Kaufman B.","",""
-"","Kierzner N.","","Kolejowa 67"
-"","Koliren H.","","Kolejowa 39"
-"","Kowelska Spółka Spożywcza","wł. Krupiński i Ska","Kościelna 1 i Warszawska 32"
-"","Kure S. i K.","","Brzeska 13"
-"","Langier T.","","Budyszczańska 8"
-"","Lejbenberg M.","","Rynek 23"
-"","Lejkach L.","","Brzeska 10"
-"","Lejwi W.","","Kolejowa 54"
-"","Lewertow H.","","Ryn. 18"
-"","Lewi A.","","Kolejowa 5"
-"","Liberman R.","","Kościelna 1"
-"","Landa B.","","Brzeska 14"
-"","Langer M.","","Warszawska 18"
-"","Łysakowski A.","","Monopolowa 86"
-"","Maluszka M.","","Handlowa 10"
-"","Marszałowicz Sz. i Guz Lejzor","","Rynek 3"
-"","Melamed Ar.","","Handlowa 23"
-"","Melamed Ab.","","Warszawska 251"
-"","Melamed Ch.","","Handlowa 25"
-"","Melamed R.","","Brzeska 145"
-"","Milsztejn Sz.","","Magistr. 2"
-"","Myk J.","",""
-"","Notkowski D.","","Sienkiewicza 1"
-"","""Odrodzenie""","wł. Pająkowa B.","Sienkiewicza 31"
-"","Pelc J.","",""
-"","Pendziach Ch.","","Monopolowa 61"
-"","Peregal A.","","Kolejowa 24"
-"","Perwin D.","","Handlowa 22"
-"","Piterman D.","","Listopadowa 36"
-"","Rabiner P.","","Rynek 34"
-"","Rajber G.","","Sienkiewicza 11"
-"","Raszczyński L.","","Łucka 113"
-"","Rajz L.","","Kolejowa 10"
-"","Rejder Ch.","","Wojskowa 1"
-"","Rejder Z.","","Warszawska 154"
-"","Rejeder J.","","Łucka 37"
-"","Rojt B.","","Brzeska 18"
-"","Rojzen R.","","Rynek 12"
-"","Rowner P.","","Wierzbowa 3"
-"","Rubinsztejn Ś.","","Sienkiewicza 16"
-"","Rusiłowicz A.","","Warszawska 85"
-"","Sawicki Z.","","Sienkiewicza 35"
-"","Segał R.","","Sienkiewicza 38"
-"","Singal S.","","Kolejowa 76"
-"","Stolar Ch.","",""
-"","Styczyńska A.","","Sienkiewicza 36"
-"","Sygał Sz.","","Warszawska"
-"","Szama L.","","Monopolowa 49"
-"","Szargiel L.","","Fabryczna 3"
-"","Szarpankier J.","","Brzeska 6"
-"","Szechter J.","","Sienkiew. 19"
-"","Szenkier","","Krótka 17"
-"","Szerbojm B.","","Warszawska 144"
-"","Szpigielman G.","","Rynek 7"
-"","Sztejnberg Ch.","","Mickiewicza 3"
-"","Sztejnberg R.","","Sienkiewicza 28"
-"","Sztenberg R.","","Łucka 129"
-"","Sztern S.","",""
-"","Sztylerman D.","","Magistracka 3"
-"","Szuf G.","","Kolejowa 58"
-"","Szwarc G.","","Handlowa 16"
-"","Szwarc J.","","Rynek 15"
-"","Szwarc U.","","Targowa 2"
-"","Szawediak Ch.","","Warszawska 100"
-"","Tabacznik E.","","Brzeska 5"
-"","Tenenbojm","","Kolej. 43"
-"","Test L.","","Listopadowa 72"
-"","Tojbic L.","","Handlowa 20"
-"","Truk M.","","Handlowa 21"
-"","Wajner H.","","Handlowa 7"
-"","Wajntich Sz.","","Maciejowska 11"
-"","Wajnsztejn Ch.","","Kolejowa 88"
-"","Werba M.","","Sienkiewicza 6"
-"","Winter E.","","Mickiewicza 4"
-"","Wirwer W.","","Kolejowa 63"
-"","Woliwełer M.","","Warszawska 239"
-"","Zafran A.","","Handlowa 36"
-"","Zafran B.","","Rynek 21"
-"","Zafran B.","","Kolejowa 24"
-"","Zafran Ch.","","Pomnikova 51"
-"","Zafran E.","","Łucka 110"
-"","Zafran G.","","Handlowa 19"
-"","Zdrodowski A.","","Warszawska 34"
-"","Zokner I.","","Warszawska 1"
-"","Benis A.","","Listopadowa 72"
-"","Gonik","","Sienkiewicza"
-"","Machniuk","","War..."
-City	Name / Entity	Role / Specialty	Address
-	Sznajder B.	Blacharze (ferblantiers)	Warszawska 41
-	Markowska	Blacharze (ferblantiers)	Brzeska 152
-	Murik B.	Blacharze (ferblantiers)	Pomnikowa 32
-	Sztokamer	Blacharze (ferblantiers)	Mickiew. 19
-	Wajner R.	Blacharze (ferblantiers)	Warszawska 3
-	Zask A.	Blacharze (ferblantiers)	Włodzimierska 44
-	Zilberberg	Blacharze (ferblantiers)	Łucka 87
-	Wajner Z.	Starczyzna — handel (fripiers)	Handlowa 6
-	Chazen L.	Stolarze (menuisiers)	Warszawska 129
-	Jagodziner M.	Stolarze (menuisiers)	Warszawska 119
-	Nowiczewski P.	Stolarze (menuisiers)	Warszawska 61
-	Szejna D.	Stolarze (menuisiers)	Strażacka 28
-	Szwarc M.	Stolarze (menuisiers)	Maciejowska 6
-	Tenenbaum R.	Stolarze (menuisiers)	Listopadowa 31
-	Gluzman	Stolarze (menuisiers)	Pomnikowa 50
-	Jurczenkowicz	Stolarze (menuisiers)	Włodzimierska 103
-	Szowe	Stolarze (menuisiers)	Krzywa 3
-	Bronsztejn M.	Studnie — budowa (forages de puits)	Kolejowa
-	Two Handlowe „Kresy”, wł. Twerski A. i Wendel J.	Sukno (draperies)	Warszawska 154
-	Fajgenbaum A.	Szewckie przybory (fournit. p. chaussures)	Kolejowa 16
-	Arbajter Sz.	Szewcy (cordonniers)	Warszawska 257
-	Bender B.	Szewcy (cordonniers)	Pomnikowa 26
-	Berliński St.	Szewcy (cordonniers)	Kolej. 83
-	Chait	Szewcy (cordonniers)	Krótka 42
-	Guterzen D.	Szewcy (cordonniers)	Artyleryjska 3
-	Juz J.	Szewcy (cordonniers)	Wierzbowa 11
-	Juz	Szewcy (cordonniers)	Poprzecz. 6
-	Kirschenblatt F.	Szewcy (cordonniers)	Łucka 35
-	Lindenbaum T.	Szewcy (cordonniers)	Sienkiewicza 36
-	Press S.	Szewcy (cordonniers)	Kolejowa 23
-	Rojter B.	Szewcy (cordonniers)	Kolejowa 56
-	Sinicka J.	Szewcy (cordonniers)	Warszaw. 26
-	Szmojsz M.	Szewcy (cordonniers)	Kolejowa 52
-	Szwarc J.	Szewcy (cordonniers)	Włodzimierska 7
-	Tius W.	Szewcy (cordonniers)	Warszawska 117
-	Trzyziński A.	Szewcy (cordonniers)	Mickiewicza 25
-	Wajner F.	Szewcy (cordonniers)	Pomnikowa 57
-	Wajner L.	Szewcy (cordonniers)	Pomnikowa 35
-	Wajner U.	Szewcy (cordonniers)	Fabryczna 16
-	Wasing M.	Szewcy (cordonniers)	Tuszowskiego 10
-	Włodarski St.	Szewcy (cordonniers)	Warszawska 59
-	Alperin P.	Szkło i porcelana (verreries et porcelaines)	Warszawska 45
-	Bregman Ch.	Szkło i porcelana (verreries et porcelaines)	Brzeska 9
-	Erlich W.	Szkło i porcelana (verreries et porcelaines)	Warszawska 174
-	Gwejntach M.	Szkło i porcelana (verreries et porcelaines)	Warszawska 56
-	Rojzen S.	Szkło i porcelana (verreries et porcelaines)	Maciejowska 17
-	Rywka S.	Szkło i porcelana (verreries et porcelaines)	Warszawska 27
-	Schneider G.	Szkło i porcelana (verreries et porcelaines)	Warszawska 171
-	Tullerr N. i Sz.	Szkło i porcelana (verreries et porcelaines)	Łucka 24
-	Chusid M.	Śledzie (harengs)	Handlowa 5
-	Chasis P.	Śledzie (harengs)	Warszawska 184
-	Kuras J.	Ślusarze (serruriers)	Sienkiewicza 29
-	Lerner Ch.	Ślusarze (serruriers)	Warszawska 68
-	Marejda A.	Ślusarze (serruriers)	Warszawska 143
-	Panawas M.	Ślusarze (serruriers)	Legjonów 21
-	Stolar M.	Ślusarze (serruriers)	Łucka 20
-	Szwarc Sz.	Ślusarze (serruriers)	Warszawska 154
-	Winograd M.	Ślusarze (serruriers)	Krótka 14
-	Rozen M.	Świece parafinowe — fabryki (fabr. de bougies en paraffine)	Warszawska 132
-	Brozyński A.	Tapicerzy (tapissiers)	Warszawska 13
-	Sojbel I.	Tapicerzy (tapissiers)	Warszawska 93
-	Terk B.	Tapicerzy (tapissiers)	Warszawska 21
-	Amdurski T. i Szpilberg J.	Tartaki (scieries)	Warszawska 126
-	Bronsztejn i Ska	Tartaki (scieries)	Kołodnicka
-	Blausztein Jak.	Technicy dentystyczni (mécaniciens dentistes)	Łucka 83
-	Halpern Józ.	Technicy dentystyczni (mécaniciens dentistes)	Mickiewicza 21
-	Kiperman Zachar.	Technicy dentystyczni (mécaniciens dentistes)	Łucka 58
-	Berezowski J.	Techniczne biura (bureaux techniques)	Więzienna 6
-	Lambach W.	Trumny (cercueils)	Warszawska 99
-	Strużer M.	Trykotaże — fabr. (fabr. d'articles en tricot)	Warszawska 68
-	Binder H.	Tytoniowe wyroby (tabacs)	Sienkiewicza 41
-	Brandel B.	Tytoniowe wyroby (tabacs)	
-	Goldszmidt Ch.	Tytoniowe wyroby (tabacs)	Warszawska 255
-	Goldszmidt L.	Tytoniowe wyroby (tabacs)	Warszawska 156
-	Kamiński A.	Tytoniowe wyroby (tabacs)	Łucka 39
-	Klepacz Sz.	Tytoniowe wyroby (tabacs)	Kolejowa 87
-	Kuna A.	Tytoniowe wyroby (tabacs)	Warszaw. 134
-	Lederman B.	Tytoniowe wyroby (tabacs)	Sienkiewicza róg Artyleryjskiej
-	Melamed Sz.	Tytoniowe wyroby (tabacs)	Strażacka 13
-	Mianowska K.	Tytoniowe wyroby (tabacs)	Warszawska 67
-	Pugacz Sz.	Tytoniowe wyroby (tabacs)	Warszawska 249
-	Rubinsztejn L.	Tytoniowe wyroby (tabacs)	Warszawska 191
-	Rus K.	Tytoniowe wyroby (tabacs)	Warszawska 101
-	Sawicki M.	Tytoniowe wyroby (tabacs)	Królowej Bony 1
-	Segal Ch.	Tytoniowe wyroby (tabacs)	Warszawska 188
-	Zembrzuski	Tytoniowe wyroby (tabacs)	Łucka 85
-	Fabryka Monopolu Tytoniowego	Tytoniowe wyroby — fabryki (manufactures de tabacs)	
-	Warszawskie Tow. Ubezpieczeń, oddz.	Ubezpieczeniowe biura (assurances)	Więzienna
-	„Assicurazione Generali Trieste”	Ubezpieczeniowe biura (assurances)	3 Maja 3
-	Ajerman L.	Ubrania gotowe (vêtements confectionnés)	Zaułek Soborny 15
-	Bajczman L.	Ubrania gotowe (vêtements confectionnés)	Rynek 26
-	Brener M.	Ubrania gotowe (vêtements confectionnés)	Warszawska 117
-	Brizeli W.	Ubrania gotowe (vêtements confectionnés)	Warszawska 102
-	Cukierman G.	Ubrania gotowe (vêtements confectionnés)	Łucka 18
-  "Kowel","Drykier L. i M.","","Warszawska 149"
-"Kowel","Elman M.","","Rynek 14"
-"Kowel","xFridman Cz.","","Łucka 18"
-"Kowel","Goldsztejn La.","","Warszawska 126"
-"Kowel","xGutman A.","","Rynek 26"
-"Kowel","xLedersznajder J.","","Warszawska 191"
-"Kowel","xRubinsztejn E.","","Warszawska 182"
-"Kowel","Wajner M.","","Sienkiewicza 39"
-"Kowel","xWerner Ch. i Ingberg M.","","Włodzimierska 1"
-"Kowel","Ingberg M. i Goldfarb R.","","Warszawska 46"
-"Kowel","Fijałkowski M.","Wędliny (charcutiers)","Sienkiewicza 19"
-"Kowel","xGradoszyński M.","Wędliny (charcutiers)","Warszawska 16 i 23"
-"Kowel","xKostecki J.","Wędliny (charcutiers)","Sienkiewicza 33"
-"Kowel","Woźniak i Telman","Wędliny (charcutiers)","Sienkiewicza 37"
-"Kowel","Cybulski Al.","Wiatraki (moulins à vent)","Górka 3"
-"Kowel","Mejkler Józ.","Wiatraki (moulins à vent)","Lubliniecka 49"
-"Kowel","Palańska F.","Wody gazowe (eaux gazeuses)","Warszawska 40"
-"Kowel","Rubinsztejn L.","Wody gazowe (eaux gazeuses)","Łucka 20"
-"Kowel","Szyper I.","Wody gazowe (eaux gazeuses)","Łucka 127"
-"Kowel","Cukierman I.","Wody gazowe — fabryki (fabr. d'eaux gazeuses)","Seborna 4"
-"Kowel","Erlich S.","Wody gazowe — fabryki (fabr. d'eaux gazeuses)","Włodzimierska 8"
-"Kowel","Goldszmidt M.","Wody gazowe — fabryki (fabr. d'eaux gazeuses)","Pomnikowa 21"
-"Kowel","Kagan M.","Wody gazowe — fabryki (fabr. d'eaux gazeuses)","Fabryczna 6"
-"Kowel","xPolońscy Bela","Wody gazowe — fabryki (fabr. d'eaux gazeuses)","Cyrkowa 24"
-"Kowel","Tojbiez A.","Wody gazowe — fabryki (fabr. d'eaux gazeuses)","Brzeska 37"
-"Kowel","Wajsblat F. i L.","Wody gazowe — fabryki (fabr. d'eaux gazeuses)","Mickiewicza 9"
-"Kowel","Państwowa Wytwórnia Wódek","Wódki — fabryki (fabr. d'eaux-de-vie)","Monopolowa 46"
-"Kowel","xMianowski S.","Wódki i likiery (eaux-de-vie et liqueurs)","Warszawska 165"
-"Kowel","Pawlicha S.","Wódki i likiery (eaux-de-vie et liqueurs)","Kolejowa"
-"Kowel","Finkielsztejn A.","Zboże (grains)","Rynek 17"
-"Kowel","xLanger M.","Zboże (grains)","3 Maja 7"
-"Kowel","xLanda Ch.","Zboże (grains)","Brzeska 16"
-"Kowel","xSztejnberg F.","Zboże (grains)","Łucka 71"
-"Kowel","Szyndler B.","Zboże (grains)","Monopolowa 64"
-"Kowel","xWołk A.","Zboże (grains)","Monopolowa 77"
-"Kowel","Wołk H.","Zboże (grains)","Kościuszki 10"
-"Kowel","xWołk L.","Zboże (grains)","Monopolowa 75"
-"Kowel","Zafran S.","Zboże (grains)","Warszawska 223"
-"Kowel","Bren E.","Zboże (grains)","Monopolowa 84"
-"Kowel","Geldbart D.","Zboże (grains)","Włodzimierska 144"
-"Kowel","Sztejnberg M.","Zboże (grains)","Łucka 114"
-"Kowel","Wolwoszes Sz.","Zboże (grains)","Łucka 108"
-"Kowel","xBurak M.","Zegarmistrze (horlogers)","Warszawska 22"
-"Kowel","Chityk J.","Zegarmistrze (horlogers)","Kolejowa 87"
-"Kowel","Fradelis M.","Zegarmistrze (horlogers)","Warszawska 50"
-"Kowel","Goldszmidt F.","Zegarmistrze (horlogers)","Warszawska 255"
-"Kowel","xSzyter M.","Zegarmistrze (horlogers)","Warszawska 49"
-"Kowel","Wajnberg Ch.","Zegarmistrze (horlogers)","Warszawska 79"
-"Kowel","xWajsberg Sz.","Zegarmistrze (horlogers)","Warszawska 132"
-"Kowel","Pryzant","Zegarmistrze (horlogers)","Krzywa"
-"Kowel","Wajnsztejn","Zegarmistrze (horlogers)","Sienkiewicza 13"
-"Kowel","xKupiecki Syndykat Rolniczy, Sp. z o. o.","Ziemiopłody (produits du sol)","Komorowska 14"
-"Kowel","xZwiązek Rolników Wołyńskich","Ziemiopłody (produits du sol)","Więzienna"
-"Kowel","Berezowski J.","Żelazo (fers)","Fabryczna 4"
-"Kowel","Erlich","Żelazo (fers)","Warszawska 130"
-"Kowel","xGarber Ch.","Żelazo (fers)","Warszawska 165"
-"Kowel","Genik R.","Żelazo (fers)","Warszawska"
-"Kowel","xGuterman S.","Żelazo (fers)","Warszawska 237"
-"Kowel","Gutman Sz.","Żelazo (fers)","Warszawska 126"
-"Kowel","Gus B.","Żelazo (fers)","Warszawska 126"
-"Kowel","xGus Ch.","Żelazo (fers)","Warszawska 191"
-"Kowel","xKlejnerman","Żelazo (fers)",""
-"Kowel","xLitwar W.","Żelazo (fers)","Warszawska 26"
-"Kowel","Mandel J.","Żelazo (fers)","Warszawska 227"
-"Kowel","xMandel M.","Żelazo (fers)","Warszawska 225"
-"Kowel","Pape L.","Żelazo (fers)","Warszawska 31"
-"Kowel","Pape J.","Żelazo (fers)","Warszawska 18"
-"Kowel","Ptakowski A.","Żelazo (fers)","Mickiewicza 7"
-"Kowel","Rojtenberg I.","Żelazo (fers)","Warszawska 215"
-"Kowel","Rosinzowska R.","Żelazo (fers)","Warszawska 66"
-"Kowel","Slepak M.","Żelazo (fers)","Warszawska 169"
-"Kowel","Szejnblum M.","Żelazo (fers)","Warszawska 229"
-"Kowel","Szowb M.","Żelazo (fers)","Warszawska 184"
-"Kowel","Świniuch L.","Żelazo (fers)","Warszawska 181"
-"Kowel","x„Tehas” Tow. Eksploatacji i Handlu Żelazem z o. o.","Żelazo (fers)","Łucka 42"
-"Kowel","Wajsberg P.","Żelazo (fers)","Warszawska 225"
-"Kowel","Waksman Ch.","Żelazo (fers)","Warszawska 157"
-"Kowel","xWorcel H.","Żelazo (fers)","Warszawska 213"
+City,Name / Entity,Role / Specialty,Address
+Kowel,Bron. Chodakowski,Starosta,
+Kowel,Wacł. Drojanowski,Prezydent miasta,
+Kowel,Wład. Krukowski,Prezes Rady Miejskiej,
+Kowel,Pleszko,Komendant straży ogniowej miejskiej,
+Kowel,dr Dymitr Barczenko,Lekarz,ul. Mickiewicza 38
+Kowel,dr Mich. Ciechnowicz,Lekarz,ul. St. Kolejowa 26
+Kowel,dr W. Gertałow,Lekarz (choroby wewnętrzne),ul. Łucka 184
+Kowel,dr S. Gliwiński,Lekarz (ginekolog),ul. Mickiewicza 35
+Kowel,dr Teof. Jaworowski,Lekarz,ul. Policyjna 1
+Kowel,dr Wac. Królewski,Lekarz (laryngolog),ul. N. Kolejowa 90
+Kowel,dr Jul. Krzeczkowska,Lekarz,ul. Kościuszki 8
+Kowel,dr Zygn. Leble,Lekarz (choroby wewnętrzne),ul. Kolejowa 90
+Kowel,dr Stanisław Leszkiewicz,Lekarz,ul. Warszawska 59
+Kowel,dr Ser. Lipowiecka-Sawicka,Lekarz,ul. Bony 15
+Kowel,dr M. Pirogow,Lekarz,ul. Strażacka 12
+Kowel,dr Leon Rychlicki,Lekarz (chirurg),Szpital Państwowy
+Kowel,dr W. Swiatikow,Lekarz,
+Kowel,dr Bol. Turowski,Lekarz,ul. Łucka 67
+Kowel,dr J. Wajtman,Lekarz,ul. Warszawska
+Kowel,dr Jerzy Wasilewski,Lekarz,
+Kowel,dr Wac. Weselski,Lekarz (zakaźny),ul. Foksal 15
+Kowel,dr Pinkus Zyskind,Lekarz,ul. Warszawska 62
+Kowel,dr Stefan Chrzanowski,Lekarz,
+Kowel,dr H. Holendzki,Lekarz,
+Kowel,dr L. Radwański,Lekarz,
+Kowel,dr Ign. Schatz,Lekarz,
+Kowel,dr Henryk Stachurski,Lekarz,
+Kowel,dr Aron Szomsztein,Lekarz,
+Kowel,Bor. Ajzenberg,Lekarz dentysta,ul. Mickiewicza
+Kowel,Ryw. Barzach,Lekarz dentysta,
+Kowel,Ch. Frejlachman,Lekarz dentysta,
+Kowel,Ch. Jukielson,Lekarz dentysta,
+Kowel,J. Kerner,Lekarz dentysta,ul. N. Kolejowa 44
+Kowel,Szej. Gołubicka Sztejnberg,Lekarz dentysta,
+Kowel,Eug. Al. Gorczyński,Lekarz dentysta,Państw. Szpital Ep. 1
+Kowel,Włodz. Gorczyński,Lekarz dentysta,ul. Warszawska
+Kowel,L. Kerner,Lekarz dentysta,
+Kowel,Ejd. Kucyn,Lekarz dentysta,
+Kowel,Zysk. Lewin,Lekarz dentysta,
+Kowel,Barz. Majzels,Lekarz dentysta,
+Kowel,Herm. Sokołowski,Lekarz dentysta,
+Kowel,Sztejnlucht,Lekarz dentysta,
+Kowel,Włodz. Grabowski-Jarmołowicz,Lekarz weterynarii,Magistrat Starostwo
+Kowel,Wikt. Bernasowski,Adwokat,
+Kowel,Wład. Graczyk,Adwokat (obrońca sądowy),
+Kowel,Zygm. Grekk,Adwokat,
+Kowel,Ign. Makowski,Adwokat,
+Kowel,Stan. Mianowski,Adwokat (obrońca sądowy),
+Kowel,Henr. Szulc,Adwokat,
+Kowel,Wład. Szymkiewicz,Adwokat,
+Kowel,Fel. Jarosz,Adwokat,
+Kowel,Sam. Podhórski,Adwokat,
+Kowel,Sław. Randau,Adwokat,
+Kowel,Jan Zadarnowski,Adwokat,
+Kowel,Adolf Horodecki,Notariusz,
+Kowel,Fran. Skorupski,Notariusz,
+Kowel,Hip. Zyznowski,Notariusz,
+Kowel,I. Jaślikowski,Komornik,
+Kowel,W. Ważyński,Komornik,
+Kowel,M. Fefer,Agentura,ul. Mickiewicza 16
+Kowel,Lachs,Agentura,ul. Krótka 14
+Kowel,A. Zyskind,Agentura,ul. Sadowa 3
+Kowel,Z. Chicewicz,Akuszerka,
+Kowel,M. Cyn,Akuszerka,
+Kowel,F. Halperin,Akuszerka,
+Kowel,M. Pieczko,Akuszerka,
+Kowel,H. Purwin,Akuszerka,
+Kowel,Ch. Rajf,Akuszerka,
+Kowel,M. Stepan,Akuszerka,
+Kowel,R. Baskin,Skład apteczny,ul. Warszawska 132
+Kowel,S. Finkelsztejn,Skład apteczny,ul. Warszawska 129
+Kowel,G. Friedländer,Skład apteczny,ul. Warszawska 14
+Kowel,Sz. Goldberg i Syn,Skład apteczny,ul. Sienkiewicza 23
+Kowel,Sz. Goldsztejn,Skład apteczny,ul. Warszawska 46
+Kowel,I. Motiuk,Skład apteczny,ul. Warszawska 138
+Kowel,I. Wałach,Skład apteczny,ul. Warszawska 30
+Kowel,Apteka Tow. „Linas Hacedek”,Apteka,
+Kowel,Piotr Ejsmont,Apteka,ul. Kościelna 1
+Kowel,N. Fridrichson,Apteka,ul. Warszawska 31
+Kowel,Z. Prażmowska,Apteka,ul. Łucka 2
+Kowel,T. Parys,Apteka,ul. Sienkiewicza 27
+Kowel,Bank Handlowy w Warszawie Sp. Akc. (Oddział),Bank,ul. Warszawska 32
+Kowel,Bank Kupiecki,Bank,
+Kowel,Bank Ludowy Sp. z o. o.,Bank,ul. Kościuszki 7
+Kowel,Bank Spółdzielczy Sp. z o. o.,Bank,
+Kowel,Spółdzielczy Bank Kredytowy Drobnych Kupców,Bank,ul. Warszawska 181
+Kowel,Bank Powszechny Drobnych Kupców,Bank,ul. Warszawska 75
+Kowel,Bank Spółdzielczy Właścicieli Nieruchomości,Bank,ul. Warszawska 53
+Kowel,Ukraiński Spółdzielczy Bank Sp. z n. o.,Bank,ul. Mickiewicza 8
+Kowel,Józ. Barwikowski,Betonowe wyroby,ul. Łucka 45
+Kowel,M. Alpert,Betonowe wyroby,ul. Brzeska 38
+Kowel,B. Linder,Bielizna,ul. Warszawska 177
+Kowel,Golcer,Bielizna,ul. 3 Maja 7
+Kowel,Sz. Fajnland,Blacharstwo,ul. Kolejowa
+Kowel,L. Grinblat,Blacharstwo,ul. Listopadowa 43
+Kowel,S. Rubinsztejn,Blacharstwo,ul. Warszawska 134
+Kowel,E. Baszejwa,Bławaty,ul. Warszawska 60
+Kowel,Dunajewiecki,Bławaty,ul. Warszawska 126
+Kowel,Kamień,Bławaty,ul. Warszawska 164
+Kowel,S. Kestenbojm,Bławaty,ul. Warszawska 144
+Kowel,S. Lewin,Bławaty,ul. Szuhajskiego 4
+Kowel,A. i Sz. Melamed,Bławaty,ul. Warszawska 110
+Kowel,G. Melamed,Bławaty,ul. Warszawska 235
+Kowel,A. Michalski,Bławaty,ul. Warszawska 67
+Kowel,S. Perelmuter,Bławaty,
+Kowel,N. Polak,Bławaty,ul. Warszawska 138
+Kowel,„Pośrednik” (wł. M. Gobec i H. Blücher),Bławaty,
+Kowel,F. Rubinsztejn,Bławaty,ul. Warszawska 181
+Kowel,Sz. Szapiro,Bławaty,ul. Warszawska 154
+Kowel,G. Sztejnberg,Bławaty,ul. Warszawska 179
+Kowel,M. i J. Wydra,Bławaty,ul. Warszawska 157
+Kowel,Bronsztejn,Bławaty,Zaułek Soborny 4
+Kowel,D. Pińczuk,Bławaty,ul. Warszawska 149
+Kowel,Sz. Trejster,Bławaty,ul. Włodzimierska 2
+Kowel,Gliniecki i Kowalski,Broń,ul. Kolejowa 53
+Kowel,Jan Różański,Broń,ul. Łucka 133
+Kowel,Spółka Myśliwska,Broń,ul. Warszawska 32
+Kowel,Mich. Fajnsztejn,Brukarskie przedsiębiorstwo,ul. Poniatowskiego 8
+Kowel,Bokser,Materiały budowlane,ul. Łucka 23
+Kowel,Krasnosielski,Materiały budowlane,ul. Mieszczańska 1
+Kowel,J. Pińczuk,Materiały budowlane,ul. Król. Bony 10
+Kowel,W. Sznajder,Materiały budowlane,ul. 3 Maja 11
+Kowel,Biber i Kac,Przedsiębiorstwo budowlane,Łucka 61
+Kowel,×Goldsztejn G.,Przedsiębiorstwo budowlane,Pomnikowa 14
+Kowel,Lubczenko,Przedsiębiorstwo budowlane,Brzeska 17
+Kowel,Prużański H. i Frojd A.,Przedsiębiorstwo budowlane,
+Kowel,Trzeciak Z.,Przedsiębiorstwo budowlane,
+Kowel,Wasilewski J.,Przedsiębiorstwo budowlane,Łucka
+Kowel,Wasilkowski J.,Przedsiębiorstwo budowlane,Król. Bony
+Kowel,Chinenzon W.,Bydło — handel (march. de bestiaux),Monopolowa 45
+Kowel,Cwik S.,Bydło — handel (march. de bestiaux),Mieszczańska 70
+Kowel,×Kusznir F. i Grinberg B.,Bydło — handel (march. de bestiaux),Piaskowa 24
+Kowel,Rozenberg Sz.,Bydło — handel (march. de bestiaux),Rynkowa 8
+Kowel,Marynowski W. i S-ka,Cegły (briques),Monopolowa 12
+Kowel,Zask A.,Cementowe wyroby — fabr. (fabr. de produits en ciment),
+Kowel,Goldsztejn Sz.,Chemiczne produkty (produits chimiques),Warszawska
+Kowel,Karolczuk St.,Cieśle (charpentiers),Popreczna 6
+Kowel,Kupersztejn,Cieśle (charpentiers),Foksal 6
+Kowel,Pen A.,Cieśle (charpentiers),Budyszczańska 8
+Kowel,Chasis P.,Cukier — hurt (sucres en gros),
+Kowel,Szowb F.,Cukier — hurt (sucres en gros),Warszawska
+Kowel,Gitulis Sz.,Cukierki — fabryki (fabr. de bonbons),Szkolna 17
+Kowel,Rubinsztejn S.,Cukierki — fabryki (fabr. de bonbons),Warszawska 84
+Kowel,Perlis F.,Cukiernicze wyroby (confisserie),Król. Bony 15
+Kowel,Rubin W.,Cukiernicze wyroby (confisserie),Apteczna 4
+Kowel,Witebski T.,Cukiernicze wyroby (confisserie),Kolejowa 5
+Kowel,Bauch I.,Cukiernie (confiseurs),Warszawska 14
+Kowel,Cukiernia Udziałowa,Cukiernie (confiseurs),Łucka 5
+Kowel,Czwanczira B.,Cukiernie (confiseurs),Kolejowa 4
+Kowel,Głouszek W.,Cukiernie (confiseurs),Kolejowa 63
+Kowel,Głouszek W.,Cukiernie (confiseurs),Warszawska 16
+Kowel,Zac K.,Cukiernie (confiseurs),Łucka 7
+Kowel,Cwibel M.,Czapnicy (fabr. de casquettes),Mieszczańska 1
+Kowel,Elfantel M.,Czapnicy (fabr. de casquettes),Kolejowa 5
+Kowel,Fajnlich Z.,Czapnicy (fabr. de casquettes),Warszaw. 178
+Kowel,Geller Hema,Czapnicy (fabr. de casquettes),Warszawska 44
+Kowel,Drekier,Czapnicy (fabr. de casquettes),Warsz.
+Kowel,Pal Sz.,Czapnicy (fabr. de casquettes),Warszawska 188
+Kowel,Szmojsz M.,Czapnicy (fabr. de casquettes),Kościelna 4
+Kowel,Szmojsz S.,Czapnicy (fabr. de casquettes),Warszawska 180
+Kowel,Sznajder R.,Czapnicy (fabr. de casquettes),Warszawski 215
+Kowel,Zyskind A.,Czekolada (chocolat),Strzelecka 3
+Kowel,×Cymerman M.,Dentystycz. materjały (fournitures pour dentistes),3 Maja 8
+Kowel,Prużański i Liwszyc,Drogi — budowa (construction de routes),Kościuszki 6
+Kowel,×„Drób” Sp. z o. o.,Drób (volailles),Kolejowa
+Kowel,Brandes L. i Kiweberg K.,Drukarnia (imprimeries),Warszawska 4
+Kowel,Herszbaum G.,Drukarnia (imprimeries),Warszawska 23
+Kowel,Handelsztejn J.,Drukarnia (imprimeries),Warszawska 19
+Kowel,Balter Z.,Drzewo (bois),Warszawska 52
+Kowel,Cytryn Z.,Drzewo (bois),Maciejowska 21
+Kowel,×Furszteler Ch.,Drzewo (bois),Kolejowa 5
+Kowel,×Furszteler Ch.,Drzewo (bois),Pomnikowa 21
+Kowel,Lewin I.,Drzewo (bois),Włodzimierska 18
+Kowel,×Wołk A.,Drzewo (bois),Kościelna 10
+Kowel,Ziembicki K.,Drzewo (bois),Targowa 39
+Kowel,×Berezowski J.,Drzewo (bois),Fabryczna 4
+Kowel,"„Import”, wł. Marder, Pomeranc i Ska",Drzewo (bois),Kolejowa 91
+Kowel,Frydman — Halpern,Ekspedycyjne biura (expéditeurs),Warszawska 81
+Kowel,Sosna I.,Ekspedycyjne biura (expéditeurs),Listopadowa 87
+Kowel,„Wygoda”,Ekspedycyjne biura (expéditeurs),Łucka 105
+Kowel,Załoga,Ekspedycyjne biura (expéditeurs),Nadrzeczna 24
+Kowel,Cukierman J. A.,Elektrownie (usines d'électricité),Soborna 7
+Kowel,"Elektrownia Miejska, dzierż. Tuller Br.",Elektrownie (usines d'électricité),al. Ks. Poniatowskiego 3
+Kowel,Jasman,Farbiarnie (teinturiers),Warszawska 131
+Kowel,×Bakun E.,Farby (couleurs),Warszawska 205
+Kowel,×Cuperfajn U.,Farby (couleurs),Handlowa 15
+Kowel,×Erlich I.,Farby (couleurs),Warszawska 158
+Kowel,Langier D.,Farby (couleurs),Łucka 160
+Kowel,×Sojbel J.,Farby (couleurs),Warszawska 170
+Kowel,Stok Sz.,Farby (couleurs),Warszawska 130
+Kowel,Baranowski J.,Felczerzy (barbiers - chirurgiens),
+Kowel,Jankowski St.,Felczerzy (barbiers - chirurgiens),
+Kowel,Burak B. i Sn.,Fotograficzne zakłady (photographes),Warszawska 30
+Kowel,Epsztejn A.,Fotograficzne zakłady (photographes),Warszawska 61
+Kowel,Epsztejn I.,Fotograficzne zakłady (photographes),Warszawska 98
+Kowel,Geler Z.,Fotograficzne zakłady (photographes),Warszawska 137
+Kowel,Nusia E.,Fotograficzne zakłady (photographes),Warszawska 34
+Kowel,Chodór M.,Fryzjerzy (coiffeurs),
+Kowel,Fajner L.,Fryzjerzy (coiffeurs),Kolej. 79
+Kowel,Fidelman D.,Fryzjerzy (coiffeurs),Warszawska 83
+Kowel,Fiszek Sz.,Fryzjerzy (coiffeurs),Kolejowa 1
+Kowel,Gantfus A.,Fryzjerzy (coiffeurs),Brzeska 4
+Kowel,Gantfus Ar.,Fryzjerzy (coiffeurs),Warszawska 37
+Kowel,Gofman A.,Fryzjerzy (coiffeurs),Warszawska 157
+Kowel,Golcwajg Sz.,Fryzjerzy (coiffeurs),Warszawska 69
+Kowel,Gruszko,Fryzjerzy (coiffeurs),Sienkiewicza 22
+Kowel,Klejn M.,Fryzjerzy (coiffeurs),Sienkiewicza 21
+Kowel,Lerman,Fryzjerzy (coiffeurs),Brzeska 9
+Kowel,Piwkowski,Fryzjerzy (coiffeurs),Wierzbowa 5
+Kowel,Struter,Fryzjerzy (coiffeurs),Kolej. 85
+Kowel,Sztejn Ch.,Fryzjerzy (coiffeurs),Kolejowa 33
+Kowel,Szudziński Al.,Fryzjerzy (coiffeurs),Łucka 2
+Kowel,Wajngarten H.,Fryzjerzy (coiffeurs),Sienkiewicza 28
+Kowel,Winer D.,Fryzjerzy (coiffeurs),Warszawska 26
+Kowel,Fajfer G.,Fryzjerzy (coiffeurs),Warszawska 59
+Kowel,Lalfer i Kerzner,Fryzjerzy (coiffeurs),Kolejowa 91
+Kowel,Tymofzewicz,Fryzjerzy (coiffeurs),Łucka 9
+Kowel,Fridman R.,Futra (fourrures),Warszaw. 84
+Kowel,Kapelusznik J. i H.,Futra (fourrures),
+Warsaw,Kusznir M.,Futra (fourrures),Warszawska 96
+Warsaw,Kusznir M.,Futra (fourrures),Warszawska 186
+Warsaw,xAjzenberg M.,Galanterja (haberdashery),Warszawska 135
+Warsaw,xBass J.,Galanterja (haberdashery),
+Warsaw,Guz Ch.,Galanterja (haberdashery),Warszawska 160
+Warsaw,Berelzon G.,Galanterja (haberdashery),Warszawska 58
+Warsaw,Blajgus F.,Galanterja (haberdashery),Warszawska 6
+Warsaw,Bojm G.,Galanterja (haberdashery),Warszawska 126
+Warsaw,Brener E.,Galanterja (haberdashery),Warszawska 30
+Warsaw,xChoc A.,Galanterja (haberdashery),Warszawska 72
+Warsaw,xDjanowski J.,Galanterja (haberdashery),Warszawska 60
+Warsaw,xEjczys G.,Galanterja (haberdashery),Warszawska 134
+Warsaw,xEjczys M.,Galanterja (haberdashery),Warszawska 186
+Warsaw,xEjdelsztejn J.,Galanterja (haberdashery),Włodzimierska 1
+Warsaw,xEpsztejn M.,Galanterja (haberdashery),Warszawska 52
+Warsaw,xErlich Sz.,Galanterja (haberdashery),Warszawska 16
+Warsaw,xFrydman,Galanterja (haberdashery),Warszawska 50
+Warsaw,xJeruchimowicz B.,Galanterja (haberdashery),Warszawska 45
+Warsaw,Jeruchimowicz M.,Galanterja (haberdashery),Warszawska 49
+Warsaw,xKac B.,Galanterja (haberdashery),Warszawska 82
+Warsaw,Kac M.,Galanterja (haberdashery),Warszawska 58
+Warsaw,Kagan B.,Galanterja (haberdashery),Warszawska 14a
+Warsaw,xKagan J.,Galanterja (haberdashery),Kolejowa 11
+Warsaw,xKierżner B.,Galanterja (haberdashery),Sienkiewicza 39
+Warsaw,Koguś,Galanterja (haberdashery),Sienkiewicza 30
+Warsaw,Kaufman A.,Galanterja (haberdashery),Warszawska 48
+Warsaw,Kuprasz M.,Galanterja (haberdashery),Rynek
+Warsaw,Lejbenberg M.,Galanterja (haberdashery),Warszawska 146
+Warsaw,xLew I. W.,Galanterja (haberdashery),Warszawska 209
+Warsaw,Lewin I.,Galanterja (haberdashery),Warszawska 72
+Warsaw,Marder S.,Galanterja (haberdashery),Handlowa 4
+Warsaw,Poliszuk C.,Galanterja (haberdashery),Warszawska 2
+Warsaw,Poliszuk M.,Galanterja (haberdashery),Kolejowa 2
+Warsaw,xSzejnbaum P.,Galanterja (haberdashery),Warszawska 65
+Warsaw,xSzojchet J.,Galanterja (haberdashery),Kościelna 7
+Warsaw,Szulim B.,Galanterja (haberdashery),Warszawska 189
+Warsaw,xSpiwak J.,Galanterja (haberdashery),Magistracka
+Warsaw,xWajnsztejn N.,Galanterja (haberdashery),Sienkiewicza 13
+Warsaw,xWerba Sz.,Galanterja (haberdashery),Warszawska 2
+Warsaw,Wolf L.,Galanterja (haberdashery),Warszawska 181
+Warsaw,xWusiczer M.,Galanterja (haberdashery),Warszawska 330
+Warsaw,Zafran P.,Galanterja (haberdashery),Warszawska 44
+Warsaw,Zafran F.,Galanterja (haberdashery),Warszawska 100
+Warsaw,xZbinowski H.,Galanterja (haberdashery),Warszawska 29
+Warsaw,xZiskiad Ch.,Galanterja (haberdashery),Warszawska 134
+Warsaw,Ziskis M.,Galanterja (haberdashery),Warszawska 62
+Warsaw,Bregman,Galanterja (haberdashery),Warszawska 86
+Warsaw,xGhari Ch.,Galanterja (haberdashery),Wierzbowa 3
+Warsaw,Glik D.,Galanterja (haberdashery),Warszawska 33
+Warsaw,Ingber,Galanterja (haberdashery),Kościuszki 9
+Warsaw,Chusid R.,Garbarnie (tanneries),Brzeska 55
+Warsaw,"Kaplan, Rubia i Modejowicz",Garbarnie (tanneries),
+Warsaw,Szal Sz.,Garbarnie (tanneries),Maciejowska 102
+Warsaw,xWolman Bcia,Garbarnie (tanneries),Monopolowa nr. 71
+Warsaw,Kosmalki L.,Geometrzy (surveyors),
+Warsaw,Kownacki J.,Geometrzy (surveyors),
+Warsaw,Skulski L.,Geometrzy (surveyors),
+Warsaw,Sienkiewicz J.,Geometrzy (surveyors),
+Warsaw,Żuława L. K.,Geometrzy (surveyors),
+Warsaw,Melamed J.,Gilzy — fabryki (cigarette-tube factories),Brzeska 145
+Warsaw,Wajsman M.,Gilzy — fabryki (cigarette-tube factories),Warszawska 76
+Warsaw,Mojkler D.,Gremplarnie (carding mills),Brzeska 133
+Warsaw,Cytryn,Herbaciarnie (tea rooms),Kolejowa 21
+Warsaw,Kaufman A.,Herbaciarnie (tea rooms),Warszawska 80
+Warsaw,Kontrakt C.,Herbaciarnie (tea rooms),Mickiewicza 23
+Warsaw,Rejder S.,Herbaciarnie (tea rooms),Piłsudskiego 12
+Warsaw,Szetbojm S.,Herbaciarnie (tea rooms),Brzeska 1
+Warsaw,Szylter A.,Herbaciarnie (tea rooms),Kolejowa 86
+Warsaw,Hotel „Bristol”,Hotele (hotels),"Szojchet E., Warszawska 28"
+Warsaw,Hotel „Metropol”,Hotele (hotels),"Weinsztejn Ch., Kolejowa 77"
+Warsaw,Hotel „Palace”,Hotele (hotels),"Z. Baraniuk, Warszawska 16"
+Warsaw,Hotel „Polonja”,Hotele (hotels),"Berska P., Łucka 135"
+Warsaw,Hotel „Versal”,Hotele (hotels),"Glejzer I., Mickiewicza 4"
+Warsaw,Hotel „Warszawski”,Hotele (hotels),"Gulisz N., Kolejowa 84"
+Warsaw,Hotel „Pasaż”,Hotele (hotels),"Fuks I., Kolejowa 83"
+Warsaw,Sztern I. N.,Introligatorzy (bookbinders),Królowej Bony 7
+Warsaw,Wydra F.,Introligatorzy (bookbinders),Kolejowa 8
+Warsaw,Baranik — Zus,Jadłodajnie (restaurants),Warszawska 16
+Warsaw,„Wołynianka”,Jadłodajnie (restaurants),"Polskie Tow. Dobrocz. Chrześć., Sienkiewicza 9"
+Warsaw,xDichter J.,Jaja (eggs),Brzeska 33
+Warsaw,Rejder Ch.,Jaja (eggs),Brzeska 40
+Warsaw,xSegal F.,Jaja (eggs),Handlowa 27
+Warsaw,Goldring L. i Segal F.,Jaja (eggs),Włodzimierska 5
+Warsaw,xBass W.,Jubilerzy (jewellers),Warszawska 16
+Warsaw,xGygielman P.,Jubilerzy (jewellers),Warszawska 18
+Warsaw,Feldman B.,Jubilerzy (jewellers),Warszawska 111
+Warsaw,xFradelis A.,Jubilerzy (jewellers),Warszawska 42
+Warsaw,Pasławaski A.,Jubilerzy (jewellers),Warszawska 42
+Warsaw,Żelazniak J.,Maszyny / wyroby metalowe (uncertain OCR category),Hale miejskie
+Warsaw,Pajnsztejn M.,Kamieniołomy (stone quarries),Targowa 8
+Warsaw,Majsels S.,Kapelusze damskie (women's hats),Warszawska 56
+Warsaw,Swarcblat R.,Kapelusze damskie (women's hats),Warszawska 80
+Warsaw,Wolk E.,Kapelusze damskie (women's hats),Warszawska 46
+Warsaw,Kraft D.,Kapelusze damskie (women's hats),Warszawska 59
+Warsaw,xMiejska Kasa Oszczędności,Kasy oszczędnościowe (savings bank),
+Warsaw,xAwruch B.,Kawiarniе (cafés),Kolejowa 87
+Warsaw,Basiuk St.,Kawiarniе (cafés),Sienkiewicza 13
+Warsaw,xBer G.,Kawiarniе (cafés),Kolejowa 74
+Warsaw,Dobosiewicz Jul.,Kawiarniе (cafés),Warszawska
+Warsaw,Gibel Ch.,Kawiarniе (cafés),Kolejowa 3
+Warsaw,Hrzyb St.,Kawiarniе (cafés),Kolejowa 83
+Warsaw,xKiper M.,Kawiarniе (cafés),Warszawska 42
+Warsaw,Puchalska E.,Kawiarniе (cafés),Kolejowa 82
+Warsaw,Zigmundt Ch.,Kawiarniе (cafés),Kolejowa 83
+Warsaw,Fajnler,Kawiarniе (cafés),Krótka 16
+Warsaw,Rysak M.,Kawiarniе (cafés),Sienkiewicza 13
+Warsaw,Fuks J. i Ska,Kąpielowe zakłady (baths),Kolejowa 17
+Warsaw,„Express”,Kinematografy (cinemas),Piłsudskiego 10
+Warsaw,„Nowości”,Kinematografy (cinemas),Łucka 7
+Warsaw,Kagan,Kiszki świerszece (boyauderies),Tornikowska 1
+Warsaw,Bucher Ju.,Kolonjalne artykuły (colonial goods),Kolejowa 21
+Warsaw,Figal,Kolonjalne artykuły (colonial goods),Kolejowa 2
+Warsaw,Fisz L.,Kolonjalne artykuły (colonial goods),Kolejowa 2
+Warsaw,Fisz L.,Kolonjalne artykuły (colonial goods),Warszawska 100
+Warsaw,xKlejner S.,Kolonjalne artykuły (colonial goods),Warszawska 48
+Warsaw,Kopyt N.,Kolonjalne artykuły (colonial goods),Sienkiewicza
+Warsaw,Langier M. i Syn,Kolonjalne artykuły (colonial goods),Łucka 143
+Warsaw,Machałuk G.,Kolonjalne artykuły (colonial goods),Jaworowa 29
+Warsaw,Janczor J.,Kolonjalne artykuły (colonial goods),Warszawska 47
+Warsaw,Nigel Sz.,Kołodzieje (charrons),Lu. Warszawska 92
+Warsaw,Diksztejn M. i Krenier Sz.,Konie — handel (marchands de chevaux),Bezinonna 3
+Warsaw,xSpożywczo-Oszczędnościowe Spółdz. Stow. Inwalidów z o. o.,Kooperatywy (cooperatives),
+Warsaw,"xSpółdzielnia Osadników Wojskowych w Warszawie z o. o., oddz.",Kooperatywy (cooperatives),
+Warsaw,"xUkraińska Kooperatywa, Sp. z o. o.",Kooperatywy (cooperatives),
+Warsaw,xPress Ch.,Koszykarskie wyroby (vanniers),Warszawska 65
+Warsaw,xPress J.,Koszykarskie wyroby (vanniers),Warszawska 86
+Warsaw,Boker S.,Kowale (forgerons),Kolejowa 25
+Warsaw,Chait S.,Kowale (forgerons),Listopadowa 35
+Warsaw,Chmiel A.,Kowale (forgerons),Jasia 7
+Warsaw,Szpiner M.,Kowale (forgerons),Warszawska 42
+Warsaw,Zieliński R.,Kowale (forgerons),Sienkiewicza 29
+Warsaw,Kusznir,Kożuchy — pracownie (fabric. de manteaux en peaux de moutons),Maciejowska 4
+Warsaw,Arbstman E.,Krawcy (tailleurs),Warszawska 64
+Warsaw,Broner M.,Krawcy (tailleurs),Warszawska 213
+Warsaw,Broner Sz. i Rute J.,Krawcy (tailleurs),Krótka 34a
+Warsaw,Burman Z.,Krawcy (tailleurs),Warszawska 51
+Warsaw,Chait J.,Krawcy (tailleurs),Warszawska 72
+Warsaw,Chazen R.,Krawcy (tailleurs),Warszawska 42
+Warsaw,Diner G.,Krawcy (tailleurs),Zakóścielna 4
+Warsaw,Drukier U.,Krawcy (tailleurs),Krótka 34
+Warsaw,Ejl Ch.,Krawcy (tailleurs),Krótka 72
+Warsaw,Erlich D. Z.,Krawcy (tailleurs),Warszawska 106
+Warsaw,Erlich H.,Krawcy (tailleurs),Kościuszki 4
+Warsaw,Fajer I.,Krawcy (tailleurs),Łucka 3
+Warsaw,Fiszer Ch.,Krawcy (tailleurs),Warszawska 29
+Warsaw,Foker M.,Krawcy (tailleurs),
+Warsaw,Frydman Sz.,Krawcy (tailleurs),Mickiewicza 1
+Warsaw,Goldborg Sz.,Krawcy (tailleurs),Sienkiewicza
+Warsaw,Goldhamer Sz.,Krawcy (tailleurs),Kolejowa 10
+Warsaw,Gorodner G.,Krawcy (tailleurs),Warszawska 83
+Warsaw,Jankowski J.,Krawcy (tailleurs),Kolejowa 13
+Warsaw,xKac A.,Krawcy (tailleurs),Warszawska 58
+Warsaw,Kacal M.,Krawcy (tailleurs),Warszawska 61
+Warsaw,Kagan B.,Krawcy (tailleurs),3 Maja 4
+Warsaw,Kan,Krawcy (tailleurs),Warszawska
+Warsaw,Kartofel L.,Krawcy (tailleurs),Warszawska 131
+Warsaw,Kessel J.,Krawcy (tailleurs),Warszawska 61
+Warsaw,Koś G.,Krawcy (tailleurs),Warszawska 120
+Warsaw,Kotlar,Krawcy (tailleurs),Mieszczanska 8
+Warsaw,Krel B.,Krawcy (tailleurs),Sienkiewicza 41
+Warsaw,Kuczer J.,Krawcy (tailleurs),Jurydyka 2
+Warsaw,Kwasznik M.,Krawcy (tailleurs),Mickiewicza 3
+Warsaw,Loebzer M.,Krawcy (tailleurs),Warszawska 155
+Warsaw,Melamed M.,Krawcy (tailleurs),Brzeska 122
+Warsaw,Pen W.,Krawcy (tailleurs),Warszawska 44
+Warsaw,Piotrowski N.,Krawcy (tailleurs),Mickiewicza 8
+Warsaw,Rochman J.,Krawcy (tailleurs),Kolejowa 50
+Warsaw,Rojter B.,Krawcy (tailleurs),Warszawska 50
+Warsaw,Rojter M. E.,Krawcy (tailleurs),Ogrodowa 26
+Warsaw,Rozenfeld L.,Krawcy (tailleurs),Warszawska 139
+Warsaw,Sas Sz.,Krawcy (tailleurs),Warszawska 21
+Warsaw,Szamus M.,Krawcy (tailleurs),Warszawska 60
+Warsaw,Szamus Sz.,Krawcy (tailleurs),Warszawska 5
+Warsaw,Sznajder,Krawcy (tailleurs),Warszawska 181
+Warsaw,Wajner,Krawcy (tailleurs),Sienkiewicza 25
+Warsaw,Wedrestwajder G.,Krawcy (tailleurs),Warszawska 181
+Warsaw,Wejberszpil A.,Krawcy (tailleurs),Kolejowa 13
+Warsaw,Wydrya M. L.,Krawcy (tailleurs),Warszawska 55
+Warsaw,Zychkolc M.,Krawcy (tailleurs),Warszawska 127
+Warsaw,Zylberberg M.,Krawcy (tailleurs),Warszawska 57
+Warsaw,Nudelsztecher M.,Krawiectwo damskie (tailleurs pour dames et couturières),Warszawska 33
+Warsaw,Perelmuter L.,Krawiectwo damskie (tailleurs pour dames et couturières),Warszawska 48
+Warsaw,Tojba B. R.,Krawiectwo damskie (tailleurs pour dames et couturières),Rynek
+Warsaw,Bachowicz M.,Księgarnie (librairies),Kolejowa 88
+Warsaw,Bass S.,Księgarnie (librairies),Warszawska 168
+Warsaw,Księgarnia Polska,Księgarnie (librairies),Warszawska 63
+Warsaw,„Kultura”,Księgarnie (librairies),Kolejowa 2
+Warsaw,Księgarnia,Księgarnie (librairies),Warszawska
+Warsaw,My?,Księgarnie (librairies),Łucka 7
+Warsaw,xMęcznik L.,Księgarnie (librairies),Warszawska 42
+Warsaw,Plat M. i Szwarcblat M.,Księgarnie (librairies),Kolejowa 2
+Warsaw,Polini J.,Księgarnie (librairies),Łucka 161
+Warsaw,Raczyński i Ska,Księgarnie (librairies),
+Warsaw,xRojzen Ch.,Księgarnie (librairies),Łucka 71
+Warsaw,x„Światło”,Księgarnie (librairies),Kolejowa 88
+Warsaw,Niedola M.,Księgarnie (librairies),Łucka 3
+Warsaw,Plot B.,Księgarnie (librairies),Warszawska 35
+Warsaw,xBezzubow A.,Kuchenne naczynia (art. de cuisine),Warszawska 157
+Warsaw,xCymring H.,Kuchenne naczynia (art. de cuisine),Warszawska 128
+Warsaw,Cynamon S.,Kuchenne naczynia (art. de cuisine),Warszawska 182
+Warsaw,Gelpern L.,Kuchenne naczynia (art. de cuisine),Warszawska 164
+Warsaw,Melamed Ch.,Kuchenne naczynia (art. de cuisine),Warszawska 172
+Warsaw,Swiniuch G.,Kuchenne naczynia (art. de cuisine),Warszawska 1
+Warsaw,xSutorn H.,Kuchenne naczynia (art. de cuisine),Warszawska 175
+Warsaw,Tenebojm R.,Kuchenne naczynia (art. de cuisine),Warszawska 57
+Warsaw,xWajnsztejn P.,Kuchenne naczynia (art. de cuisine),Sienkiewicza 13
+Warsaw,Przyjaciel Cz.,Kwiaty (fleurs),Łucka 3
+Warsaw,xHerszkowicz E. i Kosbos L.,Lasy — eksploatacja (exploitations forestières),Kościuszki 12
+Białystok,Arkadjer,Manufaktura (tissus),ulica Warszawska nr. 116
+Białystok,Awerbuch M.,Manufaktura (tissus),Warszawska 116
+Białystok,Bar N.,Manufaktura (tissus),Warszawska 185
+Białystok,Bass K.,Manufaktura (tissus),Warszawska 58
+Białystok,Bromberg,Manufaktura (tissus),Warszawska 132
+Białystok,Cal J.,Manufaktura (tissus),Warszawska 100
+Białystok,Efrus E.,Manufaktura (tissus),Łucka 45
+Białystok,Ejnoch I.,Manufaktura (tissus),Warszawska 118
+Białystok,Fryszberg M.,Manufaktura (tissus),Warszawska 134
+Białystok,Gendler M.,Manufaktura (tissus),Warszawska 94
+Białystok,Giejer S.,Manufaktura (tissus),
+Białystok,Gitelis A.,Manufaktura (tissus),Warszawska 122
+Białystok,Gitelis S.,Manufaktura (tissus),Warszawska 122
+Białystok,Godniczer Sz.,Manufaktura (tissus),Warszawska 154
+Białystok,Goleman J.,Manufaktura (tissus),Warszawska 98
+Białystok,Goldberg I.,Manufaktura (tissus),Warszawska 22
+Białystok,Gorbaty J.,Manufaktura (tissus),Warszawska 80
+Białystok,Grajwer S.,Manufaktura (tissus),Warszawska 191
+Białystok,Grojser N.,Manufaktura (tissus),Warszawska 94
+Białystok,Kasztelański M. I.,Manufaktura (tissus),Warszawska 116
+Białystok,Kestenbojm S.,Manufaktura (tissus),Warszawska 144
+Białystok,Lewin K.,Manufaktura (tissus),Warszawska 166
+Białystok,Markiter L.,Manufaktura (tissus),Warszawska 30
+Białystok,Niemirowski R.,Manufaktura (tissus),Warszawska 88
+Białystok,Olszecki N.,Manufaktura (tissus),Włodzimierska 2
+Białystok,Opiliner,Manufaktura (tissus),Warszawska 28
+Białystok,Rojt B.,Manufaktura (tissus),Warszawska 64
+Białystok,Rojtenberg A.,Manufaktura (tissus),Warszawska 104
+Białystok,Rojter L.,Manufaktura (tissus),Warszawska 175
+Białystok,Szczerbaty W.,Manufaktura (tissus),Warszawska 124
+Białystok,Szenkier L.,Manufaktura (tissus),Warszawska 10
+Białystok,Zawodnik D.,Manufaktura (tissus),Warszawska 66
+Białystok,Ziskind J.,Manufaktura (tissus),Warszawska 62
+Białystok,Drukier N.,Manufaktura (tissus),Warszawska 142
+Białystok,Herman Ch.,Manufaktura (tissus),Warszawska 192
+Białystok,Hopen,Manufaktura (tissus),Strażacka
+Białystok,Kupiec F.,Manufaktura (tissus),Sienkiewicza 13
+Białystok,Kużniec,Manufaktura (tissus),Kolejowa 33
+Białystok,Lejbenbarg J.,Manufaktura (tissus),Włodzimierska 2
+Białystok,Sojbel R.,Manufaktura (tissus),Wierzbowa 5
+Białystok,Szapiro Ch.,Manufaktura (tissus),Warszawska 82
+Białystok,Werbla Sz.,Manufaktura (tissus),Warszawska 33
+Białystok,Olszowiec K.,Maszyny (machines),Łucka 8
+Białystok,"Singer Sewing Machine Company, oddz.",Maszyny do szycia (machines à coudre),Warszawska
+Białystok,Sztejnbach O.,Maszyny do szycia (machines à coudre),Warszawska 60
+Białystok,Pomoc,Maszyny rolnicze (machines agricoles),Łucka 8
+Białystok,"Posiew"", wł. Jonkisz A.",Maszyny rolnicze (machines agricoles),Listopadowa 3
+Białystok,Rytwiński W.,Maszyny rolnicze (machines agricoles),Łucka 46
+Białystok,Cukierman Ch.,Mąka (farines),Rynek
+Białystok,Cukierman I.,Mąka (farines),Handlowa nr. 11
+Białystok,Frankfowicż M.,Meble (meubles),Warszawska 82
+Białystok,Tenenbaum R.,Meble (meubles),Warszawska 52
+Białystok,Szwarcblat,Meble (meubles),Warszawska 93
+Białystok,Herbe M.,Mechaniczne warsztaty (mécaniciens),Łucka 117
+Białystok,Zilbersztejn M.,Mechaniczne warsztaty (mécaniciens),Łucka 50
+Białystok,Flauenbaum J.,Metalowe wyroby (articles métalliques),Łucka 50
+Białystok,Segal Ruw.,Mierzarskie zakłady (laiteries),Apteczna 36
+Białystok,Armarnik B. i Ska (walc),Młyny (moulins),Łucka 49
+Białystok,Bronsztejn Z.,Młyny (moulins),Kołodnicka
+Białystok,Epelbaum (mot),Młyny (moulins),Włodzimierska 149
+Białystok,Hejder (par),Młyny (moulins),
+Białystok,"Pierwsza Spółka Młynarska, wł. Cukierman I. i Ska",Młyny (moulins),Warszawska
+Białystok,Stolar Sz. i Melnicer Sz. (par. i gaz),Młyny (moulins),Łucka 20
+Białystok,Wejnsztejn A. (mot),Młyny (moulins),
+Białystok,Zokner S.,Młyny (moulins),Fabryczna 23
+Białystok,"Friedman S., Gamm N. B.",Młyny (moulins),
+Białystok,Zajdel,Mosty — budowa (constructeurs de ponts),Warszawska 91
+Białystok,Radwan J. i Ogiński B.,Mosty — budowa (constructeurs de ponts),Monopolowa 12
+Białystok,Sztejnbach O. i Ska,Muzyczne instrumenty (instruments de musique),Łucka 117
+Białystok,Lachs Ch.,Mydlarnie (savonneries),Łucka 77
+Białystok,Cuperfajn L.,Mydło (march. de savons),Włodzimierska 147
+Białystok,Ćwik R.,Nafta (pétrole),Łucka 68
+Białystok,Melamed A.,Nafta (pétrole),Brzeska 143
+Białystok,Melamod St,Nafta (pétrole),Bazarna 8
+Białystok,"Smary"", wł. Bebezuk L. i Ska",Nafta (pétrole),Warszawska 135
+Białystok,"Standard-Nobel"", S. A., oddz.",Nafta (pétrole),Kołodnicka 7
+Białystok,Efrus E.,Nafta (pétrole),Łucka 45
+Białystok,Polmin,Nafta (pétrole),Brzeska 153
+Białystok,Ejsmont Piotr,Nasiona (graines),Kościelna 1
+Białystok,Motluk I.,Nasiona (graines),Warszawska 148
+Maciejów,Ciechoński W.,Nierogacizna-handel (marchands de porcs),Maciejów
+Białystok,Kacałap J.,Obrazy (imagerie),Warszawska 184
+Białystok,Blumsztejn A.,Obuwie (chaussures),Warszawska 199
+Białystok,Ejbuszyc Ch.,Obuwie (chaussures),Warszawska 80
+Białystok,Erlich Sz.,Obuwie (chaussures),Warszawska 67
+Białystok,Granicz Sz.,Obuwie (chaussures),Warszawska 44
+Białystok,Gurwic I.,Obuwie (chaussures),Warszawska 112
+Białystok,Guz Ch.,Obuwie (chaussures),Warszawska 134
+Białystok,Ingber i Werner,Obuwie (chaussures),Włodzimierska 1
+Białystok,Pugacz H.,Obuwie (chaussures),Warszawska 98
+Białystok,Szechter A.,Obuwie (chaussures),Warszawska 83
+Białystok,Wajner B.,Obuwie (chaussures),Warszawska 132
+Białystok,Zommer M.,Obuwie (chaussures),Warszawska 92
+Białystok,Hojzen M.,Ocet — rozlewnie (embouteillage de vinaigres),Pomnikowa 33
+Białystok,"×Chargeurs Réunis, T. A.",Okrętowe biura (agences maritimes),Kolejowa 58
+Białystok,Cosulich Line,Okrętowe biura (agences maritimes),Kolejowa 35
+Białystok,Królewsko Holenderski Lloyd,Okrętowe biura (agences maritimes),Kolejowa 88
+Białystok,Red Star Line,Okrętowe biura (agences maritimes),Kolejowa 91
+Białystok,Skandynawsko-Amerykańska Linja,Okrętowe biura (agences maritimes),Kolejowa 43
+Białystok,"×„The Royal Mail Steam Packet Company” w Londynie, oddz.",Okrętowe biura (agences maritimes),Nowokolejowa 3
+Białystok,White Star Line,Okrętowe biura (agences maritimes),Kolejowa 91
+Białystok,Bałtycko-Amerykańska Linja,Okrętowe biura (agences maritimes),Kolejowa 65
+Białystok,×Cuperfajn S.,Olejarnie (huileries),Łucka 79
+Białystok,Guz B.,Olejarnie (huileries),Łucka 73
+Białystok,Jurczenkowicz H.,Olejarnie (huileries),Włodzimierska 103
+Białystok,Lorber I.,Olejarnie (huileries),Łucka 77
+Białystok,Łapidus A.,Olejarnie (huileries),Łucka 91
+Białystok,×Finkielsztejn J.,Owoce (fruits),Warszawska 6
+Białystok,×Mendel M.,Owoce (fruits),Warszawska 135
+Białystok,Borensztein J. D.,Pakuły (étoupes),Warszawska 27
+Białystok,Halperin A.,Papierowe wyroby — fabryki (fabr. de cartonnages),Zakościelna 4
+Białystok,Rajz Sz.,Pasza (fourrages),
+Białystok,Biber B.,Piekarnie (boulangers),Kościelna 1
+Białystok,Blit J.,Piekarnie (boulangers),Brzeska 31
+Białystok,Blit M.,Piekarnie (boulangers),Łucka 60
+Białystok,Blit Z.,Piekarnie (boulangers),Warszawska 147
+Białystok,Cukrys S.,Piekarnie (boulangers),Mieszczańska 69
+Białystok,Czerna M.,Piekarnie (boulangers),Włodzimierska 5
+Białystok,Erlich S.,Piekarnie (boulangers),Krótka 40
+Białystok,Erlich T.,Piekarnie (boulangers),Warszawska 99
+Białystok,Fiszbejn J.,Piekarnie (boulangers),Wojskowa 20
+Białystok,Flomenbaum B.,Piekarnie (boulangers),Krzywa 7
+Białystok,Gibel B.,Piekarnie (boulangers),Warszawska 16
+Białystok,Gibel Ch.,Piekarnie (boulangers),Listopadowa 69
+Białystok,Głouszek W.,Piekarnie (boulangers),Blińska 39
+Białystok,Hernich L.,Piekarnie (boulangers),Warszawska 188
+Białystok,Langier B.,Piekarnie (boulangers),Cyrkowa 18
+Białystok,Merel C.,Piekarnie (boulangers),Mickiewicza 47
+Białystok,Minces N.,Piekarnie (boulangers),Żydowska 28
+Białystok,Rojzen Ch. A.,Piekarnie (boulangers),Żydowska 13
+Białystok,Szala J.,Piekarnie (boulangers),Sienkiewicza 20
+Białystok,×Spyra F.,Piekarnie (boulangers),Tuszowskiego
+Białystok,Sznajder M.,Piekarnie (boulangers),Listopadowa 17
+Białystok,Zylbersztejn A.,Piekarnie (boulangers),Listopadowa 93
+Białystok,×Aszkienazy Ch.,Piśmienne materjały (fournitures de bureaux),Kolejowa 63
+Białystok,×Aszkienazy S.,Piśmienne materjały (fournitures de bureaux),Warszawska 114
+Białystok,Bar C.,Piśmienne materjały (fournitures de bureaux),Warszawska 84
+Białystok,Kuzniec L.,Piśmienne materjały (fournitures de bureaux),Warszawska 45
+Białystok,×Messer D.,Piśmienne materjały (fournitures de bureaux),Warszawska 112
+Białystok,Bronsztejn D.,Piwiarnie (brasseries-débit),Krótka 6
+Białystok,Chajton S.,Piwiarnie (brasseries-débit),Budyszczań. 3
+Białystok,Klejner Sz.,Piwiarnie (brasseries-débit),Warszawska 45
+Białystok,Linzen D.,Piwiarnie (brasseries-débit),Warszawska 165
+Białystok,Linzen P.,Piwiarnie (brasseries-débit),Włodzimierska 6
+Białystok,Rubinsztejn J.,Piwiarnie (brasseries-débit),Sienkiewicza 30
+Białystok,Rusiłowicz A.,Piwiarnie (brasseries-débit),Monopolowa 2
+Białystok,Rytwiński W.,Piwiarnie (brasseries-débit),Łucka 123
+Białystok,Sochaczewski J.,Piwiarnie (brasseries-débit),Kolejowa 44
+Białystok,×Sojbel I. M.,Piwiarnie (brasseries-débit),Dzika 16
+Białystok,Szamuś S.,Piwiarnie (brasseries-débit),Brzeska 7
+Białystok,Szejntop S.,Piwiarnie (brasseries-débit),Kolejowa 2
+Białystok,×Szuster D.,Piwiarnie (brasseries-débit),Sienkiewicza 38
+Białystok,×Tojbicz I.,Piwiarnie (brasseries-débit),Brzeska 39
+Białystok,Zysblat T.,Piwiarnie (brasseries-débit),Kolejowa 88
+Białystok,Auchman E.,Piwiarnie (brasseries-débit),Kolejowa 56
+Białystok,Balicka M.,Piwiarnie (brasseries-débit),Kolejowa 75
+Białystok,Fijałkowski,Piwiarnie (brasseries-débit),Warszawska 16
+Białystok,Kaweberg,Piwiarnie (brasseries-débit),Warszawska 170
+Białystok,Matuszyński,Piwiarnie (brasseries-débit),Sienkiewicza 29
+Białystok,Rajt,Piwiarnie (brasseries-débit),Brzeska 9
+Białystok,Soska E.,Piwiarnie (brasseries-débit),3 Maja 4
+Białystok,×Pomeranc,Piwo (bière),Listopadowa 91
+Białystok,×Tojbicz A.,Piwo (bière),Brzeska 39
+Białystok,Haberman S.,Piwo (bière),Warszawska 182
+Białystok,Hurtowy Skład Piwa — Kagan M.,Piwo (bière),Fabryczna 6
+Białystok,"×„Import”, Tow. Przemysłowo-Handlowe",Podkłady kolejowe (traverses pour chemins de fer),Kolejowa 91
+Białystok,Fefer K.,Pokoje umeblowane (chambres meublées),Łucka 134
+Białystok,Messer D.,Pokoje umeblowane (chambres meublées),Kolejowa 41
+Białystok,Nejman Sz.,Pokoje umeblowane (chambres meublées),Warszawska 1
+Białystok,Awarbuch Ch.,Pończochy — fabryki (fabr. de bas),Warszawska 89
+Białystok,Mełamed S.,Powroźnicy (cordiers),Rynek 8
+Białystok,Bar Ch.,Pralnie (blanchisseries de fin),Warszawska 92
+Białystok,Rufe A.,Pralnie (blanchisseries de fin),Warszawska 3
+Białystok,Fuks L.,Prośb i tłumaczeń biura (pétitions et traductions),Warszawska 38
+Białystok,×Lerer N.,Prośb i tłumaczeń biura (pétitions et traductions),Warszawska 9
+Białystok,×Werba L.,Prośb i tłumaczeń biura (pétitions et traductions),Łucka 22
+Białystok,Werba M.,Prośb i tłumaczeń biura (pétitions et traductions),Warszawska 28
+Białystok,"×Pasieka, Sp. z o. o.",Pszczelnictwo (apiculture),Mickiewicza 3
+Białystok,×Bielawa J.,Restauracje (restaurants),Sienkiewicza 29
+Białystok,Kagan M.,Restauracje (restaurants),Warszawska 1
+Białystok,×Kazimierska J.,Restauracje (restaurants),Kolejowa 2
+Białystok,Mazurkiewicz J.,Restauracje (restaurants),[odcięte / truncated]
+Kowel,Resursa Obywatelska,Różne / Usługi,Łucka 179
+Kowel,Szyper I.,Różne / Usługi,Warszawska 42
+Kowel,Wajsblat I. i Erlich I.,Różne / Usługi,Włodzimierska
+Kowel,"Syndykat Rolniczy w Hrubieszowie, S. A., oddz.",Rolnicze art. (produits agricoles),
+Kowel,Lerner B.,Rowery (bicyclettes),Warszawska 3
+Kowel,Messer P.,Rowery (bicyclettes),Warszawska 43
+Kowel,Sperowicz E.,Rowery - reparacja (réparations de bicyclettes),Mickiewicza 36
+Kowel,Sztejnsznajd,Rowery - reparacja (réparations de bicyclettes),Warszawska 5
+Kowel,Gopen F.,Różne towary (articles divers),Lubliniecka 8
+Kowel,Kowalska N.,Różne towary (articles divers),
+Kowel,Mejler Ch.,Różne towary (articles divers),Warszawska 143
+Kowel,Szwarc Ch.,Rybołówstwo (pêche),Mickiewicza 21
+Kowel,Werner N.,Rybołówstwo (pêche),Piaskowa 7
+Kowel,Żytomier B.,Rybołówstwo (pêche),Sienkiewicza 16
+Kowel,Atlas E.,Rzeźnicy (bouchers),Kolejowa 31
+Kowel,Bater i Szyfman,Rzeźnicy (bouchers),Kolejowa 12
+Kowel,Berman Sz.,Rzeźnicy (bouchers),Handlowa 21
+Kowel,Chmiel I.,Rzeźnicy (bouchers),Brzeska 50
+Kowel,Dawidowicz A.,Rzeźnicy (bouchers),Krótka 12
+Kowel,Egber S.,Rzeźnicy (bouchers),Kolejowa 36
+Kowel,Feldman M.,Rzeźnicy (bouchers),Warszawska 33
+Kowel,Fitersojbel P.,Rzeźnicy (bouchers),Maciejowska 98
+Kowel,Gorin I.,Rzeźnicy (bouchers),Sienkiewicza 21
+Kowel,Gorin i Mytnik,Rzeźnicy (bouchers),Warszawska 25
+Kowel,Gorin S.,Rzeźnicy (bouchers),Krótka 16
+Kowel,Goryń B.,Rzeźnicy (bouchers),Mieszczańska 8
+Kowel,Goryń D.,Rzeźnicy (bouchers),Sienna 6
+Kowel,Goryń J.,Rzeźnicy (bouchers),Handlowa 31
+Kowel,Gutman L.,Rzeźnicy (bouchers),Wiejska 5
+Kowel,Hochman A.,Rzeźnicy (bouchers),Handlowa 23
+Kowel,Kagan M.,Rzeźnicy (bouchers),Fabryczna 6
+Kowel,Karsz J.,Rzeźnicy (bouchers),Mickiewicza 1
+Kowel,Krasnowski W.,Rzeźnicy (bouchers),Warszawska 39
+Kowel,Oziomek Stef.,Rzeźnicy (bouchers),
+Kowel,Pietruszka C.,Rzeźnicy (bouchers),Kolejowa 13
+Kowel,Pietruszka K.,Rzeźnicy (bouchers),Sienkiewicza 12
+Kowel,Rojtblat,Rzeźnicy (bouchers),Kolejowa 2
+Kowel,Trepezyński I.,Rzeźnicy (bouchers),
+Kowel,"Stała Komunikacja Samochodowa Kowel-Ratno, Sp. z o. o.",Samochodowa komunikacja (transports automobiles),Warszawska 61
+Kowel,Brandes L.,Samochodowa komunikacja (transports automobiles),
+Kowel,Sztejnberg M. i Werba A.,Samochodowa komunikacja (transports automobiles),Mickiewicza
+Kowel,Herszenhorn,Siodlarze i rymarze (selliers et bourreliers),Foksal 14
+Kowel,Melamed,Siodlarze i rymarze (selliers et bourreliers),Krótka 54
+Kowel,Pruss J. B.,Siodlarze i rymarze (selliers et bourreliers),Warszawska
+Kowel,Atlas B.,Skóry (cuirs et peaux),Warszawska 201
+Kowel,Atlas Z.,Skóry (cuirs et peaux),Warszawska 201
+Kowel,Brat D.,Skóry (cuirs et peaux),Brzeska 38
+Kowel,Bregman U.,Skóry (cuirs et peaux),Warszawska 201
+Kowel,Bronszaft B.,Skóry (cuirs et peaux),Warszawska 162
+Kowel,Bronszaft S.,Skóry (cuirs et peaux),Warszawska 126
+Kowel,Bronzaft Sz.,Skóry (cuirs et peaux),Warszawska 217
+Kowel,Byk B.,Skóry (cuirs et peaux),Kolejowa 7
+Kowel,Chusid B.,Skóry (cuirs et peaux),Warszawska 195
+Kowel,Ćwik C.,Skóry (cuirs et peaux),Warszawska 165
+Kowel,Gonik M.,Skóry (cuirs et peaux),Kolejowa 29
+Kowel,Kapsuk N.,Skóry (cuirs et peaux),Brzeska 23
+Kowel,Kirazenbojm N.,Skóry (cuirs et peaux),Warszawska 211
+Kowel,Lande H.,Skóry (cuirs et peaux),Brzeska 13
+Kowel,Mejler D.,Skóry (cuirs et peaux),Warszawska 150
+Kowel,Ryt B.,Skóry (cuirs et peaux),Kr. Bony 6
+Kowel,Sztern A.,Skóry (cuirs et peaux),Warszawska 97
+Kowel,Wekselbaum B.,Skóry (cuirs et peaux),Kolejowa 20
+Kowel,Zalchendler U.,Skóry (cuirs et peaux),Kolejowa 14
+Kowel,Łapides L.,Smary (graisses pour machines),Włodzimierska 2
+Kowel,Bebczuk i Ska,Smary - fabr. (fabr. de graisses pour machines),Warszawska 135
+Kowel,Wuksal J.,Smary - fabr. (fabr. de graisses pour machines),Włodzimierska 135
+Kowel,Pugacz E.,Soki owocowe - wyrób (fabr. de sirops de fruits),Brzeska 101
+Kowel,Komitet Powiatowy L. O. P. P.,Sól (sel),Warszawska 47
+Kowel,Trzcińska A.,Sól (sel),Włodzimierska 3
+Kowel,Zawadzki P.,Sól (sel),Włodzimierska 2
+Kowel,Gaśko D.,Sól (sel),Łucka 121
+Kowel,„Wolf Sol” Sp. z o. o.,Sól (sel),Łucka 62a
+Kowel,"„Wolny Skład Soli”, Sp. z o. o.",Sól (sel),
+Kowel,Postołke A.,Sól (sel),Włodzimierska 3
+Kowel,Myszkowska B.,Spirytualja (spiritueux),Krótka 18
+Kowel,Noskow S.,Spirytualja (spiritueux),Warszawska 29
+Kowel,Osiuk Z. i Szyk F.,Spirytualja (spiritueux),Warszawska 17
+Kowel,Wejrman J. i Boruszek Sz.,Spirytualja (spiritueux),Brzeska 4
+Kowel,Guz - Siemianowski,Spirytualja (spiritueux),Brzeska 9
+Kowel,Kokoruza J.,Spirytualja (spiritueux),Warszawska 24
+Kowel,Babicki J.,Spożywcze artykuły (comestibles),Kolejowa 12
+Kowel,Bachower Sz.,Spożywcze artykuły (comestibles),Handlowa 2
+Kowel,Balbir G.,Spożywcze artykuły (comestibles),Sienkiewicza 43
+Kowel,Bar D.,Spożywcze artykuły (comestibles),Warszawska 141
+Kowel,Barg L.,Spożywcze artykuły (comestibles),
+Kowel,Bebczuk I.,Spożywcze artykuły (comestibles),Warszawska 62
+Kowel,Bebczuk L.,Spożywcze artykuły (comestibles),Krótka 13
+Kowel,Ber M.,Spożywcze artykuły (comestibles),Kolejowa 74
+Kowel,Borensztejn E.,Spożywcze artykuły (comestibles),Krótka 10
+Kowel,Bieloraj Sz.,Spożywcze artykuły (comestibles),Warszawska 39
+Kowel,Blajsztejn P.,Spożywcze artykuły (comestibles),Mieszczańska 4
+Kowel,Blumenkranc R.,Spożywcze artykuły (comestibles),3 Maja 6
+Kowel,Bronsztejn J.,Spożywcze artykuły (comestibles),Warszaw. 33
+Kowel,Byk Sz.,Spożywcze artykuły (comestibles),Kolejowa 46
+Kowel,Chanis B.,Spożywcze artykuły (comestibles),Kolejowa 36
+Kowel,Charat Sz.,Spożywcze artykuły (comestibles),Warszawska 191
+Kowel,Chasis P.,Spożywcze artykuły (comestibles),Warszawska 187
+Kowel,Chityk R.,Spożywcze artykuły (comestibles),Kolejowa 87
+Kowel,Chusid M.,Spożywcze artykuły (comestibles),Handlowa 7
+Kowel,Chusid R.,Spożywcze artykuły (comestibles),Sienna 8
+Kowel,Cun S.,Spożywcze artykuły (comestibles),Rynek 6
+Kowel,Curi H.,Spożywcze artykuły (comestibles),Pomnikova 33
+Kowel,Ćwik,Spożywcze artykuły (comestibles),
+Kowel,Dołgopoluk A.,Spożywcze artykuły (comestibles),Sienkiewicza 14
+Kowel,Ejchenbaum R.,Spożywcze artykuły (comestibles),Sienkiewicza 39
+Kowel,Elfand Ch.,Spożywcze artykuły (comestibles),Handlowa 20
+Kowel,Erlich M.,Spożywcze artykuły (comestibles),Rynek 29
+Kowel,Erlichgerecht J.,Spożywcze artykuły (comestibles),Sienkiewicza 41
+Kowel,Erlichgerecht M.,Spożywcze artykuły (comestibles),Rynek
+Kowel,Erlichgerecht M.,Spożywcze artykuły (comestibles),Fabryczna 5
+Kowel,Fefer J.,Spożywcze artykuły (comestibles),
+Kowel,Finkiel I.,Spożywcze artykuły (comestibles),Sienkiewicza 2
+Kowel,Finkielsztejn A.,Spożywcze artykuły (comestibles),Handlowa 17
+Kowel,Finkielsztejn B.,Spożywcze artykuły (comestibles),Rynek 9
+Kowel,Finkielsztejn D.,Spożywcze artykuły (comestibles),Handlowa 12
+Kowel,Fiter-sojbel H.,Spożywcze artykuły (comestibles),Handlowa
+Kowel,Flasztac Z.,Spożywcze artykuły (comestibles),Warszawska 147
+Kowel,Flasztyc I.,Spożywcze artykuły (comestibles),Handlowa 50
+Kowel,Flomenbaum L.,Spożywcze artykuły (comestibles),Warszawska 143
+Kowel,Friszberg A.,Spożywcze artykuły (comestibles),Zaułek Krótki 15
+Kowel,Frysberg Chaja,Spożywcze artykuły (comestibles),Warszawska 134
+Kowel,Frysberg S.,Spożywcze artykuły (comestibles),Handlowa 4
+Kowel,Frysberg S.,Spożywcze artykuły (comestibles),Włodzimierska 5
+Kowel,Geller F.,Spożywcze artykuły (comestibles),Warszawska 147
+Kowel,Giwant P.,Spożywcze artykuły (comestibles),Warszawska 81
+Kowel,Głoszek J.,Spożywcze artykuły (comestibles),Handlowa 4
+Kowel,Gojzen A.,Spożywcze artykuły (comestibles),Włodzimierska 3
+Kowel,Goldberg W.,Spożywcze artykuły (comestibles),Sienkiewicza 38
+Kowel,Goldfarb P.,Spożywcze artykuły (comestibles),Mieszczańska 6
+Kowel,Gonik J.,Spożywcze artykuły (comestibles),Ks. Poniatowskiego 8
+Kowel,Grinblat I.,Spożywcze artykuły (comestibles),Kolejowa 38
+Kowel,Grojser H. i N.,Spożywcze artykuły (comestibles),Warszawska 126
+Kowel,Grojser J.,Spożywcze artykuły (comestibles),Krótka 4a
+Kowel,Grynblat M.,Spożywcze artykuły (comestibles),Kolejowa 38
+Kowel,Gudes M.,Spożywcze artykuły (comestibles),Handlowa 14
+Kowel,Gutman I.,Spożywcze artykuły (comestibles),Artyleryjska 6
+Kowel,Gwircman R.,Spożywcze artykuły (comestibles),Dzika 16
+Kowel,Ingber E.,Spożywcze artykuły (comestibles),Warszawska 46
+Kowel,Ingber M.,Spożywcze artykuły (comestibles),Sienkiewicza 41
+Kowel,Jucht C.,Spożywcze artykuły (comestibles),Handlowa 18
+Kowel,Jucht M.,Spożywcze artykuły (comestibles),Brzeska 20
+Kowel,Kac M.,Spożywcze artykuły (comestibles),Rynek 6
+Kowel,Kaczkowski L.,Spożywcze artykuły (comestibles),Kołodnicka 10
+Kowel,Kadec L.,Spożywcze artykuły (comestibles),Mieszczańska 4
+Kowel,Kagan Sz.,Spożywcze artykuły (comestibles),Pomnikova 78
+Kowel,Kandelsztejn R.,Spożywcze artykuły (comestibles),Poniatowskiego 13
+Kowel,Kantor W.,Spożywcze artykuły (comestibles),Brzeska 87
+Kowel,Kasiński W.,Spożywcze artykuły (comestibles),Wierzbowa 1
+Kowel,Kasztan J.,Spożywcze artykuły (comestibles),Sienkiewicza 25
+Kowel,Kaufman B.,Spożywcze artykuły (comestibles),
+Kowel,Kierzner N.,Spożywcze artykuły (comestibles),Kolejowa 67
+Kowel,Koliren H.,Spożywcze artykuły (comestibles),Kolejowa 39
+Kowel,Kowelska Spółka Spożywcza,wł. Krupiński i Ska,Kościelna 1 i Warszawska 32
+Kowel,Kure S. i K.,wł. Krupiński i Ska,Brzeska 13
+Kowel,Langier T.,wł. Krupiński i Ska,Budyszczańska 8
+Kowel,Lejbenberg M.,wł. Krupiński i Ska,Rynek 23
+Kowel,Lejkach L.,wł. Krupiński i Ska,Brzeska 10
+Kowel,Lejwi W.,wł. Krupiński i Ska,Kolejowa 54
+Kowel,Lewertow H.,wł. Krupiński i Ska,Ryn. 18
+Kowel,Lewi A.,wł. Krupiński i Ska,Kolejowa 5
+Kowel,Liberman R.,wł. Krupiński i Ska,Kościelna 1
+Kowel,Landa B.,wł. Krupiński i Ska,Brzeska 14
+Kowel,Langer M.,wł. Krupiński i Ska,Warszawska 18
+Kowel,Łysakowski A.,wł. Krupiński i Ska,Monopolowa 86
+Kowel,Maluszka M.,wł. Krupiński i Ska,Handlowa 10
+Kowel,Marszałowicz Sz. i Guz Lejzor,wł. Krupiński i Ska,Rynek 3
+Kowel,Melamed Ar.,wł. Krupiński i Ska,Handlowa 23
+Kowel,Melamed Ab.,wł. Krupiński i Ska,Warszawska 251
+Kowel,Melamed Ch.,wł. Krupiński i Ska,Handlowa 25
+Kowel,Melamed R.,wł. Krupiński i Ska,Brzeska 145
+Kowel,Milsztejn Sz.,wł. Krupiński i Ska,Magistr. 2
+Kowel,Myk J.,wł. Krupiński i Ska,
+Kowel,Notkowski D.,wł. Krupiński i Ska,Sienkiewicza 1
+Kowel,Odrodzenie,wł. Pająkowa B.,Sienkiewicza 31
+Kowel,Pelc J.,wł. Pająkowa B.,
+Kowel,Pendziach Ch.,wł. Pająkowa B.,Monopolowa 61
+Kowel,Peregal A.,wł. Pająkowa B.,Kolejowa 24
+Kowel,Perwin D.,wł. Pająkowa B.,Handlowa 22
+Kowel,Piterman D.,wł. Pająkowa B.,Listopadowa 36
+Kowel,Rabiner P.,wł. Pająkowa B.,Rynek 34
+Kowel,Rajber G.,wł. Pająkowa B.,Sienkiewicza 11
+Kowel,Raszczyński L.,wł. Pająkowa B.,Łucka 113
+Kowel,Rajz L.,wł. Pająkowa B.,Kolejowa 10
+Kowel,Rejder Ch.,wł. Pająkowa B.,Wojskowa 1
+Kowel,Rejder Z.,wł. Pająkowa B.,Warszawska 154
+Kowel,Rejeder J.,wł. Pająkowa B.,Łucka 37
+Kowel,Rojt B.,wł. Pająkowa B.,Brzeska 18
+Kowel,Rojzen R.,wł. Pająkowa B.,Rynek 12
+Kowel,Rowner P.,wł. Pająkowa B.,Wierzbowa 3
+Kowel,Rubinsztejn Ś.,wł. Pająkowa B.,Sienkiewicza 16
+Kowel,Rusiłowicz A.,wł. Pająkowa B.,Warszawska 85
+Kowel,Sawicki Z.,wł. Pająkowa B.,Sienkiewicza 35
+Kowel,Segał R.,wł. Pająkowa B.,Sienkiewicza 38
+Kowel,Singal S.,wł. Pająkowa B.,Kolejowa 76
+Kowel,Stolar Ch.,wł. Pająkowa B.,
+Kowel,Styczyńska A.,wł. Pająkowa B.,Sienkiewicza 36
+Kowel,Sygał Sz.,wł. Pająkowa B.,Warszawska
+Kowel,Szama L.,wł. Pająkowa B.,Monopolowa 49
+Kowel,Szargiel L.,wł. Pająkowa B.,Fabryczna 3
+Kowel,Szarpankier J.,wł. Pająkowa B.,Brzeska 6
+Kowel,Szechter J.,wł. Pająkowa B.,Sienkiew. 19
+Kowel,Szenkier,wł. Pająkowa B.,Krótka 17
+Kowel,Szerbojm B.,wł. Pająkowa B.,Warszawska 144
+Kowel,Szpigielman G.,wł. Pająkowa B.,Rynek 7
+Kowel,Sztejnberg Ch.,wł. Pająkowa B.,Mickiewicza 3
+Kowel,Sztejnberg R.,wł. Pająkowa B.,Sienkiewicza 28
+Kowel,Sztenberg R.,wł. Pająkowa B.,Łucka 129
+Kowel,Sztern S.,wł. Pająkowa B.,
+Kowel,Sztylerman D.,wł. Pająkowa B.,Magistracka 3
+Kowel,Szuf G.,wł. Pająkowa B.,Kolejowa 58
+Kowel,Szwarc G.,wł. Pająkowa B.,Handlowa 16
+Kowel,Szwarc J.,wł. Pająkowa B.,Rynek 15
+Kowel,Szwarc U.,wł. Pająkowa B.,Targowa 2
+Kowel,Szawediak Ch.,wł. Pająkowa B.,Warszawska 100
+Kowel,Tabacznik E.,wł. Pająkowa B.,Brzeska 5
+Kowel,Tenenbojm,wł. Pająkowa B.,Kolej. 43
+Kowel,Test L.,wł. Pająkowa B.,Listopadowa 72
+Kowel,Tojbic L.,wł. Pająkowa B.,Handlowa 20
+Kowel,Truk M.,wł. Pająkowa B.,Handlowa 21
+Kowel,Wajner H.,wł. Pająkowa B.,Handlowa 7
+Kowel,Wajntich Sz.,wł. Pająkowa B.,Maciejowska 11
+Kowel,Wajnsztejn Ch.,wł. Pająkowa B.,Kolejowa 88
+Kowel,Werba M.,wł. Pająkowa B.,Sienkiewicza 6
+Kowel,Winter E.,wł. Pająkowa B.,Mickiewicza 4
+Kowel,Wirwer W.,wł. Pająkowa B.,Kolejowa 63
+Kowel,Woliwełer M.,wł. Pająkowa B.,Warszawska 239
+Kowel,Zafran A.,wł. Pająkowa B.,Handlowa 36
+Kowel,Zafran B.,wł. Pająkowa B.,Rynek 21
+Kowel,Zafran B.,wł. Pająkowa B.,Kolejowa 24
+Kowel,Zafran Ch.,wł. Pająkowa B.,Pomnikova 51
+Kowel,Zafran E.,wł. Pająkowa B.,Łucka 110
+Kowel,Zafran G.,wł. Pająkowa B.,Handlowa 19
+Kowel,Zdrodowski A.,wł. Pająkowa B.,Warszawska 34
+Kowel,Zokner I.,wł. Pająkowa B.,Warszawska 1
+Kowel,Benis A.,wł. Pająkowa B.,Listopadowa 72
+Kowel,Gonik,wł. Pająkowa B.,Sienkiewicza
+Kowel,Machniuk,wł. Pająkowa B.,War...
+Kowel,Sznajder B.,Blacharze (ferblantiers),Warszawska 41
+Kowel,Markowska,Blacharze (ferblantiers),Brzeska 152
+Kowel,Murik B.,Blacharze (ferblantiers),Pomnikowa 32
+Kowel,Sztokamer,Blacharze (ferblantiers),Mickiew. 19
+Kowel,Wajner R.,Blacharze (ferblantiers),Warszawska 3
+Kowel,Zask A.,Blacharze (ferblantiers),Włodzimierska 44
+Kowel,Zilberberg,Blacharze (ferblantiers),Łucka 87
+Kowel,Wajner Z.,Starczyzna — handel (fripiers),Handlowa 6
+Kowel,Chazen L.,Stolarze (menuisiers),Warszawska 129
+Kowel,Jagodziner M.,Stolarze (menuisiers),Warszawska 119
+Kowel,Nowiczewski P.,Stolarze (menuisiers),Warszawska 61
+Kowel,Szejna D.,Stolarze (menuisiers),Strażacka 28
+Kowel,Szwarc M.,Stolarze (menuisiers),Maciejowska 6
+Kowel,Tenenbaum R.,Stolarze (menuisiers),Listopadowa 31
+Kowel,Gluzman,Stolarze (menuisiers),Pomnikowa 50
+Kowel,Jurczenkowicz,Stolarze (menuisiers),Włodzimierska 103
+Kowel,Szowe,Stolarze (menuisiers),Krzywa 3
+Kowel,Bronsztejn M.,Studnie — budowa (forages de puits),Kolejowa
+Kowel,"Two Handlowe „Kresy”, wł. Twerski A. i Wendel J.",Sukno (draperies),Warszawska 154
+Kowel,Fajgenbaum A.,Szewckie przybory (fournit. p. chaussures),Kolejowa 16
+Kowel,Arbajter Sz.,Szewcy (cordonniers),Warszawska 257
+Kowel,Bender B.,Szewcy (cordonniers),Pomnikowa 26
+Kowel,Berliński St.,Szewcy (cordonniers),Kolej. 83
+Kowel,Chait,Szewcy (cordonniers),Krótka 42
+Kowel,Guterzen D.,Szewcy (cordonniers),Artyleryjska 3
+Kowel,Juz J.,Szewcy (cordonniers),Wierzbowa 11
+Kowel,Juz,Szewcy (cordonniers),Poprzecz. 6
+Kowel,Kirschenblatt F.,Szewcy (cordonniers),Łucka 35
+Kowel,Lindenbaum T.,Szewcy (cordonniers),Sienkiewicza 36
+Kowel,Press S.,Szewcy (cordonniers),Kolejowa 23
+Kowel,Rojter B.,Szewcy (cordonniers),Kolejowa 56
+Kowel,Sinicka J.,Szewcy (cordonniers),Warszaw. 26
+Kowel,Szmojsz M.,Szewcy (cordonniers),Kolejowa 52
+Kowel,Szwarc J.,Szewcy (cordonniers),Włodzimierska 7
+Kowel,Tius W.,Szewcy (cordonniers),Warszawska 117
+Kowel,Trzyziński A.,Szewcy (cordonniers),Mickiewicza 25
+Kowel,Wajner F.,Szewcy (cordonniers),Pomnikowa 57
+Kowel,Wajner L.,Szewcy (cordonniers),Pomnikowa 35
+Kowel,Wajner U.,Szewcy (cordonniers),Fabryczna 16
+Kowel,Wasing M.,Szewcy (cordonniers),Tuszowskiego 10
+Kowel,Włodarski St.,Szewcy (cordonniers),Warszawska 59
+Kowel,Alperin P.,Szkło i porcelana (verreries et porcelaines),Warszawska 45
+Kowel,Bregman Ch.,Szkło i porcelana (verreries et porcelaines),Brzeska 9
+Kowel,Erlich W.,Szkło i porcelana (verreries et porcelaines),Warszawska 174
+Kowel,Gwejntach M.,Szkło i porcelana (verreries et porcelaines),Warszawska 56
+Kowel,Rojzen S.,Szkło i porcelana (verreries et porcelaines),Maciejowska 17
+Kowel,Rywka S.,Szkło i porcelana (verreries et porcelaines),Warszawska 27
+Kowel,Schneider G.,Szkło i porcelana (verreries et porcelaines),Warszawska 171
+Kowel,Tullerr N. i Sz.,Szkło i porcelana (verreries et porcelaines),Łucka 24
+Kowel,Chusid M.,Śledzie (harengs),Handlowa 5
+Kowel,Chasis P.,Śledzie (harengs),Warszawska 184
+Kowel,Kuras J.,Ślusarze (serruriers),Sienkiewicza 29
+Kowel,Lerner Ch.,Ślusarze (serruriers),Warszawska 68
+Kowel,Marejda A.,Ślusarze (serruriers),Warszawska 143
+Kowel,Panawas M.,Ślusarze (serruriers),Legjonów 21
+Kowel,Stolar M.,Ślusarze (serruriers),Łucka 20
+Kowel,Szwarc Sz.,Ślusarze (serruriers),Warszawska 154
+Kowel,Winograd M.,Ślusarze (serruriers),Krótka 14
+Kowel,Rozen M.,Świece parafinowe — fabryki (fabr. de bougies en paraffine),Warszawska 132
+Kowel,Brozyński A.,Tapicerzy (tapissiers),Warszawska 13
+Kowel,Sojbel I.,Tapicerzy (tapissiers),Warszawska 93
+Kowel,Terk B.,Tapicerzy (tapissiers),Warszawska 21
+Kowel,Amdurski T. i Szpilberg J.,Tartaki (scieries),Warszawska 126
+Kowel,Bronsztejn i Ska,Tartaki (scieries),Kołodnicka
+Kowel,Blausztein Jak.,Technicy dentystyczni (mécaniciens dentistes),Łucka 83
+Kowel,Halpern Józ.,Technicy dentystyczni (mécaniciens dentistes),Mickiewicza 21
+Kowel,Kiperman Zachar.,Technicy dentystyczni (mécaniciens dentistes),Łucka 58
+Kowel,Berezowski J.,Techniczne biura (bureaux techniques),Więzienna 6
+Kowel,Lambach W.,Trumny (cercueils),Warszawska 99
+Kowel,Strużer M.,Trykotaże — fabr. (fabr. d'articles en tricot),Warszawska 68
+Kowel,Binder H.,Tytoniowe wyroby (tabacs),Sienkiewicza 41
+Kowel,Brandel B.,Tytoniowe wyroby (tabacs),
+Kowel,Goldszmidt Ch.,Tytoniowe wyroby (tabacs),Warszawska 255
+Kowel,Goldszmidt L.,Tytoniowe wyroby (tabacs),Warszawska 156
+Kowel,Kamiński A.,Tytoniowe wyroby (tabacs),Łucka 39
+Kowel,Klepacz Sz.,Tytoniowe wyroby (tabacs),Kolejowa 87
+Kowel,Kuna A.,Tytoniowe wyroby (tabacs),Warszaw. 134
+Kowel,Lederman B.,Tytoniowe wyroby (tabacs),Sienkiewicza róg Artyleryjskiej
+Kowel,Melamed Sz.,Tytoniowe wyroby (tabacs),Strażacka 13
+Kowel,Mianowska K.,Tytoniowe wyroby (tabacs),Warszawska 67
+Kowel,Pugacz Sz.,Tytoniowe wyroby (tabacs),Warszawska 249
+Kowel,Rubinsztejn L.,Tytoniowe wyroby (tabacs),Warszawska 191
+Kowel,Rus K.,Tytoniowe wyroby (tabacs),Warszawska 101
+Kowel,Sawicki M.,Tytoniowe wyroby (tabacs),Królowej Bony 1
+Kowel,Segal Ch.,Tytoniowe wyroby (tabacs),Warszawska 188
+Kowel,Zembrzuski,Tytoniowe wyroby (tabacs),Łucka 85
+Kowel,Fabryka Monopolu Tytoniowego,Tytoniowe wyroby — fabryki (manufactures de tabacs),
+Kowel,"Warszawskie Tow. Ubezpieczeń, oddz.",Ubezpieczeniowe biura (assurances),Więzienna
+Kowel,„Assicurazione Generali Trieste”,Ubezpieczeniowe biura (assurances),3 Maja 3
+Kowel,Ajerman L.,Ubrania gotowe (vêtements confectionnés),Zaułek Soborny 15
+Kowel,Bajczman L.,Ubrania gotowe (vêtements confectionnés),Rynek 26
+Kowel,Brener M.,Ubrania gotowe (vêtements confectionnés),Warszawska 117
+Kowel,Brizeli W.,Ubrania gotowe (vêtements confectionnés),Warszawska 102
+Kowel,Cukierman G.,Ubrania gotowe (vêtements confectionnés),Łucka 18
+Kowel,Drykier L. i M.,Ubrania gotowe (vêtements confectionnés),Warszawska 149
+Kowel,Elman M.,Ubrania gotowe (vêtements confectionnés),Rynek 14
+Kowel,xFridman Cz.,Ubrania gotowe (vêtements confectionnés),Łucka 18
+Kowel,Goldsztejn La.,Ubrania gotowe (vêtements confectionnés),Warszawska 126
+Kowel,xGutman A.,Ubrania gotowe (vêtements confectionnés),Rynek 26
+Kowel,xLedersznajder J.,Ubrania gotowe (vêtements confectionnés),Warszawska 191
+Kowel,xRubinsztejn E.,Ubrania gotowe (vêtements confectionnés),Warszawska 182
+Kowel,Wajner M.,Ubrania gotowe (vêtements confectionnés),Sienkiewicza 39
+Kowel,xWerner Ch. i Ingberg M.,Ubrania gotowe (vêtements confectionnés),Włodzimierska 1
+Kowel,Ingberg M. i Goldfarb R.,Ubrania gotowe (vêtements confectionnés),Warszawska 46
+Kowel,Fijałkowski M.,Wędliny (charcutiers),Sienkiewicza 19
+Kowel,xGradoszyński M.,Wędliny (charcutiers),Warszawska 16 i 23
+Kowel,xKostecki J.,Wędliny (charcutiers),Sienkiewicza 33
+Kowel,Woźniak i Telman,Wędliny (charcutiers),Sienkiewicza 37
+Kowel,Cybulski Al.,Wiatraki (moulins à vent),Górka 3
+Kowel,Mejkler Józ.,Wiatraki (moulins à vent),Lubliniecka 49
+Kowel,Palańska F.,Wody gazowe (eaux gazeuses),Warszawska 40
+Kowel,Rubinsztejn L.,Wody gazowe (eaux gazeuses),Łucka 20
+Kowel,Szyper I.,Wody gazowe (eaux gazeuses),Łucka 127
+Kowel,Cukierman I.,Wody gazowe — fabryki (fabr. d'eaux gazeuses),Seborna 4
+Kowel,Erlich S.,Wody gazowe — fabryki (fabr. d'eaux gazeuses),Włodzimierska 8
+Kowel,Goldszmidt M.,Wody gazowe — fabryki (fabr. d'eaux gazeuses),Pomnikowa 21
+Kowel,Kagan M.,Wody gazowe — fabryki (fabr. d'eaux gazeuses),Fabryczna 6
+Kowel,xPolońscy Bela,Wody gazowe — fabryki (fabr. d'eaux gazeuses),Cyrkowa 24
+Kowel,Tojbiez A.,Wody gazowe — fabryki (fabr. d'eaux gazeuses),Brzeska 37
+Kowel,Wajsblat F. i L.,Wody gazowe — fabryki (fabr. d'eaux gazeuses),Mickiewicza 9
+Kowel,Państwowa Wytwórnia Wódek,Wódki — fabryki (fabr. d'eaux-de-vie),Monopolowa 46
+Kowel,xMianowski S.,Wódki i likiery (eaux-de-vie et liqueurs),Warszawska 165
+Kowel,Pawlicha S.,Wódki i likiery (eaux-de-vie et liqueurs),Kolejowa
+Kowel,Finkielsztejn A.,Zboże (grains),Rynek 17
+Kowel,xLanger M.,Zboże (grains),3 Maja 7
+Kowel,xLanda Ch.,Zboże (grains),Brzeska 16
+Kowel,xSztejnberg F.,Zboże (grains),Łucka 71
+Kowel,Szyndler B.,Zboże (grains),Monopolowa 64
+Kowel,xWołk A.,Zboże (grains),Monopolowa 77
+Kowel,Wołk H.,Zboże (grains),Kościuszki 10
+Kowel,xWołk L.,Zboże (grains),Monopolowa 75
+Kowel,Zafran S.,Zboże (grains),Warszawska 223
+Kowel,Bren E.,Zboże (grains),Monopolowa 84
+Kowel,Geldbart D.,Zboże (grains),Włodzimierska 144
+Kowel,Sztejnberg M.,Zboże (grains),Łucka 114
+Kowel,Wolwoszes Sz.,Zboże (grains),Łucka 108
+Kowel,xBurak M.,Zegarmistrze (horlogers),Warszawska 22
+Kowel,Chityk J.,Zegarmistrze (horlogers),Kolejowa 87
+Kowel,Fradelis M.,Zegarmistrze (horlogers),Warszawska 50
+Kowel,Goldszmidt F.,Zegarmistrze (horlogers),Warszawska 255
+Kowel,xSzyter M.,Zegarmistrze (horlogers),Warszawska 49
+Kowel,Wajnberg Ch.,Zegarmistrze (horlogers),Warszawska 79
+Kowel,xWajsberg Sz.,Zegarmistrze (horlogers),Warszawska 132
+Kowel,Pryzant,Zegarmistrze (horlogers),Krzywa
+Kowel,Wajnsztejn,Zegarmistrze (horlogers),Sienkiewicza 13
+Kowel,"xKupiecki Syndykat Rolniczy, Sp. z o. o.",Ziemiopłody (produits du sol),Komorowska 14
+Kowel,xZwiązek Rolników Wołyńskich,Ziemiopłody (produits du sol),Więzienna
+Kowel,Berezowski J.,Żelazo (fers),Fabryczna 4
+Kowel,Erlich,Żelazo (fers),Warszawska 130
+Kowel,xGarber Ch.,Żelazo (fers),Warszawska 165
+Kowel,Genik R.,Żelazo (fers),Warszawska
+Kowel,xGuterman S.,Żelazo (fers),Warszawska 237
+Kowel,Gutman Sz.,Żelazo (fers),Warszawska 126
+Kowel,Gus B.,Żelazo (fers),Warszawska 126
+Kowel,xGus Ch.,Żelazo (fers),Warszawska 191
+Kowel,xKlejnerman,Żelazo (fers),
+Kowel,xLitwar W.,Żelazo (fers),Warszawska 26
+Kowel,Mandel J.,Żelazo (fers),Warszawska 227
+Kowel,xMandel M.,Żelazo (fers),Warszawska 225
+Kowel,Pape L.,Żelazo (fers),Warszawska 31
+Kowel,Pape J.,Żelazo (fers),Warszawska 18
+Kowel,Ptakowski A.,Żelazo (fers),Mickiewicza 7
+Kowel,Rojtenberg I.,Żelazo (fers),Warszawska 215
+Kowel,Rosinzowska R.,Żelazo (fers),Warszawska 66
+Kowel,Slepak M.,Żelazo (fers),Warszawska 169
+Kowel,Szejnblum M.,Żelazo (fers),Warszawska 229
+Kowel,Szowb M.,Żelazo (fers),Warszawska 184
+Kowel,Świniuch L.,Żelazo (fers),Warszawska 181
+Kowel,x„Tehas” Tow. Eksploatacji i Handlu Żelazem z o. o.,Żelazo (fers),Łucka 42
+Kowel,Wajsberg P.,Żelazo (fers),Warszawska 225
+Kowel,Waksman Ch.,Żelazo (fers),Warszawska 157
+Kowel,xWorcel H.,Żelazo (fers),Warszawska 213
