@@ -1,0 +1,151 @@
+id,name
+1,"W stronę Maceiwa (obecnie wieś Łuków), w stronę Warszawy"
+2,ul. Garncarska
+3,ul. Olżyczna
+4,ul. Brzeska
+5,ul. Maceiwska
+6,Droga do Chełma i Lublina
+7,ul. Pożarna
+8,ul. Nadbrzeżna
+9,ul. Żytnia
+10,ul. Gniłowa
+11,ul. Włodzimierska
+12,ul. Wola
+13,Stare Miasto (Stary Targ)
+14,Do masowego grobu na Nowym cmentarzu
+15,Kierunek na Łuck (Wołodymyr-Wołyński)
+16,Rzeka Turia
+17,ul. Monopolowa
+18,"Getto w ""mieście"""
+19,ul. Komarowska
+20,ul. Kościuszki
+21,ul. Jurydyczna
+22,ul. Prytyckiego
+23,"Obwód ""Pieski"""
+24,"Obwód ""Kowel-2"" (gdzie mieszkali głównie nie-Żydzi)"
+25,ul. 50. Kompanii
+26,ul. Królowej Bony
+27,ul. Warszawska
+28,ul. Mickiewicza
+29,ul. Budzyńska
+30,ul. Piskowa
+31,ul. Zakostolna
+32,ul. Pomnikowa
+33,ul. 3 Maja
+34,ul. Magistracka
+35,ul. Kościelna
+36,ul. Soborna
+37,ul. Handlowa
+38,ul. Kowalska
+39,ul. Fabryczna
+40,ul. Łucka
+41,ul. Budowlana
+42,ul. Strażacka
+43,ul. Sienkiewicza
+44,ul. Listopadowa
+45,ul. Poprzeczna
+46,ul. Kulowa
+47,ul. Malinowa
+48,ul. Poniatowskiego
+49,ul. Perza
+50,ul. Koszowa
+51,ul. Mościcka
+52,ul. Malinowska
+53,Kierunek na Vygonny
+54,ul. Zamoyskiego
+55,ul. Szpitalna
+56,ul. Graniczna
+57,ul. Dzierżyńskiego
+58,Kierunek na Kijów i Łuck
+59,ul. Szlachcica
+60,"Getto ""Piaski"""
+61,Kierunek na Szeroką
+62,ul. Dąbrowskiego
+63,Kierunek na Nowoswit
+64,Kierunek na Poworsk
+65,Kierunek na Kopodnie
+66,ul. Krótka
+67,ul. Żeromskiego
+68,Do masowego grobu na Bachowie
+69,Kierunek na Brześć
+A1,Wielka Synagoga (obecnie istnieje)
+A2,"Synagoga w Piskach (""Zamdeszil"")"
+A3,Dziedziniec i synagoga rabina z Turijska (obecnie istnieje)
+A4,"Dom modlitwy Turiya (""Trisk-shtibl"")"
+A5,"Dom Modlitwy Rużyńskich Chasydów (""Ruzhinel Sztibl"")"
+A6,Synagoga im. Prozański
+A7,Talmud Tora
+A8,Synagoga Hasidei Satpan
+A9,"Synagoga ""Hayatim"" (krawcy)"
+A10,Synagoga Brzeska
+A11,Synagoga M. Entina (obecnie istnieje)
+B1,"Żydowska Szkoła Ludowa ""Herzlija"". Izba Judenratu (obecnie istnieje)"
+B2,Żydowska Szkoła Ludowa im. Doktora Calomel
+B3,"Gimnazjum Żydowskie ""Tarbut"" (stare)"
+B4,"Gimnazjum Żydowskie ""Tarbut"" (nowe)"
+B5,"Gimnazjum Żydowsko-Polskie ""Klara Ehrlich"" (obecnie istnieje)"
+B6,Przedszkole żydowskie
+C1,Dom sierot TOZ
+C2,Schronisko dla osób starszych
+C3,Hostel
+C4,Stary cmentarz
+C5,Starożytny cmentarz
+C6,Kąpiel
+C7,Mykwa (obecnie istnieje)
+D1,"Siedziba ""Gashomer Gatzair"""
+D2,"Siedziba ""Beitar"" i ""Bundu"""
+D3,"Stadion piłkarski ""Makabi""/""Haszmonia"""
+D4,Dworzec kolejowy (przywrócony)
+D5,Dworzec kolejowy do transportu ładunków i warsztat naprawczy
+D6,Szpital Żydowski
+D7,Szpital Polski
+D8,Obszar zamieszkania pracowników kolei (polski)
+D9,"Oddział ""Hehaluc"" i siedziba ""Hehaluc-Gatzair"""
+I1,Szkoła wyższa (obecnie istnieje)
+I2,Narodowa szkoła polska nazwana po Moszczyckim
+I3,Gimnazjum polskie nazwane po Pirogowie
+F1,Kościół Rosyjski (obecnie istnieje)
+F2,Cerkiew prawosławna
+F3,Kościół katolicki
+F4,Cmentarz chrześcijański (obecnie istnieje)
+F5,Pomieszczenia księży
+G1,Ratusz Stary (obecnie istniejący)
+G2,Więzienie
+G3,Poczta
+G4,Nowa remiza strażacka
+H1,"Kino ""Oaza"""
+H2,"Kino ""Ekspres"""
+H3,"Polski klub nocny ""Zasób"" (dwa budynki)"
+H4,"Żydowski klub nocny ""Wersal"""
+J1,Rynek miejski
+J2,Rynek wozów wiejskich
+J3,Duży obszar (co tydzień rynek)
+J4,Pole do zabawy żołnierzy w piłkę nożną
+J5,"Pole, na którym stały namioty"
+J6,Wieża ciśnień
+K1,Ogród miejski
+K2,Pola i pola
+K3,Pola
+K4,Dziewica
+K5,Plaża - miejsce na pikniki i pływanie łódką
+K6,Park i miejsce do spacerów
+K7,Most Warszawski (zrujnowany)
+L1,Dom Holtscheina
+L2,Radzieckie NKWD (1939)
+L3,Budynek polski Ministerstwa Finansów. Radziecka Rada Miejska (1939) (obecnie istnieje)
+L4,Budynek polski Ministerstwa Edukacji. Centrum getta w Piskach.
+L5,Dom Ziskinda. Tymczasowa siedziba miejscowego SS
+L6,Siedziba lokalnego KC
+M1,Młyn Armarnyka
+M2,Fabryka tytoniu
+M3,Stacja elektryczna (nowa)
+M4,Stacja elektryczna (stara)
+M5,Parking dla powozów konnych
+M6,Apteka Friedrichsona (obecnie istnieje)
+N1,Oddzielone istniejące domy
+N2,Dom nauczyciela
+N3,Dom Gitlisa
+N4,Dom żydowski (obecnie muzeum miejskie)
+N5,Dom żydowski z szyldem Gwiazdy Dawida
+N6,Dom Żydowski - obecnie urząd stanu cywilnego
+N7,"Dom żydowski, zbudowany w 1934 roku"
