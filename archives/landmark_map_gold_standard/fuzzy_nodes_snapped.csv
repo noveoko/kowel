@@ -1,0 +1,368 @@
+Id,Label,x,y,pixel_x,pixel_y,lon,lat,utm_easting,utm_northing,node_kind,raw_code,annotator_uncertain,landmark_id,landmark_name,landmark_kind,match_method,confidence,alternatives,notes,nearest_marker_id,georef_role,georef_residual_m,snap_status,snap_osm_node,snap_dist_m
+1,Node 1,262.84,-115.31,902.84,567.81,24.7261713,51.2077965,341169.02,5675390.12,intersection,,false,,,,,,,,369,interpolated,,deadend_matched,928309059,80.6
+2,Node 2,252.38,-113.23,892.38,565.73,24.7251135,51.2081404,341096.33,5675430.64,intersection,,false,,,,,,,,370,interpolated,,junction_matched,3045811860,66.9
+3,Node 3,180.56,-95.16,820.56,547.66,24.7228890,51.2089197,340943.65,5675522.10,intersection,,false,,,,,,,,255,interpolated,,junction_matched,1704229609,30.4
+4,Node 4,88.44,-69.72,728.44,522.22,24.7171481,51.2108964,340549.52,5675754.33,intersection,,false,,,,,,,,268,interpolated,,junction_matched,251592354,8.6
+5,Node 5,64.43,-64.75,704.43,517.25,24.7157712,51.2113626,340454.97,5675809.16,intersection,,false,,,,,,,,267,interpolated,,junction_matched,973705962,4.1
+6,Node 6,12.08,-49.93,652.08,502.43,24.7132663,51.2122134,340282.97,5675909.20,intersection,,false,,,,,,,,272,interpolated,,junction_matched,251592353,29.9
+7,Node 7,-33.91,-36.96,606.09,489.46,24.7122845,51.2140098,340220.63,5676111.08,intersection,,false,,,,,,,,362,interpolated,,junction_matched,3014330876,81.3
+8,Node 8,-68.32,-28.90,571.68,481.40,24.7082101,51.2139538,339935.90,5676113.72,intersection,,false,,,,,,,,275,interpolated,,junction_matched,1724019084,59.9
+9,Node 9,-122.07,-14.12,517.93,466.62,24.7066919,51.2144873,339831.73,5676176.35,intersection,,false,,,,,,,,350,interpolated,,junction_matched,924589235,68.9
+10,Node 10,-160.99,-14.79,479.01,467.29,24.7045378,51.2150207,339683.15,5676240.35,intersection,,false,,,,,,,,347,interpolated,,junction_matched,924589210,25.6
+11,Node 11,-188.84,-13.53,451.16,466.03,24.7025811,51.2152664,339547.37,5676271.94,intersection,,false,,,,,,,,340,interpolated,,junction_matched,1215920624,17.2
+12,Node 12,-201.01,-13.89,438.99,466.39,24.7020020,51.2153123,339507.09,5676278.31,intersection,,false,,,,,,,,340,interpolated,,junction_matched,926538480,13.7
+13,Node 13,-238.24,-13.39,401.76,465.89,24.7007466,51.2157051,339420.79,5676324.73,intersection,,false,,,,,,,,288,interpolated,,junction_matched,926538481,67.4
+14,Node 14,-266.47,-14.48,373.53,466.98,24.6983668,51.2160653,339255.86,5676369.98,intersection,,false,,,,,,,,345,interpolated,,junction_matched,1945757294,6.8
+15,Node 15,-277.43,-14.44,362.57,466.94,24.6980133,51.2163526,339232.17,5676402.69,intersection,,false,,,,,,,,345,interpolated,,edge_projected,,24.8
+16,Node 16,-329.45,15.39,310.55,437.11,24.6966678,51.2174443,339142.02,5676527.03,intersection,,false,,,,,,,,244,interpolated,,junction_matched,1727480749,14.4
+17,Node 17,-341.04,19.71,298.96,432.79,24.6964127,51.2176529,339124.93,5676550.78,intersection,,false,,,,,,,,244,interpolated,,junction_matched,3757019453,7.2
+18,Node 18,-368.51,26.40,271.49,426.10,24.6951417,51.2183464,339038.60,5676630.68,intersection,,false,,,,,,,,241,interpolated,,junction_matched,845604274,53.3
+19,Node 19,-383.93,29.49,256.07,423.01,24.6949606,51.2181776,339025.37,5676612.30,intersection,,false,,,,,,,,241,interpolated,,junction_matched,4185377507,39.9
+20,Node 20,-404.32,32.31,235.68,420.19,24.6933013,51.2181627,338909.45,5676614.28,intersection,,false,,,,,,,,326,interpolated,,junction_matched,7965994645,14.5
+21,Node 21,-425.69,36.86,214.31,415.64,24.6919226,51.2191966,338816.79,5676732.27,intersection,,false,,,,,,,,326,interpolated,,junction_matched,3757010003,56.8
+22,Node 22,-464.31,42.14,175.69,410.36,24.6895007,51.2196252,338649.18,5676785.24,intersection,,false,,,,,,,,246,interpolated,,junction_matched,1684511453,28.1
+23,Node 23,-493.94,45.32,146.06,407.18,24.6867470,51.2197449,338457.32,5676804.60,intersection,,false,,,,,,,,246,interpolated,,junction_matched,8400645897,50.8
+24,Node 24,-519.01,49.52,120.99,402.98,24.6869816,51.2202421,338475.44,5676859.37,intersection,,false,,,,,,,,245,interpolated,,junction_matched,1299870627,71.5
+25,Node 25,-564.33,55.47,75.67,397.03,24.6818590,51.2210305,338120.52,5676958.30,intersection,,false,,,,,,,,248,interpolated,,deadend_matched,8400646193,101.7
+26,Node 26,101.56,-178.40,741.56,630.90,24.7167527,51.2071906,340509.10,5675343.15,intersection,,false,,,,,,,,256,interpolated,,deadend_matched,2911189429,64.2
+27,Node 27,33.41,-139.28,673.41,591.78,24.7135974,51.2092520,340295.85,5675579.21,intersection,,false,,,,,,,,257,interpolated,,junction_matched,973705956,36.1
+28,Node 28,87.29,-79.52,727.29,532.02,24.7170901,51.2100756,340542.63,5675663.20,intersection,,false,,,,,,,,268,interpolated,,junction_matched,3045811904,64.6
+29,Node 29,76.36,-101.93,716.36,554.43,24.7166680,51.2102148,340513.63,5675679.59,intersection,,false,,,,,,,,355,interpolated,,deadend_matched,3045811907,15.1
+30,Node 30,132.25,-91.17,772.25,543.67,24.7206343,51.2100854,340790.19,5675656.60,intersection,,false,,,,,,,,355,interpolated,,deadend_matched,1796727014,61.5
+31,Node 31,-13.90,-112.52,626.10,565.02,24.7115695,51.2104759,340158.46,5675719.70,intersection,,false,,,,,,,,354,interpolated,,junction_matched,925967906,46.5
+32,Node 32,-24.00,-138.50,616.00,591.00,24.7103727,51.2109380,340076.47,5675773.68,intersection,,false,,,,,,,,380,interpolated,,edge_projected,,92.2
+33,Node 33,-89.60,-119.67,550.40,572.17,24.7072642,51.2111889,339860.25,5675808.35,intersection,,false,,,,,,,,334,interpolated,,junction_matched,3012279985,9.3
+34,Node 34,-75.53,-160.83,564.47,613.33,24.7079093,51.2101279,339901.62,5675688.98,intersection,,false,,,,,,,,379,interpolated,,junction_matched,970848394,39.7
+35,Node 35,-33.10,-159.54,606.90,612.04,24.7101680,51.2100596,340059.13,5675676.46,intersection,,false,,,,,,,,380,interpolated,,deadend_matched,973692506,64.2
+36,Node 36,-107.92,-159.65,532.08,612.15,24.7056130,51.2103439,339742.00,5675718.00,intersection,,false,,,,,,,,327,interpolated,,junction_matched,12922707124,10.8
+37,Node 37,-106.11,-176.75,533.89,629.25,24.7054161,51.2096462,339725.82,5675640.85,intersection,,false,,,,,,,,327,interpolated,,junction_matched,926574528,18.3
+38,Node 38,-103.36,-221.51,536.64,674.01,24.7049314,51.2080457,339686.41,5675463.95,intersection,,false,,,,,,,,328,interpolated,,deadend_matched,1710110664,36.8
+39,Node 39,-73.04,-174.60,566.96,627.10,24.7080523,51.2092063,339908.41,5675586.19,intersection,,false,,,,,,,,379,interpolated,,deadend_matched,970855835,49.3
+40,Node 40,-111.40,-118.44,528.60,570.94,24.7059837,51.2117110,339772.64,5675869.20,intersection,,false,,,,,,,,334,interpolated,,junction_matched,1752386848,18.6
+41,Node 41,-195.21,-187.16,444.79,639.66,24.7015600,51.2107942,339460.50,5675776.91,intersection,,false,,,,,,,,328,interpolated,,junction_matched,926574444,109.1
+42,Node 42,-200.61,-225.34,439.39,677.84,24.6994221,51.2096006,339307.04,5675648.87,intersection,,false,,,,,,,,328,interpolated,,deadend_matched,8511366879,35.4
+43,Node 43,-33.69,-108.58,606.31,561.08,24.7106586,51.2108207,340096.04,5675760.02,intersection,,false,,,,,,,,330,interpolated,,junction_matched,1755881203,33.9
+44,Node 44,-79.71,-94.75,560.29,547.25,24.7081386,51.2118647,339923.66,5675881.59,intersection,,false,,,,,,,,333,interpolated,,junction_matched,924589205,8.0
+45,Node 45,-90.08,-90.91,549.92,543.41,24.7077876,51.2119788,339899.54,5675895.04,intersection,,false,,,,,,,,332,interpolated,,junction_matched,930190258,15.5
+46,Node 46,-114.94,-86.38,525.06,538.88,24.7061469,51.2124608,339786.64,5675952.21,intersection,,false,,,,,,,,335,interpolated,,junction_matched,924550213,25.5
+47,Node 47,-155.56,-86.85,484.44,539.35,24.7040823,51.2129191,339644.04,5676007.67,intersection,,false,,,,,,,,339,interpolated,,junction_matched,925366072,15.3
+48,Node 48,-153.42,-114.07,486.58,566.57,24.7037445,51.2126442,339619.50,5675977.85,intersection,,false,,,,,,,,331,interpolated,,edge_projected,,37.4
+49,Node 49,-159.64,-152.81,480.36,605.31,24.7026321,51.2126419,339541.81,5675980.02,intersection,,false,,,,,,,,327,interpolated,,edge_projected,,159.0
+50,Node 50,-194.39,-153.27,445.61,605.77,24.7014286,51.2118257,339454.92,5675891.89,intersection,,false,,,,,,,,373,interpolated,,junction_matched,8446619841,62.1
+51,Node 51,-191.17,-110.10,448.83,562.60,24.7015461,51.2128630,339466.73,5676006.97,intersection,,false,,,,,,,,373,interpolated,,junction_matched,1428067475,12.3
+52,Node 52,-172.61,-91.20,467.39,543.70,24.7031228,51.2126985,339576.27,5675985.24,intersection,,false,,,,,,,,336,interpolated,,edge_projected,,44.3
+53,Node 53,-188.92,-34.93,451.08,487.43,24.7020480,51.2142817,339506.72,5676163.62,intersection,,false,,,,,,,,340,interpolated,,deadend_matched,8511366776,27.8
+54,Node 54,-117.97,-59.89,522.03,512.39,24.7068148,51.2132613,339836.06,5676039.76,intersection,,false,,,,,,,,344,interpolated,,deadend_matched,3045812147,5.0
+55,Node 55,-78.09,-61.73,561.91,514.23,24.7083746,51.2126796,339942.97,5675971.68,intersection,,false,,,,,,,,337,interpolated,,junction_matched,929189741,27.1
+56,Node 56,-41.85,-69.18,598.15,521.68,24.7107341,51.2123237,340106.52,5675926.97,intersection,,false,,,,,,,,333,interpolated,,junction_matched,13767677941,3.1
+57,Node 57,3.80,-69.36,643.80,521.86,24.7135290,51.2117068,340299.57,5675852.30,intersection,,false,,,,,,,,259,interpolated,,deadend_matched,3045811921,38.6
+58,Node 58,116.86,7.80,756.86,444.70,24.7190450,51.2134025,340690.65,5676028.87,intersection,,false,,,,,,,,262,interpolated,,junction_matched,1641938803,30.0
+59,Node 59,144.58,46.97,784.58,405.53,24.7205097,51.2146661,340797.29,5676166.19,intersection,,false,,,,,,,,353,interpolated,,junction_matched,5381594902,22.4
+60,Node 60,164.06,34.70,804.06,417.80,24.7211622,51.2140991,340840.91,5676101.74,intersection,,false,,,,,,,,261,interpolated,,edge_projected,,26.5
+61,Node 61,138.13,2.53,778.13,449.97,24.7206152,51.2131973,340799.59,5676002.65,intersection,,false,,,,,,,,261,interpolated,,edge_projected,,60.1
+62,Node 62,97.66,74.22,737.66,378.28,24.7188305,51.2154851,340682.86,5676260.90,intersection,,false,,,,,,,,228,interpolated,,junction_matched,5381503017,73.0
+63,Node 63,68.89,33.52,708.89,418.98,24.7173694,51.2145960,340577.75,5676165.21,intersection,,false,,,,,,,,263,interpolated,,junction_matched,926448550,73.2
+64,Node 64,58.34,17.46,698.34,435.04,24.7165168,51.2140884,340516.46,5676110.62,intersection,,false,,,,,,,,270,interpolated,,junction_matched,1708317205,63.5
+65,Node 65,32.23,-21.40,672.23,473.90,24.7148216,51.2131025,340394.67,5676004.68,intersection,,false,,,,,,,,266,interpolated,,junction_matched,3014330856,15.3
+66,Node 66,16.60,125.93,656.60,326.57,24.7155450,51.2177378,340461.21,5676518.50,intersection,,false,,,,,,,,233,interpolated,,junction_matched,924517248,84.6
+67,Node 67,0.21,135.97,640.21,316.53,24.7148114,51.2192801,340415.32,5676691.58,intersection,,false,,,,,,,,377,interpolated,,junction_matched,5381503015,34.3
+68,Node 68,-76.75,170.59,563.25,281.91,24.7113048,51.2205276,340174.79,5676837.91,intersection,,false,,,,,,,,235,interpolated,,junction_matched,8423372268,34.0
+69,Node 69,-89.03,147.57,550.97,304.93,24.7105234,51.2200007,340118.40,5676781.03,intersection,,false,,,,,,,,306,interpolated,,junction_matched,8424796203,26.9
+70,Node 70,-81.11,76.90,558.89,375.60,24.7102661,51.2173415,340091.22,5676485.91,intersection,,false,,,,,,,,304,interpolated,,junction_matched,925972142,29.9
+71,Node 71,-77.07,46.17,562.93,406.33,24.7102536,51.2162999,340086.74,5676370.13,intersection,,false,,,,,,,,299,interpolated,,junction_matched,4127003420,24.3
+72,Node 72,-72.50,17.88,567.50,434.62,24.7093065,51.2154208,340017.55,5676274.44,intersection,,false,,,,,,,,278,interpolated,,junction_matched,1737162608,58.1
+73,Node 73,-71.42,-2.11,568.58,454.61,24.7087043,51.2147354,339973.12,5676199.55,intersection,,false,,,,,,,,278,interpolated,,junction_matched,3014330883,38.1
+74,Node 74,-16.48,-2.26,623.52,454.76,24.7129536,51.2144057,340268.72,5676153.64,intersection,,false,,,,,,,,276,interpolated,,junction_matched,3014330881,84.5
+75,Node 75,-3.28,-4.18,636.72,456.68,24.7128871,51.2143664,340263.94,5676149.42,intersection,,false,,,,,,,,274,interpolated,,junction_matched,13180269072,44.4
+76,Node 76,-11.31,-43.39,628.69,495.89,24.7121782,51.2135766,340211.71,5676063.14,intersection,,false,,,,,,,,260,interpolated,,deadend_matched,3014330863,54.5
+77,Node 77,10.06,42.61,650.06,409.89,24.7148982,51.2145358,340404.98,5676163.88,intersection,,false,,,,,,,,357,interpolated,,edge_projected,,168.5
+78,Node 78,-55.45,46.59,584.55,405.91,24.7102625,51.2163353,340087.48,5676374.04,intersection,,false,,,,,,,,296,interpolated,,junction_matched,925479446,89.6
+79,Node 79,-45.44,-2.14,594.56,454.64,24.7104191,51.2161082,340097.63,5676348.45,intersection,,false,,,,,,,,371,interpolated,,deadend_matched,1723994714,114.7
+80,Node 80,-49.78,18.51,590.22,433.99,24.7108242,51.2163292,340126.68,5676372.14,intersection,,false,,,,,,,,371,interpolated,,edge_projected,,89.9
+81,Node 81,-20.94,18.72,619.06,433.78,24.7141090,51.2150698,340351.71,5676224.97,intersection,,false,,,,,,,,367,interpolated,,junction_matched,925972141,123.5
+82,Node 82,-32.49,55.70,607.51,396.80,24.7135353,51.2168647,340317.86,5676425.79,intersection,,false,,,,,,,,297,interpolated,,junction_matched,8505089329,56.2
+83,Node 83,-29.52,79.39,610.48,373.11,24.7135119,51.2174746,340318.33,5676493.65,intersection,,false,,,,,,,,297,interpolated,,edge_projected,,30.1
+84,Node 84,-13.98,72.31,626.02,380.19,24.7141461,51.2171022,340361.33,5676450.87,intersection,,false,,,,,,,,297,interpolated,,junction_matched,925972140,31.4
+85,Node 85,62.60,24.17,702.60,428.33,24.7157980,51.2155335,340471.26,5676272.86,intersection,,false,,,,,,,,271,interpolated,,deadend_matched,926448468,92.2
+86,Node 86,-135.79,118.52,504.21,333.98,24.7071356,51.2196610,339880.67,5676750.64,intersection,,false,,,,,,,,292,interpolated,,junction_matched,924502183,26.2
+87,Node 87,-132.64,64.62,507.36,387.88,24.7072374,51.2177004,339880.97,5676532.42,intersection,,false,,,,,,,,298,interpolated,,junction_matched,3757009983,21.4
+88,Node 88,-129.11,39.60,510.89,412.90,24.7064238,51.2165806,339820.27,5676409.68,intersection,,false,,,,,,,,301,interpolated,,junction_matched,924502182,10.7
+89,Node 89,-116.86,39.93,523.14,412.57,24.7072715,51.2165203,339879.26,5676401.13,intersection,,false,,,,,,,,301,interpolated,,edge_projected,,17.3
+90,Node 90,-115.37,47.57,524.63,404.93,24.7077695,51.2164881,339913.92,5676396.46,intersection,,false,,,,,,,,298,interpolated,,junction_matched,12595128124,37.7
+91,Node 91,-103.48,47.20,536.52,405.30,24.7083719,51.2164492,339955.86,5676390.83,intersection,,false,,,,,,,,299,interpolated,,junction_matched,1723977501,0.8
+92,Node 92,-109.16,103.32,530.84,349.18,24.7102635,51.2185223,340095.13,5676617.21,intersection,,false,,,,,,,,305,interpolated,,edge_projected,,115.7
+93,Node 93,-162.65,61.06,477.35,391.44,24.7060281,51.2184114,339799.00,5676614.11,intersection,,false,,,,,,,,303,interpolated,,junction_matched,12852970593,28.3
+94,Node 94,-176.85,59.98,463.15,392.52,24.7044918,51.2185430,339692.18,5676632.09,intersection,,false,,,,,,,,303,interpolated,,deadend_matched,1704229883,42.2
+95,Node 95,-160.95,43.90,479.05,408.60,24.7054277,51.2171874,339752.82,5676479.32,intersection,,false,,,,,,,,302,interpolated,,deadend_matched,3014213756,26.3
+96,Node 96,-211.10,103.77,428.90,348.73,24.7033730,51.2199180,339618.84,5676787.42,intersection,,false,,,,,,,,239,interpolated,,junction_matched,8501333523,7.7
+97,Node 97,-282.29,93.06,357.71,359.44,24.7009065,51.2199227,339446.63,5676793.33,intersection,,false,,,,,,,,291,interpolated,,junction_matched,1704230047,91.4
+98,Node 98,-344.91,79.35,295.09,373.15,24.6966539,51.2199088,339149.64,5676801.08,intersection,,false,,,,,,,,290,interpolated,,junction_matched,1727481025,53.1
+99,Node 99,-379.27,100.75,260.73,351.75,24.6954728,51.2204885,339069.19,5676868.13,intersection,,false,,,,,,,,240,interpolated,,junction_matched,8447173467,19.6
+100,Node 100,-383.19,96.62,256.81,355.88,24.6943447,51.2203568,338989.97,5676855.96,intersection,,false,,,,,,,,240,interpolated,,junction_matched,8447173466,43.9
+101,Node 101,-424.71,83.95,215.29,368.55,24.6926411,51.2204870,338871.47,5676874.17,intersection,,false,,,,,,,,365,interpolated,,junction_matched,985890532,17.6
+102,Node 102,-413.75,58.75,226.25,393.75,24.6925814,51.2190937,338862.43,5676719.38,intersection,,false,,,,,,,,240,interpolated,,junction_matched,7965994651,36.5
+103,Node 103,-374.89,72.50,265.11,380.00,24.6958600,51.2195000,339092.78,5676757.37,intersection,,false,,,,,,,,240,interpolated,,junction_matched,985890528,38.7
+104,Node 104,-359.27,48.61,280.73,403.89,24.6959571,51.2180222,339094.41,5676592.84,intersection,,false,,,,,,,,244,interpolated,,deadend_matched,251592357,55.0
+105,Node 105,-324.47,51.66,315.53,400.84,24.6959919,51.2179870,339096.72,5676588.85,intersection,,false,,,,,,,,242,interpolated,,deadend_matched,1945772481,116.2
+106,Node 106,-355.47,-36.47,284.53,488.97,24.6942148,51.2164715,338967.33,5676424.24,intersection,,false,,,,,,,,375,interpolated,,edge_projected,,44.6
+107,Node 107,-327.52,-53.91,312.48,506.41,24.6935859,51.2158107,338921.11,5676352.14,intersection,,false,,,,,,,,374,interpolated,,deadend_matched,3757015692,34.1
+108,Node 108,-350.78,-27.56,289.22,480.06,24.6944077,51.2165971,338981.24,5676437.78,intersection,,false,,,,,,,,323,interpolated,,deadend_matched,3757019425,10.7
+109,Node 109,-373.57,-17.46,266.43,469.96,24.6938603,51.2165617,338942.90,5676435.05,intersection,,false,,,,,,,,324,interpolated,,junction_matched,3757015723,15.8
+110,Node 110,-387.84,-11.29,252.16,463.79,24.6931664,51.2165035,338894.24,5676430.10,intersection,,false,,,,,,,,324,interpolated,,junction_matched,3757015720,22.4
+111,Node 111,-401.29,-6.52,238.71,459.02,24.6927057,51.2166740,338862.66,5676450.06,intersection,,false,,,,,,,,324,interpolated,,junction_matched,3757019429,31.6
+112,Node 112,-379.83,6.47,260.17,446.03,24.6942620,51.2176479,338974.74,5676554.94,intersection,,false,,,,,,,,325,interpolated,,junction_matched,3757026690,43.9
+113,Node 113,-365.61,-0.78,274.39,453.28,24.6935467,51.2171187,338922.94,5676497.66,intersection,,false,,,,,,,,325,interpolated,,edge_projected,,93.8
+114,Node 114,-392.41,12.05,247.59,440.45,24.6939711,51.2172075,338952.89,5676506.61,intersection,,false,,,,,,,,325,interpolated,,deadend_matched,3757019443,37.6
+115,Node 115,-263.31,-106.88,376.69,559.38,24.6964227,51.2135219,339111.23,5676091.44,intersection,,false,,,,,,,,373,interpolated,,edge_projected,,18.7
+116,Node 116,-263.07,-231.56,376.93,684.06,24.6947632,51.2098428,338982.50,5675686.00,intersection,,false,,,,,,,,372,interpolated,,edge_projected,,33.8
+117,Node 117,-325.25,-78.57,314.75,531.07,24.6918476,51.2145254,338795.23,5676213.05,intersection,,false,,,,,,,,253,interpolated,,edge_projected,,127.7
+118,Node 118,-398.66,-33.89,241.34,486.39,24.6912775,51.2158249,338759.96,5676358.79,intersection,,false,,,,,,,,324,interpolated,,junction_matched,970271239,32.3
+119,Node 119,-421.98,4.91,218.02,447.59,24.6906697,51.2177076,338724.10,5676569.45,intersection,,false,,,,,,,,326,interpolated,,edge_projected,,56.1
+120,Node 120,-398.97,109.21,241.03,343.29,24.6947603,51.2208509,339020.71,5676909.99,intersection,,false,,,,,,,,240,interpolated,,edge_projected,,50.3
+121,Node 121,-364.38,131.34,275.62,321.16,24.6956044,51.2227567,339086.30,5677120.04,intersection,,false,,,,,,,,290,interpolated,,edge_projected,,142.2
+122,Node 122,-344.20,160.14,295.80,292.36,24.6961434,51.2236909,339127.18,5677222.73,intersection,,false,,,,,,,,290,interpolated,,edge_projected,,161.1
+123,Node 123,-306.75,239.93,333.25,212.57,24.6979300,51.2252890,339257.49,5677396.51,intersection,,false,,,,,,,,320,interpolated,,edge_projected,,103.5
+124,Node 124,-302.83,285.07,337.17,167.43,24.6995579,51.2269263,339376.85,5677575.00,intersection,,false,,,,,,,,320,interpolated,,edge_projected,,27.1
+125,Node 125,-290.98,327.56,349.02,124.94,24.7008350,51.2283011,339470.79,5677725.06,intersection,,false,,,,,,,,320,interpolated,,edge_projected,,13.6
+126,Node 126,-273.38,361.06,366.62,91.44,24.7021678,51.2291271,339566.71,5677814.00,intersection,,false,,,,,,,,319,interpolated,,edge_projected,,28.4
+127,Node 127,-240.65,405.55,399.35,46.95,24.7041813,51.2299700,339710.21,5677903.32,intersection,,false,,,,,,,,319,interpolated,,edge_projected,,72.9
+128,Node 128,-534.97,324.08,105.03,128.42,24.6879239,51.2300704,338575.64,5677950.09,intersection,,false,,,,,,,,318,interpolated,,edge_projected,,53.2
+129,Node 129,-405.74,305.54,234.26,146.96,24.6954100,51.2286780,339093.38,5677778.85,intersection,,false,,,,,,,,318,interpolated,,junction_matched,1704471033,60.7
+130,Node 130,-182.84,271.61,457.16,180.89,24.7057161,51.2238813,339796.21,5677222.98,intersection,,false,,,,,,,,238,interpolated,,junction_matched,13773256976,142.1
+131,Node 131,-395.42,406.18,244.58,46.32,24.6961708,51.2316640,339156.91,5678109.19,intersection,,false,,,,,,,,318,interpolated,,deadend_matched,1714601697,62.5
+132,Node 132,-442.63,141.43,197.37,311.07,24.6923681,51.2225925,338859.76,5677108.87,intersection,,false,,,,,,,,365,interpolated,,edge_projected,,48.5
+133,Node 133,-446.17,74.84,193.83,377.66,24.6901070,51.2199816,338692.76,5676823.53,intersection,,false,,,,,,,,365,interpolated,,edge_projected,,73.6
+134,Node 134,-447.10,65.61,192.90,386.89,24.6901070,51.2199816,338692.76,5676823.53,intersection,,false,,,,,,,,321,interpolated,,deadend_matched,3757124605,45.9
+135,Node 135,-500.12,83.30,139.88,369.20,24.6874092,51.2212938,338508.98,5676975.36,intersection,,false,,,,,,,,366,interpolated,,deadend_matched,1684511456,15.6
+136,Node 136,-463.94,78.33,176.06,374.17,24.6899051,51.2206209,338680.89,5676895.06,intersection,,false,,,,,,,,365,interpolated,,edge_projected,,15.2
+137,Node 137,-461.50,95.52,178.50,356.98,24.6913132,51.2209543,338780.38,5676929.04,intersection,,false,,,,,,,,365,interpolated,,deadend_matched,3757113435,89.6
+138,Node 138,-462.48,67.25,177.52,385.25,24.6890308,51.2197160,338616.68,5676796.37,intersection,,false,,,,,,,,321,interpolated,,edge_projected,,85.7
+139,Node 139,-514.72,71.64,125.28,380.86,24.6874687,51.2201082,338508.98,5676843.41,intersection,,false,,,,,,,,245,interpolated,,edge_projected,,123.8
+140,Node 140,-516.35,61.19,123.65,391.31,24.6861828,51.2204594,338420.42,5676885.28,intersection,,false,,,,,,,,245,interpolated,,deadend_matched,7512648908,28.1
+141,Node 141,-463.46,56.77,176.54,395.73,24.6897051,51.2201142,338665.16,5676839.16,intersection,,false,,,,,,,,321,interpolated,,deadend_matched,1930522065,20.2
+142,Node 142,-596.33,25.42,43.67,427.08,24.6804995,51.2200355,338022.10,5676850.67,intersection,,false,,,,,,,,376,interpolated,,deadend_matched,970398765,40.6
+143,Node 143,-569.20,22.59,70.80,429.91,24.6821403,51.2199132,338136.24,5676833.45,intersection,,false,,,,,,,,376,interpolated,,edge_projected,,25.5
+144,Node 144,-571.63,-2.57,68.37,455.07,24.6819538,51.2190184,338120.08,5676734.37,intersection,,false,,,,,,,,376,interpolated,,edge_projected,,3.0
+147,Node 147,-521.33,20.27,118.67,432.23,24.6843696,51.2196529,338290.99,5676799.60,intersection,,false,,,,,,,,247,interpolated,,deadend_matched,8400645932,80.3
+148,Node 148,-497.48,-14.17,142.52,466.67,24.6865904,51.2181073,338440.65,5676622.86,intersection,,false,,,,,,,,247,interpolated,,deadend_matched,8446999602,54.8
+149,Node 149,-189.12,260.30,450.88,192.20,24.7054446,51.2240102,339777.70,5677237.90,intersection,,false,,,,,,,,238,interpolated,,deadend_matched,13773256987,86.9
+150,Node 150,-155.84,232.76,484.16,219.74,24.7073252,51.2230801,339905.78,5677130.39,intersection,,false,,,,,,,,236,interpolated,,edge_projected,,49.3
+151,Node 151,-144.44,211.91,495.56,240.59,24.7077526,51.2224715,339933.51,5677061.78,intersection,,false,,,,,,,,236,interpolated,,edge_projected,,26.7
+152,Node 152,25.62,169.27,665.62,283.23,24.7161553,51.2199213,340511.38,5676759.96,intersection,,false,,,,,,,,233,interpolated,,junction_matched,925081923,10.1
+153,Node 153,38.53,185.70,678.53,266.80,24.7167210,51.2201362,340551.62,5676782.63,intersection,,false,,,,,,,,229,interpolated,,deadend_matched,4804051257,15.9
+154,Node 154,5.82,181.59,645.82,270.91,24.7156850,51.2204949,340480.52,5676824.76,intersection,,false,,,,,,,,377,interpolated,,deadend_matched,925081936,23.2
+155,Node 155,48.27,152.79,688.27,299.71,24.7164339,51.2198181,340530.47,5676747.88,intersection,,false,,,,,,,,233,interpolated,,deadend_matched,925081916,91.2
+156,Node 156,57.69,168.92,697.69,283.58,24.7177556,51.2198488,340622.87,5676748.42,intersection,,false,,,,,,,,230,interpolated,,deadend_matched,10788342180,40.7
+157,Node 157,16.64,195.95,656.64,256.55,24.7165766,51.2213656,340545.79,5676919.63,intersection,,false,,,,,,,,229,interpolated,,deadend_matched,2639960991,75.6
+158,Node 158,15.54,175.09,655.54,277.41,24.7154107,51.2196797,340458.55,5676734.71,intersection,,false,,,,,,,,377,interpolated,,deadend_matched,845604236,54.5
+164,Node 164,-333.55,377.74,306.45,74.76,24.6997256,51.2306321,339401.46,5677986.67,intersection,,false,,,,,,,,319,interpolated,,edge_projected,,64.3
+166,Node 166,-283.49,341.43,356.51,111.07,24.7021564,51.2291340,339565.94,5677814.79,intersection,,false,,,,,,,,320,interpolated,,edge_projected,,85.7
+167,Node 167,-70.75,193.80,569.25,258.70,24.7113116,51.2206655,340175.74,5676853.23,intersection,,false,,,,,,,,235,interpolated,,edge_projected,,101.4
+168,Node 168,-63.95,189.46,576.05,263.04,24.7116219,51.2204384,340196.62,5676827.31,intersection,,false,,,,,,,,235,interpolated,,junction_matched,925460311,104.3
+169,Node 169,-42.21,175.78,597.79,276.72,24.7127504,51.2201985,340274.59,5676798.18,intersection,,false,,,,,,,,234,interpolated,,edge_projected,,58.6
+170,Node 170,7.32,145.46,647.32,307.04,24.7150962,51.2194743,340435.88,5676712.56,intersection,,false,,,,,,,,377,interpolated,,edge_projected,,28.7
+171,Node 171,109.53,82.23,749.53,370.27,24.7193553,51.2157572,340720.45,5676290.02,intersection,,false,,,,,,,,353,interpolated,,edge_projected,,55.6
+172,Node 172,137.16,65.90,777.16,386.60,24.7199120,51.2148974,340756.35,5676193.21,intersection,,false,,,,,,,,353,interpolated,,edge_projected,,43.5
+173,Node 173,275.13,-18.92,915.13,471.42,24.7255559,51.2120867,341140.81,5675868.47,intersection,,false,,,,,,,,368,interpolated,,edge_projected,,180.9
+174,Node 174,-56.53,202.02,583.47,250.48,24.7115453,51.2204945,340191.47,5676833.71,intersection,,false,,,,,,,,234,interpolated,,edge_projected,,149.4
+175,Node 175,-68.98,183.87,571.02,268.63,24.7114088,51.2204435,340181.76,5676828.33,intersection,,false,,,,,,,,235,interpolated,,edge_projected,,86.9
+176,Node 176,-429.49,-92.52,210.51,545.02,24.6871963,51.2146128,338470.72,5676232.98,intersection,,false,,,,,,,,251,interpolated,,junction_matched,7179615991,54.2
+177,Node 177,-414.10,-105.42,225.90,557.92,24.6877097,51.2141029,338504.79,5676175.16,intersection,,false,,,,,,,,249,interpolated,,deadend_matched,7179615990,55.1
+178,Node 178,-514.97,-132.32,125.03,584.82,24.6835306,51.2130858,338209.38,5676071.26,intersection,,false,,,,,,,,218,interpolated,,edge_projected,,136.4
+179,Node 179,-527.25,-143.81,112.75,596.31,24.6817258,51.2137007,338085.50,5676143.61,intersection,,false,,,,,,,,218,interpolated,,junction_matched,970398719,25.1
+180,Node 180,-571.92,-131.60,68.08,584.10,24.6790765,51.2143297,337902.70,5676219.39,intersection,,false,,,,,,,,218,interpolated,,deadend_matched,970398788,55.3
+181,Node 181,-543.24,-226.87,96.76,679.37,24.6787789,51.2114665,337871.86,5675901.69,intersection,,false,,,,,,,,219,interpolated,,deadend_matched,927027413,56.2
+182,Node 182,-390.27,49.21,249.73,403.29,24.6941827,51.2190202,338973.99,5676707.70,intersection,,false,,,,,,,,241,interpolated,,deadend_matched,1737162781,30.6
+183,Node 183,-403.27,44.56,236.73,407.94,24.6941894,51.2186590,338973.20,5676667.52,intersection,,false,,,,,,,,326,interpolated,,edge_projected,,55.2
+184,Node 184,-409.33,58.09,230.67,394.41,24.6947894,51.2184639,339014.41,5676644.51,intersection,,false,,,,,,,,240,interpolated,,edge_projected,,146.7
+185,Node 185,-425.42,57.26,214.58,395.24,24.6917512,51.2192251,338804.92,5676735.81,intersection,,false,,,,,,,,322,interpolated,,edge_projected,,35.5
+186,Node 186,-434.42,55.53,205.58,396.97,24.6911883,51.2193185,338765.94,5676747.43,intersection,,false,,,,,,,,321,interpolated,,junction_matched,970271041,30.1
+187,Node 187,-434.92,45.54,205.08,406.96,24.6909046,51.2193634,338746.29,5676753.05,intersection,,false,,,,,,,,322,interpolated,,deadend_matched,3757124598,35.1
+188,Node 188,-442.97,56.77,197.03,395.73,24.6910505,51.2197073,338757.68,5676790.96,intersection,,false,,,,,,,,321,interpolated,,deadend_matched,3757124600,10.6
+189,Node 189,-363.99,112.26,276.01,340.24,24.6969028,51.2201860,339167.99,5676831.37,intersection,,false,,,,,,,,290,interpolated,,edge_projected,,90.5
+190,Node 190,-332.55,156.83,307.45,295.67,24.6983508,51.2217858,339274.67,5677006.07,intersection,,false,,,,,,,,290,interpolated,,deadend_matched,1727481074,59.7
+191,Node 191,171.53,-129.32,811.53,581.82,24.7228683,51.2078386,340938.47,5675401.94,intersection,,false,,,,,,,,255,interpolated,,deadend_matched,970271152,58.9
+192,Node 192,248.86,-139.39,888.86,591.89,24.7250827,51.2059795,341086.74,5675190.44,intersection,,false,,,,,,,,254,interpolated,,deadend_matched,3045811852,82.9
+193,Node 193,114.13,90.11,754.13,362.39,24.7196738,51.2163052,340744.58,5676350.26,intersection,,false,,,,,,,,353,interpolated,,edge_projected,,35.7
+194,Node 194,141.85,72.53,781.85,379.97,24.7207666,51.2156504,340818.63,5676275.08,intersection,,false,,,,,,,,353,interpolated,,edge_projected,,39.9
+195,Node 195,132.79,58.36,772.79,394.14,24.7199120,51.2148974,340756.35,5676193.21,intersection,,false,,,,,,,,353,interpolated,,edge_projected,,23.6
+196,Node 196,104.55,76.35,744.55,376.15,24.7190519,51.2155964,340698.70,5676272.79,intersection,,false,,,,,,,,228,interpolated,,edge_projected,,57.4
+197,Node 197,-121.13,201.90,518.87,250.60,24.7089082,51.2220189,340012.62,5677008.95,intersection,,false,,,,,,,,236,interpolated,,edge_projected,,22.2
+198,Node 198,-134.13,182.95,505.87,269.55,24.7075834,51.2217279,339919.11,5676979.48,intersection,,false,,,,,,,,236,interpolated,,edge_projected,,29.3
+199,Node 199,-106.62,164.13,533.38,288.37,24.7100682,51.2207436,340089.19,5676864.62,intersection,,false,,,,,,,,236,interpolated,,edge_projected,,46.7
+200,Node 200,-93.84,181.98,546.16,270.52,24.7104434,51.2209853,340116.23,5676890.67,intersection,,false,,,,,,,,235,interpolated,,edge_projected,,39.9
+201,Node 201,-322.64,-2.35,317.36,454.85,24.6965951,51.2175038,339137.15,5676533.80,intersection,,false,,,,,,,,252,interpolated,,edge_projected,,44.1
+202,Node 202,-327.39,-25.54,312.61,478.04,24.6959914,51.2174080,339094.66,5676524.48,intersection,,false,,,,,,,,374,interpolated,,edge_projected,,105.6
+203,Node 203,-340.14,-43.38,299.86,495.88,24.6957598,51.2172733,339078.02,5676510.01,intersection,,false,,,,,,,,374,interpolated,,edge_projected,,181.2
+204,Node 204,-350.96,-47.73,289.04,500.23,24.6955303,51.2171399,339061.53,5676495.68,intersection,,false,,,,,,,,375,interpolated,,edge_projected,,201.9
+205,Node 205,-382.16,-43.84,257.84,496.34,24.6950024,51.2167364,339023.26,5676451.97,intersection,,false,,,,,,,,375,interpolated,,edge_projected,,232.8
+206,Node 206,-342.83,-44.34,297.17,496.84,24.6941219,51.2164110,338960.64,5676417.72,intersection,,false,,,,,,,,374,interpolated,,deadend_matched,3757015713,42.0
+209,Node 209,-303.78,-79.98,336.22,532.48,24.6937247,51.2146259,338926.67,5676220.10,intersection,,false,,,,,,,,253,interpolated,,edge_projected,,67.6
+210,Node 210,-276.09,-69.25,363.91,521.75,24.6960154,51.2146754,339086.81,5676220.59,intersection,,false,,,,,,,,253,interpolated,,edge_projected,,32.8
+211,Node 211,-287.33,-89.31,352.67,541.81,24.6947072,51.2141993,338993.79,5676170.52,intersection,,false,,,,,,,,253,interpolated,,edge_projected,,53.8
+212,Node 212,-272.14,-84.74,367.86,537.24,24.6960053,51.2142009,339084.45,5676167.85,intersection,,false,,,,,,,,253,interpolated,,edge_projected,,31.7
+213,Node 213,-251.36,-86.90,388.64,539.40,24.6976991,51.2139433,339201.84,5676135.50,intersection,,false,,,,,,,,345,interpolated,,edge_projected,,1.4
+214,Node 214,-232.62,-96.25,407.38,548.75,24.6990074,51.2135215,339291.73,5676085.74,intersection,,false,,,,,,,,373,interpolated,,edge_projected,,14.0
+215,Node 215,-66.70,124.25,573.30,328.25,24.7114145,51.2191196,340177.57,5676681.12,intersection,,false,,,,,,,,306,interpolated,,deadend_matched,8423356114,12.6
+216,Node 216,-63.65,110.75,576.35,341.75,24.7111046,51.2191136,340155.91,5676681.13,intersection,,false,,,,,,,,306,interpolated,,edge_projected,,52.8
+217,Node 217,-79.11,107.84,560.89,344.66,24.7110517,51.2188590,340151.34,5676652.93,intersection,,false,,,,,,,,306,interpolated,,deadend_matched,1730322245,26.3
+218,marker_14,-524.33,-188.26,115.67,640.76,24.6811414,51.2125726,338040.73,5676019.46,marker,14,false,14,Do masowego grobu na Nowym cmentarzu,direction,exact_unique,0.95,,,,interpolated,,landmark_anchor,,
+219,market_15,-529.66,-212.78,110.34,665.28,24.6804873,51.2118816,337992.63,5675944.07,marker,15,false,15,Kierunek na Łuck (Wołodymyr-Wołyński),direction,typo_fix,0.95,,"market_15 is a typo for marker_15; SW pair with 14 (mass grave at new cemetery), direction to Lutsk",,interpolated,,landmark_anchor,,
+220,marker_12,-357.94,-118.35,282.06,570.85,24.6910747,51.2137785,338738.65,5676131.70,marker,12,false,12,ul. Wola,street,street_repeat,0.85,,,,interpolated,,landmark_anchor,,
+221,marker_9,-444.87,4.38,195.13,448.12,24.6898167,51.2177203,338664.58,5676572.75,marker,9,false,9,ul. Żytnia,street,exact_unique,0.95,,,,interpolated,,landmark_anchor,,
+222,marker_8,-436.17,-16.97,203.83,469.47,24.6897869,51.2168725,338659.54,5676478.54,marker,8,false,8,ul. Nadbrzeżna,street,exact_unique,0.95,,,,interpolated,,landmark_anchor,,
+223,marker_10,-428.65,-37.15,211.35,489.65,24.6895985,51.2161810,338643.96,5676402.07,marker,10,false,10,ul. Gniłowa,street,exact_unique,0.95,,,,interpolated,,landmark_anchor,,
+224,marker_M3,10.89,84.29,650.89,368.21,24.7147708,51.2172181,340405.35,5676462.40,marker,M3,false,M3,Stacja elektryczna (nowa),building,exact_unique,0.88,,new electric station in NE Piaski / industrial area,,gcp,0.1,landmark_anchor,,
+225,marker_60,38.05,69.18,678.05,383.32,24.7157000,51.2165027,340467.77,5676380.83,marker,60,false,60,"Getto ""Piaski""",district,exact_unique,0.95,,,,gcp_outlier,,landmark_anchor,,
+226,marker_57,35.07,100.72,675.07,351.78,24.7159024,51.2175109,340485.39,5676492.50,marker,57,false,57,ul. Dzierżyńskiego,street,street_repeat,0.85,,,,interpolated,,landmark_anchor,,
+227,marker_DB,63.22,79.34,703.22,373.16,24.7168315,51.2165693,340547.01,5676385.79,marker,DB,false,D9,"Oddział ""Hehaluc"" i siedziba ""Hehaluc-Gatzair""",building,confusable,0.58,D6:Szpital Żydowski; D8:Obszar zamieszkania pracowników kolei (polski),DB not in legend; next to D5 freight yard and ghetto Piaski. Unused D9 Hehalutz HQ,,interpolated,,landmark_anchor,,
+228,marker_N8,77.66,60.07,717.66,392.43,24.7172256,51.2158001,340571.87,5676299.40,marker,N8,false,N6,Dom Żydowski - obecnie urząd stanu cywilnego,building,confusable,0.52,"N7:Dom żydowski, zbudowany w 1934 roku; N4:Dom żydowski (obecnie muzeum miejskie); N1:Oddzielone istniejące domy","N8 not in legend; east near A11 Entina synagogue (building still exists). Unused N6 Jewish house, now civil registry",,interpolated,,landmark_anchor,,
+229,marker_65,47.62,202.39,687.62,250.11,24.7174008,51.2207174,340601.10,5676845.77,marker,65,false,65,Kierunek na Kopodnie,direction,exact_unique,0.95,,,,interpolated,,landmark_anchor,,
+230,marker_64,70.01,183.48,710.01,269.02,24.7182068,51.2198681,340654.44,5676749.59,marker,64,false,64,Kierunek na Poworsk,direction,exact_unique,0.95,,,,interpolated,,landmark_anchor,,
+231,marker_63,74.40,155.61,714.40,296.89,24.7181226,51.2189082,340645.25,5676643.04,marker,63,false,63,Kierunek na Nowoswit,direction,exact_unique,0.95,,,,interpolated,,landmark_anchor,,
+232,marker_69,89.75,126.71,729.75,325.79,24.7184818,51.2178130,340666.55,5676520.49,marker,69,false,61,Kierunek na Szeroką,direction,spatial_unused,0.70,58:Kierunek na Kijów i Łuck,second 69; 69=to Brest belongs on the NW road (node 318). This copy sits in the NE kierunek cluster (62–65); unused 61 Szeroka is east of Kowel,,interpolated,,landmark_anchor,,
+233,marker_62,24.55,151.64,664.55,300.86,24.7159477,51.2192594,340494.59,5676686.81,marker,62,false,62,ul. Dąbrowskiego,street,exact_unique,0.95,,,,interpolated,,landmark_anchor,,
+234,marker_D4,-39.36,195.50,600.64,257.00,24.7133508,51.2213115,340320.37,5676920.63,marker,D4,false,D4,Dworzec kolejowy (przywrócony),building,exact_unique,0.95,,northern railway; passenger station,,interpolated,,landmark_anchor,,
+235,marker_I3,-83.08,187.94,556.92,264.56,24.7110385,51.2214480,340159.39,5676940.83,marker,I3,false,,,,unresolved,0.00,,"Passenger tunnel — English legend only, not in landmarks_transcribed.csv; marker sits on the railway next to D4 station (transcribed I3 already assigned from E3)",,interpolated,,landmark_anchor,,
+236,marker_J4,-119.51,186.35,520.49,266.15,24.7089526,51.2216792,340014.54,5676971.08,marker,J4,false,J4,Pole do zabawy żołnierzy w piłkę nożną,building,exact_unique,0.95,,,,gcp,0.2,landmark_anchor,,
+237,marker_24,-93.47,245.55,546.53,206.95,24.7108911,51.2234662,340156.09,5677165.55,marker,24,false,24,"Obwód ""Kowel-2"" (gdzie mieszkali głównie nie-Żydzi)",district,street_repeat,0.85,,,,interpolated,,landmark_anchor,,
+238,marker_23,-220.59,192.97,419.41,259.53,24.7033073,51.2226529,339623.76,5677091.65,marker,23,false,23,"Obwód ""Pieski""",district,exact_unique,0.95,,,,interpolated,,landmark_anchor,,
+239,marker_22,-188.64,118.79,451.36,333.71,24.7043794,51.2202776,339690.36,5676825.21,marker,22,false,22,ul. Prytyckiego,street,exact_unique,0.95,,,,interpolated,,landmark_anchor,,
+240,marker_3,-396.98,75.60,243.02,376.90,24.6940580,51.2197920,338967.97,5676793.79,marker,3,false,3,ul. Olżyczna,street,exact_unique,0.95,,,,interpolated,,landmark_anchor,,
+241,marker_37,-373.92,43.70,266.08,408.80,24.6951752,51.2184376,339041.26,5676640.74,marker,37,false,37,ul. Handlowa,street,exact_unique,0.95,,,,interpolated,,landmark_anchor,,
+242,marker_36,-327.18,58.80,312.82,393.70,24.6974759,51.2186573,339202.68,5676660.14,marker,36,false,36,ul. Soborna,street,exact_unique,0.95,,,,interpolated,,landmark_anchor,,
+243,marker_35,-295.11,30.18,344.89,422.32,24.6982284,51.2175820,339251.48,5676538.93,marker,35,false,35,ul. Kościelna,street,exact_unique,0.95,,,,interpolated,,landmark_anchor,,
+244,marker_F1,-351.11,37.96,288.89,414.54,24.6962363,51.2181641,339114.40,5676608.01,marker,F1,false,F1,Kościół Rosyjski (obecnie istnieje),building,exact_unique,0.95,,,,gcp,0.1,landmark_anchor,,
+245,marker_2,-523.52,69.69,116.48,382.81,24.6859935,51.2210863,338409.40,5676955.40,marker,2,false,2,ul. Garncarska,street,exact_unique,0.95,,,,interpolated,,landmark_anchor,,
+246,marker_4,-465.92,30.47,174.08,422.03,24.6889741,51.2189850,338610.17,5676715.21,marker,4,false,4,ul. Brzeska,street,exact_unique,0.95,,,,interpolated,,landmark_anchor,,
+247,marker_5,-507.43,7.85,132.57,444.65,24.6859395,51.2186364,338397.05,5676683.12,marker,5,false,5,ul. Maceiwska,street,exact_unique,0.95,,,,interpolated,,landmark_anchor,,
+248,marker_1,-574.07,58.56,65.93,393.94,24.6827787,51.2212189,338185.40,5676977.22,marker,1,false,1,"W stronę Maceiwa (obecnie wieś Łuków), w stronę Warszawy",direction,exact_unique,0.95,,,,interpolated,,landmark_anchor,,
+249,marker_12,-405.30,-95.74,234.70,548.24,24.6891364,51.2145097,338605.85,5676217.25,marker,12,false,12,ul. Wola,street,street_repeat,0.85,,,,interpolated,,landmark_anchor,,
+251,marker_17,-431.88,-73.50,208.12,526.00,24.6883334,51.2152052,338552.21,5676296.35,marker,17,false,17,ul. Monopolowa,street,street_repeat,0.85,,,,interpolated,,landmark_anchor,,
+252,marker_34,-318.58,-15.00,321.42,467.50,24.6959252,51.2168108,339087.96,5676458.21,marker,34,false,34,ul. Magistracka,street,exact_unique,0.95,,,,interpolated,,landmark_anchor,,
+253,marker_18,-300.46,-44.67,339.54,497.17,24.6956672,51.2157607,339066.28,5676342.02,marker,18,false,18,"Getto w ""mieście""",district,exact_unique,0.95,,,,interpolated,,landmark_anchor,,
+254,marker_55,238.42,-128.37,878.42,580.87,24.7249291,51.2072432,341080.36,5675331.28,marker,55,false,55,ul. Szpitalna,street,exact_unique,0.95,,,,gcp,0.5,landmark_anchor,,
+255,marker_54,185.91,-117.30,825.91,569.80,24.7228533,51.2082761,340938.93,5675450.62,marker,54,false,54,ul. Zamoyskiego,street,exact_unique,0.95,,,,interpolated,,landmark_anchor,,
+256,marker_53,115.40,-190.60,755.40,643.10,24.7182902,51.2067970,340615.13,5675296.05,marker,53,false,53,Kierunek na Vygonny,direction,street_repeat,0.85,,,,interpolated,,landmark_anchor,,
+257,marker_41,62.44,-128.31,702.44,580.81,24.7157124,51.2094655,340444.30,5675598.35,marker,41,false,41,ul. Budowlana,street,exact_unique,0.95,,,,interpolated,,landmark_anchor,,
+258,marker_40,39.62,-79.90,679.62,532.40,24.7146031,51.2112422,340372.97,5675798.31,marker,40,false,40,ul. Łucka,street,exact_unique,0.95,,,,interpolated,,landmark_anchor,,
+259,marker_D1,15.60,-74.74,655.60,527.24,24.7135321,51.2116870,340299.71,5675850.10,marker,D1,false,D1,"Siedziba ""Gashomer Gatzair""",building,exact_unique,0.95,,,,gcp,0.5,landmark_anchor,,
+260,marker_M2,-17.15,-56.58,622.85,509.08,24.7121438,51.2125092,340205.61,5675944.53,marker,M2,false,M2,Fabryka tytoniu,building,exact_unique,0.95,,,,gcp,1.2,landmark_anchor,,
+261,marker_57,162.61,12.71,802.61,439.79,24.7210576,51.2131049,340830.17,5675991.42,marker,57,false,57,ul. Dzierżyńskiego,street,street_repeat,0.85,,,,interpolated,,landmark_anchor,,
+262,marker_56,103.75,27.76,743.75,424.74,24.7181007,51.2144066,340628.17,5676142.57,marker,56,false,56,ul. Graniczna,street,exact_unique,0.95,,,,interpolated,,landmark_anchor,,
+263,marker_59,56.97,41.85,696.97,410.65,24.7161549,51.2154211,340495.79,5676259.59,marker,59,false,59,ul. Szlachcica,street,exact_unique,0.95,,,,interpolated,,landmark_anchor,,
+264,marker_52,116.54,-33.38,756.54,485.88,24.7186585,51.2119801,340658.74,5675871.55,marker,52,false,52,ul. Malinowska,street,exact_unique,0.95,,,,interpolated,,landmark_anchor,,
+265,marker_48,59.53,-3.73,699.53,456.23,24.7158230,51.2136778,340466.59,5676066.47,marker,48,false,48,ul. Poniatowskiego,street,street_repeat,0.85,,,,interpolated,,landmark_anchor,,
+266,marker_42,40.69,-29.80,680.69,482.30,24.7148962,51.2127541,340398.68,5675965.78,marker,42,false,42,ul. Strażacka,street,exact_unique,0.95,,,,interpolated,,landmark_anchor,,
+267,marker_M1,60.82,-50.69,700.82,503.19,24.7156142,51.2118643,340445.74,5675865.29,marker,M1,false,M1,Młyn Armarnyka,building,exact_unique,0.95,,,,gcp,0.2,landmark_anchor,,
+268,marker_K8,88.65,-57.41,728.65,509.91,24.7171520,51.2113813,340551.47,5675808.24,marker,K8,false,K6,Park i miejsce do spacerów,building,confusable,0.60,K1:Ogród miejski,K8 not in legend (K stops at K7); east of mill M1; unused K6 park and promenade,,interpolated,,landmark_anchor,,
+269,marker_D3,35.66,-46.12,675.66,498.62,24.7145729,51.2122360,340374.30,5675908.87,marker,D3,false,D2,"Siedziba ""Beitar"" i ""Bundu""",building,spatial_unused,0.64,"D3:Stadion piłkarski ""Makabi""/""Haszmonia""",second D3 in the east near D1 Hashomer Hatzair; unused D2 is Beitar and Bund HQ (youth-org cluster),,interpolated,,landmark_anchor,,
+270,marker_A11,75.99,6.26,715.99,446.24,24.7165932,51.2139457,340521.31,5676094.59,marker,A11,false,A11,Synagoga M. Entina (obecnie istnieje),building,exact_unique,0.95,,,,gcp,0.2,landmark_anchor,,
+271,marker_B3,79.29,16.29,719.29,436.21,24.7168291,51.2142873,340538.96,5676132.06,marker,B3,false,B4,"Gimnazjum Żydowskie ""Tarbut"" (nowe)",building,spatial_unused,0.70,"B3:Gimnazjum Żydowskie ""Tarbut"" (stare)",second B3 in the east/new city near A11 Entina; unused B4 is Tarbut (new),,interpolated,,landmark_anchor,,
+272,marker_E2,7.44,-39.72,647.44,492.22,24.7134305,51.2128638,340296.70,5675981.16,marker,E2,false,I2,Narodowa szkoła polska nazwana po Moszczyckim,building,letter_shift,0.82,,"E2 → transcribed I2, Polish national school named after Mościcki",,gcp,0.1,landmark_anchor,,
+273,marker_F2,19.01,-27.97,659.01,480.47,24.7140582,51.2130798,340341.28,5676003.81,marker,F2,false,F2,Cerkiew prawosławna,building,exact_unique,0.80,,Orthodox church in east-central town; F1 Russian church is already placed in old town next to the Great Synagogue,,gcp,0.8,landmark_anchor,,
+274,marker_S4,3.61,-16.78,643.61,469.28,24.7133881,51.2140095,340297.70,5676108.64,marker,S4,false,54,ul. Zamoyskiego,street,confusable,0.75,,"S4: S/5 confusion with ul. Zamoyskiego (54), already labeled at the eastern end (node 255)",,interpolated,,landmark_anchor,,
+275,marker_H1,-53.39,-24.01,586.61,476.51,24.7100423,51.2140718,340064.26,5676122.85,marker,H1,false,H1,"Kino ""Oaza""",building,exact_unique,0.90,,Kino Oaza; annotator was sure on this copy,,gcp,4.1,landmark_anchor,,
+276,marker_48,-17.84,-13.69,622.16,466.19,24.7122338,51.2147885,340219.78,5676197.77,marker,48,false,48,ul. Poniatowskiego,street,street_repeat,0.85,,,,interpolated,,landmark_anchor,,
+277,marker_49,-36.74,25.78,603.26,426.72,24.7120359,51.2158654,340209.70,5676317.93,marker,49,false,49,ul. Perza,street,exact_unique,0.95,,,,interpolated,,landmark_anchor,,
+278,marker_46,-83.10,5.67,556.90,446.83,24.7088536,51.2145184,339982.79,5676175.09,marker,46,false,46,ul. Kulowa,street,exact_unique,0.95,,,,interpolated,,landmark_anchor,,
+279,Node 279,-246.00,90.75,394.00,361.75,24.7021544,51.2199203,339533.76,5676790.34,intersection,,false,,,,,,,,283,interpolated,,edge_projected,,80.1
+280,Node 280,-267.64,85.60,372.36,366.90,24.7012309,51.2199221,339469.28,5676792.55,intersection,,false,,,,,,,,283,interpolated,,edge_projected,,101.0
+281,Node 281,-264.87,53.09,375.13,399.41,24.6997724,51.2180266,339360.84,5676584.99,intersection,,false,,,,,,,,289,interpolated,,edge_projected,,14.7
+282,Node 282,-240.43,56.51,399.57,395.99,24.7013317,51.2182714,339470.57,5676608.79,intersection,,false,,,,,,,,283,interpolated,,edge_projected,,26.7
+283,marker_D3,-255.01,76.60,384.99,375.90,24.7008199,51.2188424,339436.82,5676673.40,marker,D3,false,D3,"Stadion piłkarski ""Makabi""/""Haszmonia""",building,exact_unique,0.82,,Makabi/Haszmonia stadium: open land on the west near K5 beach / river,,interpolated,,landmark_anchor,,
+284,marker_D4,-217.56,40.50,422.44,412.00,24.7021244,51.2173668,339522.78,5676506.48,marker,D4,false,D6,Szpital Żydowski,building,spatial_unused,0.62,"D9:Oddział ""Hehaluc"" i siedziba ""Hehaluc-Gatzair""; D2:Siedziba ""Beitar"" i ""Bundu""",second D4 rejected (not on the railway). Unused D6 Jewish hospital in west-central town,,interpolated,,landmark_anchor,,
+285,marker_26,-139.78,23.70,500.22,428.80,24.7055862,51.2158600,339759.28,5676331.39,marker,26,false,26,ul. Królowej Bony,street,exact_unique,0.95,,,,interpolated,,landmark_anchor,,
+286,marker_27,-144.53,-0.81,495.47,453.31,24.7055195,51.2150368,339751.77,5676240.00,marker,27,false,27,ul. Warszawska,street,exact_unique,0.95,,,,gcp,0.4,landmark_anchor,,
+287,marker_21,-220.59,9.21,419.41,443.29,24.7012381,51.2161846,339456.78,5676376.97,marker,21,false,21,ul. Jurydyczna,street,street_repeat,0.85,,,,interpolated,,landmark_anchor,,
+288,marker_B3,-249.17,3.89,390.83,448.61,24.6996111,51.2162964,339343.55,5676392.96,marker,B3,false,B3,"Gimnazjum Żydowskie ""Tarbut"" (stare)",building,exact_unique,0.72,"B4:Gimnazjum Żydowskie ""Tarbut"" (nowe)",Tarbut (old) on the old-town / river side near K7 Warsaw bridge,,interpolated,,landmark_anchor,,
+289,marker_K5,-253.94,33.75,386.06,418.75,24.7000795,51.2172275,339379.50,5676495.46,marker,K5,false,K5,Plaża - miejsce na pikniki i pływanie łódką,building,exact_unique,0.95,,,,gcp,0.3,landmark_anchor,,
+290,marker_7,-337.49,98.52,302.51,353.98,24.6973161,51.2200727,339196.45,5676817.86,marker,7,false,7,ul. Pożarna,street,exact_unique,0.95,,,,interpolated,,landmark_anchor,,
+291,marker_K2,-294.01,66.42,345.99,386.08,24.6989362,51.2186678,339304.68,5676658.10,marker,K2,false,K2,Pola i pola,building,street_repeat,0.85,,fields at the western edge,,gcp_outlier,,landmark_anchor,,
+292,marker_L5,-155.14,125.86,484.86,326.64,24.7059796,51.2201476,339801.64,5676807.25,marker,L5,false,L5,Dom Ziskinda. Tymczasowa siedziba miejscowego SS,building,exact_unique,0.95,,,,gcp,0.9,landmark_anchor,,
+293,marker_Z4(?),-186.66,161.52,453.34,290.98,24.7046505,51.2213648,339713.06,5676945.50,marker,Z4(?),true,J5,"Pole, na którym stały namioty",building,confusable,0.76,L6:Siedziba lokalnego KC,Z4(?): Z/J and 4/5 confusion. Unused J5 tent field sits in the north near J4 soldiers' football field and 23 Pieski,,interpolated,,landmark_anchor,,
+294,marker_45,-21.03,102.91,618.97,349.59,24.7136069,51.2180912,340327.10,5676562.01,marker,45,false,45,ul. Poprzeczna,street,exact_unique,0.95,,,,interpolated,,landmark_anchor,,
+295,marker_25,-94.01,64.24,545.99,388.26,24.7094023,51.2171650,340030.29,5676468.18,marker,25,false,25,ul. 50. Kompanii,street,exact_unique,0.95,,,,interpolated,,landmark_anchor,,
+296,marker_50,-59.07,59.66,580.93,392.84,24.7115130,51.2167643,340176.29,5676419.02,marker,50,false,50,ul. Koszowa,street,exact_unique,0.95,,,,interpolated,,landmark_anchor,,
+297,marker_44,-32.07,67.25,607.93,385.25,24.7128990,51.2170412,340274.04,5676446.80,marker,44,false,44,ul. Listopadowa,street,exact_unique,0.95,,,,interpolated,,landmark_anchor,,
+298,marker_B2,-118.84,62.55,521.16,389.95,24.7077342,51.2175341,339915.09,5676512.85,marker,B2,false,B2,Żydowska Szkoła Ludowa im. Doktora Calomel,building,exact_unique,0.85,,"Calomel Jewish school in Piaski, next to A2 Piaski synagogue and L4 ghetto centre",,interpolated,,landmark_anchor,,
+299,marker_C5,-92.06,38.71,547.94,413.79,24.7092008,51.2157103,340011.18,5676306.87,marker,C5,false,C7,Mykwa (obecnie istnieje),building,spatial_unused,0.74,C6:Kąpiel,"second C5 sits beside A2 Piaski synagogue and L4 (Piaski ghetto centre); mikvah C7 belongs next to a synagogue, not a cemetery in the street grid",,interpolated,,landmark_anchor,,
+300,marker_A2,-92.39,28.09,547.61,424.41,24.7090379,51.2150701,339997.58,5676236.03,marker,A2,false,A2,"Synagoga w Piskach (""Zamdeszil"")",building,exact_unique,0.95,,,,gcp,2.4,landmark_anchor,,
+301,marker_L4,-118.63,29.92,521.37,422.58,24.7066446,51.2160425,339833.83,5676349.37,marker,L4,false,L4,Budynek polski Ministerstwa Edukacji. Centrum getta w Piskach.,building,exact_unique,0.95,,,,gcp,4.1,landmark_anchor,,
+302,marker_E1,-144.58,52.08,495.42,400.42,24.7060968,51.2170940,339799.22,5676467.47,marker,E1,false,I1,Szkoła wyższa (obecnie istnieje),building,letter_shift,0.90,,map E-series is transcribed I-series (Polish schools). E1 next to L4 education ministry; I1 high school still exists,,gcp,3.6,landmark_anchor,,
+303,marker_E3,-152.46,71.73,487.54,380.77,24.7066194,51.2189383,339842.12,5676671.41,marker,E3,false,I3,Gimnazjum polskie nazwane po Pirogowie,building,letter_shift,0.82,,"E3 → transcribed I3, Polish gymnasium named after Pirogow; same education cluster as E1/L4",,gcp,3.4,landmark_anchor,,
+304,marker_N8,-92.66,83.19,547.34,369.31,24.7097291,51.2180408,340056.15,5676564.84,marker,N8,false,N5,Dom żydowski z szyldem Gwiazdy Dawida,building,confusable,0.55,"N1:Oddzielone istniejące domy; N7:Dom żydowski, zbudowany w 1934 roku; N6:Dom Żydowski - obecnie urząd stanu cywilnego",N8 not in legend (N stops at N7); in Piaski near A2 synagogue. Unused N5 house with Star of David,,interpolated,,landmark_anchor,,
+305,marker_M5,-94.28,120.05,545.72,332.45,24.7098436,51.2194134,340068.90,5676717.20,marker,M5,false,M5,Parking dla powozów konnych,building,street_repeat,0.85,,,,interpolated,,landmark_anchor,,
+306,marker_(illegible),-74.43,124.14,565.57,328.36,24.7110264,51.2193092,340151.13,5676703.05,marker,(illegible),true,L6,Siedziba lokalnego KC,building,spatial_unused,0.58,"B5:Gimnazjum Żydowsko-Polskie ""Klara Ehrlich"" (obecnie istnieje); D2:Siedziba ""Beitar"" i ""Bundu""",illegible; same latitude as L5 Ziskind/SS (y≈366). Unused L6 local KC headquarters,,interpolated,,landmark_anchor,,
+307,Node 307,-308.58,199.35,331.42,253.15,24.6981478,51.2234320,339266.23,5677189.56,intersection,,false,,,,,,,,238,interpolated,,deadend_matched,985890437,67.8
+308,Node 308,-326.15,172.96,313.85,279.54,24.6976170,51.2225906,339226.24,5677097.16,intersection,,false,,,,,,,,290,interpolated,,edge_projected,,39.7
+311,Node 311,-305.40,179.02,334.60,273.48,24.6995061,51.2222411,339356.92,5677054.17,intersection,,false,,,,,,,,238,interpolated,,edge_projected,,65.3
+312,Node 312,-316.78,165.44,323.22,287.06,24.6983508,51.2217858,339274.67,5677006.07,intersection,,false,,,,,,,,290,interpolated,,edge_projected,,67.2
+313,Node 313,-289.89,212.89,350.11,239.61,24.7000683,51.2239124,339401.99,5677238.77,intersection,,false,,,,,,,,238,interpolated,,edge_projected,,0.0
+314,Node 314,-277.60,204.20,362.40,248.30,24.7007038,51.2228794,339442.77,5677122.52,intersection,,false,,,,,,,,238,interpolated,,edge_projected,,68.5
+315,Node 315,-289.93,190.16,350.07,262.34,24.7002703,51.2224425,339410.98,5677074.89,intersection,,false,,,,,,,,238,interpolated,,edge_projected,,74.0
+316,Node 316,-286.58,176.11,353.42,276.39,24.7011842,51.2215965,339471.84,5676978.83,intersection,,false,,,,,,,,238,interpolated,,deadend_matched,1704230171,131.8
+317,Node 317,-269.36,166.40,370.64,286.10,24.7011734,51.2211230,339469.44,5676926.20,intersection,,false,,,,,,,,238,interpolated,,deadend_matched,12927187880,109.3
+318,marker_69,-412.29,380.13,227.71,72.37,24.6947034,51.2313621,339053.41,5678078.83,marker,69,false,69,Kierunek na Brześć,direction,street_repeat,0.92,,NW exit of the map; 69 is direction to Brest,,interpolated,,landmark_anchor,,
+319,marker_68(?),-311.12,377.99,328.88,74.51,24.7000083,51.2302904,339420.01,5677948.07,marker,68(?),true,68,Do masowego grobu na Bachowie,direction,spatial_unused,0.85,,"annotator marked (?); far-north road matches 68 (mass grave at Bachów, north of Kowel)",,interpolated,,landmark_anchor,,
+320,marker_J6,-273.97,313.79,366.03,138.71,24.7014731,51.2275508,339512.73,5677640.25,marker,J6,false,J6,Wieża ciśnień,building,exact_unique,0.95,,,,gcp,0.0,landmark_anchor,,
+321,marker_A3,-450.50,51.07,189.50,401.43,24.6903159,51.2195875,338705.97,5676779.26,marker,A3,false,A3,Dziedziniec i synagoga rabina z Turijska (obecnie istnieje),building,exact_unique,0.95,,,,gcp,0.1,landmark_anchor,,
+322,marker_L2,-444.04,39.46,195.96,413.04,24.6905742,51.2190498,338722.12,5676718.90,marker,L2,false,L2,Radzieckie NKWD (1939),building,exact_unique,0.95,,,,interpolated,,landmark_anchor,,
+323,marker_A1,-353.50,-12.76,286.50,465.26,24.6949571,51.2170589,339021.22,5676487.92,marker,A1,false,A1,Wielka Synagoga (obecnie istnieje),building,exact_unique,0.95,,,,gcp,1.1,landmark_anchor,,
+324,marker_A7,-384.55,-21.73,255.45,474.23,24.6927606,51.2164266,338865.63,5676422.44,marker,A7,false,A7,Talmud Tora,building,exact_unique,0.95,,,,gcp,0.7,landmark_anchor,,
+325,marker_A8,-376.37,-4.01,263.63,456.51,24.6941816,51.2169603,338966.73,5676478.66,marker,A8,false,A8,Synagoga Hasidei Satpan,building,exact_unique,0.95,,,,gcp,0.8,landmark_anchor,,
+326,marker_A(?),-414.94,22.17,225.06,430.33,24.6922639,51.2180003,338836.44,5676598.50,marker,A(?),true,A4,"Dom modlitwy Turiya (""Trisk-shtibl"")",building,spatial_unused,0.72,A10:Synagoga Brzeska,"A(?) west of old town near A3 (Turijsk rabbi) and ul. Brzeska (4); A4 is the Trisk shtibl, related to Turijsk",,interpolated,,landmark_anchor,,
+327,marker_29,-126.95,-161.85,513.05,614.35,24.7046552,51.2105164,339675.70,5675739.27,marker,29,false,29,ul. Budzyńska,street,exact_unique,0.95,,,,interpolated,,landmark_anchor,,
+328,marker_19,-143.18,-192.78,496.82,645.28,24.7031765,51.2097569,339569.79,5675658.04,marker,19,false,19,ul. Komarowska,street,exact_unique,0.95,,,,interpolated,,landmark_anchor,,
+330,marker_21,-39.27,-124.14,600.73,576.64,24.7102197,51.2106576,340064.81,5675742.85,marker,21,false,21,ul. Jurydyczna,street,street_repeat,0.85,,,,interpolated,,landmark_anchor,,
+331,marker_C1,-143.96,-106.04,496.04,558.54,24.7046580,51.2124575,339682.65,5675955.09,marker,C1,false,C1,Dom sierot TOZ,building,exact_unique,0.95,,,,gcp,0.3,landmark_anchor,,
+332,marker_B6,-104.54,-102.25,535.46,554.75,24.7067356,51.2119545,339825.99,5675894.63,marker,B6,false,B6,Przedszkole żydowskie,building,exact_unique,0.95,,,,gcp,0.3,landmark_anchor,,
+333,marker_32,-61.26,-86.99,578.74,539.49,24.7094440,51.2119398,340015.09,5675887.10,marker,32,false,32,ul. Pomnikowa,street,exact_unique,0.95,,,,interpolated,,landmark_anchor,,
+334,marker_F2,-95.50,-111.28,544.50,563.78,24.7071230,51.2115685,339851.71,5675850.87,marker,F2,false,F3,Kościół katolicki,building,spatial_unused,0.70,F2:Cerkiew prawosławna,"second F2 in the south civic/Christian cluster (G3 post, F5 priests, F4 cemetery); unused F3 Catholic church",,interpolated,,landmark_anchor,,
+335,marker_G3,-121.93,-103.97,518.07,556.47,24.7058467,51.2121818,339764.70,5675921.85,marker,G3,false,G3,Poczta,building,exact_unique,0.95,,,,interpolated,,landmark_anchor,,
+336,marker_B2,-165.24,-106.66,474.76,559.16,24.7032881,51.2126445,339587.63,5675978.87,marker,B2,false,B5,"Gimnazjum Żydowsko-Polskie ""Klara Ehrlich"" (obecnie istnieje)",building,spatial_unused,0.68,"B4:Gimnazjum Żydowskie ""Tarbut"" (nowe); B2:Żydowska Szkoła Ludowa im. Doktora Calomel","second B2 in the south education/welfare cluster (B6 kindergarten, C1 TOZ orphanage). Unused B5 Klara Ehrlich gymnasium (still exists)",,interpolated,,landmark_anchor,,
+337,marker_B1,-90.60,-68.86,549.40,521.36,24.7079194,51.2127644,339911.47,5675982.10,marker,B1,false,C6,Kąpiel,building,spatial_unused,0.50,"B1:Żydowska Szkoła Ludowa ""Herzlija"". Izba Judenratu (obecnie istnieje)","second B1 in the south welfare cluster (C1 orphanage, B6 kindergarten); unused C6 public bath. Could still be B1",,interpolated,,landmark_anchor,,
+338,marker_M4,-166.49,-59.83,473.51,512.33,24.7036029,51.2137142,339613.33,5676097.12,marker,M4,false,M4,Stacja elektryczna (stara),building,exact_unique,0.95,,,,gcp_outlier,,landmark_anchor,,
+339,marker_M5,-166.00,-72.83,474.00,525.33,24.7035617,51.2134388,339609.49,5676066.60,marker,M5,false,M5,Parking dla powozów konnych,building,street_repeat,0.85,,,,interpolated,,landmark_anchor,,
+340,marker_A5,-191.43,-41.18,448.57,493.68,24.7020400,51.2143641,339506.44,5676172.80,marker,A5,false,A6,Synagoga im. Prozański,building,spatial_unused,0.65,A10:Synagoga Brzeska,second A5; this copy is toward the rynek / new-town side. A6 Prozhansky was in the new city off Warszawska,,interpolated,,landmark_anchor,,
+341,marker_38,-100.19,-53.13,539.81,505.63,24.7076070,51.2132470,339891.33,5676036.44,marker,38,false,38,ul. Kowalska,street,exact_unique,0.95,,,,interpolated,,landmark_anchor,,
+342,marker_L1,-94.21,-36.37,545.79,488.87,24.7078692,51.2135763,339910.79,5676072.49,marker,L1,false,L1,Dom Holtscheina,building,exact_unique,0.95,,,,interpolated,,landmark_anchor,,
+343,marker_24,-59.57,-45.33,580.43,497.83,24.7096163,51.2133404,340031.97,5676042.45,marker,24,false,24,"Obwód ""Kowel-2"" (gdzie mieszkali głównie nie-Żydzi)",district,street_repeat,0.85,,,,interpolated,,landmark_anchor,,
+344,marker_28,-129.52,-64.82,510.48,517.32,24.7060769,51.2133214,339784.73,5676048.05,marker,28,false,28,ul. Mickiewicza,street,exact_unique,0.95,,,,interpolated,,landmark_anchor,,
+345,marker_K7,-254.34,-31.68,385.66,484.18,24.6984973,51.2154324,339262.76,5676299.32,marker,K7,false,K7,Most Warszawski (zrujnowany),building,exact_unique,0.95,,,,interpolated,,landmark_anchor,,
+346,marker_20,-167.95,-37.23,472.05,489.73,24.7035831,51.2142130,339613.68,5676152.62,marker,20,false,20,ul. Kościuszki,street,exact_unique,0.95,,,,interpolated,,landmark_anchor,,
+347,marker_J1,-152.74,-30.28,487.26,482.78,24.7047376,51.2143144,339694.65,5676161.38,marker,J1,false,J1,Rynek miejski,building,exact_unique,0.93,,"rynek cluster with H2, H4, M6 (cinemas + Friedrichson pharmacy)",,gcp,2.3,landmark_anchor,,
+348,marker_H2,-135.79,-40.42,504.21,492.92,24.7061170,51.2140258,339789.98,5676126.28,marker,H2,false,H2,"Kino ""Ekspres""",building,exact_unique,0.95,,,,gcp,0.7,landmark_anchor,,
+349,marker_H4,-135.94,-30.33,504.06,482.83,24.7062286,51.2143163,339798.78,5676158.35,marker,H4,false,H4,"Żydowski klub nocny ""Wersal""",building,exact_unique,0.95,,,,gcp,0.9,landmark_anchor,,
+350,marker_M6,-136.10,-20.82,503.90,473.32,24.7062576,51.2146259,339801.88,5676192.70,marker,M6,false,M6,Apteka Friedrichsona (obecnie istnieje),building,exact_unique,0.95,,,,gcp,4.7,landmark_anchor,,
+351,marker_B1,-104.90,-7.38,535.10,459.88,24.7076172,51.2131347,339891.65,5676023.93,marker,B1,false,B1,"Żydowska Szkoła Ludowa ""Herzlija"". Izba Judenratu (obecnie istnieje)",building,exact_unique,0.80,,"Herzlija school / Judenrat; more central, near the rynek",,gcp,7.8,landmark_anchor,,
+352,marker_I4,-82.64,-13.21,557.36,465.71,24.7082783,51.2145482,339942.73,5676179.66,marker,I4,false,,,,unresolved,0.00,,"Stock exchange — English legend only, not in landmarks_transcribed.csv; marker sits in the town centre",,gcp,6.3,landmark_anchor,,
+353,marker_D5,144.72,81.80,784.72,370.70,24.7205078,51.2157173,340800.79,5676283.07,marker,D5,false,D5,Dworzec kolejowy do transportu ładunków i warsztat naprawczy,building,exact_unique,0.95,,,,interpolated,,landmark_anchor,,
+354,marker_C2,-19.22,-98.44,620.78,550.94,24.7118643,51.2112988,340181.90,5675810.56,marker,C2,false,C2,Schronisko dla osób starszych,building,exact_unique,0.95,,,,gcp,0.5,landmark_anchor,,
+355,marker_F4,101.87,-105.76,741.87,558.26,24.7182173,51.2096202,340619.78,5675610.12,marker,F4,false,F4,Cmentarz chrześcijański (obecnie istnieje),building,exact_unique,0.95,,,,gcp,0.1,landmark_anchor,,
+356,marker_L3,-37.64,43.07,602.36,409.43,24.7123719,51.2163302,340234.77,5676368.89,marker,L3,false,L3,Budynek polski Ministerstwa Finansów. Radziecka Rada Miejska (1939) (obecnie istnieje),building,exact_unique,0.95,,,,gcp,0.3,landmark_anchor,,
+357,marker_H1(?),-2.62,39.38,637.38,413.12,24.7137936,51.2160683,340333.14,5676336.67,marker,H1(?),true,H3,"Polski klub nocny ""Zasób"" (dwa budynki)",building,spatial_unused,0.70,"H1:Kino ""Oaza""",H1(?) duplicate of Oasis; unused H3 Polish night club Zasób (two buildings),,interpolated,,landmark_anchor,,
+358,Node 358,-118.83,47.45,521.17,405.05,24.7075259,51.2165038,339896.97,5676398.74,intersection,,false,,,,,,,,298,interpolated,,edge_projected,,40.6
+359,Node 359,-118.92,54.94,521.08,397.56,24.7077874,51.2165744,339915.47,5676406.02,intersection,,false,,,,,,,,298,interpolated,,edge_projected,,67.3
+360,Node 360,-131.22,54.07,508.78,398.43,24.7071360,51.2172178,339872.22,5676478.98,intersection,,false,,,,,,,,302,interpolated,,deadend_matched,3757009982,27.1
+361,marker_M5,-79.32,-43.93,560.68,496.43,24.7085165,51.2134616,339955.59,5676058.33,marker,M5,false,M5,Parking dla powozów konnych,building,street_repeat,0.85,,,,interpolated,,landmark_anchor,,
+362,marker_N3,-34.79,-24.82,605.21,477.32,24.7111012,51.2146301,340140.14,5676182.62,marker,N3,false,N3,Dom Gitlisa,building,exact_unique,0.95,,,,gcp,3.9,landmark_anchor,,
+363,marker_M3,-38.53,-11.31,601.47,463.81,24.7110602,51.2149692,340138.45,5676220.41,marker,M3,false,N2,Dom nauczyciela,building,confusable,0.60,M3:Stacja elektryczna (nowa); N4:Dom żydowski (obecnie muzeum miejskie); N6:Dom Żydowski - obecnie urząd stanu cywilnego,second M3 in a civic/residential cluster next to N3 Gitlis; M/N confusion. Unused N2 teacher's house,,interpolated,,landmark_anchor,,
+364,marker_??4,-17.17,-30.14,622.83,482.64,24.7121443,51.2140410,340210.95,5676114.85,marker,??4,true,N4,Dom żydowski (obecnie muzeum miejskie),building,spatial_unused,0.48,"B4:Gimnazjum Żydowskie ""Tarbut"" (nowe); K4:Dziewica; 54:ul. Zamoyskiego","??4 last digit 4, east-central near F2/H1/N3. Unused N4 Jewish house (now city museum) matches the 4",,interpolated,,landmark_anchor,,
+365,marker_B2,-446.03,85.49,193.97,367.01,24.6910519,51.2207840,338761.54,5676910.67,marker,B2,false,A10,Synagoga Brzeska,building,spatial_unused,0.50,C4:Stary cmentarz; B2:Żydowska Szkoła Ludowa im. Doktora Calomel,"third B2 at the far west edge next to A3 and C5, near ul. Brzeska (4). Unlikely a school; unused A10 Brzeska synagogue",,interpolated,,landmark_anchor,,
+366,marker_C5,-488.17,89.90,151.83,362.60,24.6884505,51.2214400,338582.19,5676989.33,marker,C5,false,C5,Starożytny cmentarz,building,exact_unique,0.86,,far west edge of town; ancient cemetery belongs at the edge,,interpolated,,landmark_anchor,,
+367,marker_K2,-29.66,11.92,610.34,440.58,24.7120543,51.2155603,340209.92,5676283.97,marker,K2,false,K1,Ogród miejski,building,spatial_unused,0.70,K6:Park i miejsce do spacerów,"second K2 sits in town, not in fields; unused K1 city garden",,interpolated,,landmark_anchor,,
+368,marker_53,260.73,-23.60,900.73,476.10,24.7254193,51.2105098,341125.84,5675693.43,marker,53,false,53,Kierunek na Vygonny,direction,street_repeat,0.85,,,,interpolated,,landmark_anchor,,
+369,marker_D7,269.34,-127.24,909.34,579.74,24.7253343,51.2068197,341107.20,5675283.32,marker,D7,false,D7,Szpital Polski,building,exact_unique,0.95,,,,gcp,0.5,landmark_anchor,,
+370,marker_D8,252.25,-102.50,892.25,555.00,24.7251648,51.2079019,341099.09,5675404.01,marker,D8,false,D8,Obszar zamieszkania pracowników kolei (polski),building,exact_unique,0.95,,,,gcp_outlier,,landmark_anchor,,
+371,marker_67,-44.97,5.91,595.03,446.59,24.7110682,51.2153231,340140.24,5676259.75,marker,67,false,67,ul. Żeromskiego,street,exact_unique,0.95,,,,interpolated,,landmark_anchor,,
+372,marker_16,-274.94,-194.83,365.06,647.33,24.6948768,51.2109358,338994.25,5675807.28,marker,16,false,16,Rzeka Turia,water,exact_unique,0.95,,,,interpolated,,landmark_anchor,,
+373,marker_17,-202.21,-130.71,437.79,583.21,24.7004515,51.2122931,339388.31,5675945.99,marker,17,false,17,ul. Monopolowa,street,street_repeat,0.85,,,,interpolated,,landmark_anchor,,
+374,marker_A5,-329.25,-33.58,310.75,486.08,24.6946860,51.2164085,339000.02,5676416.21,marker,A5,false,A5,"Dom Modlitwy Rużyńskich Chasydów (""Ruzhinel Sztibl"")",building,exact_unique,0.88,,"A5 Ruzhin shtibl; this copy is next to ul. Magistracka (34), matching the historical address",,gcp,0.5,landmark_anchor,,
+375,marker_A18,-373.25,-38.58,266.75,491.08,24.6926520,51.2161077,338856.93,5676387.22,marker,A18,false,A9,"Synagoga ""Hayatim"" (krawcy)",building,confusable,0.78,A10:Synagoga Brzeska,A18 not in legend; sits in the Great Synagogue cluster (A1/A7/A8). A9 tailors' synagogue was adjacent to the Great Synagogue,,interpolated,,landmark_anchor,,
+376,marker_G4,-586.16,3.47,53.84,449.03,24.6811814,51.2193747,338067.40,5676775.68,marker,G4,false,G4,Nowa remiza strażacka,building,exact_unique,0.95,,,,interpolated,,landmark_anchor,,
+377,marker_I2,5.75,163.34,645.75,289.16,24.7152241,51.2198229,340446.02,5676751.04,marker,I2,false,,,,unresolved,0.00,,"Tunnel for pedestrians and vehicles — English legend only, not in landmarks_transcribed.csv; marker sits near the station (transcribed I2 already assigned from E2)",,interpolated,,landmark_anchor,,
+378,marker_?C?,16.12,-100.56,656.12,553.06,24.7134120,51.2109345,340288.72,5675766.68,marker,?C?,true,C4,Stary cmentarz,building,spatial_unused,0.68,C3:Hostel,?C? on the south edge next to F4 Christian cemetery and F5 priests; unused C4 old Jewish cemetery. Alternative: C3 hostel next to C2 old-age home,,interpolated,,landmark_anchor,,
+379,marker_F5,-58.46,-144.98,581.54,597.48,24.7087602,51.2101417,339961.10,5675688.66,marker,F5,false,F5,Pomieszczenia księży,building,exact_unique,0.95,,,,gcp,0.2,landmark_anchor,,
+380,marker_J2,-15.30,-147.37,624.70,599.87,24.7109192,51.2097987,340110.69,5675645.82,marker,J2,false,J2,Rynek wozów wiejskich,building,exact_unique,0.95,,,,gcp,0.3,landmark_anchor,,
+381,marker_J1,-114.93,4.54,525.07,447.96,24.7070937,51.2140060,339858.12,5676121.96,marker,J1,false,J3,Duży obszar (co tydzień rynek),building,spatial_unused,0.72,J1:Rynek miejski,second J1 just NE of the rynek; unused J3 is the large weekly market,,interpolated,,landmark_anchor,,

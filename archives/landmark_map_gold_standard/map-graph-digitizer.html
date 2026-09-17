@@ -1,0 +1,3262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Map → Graph Digitizer</title>
+<style>
+  :root{
+    --paper:#eae5d8;
+    --ink:#2a2620;
+    --panel:#20211d;
+    --panel-2:#2b2c26;
+    --panel-line:#3d3e36;
+    --accent:#b8722f;
+    --accent-2:#8fae7a;
+    --text-dim:#a6a495;
+    --text-bright:#f2efe4;
+    --danger:#a4453a;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;height:100%;font-family:'Iowan Old Style','Georgia',serif;background:var(--panel);color:var(--text-bright);}
+  #app{display:flex;height:100vh;width:100vw;overflow:hidden;}
+
+  /* ---------- canvas stage ---------- */
+  #stage{
+    position:relative;flex:1;min-width:0;
+    background:
+      linear-gradient(var(--panel) 0%, var(--panel) 100%);
+    display:flex;flex-direction:column;
+  }
+  #topbar{
+    display:flex;align-items:center;gap:10px;
+    padding:10px 14px;border-bottom:1px solid var(--panel-line);
+    background:var(--panel-2);flex-wrap:wrap;
+  }
+  #topbar .title{
+    font-size:15px;letter-spacing:.02em;color:var(--text-bright);margin-right:8px;font-weight:600;
+  }
+  #dirtyIndicator{
+    font-size:11px;color:var(--text-dim);margin-right:6px;visibility:hidden;
+  }
+  #dirtyIndicator.show{visibility:visible;color:#e2c68a;}
+  .sep{width:1px;align-self:stretch;background:var(--panel-line);margin:0 2px;}
+  .btn{
+    font-family:inherit;font-size:12.5px;color:var(--text-bright);
+    background:#3a3b33;border:1px solid #4c4d43;border-radius:3px;
+    padding:6px 11px;cursor:pointer;white-space:nowrap;transition:background .12s;
+  }
+  .btn:hover{background:#484a3f;}
+  .btn.primary{background:var(--accent);border-color:var(--accent);color:#1c1408;font-weight:600;}
+  .btn.primary:hover{background:#c98038;}
+  .btn.danger{background:transparent;border-color:var(--danger);color:#e2a49c;}
+  .btn.danger:hover{background:var(--danger);color:#fff;}
+  #deleteTools{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--danger);}
+  body.deleting #canvasWrap{cursor:pointer;}
+  .btn:disabled{opacity:.35;cursor:not-allowed;}
+  input[type=file]{display:none;}
+  #modeIndicator{
+    margin-left:auto;font-size:12px;color:var(--text-dim);display:flex;align-items:center;gap:8px;
+  }
+  #chainDot{width:8px;height:8px;border-radius:50%;background:#555;}
+  #chainDot.active{background:var(--accent-2);box-shadow:0 0 6px var(--accent-2);}
+
+  #canvasWrap{flex:1;position:relative;overflow:hidden;cursor:crosshair;}
+  #mapCanvas{position:absolute;top:0;left:0;}
+  #batchBar{
+    position:absolute;top:14px;left:50%;transform:translateX(-50%);
+    display:none;align-items:center;gap:8px;
+    background:var(--panel-2);border:1px solid var(--accent);border-radius:5px;
+    padding:8px 10px;box-shadow:0 4px 14px rgba(0,0,0,.4);z-index:5;
+  }
+  #batchBar.show{display:flex;}
+  #batchBar span{font-size:12px;color:var(--text-dim);white-space:nowrap;}
+  #batchBar input{
+    font-family:inherit;font-size:12.5px;color:var(--text-bright);background:#181913;
+    border:1px solid #4c4d43;border-radius:3px;padding:6px 8px;width:180px;
+  }
+  #batchBar input:focus{outline:1px solid var(--accent);}
+  #emptyState{
+    position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+    flex-direction:column;gap:14px;color:var(--text-dim);text-align:center;padding:40px;
+  }
+  #emptyState .big{font-size:16px;color:var(--text-bright);}
+  #emptyState .small{font-size:13px;max-width:420px;line-height:1.5;}
+
+  #statusbar{
+    padding:6px 14px;border-top:1px solid var(--panel-line);background:var(--panel-2);
+    font-size:11.5px;color:var(--text-dim);display:flex;gap:18px;
+  }
+  #statusbar b{color:var(--text-bright);}
+
+  /* ---------- sidebar ---------- */
+  #sidebar{
+    width:330px;flex-shrink:0;background:var(--panel-2);border-left:1px solid var(--panel-line);
+    display:flex;flex-direction:column;height:100%;
+  }
+  #sidebarHead{padding:14px 16px 10px;border-bottom:1px solid var(--panel-line);}
+  #sidebarHead h1{font-size:15px;margin:0 0 4px;color:var(--text-bright);font-weight:600;}
+  #sidebarHead p{font-size:11.5px;color:var(--text-dim);margin:0;line-height:1.5;}
+  #tabs{display:flex;border-bottom:1px solid var(--panel-line);}
+  .tab{flex:1;text-align:center;padding:9px 0;font-size:12px;color:var(--text-dim);cursor:pointer;border-bottom:2px solid transparent;}
+  .tab.active{color:var(--text-bright);border-bottom-color:var(--accent);}
+  #listWrap{flex:1;overflow-y:auto;padding:8px 10px;}
+  #listSearchWrap{padding:8px 10px 6px;border-bottom:1px solid var(--panel-line);}
+  #listSearch{
+    width:100%;font-family:inherit;font-size:12.5px;color:var(--text-bright);
+    background:#181913;border:1px solid #3d3e36;border-radius:3px;padding:6px 8px;
+  }
+  #listSearch:focus{outline:1px solid var(--accent);}
+  #listSearchHint{font-size:10.5px;color:var(--text-dim);margin-top:4px;}
+  #listFilterActions{display:flex;gap:6px;margin-top:6px;flex-wrap:wrap;}
+  #listFilterActions .btn{font-size:11.5px;padding:4px 8px;}
+  .rowItem.isHidden{opacity:.42;}
+  .rowItem{
+    display:flex;align-items:center;gap:6px;padding:6px 6px;border-radius:3px;margin-bottom:2px;
+  }
+  .rowItem:hover{background:#33342c;}
+  .rowItem .idBadge{
+    font-size:10px;color:var(--text-dim);width:26px;flex-shrink:0;font-variant-numeric:tabular-nums;
+  }
+  .rowItem input[type=text]{
+    flex:1;min-width:0;background:#181913;border:1px solid #3d3e36;color:var(--text-bright);
+    font-family:inherit;font-size:12px;padding:4px 6px;border-radius:2px;
+  }
+  .rowItem input[type=text]:focus{outline:1px solid var(--accent);}
+  .rowItem .del{
+    flex-shrink:0;width:20px;height:20px;border:none;background:transparent;color:#7a7a70;
+    cursor:pointer;font-size:14px;line-height:1;
+  }
+  .rowItem .del:hover{color:var(--danger);}
+  .rowItem .coords{font-size:9.5px;color:#6c6b60;flex-shrink:0;width:78px;text-align:right;font-variant-numeric:tabular-nums;}
+  #emptyList{color:var(--text-dim);font-size:12px;padding:20px 10px;text-align:center;}
+  #sidebarFoot{padding:12px 14px 16px;border-top:1px solid var(--panel-line);display:flex;flex-direction:column;gap:8px;}
+  #helpBox{
+    font-size:11px;color:var(--text-dim);line-height:1.6;padding:10px 12px;background:#181913;
+    border-radius:4px;border:1px solid var(--panel-line);
+  }
+  #helpBox b{color:var(--text-bright);}
+  #helpBoxHead{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:6px;}
+  #helpBoxHead span{font-size:11px;color:var(--text-bright);font-weight:600;}
+  #helpBox.collapsed{padding:6px 10px;}
+  #helpBox.collapsed #helpBoxDigitize,
+  #helpBox.collapsed #helpBoxAlign{display:none !important;}
+  #helpBox.collapsed #helpBoxHead{margin-bottom:0;}
+  #toggleHelpBtn{font-size:11px;padding:3px 8px;}
+  #numeralTools{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text-dim);}
+  #numeralSelect{min-width:88px;}
+  kbd{background:#33342c;border:1px solid #4c4d43;border-radius:3px;padding:0 4px;font-size:10.5px;color:var(--text-bright);}
+
+  #modeSwitch{display:flex;gap:0;border:1px solid #4c4d43;border-radius:3px;overflow:hidden;}
+  #modeSwitch .modeBtn{
+    border:none;border-radius:0;margin:0;background:#3a3b33;
+  }
+  #modeSwitch .modeBtn.active{background:var(--accent);color:#1c1408;font-weight:600;}
+  #digitizeTools,#alignTools{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+  #alignTools{display:none;}
+  body.align-mode #digitizeTools{display:none;}
+  body.align-mode #alignTools{display:flex;}
+  body.align-mode #canvasWrap{display:none;}
+  body.align-mode #geoWrap{display:flex;}
+  body.align-mode #modeIndicator{display:none;}
+  #geoWrap{
+    display:none;flex:1;position:relative;min-height:0;background:#181913;
+  }
+  #geoMap{position:absolute;inset:0;}
+  #geoKeyBanner{
+    position:absolute;inset:0;z-index:4;
+    display:flex;align-items:center;justify-content:center;
+    background:rgba(24,25,19,.92);padding:32px;
+  }
+  #geoKeyBanner.hidden{display:none;}
+  #geoKeyBanner .card{
+    max-width:520px;background:var(--panel-2);border:1px solid var(--panel-line);
+    border-radius:6px;padding:22px 24px;
+  }
+  #geoKeyBanner h2{margin:0 0 8px;font-size:16px;}
+  #geoKeyBanner p{font-size:12.5px;color:var(--text-dim);line-height:1.55;margin:0 0 12px;}
+  #geoKeyBanner input[type=text]{
+    width:100%;font-family:inherit;font-size:13px;color:var(--text-bright);
+    background:#181913;border:1px solid #4c4d43;border-radius:3px;padding:8px 10px;margin-bottom:10px;
+  }
+  #geoKeyBanner input[type=text]:focus{outline:1px solid var(--accent);}
+  .layerToggles{display:flex;align-items:center;gap:10px;font-size:12px;color:var(--text-dim);}
+  .layerToggles label{display:flex;align-items:center;gap:4px;cursor:pointer;white-space:nowrap;}
+  .kindFilters{
+    display:flex;align-items:center;gap:7px;padding:2px 7px;
+    border:1px solid #4c4d43;border-radius:3px;font-size:11.5px;
+  }
+  .kindFilters.disabled{opacity:.4;pointer-events:none;}
+  #nbWrap{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text-dim);}
+  #nbRadius{width:90px;}
+  #mapTypeSelect{
+    font-family:inherit;font-size:12.5px;color:var(--text-bright);
+    background:#3a3b33;border:1px solid #4c4d43;border-radius:3px;padding:6px 8px;
+  }
+  #sketchTools{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text-dim);}
+  #sketchTools .swatch, #arrowTools .swatch, .arrowColorSwatch{
+    width:16px;height:16px;border-radius:50%;border:2px solid #4c4d43;padding:0;cursor:pointer;
+    background:#3b6fd4;
+  }
+  #sketchTools .swatch[data-color="black"], #arrowTools .swatch[data-color="black"], .arrowColorSwatch[data-color="black"]{background:#1a1a1a;}
+  #sketchTools .swatch[data-color="red"]{background:#c43c32;}
+  #sketchTools .swatch[data-color="blue"], #arrowTools .swatch[data-color="blue"], .arrowColorSwatch[data-color="blue"]{background:#3b6fd4;}
+  #arrowTools .swatch[data-color="grey"], .arrowColorSwatch[data-color="grey"]{background:#8a8680;}
+  #sketchTools .swatch.active, #arrowTools .swatch.active, .arrowColorSwatch.active{border-color:#f2efe4;box-shadow:0 0 0 2px var(--accent);}
+  #arrowTools{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text-dim);}
+  .rowItem .arrowColorSwatch{width:14px;height:14px;flex-shrink:0;}
+  .kindSelect{
+    font-family:inherit;font-size:11.5px;color:var(--text-bright);
+    background:#181913;border:1px solid #4c4d43;border-radius:3px;padding:3px 5px;
+  }
+  .kindLabel{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text-dim);white-space:nowrap;}
+  .rowItem .kindSelect{width:76px;flex-shrink:0;}
+  body.sketching #canvasWrap{cursor:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><circle cx="2" cy="14" r="1.5" fill="%23333"/><path d="M3 13 L13 3" stroke="%23333" stroke-width="2"/></svg>') 2 14, crosshair;}
+  .rowItem.selected{background:#3d3428; outline:1px solid var(--accent);}
+  .rowItem .coords.geo{width:118px;}
+  #overlayPanel{display:none;padding:10px 12px;border-top:1px solid var(--panel-line);max-height:180px;overflow-y:auto;}
+  body.align-mode #overlayPanel{display:block;}
+  #overlayPanel h3{margin:0 0 8px;font-size:12px;color:var(--text-bright);font-weight:600;}
+  .overlayRow{font-size:11.5px;color:var(--text-dim);margin-bottom:8px;}
+  .overlayRow .orHead{display:flex;align-items:center;gap:6px;margin-bottom:4px;}
+  .overlayRow input[type=range]{width:100%;}
+  .overlayEmpty{font-size:11.5px;color:var(--text-dim);}
+  #helpBoxAlign{display:none;}
+  body.align-mode #helpBoxDigitize{display:none;}
+  body.align-mode #helpBoxAlign{display:block;}
+</style>
+</head>
+<body>
+<div id="app">
+
+  <div id="stage">
+    <div id="topbar">
+      <span class="title">Map → Graph Digitizer</span>
+      <span id="dirtyIndicator" title="Unsaved changes">●&nbsp;unsaved</span>
+      <div id="modeSwitch">
+        <button class="btn modeBtn active" id="modeDigitize" type="button">Digitize</button>
+        <button class="btn modeBtn" id="modeAlign" type="button">Align on map</button>
+      </div>
+      <span class="sep"></span>
+      <div id="digitizeTools">
+        <label class="btn primary" for="fileInput">Load map image</label>
+        <input type="file" id="fileInput" accept="image/*">
+        <button class="btn" id="fitBtn" disabled>Fit to view</button>
+        <button class="btn" id="undoBtn" disabled>Undo</button>
+        <button class="btn danger" id="clearBtn" disabled>Clear all</button>
+        <span class="sep"></span>
+        <button class="btn" id="saveProjectBtn" disabled>Save project</button>
+        <label class="btn" for="loadProjectInput">Load project</label>
+        <input type="file" id="loadProjectInput" accept="application/json,.json">
+        <button class="btn" id="forgetSessionBtn" title="Delete the auto-saved copy in this browser">Forget session</button>
+        <label class="btn" for="importCsvInput">Import CSVs</label>
+        <input type="file" id="importCsvInput" accept=".csv,text/csv" multiple>
+        <button class="btn primary" id="exportBtn" disabled>Export CSVs</button>
+        <span class="sep"></span>
+        <label class="kindLabel">New edge
+          <select id="newEdgeKind" class="kindSelect" title="Type for newly drawn edges">
+            <option value="road">road</option>
+            <option value="rail">rail</option>
+            <option value="water">water</option>
+            <option value="border">border</option>
+          </select>
+        </label>
+        <div class="layerToggles" id="digitizeVis">
+          <label><input type="checkbox" id="visMap" checked> Map</label>
+          <label class="kindLabel">Bg
+            <select id="canvasBg" class="kindSelect" title="Canvas background">
+              <option value="standard">standard</option>
+              <option value="white">white</option>
+              <option value="grey">grey</option>
+              <option value="black">black</option>
+            </select>
+          </label>
+          <label><input type="checkbox" id="visNodes" checked> Nodes</label>
+          <label><input type="checkbox" id="visEdges" checked> Edges</label>
+          <span class="kindFilters" id="edgeKindFilters" title="Show or hide edges by type">
+            <label><input type="checkbox" data-kind="road" checked> road</label>
+            <label><input type="checkbox" data-kind="rail" checked> rail</label>
+            <label><input type="checkbox" data-kind="water" checked> water</label>
+            <label><input type="checkbox" data-kind="border" checked> border</label>
+            <label><input type="checkbox" data-kind="arrow" checked> arrow</label>
+          </span>
+          <label><input type="checkbox" id="visLabels" checked> Labels</label>
+        </div>
+        <span class="sep"></span>
+        <div id="sketchTools">
+          <label><input type="checkbox" id="sketchMode"> Sketch</label>
+          <button type="button" class="swatch active" data-color="blue" title="Blue sketch"></button>
+          <button type="button" class="swatch" data-color="black" title="Black sketch"></button>
+          <button type="button" class="swatch" data-color="red" title="Red sketch"></button>
+          <label><input type="checkbox" id="visSketches" checked> Sketches</label>
+          <button class="btn" id="clearSketches" type="button">Clear sketches</button>
+        </div>
+        <span class="sep"></span>
+        <div id="arrowTools">
+          <label><input type="checkbox" id="arrowMode"> Add arrow</label>
+          <button type="button" class="swatch" data-color="grey" title="Grey arrow"></button>
+          <button type="button" class="swatch active" data-color="black" title="Black arrow"></button>
+          <button type="button" class="swatch" data-color="blue" title="Blue arrow"></button>
+        </div>
+        <span class="sep"></span>
+        <div id="deleteTools">
+          <label><input type="checkbox" id="deleteMode"> Delete</label>
+        </div>
+        <span class="sep"></span>
+        <div id="numeralTools">
+          <label class="kindLabel" for="numeralSelect">Numeral
+            <select id="numeralSelect" class="kindSelect" title="Highlight likely neighborhoods from already placed numbers">
+              <option value="">Look up…</option>
+            </select>
+          </label>
+          <button class="btn" type="button" id="numeralClearBtn">Clear</button>
+        </div>
+      </div>
+      <div id="alignTools">
+        <label class="btn primary" for="alignCsvInput">Load CSVs</label>
+        <input type="file" id="alignCsvInput" accept=".csv,text/csv" multiple>
+        <button class="btn" id="geoUndoBtn" disabled>Undo move</button>
+        <button class="btn" id="fitGeoBtn">Fit points</button>
+        <span class="sep"></span>
+        <button class="btn primary" id="exportKmzBtn">Export KMZ</button>
+        <button class="btn primary" id="exportGeoCsvBtn">Export CSVs</button>
+        <span class="sep"></span>
+        <select id="mapTypeSelect" class="btn" title="Map type">
+          <option value="hybrid">Hybrid</option>
+          <option value="satellite">Satellite</option>
+          <option value="roadmap">Roadmap</option>
+        </select>
+        <label class="btn" for="geoImageInput">Add geo image</label>
+        <input type="file" id="geoImageInput" multiple accept="image/*,.tif,.tiff,.tfw,.tifw,.jgw,.pgw,.wld,.prj">
+        <div class="layerToggles">
+          <label><input type="checkbox" id="layerLandmarks" checked> Landmarks</label>
+          <label><input type="checkbox" id="layerIntersections" checked> Intersections</label>
+          <label><input type="checkbox" id="layerEdges" checked> Edges</label>
+          <label><input type="checkbox" id="layerLabels" checked> Labels</label>
+        </div>
+        <div id="nbWrap">
+          <label><input type="checkbox" id="nbDrag"> Neighborhood drag</label>
+          <input type="range" id="nbRadius" min="20" max="250" value="80" title="Radius in metres">
+          <span id="nbRadiusLabel">80 m</span>
+        </div>
+        <button class="btn" id="changeKeyBtn">API key</button>
+      </div>
+      <div id="modeIndicator">
+        <span id="chainDot"></span>
+        <span id="chainLabel">no active chain</span>
+        &nbsp;·&nbsp; zoom <span id="zoomPct">100%</span>
+      </div>
+    </div>
+
+    <div id="canvasWrap">
+      <canvas id="mapCanvas"></canvas>
+      <div id="batchBar">
+        <span id="batchCount">0 edges selected</span>
+        <input type="text" id="batchInput" placeholder="Street name…">
+        <select id="batchKind" class="kindSelect" title="Type for selected edges">
+          <option value="road">road</option>
+          <option value="rail">rail</option>
+          <option value="water">water</option>
+          <option value="border">border</option>
+        </select>
+        <button class="btn primary" id="batchApply">Apply to all</button>
+        <button class="btn" id="batchClear">Clear</button>
+      </div>
+      <div id="emptyState">
+        <div class="big">No map loaded</div>
+        <div class="small">Load an image of your map to begin. Then click anywhere on it to place your first node — each following click adds a node and draws an edge back to the previous one. Press <kbd>Esc</kbd> to end a chain and start a fresh, unconnected one.</div>
+      </div>
+    </div>
+
+    <div id="geoWrap">
+      <div id="geoMap"></div>
+      <div id="geoKeyBanner">
+        <div class="card">
+          <h2>Google Maps API key</h2>
+          <p>Align-on-map uses the Maps JavaScript API. Create a key in Google Cloud, enable <b>Maps JavaScript API</b>, and restrict it to <code>http://localhost:*</code>. Serve this folder with <code>python3 -m http.server</code> and open <code>http://localhost:8000/map-graph-digitizer.html</code> — <code>file://</code> usually will not load the map.</p>
+          <p>The key is stored only in this browser.</p>
+          <input type="text" id="geoKeyInput" placeholder="AIza…" autocomplete="off" spellcheck="false">
+          <button class="btn primary" id="geoKeySave">Load map</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="statusbar">
+      <span><b id="nodeCount">0</b> nodes</span>
+      <span><b id="edgeCount">0</b> edges</span>
+      <span id="hintText">Click the map to place your first node.</span>
+    </div>
+  </div>
+
+  <div id="sidebar">
+    <div id="sidebarHead">
+      <h1>Nodes &amp; edges</h1>
+      <p>Rename anything below, or double-click a node/edge on the map. Names are optional — unnamed items export with generic IDs.</p>
+    </div>
+    <div id="tabs">
+      <div class="tab active" data-tab="nodes">Nodes (<span id="tabNodeCount">0</span>)</div>
+      <div class="tab" data-tab="edges">Edges (<span id="tabEdgeCount">0</span>)</div>
+    </div>
+    <div id="listSearchWrap">
+      <input type="search" id="listSearch" placeholder="Filter by name or id…" autocomplete="off" spellcheck="false">
+      <div id="listSearchHint">Substring match. Use <code>4$</code> for names ending in 4, <code>^A</code> for names starting with A. Hide / Only / Show all apply to the current list filter on the map.</div>
+      <div id="listFilterActions">
+        <button class="btn" type="button" id="hideMatchesBtn" title="Hide matching items on the map">Hide matches</button>
+        <button class="btn" type="button" id="onlyMatchesBtn" title="Show only matching items on the map">Only matches</button>
+        <button class="btn" type="button" id="showAllBtn" title="Unhide everything">Show all</button>
+      </div>
+    </div>
+    <div id="listWrap"></div>
+    <div id="sidebarFoot">
+      <div id="overlayPanel">
+        <h3>Geo image layers</h3>
+        <div id="overlayList" class="overlayEmpty">No aerials loaded. Use Add geo image (GeoTIFF, or photo + .jgw/.tfw world file).</div>
+      </div>
+      <div id="helpBox" class="helpBox">
+        <div id="helpBoxHead">
+          <span>Tips</span>
+          <button class="btn" type="button" id="toggleHelpBtn">Hide</button>
+        </div>
+        <div id="helpBoxDigitize">
+          <b>Mouse wheel</b> — zoom in/out<br>
+          <b>Right-click drag</b> (or hold <kbd>Space</kbd> + drag) — pan<br>
+          <b>Click</b> — place / snap a node, chain an edge<br>
+          <b>Ctrl/Cmd + click</b> — inspect: highlight on the map and jump to the row in the list<br>
+          <b>Delete</b> — turn on Delete, then click a node or edge to remove it (also Alt+click, or the × in the list, or the Delete key). Undo restores it. Removing an arrow also drops unused endpoints.<br>
+          <b>Placing a node on top of existing line(s)</b> — splits each edge at the junction<br>
+          <b>Esc</b> — end chain / clear inspect / clear edge selection<br>
+          <b>Ctrl/Cmd + Z</b> — undo<br>
+          <b>Double-click</b> — rename node or edge<br>
+          <b>Shift + click</b> edges — multi-select, then name them and set type (road / rail / water / border)<br>
+          <b>New edge</b> type in the toolbar applies to the next edges you draw<br>
+          <b>Map / Nodes / Edges / Labels</b> — hide the photo to review only the vector drawing. Uncheck a type (road / rail / water / border / arrow) to hide those edges. <b>Bg</b> sets the canvas behind the drawing: standard, white, grey, or black.<br>
+          <b>Sketch</b> — drag to draw temporary notes (blue / black / red). Never saved. Ctrl+Z undoes the last stroke while Sketch is on.<br>
+          <b>Add arrow</b> — two clicks: first is the start, second is the end. Snaps to a node or onto a street without splitting it, or drops a free endpoint. Grey / black / blue. Esc cancels the start. Does not chain streets.<br>
+          <b>Numeral</b> — pick 1–69 to tint likely neighborhoods in 25% red, based on numbers already placed (nearby values and the same decade, e.g. 61–65). Place more numbered markers to tighten the guess. Clear removes the tint.<br>
+          <b>Save project</b> / <b>Import CSVs</b> as before.<br>
+          Work is <b>auto-saved in this browser</b> — reload keeps the map, graph, and alignment. <b>Forget session</b> wipes that copy.
+        </div>
+        <div id="helpBoxAlign">
+          <b>Load CSVs</b> — fuzzy_nodes.csv plus edges.csv.<br>
+          <b>Ctrl/Cmd + click</b> a pin or line — highlight it and jump to the list row.<br>
+          <b>Add geo image</b> — overlay a georeferenced 1939/1944 aerial (GeoTIFF or image+.jgw). Opacity in the layer panel below.<br>
+          <b>Drag a pin</b> — moves that point; edges follow.<br>
+          <b>Neighborhood drag</b> — nearby pins slide with a falloff.<br>
+          <b>Export KMZ / CSVs</b> — current lon/lat.<br>
+          Work auto-saves in this browser, including geo-image overlays.<br>
+          Align does not add or delete graph topology.
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  // ---------------- state ----------------
+  const state = {
+    img:null, imgW:0, imgH:0, imgDataUrl:null,
+    scale:1, offsetX:0, offsetY:0,
+    minScale:0.02, maxScale:20,
+    nodes:new Map(),   // id -> {id,label,x,y}
+    edges:new Map(),   // id -> {id,label,source,target}
+    nodeSeq:0, edgeSeq:0,
+    currentChain:null,
+    history:[],        // undo stack
+    panning:false, panStartScreen:null, panStartOffset:null,
+    spaceDown:false,
+    dirty:false,
+    hoverNode:null, hoverEdge:null,
+    selectedEdges:new Set(),
+    activeTab:'nodes',
+    lastClickWasDblPending:false,
+    viewMode:'digitize',
+    nodeCsvHeaders:null,
+    geoHistory:[],
+    geoMap:null,
+    geoMarkers:new Map(),
+    geoPolylines:new Map(),
+    geoSelectedId:null,
+    mapsReady:false,
+    mapsLoading:false,
+    inspected:null,
+    showMap:true,
+    showNodes:true,
+    showEdges:true,
+    showLabels:true,
+    visEdgeKinds:{road:true, rail:true, water:true, border:true, arrow:true},
+    canvasBg:'standard',
+    geoOverlays:[],
+    overlaySeq:0,
+    sketchMode:false,
+    sketchColor:'blue',
+    sketches:[],
+    sketching:null,
+    showSketches:true,
+    numeralRegions:[],
+    arrowMode:false,
+    arrowColor:'black',
+    arrowStart:null,
+    arrowStartCreated:false,
+    arrowHover:null,
+    deleteMode:false
+  };
+
+  const SKETCH_COLORS = { blue:'#3b6fd4', black:'#1a1a1a', red:'#c43c32' };
+  const ARROW_COLORS = { grey:'#8a8680', gray:'#8a8680', black:'#1a1a1a', blue:'#3b6fd4' };
+  const EDGE_KINDS = ['road','rail','water','border','arrow'];
+  function normalizeEdgeKind(v){
+    const k=String(v||'').toLowerCase().trim();
+    if(k==='arrow') return 'arrow';
+    if(k==='rail'||k==='railway'||k==='railroad'||k==='train') return 'rail';
+    if(k==='water'||k==='river'||k==='canal') return 'water';
+    if(k==='border'||k==='boundary') return 'border';
+    if(k==='road'||k==='street') return 'road';
+    return 'road';
+  }
+  function edgeKindOf(e){ return normalizeEdgeKind(e && e.kind); }
+  function isArrowEdge(e){ return edgeKindOf(e)==='arrow'; }
+  function arrowColorOf(e){
+    const c=String((e && e.color) || 'black').toLowerCase();
+    if(c==='grey'||c==='gray') return 'grey';
+    if(c==='blue') return 'blue';
+    return 'black';
+  }
+  function edgeKindStyle(kind, edge){
+    if(kind==='arrow'){
+      const hex=ARROW_COLORS[arrowColorOf(edge)] || ARROW_COLORS.black;
+      return {color:hex, hover:hex, dash:[], width:2.2, geo:hex};
+    }
+    if(kind==='rail') return {color:'#2a2620', hover:'#5a554c', dash:[5,4], width:2.3, geo:'#2a2620'};
+    if(kind==='water') return {color:'#3a7fc4', hover:'#6aa0d8', dash:[], width:2.7, geo:'#3a7fc4'};
+    if(kind==='border') return {color:'#8a4a9a', hover:'#b06bc0', dash:[8,4], width:2.3, geo:'#8a4a9a'};
+    return {color:'rgba(184,114,47,0.85)', hover:'#e2a45c', dash:[], width:2, geo:'#e07a2f'};
+  }
+  function edgeKindSelectHtml(selected){
+    const cur=normalizeEdgeKind(selected);
+    return '<select class="kindSelect" title="Edge type">'+
+      EDGE_KINDS.map(k=>'<option value="'+k+'"'+(k===cur?' selected':'')+'>'+k+'</option>').join('')+
+      '</select>';
+  }
+
+  const KOVEL = {lat:51.2153, lng:24.7087};
+  const GMAPS_KEY_LS = 'kowelDigitizer.mapsKey';
+
+  const SNAP_PX = 14;        // screen-space snap radius for merging nodes
+  const EDGE_HIT_PX = 7;     // screen-space distance to count as clicking an edge
+  const NODE_R = 6;          // node draw radius (screen px, constant)
+
+  // ---------------- dom ----------------
+  const canvas = document.getElementById('mapCanvas');
+  const ctx = canvas.getContext('2d');
+  const wrap = document.getElementById('canvasWrap');
+  const emptyState = document.getElementById('emptyState');
+  const fileInput = document.getElementById('fileInput');
+  const fitBtn = document.getElementById('fitBtn');
+  const undoBtn = document.getElementById('undoBtn');
+  const clearBtn = document.getElementById('clearBtn');
+  const exportBtn = document.getElementById('exportBtn');
+  const saveProjectBtn = document.getElementById('saveProjectBtn');
+  const loadProjectInput = document.getElementById('loadProjectInput');
+  const forgetSessionBtn = document.getElementById('forgetSessionBtn');
+  const importCsvInput = document.getElementById('importCsvInput');
+  const dirtyIndicator = document.getElementById('dirtyIndicator');
+  const zoomPct = document.getElementById('zoomPct');
+  const chainDot = document.getElementById('chainDot');
+  const chainLabel = document.getElementById('chainLabel');
+  const nodeCountEl = document.getElementById('nodeCount');
+  const edgeCountEl = document.getElementById('edgeCount');
+  const tabNodeCountEl = document.getElementById('tabNodeCount');
+  const tabEdgeCountEl = document.getElementById('tabEdgeCount');
+  const hintText = document.getElementById('hintText');
+  const listWrap = document.getElementById('listWrap');
+  const listSearch = document.getElementById('listSearch');
+  listSearch.addEventListener('input', ()=>renderList());
+  listSearch.addEventListener('keydown', (e)=>{
+    e.stopPropagation();
+    if(e.key==='Escape'){
+      if(listSearch.value){ listSearch.value=''; renderList(); }
+      e.preventDefault();
+    }
+  });
+  function currentFilterItems(){
+    const q = listSearch ? listSearch.value : '';
+    if(state.activeTab==='nodes'){
+      return [...state.nodes.values()].filter(n=>haystackMatch(q, nodeSearchParts(n)));
+    }
+    return [...state.edges.values()].filter(ed=>haystackMatch(q, edgeSearchParts(ed)));
+  }
+  function applyFilterVisibility(mode){
+    const items = currentFilterItems();
+    if(state.activeTab==='nodes'){
+      if(mode==='hide'){
+        if(!items.length) return;
+        items.forEach(n=>{ n.hidden=true; });
+      } else if(mode==='only'){
+        const keep=new Set(items.map(n=>n.id));
+        state.nodes.forEach(n=>{ n.hidden = !keep.has(n.id); });
+      } else {
+        state.nodes.forEach(n=>{ n.hidden=false; });
+        state.edges.forEach(e=>{ e.hidden=false; });
+      }
+    } else {
+      if(mode==='hide'){
+        if(!items.length) return;
+        items.forEach(e=>{ e.hidden=true; });
+      } else if(mode==='only'){
+        const keep=new Set(items.map(e=>e.id));
+        state.edges.forEach(e=>{ e.hidden = !keep.has(e.id); });
+      } else {
+        state.nodes.forEach(n=>{ n.hidden=false; });
+        state.edges.forEach(e=>{ e.hidden=false; });
+      }
+    }
+    markDirty();
+    refreshAll();
+    if(state.viewMode==='align') applyLayerVisibility();
+  }
+  document.getElementById('hideMatchesBtn').addEventListener('click', ()=>applyFilterVisibility('hide'));
+  document.getElementById('onlyMatchesBtn').addEventListener('click', ()=>applyFilterVisibility('only'));
+  document.getElementById('showAllBtn').addEventListener('click', ()=>applyFilterVisibility('all'));
+  const tabs = document.querySelectorAll('.tab');
+  const batchBar = document.getElementById('batchBar');
+  const batchCount = document.getElementById('batchCount');
+  const batchInput = document.getElementById('batchInput');
+  const batchApply = document.getElementById('batchApply');
+  const batchClear = document.getElementById('batchClear');
+  const modeDigitize = document.getElementById('modeDigitize');
+  const modeAlign = document.getElementById('modeAlign');
+  const alignCsvInput = document.getElementById('alignCsvInput');
+  const geoUndoBtn = document.getElementById('geoUndoBtn');
+  const fitGeoBtn = document.getElementById('fitGeoBtn');
+  const exportKmzBtn = document.getElementById('exportKmzBtn');
+  const exportGeoCsvBtn = document.getElementById('exportGeoCsvBtn');
+  const mapTypeSelect = document.getElementById('mapTypeSelect');
+  const layerLandmarks = document.getElementById('layerLandmarks');
+  const layerIntersections = document.getElementById('layerIntersections');
+  const layerEdges = document.getElementById('layerEdges');
+  const nbDrag = document.getElementById('nbDrag');
+  const nbRadius = document.getElementById('nbRadius');
+  const nbRadiusLabel = document.getElementById('nbRadiusLabel');
+  const changeKeyBtn = document.getElementById('changeKeyBtn');
+  const geoKeyBanner = document.getElementById('geoKeyBanner');
+  const geoKeyInput = document.getElementById('geoKeyInput');
+  const geoKeySave = document.getElementById('geoKeySave');
+  const geoMapEl = document.getElementById('geoMap');
+  const visMap = document.getElementById('visMap');
+  const canvasBgEl = document.getElementById('canvasBg');
+  const visNodes = document.getElementById('visNodes');
+  const visEdges = document.getElementById('visEdges');
+  const visLabels = document.getElementById('visLabels');
+  const edgeKindFilters = document.getElementById('edgeKindFilters');
+  function syncEdgeKindFilterUI(){
+    if(!edgeKindFilters) return;
+    edgeKindFilters.querySelectorAll('input[data-kind]').forEach(inp=>{
+      inp.checked = state.visEdgeKinds[inp.dataset.kind]!==false;
+    });
+    edgeKindFilters.classList.toggle('disabled', !state.showEdges);
+  }
+  const layerLabels = document.getElementById('layerLabels');
+  const geoImageInput = document.getElementById('geoImageInput');
+  const overlayList = document.getElementById('overlayList');
+  const helpBox = document.getElementById('helpBox');
+  const toggleHelpBtn = document.getElementById('toggleHelpBtn');
+  const HELP_LS = 'kowelDigitizer.hideHelp';
+  function applyHelpCollapsed(collapsed){
+    helpBox.classList.toggle('collapsed', !!collapsed);
+    toggleHelpBtn.textContent = collapsed ? 'Show' : 'Hide';
+    localStorage.setItem(HELP_LS, collapsed ? '1' : '0');
+  }
+  applyHelpCollapsed(localStorage.getItem(HELP_LS)==='1');
+  toggleHelpBtn.addEventListener('click', ()=> applyHelpCollapsed(!helpBox.classList.contains('collapsed')));
+  const sketchModeEl = document.getElementById('sketchMode');
+  const visSketches = document.getElementById('visSketches');
+  const clearSketchesBtn = document.getElementById('clearSketches');
+  const numeralSelect = document.getElementById('numeralSelect');
+  const numeralClearBtn = document.getElementById('numeralClearBtn');
+  sketchModeEl.addEventListener('change', ()=>{
+    state.sketchMode = sketchModeEl.checked;
+    document.body.classList.toggle('sketching', state.sketchMode);
+    wrap.style.cursor = state.sketchMode ? 'crosshair' : 'crosshair';
+    state.currentChain = null;
+    if(state.sketchMode){
+      cancelArrowStart();
+      state.arrowMode=false;
+      const am=document.getElementById('arrowMode');
+      if(am) am.checked=false;
+      state.deleteMode=false;
+      const dm=document.getElementById('deleteMode');
+      if(dm) dm.checked=false;
+      document.body.classList.remove('deleting');
+    }
+    refreshAll();
+  });
+  visSketches.addEventListener('change', ()=>{ state.showSketches = visSketches.checked; draw(); });
+  document.querySelectorAll('#sketchTools .swatch').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      state.sketchColor = btn.dataset.color;
+      document.querySelectorAll('#sketchTools .swatch').forEach(b=>b.classList.toggle('active', b===btn));
+    });
+  });
+  clearSketchesBtn.addEventListener('click', ()=>{
+    state.sketches = [];
+    state.sketching = null;
+    draw();
+  });
+  const arrowModeEl = document.getElementById('arrowMode');
+  arrowModeEl.addEventListener('change', ()=>{
+    state.arrowMode = arrowModeEl.checked;
+    if(state.arrowMode){
+      state.currentChain=null;
+      if(state.sketchMode){
+        state.sketchMode=false;
+        sketchModeEl.checked=false;
+        document.body.classList.remove('sketching');
+      }
+      state.deleteMode=false;
+      if(deleteModeEl) deleteModeEl.checked=false;
+      document.body.classList.remove('deleting');
+    } else {
+      cancelArrowStart();
+    }
+    refreshAll();
+  });
+  const deleteModeEl = document.getElementById('deleteMode');
+  deleteModeEl.addEventListener('change', ()=>{
+    state.deleteMode = deleteModeEl.checked;
+    document.body.classList.toggle('deleting', state.deleteMode);
+    if(state.deleteMode){
+      state.currentChain=null;
+      cancelArrowStart();
+      state.arrowMode=false;
+      arrowModeEl.checked=false;
+      if(state.sketchMode){
+        state.sketchMode=false;
+        sketchModeEl.checked=false;
+        document.body.classList.remove('sketching');
+      }
+    }
+    refreshAll();
+  });
+  document.querySelectorAll('#arrowTools .swatch').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      state.arrowColor = btn.dataset.color;
+      document.querySelectorAll('#arrowTools .swatch').forEach(b=>b.classList.toggle('active', b===btn));
+    });
+  });
+
+  // ---------------- resize ----------------
+  function resizeCanvas(){
+    const r = wrap.getBoundingClientRect();
+    canvas.width = r.width; canvas.height = r.height;
+    draw();
+  }
+  window.addEventListener('resize', resizeCanvas);
+
+  // ---------------- image load ----------------
+  fileInput.addEventListener('change', (e)=>{
+    const f = e.target.files[0];
+    if(!f) return;
+    const reader = new FileReader();
+    reader.onload = (ev)=>{
+      loadImageFromDataUrl(ev.target.result, /*isNewUpload*/true);
+    };
+    reader.readAsDataURL(f);
+  });
+
+  function loadImageFromDataUrl(dataUrl, isNewUpload, onLoaded){
+    const img = new Image();
+    img.onload = ()=>{
+      state.img = img; state.imgW = img.width; state.imgH = img.height;
+      state.imgDataUrl = dataUrl;
+      emptyState.style.display = 'none';
+      if(isNewUpload) fitToView();
+      fitBtn.disabled = false;
+      exportBtn.disabled = false;
+      clearBtn.disabled = false;
+      saveProjectBtn.disabled = false;
+      resizeCanvas();
+      if(isNewUpload) markDirty();
+      if(onLoaded) onLoaded();
+    };
+    img.src = dataUrl;
+  }
+
+  function markDirty(){
+    state.dirty = true;
+    dirtyIndicator.classList.add('show');
+    dirtyIndicator.textContent = '● unsaved';
+    scheduleAutosave();
+  }
+  function clearDirty(){
+    state.dirty = false;
+    dirtyIndicator.classList.remove('show');
+    dirtyIndicator.textContent = '● unsaved';
+  }
+
+  function fitToView(){
+    const r = wrap.getBoundingClientRect();
+    const pad = 40;
+    const sx = (r.width - pad*2) / state.imgW;
+    const sy = (r.height - pad*2) / state.imgH;
+    state.scale = Math.max(state.minScale, Math.min(sx, sy));
+    state.offsetX = (r.width - state.imgW*state.scale)/2;
+    state.offsetY = (r.height - state.imgH*state.scale)/2;
+    updateZoomLabel();
+    draw();
+  }
+  fitBtn.addEventListener('click', fitToView);
+
+  function updateZoomLabel(){ zoomPct.textContent = Math.round(state.scale*100) + '%'; }
+
+  // ---------------- coord transforms ----------------
+  function imgToScreen(x,y){ return {x:x*state.scale+state.offsetX, y:y*state.scale+state.offsetY}; }
+  function screenToImg(x,y){ return {x:(x-state.offsetX)/state.scale, y:(y-state.offsetY)/state.scale}; }
+
+  // ---------------- drawing ----------------
+  function canvasBgColor(){
+    const v=state.canvasBg||'standard';
+    if(v==='white') return '#ffffff';
+    if(v==='grey'||v==='gray') return '#8a8a8a';
+    if(v==='black') return '#000000';
+    return getComputedStyle(document.documentElement).getPropertyValue('--panel').trim() || '#20211d';
+  }
+  function applyCanvasBg(){
+    wrap.style.background = canvasBgColor();
+  }
+  function draw(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    ctx.fillStyle = canvasBgColor();
+    ctx.fillRect(0,0,canvas.width,canvas.height);
+    if(!state.img) return;
+    if(state.showMap){
+      ctx.drawImage(state.img, state.offsetX, state.offsetY, state.imgW*state.scale, state.imgH*state.scale);
+    }
+
+    if(state.showSketches){
+      const strokes = state.sketches.slice();
+      if(state.sketching) strokes.push(state.sketching);
+      strokes.forEach(sk=>{
+        if(!sk.points || sk.points.length<2) return;
+        ctx.beginPath();
+        const p0=imgToScreen(sk.points[0].x, sk.points[0].y);
+        ctx.moveTo(p0.x, p0.y);
+        for(let i=1;i<sk.points.length;i++){
+          const p=imgToScreen(sk.points[i].x, sk.points[i].y);
+          ctx.lineTo(p.x, p.y);
+        }
+        ctx.strokeStyle = SKETCH_COLORS[sk.color] || SKETCH_COLORS.blue;
+        ctx.lineWidth = 2.4;
+        ctx.lineCap = 'round';
+        ctx.lineJoin = 'round';
+        ctx.globalAlpha = 0.85;
+        ctx.stroke();
+        ctx.globalAlpha = 1;
+      });
+    }
+
+    // edges
+    if(state.showEdges){
+      state.edges.forEach(edge=>{
+        const a = state.nodes.get(edge.source), b = state.nodes.get(edge.target);
+        if(!a || !b) return;
+        if(!isEdgeDrawn(edge)) return;
+        const pa = imgToScreen(a.x,a.y), pb = imgToScreen(b.x,b.y);
+        const isSelected = state.selectedEdges.has(edge.id);
+        const isInspected = state.inspected && state.inspected.kind==='edge' && state.inspected.id===edge.id;
+        const ks = edgeKindStyle(edgeKindOf(edge), edge);
+        ctx.beginPath();
+        ctx.moveTo(pa.x,pa.y); ctx.lineTo(pb.x,pb.y);
+        if(isInspected){
+          ctx.strokeStyle = '#f0d060';
+          ctx.lineWidth = 4.5;
+          ctx.setLineDash([]);
+        } else if(isSelected){
+          ctx.strokeStyle = '#f0d060';
+          ctx.lineWidth = 3.5;
+          ctx.setLineDash([6,4]);
+        } else {
+          ctx.strokeStyle = (edge===state.hoverEdge) ? ks.hover : ks.color;
+          ctx.lineWidth = (edge===state.hoverEdge) ? ks.width+1 : ks.width;
+          ctx.setLineDash(ks.dash || []);
+        }
+        ctx.stroke();
+        ctx.setLineDash([]);
+        if(isArrowEdge(edge) && !isInspected && !isSelected){
+          drawArrowHead(ctx, pa, pb, ks.color, ks.width);
+        } else if(isArrowEdge(edge)){
+          drawArrowHead(ctx, pa, pb, '#f0d060', ks.width+1);
+        }
+        if(state.showLabels && edge.label){
+          const mx=(pa.x+pb.x)/2, my=(pa.y+pb.y)/2;
+          drawLabel(mx,my,edge.label,'#f2efe4','rgba(20,20,16,0.75)');
+        }
+      });
+    }
+    if(state.arrowMode && state.arrowStart!=null){
+      const a=state.nodes.get(state.arrowStart);
+      if(a){
+        const pa=imgToScreen(a.x,a.y);
+        const pb=state.arrowHover || pa;
+        const hex=ARROW_COLORS[state.arrowColor]||ARROW_COLORS.black;
+        ctx.beginPath();
+        ctx.moveTo(pa.x,pa.y); ctx.lineTo(pb.x,pb.y);
+        ctx.strokeStyle=hex;
+        ctx.lineWidth=2.2;
+        ctx.setLineDash([5,4]);
+        ctx.stroke();
+        ctx.setLineDash([]);
+        drawArrowHead(ctx, pa, pb, hex, 2.2);
+      }
+    }
+
+    // nodes
+    if(state.showNodes){
+      state.nodes.forEach(node=>{
+        if(node.hidden) return;
+        const p = imgToScreen(node.x,node.y);
+        const isChain = state.currentChain === node.id;
+        const isHover = state.hoverNode === node;
+        const isInspected = state.inspected && state.inspected.kind==='node' && state.inspected.id===node.id;
+        const isAnchor = isArrowAnchor(node);
+        const isArrowStart = state.arrowStart===node.id;
+        ctx.beginPath();
+        ctx.arc(p.x,p.y, isInspected ? NODE_R+3 : (isAnchor ? NODE_R-1.5 : NODE_R),0,Math.PI*2);
+        if(isAnchor){
+          ctx.fillStyle = isInspected ? '#f0d060' : (isArrowStart ? '#d8d4c8' : (isHover ? '#c8c4b8' : 'rgba(242,239,228,0.35)'));
+        } else {
+          ctx.fillStyle = isChain ? '#8fae7a' : (isInspected ? '#f0d060' : (isHover ? '#e2c68a' : '#f2efe4'));
+        }
+        ctx.fill();
+        ctx.lineWidth = isInspected ? 3 : (isChain || isArrowStart ? 2.5 : 1.5);
+        ctx.strokeStyle = isInspected ? '#8a5a18' : (isArrowStart ? '#3b6fd4' : (isChain ? '#4f6b3f' : '#3a2f1e'));
+        ctx.stroke();
+        if(state.showLabels && !(isAnchor && !node.label)){
+          const label = node.label || ('#'+node.id);
+          drawLabel(p.x, p.y-NODE_R-8, label, '#f2efe4','rgba(20,20,16,0.75)');
+        }
+      });
+    }
+
+    if(numeralSelect && numeralSelect.value){
+      state.numeralRegions=computeNumeralNeighborhoods(parseInt(numeralSelect.value,10));
+    }
+    if(state.numeralRegions.length){
+      ctx.save();
+      state.numeralRegions.forEach(h=>{
+        const p=imgToScreen(h.x,h.y);
+        const r=Math.max(8, (h.r||140)*state.scale);
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, r, 0, Math.PI*2);
+        ctx.fillStyle = 'rgba(255, 0, 0, 0.25)';
+        ctx.fill();
+      });
+      ctx.restore();
+    }
+  }
+
+  function drawLabel(x,y,text,color,bg){
+    ctx.font = '11px Georgia, serif';
+    const w = ctx.measureText(text).width;
+    ctx.fillStyle = bg;
+    ctx.fillRect(x-w/2-3, y-9, w+6, 14);
+    ctx.fillStyle = color;
+    ctx.textAlign = 'center';
+    ctx.fillText(text, x, y+1.5);
+    ctx.textAlign = 'left';
+  }
+  function drawArrowHead(ctx, from, to, color, width){
+    const dx=to.x-from.x, dy=to.y-from.y;
+    const len=Math.hypot(dx,dy);
+    if(len<6) return;
+    const ux=dx/len, uy=dy/len;
+    const size=Math.max(11, (width||2)*5);
+    const bx=to.x-ux*size, by=to.y-uy*size;
+    const px=-uy, py=ux;
+    const w=size*0.42;
+    ctx.beginPath();
+    ctx.moveTo(to.x, to.y);
+    ctx.lineTo(bx+px*w, by+py*w);
+    ctx.lineTo(bx-px*w, by-py*w);
+    ctx.closePath();
+    ctx.fillStyle=color;
+    ctx.fill();
+  }
+  function isArrowAnchor(n){
+    return extraField(n,'node_kind')==='arrow_anchor';
+  }
+
+  // ---------------- hit testing ----------------
+  function nearestNode(sx,sy, opts){
+    opts=opts||{};
+    let best=null, bestD=Infinity;
+    state.nodes.forEach(n=>{
+      if(n.hidden) return;
+      if(opts.skipAnchors && isArrowAnchor(n)) return;
+      const p = imgToScreen(n.x,n.y);
+      const d = Math.hypot(p.x-sx,p.y-sy);
+      if(d<bestD){bestD=d;best=n;}
+    });
+    return {node:best, dist:bestD};
+  }
+  function nearestEdge(sx,sy, opts){
+    opts=opts||{};
+    let best=null, bestD=Infinity;
+    state.edges.forEach(e=>{
+      if(opts.skipArrows && isArrowEdge(e)) return;
+      const a=state.nodes.get(e.source), b=state.nodes.get(e.target);
+      if(!a||!b) return;
+      if(!isEdgeDrawn(e)) return;
+      const pa=imgToScreen(a.x,a.y), pb=imgToScreen(b.x,b.y);
+      const d = distToSegment(sx,sy,pa.x,pa.y,pb.x,pb.y);
+      if(d<bestD){bestD=d;best=e;}
+    });
+    return {edge:best, dist:bestD};
+  }
+  function edgesNear(sx,sy,threshold){
+    // returns every edge whose line passes within `threshold` screen px of (sx,sy) —
+    // used to find all edges crossing a point, e.g. a street junction, not just the closest one.
+    const result=[];
+    state.edges.forEach(e=>{
+      if(!isEdgeDrawn(e)) return;
+      const a=state.nodes.get(e.source), b=state.nodes.get(e.target);
+      if(!a||!b) return;
+      const pa=imgToScreen(a.x,a.y), pb=imgToScreen(b.x,b.y);
+      const d = distToSegment(sx,sy,pa.x,pa.y,pb.x,pb.y);
+      if(d<=threshold) result.push(e);
+    });
+    return result;
+  }
+  function distToSegment(px,py,ax,ay,bx,by){
+    const dx=bx-ax, dy=by-ay;
+    const len2 = dx*dx+dy*dy;
+    let t = len2===0?0:((px-ax)*dx+(py-ay)*dy)/len2;
+    t = Math.max(0,Math.min(1,t));
+    const cx=ax+t*dx, cy=ay+t*dy;
+    return Math.hypot(px-cx,py-cy);
+  }
+
+  // ---------------- mutation helpers ----------------
+  function createNode(ix,iy){
+    const id = ++state.nodeSeq;
+    const node = {id, label:'', x:ix, y:iy, lon:null, lat:null, extra:{}};
+    state.nodes.set(id,node);
+    return node;
+  }
+  function createEdge(sourceId,targetId){
+    const id = ++state.edgeSeq;
+    const kindEl=document.getElementById('newEdgeKind');
+    const edge = {id, label:'', source:sourceId, target:targetId, kind: normalizeEdgeKind(kindEl && kindEl.value)};
+    state.edges.set(id,edge);
+    return edge;
+  }
+  function deleteNode(id){
+    state.nodes.delete(id);
+    const toDel=[];
+    state.edges.forEach(e=>{ if(e.source===id||e.target===id) toDel.push(e.id); });
+    toDel.forEach(eid=>state.edges.delete(eid));
+    if(state.currentChain===id) state.currentChain=null;
+    if(state.arrowStart===id) cancelArrowStart();
+  }
+  function deleteEdge(id){ state.edges.delete(id); state.selectedEdges.delete(id); }
+  function cloneExtra(ex){
+    if(!ex) return {};
+    try { return JSON.parse(JSON.stringify(ex)); } catch(err){ return {}; }
+  }
+  function snapshotNode(n){
+    return {id:n.id, label:n.label, x:n.x, y:n.y, lon:n.lon, lat:n.lat, gx:n.gx, gy:n.gy, extra:cloneExtra(n.extra), hidden:n.hidden};
+  }
+  function snapshotEdge(e){
+    return {id:e.id, label:e.label, source:e.source, target:e.target, kind:e.kind, color:e.color, extra:cloneExtra(e.extra), hidden:e.hidden};
+  }
+  function pruneOrphanAnchors(ids){
+    const removed=[];
+    (ids||[]).forEach(id=>{
+      const n=state.nodes.get(id);
+      if(!n || !isArrowAnchor(n)) return;
+      let used=false;
+      state.edges.forEach(e=>{ if(e.source===id||e.target===id) used=true; });
+      if(used) return;
+      removed.push(snapshotNode(n));
+      state.nodes.delete(id);
+      if(state.arrowStart===id) cancelArrowStart();
+    });
+    return removed;
+  }
+  function recordRemoval(removedNodes, removedEdges){
+    state.history.push({
+      createdNodeIds:[], createdEdgeIds:[],
+      removedNodes: removedNodes||[],
+      removedEdges: removedEdges||[],
+      prevChain: state.currentChain,
+      chainAfter: state.currentChain
+    });
+    undoBtn.disabled=false;
+  }
+  function removeNodeRecorded(id){
+    const n=state.nodes.get(id);
+    if(!n) return false;
+    if(state.inspected && state.inspected.kind==='node' && state.inspected.id===id) state.inspected=null;
+    const removedNodes=[snapshotNode(n)];
+    const removedEdges=[];
+    const otherIds=[];
+    state.edges.forEach(e=>{
+      if(e.source===id||e.target===id){
+        removedEdges.push(snapshotEdge(e));
+        otherIds.push(e.source===id?e.target:e.source);
+      }
+    });
+    deleteNode(id);
+    pruneOrphanAnchors(otherIds).forEach(s=>removedNodes.push(s));
+    recordRemoval(removedNodes, removedEdges);
+    return true;
+  }
+  function removeEdgeRecorded(id){
+    const e=state.edges.get(id);
+    if(!e) return false;
+    if(state.inspected && state.inspected.kind==='edge' && state.inspected.id===id) state.inspected=null;
+    const ends=[e.source, e.target];
+    const wasArrow=isArrowEdge(e);
+    const removedEdges=[snapshotEdge(e)];
+    deleteEdge(id);
+    const removedNodes = wasArrow ? pruneOrphanAnchors(ends) : [];
+    recordRemoval(removedNodes, removedEdges);
+    return true;
+  }
+
+  // ---------------- interaction: click to place ----------------
+  function closestPointOnEdgeImg(ix, iy, edge){
+    const a=state.nodes.get(edge.source), b=state.nodes.get(edge.target);
+    if(!a||!b) return {x:ix, y:iy};
+    const dx=b.x-a.x, dy=b.y-a.y;
+    const len2=dx*dx+dy*dy;
+    let t=len2===0?0:((ix-a.x)*dx+(iy-a.y)*dy)/len2;
+    t=Math.max(0, Math.min(1, t));
+    return {x:a.x+t*dx, y:a.y+t*dy};
+  }
+  function createArrowAnchor(ix, iy){
+    const node=createNode(ix, iy);
+    if(!node.extra) node.extra={};
+    node.extra.node_kind='arrow_anchor';
+    return node;
+  }
+  function pickArrowEndpoint(sx, sy){
+    const ipt=screenToImg(sx, sy);
+    const {node:near, dist}=nearestNode(sx, sy);
+    if(near && dist<=SNAP_PX) return {node:near, created:false};
+    const {edge, dist:ed}=nearestEdge(sx, sy, {skipArrows:true});
+    if(edge && ed<=EDGE_HIT_PX+3){
+      const pt=closestPointOnEdgeImg(ipt.x, ipt.y, edge);
+      return {node:createArrowAnchor(pt.x, pt.y), created:true};
+    }
+    return {node:createArrowAnchor(ipt.x, ipt.y), created:true};
+  }
+  function cancelArrowStart(){
+    if(state.arrowStart!=null && state.arrowStartCreated){
+      const n=state.nodes.get(state.arrowStart);
+      if(n && isArrowAnchor(n)){
+        let used=false;
+        state.edges.forEach(e=>{ if(e.source===n.id||e.target===n.id) used=true; });
+        if(!used) state.nodes.delete(n.id);
+      }
+    }
+    state.arrowStart=null;
+    state.arrowStartCreated=false;
+    state.arrowHover=null;
+  }
+  function handleArrowClick(sx,sy){
+    const pick=pickArrowEndpoint(sx,sy);
+    if(state.arrowStart==null){
+      state.arrowStart=pick.node.id;
+      state.arrowStartCreated=!!pick.created;
+      refreshAll();
+      return;
+    }
+    if(pick.node.id===state.arrowStart){
+      hintText.textContent='Arrow end must be a different point. Click the end.';
+      if(pick.created) deleteNode(pick.node.id);
+      draw();
+      return;
+    }
+    const createdNodeIds=[];
+    if(state.arrowStartCreated) createdNodeIds.push(state.arrowStart);
+    if(pick.created) createdNodeIds.push(pick.node.id);
+    const id=++state.edgeSeq;
+    const edge={id, label:'', source:state.arrowStart, target:pick.node.id, kind:'arrow', color:state.arrowColor||'black'};
+    state.edges.set(id, edge);
+    state.history.push({createdNodeIds, createdEdgeIds:[id], removedEdges:[], prevChain:state.currentChain, chainAfter:state.currentChain});
+    state.arrowStart=null;
+    state.arrowStartCreated=false;
+    state.arrowHover=null;
+    undoBtn.disabled=false;
+    markDirty();
+    refreshAll();
+  }
+
+  function handlePlacementClick(sx,sy){
+    const ipt = screenToImg(sx,sy);
+    const {node:near, dist} = nearestNode(sx,sy, {skipAnchors:true});
+    const prevChain = state.currentChain;
+    const createdNodeIds=[], createdEdgeIds=[], removedEdges=[];
+    let node;
+    if(near && dist <= SNAP_PX){
+      node = near; // snap / merge onto existing node
+    } else {
+      node = createNode(ipt.x, ipt.y);
+      createdNodeIds.push(node.id);
+    }
+
+    // If this node's location sits on top of one or more existing edges (e.g. a street
+    // crossing at a junction), split each of them here instead of leaving overlapping,
+    // unconnected lines. Skip edges that already end at this node.
+    const nodeScreen = imgToScreen(node.x, node.y);
+    const toSplit = edgesNear(nodeScreen.x, nodeScreen.y, EDGE_HIT_PX+3)
+                      .filter(e => !isArrowEdge(e) && e.source!==node.id && e.target!==node.id);
+    toSplit.forEach(e=>{
+      removedEdges.push({id:e.id, label:e.label, source:e.source, target:e.target, kind:e.kind, color:e.color});
+      state.edges.delete(e.id);
+      state.selectedEdges.delete(e.id);
+      const e1 = createEdge(e.source, node.id); e1.label = e.label; e1.kind = e.kind||'road'; createdEdgeIds.push(e1.id);
+      const e2 = createEdge(node.id, e.target); e2.label = e.label; e2.kind = e.kind||'road'; createdEdgeIds.push(e2.id);
+    });
+
+    if(prevChain !== null && prevChain !== undefined && prevChain !== node.id){
+      const edge = createEdge(prevChain, node.id);
+      createdEdgeIds.push(edge.id);
+    }
+    state.currentChain = node.id;
+    state.history.push({createdNodeIds, createdEdgeIds, removedEdges, prevChain, chainAfter:node.id});
+    undoBtn.disabled = false;
+    markDirty();
+    refreshAll();
+  }
+
+  function handleDelete(sx,sy){
+    const {node:near, dist:nd} = nearestNode(sx,sy);
+    if(near && nd<=SNAP_PX){
+      removeNodeRecorded(near.id); markDirty(); refreshAll(); return true;
+    }
+    const {edge:nearE, dist:ed} = nearestEdge(sx,sy);
+    if(nearE && ed<=EDGE_HIT_PX+2){
+      removeEdgeRecorded(nearE.id); markDirty(); refreshAll(); return true;
+    }
+    return false;
+  }
+
+  function switchSidebarTab(tab){
+    state.activeTab = tab;
+    tabs.forEach(t=>t.classList.toggle('active', t.dataset.tab===tab));
+  }
+
+  function setInspected(kind, id, opts){
+    opts = opts||{};
+    state.inspected = {kind, id};
+    if(kind==='node'){
+      state.geoSelectedId = id;
+      switchSidebarTab('nodes');
+    } else {
+      switchSidebarTab('edges');
+    }
+    refreshAll();
+    const row = listWrap.querySelector('[data-kind="'+kind+'"][data-id="'+id+'"]');
+    if(row) row.scrollIntoView({block:'nearest', behavior:'smooth'});
+    if(opts.pan && state.viewMode==='align'){
+      if(kind==='node') flyToNode(id);
+      else {
+        const ed = state.edges.get(id);
+        if(ed){
+          const a=state.nodes.get(ed.source), b=state.nodes.get(ed.target);
+          if(hasGeo(a)&&hasGeo(b)&&state.geoMap){
+            const bounds = new google.maps.LatLngBounds(
+              {lat:a.lat,lng:a.lon},{lat:b.lat,lng:b.lon}
+            );
+            state.geoMap.fitBounds(bounds, 80);
+          }
+        }
+      }
+    }
+    if(state.viewMode==='align') highlightGeoInspected();
+  }
+
+  function inspectAt(sx,sy){
+    const {node:near, dist:nd} = nearestNode(sx,sy);
+    if(near && nd<=SNAP_PX*1.6){ setInspected('node', near.id, {pan:true}); return; }
+    const {edge:nearE, dist:ed} = nearestEdge(sx,sy);
+    if(nearE && ed<=EDGE_HIT_PX+4){ setInspected('edge', nearE.id, {pan:true}); return; }
+  }
+
+  function handleRename(sx,sy){
+    const {node:near, dist:nd} = nearestNode(sx,sy);
+    if(near && nd<=SNAP_PX*1.4){
+      const val = window.prompt('Name this node:', near.label||'');
+      if(val!==null){ near.label = val.trim(); markDirty(); refreshAll(); }
+      return;
+    }
+    const {edge:nearE, dist:ed} = nearestEdge(sx,sy);
+    if(nearE && ed<=EDGE_HIT_PX+3){
+      const val = window.prompt('Name this edge:', nearE.label||'');
+      if(val!==null){ nearE.label = val.trim(); markDirty(); refreshAll(); }
+    }
+  }
+
+  // ---------------- undo / clear ----------------
+  function performUndo(){
+    const last = state.history.pop();
+    if(!last) return;
+    // support both the current (multi-item) and older (single-item) history formats,
+    // in case a project was saved before edge-splitting was added.
+    const createdEdgeIds = last.createdEdgeIds || (last.newEdgeId!=null ? [last.newEdgeId] : []);
+    const createdNodeIds = last.createdNodeIds || (last.newNodeId!=null ? [last.newNodeId] : []);
+    const removedEdges = last.removedEdges || [];
+    createdEdgeIds.forEach(id=>{ state.edges.delete(id); state.selectedEdges.delete(id); });
+    createdNodeIds.forEach(id=>state.nodes.delete(id));
+    (last.removedNodes||[]).forEach(n=>{
+      state.nodes.set(n.id, n);
+      if(n.id>state.nodeSeq) state.nodeSeq=n.id;
+    });
+    removedEdges.forEach(e=>{
+      state.edges.set(e.id, {id:e.id, label:e.label, source:e.source, target:e.target, kind:e.kind||'road', color:e.color, extra:e.extra||{}, hidden:e.hidden});
+      if(e.id>state.edgeSeq) state.edgeSeq=e.id;
+    });
+    cancelArrowStart();
+    state.currentChain = last.prevChain;
+    undoBtn.disabled = state.history.length===0;
+    markDirty();
+    refreshAll();
+  }
+  undoBtn.addEventListener('click', performUndo);
+
+  clearBtn.addEventListener('click', ()=>{
+    if(state.nodes.size===0 && state.edges.size===0) return;
+    if(!window.confirm('Clear all nodes and edges? This cannot be undone.')) return;
+    state.nodes.clear(); state.edges.clear(); state.history=[];
+    state.currentChain=null; state.nodeSeq=0; state.edgeSeq=0;
+    cancelArrowStart();
+    state.selectedEdges.clear(); hideBatchBar();
+    undoBtn.disabled = true;
+    markDirty();
+    refreshAll();
+  });
+
+  // ---------------- escape ends chain ----------------
+  window.addEventListener('keydown',(e)=>{
+    const inTextField = e.target && (e.target.tagName==='INPUT' || e.target.tagName==='TEXTAREA' || e.target.tagName==='SELECT');
+    if(e.code==='Escape'){
+      if(inTextField && (e.target===batchInput || e.target===listSearch)) return;
+      if(state.sketching){ state.sketching=null; draw(); return; }
+      if(state.arrowStart!=null){
+        cancelArrowStart();
+        refreshAll();
+        return;
+      }
+      if(state.arrowMode){
+        state.arrowMode=false;
+        arrowModeEl.checked=false;
+        refreshAll();
+        return;
+      }
+      if(state.deleteMode){
+        state.deleteMode=false;
+        deleteModeEl.checked=false;
+        document.body.classList.remove('deleting');
+        refreshAll();
+        return;
+      }
+      state.currentChain = null;
+      state.inspected = null;
+      if(state.selectedEdges.size>0){ state.selectedEdges.clear(); hideBatchBar(); }
+      refreshAll();
+      if(state.viewMode==='align') syncGeoOverlay();
+    }
+    if(!inTextField && (e.key==='Delete' || e.key==='Backspace')){
+      if(state.viewMode==='digitize'){
+        e.preventDefault();
+        if(state.inspected){
+          if(state.inspected.kind==='node') removeNodeRecorded(state.inspected.id);
+          else removeEdgeRecorded(state.inspected.id);
+          state.inspected = null;
+          markDirty();
+          refreshAll();
+        } else if(state.hoverNode){
+          removeNodeRecorded(state.hoverNode.id);
+          markDirty(); refreshAll();
+        } else if(state.hoverEdge){
+          removeEdgeRecorded(state.hoverEdge.id);
+          markDirty(); refreshAll();
+        }
+      }
+    }
+    if(!inTextField && (e.ctrlKey||e.metaKey) && !e.shiftKey && (e.key==='z'||e.key==='Z')){
+      e.preventDefault();
+      if(state.viewMode==='align') performGeoUndo();
+      else if(state.sketchMode && state.sketches.length){
+        state.sketches.pop();
+        draw();
+      } else performUndo();
+    }
+    if(!inTextField && e.code==='Space' && !state.spaceDown){
+      state.spaceDown = true;
+      wrap.style.cursor='grab';
+      e.preventDefault();
+    }
+  });
+  window.addEventListener('keyup',(e)=>{
+    if(e.code==='Space'){ state.spaceDown=false; wrap.style.cursor='crosshair'; }
+  });
+
+  // ---------------- mouse: wheel zoom ----------------
+  wrap.addEventListener('wheel',(e)=>{
+    if(!state.img) return;
+    e.preventDefault();
+    const rect = canvas.getBoundingClientRect();
+    const sx = e.clientX-rect.left, sy = e.clientY-rect.top;
+    const before = screenToImg(sx,sy);
+    const factor = e.deltaY<0 ? 1.12 : 1/1.12;
+    state.scale = Math.max(state.minScale, Math.min(state.maxScale, state.scale*factor));
+    const afterScreen = imgToScreen(before.x, before.y);
+    state.offsetX += sx-afterScreen.x;
+    state.offsetY += sy-afterScreen.y;
+    updateZoomLabel();
+    draw();
+  }, {passive:false});
+
+  // ---------------- mouse: pan (right-drag or space+left-drag) ----------------
+  wrap.addEventListener('contextmenu',(e)=>e.preventDefault());
+
+  wrap.addEventListener('mousedown',(e)=>{
+    if(!state.img) return;
+    if(e.target.closest && e.target.closest('#batchBar')) return;
+    const rect = canvas.getBoundingClientRect();
+    const sx=e.clientX-rect.left, sy=e.clientY-rect.top;
+    if(e.button===2 || (e.button===0 && state.spaceDown)){
+      state.panning=true;
+      state.panStartScreen={x:e.clientX,y:e.clientY};
+      state.panStartOffset={x:state.offsetX,y:state.offsetY};
+      wrap.style.cursor='grabbing';
+      return;
+    }
+    if(state.viewMode==='digitize' && state.sketchMode && e.button===0){
+      const ipt=screenToImg(sx,sy);
+      state.sketching={color:state.sketchColor, points:[{x:ipt.x,y:ipt.y}]};
+      e.preventDefault();
+    }
+  });
+  window.addEventListener('mousemove',(e)=>{
+    if(state.panning){
+      const dx=e.clientX-state.panStartScreen.x, dy=e.clientY-state.panStartScreen.y;
+      state.offsetX = state.panStartOffset.x+dx;
+      state.offsetY = state.panStartOffset.y+dy;
+      draw();
+      return;
+    }
+    if(state.sketching){
+      const rect = canvas.getBoundingClientRect();
+      const sx=e.clientX-rect.left, sy=e.clientY-rect.top;
+      const ipt=screenToImg(sx,sy);
+      const last=state.sketching.points[state.sketching.points.length-1];
+      const minDist = 1.2 / Math.max(state.scale, 0.05);
+      if(Math.hypot(ipt.x-last.x, ipt.y-last.y) >= minDist){
+        state.sketching.points.push({x:ipt.x,y:ipt.y});
+        draw();
+      }
+      return;
+    }
+    if(!state.img) return;
+    const rect = canvas.getBoundingClientRect();
+    const sx=e.clientX-rect.left, sy=e.clientY-rect.top;
+    if(sx<0||sy<0||sx>rect.width||sy>rect.height) return;
+    const {node:near,dist:nd} = nearestNode(sx,sy, {skipAnchors: !state.arrowMode});
+    state.hoverNode = (near && nd<=SNAP_PX) ? near : null;
+    if(!state.hoverNode){
+      const {edge:nearE,dist:ed} = nearestEdge(sx,sy);
+      state.hoverEdge = (nearE && ed<=EDGE_HIT_PX) ? nearE : null;
+    } else {
+      state.hoverEdge = null;
+    }
+    if(state.arrowMode && state.arrowStart!=null){
+      state.arrowHover={x:sx, y:sy};
+    }
+    draw();
+  });
+  window.addEventListener('mouseup',(e)=>{
+    if(state.panning){
+      state.panning=false;
+      wrap.style.cursor = state.spaceDown ? 'grab' : (state.sketchMode ? 'crosshair' : 'crosshair');
+    }
+    if(state.sketching){
+      if(state.sketching.points.length>=2) state.sketches.push(state.sketching);
+      state.sketching=null;
+      draw();
+    }
+  });
+
+  // ---------------- click vs dblclick disambiguation ----------------
+  let clickTimer=null;
+  wrap.addEventListener('click',(e)=>{
+    if(!state.img) return;
+    if(e.button!==0) return;
+    if(state.spaceDown) return; // was a pan
+    if(e.target.closest && e.target.closest('#batchBar')) return;
+    if(state.sketchMode) return;
+    const rect = canvas.getBoundingClientRect();
+    const sx=e.clientX-rect.left, sy=e.clientY-rect.top;
+    const ctrlLike = e.ctrlKey||e.metaKey;
+    if(state.deleteMode && !ctrlLike && !e.shiftKey){
+      if(clickTimer){ clearTimeout(clickTimer); clickTimer=null; }
+      handleDelete(sx,sy);
+      return;
+    }
+    if(state.arrowMode && !ctrlLike && !e.altKey && !e.shiftKey){
+      if(clickTimer){ clearTimeout(clickTimer); clickTimer=null; }
+      handleArrowClick(sx,sy);
+      return;
+    }
+
+    if(e.shiftKey){
+      // shift+click: toggle edge selection for batch naming, no debounce needed
+      const {edge:nearE, dist:ed} = nearestEdge(sx,sy);
+      if(nearE && ed<=EDGE_HIT_PX+3){
+        if(state.selectedEdges.has(nearE.id)) state.selectedEdges.delete(nearE.id);
+        else state.selectedEdges.add(nearE.id);
+        updateBatchBar();
+        draw();
+      }
+      return;
+    }
+
+    if(ctrlLike){
+      inspectAt(sx,sy);
+      return;
+    }
+    if(e.altKey){
+      handleDelete(sx,sy);
+      return;
+    }
+
+    if(clickTimer){ clearTimeout(clickTimer); clickTimer=null; }
+    clickTimer = setTimeout(()=>{
+      clickTimer=null;
+      if(state.selectedEdges.size>0){ state.selectedEdges.clear(); hideBatchBar(); draw(); }
+      handlePlacementClick(sx,sy);
+    },230);
+  });
+  wrap.addEventListener('dblclick',(e)=>{
+    if(!state.img) return;
+    if(state.sketchMode || state.arrowMode || state.deleteMode) return;
+    if(clickTimer){ clearTimeout(clickTimer); clickTimer=null; }
+    const rect = canvas.getBoundingClientRect();
+    const sx=e.clientX-rect.left, sy=e.clientY-rect.top;
+    handleRename(sx,sy);
+  });
+
+  // ---------------- batch edge naming ----------------
+  function updateBatchBar(){
+    const n = state.selectedEdges.size;
+    if(n===0){ hideBatchBar(); return; }
+    batchCount.textContent = n + (n===1 ? ' edge selected' : ' edges selected');
+    const wasOpen = batchBar.classList.contains('show');
+    batchBar.classList.add('show');
+    if(!wasOpen) setTimeout(()=> batchInput.focus(), 0);
+  }
+  function hideBatchBar(){
+    batchBar.classList.remove('show');
+    batchInput.value='';
+  }
+  ['click','mousedown','mouseup','dblclick','wheel'].forEach(ev=>{
+    batchBar.addEventListener(ev, (e)=>{ e.stopPropagation(); });
+  });
+  batchApply.addEventListener('click', (e)=>{ e.stopPropagation(); applyBatchName(); });
+  batchInput.addEventListener('keydown',(e)=>{
+    e.stopPropagation();
+    if(e.key==='Enter'){ e.preventDefault(); applyBatchName(); }
+    if(e.key==='Escape'){ e.preventDefault(); state.selectedEdges.clear(); hideBatchBar(); draw(); }
+  });
+  function applyBatchName(){
+    const val = batchInput.value.trim();
+    const kind = normalizeEdgeKind((document.getElementById('batchKind')||{}).value);
+    if(state.selectedEdges.size===0) return;
+    if(!val && !kind) return;
+    state.selectedEdges.forEach(id=>{
+      const e = state.edges.get(id);
+      if(!e) return;
+      if(val) e.label = val;
+      e.kind = kind;
+    });
+    state.selectedEdges.clear();
+    hideBatchBar();
+    markDirty();
+    refreshAll();
+  }
+  batchClear.addEventListener('click', ()=>{
+    state.selectedEdges.clear();
+    hideBatchBar();
+    draw();
+  });
+
+  // ---------------- sidebar lists ----------------
+  tabs.forEach(t=>t.addEventListener('click',()=>{
+    tabs.forEach(x=>x.classList.remove('active'));
+    t.classList.add('active');
+    state.activeTab = t.dataset.tab;
+    renderList();
+  }));
+
+  function isEdgeKindVisible(kind){
+    const k=normalizeEdgeKind(kind);
+    if(!state.visEdgeKinds) return true;
+    return state.visEdgeKinds[k]!==false;
+  }
+  function isEdgeDrawn(e){
+    if(!e || e.hidden) return false;
+    if(!state.showEdges) return false;
+    if(!isEdgeKindVisible(edgeKindOf(e))) return false;
+    const a=state.nodes.get(e.source), b=state.nodes.get(e.target);
+    if(!a || !b || a.hidden || b.hidden) return false;
+    return true;
+  }
+  function haystackMatch(query, parts){
+    const q = (query||'').trim();
+    if(!q) return true;
+    const hay = parts.filter(Boolean).join(' \n ').toLowerCase();
+    let needle = q.toLowerCase();
+    let mode = 'has';
+    if(needle.charAt(0)==='^'){ mode='start'; needle=needle.slice(1); }
+    else if(needle.charAt(needle.length-1)==='$'){ mode='end'; needle=needle.slice(0,-1); }
+    if(!needle) return true;
+    if(mode==='has') return hay.indexOf(needle)>=0;
+    return parts.filter(Boolean).some(p=>{
+      const s=String(p).toLowerCase();
+      return mode==='start' ? s.indexOf(needle)===0 : s.lastIndexOf(needle)===s.length-needle.length && s.length>=needle.length;
+    });
+  }
+  function nodeSearchParts(n){
+    return [
+      String(n.id), '#'+n.id, n.label, nodeDisplayName(n),
+      extraField(n,'landmark_id'), extraField(n,'landmark_name'), extraField(n,'raw_code')
+    ];
+  }
+  function edgeSearchParts(ed){
+    const a=state.nodes.get(ed.source), b=state.nodes.get(ed.target);
+    return [
+      String(ed.id), '#'+ed.id, ed.label,
+      String(ed.source), String(ed.target), '#'+ed.source, '#'+ed.target, edgeKindOf(ed),
+      a && a.label, b && b.label,
+      a && nodeDisplayName(a), b && nodeDisplayName(b)
+    ];
+  }
+
+  function renderList(){
+    const q = listSearch ? listSearch.value : '';
+    listWrap.innerHTML='';
+    if(state.activeTab==='nodes'){
+      if(state.nodes.size===0){ listWrap.innerHTML='<div id="emptyList">No nodes yet. Click the map to create one.</div>'; return; }
+      const items=[...state.nodes.values()].sort((a,b)=>a.id-b.id).filter(n=>haystackMatch(q, nodeSearchParts(n)));
+      tabNodeCountEl.textContent = q ? (items.length+'/'+state.nodes.size) : state.nodes.size;
+      if(items.length===0){ listWrap.innerHTML='<div id="emptyList">No nodes match “'+escapeAttr(q)+'”.</div>'; return; }
+      items.forEach(n=>{
+        const row=document.createElement('div'); row.className='rowItem';
+        row.dataset.kind='node'; row.dataset.id=String(n.id);
+        if(n.hidden) row.classList.add('isHidden');
+        if(state.inspected && state.inspected.kind==='node' && state.inspected.id===n.id) row.classList.add('selected');
+        else if(state.viewMode==='align' && state.geoSelectedId===n.id) row.classList.add('selected');
+        const displayName = nodeDisplayName(n);
+        const coords = (state.viewMode==='align' && n.lat!=null && n.lon!=null)
+          ? `<span class="coords geo">${Number(n.lat).toFixed(5)}, ${Number(n.lon).toFixed(5)}</span>`
+          : `<span class="coords">${n.x.toFixed(0)}, ${n.y.toFixed(0)}</span>`;
+        row.innerHTML = `<span class="idBadge">#${n.id}</span>
+          <input type="text" placeholder="Unnamed node" value="${escapeAttr(n.label)}">
+          ${coords}
+          ${state.viewMode==='align'?'':'<button class="del" title="Delete node">×</button>'}`;
+        row.querySelector('input').addEventListener('input',(e)=>{ n.label=e.target.value; markDirty(); draw(); });
+        const delBtn=row.querySelector('.del');
+        if(delBtn) delBtn.addEventListener('click',()=>{ removeNodeRecorded(n.id); markDirty(); refreshAll(); });
+        row.addEventListener('mouseenter',()=>{ state.hoverNode=n; draw(); });
+        row.addEventListener('mouseleave',()=>{ state.hoverNode=null; draw(); });
+        row.addEventListener('click',(e)=>{
+          if(e.target.tagName==='INPUT' || e.target.tagName==='BUTTON') return;
+          setInspected('node', n.id, {pan:true});
+        });
+        if(state.viewMode==='align' && displayName && displayName!==n.label){
+          row.querySelector('input').title = displayName;
+        }
+        listWrap.appendChild(row);
+      });
+    } else {
+      if(state.edges.size===0){ listWrap.innerHTML='<div id="emptyList">No edges yet. Place a second connected node to create one.</div>'; return; }
+      const items=[...state.edges.values()].sort((a,b)=>a.id-b.id).filter(ed=>haystackMatch(q, edgeSearchParts(ed)));
+      tabEdgeCountEl.textContent = q ? (items.length+'/'+state.edges.size) : state.edges.size;
+      if(items.length===0){ listWrap.innerHTML='<div id="emptyList">No edges match “'+escapeAttr(q)+'”.</div>'; return; }
+      items.forEach(ed=>{
+        const row=document.createElement('div'); row.className='rowItem';
+        row.dataset.kind='edge'; row.dataset.id=String(ed.id);
+        if(ed.hidden) row.classList.add('isHidden');
+        if(state.inspected && state.inspected.kind==='edge' && state.inspected.id===ed.id) row.classList.add('selected');
+        row.innerHTML = `<span class="idBadge">#${ed.id}</span>
+          <input type="text" placeholder="Unnamed edge" value="${escapeAttr(ed.label)}">
+          ${edgeKindSelectHtml(ed.kind)}
+          ${isArrowEdge(ed) ? '<span class="arrowColorPick" data-eid="'+ed.id+'">'+
+            ['grey','black','blue'].map(c=>'<button type="button" class="arrowColorSwatch'+(arrowColorOf(ed)===c?' active':'')+'" data-color="'+c+'" title="'+c+'"></button>').join('')+
+            '</span>' : ''}
+          <span class="coords">#${ed.source} → #${ed.target}</span>
+          ${state.viewMode==='align'?'':'<button class="del" title="Delete edge">×</button>'}`;
+        row.querySelector('input').addEventListener('input',(e)=>{ ed.label=e.target.value; markDirty(); draw(); });
+        row.querySelector('.kindSelect').addEventListener('change',(e)=>{
+          ed.kind = normalizeEdgeKind(e.target.value);
+          if(ed.kind==='arrow' && !ed.color) ed.color='black';
+          markDirty();
+          refreshAll();
+          if(state.viewMode==='align') syncGeoOverlay();
+        });
+        row.querySelector('.kindSelect').addEventListener('click',(e)=>e.stopPropagation());
+        row.querySelectorAll('.arrowColorSwatch').forEach(btn=>{
+          btn.addEventListener('click',(ev)=>{
+            ev.stopPropagation();
+            ed.color=btn.dataset.color;
+            markDirty();
+            refreshAll();
+            if(state.viewMode==='align') syncGeoOverlay();
+          });
+        });
+        const edDel=row.querySelector('.del');
+        if(edDel) edDel.addEventListener('click',()=>{ removeEdgeRecorded(ed.id); markDirty(); refreshAll(); if(state.viewMode==='align') syncGeoOverlay(); });
+        row.addEventListener('mouseenter',()=>{ state.hoverEdge=ed; draw(); });
+        row.addEventListener('mouseleave',()=>{ state.hoverEdge=null; draw(); });
+        row.addEventListener('click',(e)=>{
+          if(e.target.tagName==='INPUT' || e.target.tagName==='BUTTON') return;
+          setInspected('edge', ed.id, {pan:true});
+        });
+        listWrap.appendChild(row);
+      });
+    }
+  }
+  function escapeAttr(s){ return (s||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;'); }
+
+  // ---------------- status / chain indicator ----------------
+  function refreshAll(){
+    draw();
+    nodeCountEl.textContent = state.nodes.size;
+    edgeCountEl.textContent = state.edges.size;
+    tabNodeCountEl.textContent = state.nodes.size;
+    tabEdgeCountEl.textContent = state.edges.size;
+    if(state.inspected && state.viewMode==='digitize'){
+      const k=state.inspected.kind, id=state.inspected.id;
+      if(k==='node'){
+        const n=state.nodes.get(id);
+        hintText.textContent = 'Inspecting node #'+id+(n && n.label?('  '+n.label):'')+'  ·  Delete / Alt+click / × to remove';
+      } else {
+        const ed=state.edges.get(id);
+        hintText.textContent = 'Inspecting edge #'+id+(ed && ed.label?('  '+ed.label):'')+'  ·  Delete / Alt+click / × to remove';
+      }
+    } else if(state.viewMode==='align'){
+      const placed=[...state.nodes.values()].filter(hasGeo).length;
+      const sel=state.nodes.get(state.geoSelectedId);
+      if(sel && hasGeo(sel)){
+        hintText.textContent = '#'+sel.id+' '+nodeDisplayName(sel)+'  ·  '+Number(sel.lat).toFixed(6)+', '+Number(sel.lon).toFixed(6);
+      } else if(sel && !hasGeo(sel)){
+        hintText.textContent = '#'+sel.id+' has no coordinates — click the Google Map to place it.';
+      } else {
+        hintText.textContent = placed+' georeferenced point(s). Load CSVs, then drag pins onto the real buildings.';
+      }
+    } else if(state.deleteMode){
+      chainDot.classList.add('active');
+      chainLabel.textContent = 'delete';
+      hintText.textContent = 'Click a node or edge to remove it. Esc exits Delete. Ctrl+Z undoes.';
+    } else if(state.arrowMode){
+      chainDot.classList.add('active');
+      if(state.arrowStart!=null){
+        const n=state.nodes.get(state.arrowStart);
+        chainLabel.textContent = 'arrow start ' + (n && n.label ? n.label : ('#'+state.arrowStart));
+        hintText.textContent = 'Click the end of the arrow (node, street, or empty space). Esc cancels the start.';
+      } else {
+        chainLabel.textContent = 'add arrow ('+ (state.arrowColor||'black') +')';
+        hintText.textContent = 'Click the start of the arrow, then the end. First click is always the tail.';
+      }
+    } else if(state.currentChain!==null){
+      chainDot.classList.add('active');
+      const n = state.nodes.get(state.currentChain);
+      chainLabel.textContent = 'chaining from ' + (n && n.label ? n.label : ('#'+state.currentChain));
+      hintText.textContent = 'Click to add the next connected node, or press Esc to end this chain.';
+    } else {
+      chainDot.classList.remove('active');
+      chainLabel.textContent = 'no active chain';
+      hintText.textContent = state.nodes.size===0 ? 'Click the map to place your first node.' : 'Click the map to start a new, unconnected node.';
+    }
+    undoBtn.disabled = state.history.length===0;
+    renderList();
+  }
+
+  // ---------------- save / load project ----------------
+  saveProjectBtn.addEventListener('click', ()=>{
+    if(!state.img) return;
+    const project = {
+      type:'map-graph-digitizer-project', version:1, savedAt:new Date().toISOString(),
+      imgDataUrl: state.imgDataUrl, imgW: state.imgW, imgH: state.imgH,
+      nodeSeq: state.nodeSeq, edgeSeq: state.edgeSeq,
+      currentChain: state.currentChain,
+      view: { scale: state.scale, offsetX: state.offsetX, offsetY: state.offsetY },
+      nodes: [...state.nodes.values()],
+      edges: [...state.edges.values()],
+      history: state.history
+    };
+    const blob = new Blob([JSON.stringify(project)], {type:'application/json'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = 'map-graph-project.json';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(()=>URL.revokeObjectURL(url), 2000);
+    clearDirty();
+  });
+
+  loadProjectInput.addEventListener('change', (e)=>{
+    const f = e.target.files[0];
+    if(!f) return;
+    if(state.dirty && !window.confirm('Loading a project will replace your current unsaved work. Continue?')) {
+      loadProjectInput.value='';
+      return;
+    }
+    const reader = new FileReader();
+    reader.onload = (ev)=>{
+      let project;
+      try { project = JSON.parse(ev.target.result); }
+      catch(err){ alert('This file is not a valid project JSON.'); return; }
+      if(!project || project.type!=='map-graph-digitizer-project' || !project.imgDataUrl){
+        alert('This file is not a valid map-graph-digitizer project.');
+        return;
+      }
+      loadImageFromDataUrl(project.imgDataUrl, /*isNewUpload*/false, ()=>{
+        state.nodes = new Map((project.nodes||[]).map(n=>[n.id,n]));
+        state.edges = new Map((project.edges||[]).map(ed=>[ed.id,ed]));
+        state.nodeSeq = project.nodeSeq||0;
+        state.edgeSeq = project.edgeSeq||0;
+        state.currentChain = (project.currentChain===undefined) ? null : project.currentChain;
+        state.history = project.history||[];
+        state.selectedEdges = new Set();
+        hideBatchBar();
+        if(project.view){
+          state.scale = project.view.scale||1;
+          state.offsetX = project.view.offsetX||0;
+          state.offsetY = project.view.offsetY||0;
+          updateZoomLabel();
+        } else {
+          fitToView();
+        }
+        undoBtn.disabled = state.history.length===0;
+        clearDirty();
+        refreshAll();
+        resizeCanvas();
+      });
+    };
+    reader.readAsText(f);
+    loadProjectInput.value='';
+  });
+
+  window.addEventListener('beforeunload', (e)=>{
+    if(state.dirty){
+      saveSession();
+      e.preventDefault();
+      e.returnValue='';
+    }
+  });
+  document.addEventListener('visibilitychange', ()=>{ if(document.hidden && state.dirty) saveSession(); });
+  window.addEventListener('pagehide', ()=>{ if(state.dirty) saveSession(); });
+
+  // ---------------- CSV export ----------------
+  exportBtn.addEventListener('click', ()=>{
+    if(!state.img) return;
+    const cx = state.imgW/2, cy = state.imgH/2;
+    let nodesCsv = 'Id,Label,x,y,pixel_x,pixel_y\n';
+    [...state.nodes.values()].sort((a,b)=>a.id-b.id).forEach(n=>{
+      const gx = n.x - cx;
+      const gy = cy - n.y; // flip so "up" on the map is positive y
+      const label = n.label ? n.label : ('Node ' + n.id);
+      nodesCsv += `${n.id},${csvField(label)},${gx.toFixed(2)},${gy.toFixed(2)},${n.x.toFixed(2)},${n.y.toFixed(2)}\n`;
+    });
+    let edgesCsv = 'Id,Source,Target,Label,Type,Weight,Kind,Color\n';
+    [...state.edges.values()].sort((a,b)=>a.id-b.id).forEach(e=>{
+      const label = e.label ? e.label : '';
+      edgesCsv += `${e.id},${e.source},${e.target},${csvField(label)},${isArrowEdge(e)?'Directed':'Undirected'},1,${edgeKindOf(e)},${isArrowEdge(e)?arrowColorOf(e):''}\n`;
+    });
+    downloadText('nodes.csv', nodesCsv);
+    downloadText('edges.csv', edgesCsv);
+  });
+  function csvField(s){
+    s = String(s);
+    if(/[",\n]/.test(s)) return '"'+s.replace(/"/g,'""')+'"';
+    return s;
+  }
+  function downloadText(filename, text){
+    const blob = new Blob([text], {type:'text/csv;charset=utf-8;'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = filename;
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(()=>URL.revokeObjectURL(url), 2000);
+  }
+
+  // ---------------- CSV import ----------------
+  // Minimal RFC4180-ish parser: handles quoted fields, escaped "" quotes, commas/newlines inside quotes.
+  function parseCSV(text){
+    const rows=[]; let row=[], field='', inQuotes=false;
+    text = text.replace(/\r\n/g,'\n').replace(/\r/g,'\n');
+    for(let i=0;i<text.length;i++){
+      const c = text[i];
+      if(inQuotes){
+        if(c==='"'){ if(text[i+1]==='"'){ field+='"'; i++; } else inQuotes=false; }
+        else field+=c;
+      } else {
+        if(c==='"') inQuotes=true;
+        else if(c===','){ row.push(field); field=''; }
+        else if(c==='\n'){ row.push(field); rows.push(row); row=[]; field=''; }
+        else field+=c;
+      }
+    }
+    if(field.length>0 || row.length>0){ row.push(field); rows.push(row); }
+    return rows.filter(r => !(r.length===1 && r[0].trim()===''));
+  }
+  function colIndex(header, name){
+    return header.findIndex(h=>h.trim().toLowerCase()===name.toLowerCase());
+  }
+
+  const CORE_NODE_COLS = ['id','label','x','y','pixel_x','pixel_y'];
+
+  function importNodeRows(rows, warnings, opts){
+    opts = opts || {};
+    if(rows.length<2) return 0;
+    const header = rows[0].map(h=>h.trim());
+    state.nodeCsvHeaders = header.slice();
+    const iId=colIndex(header,'Id'), iLabel=colIndex(header,'Label'),
+          iX=colIndex(header,'x'), iY=colIndex(header,'y'),
+          iPX=colIndex(header,'pixel_x'), iPY=colIndex(header,'pixel_y'),
+          iLon=colIndex(header,'lon'), iLat=colIndex(header,'lat');
+    const extraNames = header.filter(h => CORE_NODE_COLS.indexOf(h.toLowerCase())<0);
+    let count=0;
+    for(let r=1;r<rows.length;r++){
+      const row = rows[r];
+      if(row.length===0 || (row.length===1 && row[0].trim()==='')) continue;
+      let id;
+      if(iId>=0 && row[iId]!==undefined && row[iId]!==''){
+        id = parseInt(row[iId],10);
+        if(Number.isNaN(id)){ warnings.push('Skipped a node row — invalid Id "'+row[iId]+'"'); continue; }
+      } else {
+        id = ++state.nodeSeq;
+      }
+      let px,py;
+      if(iPX>=0 && iPY>=0 && row[iPX]!=='' && row[iPY]!==''){
+        px = parseFloat(row[iPX]); py = parseFloat(row[iPY]);
+      } else if(iX>=0 && iY>=0 && row[iX]!=='' && row[iY]!=='' && state.imgW){
+        px = parseFloat(row[iX]) + state.imgW/2;
+        py = state.imgH/2 - parseFloat(row[iY]);
+      } else if(opts.allowGeoOnly){
+        px = 0; py = 0;
+      } else {
+        warnings.push('Skipped node #'+id+' — no usable position columns (need pixel_x/pixel_y or x/y)');
+        continue;
+      }
+      if(Number.isNaN(px) || Number.isNaN(py)){ warnings.push('Skipped node #'+id+' — non-numeric position'); continue; }
+      if(state.nodes.has(id)) warnings.push('Node #'+id+' already existed and was overwritten by the import.');
+      const label = iLabel>=0 ? (row[iLabel]||'') : '';
+      const extra = {};
+      extraNames.forEach(h=>{
+        const i = colIndex(header, h);
+        extra[h] = i>=0 ? (row[i]||'') : '';
+      });
+      let lon=null, lat=null;
+      if(iLon>=0 && iLat>=0 && row[iLon]!=='' && row[iLat]!==''){
+        lon = parseFloat(row[iLon]); lat = parseFloat(row[iLat]);
+        if(Number.isNaN(lon) || Number.isNaN(lat)){ lon=null; lat=null; }
+      }
+      let gx=null, gy=null;
+      if(iX>=0 && row[iX]!==''){ gx=parseFloat(row[iX]); if(Number.isNaN(gx)) gx=null; }
+      if(iY>=0 && row[iY]!==''){ gy=parseFloat(row[iY]); if(Number.isNaN(gy)) gy=null; }
+      state.nodes.set(id, {id, label, x:px, y:py, gx, gy, lon, lat, extra});
+      if(id > state.nodeSeq) state.nodeSeq = id;
+      count++;
+    }
+    return count;
+  }
+
+  function importEdgeRows(rows, warnings){
+    if(rows.length<2) return 0;
+    const header = rows[0].map(h=>h.trim());
+    const iId=colIndex(header,'Id'), iSource=colIndex(header,'Source'),
+          iTarget=colIndex(header,'Target'), iLabel=colIndex(header,'Label'),
+          iKind=colIndex(header,'Kind'), iType=colIndex(header,'Type'), iColor=colIndex(header,'Color');
+    if(iSource<0 || iTarget<0){ warnings.push('Edges file is missing Source/Target columns — skipped entirely.'); return 0; }
+    let count=0;
+    for(let r=1;r<rows.length;r++){
+      const row = rows[r];
+      if(row.length===0 || (row.length===1 && row[0].trim()==='')) continue;
+      const source = parseInt(row[iSource],10), target = parseInt(row[iTarget],10);
+      if(Number.isNaN(source) || Number.isNaN(target)){ warnings.push('Skipped an edge row — invalid Source/Target'); continue; }
+      if(!state.nodes.has(source) || !state.nodes.has(target)){
+        warnings.push('Skipped edge '+source+' → '+target+' — one or both nodes weren\u2019t found (import nodes.csv too, or first).');
+        continue;
+      }
+      let id;
+      if(iId>=0 && row[iId]!==undefined && row[iId]!==''){
+        id = parseInt(row[iId],10);
+        if(Number.isNaN(id)){ warnings.push('Skipped an edge row — invalid Id "'+row[iId]+'"'); continue; }
+      } else {
+        id = ++state.edgeSeq;
+      }
+      if(state.edges.has(id)) warnings.push('Edge #'+id+' already existed and was overwritten by the import.');
+      const label = iLabel>=0 ? (row[iLabel]||'') : '';
+      let kind = 'road';
+      if(iKind>=0 && row[iKind]) kind = normalizeEdgeKind(row[iKind]);
+      else if(iType>=0 && EDGE_KINDS.indexOf(String(row[iType]||'').toLowerCase())>=0) kind = normalizeEdgeKind(row[iType]);
+      const color = iColor>=0 ? String(row[iColor]||'').toLowerCase().trim() : '';
+      const edgeObj={id, label, source, target, kind};
+      if(kind==='arrow') edgeObj.color = (color==='grey'||color==='gray'||color==='blue') ? (color==='gray'?'grey':color) : 'black';
+      state.edges.set(id, edgeObj);
+      if(id > state.edgeSeq) state.edgeSeq = id;
+      count++;
+    }
+    return count;
+  }
+
+  importCsvInput.addEventListener('change', (e)=>{
+    const files = [...e.target.files];
+    if(files.length===0) return;
+    if(!state.img){
+      alert('Load the map image first, then import your CSVs \u2014 imported nodes need the image loaded to know where they sit.');
+      importCsvInput.value='';
+      return;
+    }
+    Promise.all(files.map(f=>f.text())).then(contents=>{
+      const warnings=[];
+      const nodeRowSets=[], edgeRowSets=[];
+      files.forEach((f,i)=>{
+        const rows = parseCSV(contents[i]);
+        if(rows.length===0){ warnings.push(f.name+': empty file, skipped.'); return; }
+        const header = rows[0].map(h=>h.trim().toLowerCase());
+        if(header.includes('source') && header.includes('target')) edgeRowSets.push(rows);
+        else if(header.includes('id') && header.includes('label') && (header.includes('x')||header.includes('pixel_x'))) nodeRowSets.push(rows);
+        else if(/edge/i.test(f.name)) edgeRowSets.push(rows);
+        else if(/node/i.test(f.name)) nodeRowSets.push(rows);
+        else warnings.push('Could not tell whether "'+f.name+'" is a nodes or edges file (expected headers like Id,Label,x,y or Id,Source,Target) \u2014 skipped.');
+      });
+      let nodeCount=0, edgeCount=0;
+      // nodes must land in state before edges are resolved against them
+      nodeRowSets.forEach(rows=>{ nodeCount += importNodeRows(rows, warnings); });
+      edgeRowSets.forEach(rows=>{ edgeCount += importEdgeRows(rows, warnings); });
+
+      if(nodeCount>0 || edgeCount>0){
+        state.currentChain = null;
+        markDirty();
+      }
+      refreshAll();
+
+      let msg = 'Imported '+nodeCount+' node(s) and '+edgeCount+' edge(s).';
+      if(warnings.length){
+        msg += '\n\n'+warnings.slice(0,12).join('\n');
+        if(warnings.length>12) msg += '\n\u2026and '+(warnings.length-12)+' more.';
+      }
+      alert(msg);
+      importCsvInput.value='';
+    });
+  });
+
+  // ---------------- Align on map ----------------
+  function extraField(n, name){
+    if(!n || !n.extra) return '';
+    const keys = Object.keys(n.extra);
+    const hit = keys.find(k => k.toLowerCase()===name.toLowerCase());
+    return hit ? n.extra[hit] : '';
+  }
+  function nodeDisplayName(n){
+    const lid = extraField(n,'landmark_id');
+    const lname = extraField(n,'landmark_name');
+    if(lid && lname) return lid+' '+lname;
+    if(lname) return lname;
+    return n.label || ('Node '+n.id);
+  }
+  function isLandmarkNode(n){
+    const kind = extraField(n,'node_kind');
+    if(kind==='marker') return true;
+    if(kind==='intersection') return false;
+    return /^marker/i.test(n.label||'') || /^market_/i.test(n.label||'');
+  }
+  function hasGeo(n){ return n && n.lon!=null && n.lat!=null && isFinite(n.lon) && isFinite(n.lat); }
+
+  function haversineM(lat1, lon1, lat2, lon2){
+    const R=6371000, p=Math.PI/180;
+    const dphi=(lat2-lat1)*p, dl=(lon2-lon1)*p;
+    const a=Math.sin(dphi/2)**2 + Math.cos(lat1*p)*Math.cos(lat2*p)*Math.sin(dl/2)**2;
+    return 2*R*Math.asin(Math.sqrt(a));
+  }
+
+  function setViewMode(mode){
+    state.viewMode = mode;
+    document.body.classList.toggle('align-mode', mode==='align');
+    modeDigitize.classList.toggle('active', mode==='digitize');
+    modeAlign.classList.toggle('active', mode==='align');
+    if(mode==='digitize'){
+      resizeCanvas();
+      refreshAll();
+    } else {
+      enterAlignMode();
+    }
+  }
+  modeDigitize.addEventListener('click', ()=>setViewMode('digitize'));
+  modeAlign.addEventListener('click', ()=>setViewMode('align'));
+
+  function storedMapsKey(){ return localStorage.getItem(GMAPS_KEY_LS)||''; }
+
+  function enterAlignMode(){
+    refreshAll();
+    const key = storedMapsKey();
+    if(!key){
+      geoKeyBanner.classList.remove('hidden');
+      geoKeyInput.value = '';
+      geoKeyInput.focus();
+      return;
+    }
+    geoKeyBanner.classList.add('hidden');
+    loadGoogleMaps(key).then(()=>{
+      ensureGeoMap();
+      syncGeoOverlay();
+      fitGeoPoints();
+    }).catch(err=>{
+      geoKeyBanner.classList.remove('hidden');
+      alert('Could not load Google Maps. Check the API key and that you opened this page over http://localhost (not file://).\n\n'+err);
+    });
+  }
+
+  window.gm_authFailure = function(){
+    geoKeyBanner.classList.remove('hidden');
+    alert('Google Maps rejected the API key. Create a Maps JavaScript API key and restrict it to http://localhost:*');
+  };
+
+  function loadGoogleMaps(key){
+    if(state.mapsReady && window.google && google.maps) return Promise.resolve();
+    if(state.mapsLoading){
+      return new Promise((resolve, reject)=>{
+        const t=setInterval(()=>{
+          if(state.mapsReady){ clearInterval(t); resolve(); }
+        },50);
+        setTimeout(()=>{ clearInterval(t); if(!state.mapsReady) reject(new Error('timeout')); }, 20000);
+      });
+    }
+    state.mapsLoading = true;
+    return new Promise((resolve, reject)=>{
+      const s=document.createElement('script');
+      s.src='https://maps.googleapis.com/maps/api/js?key='+encodeURIComponent(key);
+      s.async=true;
+      s.onload=()=>{ state.mapsReady=true; state.mapsLoading=false; resolve(); };
+      s.onerror=()=>{ state.mapsLoading=false; reject(new Error('script failed to load')); };
+      document.head.appendChild(s);
+    });
+  }
+
+  geoKeySave.addEventListener('click', ()=>{
+    const key = geoKeyInput.value.trim();
+    if(!key){ alert('Paste a Maps JavaScript API key first.'); return; }
+    localStorage.setItem(GMAPS_KEY_LS, key);
+    geoKeyBanner.classList.add('hidden');
+    enterAlignMode();
+  });
+  changeKeyBtn.addEventListener('click', ()=>{
+    geoKeyInput.value = storedMapsKey();
+    geoKeyBanner.classList.remove('hidden');
+    geoKeyInput.focus();
+  });
+
+  function ensureGeoMap(){
+    if(state.geoMap) {
+      google.maps.event.trigger(state.geoMap, 'resize');
+      attachOverlaysToMap();
+      return;
+    }
+    state.geoMap = new google.maps.Map(geoMapEl, {
+      center: KOVEL,
+      zoom: 14,
+      mapTypeId: 'hybrid',
+      gestureHandling: 'greedy',
+      streetViewControl: false,
+      fullscreenControl: true,
+      mapTypeControl: false
+    });
+    attachOverlaysToMap();
+    state.geoMap.addListener('click', (e)=>{
+      const dom = e.domEvent;
+      if(dom && (dom.ctrlKey||dom.metaKey)){
+        inspectNearestGeo(e.latLng);
+        if(dom.preventDefault) dom.preventDefault();
+        return;
+      }
+      if(state.geoSelectedId==null) return;
+      const n = state.nodes.get(state.geoSelectedId);
+      if(!n || hasGeo(n)) return;
+      applyGeoMoves([{id:n.id, lon0:null, lat0:null, lon1:e.latLng.lng(), lat1:e.latLng.lat()}]);
+    });
+  }
+
+  mapTypeSelect.addEventListener('change', ()=>{
+    if(state.geoMap) state.geoMap.setMapTypeId(mapTypeSelect.value);
+  });
+  [layerLandmarks, layerIntersections, layerEdges, layerLabels].forEach(el=>el.addEventListener('change', ()=>{
+    applyLayerVisibility();
+    markDirty();
+  }));
+  [visMap, visNodes, visEdges, visLabels].forEach(el=>el.addEventListener('change', ()=>{
+    state.showMap = visMap.checked;
+    state.showNodes = visNodes.checked;
+    state.showEdges = visEdges.checked;
+    state.showLabels = visLabels.checked;
+    syncEdgeKindFilterUI();
+    draw();
+    applyLayerVisibility();
+    markDirty();
+  }));
+  edgeKindFilters.querySelectorAll('input[data-kind]').forEach(inp=>{
+    inp.addEventListener('change', ()=>{
+      state.visEdgeKinds[inp.dataset.kind] = inp.checked;
+      draw();
+      applyLayerVisibility();
+      markDirty();
+    });
+  });
+  canvasBgEl.addEventListener('change', ()=>{
+    state.canvasBg = canvasBgEl.value || 'standard';
+    applyCanvasBg();
+    draw();
+    markDirty();
+  });
+  nbRadius.addEventListener('input', ()=>{ nbRadiusLabel.textContent = nbRadius.value+' m'; });
+
+  function landmarkIcon(){
+    return {
+      path: google.maps.SymbolPath.CIRCLE,
+      scale: 8,
+      fillColor: '#c45c2a',
+      fillOpacity: 0.95,
+      strokeColor: '#1c1408',
+      strokeWeight: 1.4
+    };
+  }
+  function intersectionIcon(){
+    return {
+      path: google.maps.SymbolPath.CIRCLE,
+      scale: 4,
+      fillColor: '#d8d2c4',
+      fillOpacity: 0.9,
+      strokeColor: '#3a3b33',
+      strokeWeight: 1
+    };
+  }
+
+  function clearGeoOverlay(){
+    state.geoMarkers.forEach(m=>m.setMap(null));
+    state.geoPolylines.forEach(p=>p.setMap(null));
+    state.geoMarkers.clear();
+    state.geoPolylines.clear();
+  }
+
+  function syncGeoOverlay(){
+    if(!state.geoMap) return;
+    clearGeoOverlay();
+    state.nodes.forEach(n=>{
+      if(!hasGeo(n)) return;
+      const lm = isLandmarkNode(n);
+      const marker = new google.maps.Marker({
+        position: {lat:n.lat, lng:n.lon},
+        map: state.geoMap,
+        draggable: true,
+        title: nodeDisplayName(n),
+        label: (lm && layerLabels.checked && visLabels.checked) ? {text: String(extraField(n,'landmark_id')||n.id), color:'#f2efe4', fontSize:'10px', fontWeight:'600'} : null,
+        icon: lm ? landmarkIcon() : intersectionIcon(),
+        zIndex: lm ? 2 : 1
+      });
+      marker.__nodeId = n.id;
+      marker.addListener('click', ()=>setInspected('node', n.id, {pan:false}));
+      marker.addListener('dragstart', ()=>onGeoDragStart(n.id));
+      marker.addListener('drag', ()=>onGeoDrag(n.id, marker.getPosition()));
+      marker.addListener('dragend', ()=>onGeoDragEnd(n.id, marker.getPosition()));
+      state.geoMarkers.set(n.id, marker);
+    });
+    state.edges.forEach(e=>{
+      const a=state.nodes.get(e.source), b=state.nodes.get(e.target);
+      if(!hasGeo(a)||!hasGeo(b)) return;
+      const ks = edgeKindStyle(edgeKindOf(e), e);
+      const lineOpts={
+        path: [{lat:a.lat,lng:a.lon},{lat:b.lat,lng:b.lon}],
+        strokeColor: ks.geo,
+        strokeOpacity: 0.92,
+        strokeWeight: ks.width+0.4,
+        map: state.geoMap,
+        zIndex: isArrowEdge(e)?1:0
+      };
+      if(isArrowEdge(e) && window.google && google.maps && google.maps.SymbolPath){
+        lineOpts.icons=[{icon:{path:google.maps.SymbolPath.FORWARD_CLOSED_ARROW, scale:3, fillColor:ks.geo, fillOpacity:1, strokeColor:ks.geo, strokeWeight:1}, offset:'100%'}];
+      }
+      const line = new google.maps.Polyline(lineOpts);
+      line.addListener('click', ()=>setInspected('edge', e.id, {pan:false}));
+      state.geoPolylines.set(e.id, line);
+    });
+    applyLayerVisibility();
+    highlightGeoInspected();
+    updateGeoUndoBtn();
+  }
+
+  function inspectIcon(isLm){
+    return {
+      path: google.maps.SymbolPath.CIRCLE,
+      scale: isLm ? 11 : 7,
+      fillColor: '#f0d060',
+      fillOpacity: 1,
+      strokeColor: '#8a5a18',
+      strokeWeight: 2.2
+    };
+  }
+
+  function highlightGeoInspected(){
+    if(!state.geoMap) return;
+    state.geoMarkers.forEach((m,id)=>{
+      const n = state.nodes.get(id);
+      if(!n) return;
+      const lm = isLandmarkNode(n);
+      const on = state.inspected && state.inspected.kind==='node' && state.inspected.id===id;
+      m.setIcon(on ? inspectIcon(lm) : (lm?landmarkIcon():intersectionIcon()));
+      m.setZIndex(on?20:(lm?2:1));
+    });
+    state.geoPolylines.forEach((p,id)=>{
+      const on = state.inspected && state.inspected.kind==='edge' && state.inspected.id===id;
+      const ed=state.edges.get(id);
+      const ks=edgeKindStyle(edgeKindOf(ed), ed);
+      p.setOptions({strokeColor: on?'#f0d060':ks.geo, strokeWeight: on?5:ks.width+0.4, zIndex: on?8:0});
+    });
+  }
+
+  function applyLayerVisibility(){
+    if(!state.geoMarkers) return;
+    state.geoMarkers.forEach((m, id)=>{
+      const n = state.nodes.get(id);
+      if(!n) return;
+      const lm = isLandmarkNode(n);
+      const typeOn = lm ? layerLandmarks.checked : layerIntersections.checked;
+      m.setVisible(!!(state.showNodes && typeOn && !n.hidden));
+      const wantLabel = lm && layerLabels.checked && visLabels.checked;
+      const txt = String(extraField(n,'landmark_id')||n.id);
+      const cur = m.getLabel();
+      if(wantLabel && !cur) m.setLabel({text:txt, color:'#f2efe4', fontSize:'10px', fontWeight:'600'});
+      if(!wantLabel && cur) m.setLabel(null);
+    });
+    const showE = state.showEdges && layerEdges.checked;
+    state.geoPolylines.forEach((p,id)=>{
+      const e=state.edges.get(id);
+      p.setVisible(!!(showE && e && isEdgeDrawn(e)));
+    });
+  }
+
+  let dragSession=null;
+  function onGeoDragStart(id){
+    const n = state.nodes.get(id);
+    if(!n) return;
+    selectGeoNode(id, false);
+    const radius = nbDrag.checked ? parseFloat(nbRadius.value) : 0;
+    const others=[];
+    if(radius>0){
+      state.nodes.forEach(o=>{
+        if(o.id===id || !hasGeo(o)) return;
+        const d = haversineM(n.lat, n.lon, o.lat, o.lon);
+        if(d<=radius) others.push({id:o.id, lon:o.lon, lat:o.lat, dist:d});
+      });
+    }
+    dragSession = {
+      id,
+      origin:{lon:n.lon, lat:n.lat},
+      others,
+      radius,
+      moves:[{id, lon0:n.lon, lat0:n.lat}]
+    };
+    others.forEach(o=>dragSession.moves.push({id:o.id, lon0:o.lon, lat0:o.lat}));
+  }
+  function onGeoDrag(id, pos){
+    if(!dragSession || dragSession.id!==id) return;
+    const lon1=pos.lng(), lat1=pos.lat();
+    const n=state.nodes.get(id);
+    n.lon=lon1; n.lat=lat1;
+    const dLon=lon1-dragSession.origin.lon, dLat=lat1-dragSession.origin.lat;
+    dragSession.others.forEach(o=>{
+      const w = 1 - (o.dist/dragSession.radius);
+      const fall = w*w;
+      const node=state.nodes.get(o.id);
+      node.lon = o.lon + dLon*fall;
+      node.lat = o.lat + dLat*fall;
+      const mk=state.geoMarkers.get(o.id);
+      if(mk) mk.setPosition({lat:node.lat, lng:node.lon});
+    });
+    refreshIncidentLines(id);
+    dragSession.others.forEach(o=>refreshIncidentLines(o.id));
+  }
+  function onGeoDragEnd(id, pos){
+    if(!dragSession || dragSession.id!==id) return;
+    onGeoDrag(id, pos);
+    dragSession.moves.forEach(m=>{
+      const node=state.nodes.get(m.id);
+      m.lon1=node.lon; m.lat1=node.lat;
+    });
+    const changed = dragSession.moves.filter(m=>m.lon1!==m.lon0 || m.lat1!==m.lat0);
+    if(changed.length){
+      state.geoHistory.push({moves:changed});
+      markDirty();
+    }
+    dragSession=null;
+    updateGeoUndoBtn();
+    refreshAll();
+  }
+
+  function applyGeoMoves(moves, asUndo){
+    moves.forEach(m=>{
+      const n=state.nodes.get(m.id);
+      if(!n) return;
+      n.lon = asUndo ? m.lon0 : m.lon1;
+      n.lat = asUndo ? m.lat0 : m.lat1;
+    });
+    if(!asUndo){
+      state.geoHistory.push({moves});
+      markDirty();
+    }
+    syncGeoOverlay();
+    updateGeoUndoBtn();
+    refreshAll();
+  }
+
+  function performGeoUndo(){
+    const last=state.geoHistory.pop();
+    if(!last) return;
+    last.moves.forEach(m=>{
+      const n=state.nodes.get(m.id);
+      if(!n) return;
+      n.lon=m.lon0; n.lat=m.lat0;
+    });
+    markDirty();
+    syncGeoOverlay();
+    updateGeoUndoBtn();
+    refreshAll();
+  }
+  geoUndoBtn.addEventListener('click', performGeoUndo);
+  function updateGeoUndoBtn(){ geoUndoBtn.disabled = state.geoHistory.length===0; }
+
+  function refreshIncidentLines(nodeId){
+    state.edges.forEach(e=>{
+      if(e.source!==nodeId && e.target!==nodeId) return;
+      const line=state.geoPolylines.get(e.id);
+      const a=state.nodes.get(e.source), b=state.nodes.get(e.target);
+      if(!line||!hasGeo(a)||!hasGeo(b)) return;
+      line.setPath([{lat:a.lat,lng:a.lon},{lat:b.lat,lng:b.lon}]);
+    });
+  }
+
+  function selectGeoNode(id, pan){
+    state.geoSelectedId = id;
+    const n=state.nodes.get(id);
+    if(n && hasGeo(n) && pan!==false && state.geoMap){
+      state.geoMap.panTo({lat:n.lat, lng:n.lon});
+    }
+    refreshAll();
+  }
+  function flyToNode(id){
+    const n=state.nodes.get(id);
+    if(!n) return;
+    state.geoSelectedId=id;
+    if(hasGeo(n) && state.geoMap){
+      state.geoMap.panTo({lat:n.lat, lng:n.lon});
+      if(state.geoMap.getZoom()<17) state.geoMap.setZoom(17);
+    } else if(state.geoMap){
+      hintText.textContent = '#'+id+' has no lon/lat — click the map to place it.';
+    }
+    renderList();
+  }
+
+  function fitGeoPoints(){
+    if(!state.geoMap) return;
+    const b = new google.maps.LatLngBounds();
+    let n=0;
+    state.nodes.forEach(node=>{
+      if(!hasGeo(node)) return;
+      b.extend({lat:node.lat, lng:node.lon});
+      n++;
+    });
+    if(n===0){ state.geoMap.setCenter(KOVEL); state.geoMap.setZoom(14); return; }
+    state.geoMap.fitBounds(b, 40);
+  }
+  fitGeoBtn.addEventListener('click', fitGeoPoints);
+
+  function classifyCsvRows(files, contents, warnings){
+    const nodeRowSets=[], edgeRowSets=[];
+    files.forEach((f,i)=>{
+      const rows = parseCSV(contents[i]);
+      if(rows.length===0){ warnings.push(f.name+': empty file, skipped.'); return; }
+      const header = rows[0].map(h=>h.trim().toLowerCase());
+      if(header.includes('source') && header.includes('target')) edgeRowSets.push(rows);
+      else if(header.includes('id') && (header.includes('lon')||header.includes('label')||header.includes('x')||header.includes('pixel_x'))) nodeRowSets.push(rows);
+      else if(/edge/i.test(f.name)) edgeRowSets.push(rows);
+      else if(/node/i.test(f.name)) nodeRowSets.push(rows);
+      else warnings.push('Could not tell whether "'+f.name+'" is a nodes or edges file — skipped.');
+    });
+    return {nodeRowSets, edgeRowSets};
+  }
+
+  alignCsvInput.addEventListener('change', (e)=>{
+    const files=[...e.target.files];
+    if(!files.length) return;
+    Promise.all(files.map(f=>f.text())).then(contents=>{
+      const warnings=[];
+      const {nodeRowSets, edgeRowSets} = classifyCsvRows(files, contents, warnings);
+      let nodeCount=0, edgeCount=0;
+      nodeRowSets.forEach(rows=>{ nodeCount += importNodeRows(rows, warnings, {allowGeoOnly:true}); });
+      edgeRowSets.forEach(rows=>{ edgeCount += importEdgeRows(rows, warnings); });
+      if(nodeCount>0 || edgeCount>0){
+        state.currentChain=null;
+        state.geoHistory=[];
+        markDirty();
+      }
+      if(state.geoMap) syncGeoOverlay();
+      refreshAll();
+      if(state.geoMap) fitGeoPoints();
+      let msg='Imported '+nodeCount+' node(s) and '+edgeCount+' edge(s) onto the map.';
+      const unplaced=[...state.nodes.values()].filter(n=>!hasGeo(n)).length;
+      if(unplaced) msg+='\n'+unplaced+' node(s) have no lon/lat — select one in the list, then click the map to place it.';
+      if(warnings.length){
+        msg+='\n\n'+warnings.slice(0,12).join('\n');
+        if(warnings.length>12) msg+='\n…and '+(warnings.length-12)+' more.';
+      }
+      alert(msg);
+      alignCsvInput.value='';
+    });
+  });
+
+  function exportAlignCsvs(){
+    if(state.nodes.size===0){ alert('No nodes to export.'); return; }
+    const headers = state.nodeCsvHeaders && state.nodeCsvHeaders.length
+      ? state.nodeCsvHeaders
+      : ['Id','Label','x','y','pixel_x','pixel_y','lon','lat'];
+    const lines=[headers.join(',')];
+    [...state.nodes.values()].sort((a,b)=>a.id-b.id).forEach(n=>{
+      const gx = n.x - (state.imgW?state.imgW/2:0);
+      const gy = (state.imgH?state.imgH/2:0) - n.y;
+      const row=headers.map(h=>{
+        const k=h.toLowerCase();
+        if(k==='id') return n.id;
+        if(k==='label') return csvField(n.label||('Node '+n.id));
+        if(k==='x') return (n.gx!=null && isFinite(n.gx) ? n.gx : gx).toFixed(2);
+        if(k==='y') return (n.gy!=null && isFinite(n.gy) ? n.gy : gy).toFixed(2);
+        if(k==='pixel_x') return n.x.toFixed(2);
+        if(k==='pixel_y') return n.y.toFixed(2);
+        if(k==='lon') return n.lon!=null ? Number(n.lon).toFixed(7) : '';
+        if(k==='lat') return n.lat!=null ? Number(n.lat).toFixed(7) : '';
+        if(k==='utm_easting' || k==='utm_northing' || k==='georef_residual_m') return '';
+        if(k==='georef_role') return 'manual';
+        return csvField(extraField(n,h));
+      });
+      lines.push(row.join(','));
+    });
+    downloadText('nodes.csv', lines.join('\n')+'\n');
+    let edgesCsv='Id,Source,Target,Label,Type,Weight,Kind,Color\n';
+    [...state.edges.values()].sort((a,b)=>a.id-b.id).forEach(e=>{
+      edgesCsv += `${e.id},${e.source},${e.target},${csvField(e.label||'')},${isArrowEdge(e)?'Directed':'Undirected'},1,${edgeKindOf(e)},${isArrowEdge(e)?arrowColorOf(e):''}\n`;
+    });
+    downloadText('edges.csv', edgesCsv);
+  }
+  exportGeoCsvBtn.addEventListener('click', exportAlignCsvs);
+
+  function xmlEsc(s){
+    return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+  function buildKml(){
+    const landmarks=[], intersections=[], lines=[];
+    state.nodes.forEach(n=>{
+      if(!hasGeo(n)) return;
+      const name=xmlEsc(nodeDisplayName(n));
+      const pm = `    <Placemark>
+      <name>${name}</name>
+      <description>id ${n.id}</description>
+      <Point><coordinates>${Number(n.lon).toFixed(7)},${Number(n.lat).toFixed(7)},0</coordinates></Point>
+    </Placemark>`;
+      if(isLandmarkNode(n)) landmarks.push(pm); else intersections.push(pm);
+    });
+    state.edges.forEach(e=>{
+      const a=state.nodes.get(e.source), b=state.nodes.get(e.target);
+      if(!hasGeo(a)||!hasGeo(b)) return;
+      lines.push(`    <Placemark>
+      <name>edge ${e.id}</name>
+      <styleUrl>#s-edge</styleUrl>
+      <LineString><tessellate>1</tessellate>
+        <coordinates>${Number(a.lon).toFixed(7)},${Number(a.lat).toFixed(7)},0 ${Number(b.lon).toFixed(7)},${Number(b.lat).toFixed(7)},0</coordinates>
+      </LineString>
+    </Placemark>`);
+    });
+    const c = state.geoMap ? state.geoMap.getCenter() : KOVEL;
+    const lat = typeof c.lat==='function'?c.lat():c.lat;
+    const lng = typeof c.lng==='function'?c.lng():c.lng;
+    return `<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+  <name>Kowel aligned graph</name>
+  <Style id="s-edge"><LineStyle><color>ff2060ff</color><width>3</width></LineStyle></Style>
+  <LookAt><longitude>${lng}</longitude><latitude>${lat}</latitude><range>6500</range><tilt>0</tilt></LookAt>
+  <Folder><name>landmarks (${landmarks.length})</name>
+${landmarks.join('\n')}
+  </Folder>
+  <Folder><name>intersections (${intersections.length})</name>
+${intersections.join('\n')}
+  </Folder>
+  <Folder><name>edges (${lines.length})</name>
+${lines.join('\n')}
+  </Folder>
+</Document>
+</kml>`;
+  }
+
+  function crcTable(){
+    const t=new Uint32Array(256);
+    for(let n=0;n<256;n++){
+      let c=n;
+      for(let k=0;k<8;k++) c = (c&1) ? (0xEDB88320^(c>>>1)) : (c>>>1);
+      t[n]=c>>>0;
+    }
+    return t;
+  }
+  const CRC_TABLE = crcTable();
+  function crc32(bytes){
+    let c=0^(-1);
+    for(let i=0;i<bytes.length;i++) c = CRC_TABLE[(c^bytes[i])&0xFF] ^ (c>>>8);
+    return (c^(-1))>>>0;
+  }
+  function u16(n){ return new Uint8Array([n&255,(n>>>8)&255]); }
+  function u32(n){ return new Uint8Array([n&255,(n>>>8)&255,(n>>>16)&255,(n>>>24)&255]); }
+  function concat(arrs){
+    const len=arrs.reduce((s,a)=>s+a.length,0);
+    const out=new Uint8Array(len);
+    let o=0; arrs.forEach(a=>{ out.set(a,o); o+=a.length; });
+    return out;
+  }
+  function zipStore(filename, text){
+    const name=new TextEncoder().encode(filename);
+    const data=new TextEncoder().encode(text);
+    const crc=crc32(data);
+    const local=concat([
+      u32(0x04034b50), u16(20), u16(0), u16(0), u16(0), u16(0),
+      u32(crc), u32(data.length), u32(data.length), u16(name.length), u16(0),
+      name, data
+    ]);
+    const central=concat([
+      u32(0x02014b50), u16(20), u16(20), u16(0), u16(0), u16(0), u16(0),
+      u32(crc), u32(data.length), u32(data.length), u16(name.length), u16(0),
+      u16(0), u16(0), u16(0), u32(0), u32(0),
+      name
+    ]);
+    const end=concat([
+      u32(0x06054b50), u16(0), u16(0), u16(1), u16(1),
+      u32(central.length), u32(local.length), u16(0)
+    ]);
+    return concat([local, central, end]);
+  }
+  function downloadBytes(filename, bytes, mime){
+    const blob=new Blob([bytes], {type:mime||'application/octet-stream'});
+    const url=URL.createObjectURL(blob);
+    const a=document.createElement('a');
+    a.href=url; a.download=filename;
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(()=>URL.revokeObjectURL(url),2000);
+  }
+  function inspectNearestGeo(latLng){
+    let bestId=null, bestD=1e18, bestKind='node';
+    state.nodes.forEach(n=>{
+      if(!hasGeo(n)) return;
+      const d = haversineM(latLng.lat(), latLng.lng(), n.lat, n.lon);
+      if(d<bestD){ bestD=d; bestId=n.id; bestKind='node'; }
+    });
+    state.edges.forEach(ed=>{
+      const a=state.nodes.get(ed.source), b=state.nodes.get(ed.target);
+      if(!hasGeo(a)||!hasGeo(b)) return;
+      const d = distToSegLL(latLng.lat(), latLng.lng(), a.lat, a.lon, b.lat, b.lon);
+      if(d<bestD){ bestD=d; bestId=ed.id; bestKind='edge'; }
+    });
+    if(bestId==null) return;
+    const thresh = bestKind==='node' ? 40 : 25;
+    if(bestD>thresh) return;
+    setInspected(bestKind, bestId, {pan:false});
+  }
+  function distToSegLL(lat,lon,lat1,lon1,lat2,lon2){
+    const x=lon, y=lat, ax=lon1, ay=lat1, bx=lon2, by=lat2;
+    const dx=bx-ax, dy=by-ay;
+    const len2=dx*dx+dy*dy;
+    let t=len2===0?0:((x-ax)*dx+(y-ay)*dy)/len2;
+    t=Math.max(0,Math.min(1,t));
+    return haversineM(lat, lon, ay+t*dy, ax+t*dx);
+  }
+
+  // ----- georeferenced image overlays -----
+  function utm35ToLonLat(easting, northing){
+    const a=6378137, f=1/298.257223563, k0=0.9996, e0=500000, n0=0, lon0=27*Math.PI/180;
+    const e2=f*(2-f), ep2=e2/(1-e2);
+    const x=easting-e0, y=northing-n0;
+    const m=y/k0;
+    const mu=m/(a*(1-e2/4-3*e2*e2/64-5*e2*e2*e2/256));
+    const e1=(1-Math.sqrt(1-e2))/(1+Math.sqrt(1-e2));
+    const phi1=mu+(3*e1/2-27*e1*e1*e1/32)*Math.sin(2*mu)+(21*e1*e1/16-55*e1*e1*e1*e1/32)*Math.sin(4*mu)+(151*e1*e1*e1/96)*Math.sin(6*mu);
+    const sinp=Math.sin(phi1), cosp=Math.cos(phi1), tanp=Math.tan(phi1);
+    const N=a/Math.sqrt(1-e2*sinp*sinp);
+    const T=tanp*tanp, C=ep2*cosp*cosp, R=a*(1-e2)/Math.pow(1-e2*sinp*sinp,1.5);
+    const D=x/(N*k0);
+    const lat=phi1-(N*tanp/R)*(D*D/2-(5+3*T+10*C-4*C*C-9*ep2)*D*D*D*D/24+(61+90*T+298*C+45*T*T-252*ep2-3*C*C)*Math.pow(D,6)/720);
+    const lon=lon0+(D-(1+2*T+C)*D*D*D/6+(5-2*C+28*T-3*C*C+8*ep2+24*T*T)*Math.pow(D,5)/120)/cosp;
+    return {lon:lon*180/Math.PI, lat:lat*180/Math.PI};
+  }
+  function webMercToLonLat(x,y){
+    const R=6378137;
+    return {lon:x/R*180/Math.PI, lat:Math.atan(Math.sinh(y/R))*180/Math.PI};
+  }
+  function xyToLonLat(x,y,crs){
+    if(crs===4326) return {lon:x, lat:y};
+    if(crs===3857 || crs===900913) return webMercToLonLat(x,y);
+    return utm35ToLonLat(x,y); // 32635 default for Kovel
+  }
+
+  function parseWorldFile(text){
+    const nums=text.trim().split(/\s+/).map(Number);
+    if(nums.length<6 || nums.some(n=>!isFinite(n))) return null;
+    return {A:nums[0], D:nums[1], B:nums[2], E:nums[3], C:nums[4], F:nums[5]};
+  }
+  function worldBounds(wf, w, h, crs){
+    const pix=[[0,0],[w,0],[w,h],[0,h]];
+    const ll=pix.map(([px,py])=>{
+      const x=wf.A*px+wf.B*py+wf.C;
+      const y=wf.D*px+wf.E*py+wf.F;
+      return xyToLonLat(x,y,crs);
+    });
+    const rotated=Math.abs(wf.B)>1e-8 || Math.abs(wf.D)>1e-8;
+    return {
+      north: Math.max(...ll.map(p=>p.lat)),
+      south: Math.min(...ll.map(p=>p.lat)),
+      east: Math.max(...ll.map(p=>p.lon)),
+      west: Math.min(...ll.map(p=>p.lon)),
+      rotated
+    };
+  }
+
+  function downsampleImage(img, maxDim){
+    const w=img.naturalWidth||img.width, h=img.naturalHeight||img.height;
+    const s=Math.max(w,h)/maxDim;
+    if(s<=1) return img;
+    const c=document.createElement('canvas');
+    c.width=Math.round(w/s); c.height=Math.round(h/s);
+    c.getContext('2d').drawImage(img,0,0,c.width,c.height);
+    const out=new Image();
+    out.src=c.toDataURL('image/jpeg',0.85);
+    return out;
+  }
+
+  function addGroundOverlay(name, url, bounds, opacity, opts){
+    opts = opts || {};
+    const rec={
+      id: opts.id || ++state.overlaySeq,
+      name, url, bounds,
+      opacity: opacity==null?0.55:opacity,
+      visible: opts.visible!==false,
+      overlay:null
+    };
+    if(opts.id && opts.id>state.overlaySeq) state.overlaySeq=opts.id;
+    if(state.geoMap){
+      rec.overlay=new google.maps.GroundOverlay(url, {
+        north: bounds.north, south: bounds.south, east: bounds.east, west: bounds.west
+      }, {opacity: rec.opacity, clickable:false});
+      rec.overlay.setMap(rec.visible ? state.geoMap : null);
+    }
+    state.geoOverlays.push(rec);
+    renderOverlayPanel();
+    if(bounds.rotated && !opts.silent){
+      alert(name+': this georeference has rotation. The overlay uses a north-up envelope, so it may sit slightly off. Warp to EPSG:32635 or 4326 in QGIS for a tighter fit.');
+    }
+    if(!opts.skipSave) markDirty();
+    return rec;
+  }
+
+  function attachOverlaysToMap(){
+    if(!state.geoMap) return;
+    state.geoOverlays.forEach(rec=>{
+      if(rec.overlay || !rec.url) return;
+      rec.overlay=new google.maps.GroundOverlay(rec.url, {
+        north: rec.bounds.north, south: rec.bounds.south, east: rec.bounds.east, west: rec.bounds.west
+      }, {opacity: rec.opacity, clickable:false});
+      rec.overlay.setMap(rec.visible ? state.geoMap : null);
+    });
+  }
+
+  function renderOverlayPanel(){
+    if(!state.geoOverlays.length){
+      overlayList.className='overlayEmpty';
+      overlayList.textContent='No aerials loaded. Use Add geo image (GeoTIFF, or photo + .jgw/.tfw world file).';
+      return;
+    }
+    overlayList.className='';
+    overlayList.innerHTML='';
+    state.geoOverlays.forEach(rec=>{
+      const div=document.createElement('div');
+      div.className='overlayRow';
+      div.innerHTML=`<div class="orHead">
+        <label><input type="checkbox" ${rec.visible?'checked':''}> ${escapeAttr(rec.name)}</label>
+        <button class="del" title="Remove">×</button>
+      </div>
+      <input type="range" min="0" max="100" value="${Math.round(rec.opacity*100)}">`;
+      div.querySelector('input[type=checkbox]').addEventListener('change',(e)=>{
+        rec.visible=e.target.checked;
+        if(rec.overlay) rec.overlay.setMap(rec.visible?state.geoMap:null);
+        markDirty();
+      });
+      div.querySelector('input[type=range]').addEventListener('input',(e)=>{
+        rec.opacity=Number(e.target.value)/100;
+        if(rec.overlay) rec.overlay.setOpacity(rec.opacity);
+        markDirty();
+      });
+      div.querySelector('.del').addEventListener('click',()=>{
+        if(rec.overlay) rec.overlay.setMap(null);
+        state.geoOverlays=state.geoOverlays.filter(x=>x.id!==rec.id);
+        if(rec.url && rec.url.indexOf('blob:')===0) URL.revokeObjectURL(rec.url);
+        renderOverlayPanel();
+        markDirty();
+      });
+      overlayList.appendChild(div);
+    });
+  }
+
+  async function loadGeoTiffLib(){
+    if(window.__GeoTIFF) return window.__GeoTIFF;
+    const mod = await import('https://cdn.jsdelivr.net/npm/geotiff@2.1.3/+esm');
+    window.__GeoTIFF = mod;
+    return mod;
+  }
+
+  function rasterToObjectUrl(rasters, w, h){
+    const c=document.createElement('canvas');
+    c.width=w; c.height=h;
+    const ctx2=c.getContext('2d');
+    const img=ctx2.createImageData(w,h);
+    const bands=rasters.length;
+    for(let i=0;i<w*h;i++){
+      if(bands>=3){
+        img.data[i*4]=rasters[0][i];
+        img.data[i*4+1]=rasters[1][i];
+        img.data[i*4+2]=rasters[2][i];
+      } else {
+        const v=rasters[0][i];
+        img.data[i*4]=img.data[i*4+1]=img.data[i*4+2]=v;
+      }
+      img.data[i*4+3]=255;
+    }
+    ctx2.putImageData(img,0,0);
+    return new Promise(res=>c.toBlob(b=>res(URL.createObjectURL(b)), 'image/jpeg', 0.85));
+  }
+
+  async function overlayFromGeoTiff(file){
+    const GeoTIFF = await loadGeoTiffLib();
+    const buf = await file.arrayBuffer();
+    const tiff = await GeoTIFF.fromArrayBuffer(buf);
+    const image = await tiff.getImage();
+    const bbox = image.getBoundingBox();
+    const keys = image.getGeoKeys() || {};
+    const crs = keys.ProjectedCSTypeGeoKey || keys.GeographicTypeGeoKey || 32635;
+    const sw=xyToLonLat(bbox[0], bbox[1], crs);
+    const ne=xyToLonLat(bbox[2], bbox[3], crs);
+    const bounds={south:Math.min(sw.lat,ne.lat), north:Math.max(sw.lat,ne.lat), west:Math.min(sw.lon,ne.lon), east:Math.max(sw.lon,ne.lon), rotated:false};
+    let w=image.getWidth(), h=image.getHeight();
+    const maxDim=4096;
+    const scale=Math.max(w,h)/maxDim;
+    const rw=scale>1?Math.round(w/scale):w;
+    const rh=scale>1?Math.round(h/scale):h;
+    const rasters = await image.readRasters({width:rw, height:rh, interleave:false});
+    const url = await rasterToObjectUrl(rasters, rw, rh);
+    addGroundOverlay(file.name, url, bounds, 0.55);
+  }
+
+  function loadHtmlImage(file){
+    return new Promise((resolve,reject)=>{
+      const url=URL.createObjectURL(file);
+      const img=new Image();
+      img.onload=()=>resolve({img, url});
+      img.onerror=()=>reject(new Error('Could not read '+file.name));
+      img.src=url;
+    });
+  }
+
+  geoImageInput.addEventListener('change', async (e)=>{
+    const files=[...e.target.files];
+    geoImageInput.value='';
+    if(!files.length) return;
+    if(!state.geoMap){ alert('Open Align on map and load Google Maps first.'); return; }
+    const worldExt=/\.(tfw|tifw|jgw|pgw|wld)$/i;
+    const tiffExt=/\.(tif|tiff)$/i;
+    const imgExt=/\.(jpg|jpeg|png|gif|webp|bmp)$/i;
+    const worlds={}, images=[], tiffs=[];
+    files.forEach(f=>{
+      if(worldExt.test(f.name)) worlds[f.name.replace(worldExt,'').toLowerCase()]=f;
+      else if(tiffExt.test(f.name)) tiffs.push(f);
+      else if(imgExt.test(f.name) || f.type.startsWith('image/')) images.push(f);
+      else if(/\.(tif|tiff)$/i.test(f.name)) tiffs.push(f);
+    });
+    try{
+      for(const t of tiffs) await overlayFromGeoTiff(t);
+      for(const imgFile of images){
+        const stem=imgFile.name.replace(/\.[^.]+$/,'').toLowerCase();
+        const wfFile=worlds[stem];
+        const {img, url}=await loadHtmlImage(imgFile);
+        let display=url;
+        if(Math.max(img.naturalWidth, img.naturalHeight)>4096){
+          const ds=downsampleImage(img, 4096);
+          await new Promise(r=>{ if(ds.complete) r(); else ds.onload=r; });
+          display=ds.src;
+        }
+        let bounds;
+        if(wfFile){
+          const wf=parseWorldFile(await wfFile.text());
+          if(!wf){ alert('Could not parse world file '+wfFile.name); continue; }
+          bounds=worldBounds(wf, img.naturalWidth, img.naturalHeight, 32635);
+        } else {
+          const raw=window.prompt('No world file for '+imgFile.name+'. Enter WGS84 bounds as north,south,east,west (or Cancel).','51.23,51.20,24.73,24.68');
+          if(!raw) continue;
+          const p=raw.split(/[,\s]+/).map(Number);
+          if(p.length<4 || p.some(n=>!isFinite(n))){ alert('Need four numbers: north,south,east,west'); continue; }
+          bounds={north:p[0], south:p[1], east:p[2], west:p[3], rotated:false};
+        }
+        addGroundOverlay(imgFile.name, display, bounds, 0.55);
+      }
+    } catch(err){
+      alert('Geo image failed: '+(err && err.message ? err.message : err));
+    }
+  });
+
+  exportKmzBtn.addEventListener('click', ()=>{
+    const placed=[...state.nodes.values()].filter(hasGeo);
+    if(!placed.length){ alert('No georeferenced points to export. Load a CSV with lon/lat first.'); return; }
+    const kml=buildKml();
+    const bytes=zipStore('doc.kml', kml);
+    downloadBytes('kowel-aligned.kmz', bytes, 'application/vnd.google-earth.kmz');
+  });
+
+  // ---------------- Numeral neighborhoods (from placed numbers) ----------------
+  const NUMERAL_SIGMA = 2.8;
+  const NUMERAL_EPS = 240;
+  const NUMERAL_PAD = 90;
+  const NUMERAL_MIN_R = 140;
+  const NUMERAL_MAX_R = 360;
+  const NUMERAL_WMIN = 0.15;
+  const NUMERAL_REL = 0.2;
+
+  for(let i=1;i<=69;i++){
+    const opt=document.createElement('option');
+    opt.value=String(i);
+    opt.textContent=String(i);
+    numeralSelect.appendChild(opt);
+  }
+
+  function parseNodeNumeral(n){
+    if(!n) return null;
+    const lid=String(extraField(n,'landmark_id')||'').trim();
+    let raw=lid || String(n.label||'');
+    raw=raw.replace(/^marke[rt]_/i,'');
+    raw=raw.replace(/[()?]/g,'').trim();
+    if(!/^\d{1,2}$/.test(raw)) return null;
+    const v=parseInt(raw,10);
+    return (v>=1 && v<=69) ? v : null;
+  }
+
+  function knownNumerals(){
+    const out=[];
+    state.nodes.forEach(n=>{
+      if(n.hidden) return;
+      const v=parseNodeNumeral(n);
+      if(v==null) return;
+      out.push({n:v, x:n.x, y:n.y});
+    });
+    return out;
+  }
+
+  function computeNumeralNeighborhoods(query){
+    const known=knownNumerals();
+    if(!known.length) return [];
+    const qd=Math.floor(query/10);
+    let scored=[];
+    known.forEach(p=>{
+      const d=Math.abs(p.n-query);
+      let w=Math.exp(-0.5*(d/NUMERAL_SIGMA)*(d/NUMERAL_SIGMA));
+      if(Math.floor(p.n/10)===qd) w*=1.25;
+      if(p.n===query) w*=0.6;
+      if(w>=NUMERAL_WMIN) scored.push({x:p.x, y:p.y, n:p.n, w:w});
+    });
+    if(!scored.length){
+      const tmp=known.slice().sort((a,b)=>Math.abs(a.n-query)-Math.abs(b.n-query)).slice(0,5);
+      scored=tmp.map(p=>({x:p.x, y:p.y, n:p.n, w:1/(1+Math.abs(p.n-query))}));
+    }
+    scored.sort((a,b)=>b.w-a.w);
+    const used=scored.map(()=>false);
+    const clusters=[];
+    for(let i=0;i<scored.length;i++){
+      if(used[i]) continue;
+      const members=[scored[i]];
+      used[i]=true;
+      let changed=true;
+      while(changed){
+        changed=false;
+        for(let j=0;j<scored.length;j++){
+          if(used[j]) continue;
+          const q=scored[j];
+          if(members.some(m=>Math.hypot(q.x-m.x, q.y-m.y)<=NUMERAL_EPS)){
+            members.push(q);
+            used[j]=true;
+            changed=true;
+          }
+        }
+      }
+      const tw=members.reduce((s,m)=>s+m.w,0);
+      const cx=members.reduce((s,m)=>s+m.x*m.w,0)/tw;
+      const cy=members.reduce((s,m)=>s+m.y*m.w,0)/tw;
+      const cover=Math.max.apply(null, members.map(m=>Math.hypot(m.x-cx, m.y-cy)));
+      const r=Math.min(NUMERAL_MAX_R, Math.max(NUMERAL_MIN_R, cover+NUMERAL_PAD));
+      const nums=[...new Set(members.map(m=>m.n))].sort((a,b)=>a-b);
+      clusters.push({x:cx, y:cy, r:r, w:tw, nums:nums});
+    }
+    clusters.sort((a,b)=>b.w-a.w);
+    const best=clusters.length ? clusters[0].w : 0;
+    return clusters.filter(c=>c.w>=best*NUMERAL_REL).slice(0,3);
+  }
+
+  function panToNumeralRegion(reg){
+    if(!reg) return;
+    const box=wrap.getBoundingClientRect();
+    const pad=48;
+    const fit=Math.min((box.width-pad*2)/(reg.r*2), (box.height-pad*2)/(reg.r*2));
+    state.scale=Math.max(state.minScale, Math.min(state.maxScale, fit));
+    const p=imgToScreen(reg.x, reg.y);
+    state.offsetX += box.width/2 - p.x;
+    state.offsetY += box.height/2 - p.y;
+    updateZoomLabel();
+  }
+
+  function showNumeral(id, pan){
+    if(!id){
+      state.numeralRegions=[];
+      draw();
+      return;
+    }
+    if(!state.img){
+      alert('Load a map image first.');
+      numeralSelect.value='';
+      return;
+    }
+    const query=parseInt(id,10);
+    const regions=computeNumeralNeighborhoods(query);
+    state.numeralRegions=regions;
+    if(pan && regions.length) panToNumeralRegion(regions[0]);
+    draw();
+    if(!knownNumerals().length){
+      hintText.textContent='Place a few numbered markers first (e.g. marker_61). Neighborhoods are inferred from those.';
+      return;
+    }
+    if(!regions.length){
+      hintText.textContent='No neighborhood for '+query+' yet — place nearby numbers first.';
+      return;
+    }
+    const near=[...new Set(regions.flatMap(r=>r.nums).filter(n=>n!==query))].sort((a,b)=>a-b);
+    const nhood=regions.length===1 ? '1 neighborhood' : (regions.length+' neighborhoods');
+    const via=near.length ? ' near '+near.join(', ') : '';
+    hintText.textContent='Numeral '+query+' — '+nhood+via+' (25% red).';
+  }
+
+  numeralSelect.addEventListener('change', ()=> showNumeral(numeralSelect.value, true));
+  numeralClearBtn.addEventListener('click', ()=>{
+    numeralSelect.value='';
+    state.numeralRegions=[];
+    draw();
+    hintText.textContent='Cleared numeral highlights.';
+  });
+
+  // ---------------- IndexedDB autosave ----------------
+  const IDB_NAME='kowel-digitizer';
+  const IDB_STORE='session';
+  const IDB_KEY='current';
+  let autosaveTimer=null;
+  let autosaveInFlight=false;
+  let autosaveAgain=false;
+
+  function idbOpen(){
+    return new Promise((resolve,reject)=>{
+      const req=indexedDB.open(IDB_NAME,1);
+      req.onupgradeneeded=()=>{
+        const db=req.result;
+        if(!db.objectStoreNames.contains(IDB_STORE)) db.createObjectStore(IDB_STORE);
+      };
+      req.onsuccess=()=>resolve(req.result);
+      req.onerror=()=>reject(req.error);
+    });
+  }
+  function idbPut(value){
+    return idbOpen().then(db=>new Promise((resolve,reject)=>{
+      const tx=db.transaction(IDB_STORE,'readwrite');
+      tx.objectStore(IDB_STORE).put(value, IDB_KEY);
+      tx.oncomplete=()=>{ db.close(); resolve(); };
+      tx.onerror=()=>{ db.close(); reject(tx.error); };
+    }));
+  }
+  function idbGet(){
+    return idbOpen().then(db=>new Promise((resolve,reject)=>{
+      const tx=db.transaction(IDB_STORE,'readonly');
+      const req=tx.objectStore(IDB_STORE).get(IDB_KEY);
+      req.onsuccess=()=>{ db.close(); resolve(req.result||null); };
+      req.onerror=()=>{ db.close(); reject(req.error); };
+    }));
+  }
+  function idbClear(){
+    return idbOpen().then(db=>new Promise((resolve,reject)=>{
+      const tx=db.transaction(IDB_STORE,'readwrite');
+      tx.objectStore(IDB_STORE).delete(IDB_KEY);
+      tx.oncomplete=()=>{ db.close(); resolve(); };
+      tx.onerror=()=>{ db.close(); reject(tx.error); };
+    }));
+  }
+  function urlToBlob(url){
+    if(!url) return Promise.resolve(null);
+    return fetch(url).then(r=>r.blob()).catch(()=>null);
+  }
+  function scheduleAutosave(){
+    if(autosaveTimer) clearTimeout(autosaveTimer);
+    autosaveTimer=setTimeout(()=>{ autosaveTimer=null; saveSession(); }, 700);
+  }
+  async function saveSession(){
+    if(autosaveInFlight){ autosaveAgain=true; return; }
+    autosaveInFlight=true;
+    try{
+      const overlays=[];
+      for(const rec of state.geoOverlays){
+        const blob=await urlToBlob(rec.url);
+        overlays.push({
+          id:rec.id, name:rec.name, bounds:rec.bounds,
+          opacity:rec.opacity, visible:rec.visible, blob:blob||undefined
+        });
+      }
+      const snap={
+        version:2,
+        savedAt:new Date().toISOString(),
+        imgDataUrl: state.imgDataUrl,
+        imgW: state.imgW, imgH: state.imgH,
+        nodeSeq: state.nodeSeq, edgeSeq: state.edgeSeq,
+        currentChain: state.currentChain,
+        view: { scale: state.scale, offsetX: state.offsetX, offsetY: state.offsetY },
+        nodes: [...state.nodes.values()],
+        edges: [...state.edges.values()],
+        history: state.history,
+        viewMode: state.viewMode,
+        showMap: state.showMap, showNodes: state.showNodes, showEdges: state.showEdges, showLabels: state.showLabels,
+        visEdgeKinds: state.visEdgeKinds,
+        canvasBg: state.canvasBg,
+        nodeCsvHeaders: state.nodeCsvHeaders,
+        overlaySeq: state.overlaySeq,
+        overlays,
+        layerLandmarks: layerLandmarks.checked,
+        layerIntersections: layerIntersections.checked,
+        layerEdges: layerEdges.checked,
+        layerLabels: layerLabels.checked
+      };
+      await idbPut(snap);
+      state.dirty=false;
+      dirtyIndicator.classList.add('show');
+      dirtyIndicator.textContent='● saved';
+      setTimeout(()=>{ if(!state.dirty) dirtyIndicator.classList.remove('show'); }, 1600);
+    } catch(err){
+      console.error('autosave failed', err);
+      dirtyIndicator.textContent='● save failed';
+      dirtyIndicator.classList.add('show');
+    } finally {
+      autosaveInFlight=false;
+      if(autosaveAgain){ autosaveAgain=false; scheduleAutosave(); }
+    }
+  }
+  function applyRestoredGraph(snap){
+    state.nodes = new Map((snap.nodes||[]).map(n=>[n.id,n]));
+    state.edges = new Map((snap.edges||[]).map(ed=>[ed.id,ed]));
+    state.nodeSeq = snap.nodeSeq||0;
+    state.edgeSeq = snap.edgeSeq||0;
+    state.currentChain = (snap.currentChain===undefined) ? null : snap.currentChain;
+    state.history = snap.history||[];
+    state.selectedEdges = new Set();
+    state.nodeCsvHeaders = snap.nodeCsvHeaders||null;
+    state.overlaySeq = snap.overlaySeq||0;
+    state.showMap = snap.showMap!==false;
+    state.showNodes = snap.showNodes!==false;
+    state.showEdges = snap.showEdges!==false;
+    state.showLabels = snap.showLabels!==false;
+    visMap.checked = state.showMap;
+    visNodes.checked = state.showNodes;
+    visEdges.checked = state.showEdges;
+    visLabels.checked = state.showLabels;
+    if(snap.visEdgeKinds && typeof snap.visEdgeKinds==='object'){
+      EDGE_KINDS.forEach(k=>{
+        if(typeof snap.visEdgeKinds[k]==='boolean') state.visEdgeKinds[k]=snap.visEdgeKinds[k];
+      });
+    }
+    syncEdgeKindFilterUI();
+    const bg=String(snap.canvasBg||'standard').toLowerCase();
+    state.canvasBg = (bg==='white'||bg==='grey'||bg==='gray'||bg==='black') ? (bg==='gray'?'grey':bg) : 'standard';
+    canvasBgEl.value = state.canvasBg;
+    applyCanvasBg();
+    if(typeof snap.layerLandmarks==='boolean') layerLandmarks.checked=snap.layerLandmarks;
+    if(typeof snap.layerIntersections==='boolean') layerIntersections.checked=snap.layerIntersections;
+    if(typeof snap.layerEdges==='boolean') layerEdges.checked=snap.layerEdges;
+    if(typeof snap.layerLabels==='boolean') layerLabels.checked=snap.layerLabels;
+    hideBatchBar();
+    if(snap.view && snap.imgW){
+      state.scale = snap.view.scale||1;
+      state.offsetX = snap.view.offsetX||0;
+      state.offsetY = snap.view.offsetY||0;
+      updateZoomLabel();
+    }
+    undoBtn.disabled = state.history.length===0;
+    if(state.nodes.size || state.img){
+      exportBtn.disabled=false;
+      clearBtn.disabled=false;
+    }
+    (snap.overlays||[]).forEach(o=>{
+      if(!o.blob && !o.url) return;
+      const url = o.blob ? URL.createObjectURL(o.blob) : o.url;
+      addGroundOverlay(o.name, url, o.bounds, o.opacity, {id:o.id, visible:o.visible!==false, silent:true, skipSave:true});
+    });
+  }
+  async function restoreSession(){
+    let snap;
+    try { snap = await idbGet(); }
+    catch(err){ console.warn('restore failed', err); return false; }
+    if(!snap || (!snap.imgDataUrl && !(snap.nodes&&snap.nodes.length))) return false;
+    return new Promise((resolve)=>{
+      const finish=()=>{
+        applyRestoredGraph(snap);
+        clearDirty();
+        refreshAll();
+        resizeCanvas();
+        if(snap.viewMode==='align') setViewMode('align');
+        resolve(true);
+      };
+      if(snap.imgDataUrl){
+        loadImageFromDataUrl(snap.imgDataUrl, false, finish);
+      } else {
+        finish();
+      }
+    });
+  }
+  forgetSessionBtn.addEventListener('click', ()=>{
+    if(!window.confirm('Delete the auto-saved session in this browser? The page will reload empty. Download Save project first if you need a file copy.')) return;
+    idbClear().finally(()=> location.reload());
+  });
+
+  // ---------------- init ----------------
+  syncEdgeKindFilterUI();
+  applyCanvasBg();
+  resizeCanvas();
+  refreshAll();
+  restoreSession();
+})();
+</script>
+</body>
+</html>
