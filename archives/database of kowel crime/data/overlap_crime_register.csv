@@ -1,0 +1,7 @@
+match_type,surname,crime_name,register_name,same_person,notes
+surname_only,Bokser,Bokser lcchok (Icchok),Hersz Bokser,no,Same family name; different given names
+surname_only,Gutman,Gutman Lejzor,"Aron / Idei / Szaja / Szepsel / Szmul Gutman",no,Lejzor not among registered Gutmans
+surname_only,Jakubowski,Jakubowski Michał,Eijasz Jakubowski,no,Same surname only
+surname_only,Michalski,Michalski Stanisław,ftntoni (Antoni) Michalski,no,Same surname only
+surname_only,Stepak,Stepak Chaim,Mordko Stepak,no,Same surname only
+surname_only,Worcel,Worcel Gdal,"Hersz Worcel; Tyla Worcel",no,Same surname only

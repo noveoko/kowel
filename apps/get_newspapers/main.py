@@ -38,7 +38,7 @@ class MazovianLibraryScraper:
             response = self.session.get(edition_page_url)
             response.raise_for_status()
             soup = BeautifulSoup(response.text, 'html.parser')
-            
+
             # Look for content link which typically leads to PDF
             content_link = soup.find('a', {'class': 'dlibra-icon-file'})
             if content_link:
@@ -52,7 +52,7 @@ class MazovianLibraryScraper:
         try:
             response = self.session.get(pdf_url, stream=True)
             response.raise_for_status()
-            
+
             with open(output_path, 'wb') as f:
                 for chunk in response.iter_content(chunk_size=8192):
                     if chunk:
@@ -79,14 +79,14 @@ class MazovianLibraryScraper:
         for edition in edition_links:
             filename = self.clean_filename(edition['title'])
             output_path = os.path.join(output_dir, filename)
-            
+
             if os.path.exists(output_path):
                 self.logger.info(f"Skipping {filename} - already exists")
                 continue
 
             self.logger.info(f"Processing: {edition['title']}")
             pdf_url = self.extract_pdf_url(edition['url'])
-            
+
             if pdf_url:
                 if self.download_pdf(pdf_url, output_path):
                     self.logger.info(f"Successfully downloaded: {filename}")
@@ -99,9 +99,9 @@ class MazovianLibraryScraper:
 # Example usage
 if __name__ == "__main__":
     scraper = MazovianLibraryScraper()
-    
+
     # Read the search results HTML from file
     with open('search_results.html', 'r', encoding='utf-8') as f:
         search_results_html = f.read()
-    
+
     scraper.scrape_editions(search_results_html)

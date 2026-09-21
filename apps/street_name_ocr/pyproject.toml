@@ -1,0 +1,18 @@
+[project]
+name = "street-name-ocr"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "easyocr>=1.7.0",
+    "folium>=0.14,<0.16",
+    "numpy>=1.24.0",
+    "opencv-python-headless>=4.8.0",
+    "pandas>=2.0.0",
+    "pillow>=10.0.0",
+    "rapidfuzz>=3.0.0",
+    "streamlit>=1.28.0,<1.40",
+    "streamlit-drawable-canvas==0.9.3",
+    "streamlit-folium>=0.15,<0.20",
+]

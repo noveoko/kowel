@@ -154,7 +154,7 @@ class PPAHE:
                     pbar.update(1)
 
         return enhanced
-        
+
 @dataclass
 class WindowCache:
     """Cache for window sizes and padded image data"""
@@ -173,14 +173,14 @@ class OptimizedPPAHE:
     ):
         if min_window % 2 == 0 or max_window % 2 == 0:
             raise ValueError("Window sizes must be odd numbers")
-            
+
         self.min_window = min_window
         self.max_window = max_window
         self.clip_limit = clip_limit
         self.n_bins = n_bins
         self.n_jobs = n_jobs
         self.window_cache = None
-        
+
     def _compute_local_statistics(
         self,
         image: np.ndarray,
@@ -190,12 +190,12 @@ class OptimizedPPAHE:
         # Compute gradients for entire image at once
         grad_y, grad_x = np.gradient(image)
         gradient_magnitude = np.sqrt(grad_x ** 2 + grad_y ** 2)
-        
+
         # Compute variance using vectorized operations
         local_mean = gaussian_filter(image, sigma)
         local_sqr_mean = gaussian_filter(image ** 2, sigma)
         variance = local_sqr_mean - local_mean ** 2
-        
+
         return variance, gradient_magnitude
 
     def _determine_window_sizes(
@@ -205,23 +205,23 @@ class OptimizedPPAHE:
     ) -> WindowCache:
         """Compute and cache window sizes"""
         eps = 1e-8
-        
+
         # Normalize using vectorized operations
         norm_var = (variance - variance.min()) / (variance.max() - variance.min() + eps)
         norm_grad = (gradient_magnitude - gradient_magnitude.min()) / \
                    (gradient_magnitude.max() - gradient_magnitude.min() + eps)
-        
+
         # Compute window sizes
         combined_measure = (norm_var + norm_grad) / 2
         window_range = self.max_window - self.min_window
         window_sizes = self.max_window - (combined_measure * window_range)
         window_sizes = (np.round(window_sizes) // 2 * 2 + 1).astype(np.int32)
         window_sizes = np.clip(window_sizes, self.min_window, self.max_window)
-        
+
         # Create padded image
         max_padding = self.max_window // 2
         padded_image = np.pad(image, max_padding, mode='reflect')
-        
+
         # Create cache
         return WindowCache(sizes=window_sizes, padded_image=padded_image)
 
@@ -235,38 +235,38 @@ class OptimizedPPAHE:
         """Optimized neighborhood equalization"""
         # Pre-allocate histogram array
         hist = np.zeros(256, dtype=np.int32)
-        
+
         # Compute histogram directly
         np.add.at(hist, neighborhood.ravel(), 1)
-        
+
         # Apply clip limit efficiently
         clip_height = int((neighborhood_size * clip_limit) / 256)
         excess = np.sum(np.maximum(hist - clip_height, 0))
-        
+
         if excess > 0:
             # Redistribute excess in one step
             redistribution = excess // 256
             leftover = excess % 256
-            
+
             hist = np.minimum(hist, clip_height)
             hist += redistribution
-            
+
             if leftover > 0:
                 # Distribute leftover uniformly
                 hist[:leftover] += 1
-        
+
         # Compute CDF efficiently
         cdf = hist.cumsum()
-        
+
         # Handle uniform regions
         cdf_min = cdf[0]
         cdf_max = cdf[-1]
         if cdf_max == cdf_min:
             return center_value
-        
+
         # Normalize CDF
         cdf_normalized = ((cdf - cdf_min) * 255) / (cdf_max - cdf_min)
-        
+
         # Map pixel value
         return int(cdf_normalized[center_value])
 
@@ -280,44 +280,44 @@ class OptimizedPPAHE:
         """Process a single row of the image"""
         row_result = np.zeros(image.shape[1], dtype=np.uint8)
         max_padding = self.max_window // 2
-        
+
         for x in range(image.shape[1]):
             window_size = cache.sizes[y, x]
             half_window = window_size // 2
-            
+
             # Direct slice from padded image
             y_start = y + max_padding - half_window
             y_end = y + max_padding + half_window + 1
             x_start = x + max_padding - half_window
             x_end = x + max_padding + half_window + 1
-            
+
             neighborhood = cache.padded_image[y_start:y_end, x_start:x_end]
-            
+
             row_result[x] = self._equalize_neighborhood_optimized(
                 neighborhood,
                 image[y, x],
                 self.clip_limit,
                 window_size * window_size
             )
-            
+
             if pbar:
                 pbar.update(1)
-                
+
         return row_result
 
     def enhance(self, image: np.ndarray) -> np.ndarray:
         """Enhanced image using parallel processing"""
         if image.dtype != np.uint8:
             raise ValueError("Image must be uint8")
-        
+
         # Compute statistics and cache window sizes
         variance, gradient = self._compute_local_statistics(image)
         self.window_cache = self._determine_window_sizes(variance, gradient)
-        
+
         # Initialize progress bar
         total_pixels = image.shape[0] * image.shape[1]
         pbar = tqdm(total=total_pixels, desc="Enhancing image")
-        
+
         # Process rows in parallel
         with Parallel(n_jobs=self.n_jobs) as parallel:
             enhanced_rows = parallel(
@@ -326,7 +326,7 @@ class OptimizedPPAHE:
                 )
                 for y in range(image.shape[0])
             )
-        
+
         pbar.close()
         return np.array(enhanced_rows, dtype=np.uint8)
 

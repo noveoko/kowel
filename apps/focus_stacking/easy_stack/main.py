@@ -12,7 +12,7 @@ class FocusStackGUI:
         self.root = root
         self.root.title("Focus Stack Pro")
         self.root.geometry("800x600")
-        
+
         # Preset configurations
         self.presets = {
             "Modern Digital (High Quality)": {
@@ -68,7 +68,7 @@ class FocusStackGUI:
         }
 
         self.create_widgets()
-        
+
     def create_widgets(self):
         # Create main containers
         self.left_frame = ttk.Frame(self.root, padding="10")
@@ -109,11 +109,11 @@ class FocusStackGUI:
         # Advanced options
         self.advanced_frame = ttk.LabelFrame(self.left_frame, text="Advanced Options", padding="5")
         self.advanced_frame.pack(fill="x", pady=10)
-        
+
         # CPU/GPU selection
         self.gpu_var = tk.BooleanVar(value=True)
         ttk.Checkbutton(self.advanced_frame, text="Use GPU Acceleration", variable=self.gpu_var).pack(anchor="w")
-        
+
         # Threading selection
         ttk.Label(self.advanced_frame, text="CPU Threads:").pack(anchor="w")
         self.thread_var = tk.StringVar(value="auto")
@@ -164,7 +164,7 @@ class FocusStackGUI:
     def load_preview(self):
         source_dir = self.source_entry.get()
         if os.path.exists(source_dir):
-            image_files = [f for f in os.listdir(source_dir) 
+            image_files = [f for f in os.listdir(source_dir)
                          if f.lower().endswith(('.png', '.jpg', '.jpeg', '.tiff', '.bmp'))]
             if image_files:
                 first_image = os.path.join(source_dir, image_files[0])
@@ -217,16 +217,16 @@ class FocusStackGUI:
             # Modify parameters based on advanced options
             if not self.gpu_var.get():
                 align_params = align_params.replace("--gpu", "")
-            
+
             thread_count = self.thread_var.get()
             if thread_count != "auto":
                 align_params += f" --threads={thread_count}"
                 enfuse_params += f" --threads={thread_count}"
 
             # Get list of image files
-            image_files = [f for f in os.listdir(source_dir) 
+            image_files = [f for f in os.listdir(source_dir)
                          if f.lower().endswith(('.png', '.jpg', '.jpeg', '.tiff', '.bmp'))]
-            
+
             if not image_files:
                 raise Exception("No compatible image files found in source directory")
 

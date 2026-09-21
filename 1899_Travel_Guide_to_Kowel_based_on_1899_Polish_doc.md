@@ -31,4 +31,3 @@ Geographically, the Kowel district is part of Polesia, characterized by its low-
 ## Conclusion
 
 Kowel, with its rich history, serene landscapes, and vibrant culture, is a must-visit destination for those looking to explore the hidden treasures of the Volhynian region.
-

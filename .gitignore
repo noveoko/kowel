@@ -1,0 +1,116 @@
+# Bytecode and packaging
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+.eggs/
+dist/
+build/
+wheels/
+*.whl
+MANIFEST
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Virtualenvs and local interpreters
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# Secrets and credentials — never commit these
+.env
+.env.*
+.envrc
+!.env.example
+!.env.sample
+.streamlit/secrets.toml
+*.pem
+*.p12
+*.pfx
+*.key
+id_rsa
+id_rsa.pub
+id_dsa
+id_dsa.pub
+id_ecdsa
+id_ed25519
+*.kdbx
+.htpasswd
+.netrc
+.npmrc
+.pypirc
+credentials.json
+service-account*.json
+secrets.toml
+secrets.yaml
+secrets.yml
+
+# Test / type / lint caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+*.cover
+.cache/
+.dmypy.json
+dmypy.json
+
+# Jupyter
+.ipynb_checkpoints/
+profile_default/
+ipython_config.py
+
+# OS
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+*.lnk
+
+# Editors (keep tracked app settings under apps/focus_stacking/.vscode)
+.idea/
+*.swp
+*.swo
+*~
+*.orig
+*.rej
+
+# Logs and local dumps
+*.log
+*.tmp
+*.temp
+
+# uv / pip
+.uv/
+.python-version.bak
+
+# Blender autosaves
+*.blend1
+*.blend2
+
+# Local photogrammetry / ML artifacts
+*.sqlite3
+*.db
+user_network/
+.EasyOCR/
+
+# Local app caches (street-name OCR map tiles, etc.)
+.cache/
+
+# Local Grok MCP copies
+mcps/
+
+# Tooling
+.pre-commit-cache/

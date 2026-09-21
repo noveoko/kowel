@@ -22,14 +22,14 @@ class TestPhotoStacker(unittest.TestCase):
         self.input_dir.mkdir()
         self.output_dir = Path(self.test_dir) / "output"
         self.output_dir.mkdir()
-        
+
         # Create test images
         self.test_images = self.create_test_images()
-        
+
         # Initialize app in testing mode
         self.root = MockTk()
         self.app = PhotoStackerGUI(self.root, testing_mode=True)
-        
+
         # Mock process runner to avoid actual subprocess calls
         self.app.run_process = self.mock_run_process
 
@@ -39,10 +39,10 @@ class TestPhotoStacker(unittest.TestCase):
         for i in range(count):
             img = Image.new('RGB', size, color='white')
             draw = ImageDraw.Draw(img)
-            
+
             # Draw some shapes at different "depths"
             center_y = size[1] // 2
-            
+
             # Draw rectangles at different positions to simulate focus
             for j in range(5):
                 x = j * (size[0] // 5)
@@ -53,24 +53,24 @@ class TestPhotoStacker(unittest.TestCase):
                 else:
                     color = 'gray'   # Blurry
                     width = 1
-                
+
                 # Draw rectangle
                 draw.rectangle(
                     [x, center_y - 50, x + 80, center_y + 50],
                     outline=color,
                     width=width
                 )
-                
+
                 # Add some text to help verify focus
                 draw.text((x + 10, center_y), f"Focus {j}", fill=color)
-            
+
             # Save image
             path = self.input_dir / f"test_image_{i:02d}.jpg"
             img.save(path, quality=95, optimize=True)
             images.append(path)
-        
+
         return images
-    
+
     def mock_run_process(self, cmd, desc=None) -> bool:
         """Mock process runner that creates dummy output files"""
         # Get the output path from the command
@@ -80,14 +80,14 @@ class TestPhotoStacker(unittest.TestCase):
                 if str(arg) == '--output' and i + 1 < len(cmd):
                     output_path = cmd[i + 1]
                     break
-        
+
         if output_path:
             # Ensure the output directory exists
             Path(output_path).parent.mkdir(exist_ok=True)
             # Create a dummy output file
             with open(output_path, 'wb') as f:
                 f.write(b'test output')
-        
+
         # Always return success in test mode
         return True
 

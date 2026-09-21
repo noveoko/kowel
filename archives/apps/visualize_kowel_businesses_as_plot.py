@@ -36,20 +36,20 @@ street_offsets = defaultdict(int)
 for idx, row in df.iterrows():
     street = row['Street']
     number = row['Number']
-    
+
     # Calculate position
     x = number
     y = street_positions[street]
-    
+
     # Add small random offset to y to prevent perfect alignment
     y_offset = street_offsets[street] * 0.2
     street_offsets[street] += 1
-    
+
     # Plot point
     plt.scatter(x, y + y_offset, s=100, alpha=0.6, c='darkblue')
-    
+
     # Add business name label
-    plt.annotate(row['Business Name'], 
+    plt.annotate(row['Business Name'],
                 (x, y + y_offset),
                 xytext=(5, 5),
                 textcoords='offset points',

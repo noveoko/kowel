@@ -67,6 +67,7 @@ This work-in-progress Google Earth file includes:
 
 | Resource | Description |
 | --- | --- |
+| [Street truth table](archives/normalized/kowel_streets_truth_table.csv) | All attested street names with `year_ranges`, `exists_today`, rename links · [notes](archives/normalized/kowel_streets_truth_table.md) |
 | [Kowel street names (1929)](street_names.txt) | List of 1929 Kowel street names |
 | [Cross-referenced street names (1929)](referenced_streets.txt) | Street names cross-referenced across sources |
 | [Doctors resident in Kowel (1920)](doctors_resident_in_kowel.csv) | List of doctors · [Source](https://bc.wbp.lublin.pl/dlibra/publication/edition/17315) |
@@ -98,6 +99,7 @@ A full list of structured data and supporting documents in this repository:
 - [Kowel residents (1938)](kowel_residents_1938.csv)
 - [Kowel voting districts (1938)](kowel_voting_districts.csv)
 - [Kowel streets — 1929 phone book (Polish streets)](Kowel%20Streets%201929%20Phone%20Book%20-%20Polish%20Streets.csv)
+- [Street truth table](archives/normalized/kowel_streets_truth_table.csv) · [truth table notes](archives/normalized/kowel_streets_truth_table.md)
 - [Streets (CSV)](streets.csv) · [Street names](street_names.txt) · [Referenced streets](referenced_streets.txt)
 - [Streets by business-address count](streets_by_business_address_count.csv)
 - [Building coordinates](building_coordinates.txt)

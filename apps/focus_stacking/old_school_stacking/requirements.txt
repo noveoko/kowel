@@ -1,4 +1,4 @@
-ultralytics
-opencv-python
 numpy
+opencv-python
 tifffile
+ultralytics

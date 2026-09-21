@@ -750,7 +750,7 @@
 - Cynamon S.: Warszawska 182
 - Golpern L.: Warszawska 164
 - Cowalski S.: Warszawska 203
-- Swiniueh G.: Warszawska ?? 
+- Swiniueh G.: Warszawska ??
 - Sztojnworcel F. B.: Warszawska 14
 - Sztorn H.: Warszawska 176
 - Tenebojna F.: Warszawska 57
@@ -948,7 +948,7 @@ iotr: Kościelna 1
 - Bronsztojn D.: Krótka ??
 - Bryk A.: Sienkiewicz 26
 - Chałtori S.: Budyszczan 3
-- Faja J.: ?? 
+- Faja J.: ??
 - Klojnor Sz.: Warszawska 45
 - Linzon D.: Warszawska 105
 - Linzon P.: Wlodzimierska ??

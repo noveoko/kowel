@@ -48,16 +48,16 @@ class PhotoStackerGUI:
             # Get the directory where the script is located
             current_dir = os.path.dirname(os.path.abspath(__file__))
             logo_path = os.path.join(current_dir, 'assets', 'logo.png')
-            
+
             # Load and resize logo
             logo_img = Image.open(logo_path)
             # Adjust size as needed
             logo_size = (100, 100)  # Example size
             logo_img = logo_img.resize(logo_size, Image.Resampling.LANCZOS)
-            
+
             # Convert to PhotoImage
             self.logo_photo = ImageTk.PhotoImage(logo_img)
-            
+
             # Create label for logo
             self.logo_label = tk.Label(self.root, image=self.logo_photo)
             self.logo_label.image = self.logo_photo  # Keep a reference!
@@ -71,14 +71,14 @@ class PhotoStackerGUI:
         try:
             self.process_queue.put(("log", f"Running {desc}..."))
             self.process_queue.put(("log", f"Command: {' '.join(str(x) for x in cmd)}"))
-            
+
             self.current_process = subprocess.Popen(
                 [str(x) for x in cmd],
                 stdout=subprocess.PIPE,
                 stderr=subprocess.PIPE,
                 universal_newlines=True
             )
-            
+
             while True:
                 output = self.current_process.stdout.readline() if self.current_process.stdout else ''
                 if output == '' and self.current_process.poll() is not None:
@@ -92,18 +92,18 @@ class PhotoStackerGUI:
                             self.process_queue.put(("progress", progress))
                         except:
                             pass
-            
+
             rc = self.current_process.poll()
             if rc != 0:
                 error = self.current_process.stderr.read() if self.current_process.stderr else ''
                 raise subprocess.CalledProcessError(rc, cmd, error)
-                
+
             return True
-            
+
         except subprocess.CalledProcessError as e:
             self.process_queue.put(("log", f"Error: {e.stderr}"))
             raise
-            
+
         except Exception as e:
             self.process_queue.put(("log", f"Error: {str(e)}"))
             raise
@@ -127,7 +127,7 @@ class PhotoStackerGUI:
         if directory:
             path = Path(directory)
             files = [
-                f for f in path.glob("*") 
+                f for f in path.glob("*")
                 if f.suffix.lower() in ('.jpg', '.jpeg', '.png', '.tif', '.tiff')
             ]
             self.input_files.extend(str(f) for f in files)
@@ -158,13 +158,13 @@ class PhotoStackerGUI:
     def update_file_list(self) -> None:
         """Update file list display"""
         self.file_list.delete(*self.file_list.get_children())
-        
+
         for file in self.input_files:
             try:
                 size = os.path.getsize(file)
                 with Image.open(file) as img:
                     dimensions = f"{img.width}x{img.height}"
-                    
+
                 self.file_list.insert(
                     "", "end",
                     text=os.path.basename(file),
@@ -195,7 +195,7 @@ class PhotoStackerGUI:
         """Analyze images and update UI with optimization info"""
         total_pixels = 0
         max_pixels = 0
-        
+
         try:
             for file in self.input_files:
                 with Image.open(file) as img:
@@ -205,7 +205,7 @@ class PhotoStackerGUI:
         except Exception as e:
             self.log(f"Error analyzing images: {str(e)}")
             return
-        
+
         self.total_pixels = total_pixels
         self.update_start_button()
 
@@ -214,7 +214,7 @@ class PhotoStackerGUI:
         if not self.input_files:
             self.start_button.configure(text="Start Processing")
             return
-            
+
         if self.get_var("speed_mode"):
             reduction = self.calculate_reduction()
             if reduction > 1:
@@ -230,10 +230,10 @@ class PhotoStackerGUI:
         """Calculate approximate speed improvement"""
         if not self.total_pixels:
             return 1
-            
+
         normal_time = self.total_pixels / 1_000_000  # Rough estimate
         optimized_time = min(self.total_pixels, self.MAX_TOTAL_PIXELS) / 1_000_000
-        
+
         reduction = normal_time / optimized_time
         return math.ceil(reduction)
 
@@ -242,11 +242,11 @@ class PhotoStackerGUI:
         if not self.input_files:
             messagebox.showerror("Error", "Please add input images!")
             return
-            
+
         if not self.get_var("output_file"):
             messagebox.showerror("Error", "Please select output file!")
             return
-            
+
         # Start processing in a separate thread
         self.processing_thread = threading.Thread(target=self.process_images)
         self.processing_thread.start()
@@ -283,7 +283,7 @@ class PhotoStackerGUI:
         """Create GUI widgets"""
         if hasattr(self, 'logo_label') and self.logo_label:
             self.logo_label.pack(side="top", anchor="nw", padx=10, pady=5)
-            
+
         # Input file selection
         input_frame = ttk.LabelFrame(self.root, text="Input Images", padding=10)
         input_frame.pack(fill="x", padx=10, pady=5)
@@ -625,10 +625,10 @@ class PhotoStackerGUI:
         """Main processing function with speed optimizations"""
         if not self.input_files:
             raise ValueError("No input files selected")
-            
+
         if not self.get_var("output_file"):
             raise ValueError("No output file specified")
-        
+
         try:
             with tempfile.TemporaryDirectory() as temp_dir:
                 temp_path = Path(temp_dir)
@@ -636,7 +636,7 @@ class PhotoStackerGUI:
                 aligned_dir = temp_path / "aligned"
                 optimized_dir.mkdir()
                 aligned_dir.mkdir()
-                
+
                 # For testing mode, just create the output file
                 if self.testing_mode:
                     output_path = self.get_var("output_file")
@@ -644,7 +644,7 @@ class PhotoStackerGUI:
                     with open(output_path, 'wb') as f:
                         f.write(b'test output')
                     return
-                
+
                 # Filter files based on frame skip
                 frame_skip = self.get_var("frame_skip")
                 if frame_skip > 1:
@@ -659,12 +659,12 @@ class PhotoStackerGUI:
                         )
                 else:
                     used_files = self.input_files
-                
+
                 # Step 1: Align images with optimized parameters
                 if not self.testing_mode:
                     self.process_queue.put(("status", "Aligning images..."))
                     self.process_queue.put(("progress", 20))
-                
+
                 align_cmd = [
                     self.align_tool,
                     "-a",
@@ -672,7 +672,7 @@ class PhotoStackerGUI:
                     "-C",  # auto crop
                     "--gpu",  # use GPU if available
                 ]
-                
+
                 # Add speed mode parameters
                 speed_mode = self.get_var("speed_mode")  # Use get_var instead of direct access
                 if speed_mode:
@@ -681,23 +681,23 @@ class PhotoStackerGUI:
                         "-c", "8",  # Reduce control points
                         "-t", "2",  # Reduce detection threshold
                     ])
-                
+
                 align_cmd.extend(str(f) for f in used_files)
-                
+
                 if not self.testing_mode:
                     self.run_process(align_cmd, "image alignment")
-                    
+
                     # Find aligned images
                     aligned_files = sorted(aligned_dir.glob("aligned_*.tif"))
                     if not aligned_files:
                         raise Exception("No aligned images found!")
-                    
+
                     # Step 2: Focus stack
                     self.process_queue.put(("status", "Focus stacking..."))
                     self.process_queue.put(("progress", 60))
-                    
+
                     stack_cmd = [self.enfuse_tool, "--output", self.get_var("output_file")]
-                    
+
                     if speed_mode:
                         stack_cmd.extend([
                             "--exposure-weight=0",
@@ -717,10 +717,10 @@ class PhotoStackerGUI:
                             "--contrast-edge-scale=0.3",
                             "--hard-mask",
                         ])
-                    
+
                     stack_cmd.extend(str(f) for f in aligned_files)
                     self.run_process(stack_cmd, "focus stacking")
-                
+
         except Exception as e:
             if self.testing_mode:
                 raise

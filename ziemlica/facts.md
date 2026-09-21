@@ -55,10 +55,10 @@
 
 [source](http://ziemianie.pamiec.pl/pl/majatki/wo.html)
 
-* Górska Józefa	
+* Górska Józefa
 
 * Górski Stanisław
- 
+
 ## Sources
 
 [Metryki Wolyn](https://wolyn-metryki.pl/Wolyn/)

@@ -1,0 +1,11 @@
+easyocr>=1.7.0
+folium>=0.14,<0.16
+numpy>=1.24.0
+opencv-python-headless>=4.8.0
+pandas>=2.0.0
+Pillow>=10.0.0
+rapidfuzz>=3.0.0
+# Pin Streamlit + canvas: newer Streamlit (1.40+) breaks streamlit-drawable-canvas 0.9.3 asset loading.
+streamlit>=1.28.0,<1.40
+streamlit-drawable-canvas==0.9.3
+streamlit-folium>=0.15,<0.20

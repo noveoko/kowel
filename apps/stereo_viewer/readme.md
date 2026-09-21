@@ -90,7 +90,7 @@ python stereo_image_viewer.py
    │          │               │          │
    ╰──────────╯                ╲────────╱
    ```
-   
+
    Fix using:
    - Lightroom: Lens Corrections > Manual > Distortion slider
    - GIMP: Filters > Distorts > Lens Distortion
@@ -104,7 +104,7 @@ python stereo_image_viewer.py
    │      │         │      │
    ╲──────╱         └──────┘
    ```
-   
+
    Fix using:
    - Perspective correction tools
    - Ensure vertical lines are parallel
@@ -117,7 +117,7 @@ python stereo_image_viewer.py
    │        │  →    │        │
    └────────╲       └────────┘
    ```
-   
+
    Fix by:
    - Using horizon line as reference
    - Rotating images to align

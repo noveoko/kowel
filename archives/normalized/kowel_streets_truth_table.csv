@@ -1,0 +1,214 @@
+street_name,year_ranges,exists_today,same_as,notes,sources
+1-go Maja,1929;1938,y,corridor:1maja,,street_names_txt;streets_csv;voting_1938
+19 Stycznia,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv
+27 Dywizji Piechoty,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+3 Maja,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,directory_1929;normalized_directory;residents_1938;street_names_txt;streets_csv;voting_1938
+50 P.P. Strzel. Kres.,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Apteczna,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,directory_1929;directory_1929_counts;street_names_txt;streets_csv;voting_1938
+Artillery Street (1917),1917,n,,Occupation name; occupation_1917_unmapped,grain_1917
+Badghaw Street (1917),1917,n,,Occupation name; OCR uncertain; occupation_1917_unmapped,grain_1917
+Bath Street (1917),1917,y,corridor:kapielowa,"→ Kąpielowa; exists_today refers to physical corridor, not occupation name",grain_1917
+Bavaria Street (1917),1917,n,,Occupation name; occupation_1917_unmapped,grain_1917
+Bezimienna,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,directory_1929_counts;normalized_directory;residents_1938;street_names_txt;streets_csv;voting_1938
+Bielińska,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Brester Street (1917),1917,y,corridor:brzeska,"→ Brzeska; exists_today refers to physical corridor, not occupation name",grain_1917
+Bridge Street (1917),1917,n,,Mapping uncertain; occupation_1917_unmapped,grain_1917
+Broad Street (1917),1917,y,corridor:szeroka,"→ Szeroka; exists_today refers to physical corridor, not occupation name",grain_1917
+Brzeska,1929;1938,y,corridor:brzeska,,directory_1929;directory_1929_counts;normalized_directory;residents_1938;street_names_txt;streets_csv
+Brzozowa,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Budowlana,1929;1938,y,corridor:budowlana,,normalized_directory;residents_1938;street_names_txt;streets_csv;voting_1938
+Budyszczańska,1929;1938,y,corridor:budyszczanska,,directory_1929_counts;street_names_txt;streets_csv;voting_1938
+Canal Street (1917),1917,n,,Mapping uncertain; occupation_1917_unmapped,grain_1917
+Cerkiewna,1929;1938,y,corridor:cerkiewna,,street_names_txt;streets_csv;voting_1938
+Chmielna,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Church Street (1917),1917,y,corridor:koscielna,"→ likely Kościelna; exists_today refers to physical corridor, not occupation name",grain_1917
+Ciasna,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Cicha,1929;1938,y,corridor:cicha,,street_names_txt;streets_csv;voting_1938
+Cmentarna,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Command Street (1917),1917,n,,Occupation name; occupation_1917_unmapped,grain_1917
+Cross Street (1917),1917,n,,Mapping uncertain; occupation_1917_unmapped,grain_1917
+Cyrkowa,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,directory_1929;directory_1929_counts;normalized_directory;residents_1938;street_names_txt;streets_csv;voting_1938
+Dąbrowskiego,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Daszyńskiego,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Dingerflain / Wallia (1917),1917,y,corridor:wola,"Possibly Wola; exists_today refers to physical corridor, not occupation name",grain_1917
+Długa,1929;1938,y,corridor:dluga,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Duża Gonczarna,1929;1938,y,corridor:gonczarna,Listed as Dużo Gonczarna in some 1938 sources,street_names_txt;streets_csv;voting_1938
+Dworzec Kolejowy,1929;1938,y,corridor:kolejowa,,normalized_directory;residents_1938;street_names_txt;streets_csv
+Dzika,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,directory_1929_counts;street_names_txt;streets_csv;voting_1938
+Fabritchna Street,1929,y,corridor:fabryczna,Yiddish form of Fabryczna,yizkor_buildings
+Fabryczna,1929;1938,y,corridor:fabryczna,,directory_1929;directory_1929_counts;normalized_directory;residents_1938;street_names_txt;streets_csv;voting_1938
+Factory Street (1917),1917,y,corridor:fabryczna,"→ Fabryczna; exists_today refers to physical corridor, not occupation name",grain_1917
+Filarecka,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Fire Street (1917),1917,y,corridor:strazacka,"→ Strażacka; exists_today refers to physical corridor, not occupation name",grain_1917
+Franz Josef Street (1917),1917,n,,Occupation name; occupation_1917_unmapped,grain_1917
+Friedrich Wilhelm Street (1917),1917,n,,Occupation name; occupation_1917_unmapped,grain_1917
+Garden Street (1917),1917,y,corridor:ogrodowa,"→ Ogrodowa; exists_today refers to physical corridor, not occupation name",grain_1917
+Garka Street (1917),1917,y,corridor:gorka,"→ Górka; exists_today refers to physical corridor, not occupation name",grain_1917
+Gęsia,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Gibalskiego,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Górka,1929;1938,y,corridor:gorka,corridor presumed from continuous urban fabric; no direct OSM name match,directory_1929;directory_1929_counts;street_names_txt;streets_csv
+Górka Tranzyt Lubelski i Brzeski,1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,voting_1938
+Gospodarcza,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Gymnasium Street (1917),1917,y,corridor:szkolna,"Near schools / Szkolna; exists_today refers to physical corridor, not occupation name",grain_1917
+Hagwer Street (1917),1917,n,,Occupation name; OCR uncertain; occupation_1917_unmapped,grain_1917
+Hallera,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv
+Halter Street (1917),1917,n,,Occupation name; occupation_1917_unmapped,grain_1917
+Handlowa,1929;1938,y,corridor:handlowa,,directory_1929;directory_1929_counts;street_names_txt;streets_csv;voting_1938
+Hantsharne Street (1917),1917,y,corridor:gonczarna,"→ Gonczarna; exists_today refers to physical corridor, not occupation name",grain_1917
+Holm Street (1917),1917,n,,Chełm direction; mapping uncertain; occupation_1917_unmapped,grain_1917
+Hołówki,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Hoża,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Infantry Street (1917),1917,n,,Occupation name; occupation_1917_unmapped,grain_1917
+Jasna,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Jaworowa,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,directory_1929_counts;street_names_txt;streets_csv;voting_1938
+Jewish Street (1917),1917,n,,Jewish quarter; mapping uncertain; occupation_1917_unmapped,grain_1917
+Judge Street (1917),1917,n,,Occupation name; occupation_1917_unmapped,grain_1917
+Jurist Street (1917),1917,n,,Occupation name; occupation_1917_unmapped,grain_1917
+Kaiser Street (1917),1917,y,corridor:warszawska_lutska,"Occupation-era name; likely Warszawska/Łucka axis; exists_today refers to physical corridor, not occupation name",grain_1917
+Kamarawer Street (1917),1917,y,corridor:komorowska,"→ Komorowska; exists_today refers to physical corridor, not occupation name",grain_1917
+Kąpielowa,1929;1938,y,corridor:kapielowa,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Karl Street (1917),1917,n,,Occupation name; occupation_1917_unmapped,grain_1917
+King Ferdinand Street (1917),1917,n,,Occupation name; occupation_1917_unmapped,grain_1917
+Kolejowa,1929;1938,y,corridor:kolejowa,,directory_1929;directory_1929_counts;normalized_directory;residents_1938;street_names_txt;streets_csv;voting_1938
+Kołodnicka,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,directory_1929;directory_1929_counts;normalized_directory;residents_1938;street_names_txt;streets_csv;voting_1938
+Komorowska,1929;1938,y,corridor:komorowska,corridor presumed from continuous urban fabric; no direct OSM name match,directory_1929;directory_1929_counts;street_names_txt;streets_csv;voting_1938
+Kościelna,1929;1938,y,corridor:koscielna,,directory_1929;directory_1929_counts;normalized_directory;residents_1938;street_names_txt;streets_csv;voting_1938
+Kościuszki,1929;1938,y,corridor:kosciuszki,corridor presumed from continuous urban fabric; no direct OSM name match,directory_1929;directory_1929_counts;normalized_directory;residents_1938;street_names_txt;streets_csv;voting_1938
+Koszykowa,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Kowalska,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,directory_1929;street_names_txt;streets_csv;voting_1938
+Kowel II (1917),1917,n,,"District/area label, not a street; occupation_1917_unmapped",grain_1917
+Krakowska,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Kresowa,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Królowej Bony,1920;1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,directory_1929;doctors_1920;normalized_directory;residents_1938;street_names_txt;streets_csv;voting_1938
+Krótka,1929;1938,y,corridor:krotka,corridor presumed from continuous urban fabric; no direct OSM name match,directory_1929;directory_1929_counts;street_names_txt;streets_csv;voting_1938
+Krucza,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Krzywa,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,directory_1929;directory_1929_counts;street_names_txt;streets_csv;voting_1938
+ks. Bandurskiego,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+ks. Sznarbachowskiego,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Landwehr Canal Street (1917),1917,n,,Occupation military name; occupation_1917_unmapped,grain_1917
+Landwehr Street (1917),1917,n,,Occupation military name; occupation_1917_unmapped,grain_1917
+Landwehr-Canal Street (1917),1917,n,,Occupation military name; occupation_1917_unmapped,grain_1917
+Legionów,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,directory_1929;street_names_txt;streets_csv;voting_1938
+Limanowskiego,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Lisa Kuli,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Listopadowa,1929;1938,y,corridor:listopadowa,corridor presumed from continuous urban fabric; no direct OSM name match,directory_1929;directory_1929_counts;normalized_directory;residents_1938;street_names_txt;streets_csv;voting_1938
+Loizker Street (1917),1917,y,corridor:warszawska_lutska,"→ Łucka / Warszawska; exists_today refers to physical corridor, not occupation name",grain_1917
+Lublin Street (1917),1917,y,corridor:lubliniecka,"→ Lubliniecka; exists_today refers to physical corridor, not occupation name",grain_1917
+Lubliniecka,1929;1938,y,corridor:lubliniecka,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Łucka,1919;1920;1929;1938,y,corridor:warszawska_lutska,Renamed ~1919 to Warszawska (street_names.txt); still appears in some 1929–1938 listings,directory_1929;directory_1929_counts;doctors_1920;normalized_directory;residents_1938;street_names_txt;streets_csv
+Ludomir Street,1929,y,corridor:wlodzimierska,Yiddish form related to Włodzimierska / Ludmir,yizkor_buildings
+Luitpold Street (1917),1917,n,,Occupation name; occupation_1917_unmapped,grain_1917
+Lutske Street,1929,y,corridor:warszawska_lutska,Yiddish/Hebrew form of Łucka,yizkor_buildings
+al. M arszałka Piłsudskiego,1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,voting_1938
+Maciejowska,1929;1938,y,corridor:maciejowska,corridor presumed from continuous urban fabric; no direct OSM name match,directory_1929;directory_1929_counts;normalized_directory;residents_1938;street_names_txt;streets_csv;voting_1938
+Magazine Street (1917),1917,n,,Occupation name; occupation_1917_unmapped,grain_1917
+Magistracka,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,directory_1929_counts;normalized_directory;residents_1938;street_names_txt;streets_csv;voting_1938
+Mała Gonczarna,1929;1938,y,corridor:gonczarna,Listed as Mało Gonczarna in some 1938 sources,street_names_txt;streets_csv;voting_1938
+Market Street (1917),1917,y,corridor:rynek,"→ Rynek area; exists_today refers to physical corridor, not occupation name",grain_1917
+al. Marszałka Piłsudskiego,1929;1938,y,corridor:pilsudskiego,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Marszałka Śmigłego Rydza,1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,voting_1938
+Matseyev Street,1929,y,,Yiddish form (Matseyever); corridor presumed from continuous urban fabric; no direct OSM name match,yizkor_buildings
+Memorial Street (1917),1917,y,corridor:pomnikowa,"→ Pomnikowa / Policyjna; exists_today refers to physical corridor, not occupation name",grain_1917
+Mickiewicza,1920;1929;1938,y,corridor:mickiewicza,,directory_1929;directory_1929_counts;doctors_1920;normalized_directory;residents_1938;street_names_txt;streets_csv;voting_1938
+Mieszczańska,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,directory_1929;directory_1929_counts;street_names_txt;streets_csv;voting_1938
+Mijanka - Jachów,1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,voting_1938
+Mijanka-Jachów,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv
+Miła,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Miller Street (1917),1917,y,corridor:mlynarska,"→ Młynarska; exists_today refers to physical corridor, not occupation name",grain_1917
+Miodowa,1929;1938,y,corridor:miodowa,,street_names_txt;streets_csv;voting_1938
+Młynarska,1929;1938,y,corridor:mlynarska,corridor presumed from continuous urban fabric; no direct OSM name match,normalized_directory;residents_1938;street_names_txt;streets_csv
+Mokra,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,directory_1929;street_names_txt;streets_csv;voting_1938
+Monopol Street (1917),1917,y,corridor:monopolowa,"→ Monopolowa; exists_today refers to physical corridor, not occupation name",grain_1917
+Monopolowa,1929;1938,y,corridor:monopolowa,corridor presumed from continuous urban fabric; no direct OSM name match,directory_1929;directory_1929_counts;normalized_directory;residents_1938;street_names_txt;streets_csv;voting_1938
+Mościckiego,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Myśliwska,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Nadbrzeżna,1929;1938,y,corridor:nadbrzezna,,street_names_txt;streets_csv;voting_1938
+Narożna,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Nasypowa,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Niecała,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Nikolayev Street (1917),1917,n,,Occupation / Russian-era name; occupation_1917_unmapped,grain_1917
+Nowa,1929;1938,y,corridor:nowa,,normalized_directory;residents_1938;street_names_txt;streets_csv
+Nowo-Kolejowa,1920;1938,y,corridor:kolejowa,1920 doctors list; New Railway Street; related to Kolejowa corridor,doctors_1920;normalized_directory
+Nowowiejska,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Nowy Świat,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Obwodowa i Okrzei,1929;1938,y,corridor:obwodowa,Combined listing in streets.csv; also appears split as Obwodowa / Okrzei,street_names_txt;streets_csv;voting_1938
+od Bezimiennej i Limanowskiego,1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,voting_1938
+Ogrodowa,1929;1938,y,corridor:ogrodowa,,directory_1929;street_names_txt;streets_csv;voting_1938
+Old Vakzalna Street,1929,y,corridor:kolejowa,Old station street,places_described
+Parkowa,1929;1938,y,corridor:parkowa,,street_names_txt;streets_csv;voting_1938
+Pasieczna,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Pereca,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Piaskowa,1929;1938,y,corridor:piaskowa,,street_names_txt;streets_csv;voting_1938
+Piłsudskiego,1929;1938,y,corridor:pilsudskiego,corridor presumed from continuous urban fabric; no direct OSM name match,directory_1929;normalized_directory;residents_1938;street_names_txt;streets_csv
+Podjaworska,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Pograniczna,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Poleska,1929;1938,y,corridor:poleska,,street_names_txt;streets_csv;voting_1938
+Policyjna,1920;1938,y,corridor:pomnikowa,Earlier name of Pomnikowa (Jaworowski: Policyjna 1 → Pomnikowa 15); corridor presumed from continuous urban fabric; no direct OSM name match,doctors_1920;normalized_directory
+Polna,1929;1938,y,corridor:polna,,street_names_txt;streets_csv;voting_1938
+Północna,1929;1938,y,corridor:polnocna,,street_names_txt;streets_csv;voting_1938
+Południowa,1929;1938,y,corridor:poludniowa,,street_names_txt;streets_csv;voting_1938
+Pomnikowa,1929;1938,y,corridor:pomnikowa,Formerly Policyjna; corridor presumed from continuous urban fabric; no direct OSM name match,directory_1929;directory_1929_counts;normalized_directory;residents_1938;street_names_txt;streets_csv;voting_1938
+pl. Pomnikowy,1929;1938,y,corridor:pomnikowa,corridor presumed from continuous urban fabric; no direct OSM name match,residents_1938;street_names_txt;streets_csv
+Poniatowskiego,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,directory_1929_counts;normalized_directory;residents_1938;street_names_txt;streets_csv;voting_1938
+Poprzeczna,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,directory_1929;directory_1929_counts;street_names_txt;streets_csv
+Powurska,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Privislian Street (1917),1917,n,,Occupation name; occupation_1917_unmapped,grain_1917
+Prosta,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Prussian Street (1917),1917,n,,Occupation name; occupation_1917_unmapped,grain_1917
+Przeskok,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Rolna,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Rynek,1929;1938,y,corridor:rynek,,directory_1929;directory_1929_counts;street_names_txt;streets_csv
+Rzeczna,1929;1938,y,corridor:rzeczna,,street_names_txt;streets_csv;voting_1938
+Sadowa,1929;1938,y,corridor:sadowa,,normalized_directory;residents_1938;street_names_txt;streets_csv
+Sand Street (1917),1917,y,corridor:piaskowa,"→ Piaskowa; exists_today refers to physical corridor, not occupation name",grain_1917
+School Street (1917),1917,y,corridor:szkolna,"→ Szkolna; exists_today refers to physical corridor, not occupation name",grain_1917
+Shinena,1929,y,,Synagogue Street (Hebrew map label); corridor presumed from continuous urban fabric; no direct OSM name match,hebrew_map
+Sienkiewicza,1929;1938,y,corridor:sienkiewicza,corridor presumed from continuous urban fabric; no direct OSM name match,directory_1929;directory_1929_counts;normalized_directory;residents_1938;street_names_txt;streets_csv;voting_1938
+Sliachetske Street (1917),1917,y,corridor:szlachecka,"→ Szlachecka; exists_today refers to physical corridor, not occupation name",grain_1917
+Soborna,1929;1938,y,corridor:soborna,,directory_1929;directory_1929_counts;street_names_txt;streets_csv;voting_1938
+Soborny,1929;1938,y,corridor:soborna,,normalized_directory;residents_1938;street_names_txt;streets_csv
+Spokojna,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Star Street (1917),1917,n,,Occupation name; occupation_1917_unmapped,grain_1917
+Staro Cmentarna,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Staro-Kolejowa,1920;1938,y,corridor:kolejowa,1920 doctors list; Old Railway Street; related to Kolejowa corridor,doctors_1920;normalized_directory
+Staszyca,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Strażacka,1929;1938,y,corridor:strazacka,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Strzelecka,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,normalized_directory;residents_1938;street_names_txt;streets_csv;voting_1938
+Suarawer Street (1917),1917,n,,Occupation name; OCR uncertain; occupation_1917_unmapped,grain_1917
+Sulkiewicza,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Szeroka,1929;1938,y,corridor:szeroka,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Szewczenki,1929;1938,y,,,street_names_txt;streets_csv;voting_1938
+Szkolna,1929;1938,y,corridor:szkolna,,directory_1929;directory_1929_counts;street_names_txt;streets_csv;voting_1938
+Szlachecka,1929;1938,y,corridor:szlachecka,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Szpitalna,1929;1938,y,corridor:szpitalna,,street_names_txt;streets_csv;voting_1938
+Szuhajskiego,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Topolowa,1929;1938,y,corridor:topolowa,,street_names_txt;streets_csv;voting_1938
+Torowa,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Toruńska,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv
+Tranzyt Sarny,1929;1938,n,,Route/area label rather than a lasting street corridor,street_names_txt;streets_csv;voting_1938
+Turkish Street (1917),1917,n,,Mapping uncertain; occupation_1917_unmapped,grain_1917
+Tuszowskiego,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,directory_1929_counts;normalized_directory;residents_1938;street_names_txt;streets_csv;voting_1938
+Waligórskiego,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Warszawska,1919;1929;1938,y,corridor:warszawska_lutska,Formerly Łucka before ~1919; main commercial thoroughfare (today largely вул. Незалежності),directory_1929;directory_1929_counts;normalized_directory;residents_1938;street_names_txt;streets_csv
+Wąska,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Wiejska,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,directory_1929_counts;street_names_txt;streets_csv;voting_1938
+Wielka,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Wierzbowa,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,directory_1929;directory_1929_counts;street_names_txt;streets_csv;voting_1938
+Więzienna,1920;1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,directory_1929;directory_1929_counts;doctors_1920;normalized_directory;street_names_txt;streets_csv;voting_1938
+Wigury,1929;1938,y,corridor:zwirki_wigury,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Wilcza,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Włodzimierska,1929;1938,y,corridor:wlodzimierska,,directory_1929;normalized_directory;residents_1938;street_names_txt;streets_csv;voting_1938
+Wojskowa,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,directory_1929_counts;normalized_directory;residents_1938;street_names_txt;streets_csv
+Wola,1929;1938,y,corridor:wola,,street_names_txt;streets_csv;voting_1938
+pl. Wolności,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv
+Wrzosowa,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Wspólna,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Wygonna,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Zaułek Kolejowy,1929;1938,y,corridor:kolejowa,,street_names_txt;streets_csv;voting_1938
+Zaułek Krótki,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Zaułek Soborny,1929,y,corridor:soborna,Alley off Soborna,directory_1929
+Żeromskiego,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Zgoda,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Zielona,1929;1938,y,corridor:zielona,,street_names_txt;streets_csv;voting_1938
+Żórawia,1929;1938,y,,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938
+Żwirki,1929;1938,y,corridor:zwirki_wigury,corridor presumed from continuous urban fabric; no direct OSM name match,street_names_txt;streets_csv;voting_1938

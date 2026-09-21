@@ -34,50 +34,50 @@ max_lat = max(lat for lat, _ in coords.values())
 min_lon = min(lon for _, lon in coords.values())
 max_lon = max(lon for _, lon in coords.values())
 
-pos = {street: ((lon - min_lon)/(max_lon - min_lon), (lat - min_lat)/(max_lat - min_lat)) 
+pos = {street: ((lon - min_lon)/(max_lon - min_lon), (lat - min_lat)/(max_lat - min_lat))
        for street, (lat, lon) in coords.items()}
 
 # Add all streets as nodes
 all_streets = [
     # District 1
-    'Górka', 'Marszałka Śmigłego Rydza', 'Apteczna', 'Szuhajskiego', 'Kościelna', 
+    'Górka', 'Marszałka Śmigłego Rydza', 'Apteczna', 'Szuhajskiego', 'Kościelna',
     'Strażacka', 'Soborna',
-    
+
     # District 2
     'Maciejowska', 'Wola', 'Szlachecka', 'Długa', 'Chmielna', 'Lubliniecka',
     'Mało Gonczarna', 'Dużo Gonczarna', 'Ogrodowa', 'Nadbrzeżna', 'Cerkiewna', 'Gospodarcza',
-    
+
     # District 3
     'Krótka', 'Handlowa', 'Mieszczańska', 'Kąpielowa', 'Włodzimierska', 'Rzeczna', 'Szkolna',
-    
+
     # District 4
     'Magistracka', 'Legionów', 'Monopolowa', 'Więzienna', 'Jasna', 'Budyszczańska',
     'Kowalska', 'Cicha', 'Staro Cmentarna',
-    
+
     # District 5
     'Królowej Bony', 'Żwirki', 'Wigury', 'Staszyca', '50 P. P, Strzel. Kres.',
     'Wilcza', 'Pereca', 'Kolejowa', 'Listopadowa', 'Szewczenki',
-    
+
     # District 6
     'Sulkiewicza', 'Krzywa', 'Żeromskiego', 'Poniatowskiego', 'Hołówki',
     'Strzelecka', 'Sienkiewicza', 'Daszyńskiego', 'Pograniczna', 'Mościckiego', 'Tuszowskiego',
-    
+
     # District 7
     'Kościuszki', 'Mickiewicza', 'Ciasna', 'Filarecka', 'Cyrkowa', '3-go Maja',
     'Przeskok', 'ks. Bandurskiego', 'ks. Sznarbachowskiego', 'Piaskowa', 'Komorowska',
     'Rolna', 'al. Marszałka Piłsudskiego', '27 Dywizji Piechoty', 'Bezimienna', 'Pomnikowa',
-    
+
     # District 8
     'Limanowskiego', 'Dzika', 'Niecała', 'Krucza', 'Wiejska', 'Wygonna',
     'Cmentarna', 'Szpitalna', 'Nowowiejska', 'Pasieczna', 'Gibalskiego', 'Podjaworska',
     'Spokojna', 'Hoża', 'Zaułek Kolejowy', 'Południowa',
-    
+
     # District 9
     'Bielińska', 'Wspólna', 'Koszykowa', 'Myśliwska', 'Zgoda', 'Kresowa',
     'Żórawia', 'Gęsia', 'Krakowska', 'Nowy Świat', 'Kolodnicka', 'Mokra',
     'Zaułek Krótki', 'Dąbrowskiego', 'Północna', 'Nasypowa', 'Polna', 'Miodowa',
     'Poleska', 'Zielona',
-    
+
     # District 10
     'Powurska', 'Lisa Kuli', 'Topolowa', 'Wierzbowa', 'Torowa', 'Brzozowa',
     'Szeroka', 'Narożna', 'Miła', 'Wąska', 'Jaworowa', 'Prosta', 'Obwodowa',
@@ -94,56 +94,56 @@ edges = [
     ('Kościelna', 'Strażacka'), ('Strażacka', 'Soborna'),
     ('Soborna', 'Apteczna'), ('Apteczna', 'Szuhajskiego'),
     ('Górka', 'Marszałka Śmigłego Rydza'),
-    
+
     # District 2 (Western area)
     ('Maciejowska', 'Wola'), ('Wola', 'Szlachecka'),
     ('Długa', 'Chmielna'), ('Chmielna', 'Lubliniecka'),
     ('Mało Gonczarna', 'Dużo Gonczarna'), ('Ogrodowa', 'Nadbrzeżna'),
     ('Nadbrzeżna', 'Cerkiewna'), ('Cerkiewna', 'Gospodarcza'),
-    
+
     # District 3 (Market area)
     ('Krótka', 'Handlowa'), ('Handlowa', 'Mieszczańska'),
     ('Mieszczańska', 'Kąpielowa'), ('Kąpielowa', 'Włodzimierska'),
     ('Włodzimierska', 'Rzeczna'), ('Rzeczna', 'Szkolna'),
-    
+
     # District 4 (Administrative center)
     ('Magistracka', 'Legionów'), ('Legionów', 'Monopolowa'),
     ('Monopolowa', 'Więzienna'), ('Więzienna', 'Jasna'),
     ('Jasna', 'Budyszczańska'), ('Budyszczańska', 'Kowalska'),
     ('Kowalska', 'Cicha'), ('Cicha', 'Staro Cmentarna'),
-    
+
     # District 5 (Railway station area)
     ('Królowej Bony', 'Żwirki'), ('Żwirki', 'Wigury'),
     ('Wigury', 'Staszyca'), ('Staszyca', '50 P. P, Strzel. Kres.'),
     ('Wilcza', 'Pereca'), ('Pereca', 'Kolejowa'),
     ('Kolejowa', 'Listopadowa'), ('Listopadowa', 'Szewczenki'),
-    
+
     # District 6 (Northern residential)
     ('Sulkiewicza', 'Krzywa'), ('Krzywa', 'Żeromskiego'),
     ('Żeromskiego', 'Poniatowskiego'), ('Poniatowskiego', 'Hołówki'),
     ('Strzelecka', 'Sienkiewicza'), ('Sienkiewicza', 'Daszyńskiego'),
-    
+
     # District 7 (Central residential)
     ('Kościuszki', 'Mickiewicza'), ('Mickiewicza', '3-go Maja'),
     ('3-go Maja', 'Przeskok'), ('Przeskok', 'ks. Bandurskiego'),
     ('Piaskowa', 'Komorowska'), ('Komorowska', 'Rolna'),
-    
+
     # District 8 (Eastern residential)
     ('Limanowskiego', 'Dzika'), ('Dzika', 'Niecała'),
     ('Niecała', 'Krucza'), ('Krucza', 'Wiejska'),
     ('Wiejska', 'Wygonna'), ('Wygonna', 'Cmentarna'),
     ('Cmentarna', 'Szpitalna'), ('Szpitalna', 'Nowowiejska'),
-    
+
     # District 9 (Northeastern residential)
     ('Bielińska', 'Wspólna'), ('Wspólna', 'Koszykowa'),
     ('Koszykowa', 'Myśliwska'), ('Myśliwska', 'Zgoda'),
     ('Zgoda', 'Kresowa'), ('Kresowa', 'Żórawia'),
-    
+
     # District 10 (Eastern industrial)
     ('Powurska', 'Lisa Kuli'), ('Lisa Kuli', 'Topolowa'),
     ('Topolowa', 'Wierzbowa'), ('Wierzbowa', 'Torowa'),
     ('Torowa', 'Brzozowa'), ('Brzozowa', 'Szeroka'),
-    
+
     # Inter-district connections
     ('3-go Maja', 'FABRYCZNA'), ('FABRYCZNA', 'BUDOWLANA'),
     ('BUDOWLANA', 'LISTOPADOWA'), ('Kolejowa', 'Torowa'),
@@ -169,13 +169,13 @@ nx.draw_networkx_edges(G, pos_spring, edge_color='gray', alpha=0.5)
 known_coords = list(coords.keys())
 other_nodes = [n for n in G.nodes() if n not in known_coords]
 
-nx.draw_networkx_nodes(G, pos_spring, 
+nx.draw_networkx_nodes(G, pos_spring,
                       nodelist=known_coords,
                       node_color='lightblue',
                       node_size=300,
                       node_shape='o')
 
-nx.draw_networkx_nodes(G, pos_spring, 
+nx.draw_networkx_nodes(G, pos_spring,
                       nodelist=other_nodes,
                       node_color='lightgray',
                       node_size=300,

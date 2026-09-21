@@ -26,12 +26,12 @@ class PersonName(BaseModel):
     surname: str
     given_names: List[str]
     nickname: Optional[str] = None
-    
+
     @validator('full_name')
     def normalize_full_name(cls, v):
         """Normalize full name to handle various character encodings"""
         return unicodedata.normalize('NFKC', v.strip())
-    
+
     @validator('given_names', pre=True)
     def split_given_names(cls, v):
         """Split given names if provided as string"""
@@ -45,20 +45,20 @@ class Person(BaseModel):
     birthdate: str
     nationality: str
     additional_info: Dict[str, Any] = Field(default_factory=dict)
-    
+
     @validator('birthdate')
     def validate_birthdate(cls, v):
         """Validate and normalize date format"""
         if v == 'UNBEKANNT':
             return v
-        
+
         try:
             # Parse and standardize date format
             date_obj = datetime.strptime(v, '%d.%m.%Y')
             return date_obj.strftime('%d.%m.%Y')
         except ValueError:
             raise ValueError(f'Invalid date format: {v}')
-    
+
     @validator('nationality')
     def normalize_nationality(cls, v):
         """Normalize nationality field"""
@@ -66,13 +66,13 @@ class Person(BaseModel):
 
 class RefugeeDataProcessor:
     """Main class for processing refugee data"""
-    
+
     def __init__(self, input_file: str = None):
         self.input_file = input_file
         self.processed_data: List[Person] = []
         self.statistics: Dict[str, Any] = {}
         self.errors: List[Dict[str, Any]] = []
-        
+
     def load_raw_data(self, data_source: Any) -> List[Dict[str, Any]]:
         """Load data from various source formats"""
         if isinstance(data_source, str):
@@ -91,19 +91,19 @@ class RefugeeDataProcessor:
         """Parse complex name formats"""
         # Handle various name patterns
         name_parts = raw_name.strip().split()
-        
+
         # Handle compound surnames
         surname_parts = []
         given_names = []
-        
+
         for part in name_parts:
             if part.isupper() or '-' in part:
                 surname_parts.append(part)
             else:
                 given_names.append(part)
-                
+
         surname = ' '.join(surname_parts)
-        
+
         return {
             'full_name': raw_name,
             'surname': surname,
@@ -115,7 +115,7 @@ class RefugeeDataProcessor:
         try:
             # Extract and parse name data
             name_data = self.parse_name(record.get('name', ''))
-            
+
             # Create person object
             person = Person(
                 name_data=PersonName(**name_data),
@@ -127,7 +127,7 @@ class RefugeeDataProcessor:
                 }
             )
             return person
-            
+
         except ValidationError as e:
             self.errors.append({
                 'record': record,
@@ -148,30 +148,30 @@ class RefugeeDataProcessor:
     def process_data(self, data_source: Any) -> None:
         """Process all records and compile statistics"""
         raw_data = self.load_raw_data(data_source)
-        
+
         # Process records
         for record in raw_data:
             person = self.process_record(record)
             if person:
                 self.processed_data.append(person)
-        
+
         # Compile statistics
         self.compute_statistics()
-        
+
     def compute_statistics(self) -> None:
         """Compute various statistics about the processed data"""
         stats = defaultdict(int)
-        
+
         # Basic counts
         stats['total_records'] = len(self.processed_data)
         stats['error_count'] = len(self.errors)
-        
+
         # Nationality distribution
         nationality_counts = defaultdict(int)
         for person in self.processed_data:
             nationality_counts[person.nationality] += 1
         stats['nationality_distribution'] = dict(nationality_counts)
-        
+
         # Year distribution
         year_counts = defaultdict(int)
         for person in self.processed_data:
@@ -179,7 +179,7 @@ class RefugeeDataProcessor:
                 year = person.birthdate.split('.')[-1]
                 year_counts[year] += 1
         stats['birth_year_distribution'] = dict(year_counts)
-        
+
         self.statistics = dict(stats)
 
     def export_data(self, output_format: str = 'csv') -> None:
@@ -188,11 +188,11 @@ class RefugeeDataProcessor:
             self.export_to_csv('processed_refugee_data.csv')
         elif output_format == 'json':
             self.export_to_json('processed_refugee_data.json')
-        
+
         # Export statistics
         with open('processing_statistics.json', 'w', encoding='utf-8') as f:
             json.dump(self.statistics, f, indent=2)
-            
+
         # Export errors if any
         if self.errors:
             with open('processing_errors.json', 'w', encoding='utf-8') as f:
@@ -211,7 +211,7 @@ class RefugeeDataProcessor:
                 'Nickname': person.additional_info.get('nickname', '')
             }
             records.append(record)
-            
+
         df = pd.DataFrame(records)
         df.to_csv(filename, index=False, encoding='utf-8')
 
@@ -225,7 +225,7 @@ class RefugeeDataProcessor:
 if __name__ == "__main__":
     # Initialize processor
     processor = RefugeeDataProcessor()
-    
+
     # Sample data
     sample_data = [
         {
@@ -235,13 +235,13 @@ if __name__ == "__main__":
             "nickname": "Henri"
         }
     ]
-    
+
     # Process data
     processor.process_data(sample_data)
-    
+
     # Export results
     processor.export_data(output_format='csv')
-    
+
     # Print statistics
     print("\nProcessing Statistics:")
     for key, value in processor.statistics.items():

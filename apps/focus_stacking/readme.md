@@ -136,4 +136,3 @@ For more issues, please check our [Issues](https://github.com/yourusername/focus
 Your Name - [@yourtwitter](https://twitter.com/yourtwitter)
 
 Project Link: [https://github.com/yourusername/focus-stacking](https://github.com/yourusername/focus-stacking)
-

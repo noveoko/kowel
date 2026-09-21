@@ -10,7 +10,7 @@ class VideoTo3DMesh:
     def __init__(self, video_path, output_dir, start_frame, end_frame):
         """
         Initialize the video to 3D mesh converter
-        
+
         Args:
             video_path (str): Path to input video file
             output_dir (str): Directory to store output files
@@ -21,13 +21,13 @@ class VideoTo3DMesh:
         self.output_dir = Path(output_dir)
         self.start_frame = start_frame
         self.end_frame = end_frame
-        
+
         # Create output directories
         self.frames_dir = self.output_dir / "frames"
         self.colmap_dir = self.output_dir / "colmap"
         self.sparse_dir = self.colmap_dir / "sparse"
         self.dense_dir = self.colmap_dir / "dense"
-        
+
         self._create_directories()
 
     def _create_directories(self):
@@ -40,21 +40,21 @@ class VideoTo3DMesh:
         cap = cv2.VideoCapture(self.video_path)
         frame_count = 0
         saved_count = 0
-        
+
         while cap.isOpened():
             ret, frame = cap.read()
             if not ret:
                 break
-                
+
             if self.start_frame <= frame_count <= self.end_frame:
                 output_path = self.frames_dir / f"frame_{saved_count:06d}.jpg"
                 cv2.imwrite(str(output_path), frame)
                 saved_count += 1
-                
+
             frame_count += 1
             if frame_count > self.end_frame:
                 break
-                
+
         cap.release()
         return saved_count
 
@@ -106,7 +106,7 @@ class VideoTo3DMesh:
         """Create mesh from point cloud using Open3D"""
         # Load the point cloud
         pcd = o3d.io.read_point_cloud(str(self.dense_dir / "fused.ply"))
-        
+
         # Estimate normals
         pcd.estimate_normals(
             search_param=o3d.geometry.KDTreeSearchParamHybrid(radius=0.1, max_nn=30)
@@ -116,11 +116,11 @@ class VideoTo3DMesh:
         mesh, densities = o3d.geometry.TriangleMesh.create_from_point_cloud_poisson(
             pcd, depth=9
         )
-        
+
         # Remove low density vertices
         vertices_to_remove = densities < np.quantile(densities, 0.1)
         mesh.remove_vertices_by_mask(vertices_to_remove)
-        
+
         # Save the final mesh
         o3d.io.write_triangle_mesh(
             str(self.output_dir / "final_mesh.ply"),
@@ -130,7 +130,7 @@ class VideoTo3DMesh:
 def process_video_to_mesh(video_path, output_dir, start_frame, end_frame):
     """
     Main function to process video into 3D mesh
-    
+
     Args:
         video_path (str): Path to input video file
         output_dir (str): Directory to store output files
@@ -138,17 +138,17 @@ def process_video_to_mesh(video_path, output_dir, start_frame, end_frame):
         end_frame (int): Ending frame number
     """
     processor = VideoTo3DMesh(video_path, output_dir, start_frame, end_frame)
-    
+
     print("Extracting frames...")
     num_frames = processor.extract_frames()
     print(f"Extracted {num_frames} frames")
-    
+
     print("Running COLMAP reconstruction...")
     processor.run_colmap()
-    
+
     print("Creating final mesh...")
     processor.create_mesh()
-    
+
     print(f"Process complete! Final mesh saved to {output_dir}/final_mesh.ply")
 
 # Example usage

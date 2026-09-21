@@ -1,0 +1,14 @@
+title = "kowel"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Lockfiles, local envs, and generated non-secret artifacts"
+paths = [
+    '''(^|/)uv\.lock$''',
+    '''(^|/)\.secrets\.baseline$''',
+    '''(^|/)\.venv/''',
+    '''(^|/)venv/''',
+    '''(^|/)__pycache__/''',
+]

@@ -31,10 +31,10 @@ pip install networkx pandas numpy
 2. **Generate a Layout**
    ```python
    from city_layout_generator import generate_city_layout
-   
+
    # Generate optimized layout
    best_city = generate_city_layout('your_streets.csv')
-   
+
    # Print statistics
    print(f"Number of streets: {len(best_city.streets)}")
    print(f"Number of connections: {best_city.graph.number_of_edges()}")
@@ -100,13 +100,13 @@ def get_connectivity_score(self) -> float:
     metrics = {
         'avg_degree': np.mean([d for _, d in self.graph.degree()]),
         'clustering': nx.average_clustering(self.graph),
-        'connectivity': nx.edge_connectivity(self.graph) 
+        'connectivity': nx.edge_connectivity(self.graph)
                        if nx.is_connected(self.graph) else 0
     }
-    
+
     # Customize weights
-    return (metrics['avg_degree'] * 0.4 + 
-            metrics['clustering'] * 0.3 + 
+    return (metrics['avg_degree'] * 0.4 +
+            metrics['clustering'] * 0.3 +
             metrics['connectivity'] * 0.3)
 ```
 

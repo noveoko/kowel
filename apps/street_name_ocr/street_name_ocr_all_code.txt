@@ -1,0 +1,2192 @@
+========================================================================
+FILE: readme.md
+========================================================================
+# Kowel street-name OCR
+
+Streamlit tool for reading rotated street labels on historical maps of Kowel.
+
+## Workflow
+
+1. Upload a map image (**Navigate** mode).
+2. **Mouse wheel** to zoom, **middle-mouse drag** to pan (left-drag also pans). Frame the street name.
+3. Click **Lock view for drawing** (switches to **Draw** mode).
+4. **Draw baseline** — line under the street name (any angle).
+5. Switch to **Move band** — click the orange/green box and drag / resize / rotate it (or use Nudge X/Y). Set initial height with the Band height slider before moving.
+6. In **Crop & transform**, flip / rotate / fine-rotate / invert until the name reads upright left-to-right.
+7. Choose a **Ranker**, run recognition, review the **top 10** matches.
+
+### Navigation
+
+| Input | Effect |
+| --- | --- |
+| Mouse wheel | Zoom in / out (Leaflet) |
+| Middle mouse drag | Pan |
+| Left mouse drag | Pan (Leaflet default) |
+| Lock view for drawing | Freeze the visible region for the line canvas |
+| Unlock view | Return to Navigate (clears baseline) |
+
+### Transform controls
+
+| Control | Effect |
+| --- | --- |
+| ⟲ / ⟳ 90°, 180° | Quarter-turn the deskewed crop |
+| Flip H / Flip V | Mirror horizontally or vertically |
+| Fine rotate | ±45° continuous correction |
+| Invert | Useful for light text on dark map ink |
+| Reset | Clear all transforms (keeps the band selection) |
+
+Transforms apply only to the OCR crop — you do not need to redraw the baseline.
+
+## Run
+
+```bash
+cd apps/street_name_ocr
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+`requirements.txt` pins `streamlit<1.40` with `streamlit-drawable-canvas==0.9.3` (newer Streamlit breaks that canvas package).
+
+First EasyOCR run downloads Polish/English recognition models (can take a few minutes).
+
+## Notes
+
+- Use the canvas **line** tool (not freestyle).
+- Toggle “Text is above the baseline” if the band appears on the wrong side of your under-line.
+- `exists_today` / `year_ranges` in the results come from the truth table; this app does not write back to it.
+- Matching is fuzzy (`rapidfuzz` WRatio) on diacritic-folded names; OCR alone is often imperfect on map type.
+
+### Experimental CA + GA ranker
+
+For **degraded / partial** labels where EasyOCR fails:
+
+1. **Cellular automata** cleans the binary ink (remove speckles, bridge small gaps).
+2. Fitness vs each truth-table name uses a 1D ink projection + length prior (+ optional OCR / known characters).
+3. A **genetic algorithm** searches name index + scale/shift — or tick **Score all** for exhaustive ranking (~160 names).
+
+This is closed-set matching, not a from-scratch OCR engine. Use **Blend both** to combine EasyOCR fuzzy scores with CA/GA fitness.
+
+========================================================================
+FILE: requirements.txt
+========================================================================
+# Pin Streamlit + canvas: newer Streamlit (1.53+/1.61) breaks streamlit-drawable-canvas 0.13 asset loading.
+streamlit>=1.28.0,<1.40
+streamlit-drawable-canvas==0.9.3
+streamlit-folium>=0.15,<0.20
+folium>=0.14,<0.16
+opencv-python-headless>=4.8.0
+Pillow>=10.0.0
+numpy>=1.24.0
+easyocr>=1.7.0
+rapidfuzz>=3.0.0
+pandas>=2.0.0
+
+========================================================================
+FILE: pyproject.toml
+========================================================================
+[project]
+name = "street-name-ocr"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "easyocr>=1.7.0",
+    "folium>=0.14,<0.16",
+    "numpy>=1.24.0",
+    "opencv-python-headless>=4.8.0",
+    "pandas>=2.0.0",
+    "pillow>=10.0.0",
+    "rapidfuzz>=3.0.0",
+    "streamlit>=1.28.0,<1.40",
+    "streamlit-drawable-canvas==0.9.3",
+    "streamlit-folium>=0.15,<0.20",
+]
+
+========================================================================
+FILE: geometry.py
+========================================================================
+"""Baseline → text band polygon and deskew-to-horizontal crop."""
+
+from __future__ import annotations
+
+from dataclasses import dataclass
+
+import cv2
+import numpy as np
+
+
+@dataclass
+class Baseline:
+    x1: float
+    y1: float
+    x2: float
+    y2: float
+
+    @property
+    def length(self) -> float:
+        return float(np.hypot(self.x2 - self.x1, self.y2 - self.y1))
+
+    @property
+    def angle_deg(self) -> float:
+        return float(np.degrees(np.arctan2(self.y2 - self.y1, self.x2 - self.x1)))
+
+
+@dataclass
+class DeskewResult:
+    image: np.ndarray  # BGR or gray uint8, horizontal
+    angle_deg: float
+    length_px: float
+    height_px: float
+    corners: np.ndarray  # 4x2 float in source image coords (p1,p2,p3,p4)
+
+
+def _unit(vx: float, vy: float) -> tuple[float, float]:
+    n = float(np.hypot(vx, vy))
+    if n < 1e-6:
+        return 1.0, 0.0
+    return vx / n, vy / n
+
+
+def full_to_canvas(
+    x: float,
+    y: float,
+    *,
+    scale: float,
+    origin_xy: tuple[float, float],
+) -> tuple[float, float]:
+    ox, oy = origin_xy
+    return (x - ox) * scale, (y - oy) * scale
+
+
+def canvas_to_full(
+    x: float,
+    y: float,
+    *,
+    scale: float,
+    origin_xy: tuple[float, float],
+) -> tuple[float, float]:
+    ox, oy = origin_xy
+    inv = 1.0 / scale if scale else 1.0
+    return ox + x * inv, oy + y * inv
+
+
+def band_corners(
+    baseline: Baseline,
+    height: float,
+    text_above: bool = True,
+) -> np.ndarray:
+    """Return 4 corners (p1, p2, p3, p4) in image coordinates.
+
+    p1--p2 is the baseline; p4--p3 is the far edge through the text.
+    """
+    dx, dy = _unit(baseline.x2 - baseline.x1, baseline.y2 - baseline.y1)
+    # Perpendicular: rotate direction 90° CCW; flip if text is below baseline
+    nx, ny = -dy, dx
+    if not text_above:
+        nx, ny = -nx, -ny
+
+    p1 = np.array([baseline.x1, baseline.y1], dtype=np.float32)
+    p2 = np.array([baseline.x2, baseline.y2], dtype=np.float32)
+    offset = np.array([nx, ny], dtype=np.float32) * float(height)
+    p4 = p1 + offset
+    p3 = p2 + offset
+    return np.stack([p1, p2, p3, p4], axis=0)
+
+
+def deskew_band(
+    image: np.ndarray,
+    baseline: Baseline,
+    height: float,
+    text_above: bool = True,
+    pad: int = 4,
+) -> DeskewResult:
+    """Perspective-warp the extruded band to a horizontal rectangle."""
+    if height < 2:
+        raise ValueError("Band height must be at least 2 pixels")
+    length = baseline.length
+    if length < 2:
+        raise ValueError("Baseline is too short")
+
+    corners = band_corners(baseline, height, text_above=text_above)
+    out_w = max(int(round(length)) + 2 * pad, 8)
+    out_h = max(int(round(height)) + 2 * pad, 8)
+
+    # Destination: horizontal strip (baseline along bottom if text_above)
+    dst = np.array(
+        [
+            [pad, out_h - 1 - pad],  # p1
+            [out_w - 1 - pad, out_h - 1 - pad],  # p2
+            [out_w - 1 - pad, pad],  # p3
+            [pad, pad],  # p4
+        ],
+        dtype=np.float32,
+    )
+    if not text_above:
+        # Text was below baseline; flip so text still reads upright-ish
+        dst = np.array(
+            [
+                [pad, pad],
+                [out_w - 1 - pad, pad],
+                [out_w - 1 - pad, out_h - 1 - pad],
+                [pad, out_h - 1 - pad],
+            ],
+            dtype=np.float32,
+        )
+
+    matrix = cv2.getPerspectiveTransform(corners.astype(np.float32), dst)
+    warped = cv2.warpPerspective(
+        image,
+        matrix,
+        (out_w, out_h),
+        flags=cv2.INTER_CUBIC,
+        borderMode=cv2.BORDER_REPLICATE,
+    )
+    return DeskewResult(
+        image=warped,
+        angle_deg=baseline.angle_deg,
+        length_px=length,
+        height_px=float(height),
+        corners=corners,
+    )
+
+
+def preprocess_for_ocr(bgr_or_gray: np.ndarray, upscale: float = 2.0) -> np.ndarray:
+    """Grayscale + CLAHE + upscale for map lettering."""
+    if bgr_or_gray.ndim == 3:
+        gray = cv2.cvtColor(bgr_or_gray, cv2.COLOR_BGR2GRAY)
+    else:
+        gray = bgr_or_gray
+    clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
+    enhanced = clahe.apply(gray)
+    if upscale and upscale != 1.0:
+        enhanced = cv2.resize(
+            enhanced,
+            None,
+            fx=upscale,
+            fy=upscale,
+            interpolation=cv2.INTER_CUBIC,
+        )
+    return enhanced
+
+
+@dataclass
+class PrepTransforms:
+    """User transforms applied to the deskewed crop before OCR."""
+
+    rot90: int = 0  # quarter-turns CW, 0..3
+    fine_deg: float = 0.0
+    flip_h: bool = False
+    flip_v: bool = False
+    invert: bool = False
+
+    def summary(self) -> str:
+        parts = [f"rot90={self.rot90 % 4}"]
+        if abs(self.fine_deg) > 1e-6:
+            parts.append(f"fine={self.fine_deg:+.1f}°")
+        if self.flip_h:
+            parts.append("flipH")
+        if self.flip_v:
+            parts.append("flipV")
+        if self.invert:
+            parts.append("invert")
+        return " · ".join(parts)
+
+
+def rotate_exact(img: np.ndarray, k: int) -> np.ndarray:
+    """Rotate by k*90° clockwise (k mod 4)."""
+    k = int(k) % 4
+    if k == 0:
+        return img
+    if k == 1:
+        return cv2.rotate(img, cv2.ROTATE_90_CLOCKWISE)
+    if k == 2:
+        return cv2.rotate(img, cv2.ROTATE_180)
+    return cv2.rotate(img, cv2.ROTATE_90_COUNTERCLOCKWISE)
+
+
+def rotate_fine(img: np.ndarray, degrees: float) -> np.ndarray:
+    """Rotate about center; expand canvas so corners are not clipped."""
+    if abs(degrees) < 1e-6:
+        return img
+    h, w = img.shape[:2]
+    center = (w / 2.0, h / 2.0)
+    matrix = cv2.getRotationMatrix2D(center, degrees, 1.0)
+    cos = abs(matrix[0, 0])
+    sin = abs(matrix[0, 1])
+    new_w = int(np.ceil(h * sin + w * cos))
+    new_h = int(np.ceil(h * cos + w * sin))
+    matrix[0, 2] += (new_w / 2.0) - center[0]
+    matrix[1, 2] += (new_h / 2.0) - center[1]
+    border = (240, 240, 240) if img.ndim == 3 else 240
+    return cv2.warpAffine(
+        img,
+        matrix,
+        (new_w, new_h),
+        flags=cv2.INTER_CUBIC,
+        borderMode=cv2.BORDER_CONSTANT,
+        borderValue=border,
+    )
+
+
+def apply_prep_transforms(img: np.ndarray, transforms: PrepTransforms) -> np.ndarray:
+    """Compose: rot90 → fine rotate → flips → invert."""
+    out = img
+    out = rotate_exact(out, transforms.rot90)
+    out = rotate_fine(out, transforms.fine_deg)
+    if transforms.flip_h:
+        out = cv2.flip(out, 1)
+    if transforms.flip_v:
+        out = cv2.flip(out, 0)
+    if transforms.invert:
+        out = cv2.bitwise_not(out)
+    return out
+
+
+def overlay_band(
+    image: np.ndarray,
+    corners: np.ndarray,
+    color: tuple[int, int, int] = (0, 220, 0),
+    thickness: int = 2,
+) -> np.ndarray:
+    """Draw the band polygon on a copy of the image (BGR)."""
+    out = image.copy()
+    if out.ndim == 2:
+        out = cv2.cvtColor(out, cv2.COLOR_GRAY2BGR)
+    pts = corners.astype(np.int32).reshape((-1, 1, 2))
+    cv2.polylines(out, [pts], isClosed=True, color=color, thickness=thickness)
+    # baseline thicker
+    p1, p2 = corners[0].astype(int), corners[1].astype(int)
+    cv2.line(out, tuple(p1), tuple(p2), (0, 140, 255), thickness + 1)
+    return out
+
+
+@dataclass
+class Viewport:
+    """Crop of the full image shown on the drawing canvas."""
+
+    x: float
+    y: float
+    w: float
+    h: float
+    disp_w: int
+    disp_h: int
+
+    @property
+    def scale(self) -> float:
+        """canvas_px / full_res_px within the viewport."""
+        return float(self.disp_w) / float(self.w) if self.w else 1.0
+
+
+def viewport_from_pixel_bounds(
+    x0: float,
+    y0: float,
+    x1: float,
+    y1: float,
+    img_w: int,
+    img_h: int,
+    max_w: int = 1100,
+    max_h: int = 900,
+) -> Viewport:
+    """Build a Viewport from an axis-aligned full-res pixel rectangle."""
+    xa = float(np.clip(min(x0, x1), 0, img_w))
+    xb = float(np.clip(max(x0, x1), 0, img_w))
+    ya = float(np.clip(min(y0, y1), 0, img_h))
+    yb = float(np.clip(max(y0, y1), 0, img_h))
+    vw = max(xb - xa, 1.0)
+    vh = max(yb - ya, 1.0)
+    scale = min(max_w / vw, max_h / vh)
+    disp_w = max(1, int(round(vw * scale)))
+    disp_h = max(1, int(round(vh * scale)))
+    return Viewport(xa, ya, vw, vh, disp_w, disp_h)
+
+
+def compute_viewport(
+    img_w: int,
+    img_h: int,
+    zoom: float,
+    pan_x: float,
+    pan_y: float,
+    max_w: int = 1100,
+    max_h: int = 900,
+) -> Viewport:
+    """Viewport in full-res pixels + display size.
+
+    zoom=1 shows the whole image fitted to max_w/max_h.
+    zoom>1 shows a centered-panable crop, upscaled to the display budget.
+    pan_x/pan_y in [0, 1] select the crop origin when zoomed.
+    """
+    zoom = max(float(zoom), 1.0)
+    pan_x = min(max(float(pan_x), 0.0), 1.0)
+    pan_y = min(max(float(pan_y), 0.0), 1.0)
+
+    vw = img_w / zoom
+    vh = img_h / zoom
+    vx = pan_x * max(img_w - vw, 0.0)
+    vy = pan_y * max(img_h - vh, 0.0)
+
+    # Fit crop into display budget (prefer width, then clamp height)
+    if zoom <= 1.0 + 1e-6:
+        scale = min(1.0, max_w / float(img_w), max_h / float(img_h))
+        disp_w = max(1, int(round(img_w * scale)))
+        disp_h = max(1, int(round(img_h * scale)))
+        return Viewport(0.0, 0.0, float(img_w), float(img_h), disp_w, disp_h)
+
+    scale = min(max_w / vw, max_h / vh)
+    disp_w = max(1, int(round(vw * scale)))
+    disp_h = max(1, int(round(vh * scale)))
+    return Viewport(vx, vy, vw, vh, disp_w, disp_h)
+
+
+def make_viewport_image(image_bgr: np.ndarray, viewport: Viewport) -> "Image":
+    """Crop + resize the viewport for use as a canvas background (RGB PIL)."""
+    from PIL import Image
+
+    h, w = image_bgr.shape[:2]
+    x0 = int(np.floor(viewport.x))
+    y0 = int(np.floor(viewport.y))
+    x1 = min(w, int(np.ceil(viewport.x + viewport.w)))
+    y1 = min(h, int(np.ceil(viewport.y + viewport.h)))
+    x0 = max(0, x0)
+    y0 = max(0, y0)
+    crop = image_bgr[y0:y1, x0:x1]
+    if crop.size == 0:
+        crop = image_bgr
+    rgb = cv2.cvtColor(crop, cv2.COLOR_BGR2RGB)
+    pil = Image.fromarray(rgb).resize(
+        (viewport.disp_w, viewport.disp_h),
+        Image.Resampling.LANCZOS,
+    )
+    return pil
+
+
+def band_to_fabric_rect(
+    baseline: Baseline,
+    height: float,
+    *,
+    scale: float,
+    origin_xy: tuple[float, float],
+    text_above: bool = True,
+) -> dict:
+    """Build a Fabric.js rect JSON for the band (canvas coordinates, center origin)."""
+    corners = band_corners(baseline, height, text_above=text_above)
+    # Canvas-space corners
+    pts = [full_to_canvas(float(p[0]), float(p[1]), scale=scale, origin_xy=origin_xy) for p in corners]
+    # Center of quadrilateral
+    cx = sum(p[0] for p in pts) / 4.0
+    cy = sum(p[1] for p in pts) / 4.0
+    length = baseline.length * scale
+    height_c = float(height) * scale
+    angle = baseline.angle_deg  # fabric angle is CW degrees from +x; baseline atan2 matches
+    # Fill green-ish, stroke orange to match overlay legend
+    return {
+        "type": "rect",
+        "version": "4.4.0",
+        "originX": "center",
+        "originY": "center",
+        "left": cx,
+        "top": cy,
+        "width": max(length, 2.0),
+        "height": max(height_c, 2.0),
+        "fill": "rgba(0, 220, 0, 0.25)",
+        "stroke": "#ff8c00",
+        "strokeWidth": 2,
+        "angle": angle,
+        "scaleX": 1,
+        "scaleY": 1,
+        "selectable": True,
+        "name": "street_band",
+    }
+
+
+def fabric_rect_to_baseline(
+    obj: dict,
+    *,
+    scale: float,
+    origin_xy: tuple[float, float],
+    text_above: bool = True,
+) -> tuple[Baseline, float] | None:
+    """Recover full-res Baseline + band height from a transformed Fabric rect."""
+    if not obj or obj.get("type") != "rect":
+        return None
+    w = float(obj.get("width", 0)) * float(obj.get("scaleX", 1) or 1)
+    h = float(obj.get("height", 0)) * float(obj.get("scaleY", 1) or 1)
+    if w < 2 or h < 2:
+        return None
+    angle = float(obj.get("angle", 0) or 0)
+    # left/top are the origin point in canvas coords
+    left = float(obj.get("left", 0))
+    top = float(obj.get("top", 0))
+    origin_x = obj.get("originX", "left")
+    origin_y = obj.get("originY", "top")
+    # Convert left/top to center
+    cx, cy = left, top
+    if origin_x == "left":
+        cx = left + w / 2.0
+    elif origin_x == "right":
+        cx = left - w / 2.0
+    if origin_y == "top":
+        cy = top + h / 2.0
+    elif origin_y == "bottom":
+        cy = top - h / 2.0
+
+    rad = np.radians(angle)
+    cos_a, sin_a = np.cos(rad), np.sin(rad)
+    # Unrotated corners relative to center: baseline is bottom edge if text_above
+    # Local coords: x along width, y along height (down positive in fabric)
+    # With Y-down + Fabric CW angle = baseline atan2, local +y points toward
+    # the text side when text_above=True. Baseline is the opposite edge.
+    if text_above:
+        local = [
+            (-w / 2.0, -h / 2.0),  # p1
+            (w / 2.0, -h / 2.0),  # p2
+        ]
+    else:
+        local = [
+            (-w / 2.0, h / 2.0),
+            (w / 2.0, h / 2.0),
+        ]
+
+    def rot(lx: float, ly: float) -> tuple[float, float]:
+        return cx + lx * cos_a - ly * sin_a, cy + lx * sin_a + ly * cos_a
+
+    c1 = rot(*local[0])
+    c2 = rot(*local[1])
+    f1 = canvas_to_full(c1[0], c1[1], scale=scale, origin_xy=origin_xy)
+    f2 = canvas_to_full(c2[0], c2[1], scale=scale, origin_xy=origin_xy)
+    height_full = h / scale if scale else h
+    return Baseline(f1[0], f1[1], f2[0], f2[1]), float(height_full)
+
+
+def translate_baseline(baseline: Baseline, dx: float, dy: float) -> Baseline:
+    return Baseline(
+        baseline.x1 + dx,
+        baseline.y1 + dy,
+        baseline.x2 + dx,
+        baseline.y2 + dy,
+    )
+
+
+def canvas_stroke_to_baseline(
+    stroke_objects: list,
+    scale: float,
+    origin_xy: tuple[float, float] = (0.0, 0.0),
+) -> Baseline | None:
+    """Extract a Baseline from streamlit-drawable-canvas JSON objects.
+
+    ``scale`` is canvas_px / full_res_px inside the current viewport
+    (``disp_w / vw``). ``origin_xy`` is the viewport top-left in full-res
+    image coordinates.
+    """
+    if not stroke_objects:
+        return None
+    ox, oy = origin_xy
+    # Prefer the last line/path stroke
+    for obj in reversed(stroke_objects):
+        obj_type = obj.get("type")
+        if obj_type == "line":
+            # fabric.js line: x1,y1,x2,y2 relative to left/top
+            left = float(obj.get("left", 0))
+            top = float(obj.get("top", 0))
+            x1 = left + float(obj.get("x1", 0))
+            y1 = top + float(obj.get("y1", 0))
+            x2 = left + float(obj.get("x2", 0))
+            y2 = top + float(obj.get("y2", 0))
+        elif obj_type == "path":
+            path = obj.get("path") or []
+            points: list[tuple[float, float]] = []
+            for cmd in path:
+                if not cmd:
+                    continue
+                # ['M', x, y] or ['L', x, y] or ['Q', ...]
+                if cmd[0] in ("M", "L") and len(cmd) >= 3:
+                    points.append((float(cmd[1]), float(cmd[2])))
+                elif cmd[0] == "Q" and len(cmd) >= 5:
+                    points.append((float(cmd[3]), float(cmd[4])))
+            if len(points) < 2:
+                continue
+            x1, y1 = points[0]
+            x2, y2 = points[-1]
+        else:
+            continue
+
+        inv = 1.0 / scale if scale else 1.0
+        return Baseline(
+            ox + x1 * inv,
+            oy + y1 * inv,
+            ox + x2 * inv,
+            oy + y2 * inv,
+        )
+    return None
+
+========================================================================
+FILE: map_nav.py
+========================================================================
+"""Leaflet (Folium) navigator for map images: wheel zoom + middle-button pan."""
+
+from __future__ import annotations
+
+import base64
+import hashlib
+from pathlib import Path
+
+import cv2
+import folium
+import numpy as np
+from branca.element import Element, MacroElement
+from jinja2 import Template
+
+from geometry import Viewport, viewport_from_pixel_bounds
+
+CACHE_DIR = Path(__file__).resolve().parent / ".cache"
+
+
+class MiddleMousePan(MacroElement):
+    """Enable pan while the middle mouse button is held; block autoscroll."""
+
+    _template = Template(
+        """
+        {% macro script(this, kwargs) %}
+        (function() {
+            var map = {{ this._parent.get_name() }};
+            var dragging = false;
+            var last = null;
+
+            function onDown(e) {
+                var oe = e.originalEvent || e;
+                if (oe.button !== 1) return;
+                oe.preventDefault();
+                dragging = true;
+                last = {x: oe.clientX, y: oe.clientY};
+                map.dragging.disable();
+            }
+            function onMove(e) {
+                if (!dragging || !last) return;
+                var oe = e.originalEvent || e;
+                oe.preventDefault();
+                var dx = oe.clientX - last.x;
+                var dy = oe.clientY - last.y;
+                last = {x: oe.clientX, y: oe.clientY};
+                map.panBy([-dx, -dy], {animate: false});
+            }
+            function onUp(e) {
+                if (!dragging) return;
+                dragging = false;
+                last = null;
+                map.dragging.enable();
+            }
+            map.on('mousedown', onDown);
+            map.on('mousemove', onMove);
+            map.on('mouseup', onUp);
+            map.on('mouseout', onUp);
+            var el = map.getContainer();
+            el.addEventListener('auxclick', function(ev) { ev.preventDefault(); });
+            el.addEventListener('mousedown', function(ev) {
+                if (ev.button === 1) ev.preventDefault();
+            });
+        })();
+        {% endmacro %}
+        """
+    )
+
+
+def _ensure_cache() -> Path:
+    CACHE_DIR.mkdir(parents=True, exist_ok=True)
+    return CACHE_DIR
+
+
+def nav_image_path(image_bgr: np.ndarray, max_edge: int = 2000) -> tuple[Path, float]:
+    """Save a (possibly downsampled) PNG for Folium; return path and scale vs full-res.
+
+    ``full_to_nav = nav_px / full_px`` (uniform). Bounds from Leaflet are in nav pixels
+    when using ImageOverlay sized to the saved image; convert back with / scale.
+    """
+    h, w = image_bgr.shape[:2]
+    scale = 1.0
+    out = image_bgr
+    longest = max(h, w)
+    if longest > max_edge:
+        scale = max_edge / float(longest)
+        out = cv2.resize(
+            image_bgr,
+            (max(1, int(round(w * scale))), max(1, int(round(h * scale)))),
+            interpolation=cv2.INTER_AREA,
+        )
+    digest = hashlib.md5(out.tobytes()).hexdigest()[:16]
+    path = _ensure_cache() / f"nav_{digest}_{out.shape[1]}x{out.shape[0]}.png"
+    if not path.exists():
+        cv2.imwrite(str(path), out)
+    return path, scale
+
+
+def image_to_data_uri(path: Path) -> str:
+    data = path.read_bytes()
+    b64 = base64.b64encode(data).decode("ascii")
+    return f"data:image/png;base64,{b64}"
+
+
+def build_image_map(
+    image_bgr: np.ndarray,
+    width: int = 900,
+    height: int = 650,
+    center: list[float] | None = None,
+    zoom: float | None = None,
+) -> tuple[folium.Map, float, int, int]:
+    """Return (map, nav_scale, nav_w, nav_h).
+
+    CRS.Simple with bounds [[-nav_h, 0], [0, nav_w]] so +x right, +y down in pixel space
+    maps to lng=x, lat=-y.
+
+    Pass ``center`` / ``zoom`` from a previous ``st_folium`` return value so Streamlit
+    reruns do not reset the user's view.
+    """
+    path, nav_scale = nav_image_path(image_bgr)
+    nav = cv2.imread(str(path), cv2.IMREAD_COLOR)
+    nav_h, nav_w = nav.shape[:2]
+    uri = image_to_data_uri(path)
+
+    loc = center if center is not None else [-nav_h / 2, nav_w / 2]
+    # CRS.Simple zoom: 0 often fits; keep prior zoom when provided
+    z0 = 0 if zoom is None else float(zoom)
+
+    m = folium.Map(
+        location=loc,
+        zoom_start=z0,
+        crs="Simple",
+        tiles=None,
+        prefer_canvas=True,
+        width=width,
+        height=height,
+    )
+    folium.raster_layers.ImageOverlay(
+        image=uri,
+        bounds=[[-nav_h, 0], [0, nav_w]],
+        opacity=1,
+        interactive=False,
+        cross_origin=False,
+        zindex=1,
+    ).add_to(m)
+    if zoom is None and center is None:
+        m.fit_bounds([[-nav_h, 0], [0, nav_w]])
+    MiddleMousePan().add_to(m)
+
+    m.get_root().html.add_child(
+        Element("<style>.leaflet-control-attribution{display:none!important}</style>")
+    )
+    return m, nav_scale, nav_w, nav_h
+
+
+def leaflet_bounds_to_full_pixels(
+    bounds: dict,
+    *,
+    nav_scale: float,
+    img_w: int,
+    img_h: int,
+) -> tuple[float, float, float, float] | None:
+    """Convert st_folium bounds dict to full-res pixel (x0,y0,x1,y1)."""
+    if not bounds:
+        return None
+    try:
+        sw = bounds.get("_southWest") or bounds.get("southWest") or bounds["south_west"]
+        ne = bounds.get("_northEast") or bounds.get("northEast") or bounds["north_east"]
+        # Folium sometimes returns {lat,lng} nested differently
+        if "lat" in sw:
+            south, west = float(sw["lat"]), float(sw["lng"])
+            north, east = float(ne["lat"]), float(ne["lng"])
+        else:
+            return None
+    except (KeyError, TypeError, ValueError):
+        return None
+
+    # lat = -y_nav, lng = x_nav
+    x0_nav = west
+    x1_nav = east
+    y0_nav = -north
+    y1_nav = -south
+
+    inv = 1.0 / nav_scale if nav_scale else 1.0
+    x0 = x0_nav * inv
+    x1 = x1_nav * inv
+    y0 = y0_nav * inv
+    y1 = y1_nav * inv
+    return (x0, y0, x1, y1)
+
+
+def bounds_to_viewport(
+    bounds: dict | None,
+    *,
+    nav_scale: float,
+    img_w: int,
+    img_h: int,
+    max_w: int = 1100,
+    max_h: int = 900,
+) -> Viewport | None:
+    px = leaflet_bounds_to_full_pixels(
+        bounds or {},
+        nav_scale=nav_scale,
+        img_w=img_w,
+        img_h=img_h,
+    )
+    if px is None:
+        return None
+    x0, y0, x1, y1 = px
+    return viewport_from_pixel_bounds(x0, y0, x1, y1, img_w, img_h, max_w=max_w, max_h=max_h)
+
+
+def full_image_viewport(img_w: int, img_h: int, max_w: int = 1100, max_h: int = 900) -> Viewport:
+    return viewport_from_pixel_bounds(0, 0, img_w, img_h, img_w, img_h, max_w=max_w, max_h=max_h)
+
+========================================================================
+FILE: ocr_rank.py
+========================================================================
+"""EasyOCR on deskewed crops + fuzzy ranking against the street truth table."""
+
+from __future__ import annotations
+
+import re
+import unicodedata
+from pathlib import Path
+
+import numpy as np
+import pandas as pd
+from rapidfuzz import fuzz, process
+
+REPO_ROOT = Path(__file__).resolve().parents[2]
+DEFAULT_TRUTH_TABLE = REPO_ROOT / "archives" / "normalized" / "kowel_streets_truth_table.csv"
+
+_DIACRITIC = str.maketrans(
+    {
+        "ą": "a",
+        "ć": "c",
+        "ę": "e",
+        "ł": "l",
+        "ń": "n",
+        "ó": "o",
+        "ś": "s",
+        "ź": "z",
+        "ż": "z",
+        "Ą": "A",
+        "Ć": "C",
+        "Ę": "E",
+        "Ł": "L",
+        "Ń": "N",
+        "Ó": "O",
+        "Ś": "S",
+        "Ź": "Z",
+        "Ż": "Z",
+    }
+)
+
+
+def fold_name(s: str) -> str:
+    s = (s or "").strip().translate(_DIACRITIC)
+    s = unicodedata.normalize("NFKD", s)
+    s = "".join(c for c in s if not unicodedata.combining(c))
+    s = s.lower()
+    s = re.sub(r"^(ul\.?|ulica|al\.?|aleja|pl\.?|plac)\s+", "", s)
+    s = re.sub(r"[^a-z0-9\s\-]", " ", s)
+    s = re.sub(r"\s+", " ", s).strip()
+    return s
+
+
+def load_truth_table(path: Path | None = None) -> pd.DataFrame:
+    path = path or DEFAULT_TRUTH_TABLE
+    df = pd.read_csv(path)
+    if "street_name" not in df.columns:
+        raise ValueError(f"Truth table missing street_name column: {path}")
+    return df
+
+
+def candidate_names(df: pd.DataFrame, include_1917: bool = False) -> list[str]:
+    names = []
+    for name in df["street_name"].astype(str):
+        if not include_1917 and name.endswith("(1917)"):
+            continue
+        names.append(name)
+    # unique preserve order
+    seen = set()
+    out = []
+    for n in names:
+        if n not in seen:
+            seen.add(n)
+            out.append(n)
+    return out
+
+
+def run_ocr(reader, image: np.ndarray, min_conf: float = 0.2) -> tuple[str, list[dict]]:
+    """Run EasyOCR; return joined text and per-box details.
+
+    ``image`` may be gray or BGR. EasyOCR expects RGB or gray ndarray.
+    """
+    if image.ndim == 2:
+        rgb = image
+    else:
+        # assume BGR from OpenCV
+        import cv2
+
+        rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+
+    results = reader.readtext(rgb)
+    parts: list[str] = []
+    details: list[dict] = []
+    for bbox, text, conf in results:
+        conf_f = float(conf)
+        details.append({"text": text, "confidence": conf_f, "bbox": bbox})
+        if conf_f >= min_conf and text.strip():
+            parts.append(text.strip())
+    joined = " ".join(parts).strip()
+    return joined, details
+
+
+def rank_streets(
+    ocr_text: str,
+    candidates: list[str],
+    truth_df: pd.DataFrame,
+    top_n: int = 10,
+) -> pd.DataFrame:
+    """Fuzzy-match OCR text against candidate street names; return top_n rows."""
+    query = fold_name(ocr_text)
+    if not query:
+        # empty OCR → return empty ranked frame with schema
+        return pd.DataFrame(
+            columns=[
+                "rank",
+                "street_name",
+                "match_pct",
+                "ocr_text",
+                "year_ranges",
+                "exists_today",
+                "same_as",
+                "method",
+            ]
+        )
+
+    folded_map = {name: fold_name(name) for name in candidates}
+    # rapidfuzz extract against folded values, then map back
+    folded_list = list(folded_map.values())
+    # unique folded → prefer first original
+    fold_to_name: dict[str, str] = {}
+    for name, f in folded_map.items():
+        fold_to_name.setdefault(f, name)
+
+    matches = process.extract(
+        query,
+        list(fold_to_name.keys()),
+        scorer=fuzz.WRatio,
+        limit=max(top_n * 3, top_n),
+    )
+
+    meta = truth_df.drop_duplicates(subset=["street_name"]).set_index("street_name")
+    rows = []
+    seen_names = set()
+    for folded, score, _ in matches:
+        name = fold_to_name[folded]
+        if name in seen_names:
+            continue
+        seen_names.add(name)
+        info = meta.loc[name] if name in meta.index else None
+        rows.append(
+            {
+                "rank": len(rows) + 1,
+                "street_name": name,
+                "match_pct": round(float(score), 1),
+                "ocr_text": ocr_text,
+                "year_ranges": "" if info is None else info.get("year_ranges", ""),
+                "exists_today": "" if info is None else info.get("exists_today", ""),
+                "same_as": "" if info is None else info.get("same_as", ""),
+                "method": "easyocr",
+            }
+        )
+        if len(rows) >= top_n:
+            break
+
+    return pd.DataFrame(rows)
+
+========================================================================
+FILE: ca_ga_rank.py
+========================================================================
+"""CA ink cleanup + GA / score-all ranking against the street truth table.
+
+Designed for degraded map labels: cellular automata cleans binary ink;
+a genetic algorithm (or exhaustive score-all) searches the closed candidate
+set using 1D projection fitness, length priors, optional OCR and known chars.
+"""
+
+from __future__ import annotations
+
+import unicodedata
+from dataclasses import dataclass
+
+import cv2
+import numpy as np
+import pandas as pd
+from rapidfuzz import fuzz
+
+# Relative character width weights for synthetic 1D profiles (map-font-ish).
+_CHAR_WIDTH = {
+    "i": 0.45,
+    "j": 0.5,
+    "l": 0.45,
+    "t": 0.55,
+    "f": 0.55,
+    "r": 0.6,
+    "c": 0.7,
+    "s": 0.7,
+    "z": 0.7,
+    "e": 0.75,
+    "a": 0.8,
+    "o": 0.85,
+    "n": 0.85,
+    "u": 0.85,
+    "h": 0.85,
+    "k": 0.85,
+    "b": 0.85,
+    "d": 0.85,
+    "p": 0.85,
+    "g": 0.9,
+    "q": 0.9,
+    "y": 0.85,
+    "v": 0.8,
+    "x": 0.8,
+    "m": 1.25,
+    "w": 1.3,
+    "ł": 0.5,
+    "ń": 0.85,
+    "ś": 0.7,
+    "ć": 0.7,
+    "ź": 0.7,
+    "ż": 0.75,
+    "ó": 0.85,
+    "ą": 0.85,
+    "ę": 0.8,
+    " ": 0.35,
+    "-": 0.4,
+    ".": 0.35,
+}
+
+
+def _fold(s: str) -> str:
+    s = (s or "").strip().lower()
+    s = unicodedata.normalize("NFKD", s)
+    s = "".join(c for c in s if not unicodedata.combining(c))
+    return s
+
+
+def binarize_ink(gray_or_bgr: np.ndarray, force_invert: bool | None = None) -> np.ndarray:
+    """Return uint8 binary image with ink=1, background=0."""
+    if gray_or_bgr.ndim == 3:
+        gray = cv2.cvtColor(gray_or_bgr, cv2.COLOR_BGR2GRAY)
+    else:
+        gray = gray_or_bgr
+    blur = cv2.GaussianBlur(gray, (3, 3), 0)
+    _, bw = cv2.threshold(blur, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+    # Decide polarity: ink usually darker → fewer ink pixels if we take dark as ink
+    dark_as_ink = (bw == 0).astype(np.uint8)
+    light_as_ink = (bw == 255).astype(np.uint8)
+    if force_invert is True:
+        ink = light_as_ink
+    elif force_invert is False:
+        ink = dark_as_ink
+    else:
+        # Prefer the polarity with a moderate ink fraction (labels are sparse)
+        def score(arr: np.ndarray) -> float:
+            frac = float(arr.mean())
+            return -abs(frac - 0.18)
+
+        ink = dark_as_ink if score(dark_as_ink) >= score(light_as_ink) else light_as_ink
+    return ink
+
+
+def ca_cleanup(binary: np.ndarray, steps: int = 3) -> np.ndarray:
+    """Totalistic CA: kill isolated ink, birth into dense neighborhoods."""
+    grid = (binary > 0).astype(np.uint8)
+    if steps <= 0:
+        return grid
+    kernel = np.array([[1, 1, 1], [1, 0, 1], [1, 1, 1]], dtype=np.uint8)
+    for _ in range(int(steps)):
+        neighbors = cv2.filter2D(grid, -1, kernel, borderType=cv2.BORDER_REPLICATE)
+        die = (grid == 1) & (neighbors < 2)
+        birth = (grid == 0) & (neighbors >= 5)
+        grid = grid.copy()
+        grid[die] = 0
+        grid[birth] = 1
+    return grid
+
+
+def ink_bbox_width(binary: np.ndarray) -> float:
+    ys, xs = np.where(binary > 0)
+    if len(xs) == 0:
+        return 0.0
+    return float(xs.max() - xs.min() + 1)
+
+
+def horizontal_projection(binary: np.ndarray, length: int = 128) -> np.ndarray:
+    """Column ink sums over the ink bbox, resampled to ``length``, L2-normalized."""
+    ys, xs = np.where(binary > 0)
+    if len(xs) == 0:
+        return np.zeros(length, dtype=np.float64)
+    x0, x1 = int(xs.min()), int(xs.max()) + 1
+    y0, y1 = int(ys.min()), int(ys.max()) + 1
+    crop = binary[y0:y1, x0:x1]
+    proj = crop.sum(axis=0).astype(np.float64)
+    if proj.size < 2:
+        out = np.zeros(length, dtype=np.float64)
+        out[0] = 1.0
+        return out
+    # resample
+    xp = np.linspace(0, 1, num=proj.size)
+    xq = np.linspace(0, 1, num=length)
+    resampled = np.interp(xq, xp, proj)
+    n = np.linalg.norm(resampled)
+    if n < 1e-9:
+        return np.zeros(length, dtype=np.float64)
+    return resampled / n
+
+
+def _char_w(ch: str) -> float:
+    cl = ch.lower()
+    if cl in _CHAR_WIDTH:
+        return _CHAR_WIDTH[cl]
+    folded = _fold(ch)
+    if folded and folded[0] in _CHAR_WIDTH:
+        return _CHAR_WIDTH[folded[0]]
+    return 0.8
+
+
+def synthetic_projection(name: str, length: int = 128) -> np.ndarray:
+    """Build a crude 1D ink profile from character width weights."""
+    if not name:
+        return np.zeros(length, dtype=np.float64)
+    weights = [_char_w(ch) for ch in name]
+    total = sum(weights) or 1.0
+    profile = np.zeros(length, dtype=np.float64)
+    cursor = 0.0
+    for w in weights:
+        frag = w / total
+        a = int(round(cursor * length))
+        b = int(round((cursor + frag) * length))
+        b = max(b, a + 1)
+        b = min(b, length)
+        # hump per glyph
+        for i in range(a, b):
+            t = (i - a + 0.5) / max(b - a, 1)
+            profile[i] += 0.35 + 0.65 * np.sin(np.pi * min(max(t, 0.0), 1.0))
+        cursor += frag
+    n = np.linalg.norm(profile)
+    if n < 1e-9:
+        return profile
+    return profile / n
+
+
+def warp_projection(profile: np.ndarray, scale: float, x_shift: float) -> np.ndarray:
+    """Scale and shift a 1D profile (pad/crop), re-normalize."""
+    n = profile.size
+    scale = float(np.clip(scale, 0.7, 1.3))
+    new_len = max(8, int(round(n * scale)))
+    xp = np.linspace(0, 1, num=n)
+    xq = np.linspace(0, 1, num=new_len)
+    scaled = np.interp(xq, xp, profile)
+    # place into buffer of size n with fractional shift
+    out = np.zeros(n, dtype=np.float64)
+    shift_px = int(round(x_shift * n))
+    src_a = max(0, -shift_px)
+    dst_a = max(0, shift_px)
+    length = min(new_len - src_a, n - dst_a)
+    if length > 0:
+        # resample scaled into contact region
+        piece = scaled[src_a : src_a + length]
+        if piece.size != length:
+            piece = np.interp(
+                np.linspace(0, 1, length),
+                np.linspace(0, 1, max(piece.size, 1)),
+                piece if piece.size else np.zeros(1),
+            )
+        out[dst_a : dst_a + length] = piece[:length]
+    norm = np.linalg.norm(out)
+    if norm < 1e-9:
+        return out
+    return out / norm
+
+
+def cosine(a: np.ndarray, b: np.ndarray) -> float:
+    na, nb = np.linalg.norm(a), np.linalg.norm(b)
+    if na < 1e-9 or nb < 1e-9:
+        return 0.0
+    return float(np.dot(a, b) / (na * nb))
+
+
+def length_score(name: str, ink_width: float, px_per_char: float = 14.0) -> float:
+    if ink_width <= 1 or not name:
+        return 0.0
+    expected = max(len(name), 1) * px_per_char
+    ratio = ink_width / expected
+    # peak at 1.0; half-score at ~0.5x or 2x
+    return float(np.exp(-0.5 * ((ratio - 1.0) / 0.35) ** 2))
+
+
+def known_char_score(name: str, known: str) -> float:
+    chars = [c for c in _fold(known) if c.isalnum()]
+    if not chars:
+        return 0.5  # neutral
+    folded = _fold(name)
+    hits = sum(1 for c in chars if c in folded)
+    return hits / len(chars)
+
+
+def ocr_score(name: str, ocr_text: str) -> float:
+    if not ocr_text or not ocr_text.strip():
+        return 0.0
+    return float(fuzz.WRatio(_fold(ocr_text), _fold(name))) / 100.0
+
+
+@dataclass
+class FitnessWeights:
+    projection: float = 0.45
+    length: float = 0.25
+    ocr: float = 0.20
+    known: float = 0.10
+
+
+def fitness(
+    name: str,
+    observed_proj: np.ndarray,
+    ink_width: float,
+    ocr_text: str = "",
+    known_chars: str = "",
+    scale: float = 1.0,
+    x_shift: float = 0.0,
+    weights: FitnessWeights | None = None,
+    px_per_char: float = 14.0,
+) -> float:
+    w = weights or FitnessWeights()
+    # renormalize if OCR empty → push weight to projection/length
+    wp, wl, wo, wk = w.projection, w.length, w.ocr, w.known
+    if not (ocr_text or "").strip():
+        wp += wo * 0.6
+        wl += wo * 0.4
+        wo = 0.0
+    if not known_chars.strip():
+        wp += wk * 0.5
+        wl += wk * 0.5
+        wk = 0.0
+    total_w = wp + wl + wo + wk or 1.0
+    synth = synthetic_projection(name, length=observed_proj.size)
+    synth = warp_projection(synth, scale, x_shift)
+    s_proj = cosine(observed_proj, synth)
+    s_len = length_score(name, ink_width, px_per_char=px_per_char)
+    s_ocr = ocr_score(name, ocr_text)
+    s_known = known_char_score(name, known_chars)
+    return (wp * s_proj + wl * s_len + wo * s_ocr + wk * s_known) / total_w
+
+
+@dataclass
+class Individual:
+    name_idx: int
+    scale: float = 1.0
+    x_shift: float = 0.0
+    score: float = 0.0
+
+
+def _tournament(pop: list[Individual], k: int = 3, rng: np.random.Generator | None = None) -> Individual:
+    rng = rng or np.random.default_rng()
+    picks = [pop[i] for i in rng.choice(len(pop), size=min(k, len(pop)), replace=False)]
+    return max(picks, key=lambda ind: ind.score)
+
+
+def run_ga(
+    candidates: list[str],
+    observed_proj: np.ndarray,
+    ink_width: float,
+    ocr_text: str = "",
+    known_chars: str = "",
+    pop_size: int = 40,
+    generations: int = 25,
+    elite: int = 4,
+    mutation_rate: float = 0.15,
+    seed: int = 42,
+) -> list[Individual]:
+    """Evolve name index + scale/shift; return final population sorted by score."""
+    rng = np.random.default_rng(seed)
+    n = len(candidates)
+    if n == 0:
+        return []
+
+    def eval_ind(ind: Individual) -> Individual:
+        ind.score = fitness(
+            candidates[ind.name_idx],
+            observed_proj,
+            ink_width,
+            ocr_text=ocr_text,
+            known_chars=known_chars,
+            scale=ind.scale,
+            x_shift=ind.x_shift,
+        )
+        return ind
+
+    pop = [
+        eval_ind(
+            Individual(
+                name_idx=int(rng.integers(0, n)),
+                scale=float(rng.uniform(0.85, 1.15)),
+                x_shift=float(rng.uniform(-0.1, 0.1)),
+            )
+        )
+        for _ in range(pop_size)
+    ]
+
+    for _ in range(generations):
+        pop.sort(key=lambda ind: ind.score, reverse=True)
+        next_pop = [Individual(p.name_idx, p.scale, p.x_shift, p.score) for p in pop[:elite]]
+        while len(next_pop) < pop_size:
+            a, b = _tournament(pop, rng=rng), _tournament(pop, rng=rng)
+            child = Individual(
+                name_idx=a.name_idx if rng.random() < 0.5 else b.name_idx,
+                scale=0.5 * (a.scale + b.scale),
+                x_shift=0.5 * (a.x_shift + b.x_shift),
+            )
+            if rng.random() < mutation_rate:
+                child.name_idx = int(rng.integers(0, n))
+            if rng.random() < mutation_rate:
+                child.scale = float(np.clip(child.scale + rng.normal(0, 0.08), 0.75, 1.25))
+            if rng.random() < mutation_rate:
+                child.x_shift = float(np.clip(child.x_shift + rng.normal(0, 0.05), -0.15, 0.15))
+            next_pop.append(eval_ind(child))
+        pop = next_pop
+
+    pop.sort(key=lambda ind: ind.score, reverse=True)
+    return pop
+
+
+def score_all(
+    candidates: list[str],
+    observed_proj: np.ndarray,
+    ink_width: float,
+    ocr_text: str = "",
+    known_chars: str = "",
+) -> list[tuple[str, float]]:
+    scored = [
+        (
+            name,
+            fitness(
+                name,
+                observed_proj,
+                ink_width,
+                ocr_text=ocr_text,
+                known_chars=known_chars,
+            ),
+        )
+        for name in candidates
+    ]
+    scored.sort(key=lambda x: x[1], reverse=True)
+    return scored
+
+
+def prepare_ink(
+    image: np.ndarray,
+    ca_steps: int = 3,
+    force_invert: bool | None = None,
+) -> tuple[np.ndarray, np.ndarray, float]:
+    """Return (binary_after_ca, projection, ink_width)."""
+    binary0 = binarize_ink(image, force_invert=force_invert)
+    binary = ca_cleanup(binary0, steps=ca_steps)
+    width = ink_bbox_width(binary)
+    proj = horizontal_projection(binary)
+    return binary, proj, width
+
+
+def rank_ca_ga(
+    image: np.ndarray,
+    candidates: list[str],
+    truth_df: pd.DataFrame,
+    *,
+    ocr_text: str = "",
+    known_chars: str = "",
+    ca_steps: int = 3,
+    use_ga: bool = True,
+    top_n: int = 10,
+    force_invert: bool | None = None,
+) -> tuple[pd.DataFrame, np.ndarray]:
+    """Rank candidates; return (results_df, ca_binary_preview)."""
+    binary, proj, width = prepare_ink(image, ca_steps=ca_steps, force_invert=force_invert)
+    px_per_char = max(width / 8.0, 8.0) if width else 14.0
+
+    if use_ga and candidates:
+        pop = run_ga(
+            candidates,
+            proj,
+            width,
+            ocr_text=ocr_text,
+            known_chars=known_chars,
+        )
+        # Keep best fitness per name across the population (scale/shift genes)
+        scored_map: dict[str, float] = {}
+        for ind in pop:
+            name = candidates[ind.name_idx]
+            sc = fitness(
+                name,
+                proj,
+                width,
+                ocr_text=ocr_text,
+                known_chars=known_chars,
+                scale=ind.scale,
+                x_shift=ind.x_shift,
+                px_per_char=px_per_char,
+            )
+            if name not in scored_map or sc > scored_map[name]:
+                scored_map[name] = sc
+        scored = sorted(scored_map.items(), key=lambda x: x[1], reverse=True)
+    else:
+        # exhaustive with default scale/shift but length-aware px_per_char
+        scored = []
+        for name in candidates:
+            sc = fitness(
+                name,
+                proj,
+                width,
+                ocr_text=ocr_text,
+                known_chars=known_chars,
+                px_per_char=px_per_char,
+            )
+            scored.append((name, sc))
+        scored.sort(key=lambda x: x[1], reverse=True)
+
+    meta = truth_df.drop_duplicates(subset=["street_name"]).set_index("street_name")
+    rows = []
+    for name, sc in scored[:top_n]:
+        info = meta.loc[name] if name in meta.index else None
+        rows.append(
+            {
+                "rank": len(rows) + 1,
+                "street_name": name,
+                "match_pct": round(float(sc) * 100.0, 1),
+                "ocr_text": ocr_text,
+                "year_ranges": "" if info is None else info.get("year_ranges", ""),
+                "exists_today": "" if info is None else info.get("exists_today", ""),
+                "same_as": "" if info is None else info.get("same_as", ""),
+                "method": "ca_ga" if use_ga else "ca_score_all",
+            }
+        )
+    return pd.DataFrame(rows), binary
+
+========================================================================
+FILE: app.py
+========================================================================
+"""Streamlit app: draw under a map street name → deskew → transform → OCR → top-10 matches."""
+
+from __future__ import annotations
+
+import io
+from pathlib import Path
+
+import cv2
+import numpy as np
+import pandas as pd
+import streamlit as st
+from streamlit_drawable_canvas import st_canvas
+
+from geometry import (
+    PrepTransforms,
+    Viewport,
+    apply_prep_transforms,
+    band_to_fabric_rect,
+    canvas_stroke_to_baseline,
+    deskew_band,
+    fabric_rect_to_baseline,
+    make_viewport_image,
+    overlay_band,
+    preprocess_for_ocr,
+    translate_baseline,
+)
+from ca_ga_rank import rank_ca_ga
+from map_nav import bounds_to_viewport, build_image_map, full_image_viewport
+from ocr_rank import candidate_names, load_truth_table, rank_streets, run_ocr
+
+REPO_ROOT = Path(__file__).resolve().parents[2]
+MAX_CANVAS_WIDTH = 1100
+MAX_CANVAS_HEIGHT = 900
+NAV_WIDTH = 900
+NAV_HEIGHT = 650
+
+
+st.set_page_config(page_title="Kowel street-name OCR", layout="wide")
+st.title("Kowel street-name OCR")
+st.caption(
+    "Navigate with the mouse wheel (zoom) and middle-mouse drag (pan), lock the view, "
+    "draw a baseline under a street label, then transform + recognize."
+)
+
+
+def _init_state():
+    defaults = {
+        "baseline": None,
+        "deskewed_raw": None,
+        "deskewed_prep": None,
+        "prep_rot90": 0,
+        "prep_fine_deg": 0.0,
+        "prep_flip_h": False,
+        "prep_flip_v": False,
+        "prep_invert": False,
+        "ui_mode": "Navigate",  # Navigate | Draw
+        "pending_ui_mode": None,  # applied before the radio widget on next run
+        "locked_viewport": None,  # Viewport | None
+        "nav_live_viewport": None,
+        "nav_center": None,
+        "nav_zoom": None,
+        "nav_image_id": None,
+        "draw_tool": "Draw baseline",
+        "band_height_px": 36.0,
+        "band_canvas_json": None,
+        "band_seed_token": None,
+        "ocr_text": "",
+        "ocr_details": [],
+        "top10": None,
+        "ca_binary": None,
+        "review_log": [],
+    }
+    for k, v in defaults.items():
+        if k not in st.session_state:
+            st.session_state[k] = v
+
+
+def _reset_transforms():
+    st.session_state.prep_rot90 = 0
+    st.session_state.prep_fine_deg = 0.0
+    st.session_state.prep_flip_h = False
+    st.session_state.prep_flip_v = False
+    st.session_state.prep_invert = False
+
+
+def _clear_selection():
+    st.session_state.baseline = None
+    st.session_state.deskewed_raw = None
+    st.session_state.deskewed_prep = None
+    st.session_state.ocr_text = ""
+    st.session_state.ocr_details = []
+    st.session_state.top10 = None
+    st.session_state.ca_binary = None
+    st.session_state.band_canvas_json = None
+    st.session_state.band_seed_token = None
+    _reset_transforms()
+
+
+def _request_ui_mode(mode: str):
+    """Queue a mode change for the next run (before the radio widget mounts)."""
+    st.session_state.pending_ui_mode = mode
+
+
+def _apply_pending_ui_mode():
+    pending = st.session_state.get("pending_ui_mode")
+    if pending in ("Navigate", "Draw"):
+        st.session_state.ui_mode = pending
+        st.session_state.pending_ui_mode = None
+
+
+def _current_transforms() -> PrepTransforms:
+    return PrepTransforms(
+        rot90=int(st.session_state.prep_rot90) % 4,
+        fine_deg=float(st.session_state.prep_fine_deg),
+        flip_h=bool(st.session_state.prep_flip_h),
+        flip_v=bool(st.session_state.prep_flip_v),
+        invert=bool(st.session_state.prep_invert),
+    )
+
+
+_init_state()
+_apply_pending_ui_mode()
+
+
+@st.cache_data
+def _cached_truth_table():
+    return load_truth_table()
+
+
+@st.cache_resource
+def _cached_reader():
+    import easyocr
+
+    return easyocr.Reader(["pl", "en"], gpu=False)
+
+
+def load_upload(upload) -> np.ndarray:
+    data = np.frombuffer(upload.getvalue(), dtype=np.uint8)
+    bgr = cv2.imdecode(data, cv2.IMREAD_COLOR)
+    if bgr is None:
+        raise ValueError("Could not decode image")
+    return bgr
+
+
+with st.sidebar:
+    st.header("1. Image")
+    upload = st.file_uploader("Map image", type=["png", "jpg", "jpeg", "tif", "tiff", "webp"])
+    st.subheader("Mode")
+    st.radio(
+        "Workspace",
+        options=["Navigate", "Draw"],
+        key="ui_mode",
+        help="Navigate: wheel zoom + middle-button pan. Draw: lock a view, then draw the baseline.",
+    )
+    st.caption("Wheel = zoom · Middle-drag = pan · Left-drag = pan (Leaflet)")
+    if st.button("Unlock view (back to Navigate)", use_container_width=True):
+        st.session_state.locked_viewport = None
+        _clear_selection()
+        _request_ui_mode("Navigate")
+        st.rerun()
+
+    st.header("2. Band")
+    band_height = st.slider(
+        "Band height (px, full-res)",
+        min_value=8,
+        max_value=200,
+        value=int(st.session_state.get("band_height_px", 36)),
+        step=1,
+        help="Initial height when creating the band. After you grab/resize the box, height follows the box.",
+    )
+    st.session_state.band_height_px = float(band_height)
+    text_above = st.toggle("Text is above the baseline", value=True)
+    nudge_x = st.slider("Nudge X (px)", min_value=-80, max_value=80, value=0, step=1)
+    nudge_y = st.slider("Nudge Y (px)", min_value=-80, max_value=80, value=0, step=1)
+    include_1917 = st.toggle("Include 1917 occupation names in candidates", value=False)
+    st.header("3. Recognition")
+    ranker_mode = st.selectbox(
+        "Ranker",
+        options=[
+            "EasyOCR fuzzy",
+            "CA+GA ink",
+            "Blend both",
+        ],
+        help="CA+GA: cellular-automata ink cleanup + genetic search over the truth table. "
+        "Best when letters are degraded and EasyOCR returns little.",
+    )
+    ca_steps = st.slider("CA cleanup steps", min_value=0, max_value=8, value=3, step=1)
+    score_all = st.checkbox(
+        "Score all candidates (skip GA)",
+        value=False,
+        help="Exhaustive fitness over the truth table; often stabler than GA for ~160 names.",
+    )
+    known_chars = st.text_input(
+        "Known characters (optional)",
+        value="",
+        help="Letters you can read on the crop, e.g. pkw — boosts names containing them.",
+    )
+    run_btn = st.button("Run recognition", type="primary", use_container_width=True)
+    if st.button("Clear baseline / results", use_container_width=True):
+        _clear_selection()
+        st.rerun()
+
+if upload is None:
+    st.info("Upload a map image to begin. Tip: use the **line** tool and draw under the street name.")
+    sample = REPO_ROOT / "tutorials" / "streetname.PNG"
+    if sample.exists():
+        st.write(f"Sample image available at `{sample.relative_to(REPO_ROOT).as_posix()}`.")
+    st.stop()
+
+try:
+    image_bgr = load_upload(upload)
+except ValueError as exc:
+    st.error(str(exc))
+    st.stop()
+
+img_h, img_w = image_bgr.shape[:2]
+ui_mode = st.session_state.ui_mode
+
+if ui_mode == "Navigate":
+    st.subheader("Step 1 — Navigate map")
+    st.write(
+        "**Mouse wheel** zooms · **middle-mouse drag** pans (left-drag also pans). "
+        "Frame the street name, then lock the view for drawing."
+    )
+    # Reset stored camera when a new image is uploaded
+    image_id = f"{upload.name}:{img_w}x{img_h}:{len(upload.getvalue())}"
+    if st.session_state.nav_image_id != image_id:
+        st.session_state.nav_image_id = image_id
+        st.session_state.nav_center = None
+        st.session_state.nav_zoom = None
+        st.session_state.nav_live_viewport = None
+        st.session_state.locked_viewport = None
+
+    fmap, nav_scale, nav_w, nav_h = build_image_map(
+        image_bgr,
+        width=NAV_WIDTH,
+        height=NAV_HEIGHT,
+        center=st.session_state.nav_center,
+        zoom=st.session_state.nav_zoom,
+    )
+    from streamlit_folium import st_folium
+
+    nav_kwargs = dict(
+        width=NAV_WIDTH,
+        height=NAV_HEIGHT,
+        returned_objects=["bounds", "zoom", "center"],
+        key=f"nav_{upload.name}_{nav_w}x{nav_h}",
+    )
+    if st.session_state.nav_center is not None:
+        c = st.session_state.nav_center
+        nav_kwargs["center"] = (c[0], c[1])
+    if st.session_state.nav_zoom is not None:
+        nav_kwargs["zoom"] = int(round(float(st.session_state.nav_zoom)))
+    nav_out = st_folium(fmap, **nav_kwargs)
+    live_vp = None
+    if nav_out:
+        if nav_out.get("center") is not None:
+            c = nav_out["center"]
+            if isinstance(c, dict):
+                st.session_state.nav_center = [c.get("lat"), c.get("lng")]
+            elif isinstance(c, (list, tuple)) and len(c) >= 2:
+                st.session_state.nav_center = [c[0], c[1]]
+        if nav_out.get("zoom") is not None:
+            st.session_state.nav_zoom = float(nav_out["zoom"])
+        if nav_out.get("bounds"):
+            live_vp = bounds_to_viewport(
+                nav_out["bounds"],
+                nav_scale=nav_scale,
+                img_w=img_w,
+                img_h=img_h,
+                max_w=MAX_CANVAS_WIDTH,
+                max_h=MAX_CANVAS_HEIGHT,
+            )
+            st.session_state.nav_live_viewport = live_vp
+    if live_vp is None:
+        live_vp = st.session_state.nav_live_viewport
+
+    if live_vp is not None:
+        st.caption(
+            f"Visible ≈ ({live_vp.x:.0f},{live_vp.y:.0f}) "
+            f"{live_vp.w:.0f}×{live_vp.h:.0f}px full-res"
+        )
+    else:
+        st.caption("Move/zoom the map once so bounds are reported.")
+
+    lock_col1, lock_col2 = st.columns([1, 1])
+    with lock_col1:
+        if st.button("Lock view for drawing", type="primary", use_container_width=True):
+            vp = live_vp or full_image_viewport(
+                img_w, img_h, max_w=MAX_CANVAS_WIDTH, max_h=MAX_CANVAS_HEIGHT
+            )
+            st.session_state.locked_viewport = vp
+            _clear_selection()
+            _request_ui_mode("Draw")
+            st.rerun()
+    with lock_col2:
+        if st.button("Lock whole map", use_container_width=True):
+            st.session_state.locked_viewport = full_image_viewport(
+                img_w, img_h, max_w=MAX_CANVAS_WIDTH, max_h=MAX_CANVAS_HEIGHT
+            )
+            _clear_selection()
+            _request_ui_mode("Draw")
+            st.rerun()
+
+else:
+    # Draw mode
+    locked: Viewport | None = st.session_state.locked_viewport
+    if locked is None:
+        st.warning("No locked view — switching to Navigate.")
+        _request_ui_mode("Navigate")
+        st.rerun()
+
+    pil_bg = make_viewport_image(image_bgr, locked)
+    disp_w, disp_h = locked.disp_w, locked.disp_h
+    scale_view = locked.scale
+    origin_xy = (locked.x, locked.y)
+
+    col_canvas, col_map = st.columns([1.4, 1])
+    with col_canvas:
+        st.subheader("Step 1 — Place the band")
+        draw_tool = st.radio(
+            "Tool",
+            options=["Draw baseline", "Move band"],
+            horizontal=True,
+            key="draw_tool",
+            help="Draw a line under the name, then switch to Move band to drag/resize/rotate the orange-green box.",
+        )
+        st.caption(
+            f"Locked view origin ({locked.x:.0f}, {locked.y:.0f}) · "
+            f"window {locked.w:.0f}×{locked.h:.0f}px · canvas {disp_w}×{disp_h}"
+        )
+
+        if draw_tool == "Draw baseline":
+            st.write("Use the **line** tool: drag once under the street name along its reading direction.")
+            canvas_key = (
+                f"line_{upload.name}_{disp_w}x{disp_h}_"
+                f"{locked.x:.1f}_{locked.y:.1f}_{locked.w:.1f}_{locked.h:.1f}"
+            )
+            canvas = st_canvas(
+                fill_color="rgba(0,0,0,0)",
+                stroke_width=3,
+                stroke_color="#ff8c00",
+                background_image=pil_bg,
+                update_streamlit=True,
+                height=disp_h,
+                width=disp_w,
+                drawing_mode="line",
+                key=canvas_key,
+                display_toolbar=True,
+            )
+            objects = []
+            if canvas.json_data and canvas.json_data.get("objects"):
+                objects = canvas.json_data["objects"]
+            baseline = canvas_stroke_to_baseline(
+                objects, scale=scale_view, origin_xy=origin_xy
+            )
+            if baseline is not None and baseline.length >= 2:
+                if nudge_x or nudge_y:
+                    baseline = translate_baseline(baseline, float(nudge_x), float(nudge_y))
+                st.session_state.baseline = baseline
+                # Reseed adjustable band from this baseline + slider height
+                seed = (
+                    f"{baseline.x1:.2f}:{baseline.y1:.2f}:{baseline.x2:.2f}:{baseline.y2:.2f}:"
+                    f"{band_height}:{text_above}"
+                )
+                if st.session_state.band_seed_token != seed:
+                    rect = band_to_fabric_rect(
+                        baseline,
+                        float(band_height),
+                        scale=scale_view,
+                        origin_xy=origin_xy,
+                        text_above=text_above,
+                    )
+                    st.session_state.band_canvas_json = {
+                        "version": "4.4.0",
+                        "objects": [rect],
+                    }
+                    st.session_state.band_seed_token = seed
+                    st.session_state.band_height_px = float(band_height)
+                st.success(
+                    f"Baseline {baseline.length:.0f}px · {baseline.angle_deg:.1f}° — "
+                    f"switch to **Move band** to grab the box."
+                )
+            elif st.session_state.baseline is None:
+                st.warning("No baseline yet — draw a line under the label.")
+
+        else:
+            # Move / transform band
+            if st.session_state.baseline is None:
+                st.warning("Draw a baseline first, then come back to Move band.")
+            else:
+                st.write(
+                    "Click the green/orange box, then **drag** to move, use handles to "
+                    "**resize**, or rotate. Left-drag empty space does nothing — grab the box."
+                )
+                if st.session_state.band_canvas_json is None:
+                    rect = band_to_fabric_rect(
+                        st.session_state.baseline,
+                        float(st.session_state.band_height_px),
+                        scale=scale_view,
+                        origin_xy=origin_xy,
+                        text_above=text_above,
+                    )
+                    st.session_state.band_canvas_json = {
+                        "version": "4.4.0",
+                        "objects": [rect],
+                    }
+
+                canvas = st_canvas(
+                    fill_color="rgba(0, 220, 0, 0.25)",
+                    stroke_width=2,
+                    stroke_color="#ff8c00",
+                    background_image=pil_bg,
+                    update_streamlit=True,
+                    height=disp_h,
+                    width=disp_w,
+                    drawing_mode="transform",
+                    initial_drawing=st.session_state.band_canvas_json,
+                    key=(
+                        f"band_{upload.name}_{disp_w}x{disp_h}_"
+                        f"{locked.x:.1f}_{locked.y:.1f}_{st.session_state.band_seed_token}"
+                    ),
+                    display_toolbar=True,
+                )
+                if canvas.json_data and canvas.json_data.get("objects"):
+                    st.session_state.band_canvas_json = canvas.json_data
+                    # Prefer named band rect; else last rect
+                    rect_obj = None
+                    for obj in canvas.json_data["objects"]:
+                        if obj.get("type") == "rect":
+                            rect_obj = obj
+                            if obj.get("name") == "street_band":
+                                break
+                    parsed = (
+                        fabric_rect_to_baseline(
+                            rect_obj,
+                            scale=scale_view,
+                            origin_xy=origin_xy,
+                            text_above=text_above,
+                        )
+                        if rect_obj
+                        else None
+                    )
+                    if parsed is not None:
+                        baseline, height_full = parsed
+                        if nudge_x or nudge_y:
+                            baseline = translate_baseline(
+                                baseline, float(nudge_x), float(nudge_y)
+                            )
+                        st.session_state.baseline = baseline
+                        st.session_state.band_height_px = max(2.0, float(height_full))
+                        st.success(
+                            f"Band placed · length {baseline.length:.0f}px · "
+                            f"height {st.session_state.band_height_px:.0f}px · "
+                            f"angle {baseline.angle_deg:.1f}°"
+                        )
+
+                if st.button("Reset band from baseline + height slider"):
+                    st.session_state.band_seed_token = None
+                    st.session_state.band_canvas_json = None
+                    st.rerun()
+
+    with col_map:
+        st.subheader("Band preview")
+        baseline = st.session_state.baseline
+        height_eff = float(st.session_state.band_height_px)
+        if baseline is None:
+            st.info("Waiting for baseline…")
+        else:
+            try:
+                result = deskew_band(
+                    image_bgr,
+                    baseline,
+                    height=height_eff,
+                    text_above=text_above,
+                )
+                st.session_state.deskewed_raw = result.image
+                overlay = overlay_band(image_bgr, result.corners)
+                xs = result.corners[:, 0]
+                ys = result.corners[:, 1]
+                pad = 40
+                x0 = max(int(xs.min()) - pad, 0)
+                y0 = max(int(ys.min()) - pad, 0)
+                x1 = min(int(xs.max()) + pad, image_bgr.shape[1] - 1)
+                y1 = min(int(ys.max()) + pad, image_bgr.shape[0] - 1)
+                zoom_img = overlay[y0:y1, x0:x1]
+                st.image(
+                    cv2.cvtColor(zoom_img, cv2.COLOR_BGR2RGB),
+                    caption="Orange edge · green fill (matches the movable box)",
+                    use_column_width=True,
+                )
+            except ValueError as exc:
+                st.error(str(exc))
+                st.session_state.deskewed_raw = None
+
+if ui_mode != "Draw":
+    st.info("Lock a view (after zooming/panning) to continue to drawing, transforms, and recognition.")
+    st.stop()
+
+st.divider()
+st.subheader("Step 2 — Crop & transform (OCR input)")
+
+raw = st.session_state.deskewed_raw
+if raw is None:
+    st.info("Draw a baseline and set band height to get a deskewed crop here.")
+else:
+    st.write(
+        "Make the street name look **upright and left-to-right** before running OCR. "
+        "Transforms apply only to this crop — you do not need to redraw the baseline."
+    )
+
+    # Transform controls
+    c1, c2, c3, c4, c5, c6, c7 = st.columns(7)
+    with c1:
+        if st.button("⟲ 90°", use_container_width=True, help="Rotate 90° counter-clockwise"):
+            st.session_state.prep_rot90 = (int(st.session_state.prep_rot90) - 1) % 4
+            st.rerun()
+    with c2:
+        if st.button("⟳ 90°", use_container_width=True, help="Rotate 90° clockwise"):
+            st.session_state.prep_rot90 = (int(st.session_state.prep_rot90) + 1) % 4
+            st.rerun()
+    with c3:
+        if st.button("180°", use_container_width=True):
+            st.session_state.prep_rot90 = (int(st.session_state.prep_rot90) + 2) % 4
+            st.rerun()
+    with c4:
+        if st.button("Flip H", use_container_width=True):
+            st.session_state.prep_flip_h = not bool(st.session_state.prep_flip_h)
+            st.rerun()
+    with c5:
+        if st.button("Flip V", use_container_width=True):
+            st.session_state.prep_flip_v = not bool(st.session_state.prep_flip_v)
+            st.rerun()
+    with c6:
+        if st.button("Invert", use_container_width=True):
+            st.session_state.prep_invert = not bool(st.session_state.prep_invert)
+            st.rerun()
+    with c7:
+        if st.button("Reset", use_container_width=True, help="Clear all transforms"):
+            _reset_transforms()
+            st.rerun()
+
+    st.slider(
+        "Fine rotate (degrees)",
+        min_value=-45.0,
+        max_value=45.0,
+        step=0.5,
+        key="prep_fine_deg",
+        help="Small correction after 90° steps. Positive = counter-clockwise (OpenCV convention).",
+    )
+
+    transforms = _current_transforms()
+    transformed = apply_prep_transforms(raw, transforms)
+    # Live preview: show color transform result; OCR will CLAHE+upscale this
+    preview_rgb = (
+        cv2.cvtColor(transformed, cv2.COLOR_BGR2RGB)
+        if transformed.ndim == 3
+        else transformed
+    )
+    st.image(
+        preview_rgb,
+        caption=f"OCR input preview · {transforms.summary()}",
+        use_column_width=True,
+    )
+
+    # Keep a CLAHE preview optional so users see what OCR roughly gets
+    with st.expander("CLAHE + upscale preview (what OCR receives)"):
+        prep_preview = preprocess_for_ocr(transformed, upscale=2.0)
+        st.session_state.deskewed_prep = prep_preview
+        st.image(prep_preview, caption="Preprocessed for OCR", use_column_width=True)
+
+st.divider()
+st.subheader("Step 3 — Recognition and top-10 review")
+
+if run_btn:
+    if st.session_state.baseline is None or st.session_state.deskewed_raw is None:
+        st.error("Draw a baseline and create a crop first.")
+    else:
+        transforms = _current_transforms()
+        transformed = apply_prep_transforms(st.session_state.deskewed_raw, transforms)
+        prep = preprocess_for_ocr(transformed, upscale=2.0)
+        st.session_state.deskewed_prep = prep
+        truth = _cached_truth_table()
+        names = candidate_names(truth, include_1917=include_1917)
+        ocr_text = ""
+        details: list = []
+
+        need_ocr = ranker_mode in ("EasyOCR fuzzy", "Blend both")
+        spinner_msg = (
+            "Running EasyOCR + ranking…"
+            if need_ocr
+            else "Running CA cleanup + GA / score-all ranking…"
+        )
+        with st.spinner(spinner_msg):
+            if need_ocr:
+                reader = _cached_reader()
+                ocr_text, details = run_ocr(reader, prep)
+
+            if ranker_mode == "EasyOCR fuzzy":
+                ranked = rank_streets(ocr_text, names, truth, top_n=10)
+                st.session_state.ca_binary = None
+            else:
+                # CA+GA uses transformed crop (before CLAHE) so ink polarity stays natural
+                ca_df, ca_bin = rank_ca_ga(
+                    transformed,
+                    names,
+                    truth,
+                    ocr_text=ocr_text if ranker_mode == "Blend both" else "",
+                    known_chars=known_chars,
+                    ca_steps=int(ca_steps),
+                    use_ga=not score_all,
+                    top_n=40 if ranker_mode == "Blend both" else 10,
+                )
+                st.session_state.ca_binary = ca_bin
+                if ranker_mode == "CA+GA ink":
+                    ranked = ca_df.head(10).copy()
+                    ranked["rank"] = range(1, len(ranked) + 1)
+                else:
+                    easy_df = rank_streets(ocr_text, names, truth, top_n=40)
+                    # Blend: average normalized scores by street_name
+                    scores: dict[str, list[float]] = {}
+                    meta_rows: dict[str, dict] = {}
+                    for _, row in easy_df.iterrows():
+                        name = row["street_name"]
+                        scores.setdefault(name, []).append(float(row["match_pct"]) / 100.0)
+                        meta_rows[name] = row.to_dict()
+                    for _, row in ca_df.iterrows():
+                        name = row["street_name"]
+                        scores.setdefault(name, []).append(float(row["match_pct"]) / 100.0)
+                        meta_rows.setdefault(name, row.to_dict())
+                    blended = []
+                    for name, vals in scores.items():
+                        blended.append((name, sum(vals) / len(vals)))
+                    blended.sort(key=lambda x: x[1], reverse=True)
+                    rows = []
+                    for name, sc in blended[:10]:
+                        base = meta_rows.get(name, {})
+                        rows.append(
+                            {
+                                "rank": len(rows) + 1,
+                                "street_name": name,
+                                "match_pct": round(sc * 100.0, 1),
+                                "ocr_text": ocr_text,
+                                "year_ranges": base.get("year_ranges", ""),
+                                "exists_today": base.get("exists_today", ""),
+                                "same_as": base.get("same_as", ""),
+                                "method": "blend",
+                            }
+                        )
+                    ranked = pd.DataFrame(rows)
+
+            st.session_state.ocr_text = ocr_text
+            st.session_state.ocr_details = details
+            st.session_state.top10 = ranked
+
+if st.session_state.top10 is not None:
+    st.markdown(f"**OCR text:** `{st.session_state.ocr_text or '(empty)'}`")
+    if st.session_state.ca_binary is not None:
+        with st.expander("CA binary ink preview"):
+            preview = (st.session_state.ca_binary * 255).astype("uint8")
+            st.image(preview, caption="Ink after cellular-automata cleanup", use_column_width=True)
+    if st.session_state.ocr_details:
+        with st.expander("Raw EasyOCR boxes"):
+            st.json(
+                [
+                    {"text": d["text"], "confidence": round(d["confidence"], 3)}
+                    for d in st.session_state.ocr_details
+                ]
+            )
+
+    ranked: pd.DataFrame = st.session_state.top10
+    if ranked.empty:
+        st.warning(
+            "No ranked candidates — OCR may have returned empty text. "
+            "Try Flip/Rotate so the name reads left-to-right, or adjust band height."
+        )
+    else:
+        st.dataframe(ranked, use_container_width=True, hide_index=True)
+        choices = ranked["street_name"].tolist()
+        accepted = st.radio(
+            "Accept a name (session review only)",
+            options=["(none)"] + choices,
+            horizontal=False,
+        )
+        if accepted != "(none)" and st.button("Save acceptance to session log"):
+            st.session_state.review_log.append(
+                {
+                    "image": upload.name,
+                    "ocr_text": st.session_state.ocr_text,
+                    "accepted": accepted,
+                    "transforms": _current_transforms().summary(),
+                    "angle_deg": round(st.session_state.baseline.angle_deg, 2)
+                    if st.session_state.baseline
+                    else None,
+                }
+            )
+            st.success(f"Logged: {accepted}")
+
+if st.session_state.review_log:
+    st.subheader("Session review log")
+    log_df = pd.DataFrame(st.session_state.review_log)
+    st.dataframe(log_df, use_container_width=True, hide_index=True)
+    buf = io.StringIO()
+    log_df.to_csv(buf, index=False)
+    st.download_button(
+        "Download review log CSV",
+        buf.getvalue(),
+        file_name="street_ocr_review_log.csv",
+    )
+
+========================================================================
+FILE: main.py
+========================================================================
+def main():
+    print("Hello from street-name-ocr!")
+
+
+if __name__ == "__main__":
+    main()

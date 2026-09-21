@@ -80,7 +80,7 @@ Next, I filtered my list of words by len, and then manually checked that they ar
  'Zórawia']
 ```
 
-The challenge now is to figure out which of these is most likely. 
+The challenge now is to figure out which of these is most likely.
 
 ## Code Improvement
 
@@ -91,7 +91,7 @@ def predict_word_size(pixel_width=119):
     new_word = [[pixel_width]]
     predicted_len = model.predict(new_word)
     return predicted_len
-    
+
 def get_my_name(lengths):
     box = []
     for a in street_names:
@@ -107,11 +107,11 @@ def predict_word(pixel_width=119, word_list=street_names, chars_included=None):
     if chars_included is None:
         return by_size
     return list(filter(lambda x: all([char in x for char in chars_included]), by_size))
-    
+
 predictions = predict_word(pixel_width=119, chars_included=[])
 print(predictions)
 ```
 
 # Conclusion
 
-Hopefully this will help you in those difficult cases where you simply cannot determine anything about a string in an image but it's length in pixels. 
+Hopefully this will help you in those difficult cases where you simply cannot determine anything about a string in an image but it's length in pixels.

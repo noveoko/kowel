@@ -17,7 +17,7 @@ class REFCAM_OT_add_reference_camera(Operator):
     bl_idname = "refcam.add_reference_camera"
     bl_label = "Add Reference Camera"
     bl_options = {'REGISTER', 'UNDO'}
-    
+
     """Properties are handled at the Scene level"""
 
     def ensure_collection_exists(self, context):
@@ -30,22 +30,22 @@ class REFCAM_OT_add_reference_camera(Operator):
     def execute(self, context):
         # Get the reference collection
         ref_collection = self.ensure_collection_exists(context)
-        
+
         # Create new camera using Scene properties
         camera_data = bpy.data.cameras.new(name=context.scene.ref_cam_name)
         camera_obj = bpy.data.objects.new(context.scene.ref_cam_name, camera_data)
-        
+
         # Link camera to Reference Photos collection
         ref_collection.objects.link(camera_obj)
-        
+
         # Set as active camera
         context.scene.camera = camera_obj
-        
+
         # Align to current view
         view3d = context.space_data
         if view3d.type == 'VIEW_3D':
             camera_obj.matrix_world = view3d.region_3d.view_matrix.inverted()
-        
+
         # Try to get selected image from file browser
         selected_image = None
         for area in context.screen.areas:
@@ -66,29 +66,29 @@ class REFCAM_OT_add_reference_camera(Operator):
                     except Exception as e:
                         self.report({'WARNING'}, f"Could not load image: {str(e)}")
                         print(f"Error loading image: {str(e)}")  # Detailed error in console
-        
+
         # Add background image if one was found
         if selected_image:
             # Enable background images
             camera_data.show_background_images = True
-            
+
             # Create and configure background image
             bg = camera_data.background_images.new()
             bg.image = selected_image
             bg.alpha = context.scene.ref_cam_alpha
             bg.display_depth = 'FRONT'  # Set depth to Front
-        
+
         # Lock camera transforms if requested
         if context.scene.ref_cam_lock:
             camera_obj.lock_location = (True, True, True)
             camera_obj.lock_rotation = (True, True, True)
             camera_obj.lock_scale = (True, True, True)
-        
+
         # Select the camera object
         bpy.ops.object.select_all(action='DESELECT')
         camera_obj.select_set(True)
         context.view_layer.objects.active = camera_obj
-        
+
         self.report({'INFO'}, f"Created reference camera: {context.scene.ref_cam_name}")
         return {'FINISHED'}
 
@@ -102,23 +102,23 @@ class REFCAM_PT_main_panel(Panel):
 
     def draw(self, context):
         layout = self.layout
-        
+
         # Main operator button
         row = layout.row()
         row.scale_y = 2.0  # Make button larger
         row.operator(REFCAM_OT_add_reference_camera.bl_idname, icon='CAMERA_DATA')
-        
+
         # Settings
         box = layout.box()
         box.label(text="Settings:")
         box.prop(context.scene, "ref_cam_name")
         box.prop(context.scene, "ref_cam_lock")
         box.prop(context.scene, "ref_cam_alpha")
-        
+
         # Show current image selection status
         box = layout.box()
         box.label(text="Image Status:")
-        
+
         # Check if we have an active file browser with a selected image
         image_selected = False
         for area in context.screen.areas:
@@ -128,7 +128,7 @@ class REFCAM_PT_main_panel(Panel):
                     box.label(text=f"Selected: {params.filename}", icon='IMAGE_DATA')
                     image_selected = True
                     break
-        
+
         if not image_selected:
             box.label(text="No image selected in file browser", icon='ERROR')
 
@@ -140,7 +140,7 @@ def register():
         description="Currently selected image path",
         subtype='FILE_PATH'
     )
-    
+
     bpy.types.Scene.ref_cam_name = StringProperty(
         name="Camera Name",
         default="RefCam",
@@ -158,7 +158,7 @@ def register():
         max=1.0,
         description="Opacity of the background image"
     )
-    
+
     bpy.utils.register_class(REFCAM_OT_add_reference_camera)
     bpy.utils.register_class(REFCAM_PT_main_panel)
 
@@ -167,7 +167,7 @@ def unregister():
     del bpy.types.Scene.ref_cam_name
     del bpy.types.Scene.ref_cam_lock
     del bpy.types.Scene.ref_cam_alpha
-    
+
     bpy.utils.unregister_class(REFCAM_OT_add_reference_camera)
     bpy.utils.unregister_class(REFCAM_PT_main_panel)
 
