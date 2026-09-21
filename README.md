@@ -2,171 +2,140 @@
   <a href="images/logo_small.png"><img src="images/logo_small.png" alt="Kowel project logo"></a>
 </p>
 
-# Kowel: A Glimpse into the Past
+# Kowel / Kovel reconstruction (1918–1945)
 
-[Polish Wikipedia: Kowel](https://pl.wikipedia.org/wiki/Kowel) · [English Wikipedia: Kovel](https://en.wikipedia.org/wiki/Kovel) — (1918–1945)
+[Polish Wikipedia](https://pl.wikipedia.org/wiki/Kowel) · [English Wikipedia](https://en.wikipedia.org/wiki/Kovel) · issues: [noveoko/kowel](https://github.com/noveoko/kowel/issues)
 
-This passion project, developed by [@skilenstein](https://github.com/noveoko), aims to recreate the historic town of Kowel as it existed prior to WWII. If you encounter any errors or have suggestions, please [raise an issue](https://github.com/noveoko/kowel/issues) or submit a pull request.
+A project to reconstruct the town of Kowel (today Kovel, Ukraine) as it stood
+before WWII: streets, buildings, firms, and people, pinned to period maps and
+primary documents.
 
----
-
-## Table of Contents
-
-- [Gallery](#gallery)
-- [Google Earth Map (1919–1939)](#google-earth-map-of-kowel-19191939)
-- [Street Names and Businesses](#street-names-and-businesses)
-- [Voting Districts and Industries](#voting-districts-and-industries)
-- [Data Files](#data-files)
-- [Tools and Resources](#tools-and-resources)
-- [Related Projects](#related-projects)
-- [Datasets](#datasets)
-- [Resources for Historical Cartography](#resources-for-historical-cartography)
-- [Photos from Kowel and Nearby](#photos-from-kowel-and-nearby)
+Original code is MIT; original tables are [CC BY 4.0](LICENSE-DATA). Third-party
+scans and gazette OCR stay under their archives’ terms. See [LICENSE](LICENSE).
+Names of victims and wanted persons: [NAMES.md](NAMES.md).
+File-by-file inventory: [archives/DATA.md](archives/DATA.md).
 
 ---
+
+## Mission
+
+The unit of work is a **building on a 1939 map**. Photos, directories, and
+gazettes are evidence for that building. Automated city-scale photogrammetry
+is out of reach; the 3D model is assembled by hand, guided by a georeferenced
+street map and a closed list of attested street names.
+
+## Map
+
+The geographic spine (schematic gold-standard map, still being digitized):
+
+- [Landmark map gold standard](archives/landmark_map_gold_standard/readme.md) — digitizer, nodes/edges, georeference, snap-to-OSM, KMZ
+- [Google Earth 1919–1939 KMZ](GIS/kowel_streets15.kmz) — pre-war street names and ~130 buildings
+- [1938 Sejm voting districts](archives/landmark_map_gold_standard/voting_districts_kowel.csv) ([Polona source](https://polona.pl/item/obwieszczenie-inc-na-podstawie-art-52-ordynacji-wyborczej-dz-u-r-p-nr-47-poz,OTQyNjM5MzI/0/#info:metadata)) · [SVG](images/kowel_voting_districts.svg)
+- Building seeds: [maps/kowel_buildings.csv](maps/kowel_buildings.csv), [maps/kowel_landmarks_index.csv](maps/kowel_landmarks_index.csv), [archives/known_buildings.csv](archives/known_buildings.csv)
+
+There is not yet a single `buildings.csv` with stable ids. Use the gold-standard
+nodes plus the seeds above.
+
+## Streets
+
+Canonical list (attestation years, rename/`same_as` corridors, `exists_today`):
+
+- [archives/normalized/kowel_streets_truth_table.csv](archives/normalized/kowel_streets_truth_table.csv) · [notes](archives/normalized/kowel_streets_truth_table.md)
+
+Older name dumps (`streets.csv`, `street_names.txt`, the 1929 phone-book street
+CSV) fed that table. Prefer the truth table in new work.
+
+Rebuild after editing seeds:
+
+```bash
+python archives/build_streets_truth_table.py
+```
+
+Read rotated labels on a map scan: [apps/street_name_ocr](apps/street_name_ocr/readme.md)
+(ranks EasyOCR output against the truth table).
+
+```bash
+cd apps/street_name_ocr
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+## Buildings and evidence
+
+Planned shape (not built yet): one building registry keyed to the map, with
+photos and directory rows linked only after a human confirms them. Spec:
+[apps/image_matcher/kowel_archive_tool_spec.md](apps/image_matcher/kowel_archive_tool_spec.md).
+
+Until that exists, treat photo tools under `apps/` as experiments. Focus stacking
+is the only app with an automated test suite.
+
+## People and firms
+
+| Resource | Role |
+| --- | --- |
+| [1929 business directory](1929_business_directory.csv) ([notes](1929_business_directory.md)) | ~360+ interwar firms |
+| [1938 phone book](kowel_residents_1938.csv) | Residents and businesses |
+| [Doctors, 1920](doctors_resident_in_kowel.csv) | [Source](https://bc.wbp.lublin.pl/dlibra/publication/edition/17315) |
+| [Obwieszczenia businesses](archives/database%20of%20kowel%20crime/data/obwieszczenia_publiczne/kowel_businesses.csv) | Commercial register in Kowel (Polona OCR) |
+| [Gazeta Śledcza wanted notices](archives/database%20of%20kowel%20crime/data/kowel_criminal_database/kowel_criminal_database.csv) | City-tied police gazette rows, with preview URLs |
+| [people_living_in_Kowel.csv](archives/people_living_in_Kowel.csv) | Civil-style name list (seed) |
+
+People tables are **separate source extracts**. They do not yet share a
+`person_id`. How to cite and what not to add: [NAMES.md](NAMES.md). Full list:
+[archives/DATA.md](archives/DATA.md).
+
+### Gazette harvest
+
+From `archives/database of kowel crime/` ([folder readme](archives/database%20of%20kowel%20crime/README.md)):
+
+```bash
+uv sync
+uv run python harvest_gazeta.py --out data/kowel_criminal_database --sleep 0.35
+uv run python harvest_obwieszczenia.py --out data/obwieszczenia_publiczne --sleep 0.4
+```
+
+## How to run checks
+
+```bash
+python -m pre_commit install
+python -m pre_commit run --all-files
+```
+
+Hooks block secrets (Gitleaks, detect-secrets), huge files, and Python syntax
+errors. Config: [.pre-commit-config.yaml](.pre-commit-config.yaml).
 
 ## Gallery
 
-**Kowel "Old Town" circa 1915 / Kowel as it appeared during WWII**
-
 [<img src="kowel_1915.png" alt="Kowel Old Town circa 1915" width="45%">](kowel_1915.png)
-[<img src="images/kowel_preview.png" alt="Kowel as it appeared during WW2" width="45%">](images/kowel_preview.png)
-
-**In-progress map of Kowel**
+[<img src="images/kowel_preview.png" alt="Kowel during WWII" width="45%">](images/kowel_preview.png)
 
 [<img src="images/in_progress.PNG" alt="In-progress map of Kowel" width="60%">](images/in_progress.PNG)
 
-**1938 Sejm voting districts**
-
 [<img src="images/kowel_voting_districts.svg" alt="1938 Sejm voting districts" width="60%">](images/kowel_voting_districts.svg)
 
-### The Eastern half of Kowel
+*East of Kowel, circa 1944:*
 
 [<img src="images/kowel_no_watermark.png" alt="East of Kowel circa 1944" width="70%">](images/kowel_no_watermark.png)
 
-*East of Kowel, circa 1944.*
+AI exploratory renders (not evidence): [ai_generated/](ai_generated/readme.md).
 
-### The "Old Town" of Kowel as it appeared in 1915
+## External archives
 
-[<img src="images/1915.png" alt="Kowel 1915" width="70%">](images/1915.png)
-
----
-
-## Google Earth Map of Kowel (1919–1939)
-
-[**Download the Kowel 2RP Google Earth file (.kmz)**](GIS/kowel_streets15.kmz)
-
-This work-in-progress Google Earth file includes:
-
-- Pre-WWII street names
-- Over 130 pre-war buildings, identified through manual exterior review and old photos where available
-
----
-
-## Street Names and Businesses
-
-| Resource | Description |
-| --- | --- |
-| [Street truth table](archives/normalized/kowel_streets_truth_table.csv) | All attested street names with `year_ranges`, `exists_today`, rename links · [notes](archives/normalized/kowel_streets_truth_table.md) |
-| [Kowel street names (1929)](street_names.txt) | List of 1929 Kowel street names |
-| [Cross-referenced street names (1929)](referenced_streets.txt) | Street names cross-referenced across sources |
-| [Doctors resident in Kowel (1920)](doctors_resident_in_kowel.csv) | List of doctors · [Source](https://bc.wbp.lublin.pl/dlibra/publication/edition/17315) |
-| [Most common business-address streets (~1929)](streets_by_business_address_count.csv) | Top streets by number of business addresses |
-| [Kowel phone book / residents (1938)](kowel_residents_1938.csv) | Residents listed in the 1938 phone book |
-| [Polish business directory (1929)](1929_business_directory.md) | 360+ business listings |
-
----
-
-## Voting Districts and Industries
-
-| Resource | Description |
-| --- | --- |
-| [Kowel voting districts (1938)](kowel_voting_districts.csv) | [Published 28 September 1938](https://polona.pl/item/obwieszczenie-inc-na-podstawie-art-52-ordynacji-wyborczej-dz-u-r-p-nr-47-poz,OTQyNjM5MzI/0/#info:metadata) |
-| [Business types in Kowel (1929)](industries_in_kowel_1929.csv) | List of business types (requires manual verification and correction) |
-
----
-
-## Data Files
-
-A full list of structured data and supporting documents in this repository:
-
-- [1899 travel guide to Kowel](1899_Travel_Guide_to_Kowel_based_on_1899_Polish_doc.md) — based on an 1899 Polish document
-- [1929 business directory (CSV)](1929_business_directory.csv) · [1929 business directory (Markdown)](1929_business_directory.md)
-- [Analysis of industry by street](analysis_of_industry_by_street.md)
-- [City population summary](city_population_summary.md)
-- [Doctors resident in Kowel (1920)](doctors_resident_in_kowel.csv)
-- [Industries in Kowel (1929)](industries_in_kowel_1929.csv)
-- [Kowel residents (1938)](kowel_residents_1938.csv)
-- [Kowel voting districts (1938)](kowel_voting_districts.csv)
-- [Kowel streets — 1929 phone book (Polish streets)](Kowel%20Streets%201929%20Phone%20Book%20-%20Polish%20Streets.csv)
-- [Street truth table](archives/normalized/kowel_streets_truth_table.csv) · [truth table notes](archives/normalized/kowel_streets_truth_table.md)
-- [Streets (CSV)](streets.csv) · [Street names](street_names.txt) · [Referenced streets](referenced_streets.txt)
-- [Streets by business-address count](streets_by_business_address_count.csv)
-- [Building coordinates](building_coordinates.txt)
-- [Old buildings dataset (ZIP)](old_buildings_dataset.zip)
-- [Point clouds notes](point_clouds.md)
-- [Street graph notebook](draw_street_graph.ipynb)
-
----
-
-## Tools and Resources
-
-- [3D from Images (COLMAP)](https://colmap.github.io/install.html#installation)
-- [Shtetl: Kovel, Ukraine (JewishGen)](https://kehilalinks.jewishgen.org/kovel/kovel.htm)
-- [Mazowiecka Digital Library](https://mbc.cyfrowemazowsze.pl/dlibra)
 - [Polona](https://polona.pl/)
 - [Szukaj w Archiwach](https://www.szukajwarchiwach.gov.pl/)
-- [Arolsen Archives: People Persecuted by the Nazi Government](https://collections.arolsen-archives.org/en/archive/6)
-- [Areas Photographed (US National Archives)](https://catalog.archives.gov/id/44240512)
-- [Application of Aerial Photograph Analysis in the Search for Burial Sites (PDF)](https://problemykryminalistyki.pl/pliki/dokumenty/5_ossowskibykowskawitowskabrzezinskiapplicationofanalysis.pdf)
-- [Co-registration of Panoramic Mobile Mapping Images and Oblique Aerial Imagery (University of Twente)](https://research.utwente.nl)
-- [Personal Knowledge Graphs (YouTube)](https://www.youtube.com/watch?v=Cq8VzELJpwI)
+- [Mazowiecka Digital Library](https://mbc.cyfrowemazowsze.pl/dlibra)
+- [JewishGen — Kovel](https://kehilalinks.jewishgen.org/kovel/kovel.htm)
+- [Arolsen Archives](https://collections.arolsen-archives.org/en/archive/6)
+- [US NARA aerial coverage](https://catalog.archives.gov/id/44240512)
+- Related: [HistoricEarth](https://github.com/noveoko/HistoricEarth) (GAN map → simulated aerial)
 
----
+## Other tools in the tree
 
-## Related Projects
+Under [apps/](apps/) there are COLMAP/stereo, Blender helpers, image matching
+sketches, and [focus stacking](apps/focus_stacking/readme.md). They are optional.
+Reconstruction work starts from the map, the street truth table, and the
+directory/gazette CSVs.
 
-- [Detectron2 tutorial (YouTube)](https://www.youtube.com/watch?v=9a_Z14M-msc)
-
----
-
-## Datasets
-
-- A black-and-white old-image dataset for training a deep-learning model to power a "similar building" search engine.
-
----
-
-## Resources for Historical Cartography
-
-A short reading list for historical reconstruction from maps:
-
-1. [Cartographic Reconstruction of Historical Environmental Change](https://www.researchgate.net/publication/277355317_Cartographic_Reconstruction_of_Historical_Environmental_Change) — using historical maps for environmental-history research.
-2. [Cartographic Reconstruction of Building Footprints from Historical Maps](https://onlinelibrary.wiley.com/doi/abs/10.1111/tgis.12610) — a study based on the Swiss Siegfried maps.
-3. [Rehabilitating "Historical Map" (Mapping as Process)](https://www.mappingasprocess.net/blog/2020/8/13/rehabilitating-historical-map) — on analytical mapping of historical maps.
-4. [History of Cartography (Wikipedia)](https://en.wikipedia.org/wiki/History_of_cartography) — extensive links and references.
-5. *Mapping the Nation: History and Cartography in Nineteenth-Century America* — book by Susan Schulten.
-6. *Maps: A Historical Survey of Their Study and Collecting* — edited by David Woodward.
-7. The History of Cartography Project — research project at the University of Wisconsin.
-8. [Euratlas Historical Maps](https://www.euratlas.com/) — historical maps from year zero AD onward.
-9. [David Rumsey Historical Map Collection](https://www.davidrumsey.com/) — digital map collection under Creative Commons.
-10. [Global ML Building Footprints (Microsoft)](https://github.com/microsoft/GlobalMLBuildingFootprints) — global building-footprint map.
-
----
-
-## Related Project: HistoricEarth
-
-As an offshoot of the Kowel project, [HistoricEarth](https://github.com/noveoko/HistoricEarth) trains a generative model (GAN) to take an old map of Poland from the 1900–1944 period and render a photo-realistic, simulated aerial image.
-
----
-
-## Photos from Kowel and Nearby
-
-[<img src="images/image.jpg" alt="German soldier in a vehicle near Kowel" width="60%">](images/image.jpg)
-
-*German (Nazi) soldier in a vehicle. Signage: "to Kovel — enemy fire 300 m distance. Caution! No light at night."*
-
----
-
-## About
-
-Kowel / Kovel: (1918–1945)
+Cartography reading list and source-hunting notes: [resources/elevation_maps.md](resources/elevation_maps.md),
+[challenges/find_these_sources.md](challenges/find_these_sources.md),
+[external_resources/digital_libraries_with_kowel_materials.html](external_resources/digital_libraries_with_kowel_materials.html).

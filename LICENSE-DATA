@@ -1,0 +1,32 @@
+SPDX-License-Identifier: CC-BY-4.0
+
+Original compilations in this repository — CSV, JSON, Markdown, and similar
+tables and notes authored or substantially arranged here — are licensed under
+the Creative Commons Attribution 4.0 International License.
+
+You are free to share and adapt the material, including commercially, provided
+you give appropriate credit, provide a link to the license, and indicate if
+changes were made.
+
+License deed: https://creativecommons.org/licenses/by/4.0/
+Legal code:   https://creativecommons.org/licenses/by/4.0/legalcode
+
+Suggested credit:
+
+  Kowel reconstruction project, https://github.com/noveoko/kowel
+  Data compiled from sources listed in archives/DATA.md and in each file.
+
+This license covers the compilation and our added columns, notes, and
+translations. It does not cover:
+
+- Full-text OCR of Gazeta Śledcza, Obwieszczenia Publiczne, and other gazettes
+  harvested from Polona (https://polona.pl/)
+- Extracts whose terms are set by Arolsen Archives, JewishGen, Polona, or
+  other source institutions
+- Photographs, maps, and scans whose copyright or reuse terms belong to the
+  holding archive
+- AI-generated images under ai_generated/ (exploratory; not historical evidence)
+
+When publishing people lists, follow NAMES.md: cite the original gazette or
+archive, keep OCR errors visible or flagged, and do not attach living-family
+contact data.
