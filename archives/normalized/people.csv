@@ -1,0 +1,1416 @@
+person_id,given_name,surname,maiden_name,birth_year,birth_place,death_date,street_id,source_count,source_files,clustered
+p:3d93353625b3,Tojbicz,Abraham,,,,,st:7dc94505c4b3,1,kowel_residents_1938.csv,n
+p:0eab54da9380,Alexander,ABRAMCHUCK,,1916,Kowel,,,2,archives/kowel_births.csv,y
+p:6c4265717617,Bronisław,Adamczyk,,1913,Police,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:21a1f3196f09,Szwarcwald,Adolf,,,,,st:57d62842bea3,1,kowel_residents_1938.csv,n
+p:820cbe79d699,Feliksa,Agaczyńska,Ścibisz,1913,Przedmieście,2000-07-10,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:6ab8ea2c2f5c,Peter,AHRAFONOW,,1917,Kowel,,,1,archives/kowel_births.csv,n
+p:5915f2f5274a,Petronela,Aksamitowska,Rogal,1913,Sernikowa Niwa,2004-03-29,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:4b7f9d523cc1,Sergiusz,Aleksiejew,,1880,Brześć Nad Bugiem,1944-03-15,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:136f0b122efc,WLADYSLAW,ALEKSIEJEWSKI,,1916,Kowel,,,1,archives/kowel_births.csv,n
+p:9f95e3e9fc8a,Jwan,ALMASOW,,1919,Kowel,,,1,archives/kowel_births.csv,n
+p:4acc800d7ce8,Musa,AMINOW,,1902,Kowel,,,1,archives/kowel_births.csv,n
+p:abad0bf550bd,Stefanja,ANDERWALD,,1921,Kowel,,,1,archives/kowel_births.csv,n
+p:f13867a4c7d4,Anton,ANDREJEW,,1929,Kowel,,,1,archives/kowel_births.csv,n
+p:46285b4078f3,Stanislaus,ANDREJEW,,1927,Kowel,,,1,archives/kowel_births.csv,n
+p:896ff0ad5f20,Wasil,ANDREJEW,,1904,Kowel,,,1,archives/kowel_births.csv,n
+p:b9e95468726f,DIMITRIUS,ANDREJEW ANDRIEJEW,,1880,Kowel,,,1,archives/kowel_births.csv,n
+p:d4ac97ae2e69,GEORG,ANDREJEW ANDRIEJEW,,1926,Kowel,,,1,archives/kowel_births.csv,n
+p:b9423c410de5,Jan,Andrykiewicz,,1920,Milanowicze pow.Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:cfd552a0351d,Wasyl,Antoniuk,,1900,Damaszyce pow. Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:44ede5a4c83f,,Armarnik,,,,,st:deb1b321e31a,1,kowel_residents_1938.csv,n
+p:6f80fe641152,Izaak,Armarnik,,,,,st:deb1b321e31a,1,kowel_residents_1938.csv,n
+p:c8b5021e1f14,Lejbisz,Armarnik,,,,,st:deb1b321e31a,1,kowel_residents_1938.csv,n
+p:7be4d1bc0902,Liber,Armarnik,,,,,st:deb1b321e31a,1,kowel_residents_1938.csv,n
+p:7986ab702e1b,Michał,Armarnik,,1893,,,,1,archives/kowel_born_deported_east.csv,n
+p:70cc01aeb46e,Mojżesz,Armarnik,,1900,Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:3a7c1f86f274,Pesa,Armarnik,,1905,,,,1,archives/kowel_born_deported_east.csv,n
+p:7d560329b20d,MARIA,ASOWSKI AZOWSKI,LUMINARSKAJA,1906,Kowel,,,1,archives/kowel_births.csv,n
+p:24c6bfb4f099,Rubn,Atlas,,1908,,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:26bbbeaae139,ISAK,AWERBUCH,,1916,Kowel,,,1,archives/kowel_births.csv,n
+p:53c412ecfa3e,Maria,AZOWSKI,,1906,Kowel,,,1,archives/kowel_births.csv,n
+p:59b752a54711,TATIANA,BABEJ BABEY,SWIETIKOW,1927,Kowel,,,1,archives/kowel_births.csv,n
+p:e12aef23f274,Leon,Babiak,,1913,Nassau,1941-06,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:6f31cfe9f00f,Alexander,BACHOWITZ,,1911,Kowel,,,1,archives/kowel_births.csv,n
+p:a39e2c30982f,Kazimierz,Bagiński,,1912,Przewały,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:c8a334faeaa3,Hilenskty,BAIKOWSKI,,1905,Kowel,,,1,archives/kowel_births.csv,n
+p:d7998e4ad860,Antoni,Bajda,,1906,Nowy Mosów pow. Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:78d62a7a073c,Leokadia,Bajewska,,1923,Zsrr,2007-01-26,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:5b0ae82c464e,Jefim,Bajuk,,1909,Wielick pow. Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:860b95979143,Michal,BAKOWIEZ,,1907,Kowel,,,1,archives/kowel_births.csv,n
+p:5d711dd6583b,ELZBIETA,BAKUNIEWICZ,,1923,Kowel,,,1,archives/kowel_births.csv,n
+p:534670d9d931,ELZBIETA ZOFIA,BAKUNIEWICZ,,1923,Kowel,,,1,archives/kowel_births.csv,n
+p:661d4e1f2ac9,Elsa,BAKUNIWICZ,,1924,Kowel,,,1,archives/kowel_births.csv,n
+p:4e0a2b329612,Aleksander,Bałysz,,1908,Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:94bc5c182629,Mikołaj,Bałysz,,1906,Uchowiecko pow. Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:8ce37dea014b,BENEDYKT,BANDŻA,,1913,"Kol. Kalinownik, p. Kowel",,,1,archives/polish_military_born_in_kowel.csv,n
+p:bd0a9ca59f56,GEORG,BARANOWSKI,,1915,Kowel,,,1,archives/kowel_births.csv,n
+p:cefd103bc0b3,Jerzy,Baranowski,,1927,Łuck,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:90407a3f46db,MIECZYSLAW,BARANSKI,,1924,Kowel,,,1,archives/kowel_births.csv,n
+p:8c4b4e5024b1,Feliks,Barcikowski,,2018,Poworsk pow. Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:4822f6629fd0,Jan,Barczak,,1897,Nużel pow. Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:f141e05d860a,Piotr,Bartoszewski,,1913,pow. Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:0f537d4960c3,Jozef,Barwjkowski,,,,,st:deb1b321e31a,1,kowel_residents_1938.csv,n
+p:1bcd72f786cf,Kasimier,BASIAK,,1913,Kowel,,,1,archives/kowel_births.csv,n
+p:3ffcb588da81,Kazimierz,BASIAK,,1930,Kowel,,,2,archives/kowel_births.csv,y
+p:3977c466a2f0,Lejb,Bass,,,,,st:e1587e53e305,1,kowel_residents_1938.csv,n
+p:95b8e7ae8e1c,Grzegorz,BATRAK,,1908,Kowel,,,1,archives/kowel_births.csv,n
+p:216e7c41d678,Pawel Peter Pjotr,BATRATSCHENKO BATRASCHENKO SAIZEW STOLJAROW,,1918,Kowel,,,1,archives/kowel_births.csv,n
+p:92ec8ff3e752,Johann,BEBALSCHUK,,1900,Kowel,,,1,archives/kowel_births.csv,n
+p:0264a67f2a6c,Józef,Bednarczyk,,1913,Ostrów,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:3d6a5117c068,Zofia,Bednarska,Majder,1923,Brzóza Królewska,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:3faeee54cecf,Jan,Bednarski,,1904,Borzymowo,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:33c020c6d673,Czesława,Bedyńska,,1927,Jachimówka,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:d531a1b01b4a,Marian,Bedyński,,1924,Milanowicze,2003-12-24,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:fde7ddf48979,Sophia,BELGRIT,,1919,Kowel,,,1,archives/kowel_births.csv,n
+p:3784cb301bf3,Wladimirs,BENDARENKO,,1920,Kowel,,,1,archives/kowel_births.csv,n
+p:55fa81ed53f3,Nadesh.,BEREGOWAJA,,1910,Kowel,,,1,archives/kowel_births.csv,n
+p:d73f81204206,LEA,BERJZER,,1896,Kowel,,,1,archives/kowel_births.csv,n
+p:cdfb67476710,Feliks,Bernacki,,1916,Peresika,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:75d9ebce24d0,Wiktor,Bernasowski,,,,,st:deb1b321e31a,1,kowel_residents_1938.csv,n
+p:31e851adceef,Nana,BERNDT,,1923,Kowel,,,3,archives/kowel_births.csv,y
+p:144825a71860,BUNI BUMI,BERNFELD,,1922,Kowel,,,1,archives/kowel_births.csv,n
+p:3ef54bcf865a,Anna,BESEKA,,1921,Kowel,,,1,archives/kowel_births.csv,n
+p:2ee65fc5b251,Grigori,BESEKA,,1914,Kowel,,,1,archives/kowel_births.csv,n
+p:c6dfd7e5f60d,Marina,BESEKA,,1914,Kowel,,,1,archives/kowel_births.csv,n
+p:0c8bfeb6823c,Nestor,BESEKA,,1909,Kowel,,,1,archives/kowel_births.csv,n
+p:a016a1bd7dec,Gregor,BESWANIK,,1912,Kowel,,,1,archives/kowel_births.csv,n
+p:28f74111382f,HENRYK,BEZMAN,,1944,Kowel,,,1,archives/kowel_births.csv,n
+p:2ffedf1f3c2a,Grzegorz,Bezwierchy,,1900,Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:97f3e380c3ac,Nikolai,BICHOWTSCHENKO,,1889,Kowel,,,1,archives/kowel_births.csv,n
+p:b9b5ebbe7a87,Józef,Biegalski,,1912,Sędziszów,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:cb305685fef6,Marian,Bielawa,,1899,Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:17b670f9ea22,Irena,Bielska,Tomankiewicz,1924,Kowel,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:9718466e9ed7,Antoni,Bieniewski,,1887,Lubitów pow. Kowel,,,2,archives/polish_military_born_in_kowel.csv,y
+p:2055abadd8e4,Stefan,Bieniewski,,1885,Lobitów pow. Kowel,,,2,archives/polish_military_born_in_kowel.csv,y
+p:e9ef2d8aeaa1,Michał,Biliński,,1917,Maniewicze,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:c87f03d42677,Alex,BILOUS,,1911,Kowel,,,1,archives/kowel_births.csv,n
+p:1f5cbcf0233d,Anna,BILOUS,,1933,Kowel,,,1,archives/kowel_births.csv,n
+p:50b40d0077e1,Stefanida,BILOUS,KOSCHARNYJ,1910,Kowel,,,1,archives/kowel_births.csv,n
+p:9cb0e936e59f,Szpak,Binen,,,,,st:f0ab7cac5b92,1,kowel_residents_1938.csv,n
+p:185750db50b8,Stefan,Bińko,,1896,Kowel,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:7b9c0ebe3bd6,Jan,BIRUK,,1916,Kowel,,,1,archives/kowel_births.csv,n
+p:84ee9d9171bd,Franciszek,Biszczanik,,1923,Hamernia,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:ec8f3f0f37a1,Wiktoria,Blabuś,Kuliberda,1917,Kowale,2004-10-29,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:751610632d47,SCHLOMA,BLACH,,1912,Kowel,,,1,archives/kowel_births.csv,n
+p:188c2973d81a,Eugeniuszch,BLACHARTSCHYK,,1925,Kowel,,,1,archives/kowel_births.csv,n
+p:ee0a2a649abf,Ignac,BLASZAK,,1911,Kowel,,,1,archives/kowel_births.csv,n
+p:09e52aed61f0,HELENA,BLAZEWICZ,KR�L,1930,Kowel,,,5,archives/kowel_births.csv,y
+p:ae0490ca3af6,Helena Helene,BLAZEWICZ,KROL,1930,Kowel,,,1,archives/kowel_births.csv,n
+p:8d2f835ba1af,Jan,Błocki,,,Rutno pow. Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:ad885aa55fa3,Mieczysław,Bobołowicz,,1909,Kowel,,,2,archives/polish_military_born_in_kowel.csv,y
+p:6117d5bf92ba,Johann,BOCHALM,,1903,Kowel,,,1,archives/kowel_births.csv,n
+p:666e6a33104a,Antoni,Bociański,,1880,Kowel,1944-03-17,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:de651a1374b7,Henryk,BOCIANSKI,,1927,Kowel,,,1,archives/kowel_births.csv,n
+p:6daa17c42fec,Marian,BOCIANSKI,,1938,Kowel,,,1,archives/kowel_births.csv,n
+p:a69ab80606dd,Ignacy,Boczkowski,,1918,Białystok,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:6c766fde2cf2,Eugeniusz,Bogacki,,1900,Bliżyn pow. Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:8a6719210afe,,Boguslawski,,1887,Kowel,,,1,archives/Auschwitz_prisoners_born_in_kowel.csv,n
+p:a638a29f7dcf,,Boguslawski,,1887,Kowel,,,1,archives/normalized/people_and_birth_places.csv,n
+p:df1794c8fe2e,Czesław,Bogusławski,,1908,Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:a822e5e8e85f,Stanislawa,BOGUSZ,,1924,Kowel,,,1,archives/kowel_births.csv,n
+p:f2b06752dfae,Franciszek,Bojakowski,,1909,,,,1,archives/kowel_born_deported_east.csv,n
+p:edfc399b134e,Leonard,BOJAKOWSKI,,1912,Kowel,,,1,archives/kowel_births.csv,n
+p:7b36f249988a,Pinchos,Bokser,,1907,Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:ac8c8f007342,Wiera,Bołtromiuk,Kuryło,1926,Koweła,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:dcda55d3aa0d,Kazimierz,Bondar,,1887,Kowel - Wołyń,,,1,archives/polish_military_born_in_kowel.csv,n
+p:b74913248b56,Maria,BONDARENKO,,1921,Kowel,,,1,archives/kowel_births.csv,n
+p:02d7df6a2f7f,WOLODIMIR,BONDARENKO,,1920,Kowel,,,1,archives/kowel_births.csv,n
+p:89846875fba3,Karl,BOPOWITSCH,,1899,Kowel,,,1,archives/kowel_births.csv,n
+p:c96c908d3c32,Cenia,BOREUK,,1925,Kowel,,,1,archives/kowel_births.csv,n
+p:d88c37de56b5,Iwan,BORISEWITSCH,,1924,Kowel,,,1,archives/kowel_births.csv,n
+p:b5717aa8ac33,Stepan,BORISEWITSCH,,1923,Kowel,,,1,archives/kowel_births.csv,n
+p:39e35e099a48,Zofia,Borowicz,Kowalczuk,1919,Strachosław,1998-04-15,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:f6288b95058f,LIDIA,BORTNIJTSCHUK,,1922,Kowel,,,1,archives/kowel_births.csv,n
+p:cbed905d6a6b,Daniło,Borysiuk,,,Zajączówka pow. Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:f901fc75f83a,Halina Kalina,BORZKOWSKA,,1925,Kowel,,,1,archives/kowel_births.csv,n
+p:a283307648d5,Wladimir,BOSHYK,,1926,Kowel,,,2,archives/kowel_births.csv,y
+p:9214de68b474,Kazimierz,Bożyna,,1925,Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:5115519df626,LEA,BRENFARB,,1933,Kowel,,,1,archives/kowel_births.csv,n
+p:73ead270e8f8,Maria,Brodacka,,1925,Brześć-Zsrr,2006-01-15,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:9b0b4fd8bf4f,Waclau,BROSCHEWSKI,,1909,Kowel,,,1,archives/kowel_births.csv,n
+p:8995abf9cc4d,ALBERT,BROSCHINSKI,,1927,Kowel,,,1,archives/kowel_births.csv,n
+p:1d7237f1b8ea,WASILI,BRSCHESKI,,1909,Kowel,,,1,archives/kowel_births.csv,n
+p:4866c758cf4d,Mikolaj,BRYKIN,,1929,Kowel,,,1,archives/kowel_births.csv,n
+p:d2b50d1a356b,STEFAN,BRYLKO,,1889,Kowel,,,1,archives/kowel_births.csv,n
+p:653e1fdead21,WITALIJ,BRYLKO,,1920,Kowel,,,2,archives/kowel_births.csv,y
+p:f13299c9ede4,Włodzimierz,Brzeziński,,1898,Hotoby,1946-05-09,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:903a50f650b4,Stanisław,Brzostowski,,1880,Teresówka pow. Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:9b44870ed205,Henryk,Brzózko,,1923,Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:89a95b2bb964,Tamara,BUCHLEY,KOWALEWA,1921,Kowel,,,2,archives/kowel_births.csv,y
+p:42d949921651,Józefa,Bucholc,Woronecka,1913,Kowel,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:00aac522d2aa,ALEXANDRA,BUDNIK,SINIAK,1911,Kowel,,,1,archives/kowel_births.csv,n
+p:696980eec0bf,PIOTR,BUGIEL,,1918,Kowel,,,1,archives/kowel_births.csv,n
+p:0485ed5479e5,Konstantin,BULBA,,1891,Kowel,,,2,archives/kowel_births.csv,y
+p:5296c057a7aa,Kazimierz,Buniański,,1906,Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:8a7d2d06e2e0,Aleksy,BURIK,,1912,Kowel,,,1,archives/kowel_births.csv,n
+p:73129f00e9b7,Fedor,BURZUK,,1910,Kowel,,,1,archives/kowel_births.csv,n
+p:9e200ac30485,Jan,Burzyński,,1895,Ozierany pow. Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:c974ee66c1c3,Stefan,Bydliński,,1893,Żywiec,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:70b574729da4,WALENTINA,CEBULA,MUDRA,1920,Kowel,,,1,archives/kowel_births.csv,n
+p:dc5889e6ffd4,Michał,Cechnowicz,,,,,st:5d3d89171ee3,1,kowel_residents_1938.csv,n
+p:91797c9dea72,LEONHARD,CHAREWICZ,,1922,Kowel,,,1,archives/kowel_births.csv,n
+p:676055204793,Anna,CHARITONIWITSCH,,1906,Kowel,,,1,archives/kowel_births.csv,n
+p:707aa4f8134f,Anna,CHARITONOWITSCH,,1906,Kowel,,,2,archives/kowel_births.csv,y
+p:a2614276dec0,MICHAL,CHECHANIUK,,1904,Kowel,,,1,archives/kowel_births.csv,n
+p:31cafedb4663,IRAIDA,CHERNYAK,BESWERCLAJA,1925,Kowel,,,1,archives/kowel_births.csv,n
+p:6135fc6bcf77,PETRO,CHERNYAK,,1907,Kowel,,,1,archives/kowel_births.csv,n
+p:274308699920,Afanasi,CHITSEWITSCH,,1898,Kowel,,,1,archives/kowel_births.csv,n
+p:45db7c42e176,Feliks,Chmielarski,,1901,Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:835407b4c17f,Filip,Chmielarski,,1901,Kowel,,,2,archives/kowel_born_deported_east.csv;archives/polish_military_born_in_kowel.csv,y
+p:8bca9a9047dd,Stefan,Chmielarski,,1893,Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:44e45f780cea,Halina,CHMIELEWSKA,,1923,Kowel,,,1,archives/kowel_births.csv,n
+p:8d85efca4ff5,Simeon,CHOLONUK,,1908,Kowel,,,1,archives/kowel_births.csv,n
+p:96bf75755448,Inocenty,Chomiak,,1889,Mielnica pow. Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:f079b9e3a9f1,Sernen,CHOMITZ,,1898,Kowel,,,1,archives/kowel_births.csv,n
+p:73a2ac88c80d,Terenti,CHONITAL,,1901,Kowel,,,1,archives/kowel_births.csv,n
+p:b8d08ff90d64,Antoni,Chrapczyński,,1888,Datyń pow. Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:cf70296bfeb5,Maria,CHUDINSKI,,1931,Kowel,,,1,archives/kowel_births.csv,n
+p:eb9ca3c82e0a,Hedwig,CHUDSINSKI,,1923,Kowel,,,1,archives/kowel_births.csv,n
+p:0fdc17e0c181,Maria,CHUDSINSKI,,1931,Kowel,,,1,archives/kowel_births.csv,n
+p:f46b8650bbe2,Mikolaj,CHWALEBA,,1911,Kowel,,,1,archives/kowel_births.csv,n
+p:c02ae395ef4d,Wiera,Chyziak Wojtasik,Hofman,1926,Mogilno,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:f9a10ca31ef0,HENRYK,CICHY,,1930,Kowel,,,1,archives/kowel_births.csv,n
+p:11228017d938,Michel,Ciechnowicz,,1920,,,st:6696b3e78791,1,doctors_resident_in_kowel.csv,n
+p:c71e977d5522,Jan,Ciesielski,,1919,,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:bb93f35c9c04,Edward,Ciok,,1924,Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:ada422d40f70,Mieczysław,Ciok,,1922,Kowel,2002-09-25,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:87c886c22337,KAZIMIERZ,CIUPAK,,1938,Kowel,,,1,archives/kowel_births.csv,n
+p:d46b2f1ed119,Józef,Coller,,1922,Kowel,1945,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:8bdc63a3ad34,Aleksandra,CYBULSKI,,1925,Kowel,,,1,archives/kowel_births.csv,n
+p:202f49a6c501,ANASTAZJA,CYGANOWSKI,,1901,Kowel,,,1,archives/kowel_births.csv,n
+p:ed74153143b6,PAWEL,CYGANOWSKI,,1932,Kowel,,,1,archives/kowel_births.csv,n
+p:e8344b5de884,PIOTR,CYGANOWSKI,,1927,Kowel,,,1,archives/kowel_births.csv,n
+p:fd9cf3e37645,STANISLAW,CYGANOWSKI,,1898,Kowel,,,1,archives/kowel_births.csv,n
+p:79a5bf0effa5,Apolonia,Cykoń,Copia,1925,Kowel,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:70271ab943ec,Władysław,Cywiński,,1896,Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:136ac7e30d90,Jan,Czaiński,,1912,Kowel,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:74a8770cfade,ANNA,CZAJKOWSKI,,1900,Kowel,,,1,archives/kowel_births.csv,n
+p:32fcfcd02ab2,Roman,Czaplicki,,1901,Kowel pow. Włocławek,,,1,archives/polish_military_born_in_kowel.csv,n
+p:0b5f64639daa,JOZEF,CZARNECKI,,1917,Kowel,,,1,archives/kowel_births.csv,n
+p:7afe5d3efd48,STANISLAWA,CZEBOTOROWICZ,DYJAK,1926,Kowel,,,1,archives/kowel_births.csv,n
+p:f83faa9f7c94,ELEONORA,CZECHOWICZ,,1905,Kowel,,,1,archives/kowel_births.csv,n
+p:4ea7b0f5a21a,KAZIMIERZ,CZECHOWICZ,,1933,Kowel,,,1,archives/kowel_births.csv,n
+p:5f7dafc27e88,Aleksy,CZERNIAWSKI,,1910,Kowel,,,1,archives/kowel_births.csv,n
+p:3fe7083a66f6,MARIANNA,CZEZYK,,1909,Kowel,,,1,archives/kowel_births.csv,n
+p:f2bccf6bf2fa,Leon,Czirkow,,1881,Kowel - Wołyń,,,1,archives/polish_military_born_in_kowel.csv,n
+p:be848d024f70,,Czuprynski,,1924,Kowel,,,1,archives/Auschwitz_prisoners_born_in_kowel.csv,n
+p:efb0b8e1b15f,,Czuprynski,,1924,Kowel,,,1,archives/normalized/people_and_birth_places.csv,n
+p:35a6345c80e5,Konstanty,Czykilewski,,1885,Wołoszki pow. Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:555efe31953d,Czesław,Dąbrowski,,1862,Łukówka pow. Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:5116c8655487,Edward,Dąbrowski,,1926,Kowel,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:192be5fbf695,Henryk,Dąbrowski,,1925,Kowel,2002-12-11,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:6f54452c0778,JAN,DABROWSKI,,1913,Kowel,,,1,archives/kowel_births.csv,n
+p:dfdc678e83f2,JERZY,DABROWSKI,,1929,Kowel,,,1,archives/kowel_births.csv,n
+p:579ff1e9dea7,Kasimiez,DABROWSKI,,1920,Kowel,,,1,archives/kowel_births.csv,n
+p:284f314cce8b,Kazimietz,DABROWSKI,,1920,Kowel,,,1,archives/kowel_births.csv,n
+p:50981b344b27,Raisa,DAME,,1907,Kowel,,,1,archives/kowel_births.csv,n
+p:222a7ae4afa6,Ivan,DANGOLUK,,1924,Kowel,,,1,archives/kowel_births.csv,n
+p:4dd3b387d9a3,Iwan,DANGOLUK,,1924,Kowel,,,1,archives/kowel_births.csv,n
+p:ec9efeaefb08,JAN,DANIELUK,,1917,"Białoszów, p. Kowel",,,1,archives/polish_military_born_in_kowel.csv,n
+p:2df126f8083d,Waleria,Dargiewicz,,,,,,1,archives/people_living_in_Kowel.csv,n
+p:4caf1198e9d9,Waleria,Dargiewicz,,,,,,1,archives/normalized/people_and_birth_places.csv,n
+p:2632408c602c,Sztylerman,Dawid,,,,,st:4c39bff61583,1,kowel_residents_1938.csv,n
+p:f52018ae25f4,SAWA,DAWIDIUK,,1916,"Wydranica, p. Kowel",,,1,archives/polish_military_born_in_kowel.csv,n
+p:428e2093376e,Maria,Dębowska,,1919,Worzuczyn [Wożuczyn],,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:d7b3c30af501,Marianna,Dębowska,Jurkiewicz,1919,Wozuczyn,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:13635d066be6,Halina,DEBROVOLSKYJ DOBROVOLSKYJ,BEREZOVSKA,1926,Kowel,,,1,archives/kowel_births.csv,n
+p:7cbececc9a8c,Marek,Dederczuk,,1908,Worochota,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:65c1a6ac6e84,Wladislaw,DEDITZKI,,1885,Kowel,,,1,archives/kowel_births.csv,n
+p:8f0081ceb4ec,JAKOB,DELATYEKI,,1909,Kowel,,,1,archives/kowel_births.csv,n
+p:abfcdc03b391,Alesandra,DEMIDENKO,,1912,Kowel,,,1,archives/kowel_births.csv,n
+p:abe31b49e1b9,Jwan,DEMIDENKO,,1933,Kowel,,,1,archives/kowel_births.csv,n
+p:03da032865c9,Michail,DEMIDENKO,,1910,Kowel,,,1,archives/kowel_births.csv,n
+p:f08ae9f06f00,Anna,DEMJANENKO,,1912,Kowel,,,1,archives/kowel_births.csv,n
+p:0bd39dbcdf6d,Ralsa,DEMJANENKO,,1931,Kowel,,,1,archives/kowel_births.csv,n
+p:48cbf7b0718b,Wilodymyr,DEMJANENKO,,1912,Kowel,,,1,archives/kowel_births.csv,n
+p:cab18ba63e33,Wira,DEMJANENKO,,1942,Kowel,,,1,archives/kowel_births.csv,n
+p:a08f81be5d9a,Aleksandra,DENISIUK,,1897,Kowel,,,1,archives/kowel_births.csv,n
+p:a100d57b36e5,Aliko,DEREWIANKO,,1904,Kowel,,,1,archives/kowel_births.csv,n
+p:eae8fb1955e3,MAKAR,DEREWIANKO,,1888,Kowel,,,1,archives/kowel_births.csv,n
+p:2e7df243ffe9,Pawlo,DIATEL,,1925,Kowel,,,1,archives/kowel_births.csv,n
+p:23f3d6edf999,HERASYM,DICHTJARIW,,1893,Kowel,,,1,archives/kowel_births.csv,n
+p:aa656699355d,Lucie,DIMITRY,,1926,Kowel,,,1,archives/kowel_births.csv,n
+p:771ef05d62d6,Thekla,DINCKA,,1923,Kowel,,,1,archives/kowel_births.csv,n
+p:9458a54d9efd,Prisona,DINJAKA,,1924,Kowel,,,1,archives/kowel_births.csv,n
+p:a5f77bf3b152,Piotr,Diok-Baran,,1906,Brunietówka pow. Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:386cb201b886,Dannta,DISUK,,1942,Kowel,,,1,archives/kowel_births.csv,n
+p:a0a7f4b269c8,Wasili,DJATSCHENKO,,1923,Kowel,,,1,archives/kowel_births.csv,n
+p:2f751321b329,Afanazy,Dmitruk,,,,1941-07-31,,1,archives/people_living_in_Kowel.csv,n
+p:be410cb8dcd2,Afanazy,Dmitruk,,1941,,,,1,archives/normalized/people_and_birth_places.csv,n
+p:86c2879c609b,Piotr,Dobrowolski,,1902,Groszowka pow. Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:ba1a28e4128e,WLADISLAW,DOBROWOLSKIJ,,1919,Kowel,,,1,archives/kowel_births.csv,n
+p:6a8d9b2e9dfd,Janina,DOBROWOZSKA,,1926,Kowel,,,1,archives/kowel_births.csv,n
+p:d8565780e201,Marian,DOBRUCKI,,1914,Kowel,,,3,archives/kowel_births.csv,y
+p:40af8ec19c66,Danuta,Dobrzyń,Niedźwiedzka,1929,Kowel,2001-01-19,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:0aee6106d6d2,EDWARD,DOMANSKI,,1919,Kowel,,,1,archives/kowel_births.csv,n
+p:5fcb75a0dba0,GREGOR,DONZIW DONCZOW,,1915,Kowel,,,1,archives/kowel_births.csv,n
+p:4f80d9048dd5,Israel,DREKSLER,,1914,Kowel,,,1,archives/kowel_births.csv,n
+p:ed57e4678486,MYKYTA,DREWKO,,1895,Kowel,,,1,archives/kowel_births.csv,n
+p:fab55d8b053d,,Drobinski,,1892,Kowel,,,1,archives/normalized/people_and_birth_places.csv,n
+p:fd9063c2358c,,Drobinski,,1892,Kowel,,,1,archives/Auschwitz_prisoners_born_in_kowel.csv,n
+p:6775493111a2,MYCHAJLO,DUBASOW,,1886,Kowel,,,1,archives/kowel_births.csv,n
+p:31937b8724b1,Anton,DUBIESKI,,1922,Kowel,,,1,archives/kowel_births.csv,n
+p:64dada7dbdb9,WITOLD,DUNAJ,,1917,Kowel,,,1,archives/kowel_births.csv,n
+p:179db8c27457,ZWI,DUNAJEWIECKI,,1914,Kowel,,,1,archives/kowel_births.csv,n
+p:c93f8cd30260,Jan,Dunin,,1909,Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:e471acc5ef44,Josef,DURLIK,,1923,Kowel,,,2,archives/kowel_births.csv,y
+p:fc3704aa2791,Mikolaj,DZAFAROW,,1918,Kowel,,,1,archives/kowel_births.csv,n
+p:9398f0ac61fb,Zina,DZASZKIEWICZ,CZEPURNA,1929,Kowel,,,1,archives/kowel_births.csv,n
+p:14ff908c406a,Irena,Dziemianko,Rodzik,1930,Ferme,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:6a898a071773,Maria,DZIEROZYNSKI,,1904,Kowel,,,1,archives/kowel_births.csv,n
+p:a2cab736efc1,Irena,Dziobek,Gawdzińska,1924,Kowel,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:932c6df9b7ac,Dawid,Elbaum,,1890,Tomaszów Lubelski,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:c7ec815af620,Mirla,Elbaum,Szarf,1892,Zamość,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:244fe78b3379,ARON,ENTIN,,1923,Kowel,,,1,archives/kowel_births.csv,n
+p:c58cbd39d3bd,ESTER,ENTIN,,1896,Kowel,,,1,archives/kowel_births.csv,n
+p:a1b7c290e0d0,JULIA,ENTIN GOLDENBERG,,1927,Kowel,,,1,archives/kowel_births.csv,n
+p:1cf99e862120,Szowsa,Epsztejn,,1901,,,,1,archives/kowel_born_deported_east.csv,n
+p:edfe6424a48c,Edmund,ESBANSKI,,1929,Kowel,,,1,archives/kowel_births.csv,n
+p:ff530ba7fc24,Schaul,FAIN,,1940,Kowel,,,2,archives/kowel_births.csv,y
+p:949971f8fbb6,Szaja,Fajfer,,1894,,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:b483b29dbd8c,Bohslaw Rohslaw,FEDLITZKI,,1915,Kowel,,,1,archives/kowel_births.csv,n
+p:d7ac685a3c66,Bronoislawa,FEDOSEWIC,,1913,Kowel,,,1,archives/kowel_births.csv,n
+p:3a4cb5e4c99b,Bronislawa,FEDOSEWICZ,,1913,Kowel,,,1,archives/kowel_births.csv,n
+p:44e47c8a0283,BRONISLAWA,FEDOSEWICZ MICKEWIC,MICKIEWICZ,1913,Kowel,,,1,archives/kowel_births.csv,n
+p:205ea91406bf,Jan,FEDYSZ,,1923,Kowel,,,2,archives/kowel_births.csv,y
+p:7330ea0429c9,Jan,FEDYSZ,,1943,Kowel,,,1,archives/kowel_births.csv,n
+p:e9a6a0d793f1,ZAJLIK,FEFER,,1882,Kowel,,,1,archives/kowel_births.csv,n
+p:6e6d48667d42,Chaja,Fejgel,,1920,,,st:deb1b321e31a,1,doctors_resident_in_kowel.csv,n
+p:b1a0b69b2680,Henryk,Felski,,1919,Kowel,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:344c5f5c27e2,KRYSTYNA,FERTNER,,1938,Kowel,,,1,archives/kowel_births.csv,n
+p:5e1ddb310f71,Walentyna,Fibigier,Paszenko,1927,Kowel,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:84a1e0be06e5,Winorlo,FILIPCZUK,,1913,Kowel,,,1,archives/kowel_births.csv,n
+p:644cfdc6cef9,Ekatharina,FIMINA,,1919,Kowel,,,1,archives/kowel_births.csv,n
+p:b2c4567482d8,Róża,Fiszson,,1908,,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:2d108b83be35,MOSES,FLASCH,,1909,Kowel,,,1,archives/kowel_births.csv,n
+p:0388a9d5abb8,USCHEL,FLASCH,,,Kowel,,,1,archives/kowel_births.csv,n
+p:516a5c6ded8f,August,Florek,,1927,Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:091ffcd97fcf,Ekatharina,FOMINA,,1919,Kowel,,,1,archives/kowel_births.csv,n
+p:d15d6db29071,HALINA,FORMANCHUK,,1912,Kowel,,,1,archives/kowel_births.csv,n
+p:c53a130685e5,Stanisława,Franas,Olejnik,1926,Kowel,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:a85080535b01,Olga,Francuziak,Andrzejczak,1925,Kowel,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:41d1fa93018c,Marian,Frasołowicz,,1901,Bereźnica,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:d4a9a8757399,Jakob,FRIEDMANN,,1918,Kowel,,,1,archives/kowel_births.csv,n
+p:524d0cf87a77,Halina,FRIEDRICH,,1925,Kowel,,,1,archives/kowel_births.csv,n
+p:53069dbe19de,Edward,Frydrych,,1927,Kowel,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:cf03e7776484,JAKOB,FURMAN FUHRMANN,,1916,Kowel,,,1,archives/kowel_births.csv,n
+p:1e1e1127562a,Antoni,Gagan,,1941,,,,1,archives/normalized/people_and_birth_places.csv,n
+p:955a1aee034d,Antoni,Gagan,,,,1941-07-31,,1,archives/people_living_in_Kowel.csv,n
+p:5b768641f0f7,ALEKSANDER,GAJEWSKI,,1920,Kowel,,,1,archives/kowel_births.csv,n
+p:9c29b15bde9a,Edward,GALKA,,1943,Kowel,,,1,archives/kowel_births.csv,n
+p:c8092c65d7f0,Jerzy,GALKA,,1942,Kowel,,,1,archives/kowel_births.csv,n
+p:fffd824afff3,ZDZISLAW,GALKA,RUTKOWSKI,1932,Kowel,,,1,archives/kowel_births.csv,n
+p:899664631f6e,Jan,Gałyński,,1900,,1945-03-22,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:1f81cf25220c,Lucia,GALZAK,,1920,Kowel,,,1,archives/kowel_births.csv,n
+p:49e0783768a1,Josef,GAN,,1919,Kowel,,,1,archives/kowel_births.csv,n
+p:c840fb6da035,JOZEF RYSZARD,GAN,,1919,Kowel,,,1,archives/kowel_births.csv,n
+p:9d3b0c80ec53,Marianna,Gardyszewska,Basak,1935,Romanowka,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:44cde04258ad,JULIAN,GARLINSKI,,1925,Kowel,,,1,archives/kowel_births.csv,n
+p:adb38607908d,Banjamin,GARTER,,1912,Kowel,,,1,archives/kowel_births.csv,n
+p:2d66836b4214,Benjamin,GARTER,,1912,Kowel,,,1,archives/kowel_births.csv,n
+p:954c3deecc67,Holzabislaus,GASDA,,1921,Kowel,,,1,archives/kowel_births.csv,n
+p:43895fabf314,SZMERL,GASIOROWSKI,,1909,Kowel,,,1,archives/kowel_births.csv,n
+p:6b917e636333,Edward,gatcki,,1922,Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:dd0625ef2b0b,Josef,GAU,,1919,Kowel,,,1,archives/kowel_births.csv,n
+p:ce0fca6bf82f,Josefa,GAVLOWKA,,1917,Kowel,,,1,archives/kowel_births.csv,n
+p:41eaaf45b713,JADWIGA,GAWRYJOLEK,GRABOWSKA,1925,Kowel,,,2,archives/kowel_births.csv,y
+p:ccbabe30e90e,Katarzyna,GAWRYLUK,,1922,Kowel,,,1,archives/kowel_births.csv,n
+p:5b83ea624aef,Tadeusz,Gebler,,1928,Kowel,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:e2fb4c9e96db,ANSZEL,GEHER,,1892,Kowel,,,1,archives/kowel_births.csv,n
+p:904faa121690,ANSZEL,GEHER GEJER,,1891,Kowel,,,1,archives/kowel_births.csv,n
+p:5ccd8a391cc7,BORUCH,GEHER GEJER,,1920,Kowel,,,1,archives/kowel_births.csv,n
+p:dac310401498,HENIA,GEHER GEJER,,1930,Kowel,,,1,archives/kowel_births.csv,n
+p:07509a94c88c,JAKOB,GEHER GEJER,,1932,Kowel,,,1,archives/kowel_births.csv,n
+p:bba42b342caa,MICHAL,GEHER GEJER,,1924,Kowel,,,1,archives/kowel_births.csv,n
+p:68bab4ea5f0f,Teresa,Gerschendorf,,1919,Wronki,2007-11-30,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:f2348423ef2d,ISAAK,GIBER,,1911,Kowel,,,1,archives/kowel_births.csv,n
+p:a805e9aab1ad,Władysława,Gierak,Waszczuk,1924,Kowel,2008-04-14,,3,archives/kowel_births.csv;archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:e115b921b40f,Mieczyslaw,GIERKE,,1920,Kowel,,,1,archives/kowel_births.csv,n
+p:5aa2c9dbaef1,,Gilsburg,,1908,Kowel,,,1,archives/normalized/people_and_birth_places.csv,n
+p:68d878727cad,,Gilsburg,,1908,Kowel,,,1,archives/Auschwitz_prisoners_born_in_kowel.csv,n
+p:1547af03c10f,SYLVIA,GINSBERG,,1941,Kowel,,,1,archives/kowel_births.csv,n
+p:bf2cc4b5caff,JAKOB ISRAEL,GINSBURG,,1908,Kowel,,,1,archives/kowel_births.csv,n
+p:091798cd61af,Aleksander,GLADYSZ,,1926,Kowel,,,1,archives/kowel_births.csv,n
+p:2ea593e8c572,,Glasser,,1922,Kowel,,,1,archives/normalized/people_and_birth_places.csv,n
+p:d43ca49027cb,,Glasser,,1922,Kowel,,,1,archives/Auschwitz_prisoners_born_in_kowel.csv,n
+p:b485bfdafb42,ALEXANDER,GLEIM,,1890,Kowel,,,1,archives/kowel_births.csv,n
+p:afe66e745ea7,HERSZ,GLEJZER,,1917,Kowel,,,1,archives/kowel_births.csv,n
+p:25cba7752ee6,Rosa,GLESER,,1926,Kowel,,,1,archives/kowel_births.csv,n
+p:9b946743a402,,Głouszek,,1909,Kowel,,,1,archives/normalized/people_and_birth_places.csv,n
+p:a9a2538e499a,,Głouszek,,1909,Kowel,,,1,archives/Auschwitz_prisoners_born_in_kowel.csv,n
+p:c54418831ce2,Krystyna,Głowacka,Głowacka,1922,Kielce,2009-02-01,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:8d2fb9f15c1b,Jakób,Goc,,,,1941-04,,1,archives/people_living_in_Kowel.csv,n
+p:e40aa8483793,Jakób,Goc,,1941,,,,1,archives/normalized/people_and_birth_places.csv,n
+p:4d3d55bd4483,JOSEF,GOLDBERG,,1908,Kowel,,,1,archives/kowel_births.csv,n
+p:b367c382cde1,SIMON,GOLDBERG,,1944,Kowel,,,1,archives/kowel_births.csv,n
+p:59024c2bc5a0,SURA VERA,GOLDBERG,BUASTIN,1918,Kowel,,,1,archives/kowel_births.csv,n
+p:e856a5f4d912,WOLF,GOLDBERG,,1941,Kowel,,,1,archives/kowel_births.csv,n
+p:49b4ecb835f9,Gitel,Goldsztein,,1920,,,st:deb1b321e31a,1,doctors_resident_in_kowel.csv,n
+p:42bbc337f568,Stanisław,Gołębiowski,,1905,pow. Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:5e2a43f7e84c,Anna,Golonko,Gagan,1912,Koweła,1943-01-14,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:b52873267465,Jakub,Golonko,,1941,,,,1,archives/normalized/people_and_birth_places.csv,n
+p:c10e666cdc56,Jakub,Golonko,,,,1941-07-31,,1,archives/people_living_in_Kowel.csv,n
+p:8752dac1bb4b,Maria,GOLOWEY,,1927,Kowel,,,1,archives/kowel_births.csv,n
+p:60ec10a0008c,Olga,GOLOWEY,,1931,Kowel,,,1,archives/kowel_births.csv,n
+p:54dfd421c14f,Stepanina,GOLOWEY,,1894,Kowel,,,1,archives/kowel_births.csv,n
+p:9d8713869b3a,Lubita,GOLOWI,,1925,Kowel,,,2,archives/kowel_births.csv,y
+p:5265bd782170,Grigori,GOLOWNICKI,,1902,Kowel,,,1,archives/kowel_births.csv,n
+p:5e65a1033130,Weseivilli,GOLUBOWITSCHKA,,1942,Kowel,,,1,archives/kowel_births.csv,n
+p:10128315de84,Helena,Gomółka,,1923,Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:1445e6a69d49,SLOMA,GOPIN,,1928,Kowel,,,1,archives/kowel_births.csv,n
+p:3d577b96682e,Soloma,GOPIN,,1928,Kowel,,,1,archives/kowel_births.csv,n
+p:5275c54acdfb,SZAJA,GOPIN,,1913,Kowel,,,1,archives/kowel_births.csv,n
+p:6cb325cdae84,ISRAEL,GORIN,,1905,Kowel,,,1,archives/kowel_births.csv,n
+p:470642ba431b,Edmund,Górski,,1894,,1942-05-05,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:7a360c218fc4,Leon,Górski,,1900,Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:c8c817aa6d02,Wlodzimierz,Gortalow,,1920,,,st:deb1b321e31a,1,doctors_resident_in_kowel.csv,n
+p:354593e53322,MAJER,GOTLIB,,1920,Kowel,,,1,archives/kowel_births.csv,n
+p:9a5327399d11,Nadsieja,GOTOWNICKA,,1915,Kowel,,,3,archives/kowel_births.csv,y
+p:807ac1918920,Viktor,GOTUBUWITSCH,,1921,Kowel,,,1,archives/kowel_births.csv,n
+p:304fc40ff422,Wincenty,Goździk,,1904,Karków,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:d92171665eee,Mech.,GR�NSTEIN,,1926,Kowel,,,1,archives/kowel_births.csv,n
+p:8393546d1a95,Wanda,Grabowska,,1883,Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:b095cf53898b,HENRYK,GRABOWSKI,,1923,Kowel,,,1,archives/kowel_births.csv,n
+p:6a70324893cf,LESZEK,GRABOWSKI,,1908,Kowel,,,2,archives/kowel_births.csv,y
+p:72f8c085c137,Nadeshda,GRATSCHICHA,,1910,Kowel,,,1,archives/kowel_births.csv,n
+p:79ab3209e150,Nadeschda,GRIDASOWA,,1900,Kowel,,,1,archives/kowel_births.csv,n
+p:fad80f4e0762,Tadeusz,Griese,,1928,Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:028eb8965e63,KLARA,GRODZINSKI,,1940,Kowel,,,1,archives/kowel_births.csv,n
+p:ace6a84145d9,Iwan,GROM,,1914,Kowel,,,1,archives/kowel_births.csv,n
+p:475ef14c1bb2,Nikita,GROM,,1926,Kowel,,,1,archives/kowel_births.csv,n
+p:43ed6dcfeeb4,Peter,GROM,,1922,Kowel,,,1,archives/kowel_births.csv,n
+p:4c5445ce9766,Wladislaw,GRUDZIEN,,1903,Kowel,,,2,archives/kowel_births.csv,y
+p:1196a641a5ef,MADAS,GRYNSPAN,,1927,Kowel,,,1,archives/kowel_births.csv,n
+p:201b86fd6716,Tyalina,GRYSINK,,1925,Kowel,,,1,archives/kowel_births.csv,n
+p:35e10e4e9ba6,Jan,Grysnowicz,,1917,Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:960c065635ed,Eugenies,GRYSZIZUK,,1926,Kowel,,,1,archives/kowel_births.csv,n
+p:1d37123782ca,Eugenius,GRYSZIZUK,,1926,Kowel,,,1,archives/kowel_births.csv,n
+p:8e75aab0e80b,Helena,Grzegorzewska,Niedźwiedzka,1922,Kowel,2005-12-09,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:4352dcf09377,Helena,Grzelak,Sokołowska,1921,Wilno,2006-05-31,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:05e043e7efc8,Jakub,Guberman,,1906,,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:9dd1894d4244,Boril,GUDIM LEWKOWITSCH,,1922,Kowel,,,1,archives/kowel_births.csv,n
+p:2b522f69ec74,DORA,GUDIS,RUFFE,1925,Kowel,,,1,archives/kowel_births.csv,n
+p:6804d64b4a70,MOSES,GUDIS,,1913,Kowel,,,1,archives/kowel_births.csv,n
+p:4798573262e8,PETER,GURINOW,,1907,Kowel,,,1,archives/kowel_births.csv,n
+p:6151a33800f4,Stefan,GURITSCH,,1920,Kowel,,,1,archives/kowel_births.csv,n
+p:c0d215511056,Anna,Gut,Tyszkiewicz,1924,Czartorysk,1999-11-22,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:179bc0d26aa0,Moses,GUTMANN,,1905,Kowel,,,3,archives/kowel_births.csv,y
+p:5f8c56d19e56,IDEL,GUZ,,1925,Kowel,,,1,archives/kowel_births.csv,n
+p:b0a88490d952,JANINA,GWIAZDOWSKI,WYRWIAK,1924,Kowel,,,1,archives/kowel_births.csv,n
+p:58da956f67ee,,GWOSDIK,,1881,Kowel,,,1,archives/kowel_births.csv,n
+p:9a77e800704d,,GWOSDIK,,1881,Kowel,,,1,archives/kowel_births.csv,n
+p:882b4bab03ad,Czesław,Gwozdecki,,1927,Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:4a60bbc24dbb,Irene,HAAK,MARSAOWSKE,1872,Kowel,,,1,archives/kowel_births.csv,n
+p:922512a6cb7e,Irene Irma,HAAK,MORZEROWSKI,1872,Kowel,,,1,archives/kowel_births.csv,n
+p:db5579ed2e77,Iwan,HABOSCHENKO HABOTSCHENKO,,1902,Kowel,,,1,archives/kowel_births.csv,n
+p:052209a48c6a,Irmtraut,HABOTSCHENKA HABOTSCHENKO,TERTISCHNAU,1905,Kowel,,,1,archives/kowel_births.csv,n
+p:8d347b73f621,Jwan,HABOTSCHENKO,,1902,Kowel,,,1,archives/kowel_births.csv,n
+p:67702da0c32a,Sergi,HAIDISCHEK,,1922,Kowel,,,1,archives/kowel_births.csv,n
+p:c304aeab275d,DINA,HAIT,GORIN,1914,Kowel,,,1,archives/kowel_births.csv,n
+p:0c171a622170,LEA,HALLER,,1912,Kowel,,,1,archives/kowel_births.csv,n
+p:e501eb508785,Jan,HAPOTCENKO,,1902,Kowel,,,2,archives/kowel_births.csv,y
+p:b05d6c4700cd,Zena,HARKUSZEWSKA,,1934,Kowel,,,1,archives/kowel_births.csv,n
+p:fe92cd0b9431,Anatoli,HARKUSZEWSKI,,1934,Kowel,,,1,archives/kowel_births.csv,n
+p:bbd0c77bc5a4,Weronika,HARKUSZEWSKI,,1907,Kowel,,,1,archives/kowel_births.csv,n
+p:786f6212503c,Wladislaw,HARKUSZEWSKI,,1907,Kowel,,,1,archives/kowel_births.csv,n
+p:498c60f75d82,Iwan,HAWRYLUK,,1908,Kowel,,,2,archives/kowel_births.csv,y
+p:14a63ad244b9,,Helicz,,1926,Kowel,,,1,archives/Auschwitz_prisoners_born_in_kowel.csv,n
+p:cc03591042ce,,Helicz,,1926,Kowel,,,1,archives/normalized/people_and_birth_places.csv,n
+p:5c9076f23a01,Szulc,Henryk,,,,,st:57d62842bea3,1,kowel_residents_1938.csv,n
+p:b0e39b1d78c5,Ryszard,Herman,,1923,Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:a6f31cd65ae8,,HERSZ WOLF POMERANC,,,KOWEL,,,1,archives/ship_passengers_born_in_kowel.csv,n
+p:2ab03e298f06,DANIEL,HILDEBRAND,,1925,Kowel,,,1,archives/kowel_births.csv,n
+p:3ebfd415de9d,WASIL,HIMBIZKI,,1918,Kowel,,,1,archives/kowel_births.csv,n
+p:55ef16be6371,Natailie,HINKULOW,SPAKOWSKA,1892,Kowel,,,1,archives/kowel_births.csv,n
+p:e2c81e3c7cc4,Natalia,HINKULOW,,1892,Kowel,,,1,archives/kowel_births.csv,n
+p:1931069608cc,Zyznowski,Hipolit,,,,,,1,kowel_residents_1938.csv,n
+p:ec2ec6a83fb4,MYKOLA,HLUSCHENKO,,1923,Kowel,,,1,archives/kowel_births.csv,n
+p:b5c0db9f7979,Maria,HLUSCHTSCHENKO,,1918,Kowel,,,1,archives/kowel_births.csv,n
+p:17a39e70b9a1,Maria,Hobot,Kubisiak,1932,Kraszewice,2009-05-01,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:f20eb5491759,Michael,HOLA,,1919,Kowel,,,2,archives/kowel_births.csv,y
+p:49c8c1b3a21a,TATIANA,HOLOWCZYNSKYJ,MAKARUK,1924,Kowel,,,1,archives/kowel_births.csv,n
+p:87826afeb2d0,Nadaeschda,HOLOWNITZKA,,1911,Kowel,,,1,archives/kowel_births.csv,n
+p:0387845cfaeb,Nadeschda,HOLOWNIZKA,,1911,Kowel,,,2,archives/kowel_births.csv,y
+p:df3e9b6994fc,Anna,HOLUBOWITSCH,SAMTSCHINSKA,1923,Kowel,,,1,archives/kowel_births.csv,n
+p:ec5818dc111a,Viktor,HOLUBUWITSCH,,1921,Kowel,,,1,archives/kowel_births.csv,n
+p:0f13e47535ad,Wassivilli,HOLUBUWITSCHKA,,1942,Kowel,,,1,archives/kowel_births.csv,n
+p:a3485e48ddef,ESTERA,HOPEN,GOIDER,1916,Kowel,,,1,archives/kowel_births.csv,n
+p:92903838aa64,MOSES,HOPEN,,1909,Kowel,,,1,archives/kowel_births.csv,n
+p:0a889b45f55f,Michael,HORDITSCHUK,,1923,Kowel,,,2,archives/kowel_births.csv,y
+p:5c6c94a49df3,Aleksander,HORODNIK,,1903,Kowel,,,1,archives/kowel_births.csv,n
+p:28e9491ce7e0,,Horvath,,1921,Goberling;Kowelin,,,1,archives/normalized/people_and_birth_places.csv,n
+p:50296836a629,,Horvath,,1921,Goberling;Kowelin,,,1,archives/Auschwitz_prisoners_born_in_kowel.csv,n
+p:90fefbe312b3,WOLODYMYR,HRAHIV,,1909,Kowel,,,1,archives/kowel_births.csv,n
+p:9fe2dae326fb,MYROSLAW,HRESZCZYSZYN,,1927,Kowel,,,1,archives/kowel_births.csv,n
+p:1ace5a506728,Miroslaw,HREZEZYSZYN,,1927,Kowel,,,2,archives/kowel_births.csv,y
+p:94587dc1f5e2,PETER,HROM,,1922,Kowel,,,1,archives/kowel_births.csv,n
+p:0edf26b9cd5c,WOLODYMYR,HROM,,1919,Kowel,,,1,archives/kowel_births.csv,n
+p:7ab6c6fa991b,Maria,IBRAJEW,,1928,Kowel,,,1,archives/kowel_births.csv,n
+p:09a9a4597cbb,ALEXANDER,IDEL,,1923,Kowel,,,1,archives/kowel_births.csv,n
+p:2e9c6d1bc940,Schatz,Ignancy,,,,,st:becf704481a7,1,kowel_residents_1938.csv,n
+p:11ac73603cf1,MICHAEL,IVANTSCHIK,,1918,Kowel,,,1,archives/kowel_births.csv,n
+p:6f875ee33c43,Leokadia,Iwańska,Imiałek,1923,Kowel,2003-03-24,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:56c2b81e66bc,Konstanty,Iwański,,1921,Tuła,2003-12-21,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:e368d5ee289d,MICHAEL,IWANTSCHUK IWANCUK,,1918,Kowel,,,1,archives/kowel_births.csv,n
+p:1092ca6395a5,Tadeusz,Jagodziński,,1911,Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:8fd01dc35e28,Mak.,JAKIMO TAKIMO,,1914,Kowel,,,1,archives/kowel_births.csv,n
+p:a08203d8c2bb,Wajtman,Jakob,,,,,st:b7d5a2f0721a,1,kowel_residents_1938.csv,n
+p:5fa9c200f1d8,And.,JAKOWENKO,,1888,Kowel,,,1,archives/kowel_births.csv,n
+p:fe12d8404cf9,Ant.,JAKOWENKO,,1886,Kowel,,,1,archives/kowel_births.csv,n
+p:89ba5bce7248,Juliane,JAKOWENKO,,1887,Kowel,,,1,archives/kowel_births.csv,n
+p:60ef81dbb6e5,Julianne,JAKOWENKO,,1887,Kowel,,,1,archives/kowel_births.csv,n
+p:9dc22e0d0483,Michał,Jakubczyk,,1907,Kluczkowice,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:c1a95a700902,FEIGA,JAKUBOWICZ JAKOBOWICZ,GINGOLD,1886,Kowel,,,1,archives/kowel_births.csv,n
+p:c17bf08b3e46,MARIAN,JAMBOROWICZ,,1923,Kowel,,,1,archives/kowel_births.csv,n
+p:f4d78e4d3b61,Maria,Jamnicka,Słyk,1926,Kowel,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:d767c8f83af6,Tadeusz,Janik,,1915,Frywałd,2003-12-04,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:24225de40061,Sabdelsztejn,Jankiel,,,,,st:06caf55d067c,1,kowel_residents_1938.csv,n
+p:a6cce751686f,Josef,JANKIEWICZ,,1904,Kowel,,,1,archives/kowel_births.csv,n
+p:9d1ae57692ab,Iwan,JAREMENKO,,1917,Kowel,,,1,archives/kowel_births.csv,n
+p:057e5e60cb7a,Marta,JAREMENKO,,1923,Kowel,,,1,archives/kowel_births.csv,n
+p:66595d937737,Petro,JAROCHEK,,1925,Kowel,,,1,archives/kowel_births.csv,n
+p:4a279b008c11,Josef,JAROCKI,,1912,Kowel,,,1,archives/kowel_births.csv,n
+p:ea9267a2d757,Kazimiera,Jasińska,Bagińska,1917,Topcza,2008-02-09,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:0bc3b64f8b31,Anna,JASINSKA PETRUSSLHENKO,,1925,Kowel,,,1,archives/kowel_births.csv,n
+p:14ce739128ea,IRENA,JAWOROWSKA,,1922,Kowel,,,1,archives/kowel_births.csv,n
+p:e6a335fab500,Igor,JAWOROWSKI,,1930,Kowel,,,1,archives/kowel_births.csv,n
+p:21f5435b207c,Teofil,Jaworowski,,1920,,,st:e1bc135ed2c5,1,doctors_resident_in_kowel.csv,n
+p:65e3a311a174,Vera,JAWOROWSKI,,1928,Kowel,,,1,archives/kowel_births.csv,n
+p:84983bb8d431,BOGDAN,JAWORSKI,,1926,Kowel,,,1,archives/kowel_births.csv,n
+p:31f16f0cf712,Karol,JAWORSKI,,1909,Kowel,,,1,archives/kowel_births.csv,n
+p:8849a21064df,OLENA,JAWORSKYJ,LISOWSKA,1891,Kowel,,,1,archives/kowel_births.csv,n
+p:43281cbb7935,WIKTOR,JAWORSKYJ,,1887,Kowel,,,1,archives/kowel_births.csv,n
+p:356c6b19650e,Bogdan,JAWOTSKI,,1926,Kowel,,,1,archives/kowel_births.csv,n
+p:f9e641e67fac,Irena,JECZALIK,WUTTKE,1904,Kowel,,,2,archives/kowel_births.csv,y
+p:efb889425fa6,ARTEM,JELISEJEW,,1894,Kowel,,,1,archives/kowel_births.csv,n
+p:1a94847c8d81,Adestasia,JEREAENKO MISCUK,,1904,Kowel,,,1,archives/kowel_births.csv,n
+p:b8ef5ee7d322,Grzegorz,JEROSZOW,,1902,Kowel,,,2,archives/kowel_births.csv,y
+p:8123f73f5c43,Wasilewski,Jerzy,,,,,st:d4bae7004695,1,kowel_residents_1938.csv,n
+p:55ba0d1c19d6,WOLODYMYR,JESZOW,,1923,Kowel,,,1,archives/kowel_births.csv,n
+p:75835d1d48d0,WLADISLAW,JEWCZYNSKI,,1910,Kowel,,,1,archives/kowel_births.csv,n
+p:7c78daeb8a63,Wladyslaw,JEWCZYNSKI,,1910,Kowel,,,1,archives/kowel_births.csv,n
+p:2a998dd7dafa,Eugenij Genich,JEWTUSCHEK,,1923,Kowel,,,2,archives/kowel_births.csv,y
+p:61b18b51469e,Genich,JEWTUSCHEK,,1923,Kowel,,,1,archives/kowel_births.csv,n
+p:887537a5c46f,Eugeniusz,Jewtuszek,,1923,Kowel,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:a536c32fbb1d,Sinaide,JOHANSON,,1906,Kowel,,,1,archives/kowel_births.csv,n
+p:ad3dc9c3663f,Tatiana,JOHANSON,,1928,Kowel,,,1,archives/kowel_births.csv,n
+p:0bcd0127fcc6,Wiktor,JOHANSON,,1938,Kowel,,,1,archives/kowel_births.csv,n
+p:300abf8e9aa0,Zyskind,Josef,,,,,st:dc9cb5bd6dc9,1,kowel_residents_1938.csv,n
+p:c2b78cae476c,NIKOLAS,JOWLEW,,1891,Kowel,,,1,archives/kowel_births.csv,n
+p:620d5712eefb,Wydra,Jozef,,,,,,1,kowel_residents_1938.csv,n
+p:f6b36e9b584a,Mejer,Jucht,,1917,,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:35394ef4788f,Ludwik,Jurkiewicz,,1887,Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:469ab8e6ba1b,Leon,KABIBSKI,,1918,Kowel,,,1,archives/kowel_births.csv,n
+p:212f122a00c6,Leon,KABINSKI,,1918,Kowel,,,2,archives/kowel_births.csv,y
+p:fe9712d34289,LONGIN,KABINSKI,,1918,Kowel,,,1,archives/kowel_births.csv,n
+p:835dc9fc0fab,Jankiel,Kacer,,1930,,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:35bcbc0ffbec,Anton,KACZAN,,1906,Kowel,,,1,archives/kowel_births.csv,n
+p:2be72e58d677,Peter,KADATZKI,,1909,Kowel,,,2,archives/kowel_births.csv,y
+p:f34ad332357d,Pter,KADATZKI,,1909,Kowel,,,1,archives/kowel_births.csv,n
+p:d2ec728bfe06,Lea,KAGAN,,1883,Kowel,,,2,archives/kowel_births.csv,y
+p:fcd1d658733f,MAGA,KAGAN,,1904,Kowel,,,1,archives/kowel_births.csv,n
+p:c505ebb6ce8c,Mordechai,KAGAN,,1922,Kowel,,,1,archives/kowel_births.csv,n
+p:3f3622dcf874,Irena,Kalbarczyk,Kalbarczyk,1924,Kowel,2009-02-03,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:2b4ec31940a4,Michael,KALENCZIK,,1914,Kowel,,,1,archives/kowel_births.csv,n
+p:218ebd7367cf,Penton,KALENTIK,,1921,Kowel,,,1,archives/kowel_births.csv,n
+p:b6edf2c876e5,Olga,Kalinowska,Iwaniuk,1922,Koweła,1998-10-21,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:4336d63c2d56,Maroz,KALISTRAAT,,1910,Kowel,,,1,archives/kowel_births.csv,n
+p:fccd758c163f,Stanislau,KAMAKOWSKI,,1903,Kowel,,,1,archives/kowel_births.csv,n
+p:55761d14ea17,Bencion,Kamieniecki,,1928,,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:a28b04698c3e,Maria,Kamińska,,1925,Kowel,2007-03-04,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:9d11fd8bb6a3,Chania,KANFIR,SPRINGER,1908,Kowel,,,1,archives/kowel_births.csv,n
+p:160a8b1a1633,Paulina,Kaniewska,Zdrojko,1915,Teresin,1997-12-11,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:b5e54accab00,DMYTRO,KAPUSTIAN,,1915,Kowel,,,1,archives/kowel_births.csv,n
+p:5c2c58dff2ec,NADIA,KAPUSTIAN,BABKIN,1922,Kowel,,,1,archives/kowel_births.csv,n
+p:afcddccefba9,LINA,KARAKASZ,,1927,Kowel,,,1,archives/kowel_births.csv,n
+p:fff8d2d0c7b1,Anna,Karaś,Szaban,1915,Kowel,1997-06-12,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:e024a885eea7,Jan,KARASINSKI,,1924,Kowel,,,1,archives/kowel_births.csv,n
+p:c551c6f4b022,Pryska,Karmelita,Majun,1923,Wielka Staryca,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:3e56dbde5d6c,Mirosław,Karpow,,1921,Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:c282be580f75,Wladyszaw,KARWACZEWSKI,,1907,Kowel,,,1,archives/kowel_births.csv,n
+p:b4dea7d0f6f9,KAZIMIERZ,KASIANOWSKI,,1912,Kowel,,,1,archives/kowel_births.csv,n
+p:c4c2ad917e2f,ALEKS,KASJAN,,1892,Kowel,,,1,archives/kowel_births.csv,n
+p:a651fdf8a5c3,MARIA,KASJAN,DANYTKO,1894,Kowel,,,1,archives/kowel_births.csv,n
+p:72ab0735265c,GREGORI,KASNEZON,,1925,Kowel,,,1,archives/kowel_births.csv,n
+p:1daf82331470,Henryk,Kawina,,1907,,1939-09,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:6f68103cfd52,Wladyslaw,Kedierski,,,,,st:57d62842bea3,1,kowel_residents_1938.csv,n
+p:d550d9c86a77,EUGENIA,KEEREWEER,,1901,Kowel,,,1,archives/kowel_births.csv,n
+p:e7c8ea06680a,Paul,KEEYSIAK,,1920,Kowel,,,3,archives/kowel_births.csv,y
+p:ede557259037,Ludwik,Kelm,,1907,Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:ca4fa6f4b919,Wladislaus,KENDZIERA,,1913,Kowel,,,1,archives/kowel_births.csv,n
+p:b69e1af4be9a,Alexander,KIDALINSKI,,1936,Kowel,,,1,archives/kowel_births.csv,n
+p:552d628e0d2c,Halina,KIDALINSKI,,1913,Kowel,,,1,archives/kowel_births.csv,n
+p:f71a7b109f5b,Jolanta,Kielarska,,1936,Kowel,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:f8848338a27a,Krystyna,Kielarska,,1933,Kowel,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:0827e69599ce,Zygmunt,Kielarski,,,Kowel,,,1,archives/normalized/people_and_birth_places.csv,n
+p:52a59f10c70f,Zygmunt,Kielarski,,,Kowel,,,1,archives/people_living_in_Kowel.csv,n
+p:7526e5517d90,GEORG,KIELCZEWSKI,,1923,Kowel,,,1,archives/kowel_births.csv,n
+p:ae71798025e7,GEORG JERZY,KIELCZEWSKI,,1923,Kowel,,,1,archives/kowel_births.csv,n
+p:e752b6a5485e,Piotr,Kiełkowski,,1893,Lwów,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:52f47a43771c,Edward,Kietrzewski,,1927,Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:9e71e15f6a42,Josef,KIMMEL,,1922,Kowel,,,2,archives/kowel_births.csv,y
+p:3062c60753f8,Gina,Kiperman,Freid,1903,Kowel,1942,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:b050353158c7,ISAAK,KIRSCHENBAUM,,1905,Kowel,,,1,archives/kowel_births.csv,n
+p:88659e61af9b,Fedir,KISLACZENKO,,1902,Kowel,,,1,archives/kowel_births.csv,n
+p:785d846e3202,Zefiryna,Kitowska,Jarosz,1924,Siemień,2005-07-27,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:578259c4db72,Kazimierz,Klauze,,1926,Powursk,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:dc02b8020c8a,Stanisław,Kleczkowski,,1883,Kowel,,,2,archives/polish_military_born_in_kowel.csv,y
+p:707a950636f0,Ziembicki,Klemens,,,,,st:b3eef9adf412,1,kowel_residents_1938.csv,n
+p:7b253e256396,Wiera,Klimiuk,,1935,Koweła,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:0caef9e96617,JEKATERINA,KLINOWA,,1924,Kowel,,,1,archives/kowel_births.csv,n
+p:c4dd1697e51c,WIERA,KLOTSCHKO,,1922,Kowel,,,1,archives/kowel_births.csv,n
+p:663afe9a76cc,Jerzy,KLUCZYK,,1924,Kowel,,,1,archives/kowel_births.csv,n
+p:fb9cc57dd562,Salomon,Klurgus,,,,,st:15e97eb03ba4,1,kowel_residents_1938.csv,n
+p:9fef479bb047,Halina,Knapińska,Wysocka,1926,Lublin,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:771be45928c9,Elja,KNICHOWA KUTSCHEROWA,,1925,Kowel,,,1,archives/kowel_births.csv,n
+p:e48e390ed0b5,Sonia,Knobel,Franz,1901,Kowel,1944-07-29,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:2860f6f52d4f,Józefa,Kociubińska,,1943,,,,1,archives/normalized/people_and_birth_places.csv,n
+p:bc2b77d8dd49,Józefa,Kociubińska,,,,1943-02-09,,1,archives/people_living_in_Kowel.csv,n
+p:3b5e4ef49848,Roman,Kociubiński,,,,1943-02-09,,1,archives/people_living_in_Kowel.csv,n
+p:cd36888cf993,Roman,Kociubiński,,1943,,,,1,archives/normalized/people_and_birth_places.csv,n
+p:1630662689fd,Stanisław,Kociubiński,,1943,,,,1,archives/normalized/people_and_birth_places.csv,n
+p:d19109599356,Stanisław,Kociubiński,,,,1943-02-09,,1,archives/people_living_in_Kowel.csv,n
+p:093147ed19f5,Pinia,Kofelnerg,,1920,,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:1126b477945d,Srul,KOILER,,1928,Kowel,,,1,archives/kowel_births.csv,n
+p:93c99fed32ac,Irena,Kojło,Danielewicz,1928,Kowel,2004-04-24,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:2ef8e8b3e545,Jan,KOLBACZYNSKI,,1918,Kowel,,,2,archives/kowel_births.csv,y
+p:c1ed416404ea,JEFROSSINJA,KOLENDA,KOLENDA,1897,Kowel,,,1,archives/kowel_births.csv,n
+p:178760792332,JEWGENIJ,KOLENDA,KOLENDA,1935,Kowel,,,1,archives/kowel_births.csv,n
+p:c5dfa02b0ea5,KLAUDIUSZ,KOLESNIKOW,,1906,Kowel,,,1,archives/kowel_births.csv,n
+p:a08ad311fb6d,Demian,KOLESNYK,,1923,Kowel,,,1,archives/kowel_births.csv,n
+p:578c77058702,Lubow,KOLISNITZKAJA,,1907,Kowel,,,1,archives/kowel_births.csv,n
+p:80f8dabd2225,Melanja,KOLODIJTSCHUK,,1902,Kowel,,,1,archives/kowel_births.csv,n
+p:1b55c00794ef,Regina,Kołodziej,Ostrowicka,1921,Rozyszcze,2001-01-29,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:eb1b3afe3bd3,Antonina,Kołodziejczyk,Nowik,1922,Równe,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:4e9da2ebf0b1,Barbara,Komarewicz,Komarewicz,1920,Krzemieniec,2005-03-02,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:eb59c037581d,JOSIP,KOMISARYK,,1923,Kowel,,,1,archives/kowel_births.csv,n
+p:be0394dc0a70,Jerzy,Kompaniewski,,1920,,,st:d44d661a32e7,1,doctors_resident_in_kowel.csv,n
+p:d79b05257e73,Maria,KONDRACHOW,,1920,Kowel,,,1,archives/kowel_births.csv,n
+p:dfd1d93271a0,Tadeusz,Kopacz,,1924,,,,1,archives/kowel_born_deported_east.csv,n
+p:93c64f665298,Antoni,Korczewski,,1933,Kowel,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:962bad9969a4,ICEK,KORENFELD,,1908,Kowel,,,1,archives/kowel_births.csv,n
+p:b603e2be5fe9,Iwan,KORENJGA,,1884,Kowel,,,1,archives/kowel_births.csv,n
+p:aafc48938104,Andre,KORMELUK,,1924,Kowel,,,1,archives/kowel_births.csv,n
+p:e081d1fac4d7,Feodosya,KORMISCHOWA,,1905,Kowel,,,1,archives/kowel_births.csv,n
+p:239ee6aae865,Andrej,KORNELUK,,1924,Kowel,,,1,archives/kowel_births.csv,n
+p:9aa0d7b6fa2c,Halina,KOROL,,1939,Kowel,,,1,archives/kowel_births.csv,n
+p:28a05d5c5996,,Korolczuk,,1912,Kowel,,,1,archives/Auschwitz_prisoners_born_in_kowel.csv,n
+p:a957ed9cca4c,,Korolczuk,,1912,Kowel,,,1,archives/normalized/people_and_birth_places.csv,n
+p:0cb49acd8849,STANISLAUS,KOROLCZUK,,1912,Kowel,,,1,archives/kowel_births.csv,n
+p:0b2f03e800e2,Aleksander,Korolko,,,,1941-07-31,,1,archives/people_living_in_Kowel.csv,n
+p:858f47b99b66,Aleksander,Korolko,,1941,,,,1,archives/normalized/people_and_birth_places.csv,n
+p:4fb8b700666a,Tadeusz,Korona,,1917,Ufa,1944-01-15,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:532429fb56fa,JOZEF,KORPOL,,1925,Kowel,,,1,archives/kowel_births.csv,n
+p:ce8ae7652ef3,STANISLAW,KORULSCHUK,,1912,Kowel,,,1,archives/kowel_births.csv,n
+p:01e696fceb20,ANNA,KOSAKEWITSCH,,1918,Kowel,,,1,archives/kowel_births.csv,n
+p:02e21d304a32,Piotr,KOSCZEWINSKI,,1907,Kowel,,,1,archives/kowel_births.csv,n
+p:f11162ef01a5,Tadeusz,Kosiński,,1925,Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:c24b5b6f9bb5,Zachar,KOSLOWJCZ,,1913,Kowel,,,1,archives/kowel_births.csv,n
+p:fdf2daa8e2a8,Xenia,KOSLOWYCZ,,1886,Kowel,,,1,archives/kowel_births.csv,n
+p:2faa127a4092,ANATOLI,KOSOWSKI,,1912,Kowel,,,1,archives/kowel_births.csv,n
+p:d3e39d727763,Eugeniusz,KOSTENKO,,1892,Kowel,,,1,archives/kowel_births.csv,n
+p:6d2a9fce8261,Fedor,KOSTINTSCHYK,,1925,Kowel,,,2,archives/kowel_births.csv,y
+p:05e24b5f2279,MIKOŁAJ,KOSTIUK,,1915,"Turzysk, p. Kowel",,,1,archives/polish_military_born_in_kowel.csv,n
+p:72da21dd2b52,ZENAIDA,KOSTIUK,,1918,Kowel,,,2,archives/kowel_births.csv,y
+p:4e7497f45459,ZINAIDE ZENAIDA,KOSTIUK,,1918,Kowel,,,1,archives/kowel_births.csv,n
+p:c65ce56c3e87,Fedor,KOSTIUTSCHYK,,1925,Kowel,,,1,archives/kowel_births.csv,n
+p:071fbf012c92,FEODOR,KOTLAR,,1919,Kowel,,,1,archives/kowel_births.csv,n
+p:828511812ab7,Michal,Kowal,,,,,st:96353b1acb99,1,kowel_residents_1938.csv,n
+p:def00b7e500e,OLEXIJ,KOWALEWSKYJ,,1892,Kowel,,,1,archives/kowel_births.csv,n
+p:5152adc080ac,Elżbieta,Kowalska,,1941,Kowel,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:6f7579e99eb9,Michał,Kowalski,,1897,Kostunin,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:1fb429ea9ce2,Mikołaj,Kowalski,,1895,Włodzimierz Wołyński,1944-05,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:4f8b884c7686,Tadeuz,KOWALSKI,,1922,Kowel,,,1,archives/kowel_births.csv,n
+p:65755a474e95,Zygmunt,Kowalski,,,Kowel,,,1,archives/normalized/people_and_birth_places.csv,n
+p:ba1ea0009ead,Zygmunt,Kowalski,,,Kowel,,,1,archives/people_living_in_Kowel.csv,n
+p:2100a5436e33,BOGDAN,KOZIARA,,1921,Kowel,,,1,archives/kowel_births.csv,n
+p:7d678787779d,Sackar,KOZLOWICZ,,1913,Kowel,,,1,archives/kowel_births.csv,n
+p:5f6596b864cc,Kija Kya,KRASMIKOW,,1922,Kowel,,,1,archives/kowel_births.csv,n
+p:510669f313b8,ILYA,KRASNIKOW,,1922,Kowel,,,1,archives/kowel_births.csv,n
+p:03f4556421b3,Aurelia,Krawczak,,1912,,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:08287cc673fe,Zygmunt,Krawczak,,1913,Siedlce,1943-10-06,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:5bb21870e8d4,Stanisław,Krawczenko,,1905,Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:4faa1a5811c7,Feliks,Krawczuk,,1926,Kowel,1999-06-11,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:0c86f297dcee,JAN,KRAWCZYK,,1921,"Sekoń,p. Kowel",,,1,archives/polish_military_born_in_kowel.csv,n
+p:5c026d5f70f9,Kasimira,KRECZKOWSKA,SOBITSCHWESKA,1908,Kowel,,,1,archives/kowel_births.csv,n
+p:c5bf60012d07,Lew,KREINER,,1902,Kowel,,,1,archives/kowel_births.csv,n
+p:e5c743a3a417,Lew,KREINER KREIMER,,1902,Kowel,,,1,archives/kowel_births.csv,n
+p:6798832f1254,Dunja,KRIWINSKA,,1924,Kowel,,,1,archives/kowel_births.csv,n
+p:6d35479d2130,Waclaw,Krolewski,,1920,,,st:d44d661a32e7,1,doctors_resident_in_kowel.csv,n
+p:5f5e3543843f,Pfiliv,KROM,,1908,Kowel,,,1,archives/kowel_births.csv,n
+p:396248d75fd9,Stanislaus,KRUPPA,,1916,Kowel,,,1,archives/kowel_births.csv,n
+p:2f03280f51e9,ALFREDA KATARYNA,KRYLOWA,,1926,Kowel,,,1,archives/kowel_births.csv,n
+p:abdeebf7a153,Katharine,KRYLOWA,,1925,Kowel,,,1,archives/kowel_births.csv,n
+p:82a23d537acc,Henryk,KRYSANOVSKI,,1925,Kowel,,,1,archives/kowel_births.csv,n
+p:7e442656952d,FELIKS ANTONI,KRZAN,,1920,Kowel,,,1,archives/kowel_births.csv,n
+p:3f40ff7bb0ab,Julia,Krzeczkowska,,1920,,,st:0814ac27b0de,1,doctors_resident_in_kowel.csv,n
+p:ece658991e94,HENRYK HEINRICH,KRZEMINSKI SEMINSKY,,1925,Kowel,,,1,archives/kowel_births.csv,n
+p:df35baef0cce,Antoni,KRZYZANOWSKI,,1923,Kowel,,,1,archives/kowel_births.csv,n
+p:439c2936d839,Kasimier,KSCHZECZKOWSKA,,1908,Kowel,,,1,archives/kowel_births.csv,n
+p:fb217462f42a,Paul,KSEYSIAK,,1920,Kowel,,,1,archives/kowel_births.csv,n
+p:e2cf4d9869a0,Roman,Kubasiewicz,,1926,Kowel,1998-10-21,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:edddfed04927,Stanisław,Kubiak,,1905,Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:479a06844c55,Wladislawa,KUBICZAK,,1925,Kowel,,,1,archives/kowel_births.csv,n
+p:edf1a3cd4f1d,Wladystava,KUBICZAK,,1925,Kowel,,,1,archives/kowel_births.csv,n
+p:3ad4ce48c29a,Edward,Kubisiak,,1935,Kraszewice,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:f3eade11c67c,Wamda,KUCHTA,,1926,Kowel,,,1,archives/kowel_births.csv,n
+p:b742a309dfd5,,Kuczbara,,1911,Kowel,,,1,archives/normalized/people_and_birth_places.csv,n
+p:d30cc4a984e5,,Kuczbara,,1911,Kowel,,,1,archives/Auschwitz_prisoners_born_in_kowel.csv,n
+p:4ffe4e6c2711,Petro,KUDATZKI,,1909,Kowel,,,1,archives/kowel_births.csv,n
+p:ff0998eecff0,Ludmila,KUDDRITZKAJO,,1901,Kowel,,,1,archives/kowel_births.csv,n
+p:fcbd889ac1d5,WOLODYMYR,KUDRIAWCEW,,,Kowel,,,1,archives/kowel_births.csv,n
+p:30c6311a2cb3,WLADINI,KUDRIAWZEW,,1899,Kowel,,,1,archives/kowel_births.csv,n
+p:5ac46b09d6f1,Zofia,Kulesz,Glina,1929,Kowel,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:09b45d7e7f36,Marja,KULIJ,MURSUK,1894,Kowel,,,1,archives/kowel_births.csv,n
+p:452f484cd5f4,Adam,KULIK,,1925,Kowel,,,1,archives/kowel_births.csv,n
+p:8649b0d894ce,Karp.,KULIK,,1881,Kowel,,,2,archives/kowel_births.csv,y
+p:ff9387f911c0,Alexander,KULIKOWITSCH,,1923,Kowel,,,1,archives/kowel_births.csv,n
+p:17241808b4a1,Lucjan,Kulikowski (Kuligowski),,1894,Popowicze pow. Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:0f40b5850330,Adolf,Kunc,,1899,Aleksandrówka pow. Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:8d8f160ac42b,MARIA,KUNYCZ,,1924,Kowel,,,1,archives/kowel_births.csv,n
+p:9a6f6c258cc8,Valentina,KUPRIK,,1916,Kowel,,,1,archives/kowel_births.csv,n
+p:4d04ebc0bae4,Teodora,Kurlenda,,1925,Kowel,1999-05-06,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:813128fd7330,Stanisława,Kurnatowska,Metler,1915,Kowel,2002-07-20,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:19f3783763f3,,Kurowski,,1902,Kowel,,,1,archives/Auschwitz_prisoners_born_in_kowel.csv,n
+p:9fddb3e1f700,,Kurowski,,1902,Kowel,,,1,archives/normalized/people_and_birth_places.csv,n
+p:e7ce9408ea39,ALEXANDRA,KURSA,K�DING,1918,Kowel,,,1,archives/kowel_births.csv,n
+p:2577eb491198,Antoni,KURSA,,1908,Kowel,,,1,archives/kowel_births.csv,n
+p:af82fc206ba7,HEDWIGA,KURSA,,1943,Kowel,19440413,,1,archives/kowel_births.csv,n
+p:2fee2e3f8edf,Bronislawa,KUSSMESZ,,1925,Kowel,,,2,archives/kowel_births.csv,y
+p:8d5c6e20c93f,Fedor,KUSTIUTSCHYK,,1925,Kowel,,,1,archives/kowel_births.csv,n
+p:f568cbe9aa26,Piotr,Kusyk,,1912,Czersk pow. Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:8fe159fd5339,,Kuszkowski,,1920,Kowel,,,1,archives/normalized/people_and_birth_places.csv,n
+p:b0117980672e,,Kuszkowski,,1920,Kowel,,,1,archives/Auschwitz_prisoners_born_in_kowel.csv,n
+p:95e09e1c7f5c,Dimitvij,KUSZNIRENKO,,1932,Kowel,,,1,archives/kowel_births.csv,n
+p:85b628a177fa,Ludmila,KUSZNIRENKO,,1940,Kowel,,,1,archives/kowel_births.csv,n
+p:0a6f93773e12,Olga,KUSZNIRENKO,,1905,Kowel,,,1,archives/kowel_births.csv,n
+p:1193c4fd589f,Tania,KUSZNIRENKO,,1926,Kowel,,,1,archives/kowel_births.csv,n
+p:b421cc11a1fa,Sergei,KUTZEWITSCH,,1925,Kowel,,,1,archives/kowel_births.csv,n
+p:5f4659247258,ULANIA,KUZMICH,,1928,Kowel,,,1,archives/kowel_births.csv,n
+p:d60af2e3b38e,Leo,KUZMINSKA,,1923,Kowel,,,2,archives/kowel_births.csv,y
+p:0d375555c8ef,ULANIA,KUZMYCZ KUZMIRCZ,,1920,Kowel,,,1,archives/kowel_births.csv,n
+p:285c9fefc4fa,MARIA,KWIATKOWSKA SYSTANIUK,,1924,Kowel,,,1,archives/kowel_births.csv,n
+p:0b0ca7510df8,DANUTA,KWIECINSKA,,1930,Kowel,,,2,archives/kowel_births.csv,y
+p:98565eaba189,Maria,KWIECINSKA,,1921,Kowel,,,1,archives/kowel_births.csv,n
+p:a83f5120c47a,Janina,Laban,,1925,Kowel,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:e199ec1df362,Katarzyna,Łabuda,Sosenka,1926,Kowel,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:85a4d6a50c83,IWAN,LACHOWSKI,,1926,Kowel,,,1,archives/kowel_births.csv,n
+p:597da589cc8b,Włodzimierz,Łada-Łobarzewski,,1897,Wielicz pow. Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:f038cccfa76f,Aleksander,Ładygin,,1907,Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:5ea4070fb43c,,Lambach,,1901,Kowel,,,1,archives/Auschwitz_prisoners_born_in_kowel.csv,n
+p:daeaa5325f87,,Lambach,,1901,Kowel,,,1,archives/normalized/people_and_birth_places.csv,n
+p:c2908fb44524,BRONISLAUS,LAMBACH,,1904,Kowel,19401104,,2,archives/kowel_births.csv,y
+p:68066e934708,,Lanczyc,,1922,Kowel,,,1,archives/Auschwitz_prisoners_born_in_kowel.csv,n
+p:e92966f8b4d7,,Lanczyc,,1922,Kowel,,,1,archives/normalized/people_and_birth_places.csv,n
+p:8289bdfb3aca,Anna,Langsam,Korczewska,1922,Kowel,1999-07-17,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:4bc1a0dbc99f,Artur,Laronelle de Georgei,,,,,st:184193a653cb,1,kowel_residents_1938.csv,n
+p:601cc195e81c,Anna,LAUDANSKA,MYCIELSKA,1902,Kowel,,,2,archives/kowel_births.csv,y
+p:2adbf5d67fb6,Anne,LAWRYH,,1890,Kowel,,,1,archives/kowel_births.csv,n
+p:43e46489f5a3,Gift,LEDERKREMUK,,1915,Kowel,,,1,archives/kowel_births.csv,n
+p:1110195eed2c,Christiph,LEGOWICZ,,1943,Kowel,,,1,archives/kowel_births.csv,n
+p:5bd0f406c867,Jante,LEIMINT,,1922,Kowel,,,1,archives/kowel_births.csv,n
+p:1eca4fbad10f,SAJAZ,LEONKY,,1880,Kowel,,,2,archives/kowel_births.csv,y
+p:126143b1c0cb,Olian,LETWINSKI,,1901,Kowel,,,1,archives/kowel_births.csv,n
+p:5b4ef16e5fbb,BEBA,LEWERTOW,,1925,Kowel,,,1,archives/kowel_births.csv,n
+p:1684ee398378,SALEK,LEWKOWICZ,,1911,Kowel,,,1,archives/kowel_births.csv,n
+p:d1e427d96f7d,HRIHORIJ,LEWOTSCHKO,,1924,Kowel,,,1,archives/kowel_births.csv,n
+p:a27a85750457,Hryhorij,LEWOTSCHKO,,1924,Kowel,,,2,archives/kowel_births.csv,y
+p:35a62e61ce54,Wira,LEWOTSCHKO,BUSCH,1924,Kowel,,,2,archives/kowel_births.csv,y
+p:6df079c521d5,SERHIJ,LEWTSCHUK,,1935,Kowel,,,1,archives/kowel_births.csv,n
+p:daa39bc805d5,Bronislaw,LEZANSKI,,1925,Kowel,,,1,archives/kowel_births.csv,n
+p:ff9a54168955,Aleksandra,Lipska,Proszkina,1924,Makiejewka,2001-09-26,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:9819d899b606,Peter,LISETZKY,,1926,Kowel,,,1,archives/kowel_births.csv,n
+p:450a75400eec,TEOFIL,LISIECKI,,1904,Kowel,,,1,archives/kowel_births.csv,n
+p:ae2c4e25cd4a,Borys,Lisowski,,1920,,,st:6696b3e78791,1,doctors_resident_in_kowel.csv,n
+p:9576e84f05da,Józef,Listos,,1927,Kowel,1999-04-11,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:4c7bffbbeaed,Stanisława,Litkowska,Sikora,1921,Piłka,2000-08-06,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:5ffc1fd083db,Wolf,Litwak,,,,,st:06caf55d067c,1,kowel_residents_1938.csv,n
+p:9c82193591a3,Iwan,LJATSCHTSCHENKO,,1916,Kowel,,,1,archives/kowel_births.csv,n
+p:4a6f61c0b503,Ljuba,LJATSCHTSCHENKO,,1910,Kowel,,,1,archives/kowel_births.csv,n
+p:691e314729fc,Jerzy,Łobarzewski,,1899,Wielick pow. Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:8894d8268805,Olga,LOMONOSOW,WISZNIAKOWA,1899,Kowel,,,1,archives/kowel_births.csv,n
+p:a6952382142e,Stanisław,Lorczak,,1892,Kowel,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:b5d42ffc3876,Jewampia,LOTOTZKIJ,WITRIK,1898,Kowel,,,1,archives/kowel_births.csv,n
+p:57f654aa0786,Konrad,Lubieniecki,,1920,,,,1,doctors_resident_in_kowel.csv,n
+p:da8270a114a5,Fedor,LUKASCHEK,,1921,Kowel,,,2,archives/kowel_births.csv,y
+p:65b160234c23,Jan,LUKASIEWIEZ,,1897,Kowel,,,1,archives/kowel_births.csv,n
+p:f44bdb9df261,Grzegorze,LUKASIK,,1912,Kowel,,,1,archives/kowel_births.csv,n
+p:54c5c45801c7,MICHAEL,LUKINTSCHUK,,1915,Kowel,,,1,archives/kowel_births.csv,n
+p:d309041d9196,Jonase,LUSZCZYNSKI G,,1926,Kowel,,,1,archives/kowel_births.csv,n
+p:dabb36ef7250,MARIA,LUTZ,KUNITZA,1925,Kowel,,,2,archives/kowel_births.csv,y
+p:777374be7827,CYCHON,LYPOWYJ,,1921,Kowel,,,1,archives/kowel_births.csv,n
+p:ed61c72c708d,ALEXANDER,LYTWYNENKO,,1887,Kowel,,,1,archives/kowel_births.csv,n
+p:b1388a2b2aff,JULIA,LYTWYNENKO,,1926,Kowel,,,1,archives/kowel_births.csv,n
+p:18ae85bb1171,NATALIA,LYTWYNENKO,ORLOWA,1904,Kowel,,,1,archives/kowel_births.csv,n
+p:3aa3b4a8b368,Aron,MACHLUK,,1915,Kowel,,,1,archives/kowel_births.csv,n
+p:feccbac97180,Roman,Machniak,,1905,Kowel,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:b4e223c9727c,Helena,MACZNIK,,1925,Kowel,,,1,archives/kowel_births.csv,n
+p:22988c115287,JANINA,MAGDZIARZ,JAKIMOWICZ,1924,Kowel,,,1,archives/kowel_births.csv,n
+p:d19dbf7dbbb7,HERSZ,MAILIS,,1917,Kowel,,,1,archives/kowel_births.csv,n
+p:39049a08d9fc,Jakob,MAILOW,,1893,Kowel,,,1,archives/kowel_births.csv,n
+p:aa97575eb4a2,Christian,MAJEK,,1926,Kowel,,,1,archives/kowel_births.csv,n
+p:f8f16591bd60,Zdislaw,MAJEK,,1926,Kowel,,,1,archives/kowel_births.csv,n
+p:fcc6162168f6,Sina,MAJEWSKA,,1924,Kowel,,,1,archives/kowel_births.csv,n
+p:3c82718b2cd6,Andreas,MAKARTSCHUK,,,Kowel,,,1,archives/kowel_births.csv,n
+p:ed135bb15d1f,Olga,MAKARUK,KORZENIEWSKI,1904,Kowel,,,1,archives/kowel_births.csv,n
+p:950955e48fe1,Tatjana,MAKARUK,,1934,Kowel,,,1,archives/kowel_births.csv,n
+p:1d485824a382,Andre,MAKOTTSCHENKO,,1926,Kowel,,,2,archives/kowel_births.csv,y
+p:1c888b113199,Nikonor,MAKOTTSCHENKO,,1892,Kowel,,,1,archives/kowel_births.csv,n
+p:5bef22fbe581,,Makowelski,,1891,Warschau,,,1,archives/normalized/people_and_birth_places.csv,n
+p:64a8621ce78f,,Makowelski,,1891,Warschau,,,1,archives/Auschwitz_prisoners_born_in_kowel.csv,n
+p:c426253e18ae,,Makowelski,,1879,Rawa Mazowiecka,,,1,archives/Auschwitz_prisoners_born_in_kowel.csv,n
+p:e62e004a6a84,,Makowelski,,1879,Rawa Mazowiecka,,,1,archives/normalized/people_and_birth_places.csv,n
+p:67b29d294fc4,Maria,MAKSIUK,,1924,Kowel,,,1,archives/kowel_births.csv,n
+p:c92f4ae261b6,NATALJA,MALASZEWSKA,,1898,Kowel,,,1,archives/kowel_births.csv,n
+p:6f6adf7da4d5,Jadwiga,Malczewska,Rosłan,1928,Kowel-Zsrr,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:feb98d5dd0e9,TATIANA,MALIN,,1895,Kowel,,,1,archives/kowel_births.csv,n
+p:4e61df202949,Anna,MALINOWSKA,,1896,Kowel,,,2,archives/kowel_births.csv,y
+p:d07cf474b0a4,Nina,MALINOWSKA,,1925,Kowel,,,2,archives/kowel_births.csv,y
+p:204d6ba4bfcd,Fedor,MALINOWSKI,,,Kowel,,,1,archives/kowel_births.csv,n
+p:37e14699905e,Fedor,MALINOWSKI,,,Kowel,,,1,archives/kowel_births.csv,n
+p:e22fec3d3560,MIECZYSLAW,MALINOWSKI,,1903,Kowel,,,1,archives/kowel_births.csv,n
+p:2790ad81b648,Roman,MALINOWSKI,,1910,Kowel,,,1,archives/kowel_births.csv,n
+p:7693136bd78e,Elena,MALJUK,,1921,Kowel,,,1,archives/kowel_births.csv,n
+p:8bda46af042a,Danil,MALUTA,,1911,Kowel,,,3,archives/kowel_births.csv,y
+p:8e49d669ebb7,Marie,MANUTSCHAROFF,,1900,Kowel,,,1,archives/kowel_births.csv,n
+p:cf1486ce3f2e,Marie,MANUTSHAROW,,1900,Kowel,,,1,archives/kowel_births.csv,n
+p:f029b31f6447,Luba,MARCINIAK,,1927,Kowel,,,1,archives/kowel_births.csv,n
+p:b220b82c50b8,Marianna,Marczak,Świężyna,1926,Kowel,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:607d5d1e5127,,Marczuk,,1918,Lubar,,,1,archives/Auschwitz_prisoners_born_in_kowel.csv,n
+p:64441b88f693,,Marczuk,,1918,Lubar,,,1,archives/normalized/people_and_birth_places.csv,n
+p:94b6a12f6e2b,Anatoli,MARTSCHENKO,,1923,Kowel,,,2,archives/kowel_births.csv,y
+p:a4b964f0929d,Lucjan,Marynowski,,,,,st:b501d35a5470,1,kowel_residents_1938.csv,n
+p:c7ea109c7314,Witold,Maskiewicz,,1910,Kowel woj. wołyńskie,,,1,archives/polish_military_born_in_kowel.csv,n
+p:38b458abcf5c,LEON,MASLAKOWSKI,,1909,Kowel,,,1,archives/kowel_births.csv,n
+p:4a51caf219de,ANASTAZJA,MASZCZAK,KOLASNIK,1920,Kowel,,,1,archives/kowel_births.csv,n
+p:70a334cbb65c,SERGJUSZ,MASZNIEW,,1921,Kowel,,,1,archives/kowel_births.csv,n
+p:0e828bfe5642,,Matiuk,,1916,Siedliszcze,,,1,archives/normalized/people_and_birth_places.csv,n
+p:d30f51a9f145,,Matiuk,,1916,Siedliszcze,,,1,archives/Auschwitz_prisoners_born_in_kowel.csv,n
+p:211884ceed42,Genowefa,Matusińska,Dworakowska,1931,Lubliniec,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:3a6c7dd7dabd,Ilia,MAXIMTSCHUK,,1913,Kowel,,,2,archives/kowel_births.csv,y
+p:542edb8ae71e,Jadwiga,Mazanek,Bujalska,1926,Kowel,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:fe4917d0a4a3,JAN,MAZIAREK,,1922,Kowel,,,1,archives/kowel_births.csv,n
+p:760e14ca70df,Sergius,MAZNIEW,,1921,Kowel,,,1,archives/kowel_births.csv,n
+p:b0fa4e4c9f4c,Jakow,MAZUN,,1909,Kowel,,,1,archives/kowel_births.csv,n
+p:480869109206,Roza,MAZUR,SZEJNA,1923,Kowel,,,1,archives/kowel_births.csv,n
+p:4df0db761d39,Maria,MAZURKEWITSCH,,1924,Kowel,,,1,archives/kowel_births.csv,n
+p:4c67f9bec7e9,Larysa,Mazurowska,Czetwierikowa,1923,Olchowatka,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:db788769b715,Nikolaus,MEDWADOW MEDWEDEW MEDWEDOW MODWADOW MODWEDOW,,1898,Kowel,,,1,archives/kowel_births.csv,n
+p:6dbef01f4a06,MYKOLA,MEDWEDEW,,1898,Kowel,,,1,archives/kowel_births.csv,n
+p:c7aedee69f00,BORIS,MEIDERDRUT,,1915,Kowel,,,1,archives/kowel_births.csv,n
+p:ade2fd11a40c,Stanislaus,MEIER,,1899,Kowel,,,1,archives/kowel_births.csv,n
+p:03169f8823bf,STANISLAW,MEIER,,1899,Kowel,,,1,archives/kowel_births.csv,n
+p:bdf3216ea4bd,Henryk,Mejster,,1917,Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:cc55de2660d2,IDEL,MELAMED,,1912,Kowel,,,1,archives/kowel_births.csv,n
+p:ff0774f97a75,JANKIEL,MELAMED,,1923,Kowel,,,1,archives/kowel_births.csv,n
+p:32fb82d6f743,LEIB,MELAMED,,1918,Kowel,,,1,archives/kowel_births.csv,n
+p:350b3a8d28ff,Mojsze,Melamed,,,,,st:a39b8f9fba52,1,kowel_residents_1938.csv,n
+p:d20a8cd7b187,MOTEL,MELAMED,,1915,Kowel,,,1,archives/kowel_births.csv,n
+p:d3d4defab54a,OSCHER,MELAMED,,1903,Kowel,,,1,archives/kowel_births.csv,n
+p:ae70b72702bb,Szloma,Melamed,,,,,st:06caf55d067c,1,kowel_residents_1938.csv,n
+p:eddad5b461f1,Szloma,Melamed,,,,,st:06caf55d067c,1,kowel_residents_1938.csv,n
+p:2aba1f60c75c,REGINA,MELAMED SLIWOWITZ,,1917,Kowel,,,1,archives/kowel_births.csv,n
+p:a76ebf3b70f3,RIWA,MELAMED WEBER,WERBER,1918,Kowel,,,1,archives/kowel_births.csv,n
+p:e48aa83ba5d9,Iwan,MELNIK,,1916,Kowel,,,1,archives/kowel_births.csv,n
+p:38cf00871e2d,Johann,MELNIK,,1888,Kowel,,,1,archives/kowel_births.csv,n
+p:b88b9019d4df,Jwan,MELNIK,,1916,Kowel,,,1,archives/kowel_births.csv,n
+p:2d939555932c,DEMJAN,MELNITSCHUK,,1919,Kowel,,,1,archives/kowel_births.csv,n
+p:89b0669f05b5,Maria,MERDZECKA,,1915,Kowel,,,1,archives/kowel_births.csv,n
+p:9dda980a80e3,Anton,MERSCHITSCHIERSKI,,1909,Kowel,,,1,archives/kowel_births.csv,n
+p:af9c9917842d,Genofefa,MERSCHITSCHIERSKI,,1911,Kowel,,,1,archives/kowel_births.csv,n
+p:31a1de5950c2,Andrzej,Miączyński,,1876,Stachur pow. Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:ba21a3844604,Marianna,Michalak,Krawczak,1922,Siedlce,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:43b046c517c2,Weronika,MICHALAK,BANKOVSKA,1923,Kowel,,,1,archives/kowel_births.csv,n
+p:a0b2e39d84e1,Mikołaj,Michalewicz,,1893,Kowel,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:e64bc64cbe93,Piotr,MICHALEWICZ,,1916,Kowel,,,1,archives/kowel_births.csv,n
+p:6b3cbe6293c7,ADAM,MICHALEWSKI,,1918,"Czersk, p. Kowel",,,1,archives/polish_military_born_in_kowel.csv,n
+p:fcff1c0306fb,Jadwiga,MICHALOWSKA,,1925,Kowel,,,1,archives/kowel_births.csv,n
+p:2b1649ed6e27,Henryk,Michalski,,1928,,,,1,archives/kowel_born_deported_east.csv,n
+p:4763b3d49a8b,Zbigniew,Michalski,,1933,,,,1,archives/kowel_born_deported_east.csv,n
+p:775ebfaba8b9,Male,MIECZYSLAW,,1920,Kowel,,,1,archives/kowel_births.csv,n
+p:1a1e183f6666,,Mierzyński,,1922,Kowel,,,1,archives/normalized/people_and_birth_places.csv,n
+p:767cfad415df,,Mierzyński,,1922,Kowel,,,1,archives/Auschwitz_prisoners_born_in_kowel.csv,n
+p:60f434ee62da,Wera,MIGDALSKA NOWITSCHEWSKA,SJUCH,1915,Kowel,,,1,archives/kowel_births.csv,n
+p:dd15876c10c3,Nona,MIGDALSKI,,1943,Kowel,,,1,archives/kowel_births.csv,n
+p:3c804b5e4dd7,Wera,MIGDALSKI,,1915,Kowel,,,1,archives/kowel_births.csv,n
+p:9be5d6d706b5,Kuisni,MIGULA,,1904,Kowel,,,1,archives/kowel_births.csv,n
+p:afe49d951746,Piotr,Miłakowski,,1907,Kukły pow. Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:f72a92b1c6a6,MIKOLAJ,MILANCZUK,,1917,Kowel,,,1,archives/kowel_births.csv,n
+p:0c5df781031c,Idel,Milcer,,1899,Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:61305aceba2b,,Miller,,1881,Kowel,,,1,archives/normalized/people_and_birth_places.csv,n
+p:a4a7c2604b7c,,Miller,,1881,Kowel,,,1,archives/Auschwitz_prisoners_born_in_kowel.csv,n
+p:004d3753dd23,Bogdan,Miller,,1920,Ostróg,2002-01-13,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:d614dd070e3b,Jan,MILNIK,,1935,Kowel,,,1,archives/kowel_births.csv,n
+p:bd52866dfb82,Leja,Mincberg,,1920,,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:366e96ace026,Maria,MISCHALTSCHUK,,1923,Kowel,,,1,archives/kowel_births.csv,n
+p:d946aaec0d20,Annastasia,MISCUK,,1904,Kowel,,,1,archives/kowel_births.csv,n
+p:7d49c27c241c,Andrzej,Misieczko,,1893,Stężyca,1944-03-30,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:9e68a2875091,Jadwiga,Misieczko,Korczewska,1925,Kowel,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:adc6df40fa45,WIACZESLAW,MISZCZENKO,,1928,Kowel,,,1,archives/kowel_births.csv,n
+p:cdb90521e35d,ANASTAZIA,MISZCZUK,,1904,Kowel,,,1,archives/kowel_births.csv,n
+p:a092e8206da5,Tadeusz,Misztal,,1920,Kowel,1997-07-13,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:ba73df920f06,Anastasia,MISZUK,,1904,Kowel,,,1,archives/kowel_births.csv,n
+p:48989ce178d9,Marfa,MLADEWETZ,,1907,Kowel,,,1,archives/kowel_births.csv,n
+p:ae13d792ba0c,Michael,MLADEWETZ,,1897,Kowel,,,1,archives/kowel_births.csv,n
+p:e739f6f6859c,Czeslawa,MLOTKIEVICZ,,1923,Kowel,,,1,archives/kowel_births.csv,n
+p:2043b97fc15d,CZESLAWA,MLOTKIEWICZ,,1923,Kowel,,,1,archives/kowel_births.csv,n
+p:ba5f2cf457b2,Michał,Młynarczyk,,1914,pow. Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:06d4a897c8b1,Miezislaw,MLYNARSKY,,1924,Kowel,,,1,archives/kowel_births.csv,n
+p:1c67b824d666,Stanisl,MLYNARSKY,,1918,Kowel,,,1,archives/kowel_births.csv,n
+p:1dcde981c535,Henryka,Molendo,,1942,Kowel,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:56c4e5be41b6,Lucjan,Molendo,,1940,Kowel,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:5192c7963ea7,Maria,Molendo,,,Kowel,,,1,archives/normalized/people_and_birth_places.csv,n
+p:bc40a18c1e0c,Maria,Molendo,,,Kowel,,,1,archives/people_living_in_Kowel.csv,n
+p:028f7827faec,Władysław,Molendo,,,Kowel,,,1,archives/normalized/people_and_birth_places.csv,n
+p:56509f80412c,Władysław,Molendo,,1939,Kowel,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:669886158a3e,Władysław,Molendo,,,Kowel,,,1,archives/people_living_in_Kowel.csv,n
+p:c253394d718e,Halina,MONJEWSKA,,1923,Kowel,,,1,archives/kowel_births.csv,n
+p:d71329b086e6,ROZA,MONSZAJN,,1944,Kowel,,,1,archives/kowel_births.csv,n
+p:7ceaf43ba823,SZEJNA,MONSZAJN,,1923,Kowel,,,1,archives/kowel_births.csv,n
+p:35e8806c0062,,Monziewicz,,1890,forlwark Nikodemów - Kowelskiego powiatu na Wołyniu,,,1,archives/polish_military_born_in_kowel.csv,n
+p:8ca7ca6037a3,Helena,MORIN,SCHELLENBERGER,1924,Kowel,,,1,archives/kowel_births.csv,n
+p:5943fa383861,Josef,MOROSOWSKI,,1920,Kowel,,,1,archives/kowel_births.csv,n
+p:dd5fdc3375a9,ANTONI,MOSKALCZYK,,1924,"Czarnoplesy, p. Kowel",,,1,archives/polish_military_born_in_kowel.csv,n
+p:e0b113d37429,Helena,Moskalewa,,1920,,,,1,doctors_resident_in_kowel.csv,n
+p:a8475c0e05cc,Iwan,MOTORA,,1923,Kowel,,,2,archives/kowel_births.csv,y
+p:0f6252abf04f,WLADIMIR,MOTSCHARSKYJ,,1900,Kowel,,,1,archives/kowel_births.csv,n
+p:f3d245e8bc80,PETER,MOTSCHARSKYJ MOCHARSKIY,,1905,Kowel,,,1,archives/kowel_births.csv,n
+p:92386f984d60,WINCENTY,MŚCISZ,,1920,"Dolsk, p. Kowel",,,1,archives/polish_military_born_in_kowel.csv,n
+p:9d2a655e95cb,Wali,MUDRA,,1920,Kowel,,,1,archives/kowel_births.csv,n
+p:35eb975ac734,JANKIEL,MUDRIK,,1935,Kowel,,,1,archives/kowel_births.csv,n
+p:96f5391455b9,RYWKA,MUDRIK SZNEIDER,SZNEYDER,1912,Kowel,,,1,archives/kowel_births.csv,n
+p:5c73a0e8b551,Józef,Munk,,1891,Warszawa,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:d7a9b9db0878,Stefan,Musiałek-Łowicki,,1896,Marciszów,1986-07-13,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:99d83745c9a9,Anna,MUSIK,TAROSCHEK,1924,Kowel,,,1,archives/kowel_births.csv,n
+p:fdeb29f87782,Klara,MUSZA,,1924,Kowel,,,3,archives/kowel_births.csv,y
+p:8ec96b46d8e7,ALEXANDER,MYSLINSKI,,1893,Kowel,19410501,,1,archives/kowel_births.csv,n
+p:2463ba8f72e7,Kazimiera,Nabrzeska,Garanty,1918,Skowierzyn,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:e9bd45f1fca2,Anna,Naczas,Rzepnicka,1923,Kowel,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:cbb02c2e1f7e,Józefa,Narożniak,Kubicka,1930,Ratno,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:3b695d09ec86,Stanisław,Naskręcki,,1881,Żytomierz,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:4ad1a64cd15e,Arak,NAUMENKO,ANENKO,1920,Kowel,,,1,archives/kowel_births.csv,n
+p:dd276aaf4374,NIKOLAJ,NAZARENKO,,1924,Kowel,,,1,archives/kowel_births.csv,n
+p:7e2aca9553be,Nikolay,NAZARENKO,,1924,Kowel,,,1,archives/kowel_births.csv,n
+p:edddaf3167e1,Lida,NENDSA,,1916,Kowel,,,1,archives/kowel_births.csv,n
+p:4b7ca060e84d,Mitrofan,NESTERUK,,1918,Kowel,,,3,archives/kowel_births.csv,y
+p:a2ed5020401f,Jadwiga,Nieć,Cybulska,1921,Kozłowice Stare,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:07e0d17c1608,Wassilij,NIEMTSCHUL,,1926,Kowel,,,1,archives/kowel_births.csv,n
+p:e7033a32ca9c,FEDIR,NIENATKEWYCZ,,1898,Kowel,,,1,archives/kowel_births.csv,n
+p:c2dc1490a7db,Thomas,NIEPIEKLO,,1915,Kowel,,,1,archives/kowel_births.csv,n
+p:8b2e991a2482,Czesław,Niewiadomski,,1904,Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:3cd96671b96b,Antoni Władysław,Niewiarowski,,1874,Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:c34175654024,Maria,NIKOLAJCZYK,,1917,Kowel,,,1,archives/kowel_births.csv,n
+p:ada09a78cd23,Stefan,NIKOLAJCZYK,,1880,Kowel,,,1,archives/kowel_births.csv,n
+p:4171179dadbc,Wladyslaw,NIKOLAJCZYK,,1914,Kowel,,,1,archives/kowel_births.csv,n
+p:da65d561c8af,Wassily,NIMTSCHUK,,1926,Kowel,,,1,archives/kowel_births.csv,n
+p:5f3d09037592,Galina,NITZKEWITSCH,,1924,Kowel,,,1,archives/kowel_births.csv,n
+p:8249ca03346a,Wladimir,NOSZRUK,,1900,Kowel,,,1,archives/kowel_births.csv,n
+p:d22fc12c8bc2,MOSCHE,NOTES,,1916,Kowel,,,1,archives/kowel_births.csv,n
+p:40f6b3514d74,Kasimir,NOWAK,,1902,Kowel,,,1,archives/kowel_births.csv,n
+p:787605b9b5d1,LUDMILA,NOWAK,,1908,Kowel,,,1,archives/kowel_births.csv,n
+p:9b92d2c78a35,Marianna,Nowak,Kaleta,1921,Bobrowniki,2008-11-07,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:453e1936a0e1,Olga,NOWAK,,1908,Kowel,,,1,archives/kowel_births.csv,n
+p:3d7dff6098f7,Władysław,Nowak,,1896,Łuck,1939-09-12,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:cede43d5ab9f,ALEXANDER,NOWIK,,1923,Kowel,,,1,archives/kowel_births.csv,n
+p:b96d43874719,Nikolay,NOWLENA,,1891,Kowel,,,1,archives/kowel_births.csv,n
+p:9d420e8e0518,Bronisława,Nowosad,Bielańczuk,1925,Kowel,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:62cae036c137,Twerski,Nuchim Mojsze,,,,,st:7dc94505c4b3,1,kowel_residents_1938.csv,n
+p:db72b998d1a8,Mojsze,Nuchim Twerski,,,,,st:7dc94505c4b3,1,kowel_residents_1938.csv,n
+p:998600618472,IDA,NYSENBAUM,,1914,Kowel,,,1,archives/kowel_births.csv,n
+p:96e8767078d2,Mucian,OBLOTKI,,1921,Kowel,,,1,archives/kowel_births.csv,n
+p:0e012cf3c0f6,KLARA,OBRIWIN OBREWINICZ,,1924,Kowel,,,1,archives/kowel_births.csv,n
+p:5376b7f15f91,Maria,OCHMANN,,1944,Kowel,,,2,archives/kowel_births.csv,y
+p:151f82b9a4c8,,Ogrodek,,1920,Kowel,,,1,archives/normalized/people_and_birth_places.csv,n
+p:fdb07617bfbf,,Ogrodek,,1920,Kowel,,,1,archives/Auschwitz_prisoners_born_in_kowel.csv,n
+p:edbbd9309bab,IRKA,OGRODEK,PUP,1920,Kowel,,,1,archives/kowel_births.csv,n
+p:618db9bf97e6,Wolf,OJWENTAL,,1918,Kowel,,,1,archives/kowel_births.csv,n
+p:ec47ee9a6d12,Mitrofan,OKSENTIUK,,1912,Kowel,,,1,archives/kowel_births.csv,n
+p:a3a967650c28,Jan,Olas,,1931,Gorzkowice,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:9929f2a81684,Walter,OLCHIN,,1917,Kowel,,,2,archives/kowel_births.csv,y
+p:54fcd1effaf8,Irena,Olejnicka,Pakuła,1924,Kowel,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:be70270858c2,Helene,OLENS,,1920,Kowel,,,1,archives/kowel_births.csv,n
+p:cc5a5d00d671,Petro,OLIJNYK,,1911,Kowel,,,1,archives/kowel_births.csv,n
+p:5ec00d7c26d6,Naoija,OLINYK,,1915,Kowel,,,1,archives/kowel_births.csv,n
+p:71e81def6804,,Olszewski,,1881,Kowel,,,1,archives/Auschwitz_prisoners_born_in_kowel.csv,n
+p:bd77ceeee704,,Olszewski,,1881,Kowel,,,1,archives/normalized/people_and_birth_places.csv,n
+p:a83b289e75d7,Leon,Olszewski,,1915,Brezno,1999-08-31,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:6440a93355ce,Iwan,OLYFIRORITSCH,,1919,Kowel,,,1,archives/kowel_births.csv,n
+p:4b38686ab6a5,Anatol,OMELANLAK,,1923,Kowel,,,1,archives/kowel_births.csv,n
+p:31ea000a4a45,Monna,OMYSKO,,1928,Kowel,,,1,archives/kowel_births.csv,n
+p:c321483591a7,Iwan,ONOPKO,,1926,Kowel,,,1,archives/kowel_births.csv,n
+p:9f7a89f68097,Wrldemrr,OORODOWSKI,,1944,Kowel,,,1,archives/kowel_births.csv,n
+p:da1a86b006a6,GREGOR,ORISZUK,,1918,Kowel,,,1,archives/kowel_births.csv,n
+p:35b59476baef,HALINA,ORISZUK,LAZARUCK,1924,Kowel,,,1,archives/kowel_births.csv,n
+p:f1ac4d7b1f5d,NICOLAY,ORLOW,,1908,Kowel,,,2,archives/kowel_births.csv,y
+p:9821d4041992,Peter,ORLOW,,1921,Kowel,,,1,archives/kowel_births.csv,n
+p:183db678e7c1,Genowefa,Orłowska,Żukowska,1926,Kowel-Zsrr,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:67674f8b6a6f,Andrey,ORLOWSKIJ,,1901,Kowel,,,1,archives/kowel_births.csv,n
+p:7d597164c0ee,,Orusskij,,1887,Kowel,,,1,archives/normalized/people_and_birth_places.csv,n
+p:ad375d637578,,Orusskij,,1887,Kowel,,,1,archives/Auschwitz_prisoners_born_in_kowel.csv,n
+p:b4188988d7dc,Hryhory,OSIJCZUK,,1898,Kowel,,,1,archives/kowel_births.csv,n
+p:58d5c3047716,Ivan,OSIJCZUK,,1924,Kowel,,,1,archives/kowel_births.csv,n
+p:3e105ff7b2cd,Zofia,OSIJCZUK,,1906,Kowel,,,1,archives/kowel_births.csv,n
+p:2c5b1dd855e8,ANNE,OSIOL,LISKE,1899,Kowel,,,1,archives/kowel_births.csv,n
+p:169f657215d3,NINA,OSIOL,,1922,Kowel,,,1,archives/kowel_births.csv,n
+p:8bbf06031d91,WALLI,OSIOL,,1924,Kowel,,,1,archives/kowel_births.csv,n
+p:028d7aa1e761,Maria,OSTAJENKO,,1925,Kowel,,,1,archives/kowel_births.csv,n
+p:8a925089f95f,Teodora,Ostrowska,Komsta,1924,Kowel,,,3,archives/kowel_births.csv;archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:25409e6ab302,Kazimierz,Ostrowski,,1931,Kamień Koszyrski,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:da32337a1dbc,Wacław,Ostrowski,,1905,Węże,1944-05-16,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:752a0542f732,SOFIA,OTMAR SZTEJN,USZPALEWICS,1931,Kowel,,,1,archives/kowel_births.csv,n
+p:e701d6c20d7c,Zofia,Owsianik,Salik,1922,Stary Mosor,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:44d6887464fd,Fritz,OXINTSCHUK,,1927,Kowel,,,1,archives/kowel_births.csv,n
+p:ff786bebaa81,TERESA,OZGA,SZPAK,1930,Kowel,,,1,archives/kowel_births.csv,n
+p:0e8a33761e3f,Jan,PACUK,,1909,Kowel,,,1,archives/kowel_births.csv,n
+p:ec6791fe5ff5,Feliks,Paczkowski,,1923,Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:d533af0467ab,WACLAW,PALASCH,,1918,Kowel,,,1,archives/kowel_births.csv,n
+p:76562d198ba2,Waslaw,PALASCH,,1918,Kowel,,,1,archives/kowel_births.csv,n
+p:efabe1be9596,Wera,Palmowska,Dubnizka,1923,Marinpol,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:ed4691dce981,STEPHAN STEFAN,PAMPURA,,1885,Kowel,,,1,archives/kowel_births.csv,n
+p:c27a856231d0,Anna,PANASJUK,,1923,Kowel,,,1,archives/kowel_births.csv,n
+p:57cc5401047c,PINCHAG,PANTORIN,,1912,Kowel,,,1,archives/kowel_births.csv,n
+p:13d536d3b755,SIMA,PANTORIN,REICHSTUHL,1910,Kowel,,,1,archives/kowel_births.csv,n
+p:92830b1b858b,Iwa,PANYKALSKA,,1924,Kowel,,,1,archives/kowel_births.csv,n
+p:6bbd95f920c2,Kazimierz,Paraniak,,,,,,1,archives/normalized/people_and_birth_places.csv,n
+p:d1beca772b17,Kazimierz,Paraniak,,,,,,1,archives/people_living_in_Kowel.csv,n
+p:aa6e138a2f8d,Josef,PARAWIEZ PAROWICZ PAROWIEZ,,1907,Kowel,,,1,archives/kowel_births.csv,n
+p:8b88d8dca306,Kataryna,PARISON,,1923,Kowel,,,1,archives/kowel_births.csv,n
+p:6c95487aeeea,JAN,PAROL,,1928,Kowel,,,1,archives/kowel_births.csv,n
+p:5defac3ce666,Tadeusz,Parys,,,,,st:5d3d89171ee3,1,kowel_residents_1938.csv,n
+p:a4f77af89506,Valentine,PASCHKINWITSCH,,1924,Kowel,,,1,archives/kowel_births.csv,n
+p:47eb4af762c3,ANNA,PASSKOWSKA,LIMIEWICZ,1903,Kowel,,,1,archives/kowel_births.csv,n
+p:012578c04397,HASIA,PATOKA,PLEP,1881,Kowel,,,1,archives/kowel_births.csv,n
+p:12dd320e8a09,ROSA,PATOKA,PRAGER,1925,Kowel,,,1,archives/kowel_births.csv,n
+p:42b953f3ab43,WOLKO,PATOKA,,1921,Kowel,,,1,archives/kowel_births.csv,n
+p:c801a13357d6,Stanisław,Patyna,,1903,Smroków,1942-12-08,,4,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:1f9697c1f27e,Czeslaw,PAWELEC,,1917,Kowel,,,1,archives/kowel_births.csv,n
+p:585f41d33784,,Pawlak,,1924,Kowel,,,1,archives/Auschwitz_prisoners_born_in_kowel.csv,n
+p:c356d810a756,,Pawlak,,1924,Kowel,,,1,archives/normalized/people_and_birth_places.csv,n
+p:b2d2091436cb,Janina,PAWLIK,,1925,Kowel,,,3,archives/kowel_births.csv,y
+p:082e96f545c3,Ewgenija,PAWLISCHIN PAWL�SCHIN,,1924,Kowel,,,1,archives/kowel_births.csv,n
+p:f1822f51dd85,Sofia,PAWLISCHIN PAWL�SCHIN,,1923,Kowel,,,1,archives/kowel_births.csv,n
+p:93def9d73b85,Tadensch,PAWLISCHIN PAWL�SCHIN,,1935,Kowel,,,1,archives/kowel_births.csv,n
+p:28fe7efb8a94,Aleksy,Pawłowicz,,1913,pow. Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:aff3483c67e0,Mieczysław,Pawłowski,,1899,Bożadarówka pow. Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:c2a110083165,Władysław,Pawłowski,,1918,Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:d8cdbcc0bf98,ALEXANDRA,PAZITSCH,BRAUTIN,1924,Kowel,,,1,archives/kowel_births.csv,n
+p:5083153fb7e0,FEJGA,PEKATCH,,1902,Kowel,,,1,archives/kowel_births.csv,n
+p:d0297ab20d08,Julia,Pelczarska,Rumińska,1926,Mały Gorsk,2000-04-17,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:53960544fdb1,Ginna,PELLSKKA,,1917,Kowel,,,1,archives/kowel_births.csv,n
+p:17ce1bdf1460,ERICH,PELTZER,,1926,Kowel,,,1,archives/kowel_births.csv,n
+p:8b670dc369bf,Anna,PELYPENKO,,1907,Kowel,,,2,archives/kowel_births.csv,y
+p:e0c241dab69e,Maria,PELYPENKO,,1941,Kowel,,,1,archives/kowel_births.csv,n
+p:3839a0ed7174,Mykola,PELYPENKO,,1926,Kowel,,,2,archives/kowel_births.csv,y
+p:39cef6db3b84,Petro,PELYPENKO,,1893,Kowel,,,1,archives/kowel_births.csv,n
+p:eab65d044dce,Petro,PELYPENKO,,1898,Kowel,,,1,archives/kowel_births.csv,n
+p:58ee6cce1960,Teodor,PELYPENKO,,1902,Kowel,,,1,archives/kowel_births.csv,n
+p:9fe0b44a114d,Theodor,PELYPENKO,,1901,Kowel,,,1,archives/kowel_births.csv,n
+p:52ba1024c6f8,Fedor,PENZAK,,1922,Kowel,,,1,archives/kowel_births.csv,n
+p:3c80e9e27e9c,Piotr,PEREDCZUK,,1913,Kowel,,,1,archives/kowel_births.csv,n
+p:47f516da3065,MINA,PERELMITER,OSIUK,1911,Kowel,,,1,archives/kowel_births.csv,n
+p:b3df8a795bdb,WOLF,PERELMITER,,1909,Kowel,,,1,archives/kowel_births.csv,n
+p:fac298e631f0,Dawid,Perelmuter,,,,,st:deb1b321e31a,1,kowel_residents_1938.csv,n
+p:9d1f9f33937d,Piotr,PERETCZUK,,1913,Kowel,,,1,archives/kowel_births.csv,n
+p:5f72c4f29f3f,Chaim,PERLMAN,,1931,Kowel,,,1,archives/kowel_births.csv,n
+p:bc9bccedff25,WOLF,PERLMUTTER,,1910,Kowel,,,1,archives/kowel_births.csv,n
+p:8f4b470522f2,Franziska,PETKURSKA,,1925,Kowel,,,1,archives/kowel_births.csv,n
+p:0a4ba5b2c9e0,Juan,PETROWSKYJ,,1900,Kowel,,,1,archives/kowel_births.csv,n
+p:2ca9c931e5e5,Ksenia,Piasecka,Hel,1924,Kunin,2008-10-13,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:6973d0f0880c,Kazimiera,Pieczyńska,Gralik,1925,Jasienica,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:da36f78bfed3,Eugenia,Pierogowksa,,1920,,,,1,doctors_resident_in_kowel.csv,n
+p:02f462044984,Dorota,Pierścińska,Węgrzynek,1920,Zamość,2002-03-13,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:d6d23b96d874,Krystyna,PIETRUCHA,BABIARZ,1927,Kowel,,,1,archives/kowel_births.csv,n
+p:c129a67daa81,Krystyna,PIETRUCHA KRYSTA,BABIARZ,1927,Kowel,,,1,archives/kowel_births.csv,n
+p:b2c06b960858,Zyskind,Pinchos,,,,,st:28d5192be7fc,1,kowel_residents_1938.csv,n
+p:05eeeb5816b8,Alex,PINTSCHUK,,1922,Kowel,,,1,archives/kowel_births.csv,n
+p:5f2c0a463692,NADJA,PIONTKOWSKA,,1924,Kowel,,,1,archives/kowel_births.csv,n
+p:1d03a3f5fca9,Genowefa,Piotrowska,Wojter,1926,Kowel,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:05a59cc097fb,,Piotrowski,,1900,Kowel,,,1,archives/normalized/people_and_birth_places.csv,n
+p:b6674beea6ab,,Piotrowski,,1900,Kowel,,,1,archives/Auschwitz_prisoners_born_in_kowel.csv,n
+p:8f304aa34316,Stanisław,Piotrowski,,1911,Kowel,,,2,archives/polish_military_born_in_kowel.csv,y
+p:a8c9e5a46436,Mikolaj,Pirogow,,1920,,,st:28d5192be7fc,1,doctors_resident_in_kowel.csv,n
+p:95d7f81c977a,Adam,PISCHOTKA,,1912,Kowel,,,1,archives/kowel_births.csv,n
+p:763ad69adc1c,Jool,PITSCHKUR,,1925,Kowel,,,1,archives/kowel_births.csv,n
+p:10b6ad2fd33f,Petro,PIWEN,,1906,Kowel,,,1,archives/kowel_births.csv,n
+p:681bfd763bb9,Barbara,PLIMISKA,,1929,Kowel,,,1,archives/kowel_births.csv,n
+p:22660a87efba,Bromidlempa,PLIMISKA,,1899,Kowel,,,1,archives/kowel_births.csv,n
+p:74d838b2737f,Hamilerssa,PLIMISKA,,1936,Kowel,,,1,archives/kowel_births.csv,n
+p:9009c7be7ef9,Hasgania,PLIMISKA,,1934,Kowel,,,1,archives/kowel_births.csv,n
+p:c32a824faf50,Lesmaxia,PLIMISKA,,1931,Kowel,,,1,archives/kowel_births.csv,n
+p:0ab107252f28,BARBARA,PLINSKA,,1929,Kowel,,,1,archives/kowel_births.csv,n
+p:fa6de9cca700,Aleksander,Plisak,,1913,Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:029730903b85,,Płocimy,,1924,Kowel,,,1,archives/normalized/people_and_birth_places.csv,n
+p:8b821f49ebaf,,Płocimy,,1924,Kowel,,,1,archives/Auschwitz_prisoners_born_in_kowel.csv,n
+p:870ada16fd59,SEWERIN,PLOCIMY,,1924,Kowel,,,1,archives/kowel_births.csv,n
+p:9a82e1f84a2d,Maria,POAGUSZKA,,1907,Kowel,,,1,archives/kowel_births.csv,n
+p:ce9bf12353c2,Zofia,PODSIADLA,PIATEK,1925,Kowel,,,1,archives/kowel_births.csv,n
+p:b55f993c1568,ANDREJ,POGRIBNIJ,,1906,Kowel,,,1,archives/kowel_births.csv,n
+p:fccb89d52ed7,LUDMILA,POGRIBNIJ,,1937,Kowel,,,1,archives/kowel_births.csv,n
+p:cbc36c05105e,MARIA,POGRIBNIJ,KOWAL,1913,Kowel,,,1,archives/kowel_births.csv,n
+p:eac9339a47fe,WLADIMIR,POGRIBNIJ,,1941,Kowel,,,1,archives/kowel_births.csv,n
+p:9636b8e25598,Stanisław,Polakowski,,1909,Bogotol,1943-11-18,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:87f03c57d820,GEORG,POLEJK,,1925,Kowel,,,1,archives/kowel_births.csv,n
+p:a65299605911,Dimitrow,POLESCZAK,,1914,Kowel,,,1,archives/kowel_births.csv,n
+p:e4776baf58eb,IWAN,POLOKUTIN,,1906,Kowel,,,1,archives/kowel_births.csv,n
+p:28b2eefb1d35,Mosiej,Pomaranc,,,,,,1,archives/normalized/people_and_birth_places.csv,n
+p:471bc918ea2f,Mosiej,Pomaranc,,,,,,1,archives/people_living_in_Kowel.csv,n
+p:8f8071a86f5e,Ajzyk,Pomeranc,,,,,st:729abcf19c16,1,kowel_residents_1938.csv,n
+p:611fcbe8f111,Majer,Pomeranc,,,,,st:57d62842bea3,1,kowel_residents_1938.csv,n
+p:d17cd65c0004,Wilhelm,Pomeranc,,,,,st:e1587e53e305,1,kowel_residents_1938.csv,n
+p:22de9a5006f6,Falk,Pomerantz,,1920,,,st:deb1b321e31a,1,doctors_resident_in_kowel.csv,n
+p:d44b439948fb,RYWKA,POMERANTZ,BRENNER,1916,Kowel,,,1,archives/kowel_births.csv,n
+p:199f5477871b,Ludwik,POPLAWSKIJ,,1921,Kowel,,,1,archives/kowel_births.csv,n
+p:e6a024a7f42c,ULANA MANA,POPOWA,,1906,Kowel,,,1,archives/kowel_births.csv,n
+p:c5e336617555,Sawa,PORVER,,1915,Kowel,,,1,archives/kowel_births.csv,n
+p:57de1d298476,Janina,Pospieszalska,Szwarc,1916,Jarosław,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:596e74485237,Felix,POSTCHOWSKI,,1923,Kowel,,,1,archives/kowel_births.csv,n
+p:cc1ab5f5765d,Howdymyz,POTAPIW,,1883,Kowel,,,1,archives/kowel_births.csv,n
+p:7a7d5260b36e,WOLODYMYR,POTAPIW,,1883,Kowel,,,1,archives/kowel_births.csv,n
+p:35e39ffa49c5,Janina,Potęga,Mioduchowska,1906,Oszczepalin-Łuków,2002-05-14,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:5dd84f553340,Józef,Potocki,,1891,Głębokie,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:4327f0579042,SZLOMA,PRAGER PRAGIER,,1920,Kowel,,,1,archives/kowel_births.csv,n
+p:040c4977b5bc,Kasimira,PRASOLEK,,1944,Kowel,,,1,archives/kowel_births.csv,n
+p:6039fe9147f2,Irena,Prazmowska,,,,,st:deb1b321e31a,1,kowel_residents_1938.csv,n
+p:4000fd2febe9,Icek,Pres,,,,,,1,archives/normalized/people_and_birth_places.csv,n
+p:46b11151d867,Icek,Pres,,,,,,1,archives/people_living_in_Kowel.csv,n
+p:581961319088,Uszer,Pres,,,,,,1,archives/normalized/people_and_birth_places.csv,n
+p:f557cd9989be,Uszer,Pres,,,,,,1,archives/people_living_in_Kowel.csv,n
+p:8b0f79df46cc,Alexandr,PRKOPENKO PROKOPEMK,,1911,Kowel,,,1,archives/kowel_births.csv,n
+p:fb7f62c1582d,WLADIMIR,PROCENKO,,1921,Kowel,,,1,archives/kowel_births.csv,n
+p:8b619d752631,Jerzy,Próchnicki,,1923,Radom,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:4d7bc3bd1291,ANTONI LEOPOLD,PROKOFI,,1928,Kowel,,,1,archives/kowel_births.csv,n
+p:e3c033fee77a,Paweł,Prokop,,1923,Pawłowicze,2003-01-29,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:c7258e4c7ff8,Eugenia,PRYGA,,1928,Kowel,,,1,archives/kowel_births.csv,n
+p:80d6cbb95f0e,Boris,PRYJMAK,,1910,Kowel,,,1,archives/kowel_births.csv,n
+p:dd166a99ae65,Jerzy,Prystapczuk,,1920,Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:6c21376bf2c2,Anita,PRZBUSZEWSKA,,1911,Kowel,,,1,archives/kowel_births.csv,n
+p:8f0a9c787515,Edmund,PRZBUSZEWSKA,,1936,Kowel,,,1,archives/kowel_births.csv,n
+p:e4d0d7613d38,,Przybylski,,1913,Kowel,,,1,archives/normalized/people_and_birth_places.csv,n
+p:f00c1b8bbfea,,Przybylski,,1913,Kowel,,,1,archives/Auschwitz_prisoners_born_in_kowel.csv,n
+p:461fbdc4c4c8,Teodor,Przyczyna,,1894,Hrubieszów,1939-09-10,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:0ddfd6b0f15e,Antoni,Przygoński,,1924,Kowel,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:e527d5d032a3,Jan,PSCIUK PSEIUK,,1909,Kowel,,,1,archives/kowel_births.csv,n
+p:850e652c9749,Janina,PUCHALSKA,,1923,Kowel,,,1,archives/kowel_births.csv,n
+p:ca9754d46ad1,Maria,Puchalska,,1914,,,,1,archives/kowel_born_deported_east.csv,n
+p:fe2659345cf1,Walentia,PUSCHKELIN,SEMIONOWA,1902,Kowel,,,1,archives/kowel_births.csv,n
+p:a4f6928f16ca,Walentina,PUSCHKELIN,SEMIONOWA,1902,Kowel,,,2,archives/kowel_births.csv,y
+p:087e8a4c09b3,,Pyla,,1914,Kowel,,,1,archives/Auschwitz_prisoners_born_in_kowel.csv,n
+p:6c36613bbd5a,,Pyla,,1914,Kowel,,,1,archives/normalized/people_and_birth_places.csv,n
+p:80496e9252c6,LEIBISZ,RABINER,,1920,Kowel,,,1,archives/kowel_births.csv,n
+p:d8042b4b7b99,MIECAYSLAW,RACZYNSKI,,1923,Kowel,,,1,archives/kowel_births.csv,n
+p:44501b9b7881,Joelfka,RADISCHEK,,1910,Kowel,,,1,archives/kowel_births.csv,n
+p:d41fe3e4af2e,Jan,Radwan,,1889,"Zarembów, Pow. Kutno",,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:0b294243511e,Sigmund,RAJCHENBACH,,1910,Kowel,,,2,archives/kowel_births.csv,y
+p:b74ab6cedc05,Włodzimierz,Rajewski,,1919,Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:ea3968d0c7ec,Wassyl,RAJEWSKYI,,1907,Kowel,,,1,archives/kowel_births.csv,n
+p:5b036db07b5d,Wolodymyr,RAJEWSKYK,,1937,Kowel,,,1,archives/kowel_births.csv,n
+p:2acf5c198d1e,,Ratnowski,,1906,Kowel,,,1,archives/normalized/people_and_birth_places.csv,n
+p:785057e4ff71,,Ratnowski,,1906,Kowel,,,1,archives/Auschwitz_prisoners_born_in_kowel.csv,n
+p:8edd59a47225,Marta,RATZ,,1905,Kowel,,,1,archives/kowel_births.csv,n
+p:ab525231f7b0,Wolodymyr,RATZ,,1926,Kowel,,,1,archives/kowel_births.csv,n
+p:b3020bf55fcf,Wladimir,RAWINSKI,,1900,Kowel,,,1,archives/kowel_births.csv,n
+p:475ad3bde784,NICOLAI,REDKO,,1923,Kowel,,,1,archives/kowel_births.csv,n
+p:9f7ca6ca89fc,Majer,REISMAN,,1918,Kowel,,,1,archives/kowel_births.csv,n
+p:4d2f1aac3a7f,ZELDA,REJDER,SKOP,1917,Kowel,,,1,archives/kowel_births.csv,n
+p:826a8ee45807,Janina,REJKIEWICZ,,1927,Kowel,,,1,archives/kowel_births.csv,n
+p:4d7cc5d2e494,Andray,REMARTSCHUK,,1898,Kowel,,,2,archives/kowel_births.csv,y
+p:6ef4400c9c58,Wasyl,RIZANIW,,1932,Kowel,,,1,archives/kowel_births.csv,n
+p:7ff481210ed6,Wladimir,RIZANIW,,1932,Kowel,,,1,archives/kowel_births.csv,n
+p:3a182b0daab5,MONIEK,ROITER,,1923,Kowel,,,1,archives/kowel_births.csv,n
+p:296b62520886,Simcha,ROJSEN,,1904,Kowel,,,2,archives/kowel_births.csv,y
+p:37b8246e7a22,Galina,ROKA RUKA,,1921,Kowel,,,1,archives/kowel_births.csv,n
+p:9f6b188ba225,Grigor,ROMANUK,,1923,Kowel,,,1,archives/kowel_births.csv,n
+p:9e09bf3c66cc,WLADIMIR,ROWINSKI,,1900,Kowel,,,1,archives/kowel_births.csv,n
+p:a442d73a519c,Edmund,Różański,,1929,Kowel,2002-10-18,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:5770b41b4073,GEDALE,RUBEL,,1912,Kowel,,,1,archives/kowel_births.csv,n
+p:4eea0c408feb,RYWKA RENA,RUBINSTEIN,CHASSIS,1907,Kowel,,,1,archives/kowel_births.csv,n
+p:306f35a6fedf,Nikolaus,RUDENKO,,1919,Kowel,,,1,archives/kowel_births.csv,n
+p:9e44545d6f0b,Nicolaus,RUDENNO,,1919,Kowel,,,1,archives/kowel_births.csv,n
+p:9d9ade6b6541,Nikolaus,RUDENNO,,1919,Kowel,,,2,archives/kowel_births.csv,y
+p:4ceb45a90037,IRENA HALINA,RUDNICKA,ZAWADZKA,1919,Kowel,,,1,archives/kowel_births.csv,n
+p:bd1978797cbb,JAN,RUNIEWICZ,,1920,Kowel,,,1,archives/kowel_births.csv,n
+p:9e78d03592c1,Maria,Rutkowska,,1928,Nowo Wilejka,2007-08-25,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:ef2b4685a931,JANINA,RYDZEWSKA,BAJER,1922,Kowel,,,1,archives/kowel_births.csv,n
+p:0e9b65a97074,Mitro,SAAWSKY,,1922,Kowel,,,1,archives/kowel_births.csv,n
+p:c98bc624b5d5,GEORG,SACHARTSCHUK,,1923,Kowel,,,1,archives/kowel_births.csv,n
+p:be608a5ebe47,Mychailo,SACHARTSCHUK,,1912,Kowel,,,1,archives/kowel_births.csv,n
+p:5c36f0812715,Mychajlo,SACHARTSCHUK,,1912,Kowel,,,1,archives/kowel_births.csv,n
+p:973ec345f364,Zinajda,Sadowa,Rumina,1921,Gorkij,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:4f87a48dddd4,PAWEL,SADOWSKI,,1919,Kowel,,,1,archives/kowel_births.csv,n
+p:5bfe4cc1a15d,JANINE,SAJAZ,,1897,Kowel,,,1,archives/kowel_births.csv,n
+p:15d715f6377f,LEONTY,SAJAZ,,1889,Kowel,,,1,archives/kowel_births.csv,n
+p:6995029b5ed6,Maria,SAJAZ,,1923,Kowel,,,1,archives/kowel_births.csv,n
+p:d6d61e304d8e,MALYNA,SAJUK,GANIN,1919,Kowel,,,1,archives/kowel_births.csv,n
+p:e6a5c12ece55,CHAIM,SAK,,1941,Kowel,,,1,archives/kowel_births.csv,n
+p:bce43f33547d,CHAJA,SAK,,1918,Kowel,,,1,archives/kowel_births.csv,n
+p:b80c7b7710cc,JAN,SAKIR,,1913,Kowel,,,1,archives/kowel_births.csv,n
+p:78d120b4f925,IWAN,SALEJEW,,1912,Kowel,,,1,archives/kowel_births.csv,n
+p:16017526f8ce,Pjotr,SALUK,,1884,Kowel,,,1,archives/kowel_births.csv,n
+p:5d348880923d,Wala,SAMCZENKO,,1943,Kowel,,,1,archives/kowel_births.csv,n
+p:e9c11239adc7,Walter,SAMOLENKO,,1927,Kowel,,,3,archives/kowel_births.csv,y
+p:d74b9076f25f,Bonkowska,SANIA,,1931,Kowel,,,1,archives/kowel_births.csv,n
+p:610805bb1007,Alexe,SANUK,,1914,Kowel,,,1,archives/kowel_births.csv,n
+p:f3f8c277b912,Olga,SAVINA,,1924,Kowel,,,1,archives/kowel_births.csv,n
+p:1e0662b6acad,Marta,SAWCZENKO,,1909,Kowel,,,1,archives/kowel_births.csv,n
+p:7e12d600cc82,JAKOB,SAWICKI,,1918,Kowel,,,1,archives/kowel_births.csv,n
+p:6134a26d8964,Miezyslaus,SAWICKI,,1920,Kowel,,,1,archives/kowel_births.csv,n
+p:6a85cbf66777,Mikolaj,SAWICZ,,1907,Kowel,,,1,archives/kowel_births.csv,n
+p:277ca4a97046,,SAWLUK,,1884,Kowel,,,1,archives/kowel_births.csv,n
+p:b28321d58321,Peter,SAWLUK,,1884,Kowel,,,1,archives/kowel_births.csv,n
+p:71692a1a8faa,Joseph,SCCHANGAI,,1903,Kowel,,,1,archives/kowel_births.csv,n
+p:5a958e9ff36f,MIRIAM,SCH�CHTER,,1927,Kowel,,,1,archives/kowel_births.csv,n
+p:cf91c8377fee,Omilien,SCHADUK,,1907,Kowel,,,1,archives/kowel_births.csv,n
+p:178f0c567e22,LEOPOLD,SCHALLER,,1883,Kowel,,,1,archives/kowel_births.csv,n
+p:62c5f26c2b12,JOSEF,SCHANGAI,,1903,Kowel,,,1,archives/kowel_births.csv,n
+p:9850e98727f9,ARON,SCHAPIRO,,1923,Kowel,,,1,archives/kowel_births.csv,n
+p:2ad5ceeeca79,Nikl,SCHAPOWALOW,,1899,Kowel,,,1,archives/kowel_births.csv,n
+p:34af9d4ba154,Stepan,SCHARKOW,,1907,Kowel,,,1,archives/kowel_births.csv,n
+p:764186c56904,Michael,SCHENKARUK,,1923,Kowel,,,1,archives/kowel_births.csv,n
+p:7554c7baec80,Swiatoslawa,SCHERBAKOWA,,1935,Kowel,,,1,archives/kowel_births.csv,n
+p:a45b58890fc0,Iwan,SCHEWTSCHENKO,,1919,Kowel,,,1,archives/kowel_births.csv,n
+p:ab4d6ef17fd0,Gregor,SCHEWTZUK,,1913,Kowel,,,1,archives/kowel_births.csv,n
+p:88a7fe275bd0,Ignaz,SCHEWTZUK,,1920,Kowel,,,1,archives/kowel_births.csv,n
+p:f67ade92d339,FEIWEL,SCHIFFER,,1923,Kowel,,,1,archives/kowel_births.csv,n
+p:095536cca4cb,Nikolaj,SCHILENSKI,,1909,Kowel,,,1,archives/kowel_births.csv,n
+p:32e0bad15036,Tatjana,SCHILKO,KOLESNIKOV,1918,Kowel,,,1,archives/kowel_births.csv,n
+p:e3a8499d4546,Boris,SCHLENSKI,,1937,Kowel,,,1,archives/kowel_births.csv,n
+p:bf03afb7531d,Nina,SCHLENSKI,,1934,Kowel,,,1,archives/kowel_births.csv,n
+p:f71d13c29628,Wiera,SCHLENSKI,,1910,Kowel,,,1,archives/kowel_births.csv,n
+p:8126e87c64b4,DARIA,SCHOBOTENKO,,1894,Kowel,,,1,archives/kowel_births.csv,n
+p:d27854010b46,MILENA,SCHOLOMYCKYI,,1942,Kowel,,,1,archives/kowel_births.csv,n
+p:e345137156bb,Iwan,SCHONENTSCHUK,,,Kowel,,,1,archives/kowel_births.csv,n
+p:e405683708f1,Iwan,SCHONENTSCHUK,,1925,Kowel,,,1,archives/kowel_births.csv,n
+p:e8737631145e,Alexandr,SCHOPOWSKIJ,,1926,Kowel,,,1,archives/kowel_births.csv,n
+p:eed4dcaab54a,Boris,SCHUK,,1926,Kowel,,,1,archives/kowel_births.csv,n
+p:b5a17d86e6c6,HAIM,SCHWARCMAN,,1923,Kowel,,,1,archives/kowel_births.csv,n
+p:a3ba28316446,Menachem,SCHWARZ,,1902,Kowel,,,2,archives/kowel_births.csv,y
+p:c56ca77d3872,Szfje,SCHWARZ,,1903,Kowel,,,1,archives/kowel_births.csv,n
+p:27d27fbd022e,ELIEZER,SCHWARZBLAT,,1921,Kowel,,,1,archives/kowel_births.csv,n
+p:d442cf2d02b9,Fiodor,SCHWEC,,1912,Kowel,,,1,archives/kowel_births.csv,n
+p:255985cb363d,Tiodor,SCHWEC,,1912,Kowel,,,1,archives/kowel_births.csv,n
+p:cbbfa544946f,Franciszek,Sebastianowicz,,1898,,,,1,archives/kowel_born_deported_east.csv,n
+p:200c3967c784,ISAK ISIDOR,SEGAL,,1920,Kowel,,,1,archives/kowel_births.csv,n
+p:d40439a72954,Maria,SELLINA,,1908,Kowel,,,1,archives/kowel_births.csv,n
+p:41a51286ab1b,MICHAIL,SEMENCZUK,,1917,Kowel,,,1,archives/kowel_births.csv,n
+p:dcc3860de01a,Halina,SEMENJUK,,1925,Kowel,,,1,archives/kowel_births.csv,n
+p:ef3e581082d7,Valentina,SEMJONOWA,,1902,Kowel,,,1,archives/kowel_births.csv,n
+p:7be95ce85d82,Sawicka,Serafina,,,,,st:3086533992eb,1,kowel_residents_1938.csv,n
+p:880e029d5470,Miaczesklaw,SEREDEKA,,1913,Kowel,,,1,archives/kowel_births.csv,n
+p:d99a95c4e4e8,Genowefa,Seredyka,Seredyka,1916,Uniejów,2001-02-01,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:61a98944f6e7,Josef,SEREDYKA,,1926,Kowel,,,1,archives/kowel_births.csv,n
+p:5c6847868e27,Miszislaw,SEREDYKA,,1913,Kowel,,,1,archives/kowel_births.csv,n
+p:416e4ca70f97,Kuddritzkajo,SERGEJ,,1903,Kowel,,,1,archives/kowel_births.csv,n
+p:c92c43047d5e,Israel,SHAMES,,1922,Kowel,,,1,archives/kowel_births.csv,n
+p:c1d5bde2ad1e,Kusma,SHEPTYKYN,,1874,Kowel,,,1,archives/kowel_births.csv,n
+p:b56c90240e22,Olena,SHEPTYKYN,,1881,Kowel,,,1,archives/kowel_births.csv,n
+p:03d302c3fcc7,Kazimir,SICINSKI,,1906,Kowel,,,1,archives/kowel_births.csv,n
+p:c550e3856588,Valentina,SIDELNIK,STEPABIUK,1923,Kowel,,,1,archives/kowel_births.csv,n
+p:4c051852fc15,Roza,SIDORUK,,1925,Kowel,,,1,archives/kowel_births.csv,n
+p:bd08c79c6152,Tadeusz,Sieczko,,1922,Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:3cea09d20dc6,Halina,SIEFERT,,1925,Kowel,,,1,archives/kowel_births.csv,n
+p:5e4ca769653c,Wladimir,SIKORA,,1925,Kowel,,,1,archives/kowel_births.csv,n
+p:5cc142183a88,ISAK,SIKULER,,1917,Kowel,,,1,archives/kowel_births.csv,n
+p:ba389ce5e84b,Wasili,SILCZUK,,1910,Kowel,,,2,archives/kowel_births.csv,y
+p:c249f1511526,Wasili,SILKZUK,,1910,Kowel,,,3,archives/kowel_births.csv,y
+p:7fea071fae02,Piotr,Sinkiewicz,,1900,,,,1,archives/kowel_born_deported_east.csv,n
+p:0b83cdad133d,Lena,SITKO,,1937,Kowel,,,1,archives/kowel_births.csv,n
+p:7ac63b1dd5df,MICHAL,SKARBOW,,1914,Kowel,,,1,archives/kowel_births.csv,n
+p:e5b6ed9d06b9,Iwan,SKARDOW,,1917,Kowel,,,1,archives/kowel_births.csv,n
+p:9f970088b356,Sławomir,Skorupski,,1921,Lublin,2003-09-18,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:b4d99671a3aa,Oley,SKOTSCHEWNIJ,SKOTSCHEWSIJ,1916,Kowel,,,1,archives/kowel_births.csv,n
+p:11f7cf41b485,Oley,SKOTSCHEWSIJ,SKOTSCHEWNIJ,1916,Kowel,,,1,archives/kowel_births.csv,n
+p:7095983b2d00,,Skulowaty,,1904,Kowel,,,1,archives/Auschwitz_prisoners_born_in_kowel.csv,n
+p:965cbb981c9d,,Skulowaty,,1904,Kowel,,,1,archives/normalized/people_and_birth_places.csv,n
+p:eb46cbb3d06e,MARIA,SKWIEROWSKI,MALINKOWICZ,1895,Kowel,,,1,archives/kowel_births.csv,n
+p:96b3ab5fca49,,Sławiński,,1913,Kowel,,,1,archives/normalized/people_and_birth_places.csv,n
+p:f9a676fc66b3,,Sławiński,,1913,Kowel,,,1,archives/Auschwitz_prisoners_born_in_kowel.csv,n
+p:5edf68c8a882,Leo,SLESAROW,,1927,Kowel,,,1,archives/kowel_births.csv,n
+p:c8c8478dcaf2,Edmund,SLESZYNSKI,,1925,Kowel,,,1,archives/kowel_births.csv,n
+p:adb32429a706,Bronisława,Śliwakowska,Klejszt,1923,Kowel,2004-07-20,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:c6e13484728d,Josef,SLIWINSKI,,1925,Kowel,,,1,archives/kowel_births.csv,n
+p:47a8e01892d8,Maria,SLOBUDJANIK,,1924,Kowel,,,1,archives/kowel_births.csv,n
+p:19d3bc247c90,Bronislawa,SLODKOWSKA,,1904,Kowel,,,1,archives/kowel_births.csv,n
+p:81cb07257543,Nikolaus,SMARONOW SWARONOW,,1922,Kowel,,,1,archives/kowel_births.csv,n
+p:42c532aa82af,ZOFIA,SMIGELSKA,R�ZANSKA,1927,Kowel,,,1,archives/kowel_births.csv,n
+p:a24c5726ebed,Zofia,Śmigielska,Różańska,1927,Kowel,,,3,archives/kowel_births.csv;archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:52bdae1efb65,LEONI,SMIRNOW,,1912,Kowel,,,1,archives/kowel_births.csv,n
+p:65965747a84f,Roman,SMYARCH,,1917,Kowel,,,1,archives/kowel_births.csv,n
+p:1183cff23c36,Marian,Smyk,,1924,Lublin,1999-03-12,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:f44804234ee8,MARIA,SNAMENSKI,,1906,Kowel,,,1,archives/kowel_births.csv,n
+p:269b8c3f8c21,Anna,Sobczak,Pawluszenko,1922,Kowel,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:73777b3b8874,ZDZISLAW,SOBCZYK,,1933,Kowel,,,1,archives/kowel_births.csv,n
+p:317b5bc2c97e,RACHELA,SOJFER,ELBIRT,1919,Kowel,,,1,archives/kowel_births.csv,n
+p:bd2bd0e78e73,Henryk,SOKOLOWSKI,,1920,Kowel,,,1,archives/kowel_births.csv,n
+p:9cc0d7ed02ff,Roman,SOLDYSIAK,,1926,Kowel,,,1,archives/kowel_births.csv,n
+p:8938c5b66e07,JAN,SOŁOMONIUK,,1918,"Nowa Wyżna, p. Kowel",,,1,archives/polish_military_born_in_kowel.csv,n
+p:4b2bbc8a55af,Vera,SOLOWJOWA,,1923,Kowel,,,1,archives/kowel_births.csv,n
+p:ebfe7678fbcb,Roman,SOLTYSIAK,,1926,Kowel,,,1,archives/kowel_births.csv,n
+p:467ffcbb8152,Gerosim,SOMTSCHINSKI,,1895,Kowel,,,1,archives/kowel_births.csv,n
+p:4532016e8cf5,MYKOLA,SOMTSCHINSKI,,1910,Kowel,,,1,archives/kowel_births.csv,n
+p:bea57b2bb3ec,Walentin,SOMTSHYNSKIJ,,1914,Kowel,,,1,archives/kowel_births.csv,n
+p:8859d8c7efe8,Roman,SONICZ,,1916,Kowel,,,1,archives/kowel_births.csv,n
+p:32e3df975a7c,ALEKSANDER,SOPRONJUK,,1927,Kowel,,,1,archives/kowel_births.csv,n
+p:86bc891dcc7b,LIDIA,SORDYL,WOLOSZYNA,1923,Kowel,,,1,archives/kowel_births.csv,n
+p:c7dd12c8ec7b,Petre,SOWA,,1902,Kowel,,,1,archives/kowel_births.csv,n
+p:5190436020e6,Petro,SOWA,,1902,Kowel,,,2,archives/kowel_births.csv,y
+p:783278d889e7,Gerosia,SOWTSCHINSKI,,1925,Kowel,,,1,archives/kowel_births.csv,n
+p:a53088eecc00,Sofia,SPANIEL,SAMKIWSKI,1911,Kowel,,,1,archives/kowel_births.csv,n
+p:a37f8fdf59a8,Feliksa,SPARZYNSKA,,1914,Kowel,,,1,archives/kowel_births.csv,n
+p:4a894d8a7858,Irena,SPASCHINSKA,,1935,Kowel,,,2,archives/kowel_births.csv,y
+p:d180990030c1,Polixa,SPASKYNSKA,,1914,Kowel,,,2,archives/kowel_births.csv,y
+p:f7704ea4e1eb,Leon,Srebnik,,1910,,,,1,archives/kowel_born_deported_east.csv,n
+p:b41f49d43630,Gregor,SSLIWA,,1884,Kowel,,,1,archives/kowel_births.csv,n
+p:66e51311e036,SIMON,STADNIK,,1911,Kowel,,,1,archives/kowel_births.csv,n
+p:cb22d200094f,JAROSLAW,STANKEWICZ,,1943,Kowel,,,1,archives/kowel_births.csv,n
+p:05fd0a0088da,Karol,Stankiewicz,,1925,Ossolin-Sandomierz,2004-04-13,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:655b632c47b7,KONSTANTIN,STANKIEWICZ,,1899,Kowel,,,1,archives/kowel_births.csv,n
+p:400f8be11ffc,LEONID,STANKIEWICZ,,1929,Kowel,,,1,archives/kowel_births.csv,n
+p:410bfba1ffb4,MARIA,STANKIEWICZ,,1906,Kowel,,,1,archives/kowel_births.csv,n
+p:def6e6323f26,Michał,Stankiewicz,,1927,Ossolin,2007-07-10,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:73fc0a9535f0,ANDREAS,STAWINSKI,,1912,Kowel,,,1,archives/kowel_births.csv,n
+p:7c49ef70e8e5,OLENA HELENA,STECIUK,,1931,Kowel,,,1,archives/kowel_births.csv,n
+p:93fe2bb2aced,TERESA,STEFANOWICZ,,1929,Kowel,,,1,archives/kowel_births.csv,n
+p:d7862c5ba1f2,Bokser,Stejnberg,,,,,st:15ab97a7fe5f,1,kowel_residents_1938.csv,n
+p:beffab7c9381,Sewko,STEPAUK,,1889,Kowel,,,1,archives/kowel_births.csv,n
+p:d47707515328,Stanisl.,STOCZEWSKI,,1920,Kowel,,,1,archives/kowel_births.csv,n
+p:212f590867b7,Stanislaus,STOCZEWSKI,,1920,Kowel,,,3,archives/kowel_births.csv,y
+p:7eee7364305b,SCHDIM,STOKHAMMEC,,1930,Kowel,,,1,archives/kowel_births.csv,n
+p:066d97440856,Josef,STRELKOWSKI,,1929,Kowel,,,5,archives/kowel_births.csv,y
+p:5169a66705de,GEORG,STRILNIK,,1907,Kowel,,,1,archives/kowel_births.csv,n
+p:79efb8ede5c3,IRAIDA,STRUKOWA,,1920,Kowel,,,1,archives/kowel_births.csv,n
+p:6857fedb1ff9,Adala,Strus (Struś),,1922,Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:b146c163bedc,MOJSZE,STULZAFT,,1908,Kowel,,,1,archives/kowel_births.csv,n
+p:84eb1efccc67,Barbara,STYZINSKA,,1938,Kowel,,,1,archives/kowel_births.csv,n
+p:4950c5784cc4,Wera,STZINSKA,,1924,Kowel,,,1,archives/kowel_births.csv,n
+p:5b5fe0837d58,Vera,STZYUSKA,,1924,Kowel,,,1,archives/kowel_births.csv,n
+p:7b8ac7b22cfb,Piotr,Suffczyński,,1892,Wielint pow. Kowel - Wołyń,,,1,archives/polish_military_born_in_kowel.csv,n
+p:f4c3d7c0e9fb,Adella,SULEK,,1922,Kowel,,,2,archives/kowel_births.csv,y
+p:921e07a673b4,Wazek,SULEK,,1943,Kowel,,,2,archives/kowel_births.csv,y
+p:910cad4b1e62,Roman,SUNGEREK,,1917,Kowel,,,1,archives/kowel_births.csv,n
+p:6e6d40a67fa6,Helena,Surówka,Kaniewska,1915,Radzyń Podlaski,2002-04-03,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:9d3cbc21d3a6,ANNA,SWIECICKA,,1896,Kowel,,,1,archives/kowel_births.csv,n
+p:1872436c0336,Wsiewolod,Swietikow,,1920,,,st:57d62842bea3,1,doctors_resident_in_kowel.csv,n
+p:ad9725bc6cf0,Maria,SWIEZYNA,,1926,Kowel,,,1,archives/kowel_births.csv,n
+p:1da2443f8fd5,Stefan,Swoboda,,,,,st:5d6294ff7acf,1,kowel_residents_1938.csv,n
+p:de5d2cf6c50e,Tadeusz,Synowiecki,,1892,Zagórzany,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:5d48eb7f37e5,Mikołaj,Szabotin,,1903,Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:196fa3ff5007,Franziska,SZADKOWSKI,,1909,Kowel,,,1,archives/kowel_births.csv,n
+p:d82b783f6b53,Kasimir,SZADKOWSKI,,1900,Kowel,,,1,archives/kowel_births.csv,n
+p:716944137575,Tadeus,SZADKOWSKI,,1920,Kowel,,,1,archives/kowel_births.csv,n
+p:739107696fa5,Josefa,SZADKOWSKY,,1906,Kowel,,,1,archives/kowel_births.csv,n
+p:a7a33d843587,FAIWEL,SZAJCHET,,1911,Kowel,,,1,archives/kowel_births.csv,n
+p:a108d8a9a040,NUTA,SZAPIRO,,1910,Kowel,,,1,archives/kowel_births.csv,n
+p:d4d95f4f82d2,Bolesław,Szczepański,,,,,,1,archives/people_living_in_Kowel.csv,n
+p:f75b49a79648,Bolesław,Szczepański,,,,,,1,archives/normalized/people_and_birth_places.csv,n
+p:e5ed26ad25b9,Władysław,Szczerbiński,,1916,Bierdjańsk,1999-10-29,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:201986baf779,Moszek,Szechter,,1877,Kowel,1939-11-10,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:2dcbaeaf4f51,Chawa,Szejner,,1941,,,,1,archives/normalized/people_and_birth_places.csv,n
+p:4a50fb7d92e9,Chawa,Szejner,,,,1941-04,,1,archives/people_living_in_Kowel.csv,n
+p:bb742c0a1be9,Ludwik,Szenderowski,,1905,Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:34a0e895370c,ANDREJ,SZEWCZENKO,,1919,Kowel,,,1,archives/kowel_births.csv,n
+p:f539c16e2445,NINA,SZEWCZENKO,DEDUR,1925,Kowel,,,1,archives/kowel_births.csv,n
+p:7b7fe05de680,Anatol,Szmidt,,1891,,,,1,archives/kowel_born_deported_east.csv,n
+p:bc4ad1daf69f,BORACH,SZNEIDER SZNEYDER,,1888,Kowel,,,1,archives/kowel_births.csv,n
+p:b8c782abfd04,Binen,Szpak,,,,,st:f0ab7cac5b92,1,kowel_residents_1938.csv,n
+p:26029dedecce,DMITRY,SZPAK,,1909,Kowel,,,1,archives/kowel_births.csv,n
+p:cbab4872726e,Mikolaj,SZPAKOWSKI,,1924,Kowel,,,1,archives/kowel_births.csv,n
+p:0904d22244c3,Josef,SZPEFLICKI,,1906,Kowel,,,1,archives/kowel_births.csv,n
+p:d58603ed3e1b,Dawid,Sztylerman,,,,,st:4c39bff61583,1,kowel_residents_1938.csv,n
+p:774256b9b690,Julia,Szukalska,Szkara,1925,Kowel,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:b152302ad910,Henryk,Szulc,,,,,st:57d62842bea3,1,kowel_residents_1938.csv,n
+p:ebf692cd17fe,Stanislaus,SZURKUS,,1914,Kowel,,,1,archives/kowel_births.csv,n
+p:33e167187f57,ABRAHAM,SZWAJZER,,1921,Kowel,,,1,archives/kowel_births.csv,n
+p:045b33641063,Leonard,Szwarc,,1927,Kowel,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:cd9164505991,Adolf,Szwarcwald,,,,,st:57d62842bea3,1,kowel_residents_1938.csv,n
+p:e98382026185,ZOFIA,SZWARZ,,1906,Kowel,,,2,archives/kowel_births.csv,y
+p:0e81ec4a5ae4,APOLONIA,SZWEDA,ZOPIA,1925,Kowel,,,1,archives/kowel_births.csv,n
+p:66f2b4bb96e7,Janina,Szydłowska,Paraniak,1924,Kowel,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:ba837842b188,CHANA,SZYFER SZYPER,PROSMAN,1911,Kowel,,,1,archives/kowel_births.csv,n
+p:05860f47441d,GOLDA,SZYFER SZYPER,,1938,Kowel,,,1,archives/kowel_births.csv,n
+p:51621ceac1b4,MOSESZ,SZYFER SZYPER,,1908,Kowel,,,1,archives/kowel_births.csv,n
+p:121362393160,Anna,SZYMANOWICZ,PIETRUZUK,1923,Kowel,,,2,archives/kowel_births.csv,y
+p:67d47ffe3220,,Szymański,,1925,Kowel,,,1,archives/normalized/people_and_birth_places.csv,n
+p:f5e178e7adaa,,Szymański,,1925,Kowel,,,1,archives/Auschwitz_prisoners_born_in_kowel.csv,n
+p:217643ae4c1d,Piotr,SZYMANSKI,,1918,Kowel,,,1,archives/kowel_births.csv,n
+p:6e82e92facec,Antoni,SZYRYCKI,,1904,Kowel,,,1,archives/kowel_births.csv,n
+p:7028d4ab409f,ZENIA,TABATSCHNIK,,1918,Kowel,,,1,archives/kowel_births.csv,n
+p:2e4550f2ca90,Michał,Taras Vel Tarasiuk,,1903,Zawidów,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:271710b3e6d3,IWAN,TARNOWSKI,,1926,Kowel,,,1,archives/kowel_births.csv,n
+p:28d2bfd658d0,Harpina,Tęgos,Wyklicz,1915,Wielka Staryca,2004-03-17,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:ee0bb73abb7c,Max,TEITELBAUM,,1930,Kowel,,,1,archives/kowel_births.csv,n
+p:af98bd0ca785,Eliasz,TELEPIEY,,1915,Kowel,,,1,archives/kowel_births.csv,n
+p:f7c4e47bcc48,JEHOR GEORG,TEPLOW,,1925,Kowel,,,1,archives/kowel_births.csv,n
+p:4d6ed9231db9,Julianna,TERAZ,KRYCKA,1928,Kowel,,,1,archives/kowel_births.csv,n
+p:8f3dbe48fcd4,Kolrimierz,TERPILOWSKI,,1920,Kowel,,,1,archives/kowel_births.csv,n
+p:b79001a4d9c7,Nikolai,THOMINK,,1923,Kowel,,,1,archives/kowel_births.csv,n
+p:04b976dc9eed,CHANA,TINPULWER,,1908,Kowel,,,1,archives/kowel_births.csv,n
+p:73b0a35ce38b,Nikoley,TKACZUK,,1906,Kowel,,,1,archives/kowel_births.csv,n
+p:fdfd38caca6b,Nina,TKALITSCH,,1943,Kowel,,,1,archives/kowel_births.csv,n
+p:04b525819bf1,Uljana,TKATSCHUK,,1874,Kowel,,,1,archives/kowel_births.csv,n
+p:3429b36f9df3,Abraham,Tojbicz,,,,,st:7dc94505c4b3,1,kowel_residents_1938.csv,n
+p:f9ece278791d,Antoni,TOLOSZKO,,1906,Kowel,,,2,archives/kowel_births.csv,y
+p:aa32cc6a14f7,Antonij,TOMASCHEWITSCH,,1902,Kowel,,,1,archives/kowel_births.csv,n
+p:ef9abf376ae5,Tadeusz,Tomczyk,,1927,Julianów,1998-10-12,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:a33e029a95bb,Chatinina,TOMINA,,1910,Kowel,,,1,archives/kowel_births.csv,n
+p:0fa56d8c0b30,Ekaterina,TOMINA,,1919,Kowel,,,1,archives/kowel_births.csv,n
+p:5056f3212ce2,Wanda,Topolska,Kubicka,1925,Kowel,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:2777a47dd52f,NICOLAS,TOWLEW,,1891,Kowel,,,1,archives/kowel_births.csv,n
+p:22219e78c96b,PETRO,TREHUB,,1924,Kowel,,,1,archives/kowel_births.csv,n
+p:cc653a077c7e,Jan,TRISNO,,1913,Kowel,,,1,archives/kowel_births.csv,n
+p:229b15133b51,Koschuck,TROFIM,,1911,Kowel,,,1,archives/kowel_births.csv,n
+p:1c75bb78b8a6,Fedor,TROZ.,,1925,Kowel,,,1,archives/kowel_births.csv,n
+p:8c737746c94d,,Tylman,,1913,Kowel,,,1,archives/Auschwitz_prisoners_born_in_kowel.csv,n
+p:ff13c5bed9b8,,Tylman,,1913,Kowel,,,1,archives/normalized/people_and_birth_places.csv,n
+p:b9f5f062b4be,Zygmunt,Urbański,,1919,Łódź,1943,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:61d864ccbfc3,Jakob,Wajtman,,,,,st:b7d5a2f0721a,1,kowel_residents_1938.csv,n
+p:53c762610494,,Wajtman Jakob,,1920,,,st:deb1b321e31a,1,doctors_resident_in_kowel.csv,n
+p:8941e10439bf,Jan,Walaszek,,1923,Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:f4eaddbc6710,,Wanat,,1908,Kowel,,,1,archives/Auschwitz_prisoners_born_in_kowel.csv,n
+p:fc1b6a283f50,,Wanat,,1908,Kowel,,,1,archives/normalized/people_and_birth_places.csv,n
+p:fc992ee3b970,Mieczysław,Warywoda,,1915,,,,1,archives/kowel_born_deported_east.csv,n
+p:d592b314a907,Jerzy,Wasilewski,,,,,st:d4bae7004695,1,kowel_residents_1938.csv,n
+p:a87679b034d8,Waclaw,Weselski,,1920,,,,1,doctors_resident_in_kowel.csv,n
+p:71a8a26392d7,Stefan,Wiąckiewicz,,1922,Dęblin,1999-11-03,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:55405039106b,Maria,Wieczorek,Żeromska,1928,Kowel,2005-02-26,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:565e71fe391e,Irena,Wieczorek-Kiryczuk,Paderewska,1924,Lwów,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:794b3a91cf72,Stanisław,Wienckiewicz,,1907,Kowel,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:288f207f56f5,Kazimierz,Wiśniewski,,1944,,,,1,archives/normalized/people_and_birth_places.csv,n
+p:79438360e640,Kazimierz,Wiśniewski,,,,1944-02,,1,archives/people_living_in_Kowel.csv,n
+p:27ccb8b1da74,Maria,Witamborska,Ślipska,1922,Byteń,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:6b831a788514,Szymkiewicz,Władysław,,,,,st:deb1b321e31a,1,kowel_residents_1938.csv,n
+p:fd998c14927f,Szymkiewicz,Wladyslaw,,,,,st:deb1b321e31a,1,kowel_residents_1938.csv,n
+p:60004c349502,Michał,Wołczaski,,1893,Kowel,,,3,archives/polish_military_born_in_kowel.csv,y
+p:b4c93da43239,Michał Ludwik Julian,Wołczaski,,1893,Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:fc7d39f8d6ef,Hersz,Wolf Landa,,,,,st:7dc94505c4b3,1,kowel_residents_1938.csv,n
+p:956da4f79a0a,ANTONI,WOŹNIAK,,1918,"Wierbiczno I, p. Kowel",,,1,archives/polish_military_born_in_kowel.csv,n
+p:2295b6b2bb41,Jozef,Wydra,,,,,st:06caf55d067c,1,kowel_residents_1938.csv,n
+p:4147f459dfcb,,Wysocki,,1913,Janówek pow. Kowel,,,1,archives/normalized/people_and_birth_places.csv,n
+p:7f65e5d10666,,Wysocki,,1913,Janówek pow. Kowel,,,1,archives/Auschwitz_prisoners_born_in_kowel.csv,n
+p:979a4688a07e,Irena,Young,Praźmowska,1903,Kowel,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:3c6f9069e930,Bernard,Zaborowski,,1898,Byteń,1939-09-14,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:b3c2312595df,Kazimierz,Zaborowski,,1925,Kowel pow. Polska woj.,,,2,archives/polish_military_born_in_kowel.csv,y
+p:8fffe7fec3d2,Bronisława,Zając,Niemiec,1926,Krugiel,2001-03-25,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:1c99a4e5be04,Jan,Zajączkowski,,1910,Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:3ad818c9e148,Zofia,Zajdel,Kociubowska,1925,Kowel,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:b1c8d8a50b91,Stanisława,Żak,,1920,Sosyczno,2004-07-13,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:0d1a5f491616,Andrzej,Zakrzewski,,1910,Woźniki,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:937b75451944,Zenon,Zarzycki,,1915,Jelisawietgrad,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:4108bb7372b8,,Zawadzki,,1916,Kowel,,,1,archives/normalized/people_and_birth_places.csv,n
+p:9993fc31b359,,Zawadzki,,1916,Kowel,,,1,archives/Auschwitz_prisoners_born_in_kowel.csv,n
+p:6ee678c93373,,Zawitniewicz,,1900,Kowel,,,1,archives/normalized/people_and_birth_places.csv,n
+p:73a1effc1cc1,,Zawitniewicz,,1900,Kowel,,,1,archives/Auschwitz_prisoners_born_in_kowel.csv,n
+p:db624c832707,Jan,Żebrowski,,1897,Kowel,,,1,archives/polish_military_born_in_kowel.csv,n
+p:06d0ea9a6524,Jerzy,Zep,,1927,Kowel,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:1c3423dbf896,Stefan,Zięba,,1918,Kowel,2004-09-09,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:27caeb762935,Janina,Zielińska,,1927,Kowel,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:a8a04dc85da3,Klemens,Ziembicki,,,,,st:b3eef9adf412,1,kowel_residents_1938.csv,n
+p:afa7435eaf39,Stefan,Zinicz,,,Bucyń,,,1,archives/people_living_in_Kowel.csv,n
+p:e3e3b5ac2e0f,Stefan,Zinicz,,,Bucyń,,,1,archives/normalized/people_and_birth_places.csv,n
+p:4458d5421584,Zygmunt,Zubr,,1920,,,st:deb1b321e31a,1,doctors_resident_in_kowel.csv,n
+p:5ba96140bfef,Józef,Żudro,,1906,Kamieniec Podolski,1942-10-12,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:3f3274fa7309,Josef,Zyskind,,,,,st:dc9cb5bd6dc9,1,kowel_residents_1938.csv,n
+p:6091580af9f3,Pinchos,Zyskind,,,,,,1,kowel_residents_1938.csv,n
+p:f4b47cd9a937,Julia,Żywiecka,,1918,Korzeniów,1944,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:dc628eb62f2f,Daniel,Żywiecki,,1896,Wołyń,,,2,archives/normalized/people_and_birth_places.csv;archives/people_living_in_Kowel.csv,y
+p:352608bc9eec,Hipolit,Zyznowski,,,,,st:06caf55d067c,1,kowel_residents_1938.csv,n

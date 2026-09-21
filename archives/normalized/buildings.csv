@@ -1,0 +1,335 @@
+building_id,name,address_raw,street_id,street_name,house_number,map_node_id,lat,lon,purpose,destroyed,year_mentioned,source_count,source_files,notes,clustered
+b:fdd3a74ff274,"""Agudat Yisrael"" Shtiebel",Unknown,,,,,,,,,,1,archives/locations_on_hebrew_map_kowel.csv,"""The Heroism of the Weak"" - Yaakov Rozmarin (63)",n
+b:866028044753,"""Ahava Raba"" Beit Midrash",Unknown,,,,,,,,,,1,archives/locations_on_hebrew_map_kowel.csv,Gabbai: Pesach Gonik (1933),n
+b:1a26e6381edb,Ancient Cemetery,,,,,,,,,,1893,1,archives/places_described.csv,An ancient cemetery in Kovel,n
+b:7ba3da5fcaa5,Antin's Beit Midrash,"New City, Sienkiewicza St.",,,,,,,,,,1,archives/locations_on_hebrew_map_kowel.csv,,n
+b:38c030dda125,Apteka,Rynek 12,st:2ddaa8c0fce3,Rynek,12,,,,commercial,y,1900s,1,maps/kowel_landmarks_index.csv,Medical supplies,n
+b:debb8a52ed07,Apteka Friedrichsona (obecnie istnieje),,,,,350,51.2146259,24.7062576,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,exact_unique,n
+b:513f1cb5cfb1,Armarnik's Mill,Fabryczne Street,,,,,,,Industrial (Milling),y,,1,maps/kowel_buildings.csv,,n
+b:64577d96cf9d,Bar Kochba,,,,,,,,,,1847,1,archives/places_described.csv,A sports organization in Kovel,n
+b:f0398c244f8a,Bathhouse,,,,,,,,,,1847,1,archives/places_described.csv,A newly-repaired bathhouse in Kovel,n
+b:103806036543,Beis Yesoymim,Lutske Street (Antin shacks),st:352381a6f05d,Lutske Street,,,,,Orphanage,y,,1,maps/kowel_buildings.csv,,n
+b:2fe39306f1ec,Beit HaNetivot Street,,,,,,,,,,1847,1,archives/places_described.csv,A beautiful street in Kovel with paved roads,n
+b:3835ae69d736,Beit Midrasz i Synagoga,Szkolna 15,st:ef71a5dea0c1,Szkolna,15,,,,religious,y,1890s,1,maps/kowel_landmarks_index.csv,Center of Torah learning,n
+b:b6c82efd4108,Bialik Gymnasia,Yuridica Street Kovel,,,,,,,,,1934-1937,1,archives/known_buildings.csv,Constructed and inaugurated with parade,n
+b:511ecf4bcd7f,Bikur Cholim,,,,,,,,,,Not specified,1,archives/places_described.csv,A charitable institution that provided medical help to the Jews of Kovel,n
+b:8ea4382b7130,Błonie,City Edge,,,,,,,public_space,existing,historic,1,maps/kowel_landmarks_index.csv,Community space,n
+b:c1026a0bd0a6,Brick Factory,Segal's property,,,,,,,,,1920s,1,archives/known_buildings.csv,Hechalutz worksite,n
+b:e7b8e9d3f0e1,Bridge,,,,,,,,,,Not specified,1,archives/places_described.csv,A bridge in Kovel where the narrator's family stopped and received a history lesson,n
+b:8ef4b1d59f20,Brik Beit Midrash,Presumably in the New City,,,,,,,,,,1,archives/locations_on_hebrew_map_kowel.csv,Representative: Yitzhak Tuvia Ptabkavski,n
+b:0592b61c5a98,Budynek Giełdy,Rynek 8,st:2ddaa8c0fce3,Rynek,8,,,,commercial,y,1900s,1,maps/kowel_landmarks_index.csv,Economic hub,n
+b:b2d4f79360f2,Budynek polski Ministerstwa Edukacji. Centrum getta w Piskach.,,,,,301,51.2160425,24.7066446,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,exact_unique,n
+b:662190b6a7c6,Budynek polski Ministerstwa Finansów. Radziecka Rada Miejska (1939) (obecnie istnieje),,,,,356,51.2163302,24.7123719,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,exact_unique,n
+b:56f0f457f06c,Carpenters Association,,,,,,,,,,Not specified,1,archives/places_described.csv,A meeting place for workers revolutionary youths in Kovel,n
+b:f67731dc0a38,Carpenters' House of Study,Not specified,,,,,,,Religious (Synagogue),y,1941,2,archives/known_buildings.csv;maps/kowel_buildings.csv,,y
+b:47e20ea68dec,Carpentry Shop,Monish Roizen's property,,,,,,,,,1920s,1,archives/known_buildings.csv,Training site by Hechalutz,n
+b:9a1e799c5c76,Castle of Kovel,,,,,,,,,,1569,1,archives/places_described.csv,A castle in Kovel,n
+b:367b2614776f,Catholic Church,,,,,,,,,,1660,1,archives/places_described.csv,A church in Kovel,n
+b:2f5f15d91fef,Cemetery,Other side of the river in Kovel,,,,,,,,,,1,archives/known_buildings.csv,Bones of youth rotting; referenced as a site of mourning,n
+b:4dd8150e4833,Cemetery,Not specified,,,,,,,,,1547,1,archives/known_buildings.csv,Tombstones from 16th century; exempt from property tax by Queen Bona,n
+b:d814f0674951,Cemetery,Ludomir Street,st:597503e50c85,Ludomir Street,,,,,Burial,y,,1,maps/kowel_buildings.csv,,n
+b:e1f53ec4bb79,Cemetery,,,,,,,,,,"1547, 1893, 1945",1,archives/places_described.csv,A cemetery in Kovel where victims were buried,n
+b:92a705e2e3cd,Cerkiew prawosławna,,,,,273,51.2130798,24.7140582,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,Orthodox church in east-central town; F1 Russian church is already placed in old town next to the Great Synagogue,n
+b:3ca033e12777,Cerkiew Ruska,Kościelna 5,st:becf704481a7,Kościelna,5,,,,religious,standing,1800s,1,maps/kowel_landmarks_index.csv,Religious center,n
+b:5584a5e044c5,Cinema houses,,,,,,,,,,1847,1,archives/places_described.csv,Cinema houses in Kovel,n
+b:d150e59f4a7e,Clubhouse Named For Y.L. Peretz,,,,,,,,,,Not specified,1,archives/places_described.csv,A clubhouse in Kovel that served as a meeting place for middle and working classes,n
+b:11a19e64c5a8,Cmentarz chrześcijański (obecnie istnieje),,,,,355,51.2096202,24.7182173,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,exact_unique,n
+b:893457bc220f,Cmentarz Żydowski,Cmentarna,st:bd5e87b32589,Cmentarna,,,,,religious,partial,pre-1800,1,maps/kowel_landmarks_index.csv,Historic graves,n
+b:515428b39325,Concrete Bridge,Not specified (over Tura River),,,,,,,Transportation,y,1919,3,archives/known_buildings.csv;archives/places_described.csv;maps/kowel_buildings.csv,,y
+b:49df04db53aa,Cuperfein's Oil Press,Fabryczne Street,,,,,,,Industrial (Oil production),y,,1,maps/kowel_buildings.csv,,n
+b:013e5b3a744d,Customs House,Not specified,,,,,,,Administrative (Customs),y,,1,maps/kowel_buildings.csv,,n
+b:9d0c4286a55b,Dom Gitlisa,,,,,362,51.2146301,24.7111012,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,exact_unique,n
+b:993bce5d5745,Dom Holtscheina,,,,,342,51.2135763,24.7078692,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,exact_unique,n
+b:8ab8668bc3f2,"Dom Modlitwy Rużyńskich Chasydów (""Ruzhinel Sztibl"")",,,,,374,51.2164085,24.6946860,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,"A5 Ruzhin shtibl; this copy is next to ul. Magistracka (34), matching the historical address",n
+b:849dd28f2138,"Dom modlitwy Turiya (""Trisk-shtibl"")",,,,,326,51.2180003,24.6922639,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,"A(?) west of old town near A3 (Turijsk rabbi) and ul. Brzeska (4); A4 is the Trisk shtibl, related to Turijsk",n
+b:3ad15c535983,Dom nauczyciela,,,,,363,51.2149692,24.7110602,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,second M3 in a civic/residential cluster next to N3 Gitlis; M/N confusion. Unused N2 teacher's house,n
+b:ed8a7e82d820,Dom Sierot,Szpitalna 8,st:d5c18733f324,Szpitalna,8,,,,social,y,1920s,1,maps/kowel_landmarks_index.csv,Welfare institution,n
+b:b4d939cafadd,Dom sierot TOZ,,,,,331,51.2124575,24.7046580,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,exact_unique,n
+b:6d9334d6e932,Dom Turecki,Handlowa 45,st:cd91d9f1265f,Handlowa,45,,,,commercial,partial,1910s,1,maps/kowel_landmarks_index.csv,Notable architecture,n
+b:6d28bfca5068,Dom Ziskinda. Tymczasowa siedziba miejscowego SS,,,,,292,51.2201476,24.7059796,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,exact_unique,n
+b:081eb97d3193,Dom Żydowski - obecnie urząd stanu cywilnego,,,,,228,51.2158001,24.7172256,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,"N8 not in legend; east near A11 Entina synagogue (building still exists). Unused N6 Jewish house, now civil registry",n
+b:37af5d0fed69,Dom żydowski (obecnie muzeum miejskie),,,,,364,51.2140410,24.7121443,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,"??4 last digit 4, east-central near F2/H1/N3. Unused N4 Jewish house (now city museum) matches the 4",n
+b:bc4a8f23ed01,Dom żydowski z szyldem Gwiazdy Dawida,,,,,304,51.2180408,24.7097291,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,N8 not in legend (N stops at N7); in Piaski near A2 synagogue. Unused N5 house with Star of David,n
+b:1ead7c4e5efa,Downtown Kovel,,,,,,,,,,Not specified,1,archives/places_described.csv,The central part of Kovel,n
+b:4f1401567c16,Dresden Hotel,,,,,,,,,,Not specified,1,archives/places_described.csv,A hotel in Kovel where the narrator's family stayed upon arrival,n
+b:cb1eab2541a0,Duży obszar (co tydzień rynek),,,,,381,51.2140060,24.7070937,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,second J1 just NE of the rynek; unused J3 is the large weekly market,n
+b:dcc5469df58a,Dworzec Kolejowy,Kolejowa 1,st:a39b8f9fba52,Kolejowa,1,,,,transport,rebuilt,1890s,1,maps/kowel_landmarks_index.csv,Major transit point,n
+b:836fd6265b17,Dworzec kolejowy do transportu ładunków i warsztat naprawczy,,,,,353,51.2157173,24.7205078,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,exact_unique,n
+b:87ac6f60c688,Dworzec kolejowy (przywrócony),,,,,234,51.2213115,24.7133508,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,northern railway; passenger station,n
+b:eac93fa34d6f,Dziedziniec i synagoga rabina z Turijska (obecnie istnieje),,,,,321,51.2195875,24.6903159,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,exact_unique,n
+b:3d886c4e9061,Elektrownia,Fabryczna 8,st:b4ca2b3dbab6,Fabryczna,8,,,,industrial,modified,1930s,1,maps/kowel_landmarks_index.csv,Electric supply,n
+b:5d6864f35dfb,Engineering school,,,,,,,,,,1920s,1,archives/places_described.csv,An engineering school in Kovel,n
+b:f1cc03ac9405,Erlich Family House,Not specified (near town center),,,,,,,Residential,y,,1,maps/kowel_buildings.csv,,n
+b:a6a6cd30d45b,Express Theatre,Not specified,,,,,,,Cultural (Theatre),y,,1,maps/kowel_buildings.csv,,n
+b:eaf64f9f61ef,Fabrichna Street,,,,,,,,,,Not specified,1,archives/places_described.csv,A street in Kovel where the movement was just coming into being,n
+b:f9d8354fb0e6,Fabryka tytoniu,,,,,260,51.2125092,24.7121438,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,exact_unique,n
+b:972f93f7dfde,Feldman's Barn,Michkabitza Street,,,,,,,Storage (Leather),y,,1,maps/kowel_buildings.csv,,n
+b:104580ed9f8d,Firefighters' company,,,,,,,,,,1847,1,archives/places_described.csv,A Jewish firefighting company in Kovel,n
+b:3f189ccc7a47,Folks Kitchen,,,,,,,,,,Not specified,1,archives/places_described.csv,A kitchen in Kovel that provided meals for the poor,n
+b:7b837f70a2f8,Freiheit,,,,,,,,,,Not specified,1,archives/places_described.csv,A pioneering movement in Kovel,n
+b:212542b872b5,Gimnazjum,Szkolna 45,st:ef71a5dea0c1,Szkolna,45,,,,educational,standing,1890s,1,maps/kowel_landmarks_index.csv,Multi-ethnic student body,n
+b:76e90abc940c,Gimnazjum polskie nazwane po Pirogowie,,,,,303,51.2189383,24.7066194,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,"E3 → transcribed I3, Polish gymnasium named after Pirogow; same education cluster as E1/L4",n
+b:dbcba60d7e59,"Gimnazjum Żydowskie ""Tarbut"" (nowe)",,,,,271,51.2142873,24.7168291,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,second B3 in the east/new city near A11 Entina; unused B4 is Tarbut (new),n
+b:74736e5c470e,"Gimnazjum Żydowskie ""Tarbut"" (stare)",,,,,288,51.2162964,24.6996111,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,Tarbut (old) on the old-town / river side near K7 Warsaw bridge,n
+b:6a87d2c49f4c,"Gimnazjum Żydowsko-Polskie ""Klara Ehrlich"" (obecnie istnieje)",,,,,336,51.2126445,24.7032881,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,"second B2 in the south education/welfare cluster (B6 kindergarten, C1 TOZ orphanage). Unused B5 Klara Ehrlich gymnasium (still exists)",n
+b:5c3ff4db9d29,Plac Główny,City Center,,,,,,,public_space,modified,historic,1,maps/kowel_landmarks_index.csv,Civic center,n
+b:c5b919732034,Great Synagogue (Final),Kovel,,,,,,,,,1942,1,archives/known_buildings.csv,Torah scrolls burned; holding site; massacres,n
+b:53a67c456f2c,Great Synagogue (Main),Kovel,,,,,,,,,,1,archives/known_buildings.csv,High Holiday services; choir and cantors performed,n
+b:8ce22e04e953,Great Synagogue (Old),Kovel,,,,,,,,,,1,archives/known_buildings.csv,Gatherings; Zionist speeches; youth mischief,n
+b:cf8752d7e8e1,Great Synagogue (Post-Holocaust),Kovel,,,,,,,,,1939-1941,1,archives/known_buildings.csv,Used as holding site before executions,n
+b:624b613d480e,Habima (Hebrew studio),,,,,,,,,,1945,1,archives/places_described.csv,A Hebrew studio in Kovel,n
+b:3e079b41211f,Havatzelet Heder,Kovel,,,,,,,,,,1,archives/known_buildings.csv,Taught religion,n
+b:77f833ab1b7e,Hebrew Gymnasia,Banks of Tura River opposite Stock house,,,,,,,,,1847,2,archives/known_buildings.csv;archives/places_described.csv,Cultural center founded by Asher Frankfort; hosted events and performances,y
+b:cd18f7afe429,Hebrew High School,Kovel,,,,,,,,,1920s,1,archives/known_buildings.csv,Scouting activities; theater play,n
+b:50020c5d0aa1,Hebrew Primary Schools,Not specified,,,,,,,Education (Primary schooling),y,,1,maps/kowel_buildings.csv,,n
+b:2d690acb4e6a,Heder of Rabbi Shaye of Trojanówka,,,,,,,,,,Not specified,1,archives/places_described.csv,A heder where Rabbi Shaye Trojanówka taught,n
+b:3586f5c2db11,Hehalutz Hazair,,,,,,,,,,Not specified,1,archives/places_described.csv,A youth movement in Kovel,n
+b:e57e76f96a8b,Herzlia and Dr. Klumel School,Not specified (opposite Stock family house on Tura River),,,,,,,Education (Secondary schooling),y,,1,maps/kowel_buildings.csv,,n
+b:290978ae71a6,Herzliah School,Kovel,,,,,,,,,1922-1927,2,archives/known_buildings.csv;archives/places_described.csv,Hebrew education center; Zionist activities,y
+b:bd7efe2d568f,Herzliya Elementary School,,,,,,,,,,1922,1,archives/places_described.csv,A Hebrew elementary school in Kovel,n
+b:1da5c29bc3c8,"""Hesed Shel Emet"" Prayer House",Unknown,,,,,,,,,,1,archives/locations_on_hebrew_map_kowel.csv,,n
+b:0392e097ae95,High School,Not specified,,,,,,,Education (Secondary schooling),y,,1,maps/kowel_buildings.csv,,n
+b:61d99a3350d1,Home for the Aged,,,,,,,,,,Not specified,1,archives/places_described.csv,A home for the elderly in Kovel that provided care and support for the elderly,n
+b:832cea5951bd,House of Learning (Sender Kuznits),Not specified (near army barracks),,,,,,,Religious education,y,,1,maps/kowel_buildings.csv,,n
+b:add250830834,House on Fabritchna Street,Fabritchna Street Number 4,st:e22adf39e946,Fabritchna Street,4,,,,Residential,y,,1,maps/kowel_buildings.csv,,n
+b:5ca148ab3a59,House on Matseyev Street,Matseyev Street (crossroads of Brisker,st:dda60c421b8a,Matseyev Street,,,,,Trisker,Matseyever,,1,maps/kowel_buildings.csv,,n
+b:5dee32a339ac,Houses of Learning,Not specified,,,,,,,Religious education,y,1937,3,archives/known_buildings.csv;archives/places_described.csv;maps/kowel_buildings.csv,,y
+b:54aba821842b,Houses of Learning (Final),Kovel,,,,,,,,,1939-1941,1,archives/known_buildings.csv,Destroyed or repurposed under Soviet rule,n
+b:124a012424d4,Jaffa Coffee House,Not specified (Heinich Geller's home),,,,,,,Community center (Zionist meeting place),y,,1,maps/kowel_buildings.csv,,n
+b:7a2eccbac471,Jewish Civic Club,Not specified,,,,,,,Community center,y,,1,maps/kowel_buildings.csv,,n
+b:b980ab0e762c,Jewish Colonial Bank,,,,,,,,,,1912,1,archives/places_described.csv,A bank in Kovel where Dr. Avraham Kastelnesky worked,n
+b:976d946d41c9,Jewish Hospital on Behalf of the Jewish Community,,,,,,,,,,Not specified,1,archives/places_described.csv,A Jewish hospital in Kovel,n
+b:f5da93a95e93,Jewish Municipal Hospital,Kovel,,,,,,,,,,1,archives/known_buildings.csv,Established with community support,n
+b:a64f9b0f3818,Jewish ritual bath (mikveh),,,,,,,,,,1650,1,archives/places_described.csv,A ritual bath in Kovel,n
+b:27dd45ada6de,Jewish Street,Not specified,,,,,,,Residential (Jewish quarter),N,,1,maps/kowel_buildings.csv,,n
+b:5c042e179bc4,Jewish Teahouse,Not specified,,,,,,,Community center (Zionist activities),y,,1,maps/kowel_buildings.csv,,n
+b:356be04a796d,Kadima,,,,,,,,,,1847,1,archives/places_described.csv,A sports organization and national organization in Kovel,n
+b:4a8eee05e4eb,Kąpiel,,,,,337,51.2127644,24.7079194,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,"second B1 in the south welfare cluster (C1 orphanage, B6 kindergarten); unused C6 public bath. Could still be B1",n
+b:54b698e79447,Kaploshnick's house,,,,,,,,,,1847,1,archives/places_described.csv,A fine house with a tidy shop in Kovel,n
+b:6488d2a9eb5e,Kaploshnick's House/Shop,Near the Tura River close to author's home,,,,,,,,,,1,archives/known_buildings.csv,Dispute over hats with M.G.,n
+b:9fb883b5e51d,Karla Davidova Gymnasia,,,,,,,,,,1924,1,archives/places_described.csv,A gymnasia in Kovel,n
+b:eb7073c8dc40,Karliner Synagogue,Not specified,,,,,,,Religious (Synagogue),y,,1,maps/kowel_buildings.csv,,n
+b:a3882440cfe7,Kindergarten No. 1,"Prison Street, opposite orphanage",,,,,,,,,1939-1941,1,archives/known_buildings.csv,Soviet patriotic education,n
+b:8a3396896697,Kino,Warszawska 56,st:06caf55d067c,Warszawska,56,,,,entertainment,standing,1930s,1,maps/kowel_landmarks_index.csv,Popular venue,n
+b:d7968833036e,"Kino ""Ekspres""",,,,,348,51.2140258,24.7061170,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,exact_unique,n
+b:dbe16731b0c8,"Kino ""Oaza""",,,,,275,51.2140718,24.7100423,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,Kino Oaza; annotator was sure on this copy,n
+b:6e45873fdde0,Klomel School,,,,,,,,,,"1847, 1945",1,archives/places_described.csv,A school in Kovel named after Dr. Klomel,n
+b:1fb459c1fb27,Klub Molus,Handlowa 23,st:cd91d9f1265f,Handlowa,23,,,,cultural,y,1920s,1,maps/kowel_landmarks_index.csv,Secular institution,n
+b:5d177d81166a,Komercheski Beit Midrash,New City area,,,,,,,,,,1,archives/locations_on_hebrew_map_kowel.csv,Kovel Book - 239,n
+b:f4b3f3b21cda,Komerczeske Synagogue,Zamd (Sands),,,,,,,Religious (Synagogue),y,,1,maps/kowel_buildings.csv,,n
+b:7578454082cd,Kommertchesky Synagogue,Kovel,,,,,,,,,,1,archives/known_buildings.csv,Rabbi Nitzberg studied here,n
+b:05a8af478bbd,Kościół katolicki,,,,,334,51.2115685,24.7071230,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,"second F2 in the south civic/Christian cluster (G3 post, F5 priests, F4 cemetery); unused F3 Catholic church",n
+b:6fb869779390,Kościół Rosyjski (obecnie istnieje),,,,,244,51.2181641,24.6962363,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,exact_unique,n
+b:af9f6ca5a17c,Kotzker Synagogue,Not specified,,,,,,,Religious (Synagogue),y,,1,maps/kowel_buildings.csv,,n
+b:1eae9e71f733,Kovel,,,,,,,,,,1518,1,archives/places_described.csv,A city established in 1518,n
+b:aa610058bba0,Kovel Castle,Not specified,,,,,,,Administrative (Castle and dungeon),N,,1,maps/kowel_buildings.csv,,n
+b:e85860aa1a06,Kovel during the First World War,,,,,,,,,,1914,1,archives/places_described.csv,Kovel during the events of the First World War,n
+b:75c820e30a81,Kovel Rebbe's Synagogue,,,,,,,,,,1924,1,archives/places_described.csv,A synagogue in Kovel where the rebbe danced,n
+b:e8078f6be674,Kovka Bukser Courtyard,Not specified,,,,,,,Execution site,y,,1,maps/kowel_buildings.csv,,n
+b:f09184a0fb56,Kupechesky Synagogue,Kovel,,,,,,,,,1928,1,archives/known_buildings.csv,Ownership transferred after rebellion,n
+b:7956f7d9074d,Large church,,,,,,,,,,1920s,1,archives/places_described.csv,A large church in the Zand quarter of Kovel,n
+b:95faf8358e83,Large House of Study,Not specified,,,,,,,Religious (Synagogue),y,,1,maps/kowel_buildings.csv,,n
+b:bd2e031915f5,Łaźnia Publiczna - Mikwa,Łazienna 12,,,12,,,,religious,y,1890s,1,maps/kowel_landmarks_index.csv,Religious facility,n
+b:79e351ade57b,Legia,,,,,,,,,,1847,1,archives/places_described.csv,A sports organization in Kovel,n
+b:3f554530533a,"""Linat HaTzedek"" Beit Midrash","Old City, vicinity of Synagogue (Shinena) St.",,,,,,,,,,1,archives/locations_on_hebrew_map_kowel.csv,Kovel Book - 352. Gabbai: Binyamin Friedman (1931),n
+b:451c0528394d,Lotzka Street,,,,,,,,,,Not specified,1,archives/places_described.csv,"A street in Kovel with a large, expansive auditorium",n
+b:554f90c8d35e,Lubavitcher Shtibl,Not specified,,,,,,,Religious (Hasidic prayer house),y,,1,maps/kowel_buildings.csv,,n
+b:12c067b436df,Lumber Yard,"Avraham Gozen's yard, Optitchna Street",,,,,,,,,,1,archives/known_buildings.csv,Hashomer Hatzair members worked here,n
+b:c7fbb6f3f434,Luxury shops,,,,,,,,,,1847,1,archives/places_described.csv,Luxury shops in Kovel with modern showcase windows,n
+b:b295258b77bc,Maccabi team,,,,,,,,,,1847,1,archives/places_described.csv,A sports organization and soccer team in Kovel,n
+b:33e83a2ce69d,Magistrat,,,,,,,,,,1847,1,archives/places_described.csv,A municipal building in Kovel,n
+b:5cfa042e514e,Magnificent Kovel railroad station,,,,,,,,,,Not specified,1,archives/places_described.csv,The main railroad station in Kovel,n
+b:8edaa1fd0eb6,Market,,,,,,,,,,"1847, 1945",1,archives/places_described.csv,A marketplace in Kovel,n
+b:995807d62be3,Market,Kovel,,,,,,,,,,1,archives/known_buildings.csv,Referenced as a place where a mother's stony figure might stand,n
+b:be945765e546,Marketplace,Not specified,,,,,,,Commercial (Market),N,1547,2,archives/places_described.csv;maps/kowel_buildings.csv,,y
+b:4d8e8e1dfc5a,Maskil Al Dal School,Not specified,,,,,,,Education (Secular school for poor children),y,,1,maps/kowel_buildings.csv,,n
+b:478b233721dc,Minyan at Rabbi Eliezer Nitzberg,Unknown,,,,,,,,,,1,archives/locations_on_hebrew_map_kowel.csv,Gabbai: Ben Zion Turk,n
+b:16798aabe931,Minyan at the Grabavitzer,Old City,,,,,,,,,,1,archives/locations_on_hebrew_map_kowel.csv,,n
+b:944d5017a7bc,Minyan in Gorki,Gorki (end of Brzeska St.),,,,,,,,,,1,archives/locations_on_hebrew_map_kowel.csv,,n
+b:170931cd040f,Minyan named after Armernik (Dov),New City,,,,,,,,,,1,archives/locations_on_hebrew_map_kowel.csv,Announcement in Kol Kovel 1937,n
+b:0d2815e51c99,Minyan of Rabbi Ephraim Kretzner (Ephraim the Dayan),"New City, alley from Łucka St.",,,,,,,,,,1,archives/locations_on_hebrew_map_kowel.csv,,n
+b:ffe230c1e941,Młyn Armarnyka,,,,,267,51.2118643,24.7156142,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,exact_unique,n
+b:0570c349bc93,Monopolowa St. Beit Midrash,New City,,,,,,,,,,1,archives/locations_on_hebrew_map_kowel.csv,Representative: Leib Plat,n
+b:c8254075b875,"""Moshav Zkenim"" Prayer House","New City, Pomnikowa St.",,,,,,,,,,1,archives/locations_on_hebrew_map_kowel.csv,Kovel Book - 368,n
+b:4c6c8f163bc2,Most Warszawski,Warszawska,st:06caf55d067c,Warszawska,,,,,infrastructure,rebuilt,1910s,1,maps/kowel_landmarks_index.csv,Important link,n
+b:a12868887835,Most Warszawski (zrujnowany),,,,,345,51.2154324,24.6984973,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,exact_unique,n
+b:9c20f86d3bfa,Moyshev Skeynim,Not specified,,,,,,,Old-age home,y,,1,maps/kowel_buildings.csv,,n
+b:17bbc3693935,Mrs. Kartoflie's Basement,Not specified,,,,,,,Residential (Tutor's home),y,,1,maps/kowel_buildings.csv,,n
+b:cb3abb4b7e26,Municipal Beeswax Refinery,Not specified,,,,,,,Industrial (Beeswax processing),N,,1,maps/kowel_buildings.csv,,n
+b:0a8adec43c2a,Mykwa (obecnie istnieje),,,,,299,51.2157103,24.7092008,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,"second C5 sits beside A2 Piaski synagogue and L4 (Piaski ghetto centre); mikvah C7 belongs next to a synagogue, not a cemetery in the street grid",n
+b:6baa064ed774,Narodowa szkoła polska nazwana po Moszczyckim,,,,,272,51.2128638,24.7134305,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,"E2 → transcribed I2, Polish national school named after Mościcki",n
+b:bfc15ba8e95c,Naskizer House of Study,Kovel,,,,,,,,,1942,1,archives/known_buildings.csv,Hiding place for Frankfurt family,n
+b:da7d3b552195,Naskizer Synagogue,Not specified,,,,,,,Religious (Synagogue),y,,1,maps/kowel_buildings.csv,,n
+b:7ae7b9384615,Neshchizer Shtibl,Not specified,,,,,,,Religious (Hasidic prayer house),y,,1,maps/kowel_buildings.csv,,n
+b:9c40cb8c0bc1,Neskhizher House of Learning,Kovel,,,,,,,,,,1,archives/known_buildings.csv,Used for prayer; old books stored,n
+b:d565c34fcf64,New Barracks,"Behind new cemetery, Ludimir Street",,,,,,,,,1941,1,archives/known_buildings.csv,Built under German occupation,n
+b:a3f225815fdf,New Cemetery,Not specified,,,,,,,Burial,y,1941,3,archives/known_buildings.csv;archives/places_described.csv;maps/kowel_buildings.csv,,y
+b:eec555bfffc6,New Cemetery (Execution Site),Next to purification room,,,,,,,,,1942,1,archives/known_buildings.csv,Mass burials; executions,n
+b:9d9695a2db16,New station,,,,,,,,,,1847,1,archives/places_described.csv,A new train station in Kovel,n
+b:934d094de025,New Town,,,,,,,,,,Not specified,1,archives/places_described.csv,The newer part of Kovel,n
+b:9dcd2a8f221b,Niebieski Prospect,,,,,,,,,,1847,1,archives/places_described.csv,A romantic promenade in Kovel,n
+b:548ec087a710,NKVD Building,Not specified,,,,,,,Administrative (Soviet security headquarters),N,1939,2,archives/known_buildings.csv;maps/kowel_buildings.csv,,y
+b:c240ac79b98b,Nowa remiza strażacka,,,,,376,51.2193747,24.6811814,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,exact_unique,n
+b:75b0465033bc,Obszar zamieszkania pracowników kolei (polski),,,,,370,51.2079019,24.7251648,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,exact_unique,n
+b:f9ef6c32d8b2,"Oddział ""Hehaluc"" i siedziba ""Hehaluc-Gatzair""",,,,,227,51.2165693,24.7168315,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,DB not in legend; next to D5 freight yard and ghetto Piaski. Unused D9 Hehalutz HQ,n
+b:8569d24f1192,Ogród miejski,,,,,367,51.2155603,24.7120543,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,"second K2 sits in town, not in fields; unused K1 city garden",n
+b:da9c1a736d70,Ohel Shem,,,,,,,,,,Not specified,1,archives/places_described.csv,A club in Kovel that brought together young people interested in Jewish content and thought,n
+b:b65ef104df4c,Old Cemetery,,,,,,,,,,1893,1,archives/places_described.csv,An ancient cemetery in Kovel,n
+b:6af12ece61a0,Old cemetery on Matisov Street,,,,,,,,,,5660s (early 20th century),1,archives/places_described.csv,An ancient cemetery in Kovel with tombstones carved nearly four hundred years ago,n
+b:b4963ecdc8d2,Old station,,,,,,,,,,1847,1,archives/places_described.csv,An old train station in Kovel,n
+b:8b83757c4e9b,Old Town,,,,,,,,,,Not specified,1,archives/places_described.csv,The historic part of Kovel,n
+b:bf90cee13d5d,Old Town (during WWI),,,,,,,,,,1914,1,archives/places_described.csv,The historic part of Kovel during World War I,n
+b:3037275a89ff,Old train station,,,,,,,,,,1914,1,archives/places_described.csv,A train station in Kovel where the first refugees came during World War I,n
+b:fde8521e25d5,Old Vakzalna Street,,,,,,,,,,1898,1,archives/places_described.csv,A street where Yaacov-Aharon Entin lived,n
+b:9556fb5014fb,Old Varba's house,,,,,,,,,,1847,1,archives/places_described.csv,A large two-story walled house in Kovel,n
+b:a2e905bbfb05,Old wooden bridge,,,,,,,,,,1847,1,archives/places_described.csv,An old wooden bridge in Kovel,n
+b:2927573fa025,Orphanage,,,,,,,,,,1918,1,archives/places_described.csv,An orphanage in Kovel that provided shelter and care for orphans,n
+b:03c295b7de59,Orphanage (Appelbaum),Kovel,,,,,,,,,1918;1929;1930;1938,1,archives/known_buildings.csv,Founded by Yaakov Appelbaum; summer camp; 25th anniversary,n
+b:f82aa37c2107,ORT School,Not specified,,,,,,,Vocational education,y,1920s,3,archives/known_buildings.csv;archives/places_described.csv;maps/kowel_buildings.csv,,y
+b:efbbee578d52,Osiedle Mieszkaniowe,Various,,,,,,,residential,modified,various,1,maps/kowel_landmarks_index.csv,Mixed housing,n
+b:880c080ad264,Park i miejsce do spacerów,,,,,268,51.2113813,24.7171520,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,K8 not in legend (K stops at K7); east of mill M1; unused K6 park and promenade,n
+b:033b85df4ac6,Parking dla powozów konnych,,,,,305,51.2194134,24.7098436,,,,3,archives/landmark_map_gold_standard/fuzzy_nodes.csv,street_repeat,y
+b:0913081f80fa,People's Kitchen,Not specified,,,,,,,Charitable (Food distribution),y,,1,maps/kowel_buildings.csv,,n
+b:c42b9df0d831,People's Libraries,Not specified,,,,,,,Cultural (Library),y,,1,maps/kowel_buildings.csv,,n
+b:388a216ab187,Peretz Library,Not specified,,,,,,,Cultural (Yiddish library),y,,1,maps/kowel_buildings.csv,,n
+b:010928a1fd87,Pirogov's Gymnasia,,,,,,,,,,1909,1,archives/places_described.csv,A gymnasia in Kovel,n
+b:0b691615d25e,Plaża - miejsce na pikniki i pływanie łódką,,,,,289,51.2172275,24.7000795,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,exact_unique,n
+b:bfd6be3d7bc2,Poczta,,,,,335,51.2121818,24.7058467,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,exact_unique,n
+b:870d1bf1d94e,Pola i pola,,,,,291,51.2186678,24.6989362,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,fields at the western edge,n
+b:cf83bf02ab0c,Pole do zabawy żołnierzy w piłkę nożną,,,,,236,51.2216792,24.7089526,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,exact_unique,n
+b:d7efb3f9a239,"Pole, na którym stały namioty",,,,,293,51.2213648,24.7046505,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,Z4(?): Z/J and 4/5 confusion. Unused J5 tent field sits in the north near J4 soldiers' football field and 23 Pieski,n
+b:85f312e59d3d,Polish-Jewish Middle School,Not specified,,,,,,,Education (Secondary schooling),y,,1,maps/kowel_buildings.csv,,n
+b:c3d965923471,Polska Szkoła Średnia,Szkolna 60,st:ef71a5dea0c1,Szkolna,60,,,,educational,standing,1900s,1,maps/kowel_landmarks_index.csv,National school,n
+b:ea6ec0287e93,"Polski klub nocny ""Zasób"" (dwa budynki)",,,,,357,51.2160683,24.7137936,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,H1(?) duplicate of Oasis; unused H3 Polish night club Zasób (two buildings),n
+b:c5fbb007ab70,Pomieszczenia księży,,,,,379,51.2101417,24.7087602,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,exact_unique,n
+b:d3d68b4ffb94,Pomnik Getta,Pomorowska,,,,,,,memorial,standing,1990s,1,maps/kowel_landmarks_index.csv,Memory site,n
+b:a80d2cc33d98,Pompa Wodna,Rynek,st:2ddaa8c0fce3,Rynek,,,,,infrastructure,y,1900s,1,maps/kowel_landmarks_index.csv,Community water access,n
+b:3e9eb3a4c2ab,Post office,,,,,,,,,,1847,1,archives/places_described.csv,A post office in Kovel,n
+b:d9e0b4067881,Printing houses,,,,,,,,,,1847,1,archives/places_described.csv,Printing houses in Kovel,n
+b:bf7318093b0b,Prison,Near NKVD building,,,,,,,,,1939,1,archives/known_buildings.csv,Held prisoners; Red Army liberated them,n
+b:bdd0e239d085,Prof Friedlander School,Mitzkivitcha Street Kovel,,,,,,,,,,1,archives/known_buildings.csv,Memorial school; supported by Joint,n
+b:0451c2c47222,Projenski synagogue,,,,,,,,,,1847,1,archives/places_described.csv,A synagogue for the aristocracy of Kovel,n
+b:1de04673e7db,Prozhansky's Beit Midrash (In the name of Avraham Shlomo Prozhansky),"New City, alley from Warszawska",,,,,,,,,,1,archives/locations_on_hebrew_map_kowel.csv,"Kovel Book - 246. vol. 17 p. 156. Gabbaim: Pinchas Prozhansky, Shmuel Yosef Werba",n
+b:d16c6f1fea28,Pruszanski's House of Prayer,Not specified,,,,,,,Religious (Synagogue),y,,1,maps/kowel_buildings.csv,,n
+b:b2efd83b0732,Przedszkole żydowskie,,,,,332,51.2119545,24.7067356,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,exact_unique,n
+b:3092c705a8dc,Rabbi's Courtyard,Not specified,,,,,,,Religious (Rabbi's residence and court),y,,1,maps/kowel_buildings.csv,,n
+b:3c35c2b41e44,Rabbi Velvele's Dance,,,,,,,,,,Not specified,1,archives/places_described.csv,A ceremony of “Hakefot” where Rabbi Velvele danced with the Scroll,n
+b:7ff673b4a4c1,Rabbi z Turijaska,Warszawska 22,st:06caf55d067c,Warszawska,22,,,,residential,y,c.1890,1,maps/kowel_landmarks_index.csv,Important Hasidic site,n
+b:86a52c16f8a6,Radzieckie NKWD (1939),,,,,322,51.2190498,24.6905742,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,exact_unique,n
+b:7674d849121f,Reider House of Learning,Kovel,,,,,,,,,,1,archives/known_buildings.csv,Rabbi Yehuda Reider studied here; Third Meal hosted,n
+b:fedbce307c60,Righteous Lodging,,,,,,,,,,Not specified,1,archives/places_described.csv,A charitable institution in Kovel that provided care for the poor and needy,n
+b:5acd5bf46081,Ritual Bath (Mikveh),River bank behind dams on way to Milanovac,,,,,,,,,1650,1,archives/known_buildings.csv,Mentioned in royal privilege; tax-exempt,n
+b:6dda46bdb135,River,,,,,,,,,,"1847, 1945",1,archives/places_described.csv,A river in Kovel (possibly Styr or Turiya),n
+b:6a4e4f1a1a3a,River Tura,,,,,,,,,,14th Century,1,archives/places_described.csv,A river in Kovel,n
+b:05d8683f88bb,Rizhiner Shtiebel,Kovel,,,,,,,,,,1,archives/known_buildings.csv,Hassidic gatherings,n
+b:c1eee5600353,Road Engineer's House,Horodlatz Road,,,,,,,Residential,y,,1,maps/kowel_buildings.csv,,n
+b:fe6b6f8bbfdb,Ruzhyner Shtibl,Not specified,,,,,,,Religious (Hasidic prayer house),y,,1,maps/kowel_buildings.csv,,n
+b:4218d35c7537,Ruzhyner Synagogue,Not specified,,,,,,,Religious (Synagogue),y,,2,archives/known_buildings.csv;maps/kowel_buildings.csv,,y
+b:29d0e77338f7,Rynek,City Center,,,,,,,public_space,modified,historic,1,maps/kowel_landmarks_index.csv,Heart of old town,n
+b:933f588bf4e2,Rynek miejski,,,,,347,51.2143144,24.7047376,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,"rynek cluster with H2, H4, M6 (cinemas + Friedrichson pharmacy)",n
+b:a7b9d9a941ac,Rynek wozów wiejskich,,,,,380,51.2097987,24.7109192,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,exact_unique,n
+b:58cdd4efb0f7,Rzeka Wisłok,N/A,,,,,,,natural,existing,N/A,1,maps/kowel_landmarks_index.csv,City's water source,n
+b:04ec6032c8e2,Sadigura Hasidim Shtiebel,Unknown,,,,,,,,,,1,archives/locations_on_hebrew_map_kowel.csv,"""The Heroism of the Weak"" - Yaakov Rozmarin (63)",n
+b:07f5bdf803ce,Sands (during WWI),,,,,,,,,,1914,1,archives/places_described.csv,A part of Kovel during World War I,n
+b:9d736c6dc438,Sawmill,Not specified (on Tura River banks),,,,,,,Industrial (Wood processing),y,1920s,2,archives/known_buildings.csv;maps/kowel_buildings.csv,,y
+b:43e063373f10,Schneider Beit Midrash (Shtiebel) (of the carpenters),"Old City, adjacent to the Great Synagogue",,,,,,,,,,1,archives/locations_on_hebrew_map_kowel.csv,Kovel Book - 412. Gabbai: Yosef Gurin,n
+b:c884d16ee3bd,Schronisko dla osób starszych,,,,,354,51.2112988,24.7118643,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,exact_unique,n
+b:0e7d76c3bbf5,Sender Kuznits House of Learning,Behind house of the Krasavitza near army barracks,,,,,,,,,1894,1,archives/known_buildings.csv,School relocated here due to growth,n
+b:a06c249a9a6a,Shinkar Sisters' Trade School,Not specified,,,,,,,Education (Trade school for girls),y,,1,maps/kowel_buildings.csv,,n
+b:5c1f4586bc86,Shtiblach (Stolin and Trisk Hassidim),Not specified,,,,,,,Religious (Hasidic prayer houses),y,,1,maps/kowel_buildings.csv,,n
+b:452bccf48198,"Siedziba ""Beitar"" i ""Bundu""",,,,,269,51.2122360,24.7145729,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,second D3 in the east near D1 Hashomer Hatzair; unused D2 is Beitar and Bund HQ (youth-org cluster),n
+b:451e788615b5,"Siedziba ""Gashomer Gatzair""",,,,,259,51.2116870,24.7135321,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,exact_unique,n
+b:3f03a725bbb7,Siedziba lokalnego KC,,,,,306,51.2193092,24.7110264,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,illegible; same latitude as L5 Ziskind/SS (y≈366). Unused L6 local KC headquarters,n
+b:22756e08c42b,Simikovi Hospital,,,,,,,,,,Not specified,1,archives/places_described.csv,A governmental hospital in Kovel,n
+b:114db1480f73,Small church,,,,,,,,,,1915,1,archives/places_described.csv,A small church in Kovel,n
+b:f6961983b3a5,Soviet Prison,Not specified,,,,,,,Detention (Prison),N,,1,maps/kowel_buildings.csv,,n
+b:025a173f116a,Sports field,,,,,,,,,,1847,1,archives/places_described.csv,A sports field in Kovel,n
+b:3e97c4db330f,Stacja elektryczna (nowa),,,,,224,51.2172181,24.7147708,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,new electric station in NE Piaski / industrial area,n
+b:91d8bf021941,Stacja elektryczna (stara),,,,,338,51.2137142,24.7036029,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,exact_unique,n
+b:244a7aef1a93,Stadion,Sportowa 12,,,12,,,,sports,modified,1930s,1,maps/kowel_landmarks_index.csv,Community sports,n
+b:b07f1fd5b56c,"Stadion piłkarski ""Makabi""/""Haszmonia""",,,,,283,51.2188424,24.7008199,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,Makabi/Haszmonia stadium: open land on the west near K5 beach / river,n
+b:f201152b1ce6,Stare Gimnazjum,Szkolna 38,st:ef71a5dea0c1,Szkolna,38,,,,educational,partial,1870s,1,maps/kowel_landmarks_index.csv,Historic institution,n
+b:ef49ad011653,Stare Miasto,City Center,,,,,,,district,modified,medieval,1,maps/kowel_landmarks_index.csv,Original settlement,n
+b:e2206d2c20bf,Starożytny cmentarz,,,,,366,51.2214400,24.6884505,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,far west edge of town; ancient cemetery belongs at the edge,n
+b:8d4c0a9ab32b,Stary cmentarz,,,,,378,51.2109345,24.7134120,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,?C? on the south edge next to F4 Christian cemetery and F5 priests; unused C4 old Jewish cemetery. Alternative: C3 hostel next to C2 old-age home,n
+b:df916ea30233,Stepaner Shtibl,Not specified,,,,,,,Religious (Hasidic prayer house),y,,1,maps/kowel_buildings.csv,,n
+b:102e1c4cde6f,Stepenai Shtiebel,"Old City, Handlowa St.",,,,,,,,,,1,archives/locations_on_hebrew_map_kowel.csv,"Gabbai: Leizer Svinyu (1931, 1935)",n
+b:f71a511c9f08,Stock Family House,Not specified (on Tura River banks),,,,,,,Residential,y,,1,maps/kowel_buildings.csv,,n
+b:742629226d86,Synagoga,Brzeska 16,st:7dc94505c4b3,Brzeska,16,,,,religious,y,1860s,1,maps/kowel_landmarks_index.csv,Regular community use,n
+b:94cb53a127d4,Synagoga Brzeska,,st:7dc94505c4b3,Brzeska,28,365,51.2207840,24.6910519,religious,y,1870s,2,archives/landmark_map_gold_standard/fuzzy_nodes.csv;maps/kowel_landmarks_index.csv,"third B2 at the far west edge next to A3 and C5, near ul. Brzeska (4). Unlikely a school; unused A10 Brzeska synagogue",y
+b:d906299ce9fe,Synagoga Hasidei Satpan,,,,,325,51.2169603,24.6941816,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,exact_unique,n
+b:8ea915ff47e8,"Synagoga ""Hayatim"" (krawcy)",,,,,375,51.2161077,24.6926520,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,A18 not in legend; sits in the Great Synagogue cluster (A1/A7/A8). A9 tailors' synagogue was adjacent to the Great Synagogue,n
+b:f0de88747560,Synagoga im. Prozański,,,,,340,51.2143641,24.7020400,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,second A5; this copy is toward the rynek / new-town side. A6 Prozhansky was in the new city off Warszawska,n
+b:28f93a14b03f,Synagoga M. Entina (obecnie istnieje),,,,,270,51.2139457,24.7165932,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,exact_unique,n
+b:3545e91f950f,Synagoga (Piaski),Piaskowa 8,st:143bfae61bfc,Piaskowa,8,,,,religious,y,c.1880,1,maps/kowel_landmarks_index.csv,Served working-class district,n
+b:98a9dff29796,"Synagoga w Piskach (""Zamdeszil"")",,,,,300,51.2150701,24.7090379,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,exact_unique,n
+b:eae33345a315,Synagogue,Square between Uniate Churches and Catholic Church,,,,,,,,,1660,2,archives/known_buildings.csv;archives/places_described.csv,Construction completed in 1660 despite opposition; sealed in 1661 for being taller than churches; reopened; burned down in 1744,y
+b:8e14398c5664,"Synagogue in ""Kovel 2""",Kovel 2 area (Kovel Wtóry),,,,,,,,,,1,archives/locations_on_hebrew_map_kowel.csv,,n
+b:c1373a90632a,Szkoła Średnia,Szkolna 52,st:ef71a5dea0c1,Szkolna,52,,,,educational,standing,1900s,1,maps/kowel_landmarks_index.csv,Public school,n
+b:680dd52b3324,Szkoła wyższa (obecnie istnieje),,,,,302,51.2170940,24.7060968,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,map E-series is transcribed I-series (Polish schools). E1 next to L4 education ministry; I1 high school still exists,n
+b:4586d8f25d0b,Szpital Polski,,st:d5c18733f324,Szpitalna,20,369,51.2068197,24.7253343,healthcare,modified,1900s,2,archives/landmark_map_gold_standard/fuzzy_nodes.csv;maps/kowel_landmarks_index.csv,exact_unique,y
+b:ca94d6c909d7,Szpital Żydowski,,st:d5c18733f324,Szpitalna,15,284,51.2173668,24.7021244,Medical (Hospital),y,1910s,3,archives/landmark_map_gold_standard/fuzzy_nodes.csv;maps/kowel_buildings.csv;maps/kowel_landmarks_index.csv,second D4 rejected (not on the railway). Unused D6 Jewish hospital in west-central town,y
+b:fc29332272a8,Tailors' House of Study,Not specified,,,,,,,Religious (Synagogue),y,,1,maps/kowel_buildings.csv,,n
+b:aab90e12037c,Talmud Tora,,,,,324,51.2164266,24.6927606,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,exact_unique,n
+b:f5df378262ec,Talmud Torah,Ludomir Street,st:597503e50c85,Ludomir Street,,,,,Religious education (Free school for poor boys),y,1894;1899,2,archives/known_buildings.csv;maps/kowel_buildings.csv,,y
+b:ef5cbce38d13,Talmud Torah building,,,,,,,,,,1909,1,archives/places_described.csv,A building where a proper and excellent restaurant for soldiers was organized,n
+b:50c20235cd9f,"Talmud Torah in the ""City""","Old City, Włodzimierska St.",,,,,,,,,,1,archives/locations_on_hebrew_map_kowel.csv,Gabbai: Simcha Hinoch,n
+b:1870741d973f,Talmud Torah of Hol,"New City, Listopadowa St.",,,,,,,,,,1,archives/locations_on_hebrew_map_kowel.csv,,n
+b:7b5005e8adaa,Talmud Torah (WWII),Kovel,,,,,,,,,1939-1940,1,archives/known_buildings.csv,Converted to soup kitchen and Yiddish school,n
+b:c738ec061ad6,Tarbut Gymnasia,,,,,,,,,,1924,1,archives/places_described.csv,A Hebrew gymnasia in Kovel,n
+b:c8cd8e0cb4a5,Tarbut Gymnazie,Not specified,,,,,,,Education (Zionist secondary school),y,,1,maps/kowel_buildings.csv,,n
+b:46056a225809,Tarbut Hebrew Gymnasia (Verba’s House),River bank in new town of Kovel,,,,,,,,,1921-1934,1,archives/known_buildings.csv,Gymnasia housed here; evacuated in 1934,n
+b:bd82bb2c3a1b,Tarbut School,,,,,,,,,,Not specified,1,archives/places_described.csv,A Hebrew school in Kovel,n
+b:27fe1e38d4a2,Tavern (Gedaliah and Lazer Soinuich),Not specified,,,,,,,Commercial (Tavern),y,,1,maps/kowel_buildings.csv,,n
+b:32f3c1784745,Taz association polyclinic,,,,,,,,,,Not specified,1,archives/places_described.csv,A large polyclinic that served the Jewish public in the medical field,n
+b:d1bce5fe5bf8,Taz Headquarters,Gershonovitz apartment (later),,,,,,,Administrative (Taz institution),y,,1,maps/kowel_buildings.csv,,n
+b:ac450a829d8d,Taz Institution,,,,,,,,,,1928,1,archives/places_described.csv,An institution in Kovel that provided care for Jewish children,n
+b:37770117a927,Taz Nursery and Kindergarten,Not specified,,,,,,,Education (Nursery and kindergarten),y,,1,maps/kowel_buildings.csv,,n
+b:58d9171c161c,Taz Summer Camp,"Horodlitz, 7 km from Kovel",,,,,,,,,1929,1,archives/known_buildings.csv,Summer camp; heat concerns,n
+b:dac462197d32,The Beit Midrash of the Kozhini Rabbi,Old City area,,,,,,,,,,1,archives/locations_on_hebrew_map_kowel.csv,,n
+b:994bbba43951,The Beit Midrash of the Rabbi from Aisk,Old City area,,,,,,,,,,1,archives/locations_on_hebrew_map_kowel.csv,,n
+b:d369d78ca613,The Beit Midrash of the Shopkeepers,New City area,,,,,,,,,,1,archives/locations_on_hebrew_map_kowel.csv,,n
+b:e97620889fb0,The Brisker Shtiebel,"Old City, vicinity of Synagogue (Shinena) St.",,,,,,,,,,1,archives/locations_on_hebrew_map_kowel.csv,,n
+b:2d19cc2d649a,The Great Synagogue,"Old City, Koshcheľna St.",,,,,,,,,,1,archives/locations_on_hebrew_map_kowel.csv,"Kovel Book - vol. 433, 16, 67. Gabbai: Asher Schwartz (1931)",n
+b:6ba1a8e31b0d,The Karliner Shtiebel,"Old City, near Synagogue (Shinena) St.",,,,,,,,,,1,archives/locations_on_hebrew_map_kowel.csv,,n
+b:30053a65ae4e,The Kotsker Shtiebel,"Old City, Market area",,,,,,,,,,1,archives/locations_on_hebrew_map_kowel.csv,,n
+b:c7f62761ca48,The Lubavitcher Shtiebel (Beit Midrash) (Lubavitch),"Old City, Market area",,,,,,,,,,1,archives/locations_on_hebrew_map_kowel.csv,Person in charge: Moshe Teitelboim (1934). Gabbai: Yehoshua-Dov Becker (1935). Kovel Book - 452,n
+b:a5337f045d6d,The Ludmirai Shtiebel,"Old City, Włodzimierska St.",,,,,,,,,,1,archives/locations_on_hebrew_map_kowel.csv,,n
+b:ff4b906f9eb9,The Merchants' Beit Midrash,Unknown,,,,,,,,,,1,archives/locations_on_hebrew_map_kowel.csv,"Gabbai: Noah Fierstein - ""Kol Kovel"" 1931",n
+b:b9b33ab1105f,The New (Great) Beit Midrash of Hol,"New City, Kolejowa St.",,,,,,,,,,1,archives/locations_on_hebrew_map_kowel.csv,"""Pinkas Kovel"" - vol. 20 p. 22. Chairman: Yeshayahu Gonik. Gabbaim: Dov Steinberg, Yudel Gutman - 1936",n
+b:418e6abb0100,The Poorly Educated School (Initial),Kovel,,,,,,,,,1893,1,archives/known_buildings.csv,Opened for poor children (8 boys),n
+b:171b1c88e749,The Ruzhiner Shtiebel,"Old City, Magistracka St.",,,,,,,,,,1,archives/locations_on_hebrew_map_kowel.csv,Kovel Book - 244. Gabbai: Yitzhak Leib Ehrlich (1934),n
+b:3b0ce1526ecf,The Shtiebel of the Kotsk Hasidim,"Old City, Market area",,,,,,,,,,1,archives/locations_on_hebrew_map_kowel.csv,,n
+b:a6507109952d,The Shtiebel of the Neskhizh Hasidim,"Old City, vicinity of Synagogue (Shinena) St.",,,,,,,,,,1,archives/locations_on_hebrew_map_kowel.csv,,n
+b:4444a36a27ad,The Stoliner Shtiebel,Old City,,,,,,,,,,1,archives/locations_on_hebrew_map_kowel.csv,,n
+b:8a6829fa7873,The Tailors' Shtiebel,"Old City, Rzeczna St.",,,,,,,,,,1,archives/locations_on_hebrew_map_kowel.csv,,n
+b:5453d0e7c7fb,The Triskai Beit Midrash of Hol (New City - in the sands),"New City, Żeromskiego St.",,,,,,,,,,1,archives/locations_on_hebrew_map_kowel.csv,"Kovel Book - 358. Gabbaim: Moshe Liber Langer (1931), Pinchas Spiegelman (1934)",n
+b:921913ac3e2a,The Triskai Beit Midrash of the City (in the Old City),"Old City, alley from Brzeska St.",,,,,,,,,,1,archives/locations_on_hebrew_map_kowel.csv,Kovel Book - 412. Gabbai: Pinchas Spiegelman (1937),n
+b:3f25b534fbf9,Torah Study Center (Projenski),Kovel,,,,,,,,,1910-1928,1,archives/known_buildings.csv,Expanded with second floor; celebrations; dowry aid,n
+b:68e11be2fd24,TOZ Summer Residences,Horodlitz (7 km from Kovel,,,,,,,pine forest),Health (Children's summer camps),,1,maps/kowel_buildings.csv,,n
+b:97fc429d62f4,Train Station,Not specified,,,,,,,Transportation,y,1939-1941,2,archives/known_buildings.csv;maps/kowel_buildings.csv,,y
+b:122721761512,Trisk Rebbe's Synagogue,,,,,,,,,,1924,1,archives/places_described.csv,A synagogue in Kovel where the Trisk Rebbe danced,n
+b:5df5a8991ace,Trisker Shtibl,Not specified,,,,,,,Religious (Hasidic prayer house),y,,1,maps/kowel_buildings.csv,,n
+b:a9680d9e5445,Trisker Synagogue,Kovel,,,,,,,,,1941,1,archives/known_buildings.csv,Torah scrolls burned; one scroll hidden,n
+b:94926bfd206c,Tsysho School,Lutske Street (Antin shack),st:352381a6f05d,Lutske Street,,,,,Education (Yiddish socialist school),y,,1,maps/kowel_buildings.csv,,n
+b:0b8ff7520f33,Tunel dla Pasażerów,Station Area,,,,,,,infrastructure,standing,1920s,1,maps/kowel_landmarks_index.csv,Connected station sides,n
+b:91961565a349,Tura River,,,,,,,,,,1847,1,archives/places_described.csv,A river in Kovel,n
+b:40f8bcd9750b,Uniate churches,,,,,,,,,,1660,1,archives/places_described.csv,Churches in Kovel,n
+b:71429be4767d,Varba House,Not specified (on Tura River banks),,,,,,,Residential (later housed Herzlia and Hebrew Gymnasia),y,,1,maps/kowel_buildings.csv,,n
+b:f3e625184ada,Vocational High School No. 3,Not specified,,,,,,,Education (Former Dr. Klumel School),y,,1,maps/kowel_buildings.csv,,n
+b:0c97b258bd61,Vyturio Kovel,Not specified,,,,,,,Work site (Forced labor),y,,1,maps/kowel_buildings.csv,,n
+b:4d4665a07dd1,Wielka Synagoga,Szkolna 12,st:ef71a5dea0c1,Szkolna,12,,,,Religious (Synagogue),y,pre-1850,5,archives/places_described.csv;maps/kowel_buildings.csv;maps/kowel_landmarks_index.csv,Largest Jewish religious building in Kowel,y
+b:dde41ea627c8,Wielka Synagoga (obecnie istnieje),,,,,323,51.2170589,24.6949571,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,exact_unique,n
+b:ca62cd918dec,Wieża ciśnień,,,,,320,51.2275508,24.7014731,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,exact_unique,n
+b:df6eeba0d50e,Plac Wolności,City Center,,,,,,,public_space,modified,1920s,1,maps/kowel_landmarks_index.csv,Civic space,n
+b:571e3fdda8a6,Workers Kitchen,Kovel,,,,,,,,,1917;post-1917,1,archives/known_buildings.csv,Zionist events and public meals,n
+b:a19a543ce79c,Yeshivus,Not specified,,,,,,,Religious education (Secondary religious schools),y,,1,maps/kowel_buildings.csv,,n
+b:d40a2ed5b063,Yiddish School,"Lutske Street, Antin shack",st:352381a6f05d,Lutske Street,,,,,,,1920,2,archives/known_buildings.csv;archives/places_described.csv,Opened by Bolsheviks for orphans,y
+b:febfb6c7412c,Zand synagogue,,,,,,,,,,1847,1,archives/places_described.csv,A synagogue in the Zand quarter of Kovel,n
+b:e96906807b63,Zionist Club,Not specified (near People's Kitchen),,,,,,,Community center (Zionist activities),y,1924,2,archives/places_described.csv;maps/kowel_buildings.csv,,y
+b:e831df2d50c2,Zionist Community Center,Lutske Street (Yudell Schechter's house),st:352381a6f05d,Lutske Street,,,,,Community center (Zionist activities),y,,1,maps/kowel_buildings.csv,,n
+b:3d7140c44392,Zionist Synagogue,"Yudell Schechter's house, Lutske Street",,,,,,,,,,1,archives/known_buildings.csv,Zionist committee meetings and library,n
+b:cba779cd0332,"Żydowska Szkoła Ludowa ""Herzlija"". Izba Judenratu (obecnie istnieje)",,,,,351,51.2131347,24.7076172,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,"Herzlija school / Judenrat; more central, near the rynek",n
+b:edfbfcabbce6,Żydowska Szkoła Ludowa im. Doktora Calomel,,,,,298,51.2175341,24.7077342,,,,1,archives/landmark_map_gold_standard/fuzzy_nodes.csv,"Calomel Jewish school in Piaski, next to A2 Piaski synagogue and L4 ghetto centre",n
+b:56ea8c7a43bc,Żydowska Szkoła Podstawowa,Szkolna 8,st:ef71a5dea0c1,Szkolna,8,,,,educational,partial,1900s,1,maps/kowel_landmarks_index.csv,Religious/secular studies,n
+b:48b88f4680c8,"Żydowski klub nocny ""Wersal""",,st:06caf55d067c,Warszawska,31,349,51.2143163,24.7062286,entertainment,y,1930s,2,archives/landmark_map_gold_standard/fuzzy_nodes.csv;maps/kowel_landmarks_index.csv,exact_unique,y

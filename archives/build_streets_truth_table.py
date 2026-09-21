@@ -512,9 +512,16 @@ def load_street_names_txt(store):
 
 
 def load_voting(store):
-    with (ROOT / "kowel_voting_districts.csv").open(encoding="utf-8") as f:
+    voting = ROOT / "archives" / "landmark_map_gold_standard" / "voting_districts_kowel.csv"
+    legacy = ROOT / "kowel_voting_districts.csv"
+    path = voting if voting.exists() else legacy
+    with path.open(encoding="utf-8-sig") as f:
         for row in csv.DictReader(f):
-            raw = (row.get("Miescowosci (ulice) wchodzace w sklad obwodu") or "").strip()
+            raw = (
+                row.get("street")
+                or row.get("Miescowosci (ulice) wchodzace w sklad obwodu")
+                or ""
+            ).strip()
             if not raw:
                 continue
             raw = re.sub(r"^(ul\.?|ulica)\s+", "", raw, flags=re.I)
@@ -828,7 +835,7 @@ def build():
                 "",
                 "## How it was built",
                 "",
-                "1. Seed names from `streets.csv`, `street_names.txt`, `kowel_voting_districts.csv`, `doctors_resident_in_kowel.csv`.",
+                "1. Seed names from `streets.csv`, `street_names.txt`, `archives/landmark_map_gold_standard/voting_districts_kowel.csv`, `doctors_resident_in_kowel.csv`.",
                 "2. Add attestation years from 1929 directories and 1938 phone/normalized listings (match-only; OCR junk not added as new streets).",
                 "3. Add 1917 occupation names from `archives/ww1_grain_distribution_kowel.csv` and selected Yiddish/Hebrew aliases.",
                 "4. Set `exists_today` using OpenStreetMap named highways in bbox 51.18–51.25N, 24.66–24.78E (see `kovel_osm_streets.json`), Polish→Ukrainian cognate hints, and landmark status when available.",

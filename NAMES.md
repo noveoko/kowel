@@ -41,7 +41,8 @@ Use names as printed, with the source beside them. Prefer quiet, specific
 description (address, trade, document date) over dramatizing crime or death.
 If a person appears in more than one list, link rows by documented identity
 (same given name + surname + a date or address). Surname-only overlap is not
-the same person.
+the same person. `archives/normalized/people.csv` follows that rule:
+`clustered=y` only when given name, surname, and birth year all match.
 
 ## Contact
 

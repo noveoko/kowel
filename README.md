@@ -31,16 +31,14 @@ The geographic spine (schematic gold-standard map, still being digitized):
 - [Landmark map gold standard](archives/landmark_map_gold_standard/readme.md) — digitizer, nodes/edges, georeference, snap-to-OSM, KMZ
 - [Google Earth 1919–1939 KMZ](GIS/kowel_streets15.kmz) — pre-war street names and ~130 buildings
 - [1938 Sejm voting districts](archives/landmark_map_gold_standard/voting_districts_kowel.csv) ([Polona source](https://polona.pl/item/obwieszczenie-inc-na-podstawie-art-52-ordynacji-wyborczej-dz-u-r-p-nr-47-poz,OTQyNjM5MzI/0/#info:metadata)) · [SVG](images/kowel_voting_districts.svg)
-- Building seeds: [maps/kowel_buildings.csv](maps/kowel_buildings.csv), [maps/kowel_landmarks_index.csv](maps/kowel_landmarks_index.csv), [archives/known_buildings.csv](archives/known_buildings.csv)
-
-There is not yet a single `buildings.csv` with stable ids. Use the gold-standard
-nodes plus the seeds above.
+- Canonical buildings: [archives/normalized/buildings.csv](archives/normalized/buildings.csv) (`building_id`, optional `map_node_id` / lat/lon)
+- Seeds that feed it: [maps/kowel_buildings.csv](maps/kowel_buildings.csv), [maps/kowel_landmarks_index.csv](maps/kowel_landmarks_index.csv), [archives/known_buildings.csv](archives/known_buildings.csv)
 
 ## Streets
 
-Canonical list (attestation years, rename/`same_as` corridors, `exists_today`):
+Canonical list (`street_id`, attestation years, rename/`same_as` corridors, `exists_today`):
 
-- [archives/normalized/kowel_streets_truth_table.csv](archives/normalized/kowel_streets_truth_table.csv) · [notes](archives/normalized/kowel_streets_truth_table.md)
+- [archives/normalized/kowel_streets_truth_table.csv](archives/normalized/kowel_streets_truth_table.csv) (same rows: [streets.csv](archives/normalized/streets.csv)) · [notes](archives/normalized/kowel_streets_truth_table.md)
 
 Older name dumps (`streets.csv`, `street_names.txt`, the 1929 phone-book street
 CSV) fed that table. Prefer the truth table in new work.
@@ -49,6 +47,7 @@ Rebuild after editing seeds:
 
 ```bash
 python archives/build_streets_truth_table.py
+python archives/build_canonical_tables.py
 ```
 
 Read rotated labels on a map scan: [apps/street_name_ocr](apps/street_name_ocr/readme.md)
@@ -62,8 +61,8 @@ streamlit run app.py
 
 ## Buildings and evidence
 
-Planned shape (not built yet): one building registry keyed to the map, with
-photos and directory rows linked only after a human confirms them. Spec:
+Canonical building rows: [archives/normalized/buildings.csv](archives/normalized/buildings.csv).
+A later evidence tool can hang photos on `building_id`. Spec:
 [apps/image_matcher/kowel_archive_tool_spec.md](apps/image_matcher/kowel_archive_tool_spec.md).
 
 Until that exists, treat photo tools under `apps/` as experiments. Focus stacking
@@ -73,15 +72,15 @@ is the only app with an automated test suite.
 
 | Resource | Role |
 | --- | --- |
-| [1929 business directory](1929_business_directory.csv) ([notes](1929_business_directory.md)) | ~360+ interwar firms |
-| [1938 phone book](kowel_residents_1938.csv) | Residents and businesses |
+| [normalized/people.csv](archives/normalized/people.csv) | Canonical people (`person_id`; clustered only on given+surname+birth year) |
+| [normalized/people_sources.csv](archives/normalized/people_sources.csv) | One row per source extract line |
+| [normalized/firms.csv](archives/normalized/firms.csv) | 1929 directory + Obwieszczenia + 1938 businesses (`firm_id`, `street_id`) |
+| [normalized/crime.csv](archives/normalized/crime.csv) | Wanted notices with `crime_id`, optional `person_id`, Polona URL |
+| [1929 business directory](1929_business_directory.csv) ([notes](1929_business_directory.md)) | Source extract |
+| [1938 phone book](kowel_residents_1938.csv) | Source extract |
 | [Doctors, 1920](doctors_resident_in_kowel.csv) | [Source](https://bc.wbp.lublin.pl/dlibra/publication/edition/17315) |
-| [Obwieszczenia businesses](archives/database%20of%20kowel%20crime/data/obwieszczenia_publiczne/kowel_businesses.csv) | Commercial register in Kowel (Polona OCR) |
-| [Gazeta Śledcza wanted notices](archives/database%20of%20kowel%20crime/data/kowel_criminal_database/kowel_criminal_database.csv) | City-tied police gazette rows, with preview URLs |
-| [people_living_in_Kowel.csv](archives/people_living_in_Kowel.csv) | Civil-style name list (seed) |
 
-People tables are **separate source extracts**. They do not yet share a
-`person_id`. How to cite and what not to add: [NAMES.md](NAMES.md). Full list:
+How to cite names and what not to add: [NAMES.md](NAMES.md). Inventory:
 [archives/DATA.md](archives/DATA.md).
 
 ### Gazette harvest

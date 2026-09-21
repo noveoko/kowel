@@ -1,8 +1,9 @@
 # Data inventory
 
-Status of structured files in this repository. Prefer **canonical** files when
-building maps or tools. Seed files are useful sources that have not been merged
-into a single people/building table yet (that merge is a later phase).
+Status of structured files in this repository. Prefer **canonical** files under
+`archives/normalized/` when building maps or tools. Seed files remain the
+source extracts; regenerate the ID’d tables with
+`python archives/build_canonical_tables.py`.
 
 License and reuse: [LICENSE](../LICENSE), [LICENSE-DATA](../LICENSE-DATA).
 Names of victims and wanted persons: [NAMES.md](../NAMES.md).
@@ -13,7 +14,12 @@ Row counts are data rows (header excluded), measured 2026-09-21.
 
 | File | Rows | Columns | Source | Notes |
 | --- | ---: | --- | --- | --- |
-| [normalized/kowel_streets_truth_table.csv](normalized/kowel_streets_truth_table.csv) | 213 | `street_name`, `year_ranges`, `exists_today`, `same_as`, `notes`, `sources` | Seed lists + 1929/1938 attestations + OSM | Closed street list. Notes: [kowel_streets_truth_table.md](normalized/kowel_streets_truth_table.md). Rebuild: `python archives/build_streets_truth_table.py` |
+| [normalized/kowel_streets_truth_table.csv](normalized/kowel_streets_truth_table.csv) | 213 | `street_id`, `corridor_id`, `street_name`, `year_ranges`, `exists_today`, `same_as`, `notes`, `sources` | Seed lists + 1929/1938 attestations + OSM | Closed street list. Same rows: [normalized/streets.csv](normalized/streets.csv). Notes: [kowel_streets_truth_table.md](normalized/kowel_streets_truth_table.md). Rebuild names: `python archives/build_streets_truth_table.py` then IDs: `python archives/build_canonical_tables.py` |
+| [normalized/people.csv](normalized/people.csv) | 1415 | `person_id`, names, `birth_year`, `street_id`, `source_files`, `clustered` | Union of people extracts | One row per identity. `clustered=y` only when given+surname+birth year match across sources. Geneva global list omitted. |
+| [normalized/people_sources.csv](normalized/people_sources.csv) | 1737 | `source_row_id`, `person_id`, `source_file`, raw fields | Same | Every source line, linked to `person_id` |
+| [normalized/buildings.csv](normalized/buildings.csv) | 334 | `building_id`, name, address, `street_id`, `map_node_id`, lat/lon, sources | Map seeds + gold-standard building nodes | Distinctive names (synagogue, mill, …) may merge; generic “Cemetery” stays split |
+| [normalized/firms.csv](normalized/firms.csv) | 1260 | `firm_id`, name, owner, `street_id`, year, `source_url` | 1929 directory, Obwieszczenia, Łucka list, 1938 businesses | Street match is folded prefix against the truth table |
+| [normalized/crime.csv](normalized/crime.csv) | 464 | `crime_id`, optional `person_id`, `street_id`, charge, `object_id`, `source_url` | Harvest wanted-person CSV | Prefer this over `archives/kowel_criminal_database.csv` (stale 123-row copy) |
 | [normalized/kovel_osm_streets.json](normalized/kovel_osm_streets.json) | — | OSM named highways | OpenStreetMap, bbox 51.18–51.25N, 24.66–24.78E | Input to `exists_today` |
 | [database of kowel crime/data/kowel_criminal_database/kowel_criminal_database.csv](database%20of%20kowel%20crime/data/kowel_criminal_database/kowel_criminal_database.csv) | 464 | Name, age/birth, address, charge, `kowel_link`, `object_id`, issue, `source_url`, excerpt | Polona *Gazeta Śledcza* OCR | City-tied wanted notices (residence, wanted-by, arrest, offence, or victim in Kowel city). Residents-only subset: `kowel_criminal_database_residents.csv` (123) |
 | [database of kowel crime/data/obwieszczenia_publiczne/kowel_businesses.csv](database%20of%20kowel%20crime/data/obwieszczenia_publiczne/kowel_businesses.csv) | 698 | firm, type, streets, owner, register, `object_id`, `source_url` | Polona *Obwieszczenia Publiczne* | Commercial register pairs in Kowel |
@@ -26,7 +32,7 @@ Row counts are data rows (header excluded), measured 2026-09-21.
 | [../1929_business_directory.csv](../1929_business_directory.csv) | 519 | `Section`, `Name`, `Address` | 1929 Polish business directory | Narrative twin: [1929_business_directory.md](../1929_business_directory.md) |
 | [../kowel_residents_1938.csv](../kowel_residents_1938.csv) | 186 | phone, names, type, industry, street, number | 1938 telephone book | Thin resident/business listing |
 
-There is **no** single canonical `people.csv` or `buildings.csv` yet. Use the seed files below until Phase 2.
+Seed files below still exist. New work should join through `street_id` / `person_id` / `building_id` / `firm_id` / `crime_id`.
 
 ## Map and buildings (seed)
 
@@ -63,9 +69,10 @@ There is **no** single canonical `people.csv` or `buildings.csv` yet. Use the se
 | [ww1_grain_distribution_kowel.csv](ww1_grain_distribution_kowel.csv) | 13 | seed | 1917 occupation street names (feeds truth table) |
 | [code/visualize_streets/streets.csv](../code/visualize_streets/streets.csv) | 519 | duplicate | Copy of the 1929 directory CSV |
 
-## People (all seed; no unified person id)
+## People (source extracts; IDs in `normalized/people.csv`)
 
-Treat each file as a **source extract**. Do not merge rows into one identity without a shared given name, surname, and a date or address. See [NAMES.md](../NAMES.md).
+Treat each file below as a **source extract**. Identity merge is conservative
+(given + surname + birth year). See [NAMES.md](../NAMES.md).
 
 | File | Rows | Likely origin | Columns (short) |
 | --- | ---: | --- | --- |
