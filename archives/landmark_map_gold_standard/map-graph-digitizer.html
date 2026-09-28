@@ -223,6 +223,24 @@
   #helpBoxAlign{display:none;}
   body.align-mode #helpBoxDigitize{display:none;}
   body.align-mode #helpBoxAlign{display:block;}
+  /* ---------- georeference mode ---------- */
+  #georefTools{display:none;align-items:center;gap:10px;flex-wrap:wrap;}
+  body.georef-mode #digitizeTools, body.georef-mode #alignTools, body.georef-mode #canvasWrap,
+  body.georef-mode #geoWrap, body.georef-mode #modeIndicator{display:none !important;}
+  body.georef-mode #georefTools{display:flex;}
+  body.georef-mode #overlayPanel{display:block;}
+  body.georef-mode #helpBoxDigitize{display:none;}
+  #helpBoxGeoref{display:none;}
+  body.georef-mode #helpBoxGeoref{display:block;}
+  #helpBox.collapsed #helpBoxGeoref{display:none !important;}
+  #grWrap{display:none;flex:1;min-height:0;flex-direction:column;background:#111210;}
+  body.georef-mode #grWrap{display:flex;}
+  .grPane{position:relative;flex:1;min-height:0;overflow:hidden;}
+  .grPane + .grPane{border-top:3px solid var(--accent);}
+  .grPane canvas{position:absolute;inset:0;width:100%;height:100%;display:block;}
+  .grTag{position:absolute;top:8px;left:10px;z-index:2;font-size:11px;padding:3px 8px;pointer-events:none;
+    background:rgba(32,33,29,.88);border:1px solid var(--panel-line);border-radius:3px;color:var(--text-dim);}
+  .grTag.r{left:auto;right:10px;color:var(--text-bright);}
 </style>
 </head>
 <body>
@@ -234,6 +252,7 @@
       <span id="dirtyIndicator" title="Unsaved changes">●&nbsp;unsaved</span>
       <div id="modeSwitch">
         <button class="btn modeBtn active" id="modeDigitize" type="button">Digitize</button>
+        <button class="btn modeBtn" id="modeGeoref" type="button">Georeference</button>
         <button class="btn modeBtn" id="modeAlign" type="button">Align on map</button>
       </div>
       <span class="sep"></span>
@@ -340,6 +359,37 @@
         </div>
         <button class="btn" id="changeKeyBtn">API key</button>
       </div>
+      <div id="georefTools">
+        <label class="btn primary" for="alignCsvInput">Load CSVs</label>
+        <label class="kindLabel">Method
+          <select id="grMethod" class="kindSelect" title="Transformation from image pixels to ground">
+            <option value="linear">Linear</option>
+            <option value="poly1">Polynomial 1</option>
+            <option value="poly2">Polynomial 2</option>
+            <option value="poly3">Polynomial 3</option>
+            <option value="tps">Thin plate spline</option>
+          </select>
+        </label>
+        <button class="btn" id="grNextBtn" title="Select the next node that has no GCP (N)">Next unplaced</button>
+        <button class="btn" id="grUndoBtn" disabled>Undo</button>
+        <button class="btn" id="grFitSrcBtn">Fit source</button>
+        <button class="btn" id="grFitTgtBtn">Fit target</button>
+        <span class="sep"></span>
+        <div class="layerToggles">
+          <label title="Centre the bottom pane on where the node is expected"><input type="checkbox" id="grFollow" checked> Follow</label>
+          <label title="After placing a GCP, select the next unplaced node"><input type="checkbox" id="grAdvance"> Auto-advance</label>
+          <label><input type="checkbox" id="grEdges" checked> Edges</label>
+          <label><input type="checkbox" id="grLabels" checked> Labels</label>
+        </div>
+        <select id="grTiles" class="kindSelect" title="Basemap for the bottom pane">
+          <option value="esri">Esri imagery</option>
+          <option value="osm">OpenStreetMap</option>
+        </select>
+        <label class="btn" for="geoImageInput">Add geo image</label>
+        <span class="sep"></span>
+        <button class="btn primary" id="grApplyBtn" title="Write lon/lat to every node (GCP nodes keep their pinned position)">Apply to nodes</button>
+        <button class="btn danger" id="grClearBtn">Clear GCPs</button>
+      </div>
       <div id="modeIndicator">
         <span id="chainDot"></span>
         <span id="chainLabel">no active chain</span>
@@ -378,6 +428,11 @@
           <button class="btn primary" id="geoKeySave">Load map</button>
         </div>
       </div>
+    </div>
+
+    <div id="grWrap">
+      <div class="grPane"><canvas id="grSrc"></canvas><div class="grTag">SOURCE · digitized map</div></div>
+      <div class="grPane"><canvas id="grTgt"></canvas><div class="grTag">TARGET · real world</div><div class="grTag r" id="grBadge"></div></div>
     </div>
 
     <div id="statusbar">
@@ -434,6 +489,16 @@
           <b>Numeral</b> — pick 1–69 to tint likely neighborhoods in 25% red, based on numbers already placed (nearby values and the same decade, e.g. 61–65). Place more numbered markers to tighten the guess. Clear removes the tint.<br>
           <b>Save project</b> / <b>Import CSVs</b> as before.<br>
           Work is <b>auto-saved in this browser</b> — reload keeps the map, graph, and alignment. <b>Forget session</b> wipes that copy.
+        </div>
+        <div id="helpBoxGeoref">
+          <b>1.</b> Click a node in the <b>top</b> pane (or a row in the list, or press <kbd>N</kbd> for the next unplaced one).<br>
+          <b>2.</b> Click its true location in the <b>bottom</b> pane. The dashed ring shows where the current model expects it.<br>
+          <b>3.</b> Repeat. The graph on the bottom pane re-warps on every click or drag.<br>
+          <b>Drag a green/amber/red marker</b> in the bottom pane to refine it. <kbd>Del</kbd> removes the selected GCP, <kbd>Ctrl/Cmd+Z</kbd> undoes.<br>
+          <b>Pan</b> left-drag or right-drag, <b>zoom</b> wheel (each pane independent).<br>
+          <b>Colours</b> — error relative to the RMSE: green ≤1.25×, amber ≤2.5×, red beyond. Red lines join each marker to where the model puts it.<br>
+          <b>Methods</b> — Linear: X=a+b·x, Y=c+d·y (≥2 pts). Poly 1 = affine (≥3). Poly 2 (≥6), Poly 3 (≥10) are least-squares fits. Thin plate spline (≥3) passes through every GCP, so its error is <b>leave-one-out</b>: each GCP is predicted from all the others.<br>
+          <b>Apply to nodes</b> writes lon/lat (pinned nodes keep their exact position); then use Align on map for export or fine tuning.
         </div>
         <div id="helpBoxAlign">
           <b>Load CSVs</b> — fuzzy_nodes.csv plus edges.csv.<br>
@@ -1278,6 +1343,7 @@
       }
     }
     if(state.viewMode==='align') highlightGeoInspected();
+    if(state.viewMode==='georef' && kind==='node') grOnSelect(id, !!opts.pan);
   }
 
   function inspectAt(sx,sy){
@@ -1662,13 +1728,13 @@
         if(state.inspected && state.inspected.kind==='node' && state.inspected.id===n.id) row.classList.add('selected');
         else if(state.viewMode==='align' && state.geoSelectedId===n.id) row.classList.add('selected');
         const displayName = nodeDisplayName(n);
-        const coords = (state.viewMode==='align' && n.lat!=null && n.lon!=null)
+        const coords = state.viewMode==='georef' ? grRowCoords(n) : (state.viewMode==='align' && n.lat!=null && n.lon!=null)
           ? `<span class="coords geo">${Number(n.lat).toFixed(5)}, ${Number(n.lon).toFixed(5)}</span>`
           : `<span class="coords">${n.x.toFixed(0)}, ${n.y.toFixed(0)}</span>`;
         row.innerHTML = `<span class="idBadge">#${n.id}</span>
           <input type="text" placeholder="Unnamed node" value="${escapeAttr(n.label)}">
           ${coords}
-          ${state.viewMode==='align'?'':'<button class="del" title="Delete node">×</button>'}`;
+          ${state.viewMode!=='digitize'?'':'<button class="del" title="Delete node">×</button>'}`;
         row.querySelector('input').addEventListener('input',(e)=>{ n.label=e.target.value; markDirty(); draw(); });
         const delBtn=row.querySelector('.del');
         if(delBtn) delBtn.addEventListener('click',()=>{ removeNodeRecorded(n.id); markDirty(); refreshAll(); });
@@ -1700,7 +1766,7 @@
             ['grey','black','blue'].map(c=>'<button type="button" class="arrowColorSwatch'+(arrowColorOf(ed)===c?' active':'')+'" data-color="'+c+'" title="'+c+'"></button>').join('')+
             '</span>' : ''}
           <span class="coords">#${ed.source} → #${ed.target}</span>
-          ${state.viewMode==='align'?'':'<button class="del" title="Delete edge">×</button>'}`;
+          ${state.viewMode!=='digitize'?'':'<button class="del" title="Delete edge">×</button>'}`;
         row.querySelector('input').addEventListener('input',(e)=>{ ed.label=e.target.value; markDirty(); draw(); });
         row.querySelector('.kindSelect').addEventListener('change',(e)=>{
           ed.kind = normalizeEdgeKind(e.target.value);
@@ -1736,6 +1802,7 @@
   // ---------------- status / chain indicator ----------------
   function refreshAll(){
     draw();
+    if(state.viewMode==='georef') grSched();
     nodeCountEl.textContent = state.nodes.size;
     edgeCountEl.textContent = state.edges.size;
     tabNodeCountEl.textContent = state.nodes.size;
@@ -1749,6 +1816,8 @@
         const ed=state.edges.get(id);
         hintText.textContent = 'Inspecting edge #'+id+(ed && ed.label?('  '+ed.label):'')+'  ·  Delete / Alt+click / × to remove';
       }
+    } else if(state.viewMode==='georef'){
+      hintText.textContent = grHint();
     } else if(state.viewMode==='align'){
       const placed=[...state.nodes.values()].filter(hasGeo).length;
       const sel=state.nodes.get(state.geoSelectedId);
@@ -2092,9 +2161,13 @@
     document.body.classList.toggle('align-mode', mode==='align');
     modeDigitize.classList.toggle('active', mode==='digitize');
     modeAlign.classList.toggle('active', mode==='align');
+    document.body.classList.toggle('georef-mode', mode==='georef');
+    modeGeoref.classList.toggle('active', mode==='georef');
     if(mode==='digitize'){
       resizeCanvas();
       refreshAll();
+    } else if(mode==='georef'){
+      enterGeorefMode();
     } else {
       enterAlignMode();
     }
@@ -2769,6 +2842,7 @@ ${lines.join('\n')}
     }
     state.geoOverlays.push(rec);
     renderOverlayPanel();
+    if(state.viewMode==='georef') grSched();
     if(bounds.rotated && !opts.silent){
       alert(name+': this georeference has rotation. The overlay uses a north-up envelope, so it may sit slightly off. Warp to EPSG:32635 or 4326 in QGIS for a tighter fit.');
     }
@@ -2887,7 +2961,7 @@ ${lines.join('\n')}
     const files=[...e.target.files];
     geoImageInput.value='';
     if(!files.length) return;
-    if(!state.geoMap){ alert('Open Align on map and load Google Maps first.'); return; }
+    if(!state.geoMap && state.viewMode!=='georef'){ alert('Open Align on map and load Google Maps first.'); return; }
     const worldExt=/\.(tfw|tifw|jgw|pgw|wld)$/i;
     const tiffExt=/\.(tif|tiff)$/i;
     const imgExt=/\.(jpg|jpeg|png|gif|webp|bmp)$/i;
@@ -3249,6 +3323,493 @@ ${lines.join('\n')}
     if(!window.confirm('Delete the auto-saved session in this browser? The page will reload empty. Download Save project first if you need a file copy.')) return;
     idbClear().finally(()=> location.reload());
   });
+
+  // ---------------- Georeference mode ----------------
+  // Source = digitized image pixels (x,y). Target = Web Mercator metres (X,Y), fitted in
+  // normalised coordinates so the least-squares problems stay well conditioned.
+  // A GCP is stored on the node itself as node.gcp={lon,lat}, so project save / autosave keep it.
+  const GR_MIN={linear:2, poly1:3, poly2:6, poly3:10, tps:3};
+  const GR_LBL={linear:'Linear', poly1:'Polynomial 1', poly2:'Polynomial 2', poly3:'Polynomial 3', tps:'Thin plate spline'};
+  const GR_COL={ok:'#8fae7a', mid:'#e2c68a', bad:'#e0705f'};
+  const RE=6378137, WORLD=2*Math.PI*RE;
+  const TILES={
+    esri:{max:19, attr:'Imagery © Esri, Maxar, Earthstar Geographics', url:(z,x,y)=>'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/'+z+'/'+y+'/'+x},
+    osm:{max:19, attr:'© OpenStreetMap contributors', url:(z,x,y)=>'https://tile.openstreetmap.org/'+z+'/'+x+'/'+y+'.png'}
+  };
+  const gid=id=>document.getElementById(id);
+  const modeGeoref=gid('modeGeoref'), elSrc=gid('grSrc'), elTgt=gid('grTgt');
+  const sCtx=elSrc.getContext('2d'), tCtx=elTgt.getContext('2d');
+  const elMethod=gid('grMethod'), elTiles=gid('grTiles'), elFollow=gid('grFollow'), elAdv=gid('grAdvance');
+  const elEdges=gid('grEdges'), elLabels=gid('grLabels'), elBadge=gid('grBadge'), elUndo=gid('grUndoBtn');
+  const gr={
+    method:'poly1', tileSrc:'esri', model:null, msg:'', pred:new Map(), res:new Map(),
+    rmse:null, loo:false, worst:null, hist:[], skipFollow:false, fitted:false, raf:0,
+    sv:{s:1,ox:0,oy:0}, view:{cx:0.5,cy:0.5,z:3}, tiles:new Map(), ovImg:new Map()
+  };
+  try{ const m=localStorage.getItem('gr_method'); if(m&&GR_MIN[m]) gr.method=m; }catch(e){}
+  elMethod.value=gr.method;
+
+  // ----- projection helpers -----
+  function mercFwd(lon,lat){ return {X:RE*lon*Math.PI/180, Y:RE*Math.log(Math.tan(Math.PI/4+lat*Math.PI/360))}; }
+  function m2w(X,Y){ return {x:X/WORLD+0.5, y:0.5-Y/WORLD}; }          // metres -> world 0..1 (y down)
+  function w2m(x,y){ return {X:(x-0.5)*WORLD, Y:(0.5-y)*WORLD}; }
+  function t2s(X,Y){ const v=gr.view, ws=256*Math.pow(2,v.z), p=m2w(X,Y); return {x:(p.x-v.cx)*ws+elTgt._w/2, y:(p.y-v.cy)*ws+elTgt._h/2}; }
+  function s2t(sx,sy){ const v=gr.view, ws=256*Math.pow(2,v.z); return w2m((sx-elTgt._w/2)/ws+v.cx, (sy-elTgt._h/2)/ws+v.cy); }
+  function grPos(n){ const p=gr.pred.get(n.id); return p || (hasGeo(n) ? mercFwd(n.lon,n.lat) : null); }
+
+  // ----- linear algebra: Gaussian elimination with partial pivoting (A is modified) -----
+  function gauss(A,b,eps){
+    const n=b.length;
+    for(let i=0;i<n;i++){
+      let p=i;
+      for(let r=i+1;r<n;r++) if(Math.abs(A[r][i])>Math.abs(A[p][i])) p=r;
+      if(Math.abs(A[p][i])<eps) return null;
+      [A[i],A[p]]=[A[p],A[i]]; [b[i],b[p]]=[b[p],b[i]];
+      for(let r=i+1;r<n;r++){
+        const f=A[r][i]/A[i][i]; if(f===0) continue;
+        for(let c=i;c<n;c++) A[r][c]-=f*A[i][c];
+        b[r]-=f*b[i];
+      }
+    }
+    const x=new Array(n);
+    for(let i=n-1;i>=0;i--){ let t=b[i]; for(let c=i+1;c<n;c++) t-=A[i][c]*x[c]; x[i]=t/A[i][i]; }
+    return x;
+  }
+  function polyTerms(d){ const t=[]; for(let s=0;s<=d;s++) for(let i=0;i<=s;i++) t.push([s-i,i]); return t; } // exponents of u^a v^b
+
+  // Returns f(x,y)->{X,Y} or null when the points are degenerate.
+  function grBuild(method, pts){
+    const n=pts.length, cx=state.imgW/2, cy=state.imgH/2, sc=Math.max(state.imgW,state.imgH)/2||1;
+    let mx=0,my=0; pts.forEach(p=>{mx+=p.X;my+=p.Y;}); mx/=n; my/=n;
+    let ts=1; pts.forEach(p=>{ts=Math.max(ts,Math.abs(p.X-mx),Math.abs(p.Y-my));});
+    const U=pts.map(p=>[(p.x-cx)/sc,(p.y-cy)/sc]);
+    const TX=pts.map(p=>(p.X-mx)/ts), TY=pts.map(p=>(p.Y-my)/ts);
+    let fx,fy;
+    if(method==='tps'){
+      const N=n+3, A=[];
+      for(let i=0;i<N;i++) A.push(new Array(N).fill(0));
+      const K=(r2)=>r2>0?0.5*r2*Math.log(r2):0;              // U(r)=r^2 ln r
+      for(let i=0;i<n;i++){
+        for(let j=0;j<n;j++) A[i][j]=K((U[i][0]-U[j][0])**2+(U[i][1]-U[j][1])**2)+(i===j?1e-9:0);
+        A[i][n]=1; A[i][n+1]=U[i][0]; A[i][n+2]=U[i][1];
+        A[n][i]=1; A[n+1][i]=U[i][0]; A[n+2][i]=U[i][1];
+      }
+      const A2=A.map(r=>r.slice());
+      const cX=gauss(A,TX.concat([0,0,0]),1e-12), cY=gauss(A2,TY.concat([0,0,0]),1e-12);
+      if(!cX||!cY) return null;
+      const ev=(c)=>(u,v)=>{ let t=c[n]+c[n+1]*u+c[n+2]*v; for(let i=0;i<n;i++){ t+=c[i]*K((u-U[i][0])**2+(v-U[i][1])**2); } return t; };
+      fx=ev(cX); fy=ev(cY);
+    } else {
+      const d=method==='poly1'?1:method==='poly2'?2:3;
+      const tx=method==='linear'?[[0,0],[1,0]]:polyTerms(d), ty=method==='linear'?[[0,0],[0,1]]:polyTerms(d);
+      const fit=(terms,T)=>{
+        const k=terms.length, M=[], b=new Array(k).fill(0);
+        for(let a=0;a<k;a++) M.push(new Array(k).fill(0));
+        U.forEach(([u,v],r)=>{
+          const row=terms.map(([i,j])=>Math.pow(u,i)*Math.pow(v,j));
+          for(let a=0;a<k;a++){ b[a]+=row[a]*T[r]; for(let c=0;c<k;c++) M[a][c]+=row[a]*row[c]; }   // normal equations PtP c = Pt T
+        });
+        for(let a=0;a<k;a++) M[a][a]+=1e-10;
+        const c=gauss(M,b,1e-8); if(!c) return null;
+        return (u,v)=>{ let t=0; terms.forEach(([i,j],q)=>{ t+=c[q]*Math.pow(u,i)*Math.pow(v,j); }); return t; };
+      };
+      fx=fit(tx,TX); fy=fit(ty,TY);
+      if(!fx||!fy) return null;
+    }
+    return (x,y)=>{ const u=(x-cx)/sc, v=(y-cy)/sc; return {X:mx+ts*fx(u,v), Y:my+ts*fy(u,v)}; };
+  }
+
+  function grFit(fast){
+    const pts=[];
+    state.nodes.forEach(n=>{ if(n.gcp){ const m=mercFwd(n.gcp.lon,n.gcp.lat); pts.push({id:n.id,x:n.x,y:n.y,X:m.X,Y:m.Y}); } });
+    gr.model=null; gr.pred.clear(); gr.res.clear(); gr.rmse=null; gr.worst=null; gr.loo=false;
+    const need=GR_MIN[gr.method];
+    if(pts.length<need){ gr.msg='need '+need+' GCPs'; return; }
+    const m=grBuild(gr.method,pts);
+    if(!m){ gr.msg='GCPs collinear or clustered — spread them out'; return; }
+    gr.model=m; gr.msg='';
+    state.nodes.forEach(n=>{ gr.pred.set(n.id,m(n.x,n.y)); });
+    const tps=gr.method==='tps', errs=[];
+    pts.forEach((p,i)=>{
+      let q;
+      if(tps){                                   // TPS is exact at its GCPs -> use leave-one-out error
+        if(fast||pts.length<=need||pts.length>150) return;
+        const mi=grBuild('tps',pts.filter((_,j)=>j!==i)); if(!mi) return;
+        q=mi(p.x,p.y);
+      } else q=gr.pred.get(p.id);
+      const k=Math.cos(webMercToLonLat(p.X,p.Y).lat*Math.PI/180);   // Mercator stretches distances by 1/cos(lat)
+      errs.push([p.id, Math.hypot(q.X-p.X,q.Y-p.Y)*k]);
+    });
+    if(errs.length){
+      gr.loo=tps; let ss=0, w={id:null,d:-1};
+      errs.forEach(([id,d])=>{ gr.res.set(id,d); ss+=d*d; if(d>w.d) w={id,d}; });
+      gr.rmse=Math.sqrt(ss/errs.length); gr.worst=w;
+    }
+  }
+  function grColor(id){
+    const d=gr.res.get(id); if(d==null||gr.rmse==null) return GR_COL.ok;
+    const r=Math.max(gr.rmse,1);
+    return d<=1.25*r?GR_COL.ok:d<=2.5*r?GR_COL.mid:GR_COL.bad;
+  }
+  function grRowCoords(n){
+    if(!n.gcp) return '<span class="coords geo">–</span>';
+    const d=gr.res.get(n.id);
+    return '<span class="coords geo" style="color:'+grColor(n.id)+'">● '+(d!=null?d.toFixed(1)+' m':'pinned')+'</span>';
+  }
+  function grHint(){
+    const n=state.nodes.get(state.geoSelectedId);
+    if(!n) return (gr.msg?gr.msg+' · ':'')+'click a node in the top pane (or press N)';
+    if(n.gcp) return '#'+n.id+' pinned · drag its marker to refine, Del removes';
+    return '#'+n.id+' '+nodeDisplayName(n)+' — click its true location in the bottom pane';
+  }
+  function grBadgeUpdate(){
+    let c=0; state.nodes.forEach(n=>{ if(n.gcp) c++; });
+    let t=GR_LBL[gr.method]+' · '+c+' GCP'+(c===1?'':'s');
+    if(!gr.model) t+=' · '+gr.msg;
+    else if(gr.rmse!=null) t+=' · '+(gr.loo?'LOO ':'')+'RMSE '+gr.rmse.toFixed(1)+' m'+(gr.worst&&gr.worst.id!=null?' · worst #'+gr.worst.id+' '+gr.worst.d.toFixed(1)+' m':'');
+    else if(gr.method==='tps' && c>3) t+=' · …';
+    elBadge.textContent=t;
+    elUndo.disabled=gr.hist.length===0;
+  }
+  function grRefit(full){
+    grFit(!full); grBadgeUpdate();
+    hintText.textContent=grHint();
+    if(full) renderList();
+    grSched();
+  }
+
+  // ----- drawing -----
+  function grSched(){
+    if(gr.raf) return;
+    gr.raf=requestAnimationFrame(()=>{ gr.raf=0; if(state.viewMode!=='georef') return; grDrawSrc(); grDrawTgt(); });
+  }
+  function grSize(c){
+    const r=c.parentNode.getBoundingClientRect(), d=window.devicePixelRatio||1;
+    c._w=r.width; c._h=r.height; c._d=d;
+    c.width=Math.max(1,Math.round(r.width*d)); c.height=Math.max(1,Math.round(r.height*d));
+  }
+  function grText(x,t,px,py,col){
+    x.font='600 11px Georgia,serif'; x.lineWidth=3; x.lineJoin='round';
+    x.strokeStyle='rgba(20,20,16,.85)'; x.strokeText(t,px,py); x.fillStyle=col; x.fillText(t,px,py);
+  }
+  function grRing(x,px,py,r,col,w,dash){
+    x.setLineDash(dash||[]); x.strokeStyle=col; x.lineWidth=w; x.beginPath(); x.arc(px,py,r,0,7); x.stroke(); x.setLineDash([]);
+  }
+  function grDrawSrc(){
+    const c=elSrc, x=sCtx, w=c._w, h=c._h; if(!w) return;
+    x.setTransform(c._d,0,0,c._d,0,0); x.fillStyle='#111210'; x.fillRect(0,0,w,h);
+    if(!state.img){
+      x.fillStyle='#a6a495'; x.font='13px Georgia,serif'; x.textAlign='center';
+      x.fillText('Load a map image in Digitize first.',w/2,h/2); x.textAlign='left'; return;
+    }
+    const s=gr.sv.s, ox=gr.sv.ox, oy=gr.sv.oy;
+    x.drawImage(state.img,ox,oy,state.imgW*s,state.imgH*s);
+    if(elEdges.checked){
+      x.lineWidth=1.6; x.globalAlpha=.85;
+      state.edges.forEach(e=>{
+        if(!isEdgeDrawn(e)) return;
+        const a=state.nodes.get(e.source), b=state.nodes.get(e.target); if(!a||!b) return;
+        x.strokeStyle=edgeKindStyle(edgeKindOf(e),e).geo;
+        x.beginPath(); x.moveTo(a.x*s+ox,a.y*s+oy); x.lineTo(b.x*s+ox,b.y*s+oy); x.stroke();
+      });
+      x.globalAlpha=1;
+    }
+    state.nodes.forEach(n=>{
+      if(n.hidden) return;
+      const px=n.x*s+ox, py=n.y*s+oy; if(px<-20||py<-20||px>w+20||py>h+20) return;
+      const lm=isLandmarkNode(n);
+      x.beginPath(); x.arc(px,py,lm?5:3.4,0,7);
+      x.fillStyle=n.gcp?grColor(n.id):(lm?'#e07a2f':'#d8d2c4'); x.fill();
+      x.lineWidth=1.2; x.strokeStyle='#1c1408'; x.stroke();
+      if(elLabels.checked&&lm&&s>0.15) grText(x,String(extraField(n,'landmark_id')||n.id),px+7,py-6,'#f2efe4');
+    });
+    const sn=state.nodes.get(state.geoSelectedId);
+    if(sn){ const px=sn.x*s+ox, py=sn.y*s+oy; grRing(x,px,py,10,'#f0d060',2.5); grText(x,nodeDisplayName(sn),px+13,py+16,'#f0d060'); }
+  }
+  function grTile(z,tx,ty,load){
+    const k=gr.tileSrc+'/'+z+'/'+tx+'/'+ty; let t=gr.tiles.get(k);
+    if(!t){
+      if(!load) return null;
+      if(gr.tiles.size>900){ let i=0; for(const key of gr.tiles.keys()){ gr.tiles.delete(key); if(++i>300) break; } }
+      t=new Image(); t.onload=()=>{ t._ok=1; grSched(); }; t.src=TILES[gr.tileSrc].url(z,tx,ty); gr.tiles.set(k,t);
+    }
+    return t._ok?t:null;
+  }
+  function grDrawTgt(){
+    const c=elTgt, x=tCtx, w=c._w, h=c._h; if(!w) return;
+    x.setTransform(c._d,0,0,c._d,0,0); x.fillStyle='#181913'; x.fillRect(0,0,w,h);
+    const v=gr.view, T=TILES[gr.tileSrc], ws=256*Math.pow(2,v.z);
+    const zi=Math.max(1,Math.min(T.max,Math.round(v.z))), n=1<<zi, ts=256*Math.pow(2,v.z-zi);
+    const wx0=v.cx-w/2/ws, wx1=v.cx+w/2/ws, wy0=v.cy-h/2/ws, wy1=v.cy+h/2/ws;
+    for(let ty=Math.max(0,Math.floor(wy0*n)); ty<=Math.min(n-1,Math.floor(wy1*n)); ty++){
+      for(let tx=Math.floor(wx0*n); tx<=Math.floor(wx1*n); tx++){
+        const nx=((tx%n)+n)%n, sx=(tx/n-v.cx)*ws+w/2, sy=(ty/n-v.cy)*ws+h/2, t=grTile(zi,nx,ty,true);
+        if(t){ x.drawImage(t,sx,sy,ts+0.6,ts+0.6); continue; }
+        for(let k=1;k<=5&&zi-k>=1;k++){            // blurry parent tile while the real one loads
+          const f=1<<k, pt=grTile(zi-k,nx>>k,ty>>k,false);
+          if(pt){ const sz=256/f; x.drawImage(pt,(nx&(f-1))*sz,(ty&(f-1))*sz,sz,sz,sx,sy,ts+0.6,ts+0.6); break; }
+        }
+      }
+    }
+    state.geoOverlays.forEach(rec=>{
+      if(!rec.visible||!rec.url||!rec.bounds) return;
+      const key=rec.id+rec.url; let im=gr.ovImg.get(key);
+      if(!im){ im=new Image(); im.onload=()=>{ im._ok=1; grSched(); }; im.src=rec.url; gr.ovImg.set(key,im); }
+      if(!im._ok) return;
+      const b=rec.bounds, a=mercFwd(b.west,b.north), d=mercFwd(b.east,b.south), p=t2s(a.X,a.Y), q=t2s(d.X,d.Y);
+      x.globalAlpha=rec.opacity; x.drawImage(im,p.x,p.y,q.x-p.x,q.y-p.y); x.globalAlpha=1;
+    });
+    if(elEdges.checked){
+      x.lineWidth=2; x.globalAlpha=.9; x.lineCap='round';
+      state.edges.forEach(e=>{
+        if(!isEdgeDrawn(e)) return;
+        const a=state.nodes.get(e.source), b=state.nodes.get(e.target); if(!a||!b) return;
+        const pa=grPos(a), pb=grPos(b); if(!pa||!pb) return;
+        const A=t2s(pa.X,pa.Y), B=t2s(pb.X,pb.Y);
+        x.strokeStyle=edgeKindStyle(edgeKindOf(e),e).geo;
+        x.beginPath(); x.moveTo(A.x,A.y); x.lineTo(B.x,B.y); x.stroke();
+      });
+      x.globalAlpha=1;
+    }
+    state.nodes.forEach(n=>{
+      if(n.hidden) return;
+      const p=grPos(n); if(!p) return;
+      const s=t2s(p.X,p.Y); if(s.x<-20||s.y<-20||s.x>w+20||s.y>h+20) return;
+      const lm=isLandmarkNode(n);
+      x.beginPath(); x.arc(s.x,s.y,lm?3.5:2.2,0,7);
+      x.fillStyle=lm?'#e07a2f':'rgba(216,210,196,.92)'; x.fill(); x.lineWidth=1; x.strokeStyle='#1c1408'; x.stroke();
+      if(elLabels.checked&&lm&&v.z>=15) grText(x,String(extraField(n,'landmark_id')||n.id),s.x+6,s.y-5,'#f2efe4');
+    });
+    const sel=state.geoSelectedId;
+    state.nodes.forEach(n=>{
+      if(!n.gcp) return;
+      const m=mercFwd(n.gcp.lon,n.gcp.lat), s=t2s(m.X,m.Y), pr=gr.pred.get(n.id), col=grColor(n.id);
+      if(pr){ const q=t2s(pr.X,pr.Y); x.strokeStyle='#ff5a4a'; x.lineWidth=1.5; x.beginPath(); x.moveTo(q.x,q.y); x.lineTo(s.x,s.y); x.stroke(); }
+      grRing(x,s.x,s.y,7,col,2.2);
+      x.strokeStyle=col; x.lineWidth=1.6; x.beginPath();
+      x.moveTo(s.x-12,s.y); x.lineTo(s.x-4,s.y); x.moveTo(s.x+4,s.y); x.lineTo(s.x+12,s.y);
+      x.moveTo(s.x,s.y-12); x.lineTo(s.x,s.y-4); x.moveTo(s.x,s.y+4); x.lineTo(s.x,s.y+12); x.stroke();
+      if(n.id===sel){ grRing(x,s.x,s.y,13,'#f0d060',2.5); grText(x,nodeDisplayName(n),s.x+16,s.y+4,'#f0d060'); }
+    });
+    const sn=state.nodes.get(sel);
+    if(sn&&!sn.gcp){
+      const p=grPos(sn);
+      if(p){ const s=t2s(p.X,p.Y); grRing(x,s.x,s.y,14,'#f0d060',2,[4,3]); grText(x,'expected: '+nodeDisplayName(sn),s.x+18,s.y+4,'#f0d060'); }
+    }
+    x.font='10px sans-serif'; x.fillStyle='rgba(255,255,255,.75)'; x.textAlign='right'; x.fillText(T.attr,w-6,h-6); x.textAlign='left';
+  }
+
+  // ----- views -----
+  function grFitSrc(){
+    if(!state.img||!elSrc._w) return;
+    const s=Math.min((elSrc._w-30)/state.imgW,(elSrc._h-30)/state.imgH);
+    gr.sv.s=s; gr.sv.ox=(elSrc._w-state.imgW*s)/2; gr.sv.oy=(elSrc._h-state.imgH*s)/2; grSched();
+  }
+  function grFitTgt(){
+    let x0=1,y0=1,x1=0,y1=0,c=0; const v=gr.view;
+    state.nodes.forEach(n=>{
+      const p=n.gcp?mercFwd(n.gcp.lon,n.gcp.lat):grPos(n); if(!p) return;
+      const q=m2w(p.X,p.Y); x0=Math.min(x0,q.x); x1=Math.max(x1,q.x); y0=Math.min(y0,q.y); y1=Math.max(y1,q.y); c++;
+    });
+    if(!c){ const q=m2w(...Object.values(mercFwd(KOVEL.lng,KOVEL.lat))); v.cx=q.x; v.cy=q.y; v.z=14; }
+    else {
+      v.cx=(x0+x1)/2; v.cy=(y0+y1)/2;
+      const dx=Math.max(x1-x0,1e-9), dy=Math.max(y1-y0,1e-9);
+      v.z=Math.max(2,Math.min(19,Math.log2(0.85*Math.min(elTgt._w/(dx*256),elTgt._h/(dy*256)))));
+    }
+    grSched();
+  }
+  function grOnSelect(id,center){
+    const n=state.nodes.get(id); if(!n) return;
+    if(center){ gr.sv.ox=elSrc._w/2-n.x*gr.sv.s; gr.sv.oy=elSrc._h/2-n.y*gr.sv.s; }
+    if(elFollow.checked && !gr.skipFollow){
+      const p=n.gcp?mercFwd(n.gcp.lon,n.gcp.lat):grPos(n);
+      if(p){ const w=m2w(p.X,p.Y); gr.view.cx=w.x; gr.view.cy=w.y; if(gr.view.z<15) gr.view.z=16; }
+    }
+    hintText.textContent=grHint(); grSched();
+  }
+  function grSelect(id,center,noFollow){
+    gr.skipFollow=!!noFollow; setInspected('node',id,{pan:!!center}); gr.skipFollow=false;
+  }
+  function grNext(dir){
+    const ids=[...state.nodes.values()].filter(n=>!n.hidden).map(n=>n.id).sort((a,b)=>a-b);
+    if(!ids.length) return;
+    let i=ids.indexOf(state.geoSelectedId); if(i<0) i=dir>0?-1:0;
+    for(let k=1;k<=ids.length;k++){
+      const id=ids[(((i+dir*k)%ids.length)+ids.length)%ids.length];
+      if(!state.nodes.get(id).gcp){ grSelect(id,true); return; }
+    }
+    hintText.textContent='Every visible node has a GCP.';
+  }
+
+  // ----- GCP edits (all undoable) -----
+  function grSetGcp(n,lon,lat){
+    gr.hist.push({list:[{id:n.id, old:n.gcp?{lon:n.gcp.lon,lat:n.gcp.lat}:null}]});
+    n.gcp={lon,lat}; markDirty(); grRefit(true);
+  }
+  function grRemoveGcp(n){
+    if(!n||!n.gcp) return;
+    gr.hist.push({list:[{id:n.id, old:{lon:n.gcp.lon,lat:n.gcp.lat}}]});
+    delete n.gcp; markDirty(); grRefit(true);
+  }
+  function grUndo(){
+    const h=gr.hist.pop(); if(!h) return;
+    h.list.forEach(({id,old})=>{ const n=state.nodes.get(id); if(!n) return; if(old) n.gcp=old; else delete n.gcp; });
+    markDirty(); grRefit(true);
+  }
+  function grPlace(px,py){
+    const n=state.nodes.get(state.geoSelectedId);
+    if(!n){ hintText.textContent='Select a node in the top pane first.'; return; }
+    const t=s2t(px,py), ll=webMercToLonLat(t.X,t.Y);
+    grSetGcp(n,ll.lon,ll.lat);
+    if(elAdv.checked) grNext(1);
+  }
+  function grApply(){
+    if(!gr.model){ alert('No valid transformation yet: '+gr.msg+'.'); return; }
+    if(!confirm('Write lon/lat to all '+state.nodes.size+' nodes using '+GR_LBL[gr.method]+'? GCP nodes keep their pinned position. Undo move in Align mode reverts this.')) return;
+    const moves=[];
+    state.nodes.forEach(n=>{
+      let ll; if(n.gcp) ll={lon:n.gcp.lon,lat:n.gcp.lat}; else { const q=gr.pred.get(n.id); ll=webMercToLonLat(q.X,q.Y); }
+      moves.push({id:n.id, lon0:n.lon==null?null:n.lon, lat0:n.lat==null?null:n.lat, lon1:ll.lon, lat1:ll.lat});
+      n.lon=ll.lon; n.lat=ll.lat;
+    });
+    state.geoHistory.push({moves}); updateGeoUndoBtn(); markDirty();
+    if(state.geoMap) syncGeoOverlay();
+    alert('Wrote lon/lat for '+moves.length+' nodes. Switch to Align on map to fine-tune or export.');
+  }
+
+  // ----- mouse: source pane -----
+  function grPt(c,e){ const r=c.getBoundingClientRect(); return {x:e.clientX-r.left, y:e.clientY-r.top}; }
+  let sDrag=null, tDrag=null;
+  elSrc.addEventListener('contextmenu',e=>e.preventDefault());
+  elTgt.addEventListener('contextmenu',e=>e.preventDefault());
+  elSrc.addEventListener('wheel',e=>{
+    e.preventDefault();
+    const p=grPt(elSrc,e), sv=gr.sv, f=Math.exp(-Math.max(-60,Math.min(60,e.deltaY))*0.0022);
+    const ns=Math.max(0.02,Math.min(30,sv.s*f));
+    sv.ox=p.x-(p.x-sv.ox)*ns/sv.s; sv.oy=p.y-(p.y-sv.oy)*ns/sv.s; sv.s=ns; grSched();
+  },{passive:false});
+  elSrc.addEventListener('mousedown',e=>{ const p=grPt(elSrc,e); sDrag={x:p.x,y:p.y,ox:gr.sv.ox,oy:gr.sv.oy,moved:false,btn:e.button}; });
+  function grPickSrc(px,py){
+    let best=null, bd=144; const sv=gr.sv;
+    state.nodes.forEach(n=>{
+      if(n.hidden) return;
+      const dx=n.x*sv.s+sv.ox-px, dy=n.y*sv.s+sv.oy-py, d=dx*dx+dy*dy;
+      if(d<bd){ bd=d; best=n; }
+    });
+    return best;
+  }
+  function grPickGcp(px,py){
+    let best=null, bd=100;
+    state.nodes.forEach(n=>{
+      if(!n.gcp) return;
+      const m=mercFwd(n.gcp.lon,n.gcp.lat), s=t2s(m.X,m.Y), d=(s.x-px)**2+(s.y-py)**2;
+      if(d<bd){ bd=d; best=n.id; }
+    });
+    return best;
+  }
+
+  // ----- mouse: target pane -----
+  elTgt.addEventListener('wheel',e=>{
+    e.preventDefault();
+    const p=grPt(elTgt,e), v=gr.view, t=s2t(p.x,p.y);
+    v.z=Math.max(2,Math.min(21,v.z-Math.max(-60,Math.min(60,e.deltaY))*0.004));
+    const q=m2w(t.X,t.Y), ws=256*Math.pow(2,v.z);
+    v.cx=q.x-(p.x-elTgt._w/2)/ws; v.cy=q.y-(p.y-elTgt._h/2)/ws; grSched();
+  },{passive:false});
+  elTgt.addEventListener('mousedown',e=>{
+    const p=grPt(elTgt,e);
+    if(e.button===0){
+      const id=grPickGcp(p.x,p.y);
+      if(id!=null){ tDrag={kind:'gcp',id,x:p.x,y:p.y,moved:false,pushed:false}; if(id!==state.geoSelectedId) grSelect(id,false,true); return; }
+    }
+    tDrag={kind:'pan',x:p.x,y:p.y,cx:gr.view.cx,cy:gr.view.cy,moved:false,btn:e.button};
+  });
+  elTgt.addEventListener('mousemove',e=>{
+    if(tDrag) return;
+    const p=grPt(elTgt,e);
+    elTgt.style.cursor=grPickGcp(p.x,p.y)!=null?'move':(state.geoSelectedId!=null?'crosshair':'grab');
+  });
+  elSrc.addEventListener('mousemove',e=>{
+    if(sDrag) return;
+    const p=grPt(elSrc,e); elSrc.style.cursor=grPickSrc(p.x,p.y)?'pointer':'grab';
+  });
+  window.addEventListener('mousemove',e=>{
+    if(sDrag){
+      const p=grPt(elSrc,e), dx=p.x-sDrag.x, dy=p.y-sDrag.y;
+      if(!sDrag.moved && Math.hypot(dx,dy)>3) sDrag.moved=true;
+      if(sDrag.moved){ gr.sv.ox=sDrag.ox+dx; gr.sv.oy=sDrag.oy+dy; grSched(); }
+    }
+    if(tDrag){
+      const p=grPt(elTgt,e), dx=p.x-tDrag.x, dy=p.y-tDrag.y;
+      if(!tDrag.moved && Math.hypot(dx,dy)>(tDrag.kind==='gcp'?2:3)) tDrag.moved=true;
+      if(!tDrag.moved) return;
+      if(tDrag.kind==='pan'){
+        const ws=256*Math.pow(2,gr.view.z);
+        gr.view.cx=tDrag.cx-dx/ws; gr.view.cy=Math.max(0,Math.min(1,tDrag.cy-dy/ws)); grSched();
+      } else {
+        const n=state.nodes.get(tDrag.id); if(!n||!n.gcp) return;
+        if(!tDrag.pushed){ gr.hist.push({list:[{id:n.id,old:{lon:n.gcp.lon,lat:n.gcp.lat}}]}); tDrag.pushed=true; }
+        const t=s2t(p.x,p.y), ll=webMercToLonLat(t.X,t.Y);
+        n.gcp={lon:ll.lon,lat:ll.lat}; grRefit(false);      // fast refit while dragging: no LOO, no list rebuild
+      }
+    }
+  });
+  window.addEventListener('mouseup',e=>{
+    if(sDrag){
+      if(!sDrag.moved && sDrag.btn===0){ const n=grPickSrc(sDrag.x,sDrag.y); if(n) grSelect(n.id,false); }
+      sDrag=null;
+    }
+    if(tDrag){
+      const d=tDrag; tDrag=null;
+      if(d.kind==='gcp'){ if(d.moved){ markDirty(); grRefit(true); } }
+      else if(!d.moved && d.btn===0) grPlace(d.x,d.y);
+    }
+  });
+
+  // ----- keyboard (capture phase so Digitize shortcuts do not fire in this mode) -----
+  window.addEventListener('keydown',e=>{
+    if(state.viewMode!=='georef') return;
+    if(e.target && /^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName)) return;
+    const k=e.key;
+    if((e.ctrlKey||e.metaKey)&&!e.shiftKey&&(k==='z'||k==='Z')){ e.preventDefault(); e.stopImmediatePropagation(); grUndo(); }
+    else if(k==='Delete'||k==='Backspace'){ e.preventDefault(); e.stopImmediatePropagation(); grRemoveGcp(state.nodes.get(state.geoSelectedId)); }
+    else if(k==='n'||k==='N'){ e.preventDefault(); grNext(e.shiftKey?-1:1); }
+    else if(k==='Escape'){ e.stopImmediatePropagation(); state.inspected=null; state.geoSelectedId=null; refreshAll(); }
+  },true);
+
+  // ----- toolbar wiring -----
+  elMethod.addEventListener('change',()=>{ gr.method=elMethod.value; try{localStorage.setItem('gr_method',gr.method);}catch(e){} elMethod.blur(); grRefit(true); });
+  elTiles.addEventListener('change',()=>{ gr.tileSrc=elTiles.value; elTiles.blur(); grSched(); });
+  [elEdges,elLabels].forEach(el=>el.addEventListener('change',grSched));
+  gid('grNextBtn').addEventListener('click',()=>grNext(1));
+  elUndo.addEventListener('click',grUndo);
+  gid('grFitSrcBtn').addEventListener('click',grFitSrc);
+  gid('grFitTgtBtn').addEventListener('click',grFitTgt);
+  gid('grApplyBtn').addEventListener('click',grApply);
+  gid('grClearBtn').addEventListener('click',()=>{
+    const list=[]; state.nodes.forEach(n=>{ if(n.gcp) list.push({id:n.id,old:{lon:n.gcp.lon,lat:n.gcp.lat}}); });
+    if(!list.length) return;
+    if(!confirm('Remove all '+list.length+' GCPs? (Undo brings them back.)')) return;
+    list.forEach(({id})=>{ delete state.nodes.get(id).gcp; });
+    gr.hist.push({list}); markDirty(); grRefit(true);
+  });
+  modeGeoref.addEventListener('click',()=>setViewMode('georef'));
+  const ovList=gid('overlayList');
+  ['input','change'].forEach(t=>ovList.addEventListener(t,()=>grSched()));
+  ovList.addEventListener('click',()=>setTimeout(grSched,0));
+  new ResizeObserver(()=>{
+    if(state.viewMode!=='georef') return;
+    grSize(elSrc); grSize(elTgt);
+    if(!gr.fitted && elSrc._w>0 && state.img){ grFitSrc(); grFitTgt(); gr.fitted=true; }
+    grSched();
+  }).observe(gid('grWrap'));
+
+  function enterGeorefMode(){
+    grSize(elSrc); grSize(elTgt);
+    if(!gr.fitted && elSrc._w>0 && state.img){ grFitSrc(); grFitTgt(); gr.fitted=true; }
+    grFit(false); grBadgeUpdate(); refreshAll();
+  }
 
   // ---------------- init ----------------
   syncEdgeKindFilterUI();
