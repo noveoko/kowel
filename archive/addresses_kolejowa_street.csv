@@ -1,0 +1,79 @@
+street,house_number,apt,occupant_or_firm,role,year,address_type,source,source_url,notes
+Kolejowa,1,,Fiszek Szl.,Fryzjerzy,1929,commercial,1929_business_directory.csv,,Kolejowa 1
+Kolejowa,1,,Gibel B.,Golantorps,1929,commercial,1929_business_directory.csv,,Kolejowa 1
+Kolejowa,2,,Fidel Złata,handel delikatesami,1917,commercial,archives/database of kowel crime/data/obwieszczenia_publiczne/kowel_businesses.csv,https://polona.pl/preview/ff08cb8e-9efb-40ee-8f02-05d2a7e8b60f,Kolejowa 2
+Kolejowa,2,,Poliszuk M.,Golantorps,1929,commercial,1929_business_directory.csv,,Kolejowa 2
+Kolejowa,2,,Kłonicka Estera Bejła,księgarnia i drobna sprzedaż materjałów piśmiennych,1932,commercial,archives/database of kowel crime/data/obwieszczenia_publiczne/kowel_businesses.csv,https://polona.pl/preview/0eb96528-540c-46b0-a25d-7a131c98e419,Kolejowa 2
+Kolejowa,2,,Bracia Fisz i Lerner,-,1938,commercial,kowel_residents_1938.csv,,Kolejowa 2
+Kolejowa,2,,Bracia Fisz i Lerner,Business / -,1938,telephone subscriber,kowel_residents_1938.csv,https://github.com/noveoko/kowel/blob/master/kowel_residents_1938.csv,phone 40
+Kolejowa,4,,Chaim Szwarc,,1924,commercial,archives/database of kowel crime/data/obwieszczenia_publiczne/kowel_businesses.csv,https://polona.pl/preview/2adeecd4-e417-42de-95f8-e6b729def9a7,Kolejowej 4
+Kolejowa,4,,Czwanczara B.,Cukiernia,1929,commercial,1929_business_directory.csv,,Kolejowa 4
+Kolejowa,5,,Furszteler Chaim,handel drzewem,1922,commercial,archives/database of kowel crime/data/obwieszczenia_publiczne/kowel_businesses.csv,https://polona.pl/preview/ff08cb8e-9efb-40ee-8f02-05d2a7e8b60f,Kolejowa 5
+Kolejowa,5,,=aniel M.,Czopssiju,1929,commercial,1929_business_directory.csv,,Kolejowa 5
+Kolejowa,8,,Wydra F.,Introligatora,1929,commercial,1929_business_directory.csv,,Kolejowa 8
+Kolejowa,10,,Goldhaner Sz.,Krawcy,1929,commercial,1929_business_directory.csv,,Kolejowa 10
+Kolejowa,11,,Jankiel Kagan,handel galanterją,1910,commercial,archives/database of kowel crime/data/obwieszczenia_publiczne/kowel_businesses.csv,https://polona.pl/preview/9d2b6521-3c7a-44e9-98d3-3544e8a9ef0a,Kolejowa 11
+Kolejowa,13,,Brandla Sztejngard,"handel galanterją, bufet i sprzedaż wyro bów tytuniowych",1904,commercial,archives/database of kowel crime/data/obwieszczenia_publiczne/kowel_businesses.csv,https://polona.pl/preview/9d2b6521-3c7a-44e9-98d3-3544e8a9ef0a,Kolejowa 13
+Kolejowa,13,,Nuchim Twerski,handel wyrobami tytuniowemi,1924,commercial,archives/database of kowel crime/data/obwieszczenia_publiczne/kowel_businesses.csv,https://polona.pl/preview/f2df8e25-42bf-4e29-9752-78d21b1f9f84,Kolejowa 13
+Kolejowa,13,,Jankowski J.,Krawcy,1929,commercial,1929_business_directory.csv,,Kolejowa 13
+Kolejowa,13,,Sztojngardt B.,Tytoniowe,1929,commercial,1929_business_directory.csv,,Kolejowa 13
+Kolejowa,13,,Wejborszpiel A.,Krawcy,1929,commercial,1929_business_directory.csv,,Kolejowa 13
+Kolejowa,13,,Open Szmul,Disobedience / Violation of Police Regulations; art. 138,1930,residential (last address on wanted notice),obwieszczenie / crime extract,https://polona.pl/preview/f98fc867-4df2-44bf-b07b-7ed28cc5188f,"Open Szmul, s. Abrama i Cyrli, 1. 20, ost. zam. w Kowlu przy ul. Kolejowej 13, krawiec, osk. z art. 138 k. k. —Sąd Pow. w Kowlu, nr. K. 6736-29 z dn. 20.11.30 r."
+Kolejowa,16,,Glouszek W.,Cukiernia,1929,commercial,1929_business_directory.csv,,Kolejowa 63 & Warszawska 16
+Kolejowa,16,,Ilias A.,Kamasznicy,1929,commercial,1929_business_directory.csv,,Kolejowa 16
+Kolejowa,18,,Komsta Stanisław,Unknown - verify (art. 574); art. 574,1929,residential (last address on wanted notice),obwieszczenie / crime extract,https://polona.pl/preview/091db71d-b80e-46a5-a327-a266fdc53a6e,"Komsta Stanisław, 1. 24, ost. zam. w Kowlu przy ul. Kolejowej 18, wzrost niski, brunet, twarz pociągła, wąsy strzyżone, osk. z art. 574 k. k. — Sąd Grodzki w Kowlu, wydz. karny, nr. K. 3515-29 z dn. 19.9.29 r. 58. 36000-IV r -29. Androsiuk Jan, s. Gabryela, ost. zam. we wsi Targowiszcze, gm. Maciejó"
+Kolejowa,21,,Cytryn,Herbaciarnie,1929,commercial,1929_business_directory.csv,,Kolejowa 21
+Kolejowa,25,,Boker S.,Kowale,1929,commercial,1929_business_directory.csv,,Kolejowa 25
+Kolejowa,30,,Zigor G.,Krawcy,1929,commercial,1929_business_directory.csv,,Kolejowa 30
+Kolejowa,32,,Leszczuk Marja,Disobedience / Violation of Police Regulations; art. 138,1930,residential (last address on wanted notice),obwieszczenie / crime extract,https://polona.pl/preview/045cf82f-9c0a-4e93-a6af-49c614952477,"Leszczuk Marja, c. Tymofleja i Ewy, 1. 35, ost. zam. w Kowlu przy ul. Kolejowej 32, służąca, osk. z art. 138 k. k. — Sąd Pow. w Kowiu, nr. K. 10160-29 z dn. 26.11.30 r."
+Kolejowa,33,,Szłojn Ch.,Fryzjerzy,1929,commercial,1929_business_directory.csv,,Kolejowa 33
+Kolejowa,36,,Julja Babicka,handel artykułami spożywczemi,1922,commercial,archives/database of kowel crime/data/obwieszczenia_publiczne/kowel_businesses.csv,https://polona.pl/preview/7788a2ea-fb16-44f2-bccf-0fe60af0241a,Kolejowa 36
+Kolejowa,36,,Mrówczyński W.,Tytoniowe,1929,commercial,1929_business_directory.csv,,Kolejowa 36
+Kolejowa,37,,Engelsberg H.,Zegarmistrza,1929,commercial,1929_business_directory.csv,,Kolejowa 37
+Kolejowa,38,,Marja Grinblat,handel artykułami spożywczemi i galanterją,1924,commercial,archives/database of kowel crime/data/obwieszczenia_publiczne/kowel_businesses.csv,https://polona.pl/preview/a062b514-0445-45d0-bae9-4447c9aebbdb,Kolejowej 38
+Kolejowa,48,,Icko Bruszankier,handel artykułami spożywczemi,1922,commercial,archives/database of kowel crime/data/obwieszczenia_publiczne/kowel_businesses.csv,https://polona.pl/preview/ce7cc465-061d-4d65-8e76-1f91ac6f74dc,Kolejowa 48
+Kolejowa,48,,Glwirc D.,Czopssiju,1929,commercial,1929_business_directory.csv,,Kolejowa 48
+Kolejowa,49,,Bejla Tenenbaum,handel artykułami spożywczemi,1923,commercial,archives/database of kowel crime/data/obwieszczenia_publiczne/kowel_businesses.csv,https://polona.pl/preview/9d2b6521-3c7a-44e9-98d3-3544e8a9ef0a,Kolejowa 49
+Kolejowa,49,,Mojsze Melamed,,1938,telephone subscriber,kowel_residents_1938.csv,https://github.com/noveoko/kowel/blob/master/kowel_residents_1938.csv,phone 113
+Kolejowa,50,,Rochman J.,Krawcy,1929,commercial,1929_business_directory.csv,,Kolejowa 50
+Kolejowa,58,,Gedalja Szul,handel artykułami spożywczemi,1902,commercial,archives/database of kowel crime/data/obwieszczenia_publiczne/kowel_businesses.csv,https://polona.pl/preview/a7f21fd6-344c-49c8-a705-e099da18e039,Kolejowa 58
+Kolejowa,59,,Popis,Jadłodajnie,1929,commercial,1929_business_directory.csv,,Kolejowa 59
+Kolejowa,61,,Hajdys Antoni,Disobedience / Violation of Police Regulations; art. 138,1929,residential (last address on wanted notice),obwieszczenie / crime extract,https://polona.pl/preview/6eba0c32-847c-464c-a72e-c94118c6aa95,"Hajdys Antoni, s. Wawrzyńca i Antoniny, 1. 29. ost. zam. w Kowlu przy ul. Kolejowej 61. osk. z art. 138 k. k. Sąd Grodzki w Kowlu, wydz. karny, nr. K. 4810--29 z dn. 30.9.29 r. <"
+Kolejowa,63,,Głouszek Wilhelm,masarnia i sprzedaż wędlin,1912,commercial,archives/database of kowel crime/data/obwieszczenia_publiczne/kowel_businesses.csv,https://polona.pl/preview/ff08cb8e-9efb-40ee-8f02-05d2a7e8b60f,Kolejowa 63
+Kolejowa,64,,Satrykman M.,Fryzjerzy,1929,commercial,1929_business_directory.csv,,Kolejowa 64
+Kolejowa,69,,Eijasz Jakubowski,kawiarnia,16 w,commercial,archives/database of kowel crime/data/obwieszczenia_publiczne/kowel_businesses.csv,https://polona.pl/preview/65208553-b5d4-4b10-9464-cc6a5ac95106,Kolejowa 69
+Kolejowa,77,,Chaim Wajnsztejn,hotel „Metropol”,1924,commercial,archives/database of kowel crime/data/obwieszczenia_publiczne/kowel_businesses.csv,https://polona.pl/preview/2aedbfec-a6d7-4103-9ec5-375353c56f73,Kolejowa 77
+Kolejowa,77,,Józef Goldsztejn,pracownia kapeluszy i handel galanterją,1924,commercial,archives/database of kowel crime/data/obwieszczenia_publiczne/kowel_businesses.csv,https://polona.pl/preview/a062b514-0445-45d0-bae9-4447c9aebbdb,Kolejowej 77
+Kolejowa,77,,Hotel Metropol wł. Weinsztejn Ch.,Hotele,1929,commercial,1929_business_directory.csv,,Kolejowa 77
+Kolejowa,79,,Fajner Chaja,handel galanterją,1924,commercial,archives/database of kowel crime/data/obwieszczenia_publiczne/kowel_businesses.csv,https://polona.pl/preview/b4b059a8-d099-433a-84d2-825199586a4d,Kolejowa 79
+Kolejowa,79,,Fajner Ch.,Golantorps,1929,commercial,1929_business_directory.csv,,Kolejowa 79
+Kolejowa,79,,Fajner L.,Fryzjerzy,1929,commercial,1929_business_directory.csv,,Kolejowa 79
+Kolejowa,80,,Mirla Struzer,hotel „Gdański”,1924,commercial,archives/database of kowel crime/data/obwieszczenia_publiczne/kowel_businesses.csv,https://polona.pl/preview/6f14eded-43a5-4015-aad1-761aa8c8efdc,Kolejowa 80
+Kolejowa,80,,Hotel Gładki wł. Stixer M.,Hotele,1929,commercial,1929_business_directory.csv,,Kolejowa 80
+Kolejowa,84,,Chaja Wajnsztejn,handel spożywczy,1924,commercial,archives/database of kowel crime/data/obwieszczenia_publiczne/kowel_businesses.csv,https://polona.pl/preview/43c93c4a-e102-47a7-bbc2-48e59690f7b9,Kolejowej 84
+Kolejowa,84,,Hotel Warszawski wł. Gulisz N.,Hotele,1929,commercial,1929_business_directory.csv,,Kolejowa 84
+Kolejowa,85,,Zygmunt Motel,handel artykułami spożywczemi i sprzedaż wyrobów tytoniowych,1924,commercial,archives/database of kowel crime/data/obwieszczenia_publiczne/kowel_businesses.csv,https://polona.pl/preview/4182d5e1-7e15-44c0-aabb-a28a7013a962,Kolejowa 85
+Kolejowa,85,,Struża J.,Fryzjerzy,1929,commercial,1929_business_directory.csv,,Kolejowa 85
+Kolejowa,86,,Szyltor A.,Herbaciarnie,1929,commercial,1929_business_directory.csv,,Kolejowa 86
+Kolejowa,87,,Berko Awruch,kawiarnia,1923,commercial,archives/database of kowel crime/data/obwieszczenia_publiczne/kowel_businesses.csv,https://polona.pl/preview/d0a5e785-760c-4fdd-b023-c8d30f564d47,Kolejowa 87
+Kolejowa,87,,Małka Duniec,pokoje umeblowane,1924,commercial,archives/database of kowel crime/data/obwieszczenia_publiczne/kowel_businesses.csv,https://polona.pl/preview/6f14eded-43a5-4015-aad1-761aa8c8efdc,Kolejowa 87
+Kolejowa,87,,Chiżyk J.,Zegarmistrza,1929,commercial,1929_business_directory.csv,,Kolejowa 87
+Kolejowa,87,,Klepacz Sz.,Tytoniowe,1929,commercial,1929_business_directory.csv,,Kolejowa 87
+Kolejowa,88,,Hotel Pasaż wł. Fuks ł.,Hotele,1929,commercial,1929_business_directory.csv,,Kolejowa 88
+Kolejowa,88,,Labuś Fr.,Tytoniowe,1929,commercial,1929_business_directory.csv,,Kolejowa 88
+Kolejowa,88,,Syndykat Emigracyjny,,1938,telephone subscriber,kowel_residents_1938.csv,https://github.com/noveoko/kowel/blob/master/kowel_residents_1938.csv,phone 1 80
+Kolejowa,88,,Syndykat Emigracyjny,,1938,telephone subscriber,kowel_residents_1938.csv,https://github.com/noveoko/kowel/blob/master/kowel_residents_1938.csv,phone 180
+Kolejowa,91,,Ajzen Dawid,piwiarnia,1905,commercial,archives/database of kowel crime/data/obwieszczenia_publiczne/kowel_businesses.csv,https://polona.pl/preview/b4b059a8-d099-433a-84d2-825199586a4d,Kolejowa 91
+Kolejowa,91,,Lotfer & Kerznar,Fryzjerzy,1929,commercial,1929_business_directory.csv,,Kolejowa 91
+Kolejowa,,,Kopciowski Stanisław,,1927,residential (last address on wanted notice),obwieszczenie / crime extract,https://polona.pl/preview/e7f4da68-61ba-4d30-b94e-05295fe4fd1f,"Kopciowski Stanisław, szer. 8 p. p. leg., s. Mikołaja i Katarzyny z Zielińskich, ur. 1902 r. w Lublinie, tamże przynal., zam. na st. kol. Kiwerce, pow. łuckiego, ost. zaś w Kowlu, w d. kolejowym, osk. §§ 92 i 94 k. k. w. i art. 470 cz. I k. k., posz. przez Pro-ra Wojsk. Sądu Okr. w Lublinie, nr. K. "
+Kolejowa,,,Cymerman L.,Żelazoodlecenie,1929,commercial,1929_business_directory.csv,,Kolejowa
+Kolejowa,,,J.,Baru,1929,commercial,1929_business_directory.csv,,Kolejowa
+Kolejowa,,,Pawlicha S.,Wódki,1929,commercial,1929_business_directory.csv,,Kolejowa
+Kolejowa,,,Sado J.,Żelazoodlecenie,1929,commercial,1929_business_directory.csv,,Kolejowa
+Kolejowa,,,Walasztejn M.,Golantorps,1929,commercial,1929_business_directory.csv,,Kolejowa
+Kolejowa,,,Właściciel Awrum Wolf Rodman,,1929,commercial,archives/database of kowel crime/data/obwieszczenia_publiczne/kowel_businesses.csv,https://polona.pl/preview/93be8018-b4f5-4fd3-b908-581cdb599163,Kolejowej Nr
+Kolejowa,,,Żurakowska Z.,Tytoniowe,1929,commercial,1929_business_directory.csv,,Kolejowa
+Kolejowa,,,Stanisław Młodzikowski,sprzedaż piwa i wyrobów tyto niowych,1931,commercial,archives/database of kowel crime/data/obwieszczenia_publiczne/kowel_businesses.csv,https://polona.pl/preview/ae82d98f-ffcd-4803-9935-301a07cde0cd,Dworzec
+Kolejowa,,,Isumer Wajc,drobny handel spożywczy,1933,commercial,archives/database of kowel crime/data/obwieszczenia_publiczne/kowel_businesses.csv,https://polona.pl/preview/c7f5a7b7-0b28-49e5-af96-012225e365d0,"Kolejowa, Nr"
+Kolejowa,,,Centrala Kolesowa Telefoniczna,,1938,telephone subscriber,kowel_residents_1938.csv,https://github.com/noveoko/kowel/blob/master/kowel_residents_1938.csv,phone 1 42
+Kolejowa,,,Policja Panstw. Poster. Kolejowy,Government / National Police (police station),1938,telephone subscriber,kowel_residents_1938.csv,https://github.com/noveoko/kowel/blob/master/kowel_residents_1938.csv,phone 4
