@@ -11,3 +11,10 @@ Find this man's book (it likely includes Kowel maps):
 73. E. RÜHLE. Studium powiatu kowelskiego. (A study 
 of the Kowel County). Rocznik Wołyński 5—6, 1937, p. 171— 
 
+
+## New Electrical Station
+
+Confirm that this is the location of the electrical station (new) in 1939
+
+### Estimated modern location:
+51.2181458,24.7141472
