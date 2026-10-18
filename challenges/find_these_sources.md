@@ -18,3 +18,7 @@ Confirm that this is the location of the electrical station (new) in 1939
 
 ### Estimated modern location:
 51.2181458,24.7141472
+
+## New Aerial Photo Collections of Kowel
+
+Find more albums like this one: https://edan.si.edu/slideshow/viewer/?eadrefid=NASM.2004.0030_ref506
