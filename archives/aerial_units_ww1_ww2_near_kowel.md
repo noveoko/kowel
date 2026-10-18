@@ -31,3 +31,41 @@ Summary Matrix
 | Austria-Hungary | Flik 20 | Reconnaissance | 1916 |
 | Austria-Hungary | Flik 27 | Reconnaissance | 1916 |
 | Austria-Hungary | Flik 11 | Reconnaissance | 1915–1916 |
+
+During World War II, Kovel (Kowel) was once again a critical transportation nexus and strategic hub. Located on key rail links, it served as a frontline staging air base and supply depot for the Luftwaffe.
+Military aviation operations around Kovel occurred in three distinct phases:
+ * June–July 1941: The opening staging ground for Operation Barbarossa (German invasion of the Soviet Union).
+ * 1942–1943: Rear-area transport, supply depot, anti-partisan, and transit ops.
+ * March–July 1944: The heavy, concentrated air combat surrounding the Siege and Battle of Kovel.
+1. Close Support & Ground Attack Units (Schlachtgeschwader)
+During the intensive fighting in spring and summer 1944—when German forces were encircled inside Kovel and subsequently fought to break out—ground-attack units operated continuously overhead to deliver close air support:
+ * Stab / SG 1 (Schlachtgeschwader 1): Command staff elements deployed to the Kowel sector in June–July 1944. Flying Focke-Wulf Fw 190s, they coordinated heavy ground-support strikes to smash Soviet armored thrusts.
+ * III. Gruppe / SG 1 (III./SG 1): Operated out of field strips near Kovel in June–July 1944, conducting low-level attacks against Soviet tanks during the Red Army's Kovel Offensive.
+ * II. Gruppe / SG 77 (II./SG 77): Shifted into the Kovel area in June–July 1944 equipped with Fw 190s to break the Soviet ring around the trapped garrison.
+ * III. Gruppe / SG 77 (III./SG 77): Staged through nearby fields supporting operations on the Kovel–Chełm axis in July 1944.
+ * Elements of SG 10: Detachments (including 6./SG 10) operated in the Volhynia / Kovel theater during mid-1944 anti-tank operations.
+2. Fighter Units (Jagdgeschwader)
+Fighter squadrons were deployed to maintain local air superiority over the Kovel rail bottleneck and protect ground attack aircraft from Soviet fighters (VVS 2nd Air Army / 6th Air Army):
+ * I. Gruppe / JG 52 (I./JG 52): Major Messerschmitt Bf 109 fighter unit operating in the Kovel skies during July 1944. Top Luftwaffe aces (including Walter Wolfrum) flew intensive air-defense missions to protect retreating German columns and strike aircraft.
+ * Elements of JG 54 ("Grünherz") & JG 51 ("Mölders"): Fighter escorts deployed in the Kowel sector during both the 1941 advance and the 1944 defensive battles to cover bombers and transports.
+3. Bomber & Night Ground-Attack Units (Kampfgeschwader)
+ * II. Gruppe / KG 4 ("General Wever"): Deployed in the sector in June 1944 flying Heinkel He 111s and Junkers Ju 88s to interdict Soviet supply lines and troop concentrations moving toward Kovel.
+ * III. Gruppe / KG 3 ("Blitz"): Operating Ju 88s, elements flew sorties covering the Kowel-Brest sector in mid-1944.
+ * Nachtschlachtgruppe 2 (NSGr 2) or NSGr 4: Night ground-attack units using light aircraft (e.g., Arado Ar 66, Go 145) to execute harassment bombing and supply drops into the pocket during the spring 1944 encirclement of Kovel.
+4. Reconnaissance Units (Aufklärungsgruppen)
+ * Stab / NAGr 15 (Nahaufklärungsgruppe 15): Short-range tactical reconnaissance command unit based at/near Kovel airfield in June 1944 to conduct battlefield photography and troop movement tracking.
+ * 1(H)/13 & 2(H)/10 (Heeresaufklärer): Tactical army reconnaissance detachments operating Henschel Hs 126 and Fw 180 "Uhu" spotter aircraft over the Stokhyd and Kovel fronts.
+5. Airfield & Base Command Units (Fliegerhorstkommandantur)
+The primary airfield infrastructure at Kovel was administered by fixed airfield command units responsible for logistics, ammunition, Flak defense, and ground servicing:
+ * Fliegerhorstkommandantur E(v) 263/III: The primary airfield station command based directly at Kovel airfield (Fliegerhorst Kowel) in 1944.
+ * Koflug 6/IV (Flughafenbereichskommando 6/IV): Regional air base administrative command sector overseeing Kovel and surrounding forward satellite landing strips.
+Summary Matrix (WW2 Kovel)
+| Nation / Arm | Unit Name | Aircraft Type | Operations Period | Role / Context |
+|---|---|---|---|---|
+| Germany | Stab, III./SG 1 | Fw 190 | June–July 1944 | Ground Attack / Anti-tank support |
+| Germany | II., III./SG 77 | Fw 190 / Ju 87 | June–July 1944 | Relief of Kovel pocket |
+| Germany | I./JG 52 | Bf 109G | July 1944 | Fighter interception & bomber escort |
+| Germany | II./KG 4 | He 111 / Ju 88 | June 1944 | Tactical bombing & interdiction |
+| Germany | Stab/NAGr 15 | Fw 180 / Bf 109G | June 1944 | Short-range tactical photo reconnaissance |
+| Germany | Fl.H.Kdtr. E(v) 263/III | Ground Command | 1944 | Airfield Station Command Kovel |
+
